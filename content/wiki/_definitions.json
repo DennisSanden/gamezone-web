@@ -1,0 +1,461 @@
+[
+    {
+        "key": "coins",
+        "title": "Coins",
+        "definition": "GameZones centrala valuta. Coins används för betalningar, handel, skatter, byggnader och flera andra ekonomiska system.",
+        "category": "Economy",
+        "href": "/wiki/economy/coins",
+        "aliases": [
+            "Coin"
+        ]
+    },
+    {
+        "key": "king",
+        "title": "King",
+        "definition": "Den högsta ledarrollen i ett settlement. King ansvarar för ledarskap, roller, behörigheter och settlementets utveckling.",
+        "category": "Government",
+        "href": "/wiki/government/roller",
+        "aliases": [
+            "Kungen"
+        ]
+    },
+    {
+        "key": "lord",
+        "title": "Lord",
+        "definition": "En ledarroll under King. En Lord kan få särskilda behörigheter för att hjälpa till att administrera ett settlement.",
+        "category": "Government",
+        "href": "/wiki/government/roller",
+        "aliases": []
+    },
+    {
+        "key": "member",
+        "title": "Member",
+        "definition": "Den grundläggande medlemsrollen i ett settlement.",
+        "category": "Government",
+        "href": "/wiki/government/roller",
+        "aliases": [
+            "Medlem"
+        ]
+    },
+    {
+        "key": "settlement",
+        "title": "Settlement",
+        "definition": "Ett spelarstyrt samhälle med medlemmar, ledarskap, territorium, nivåer och gemensam utveckling.",
+        "category": "Settlements",
+        "href": "/wiki/settlements/skapa-ett-settlement",
+        "aliases": [
+            "Settlements",
+            "Settlementet",
+            "Settlementets"
+        ]
+    },
+    {
+        "key": "company",
+        "title": "Company",
+        "definition": "En spelarstyrd ekonomisk organisation som kan samla medlemmar och bedriva verksamhet i GameZone.",
+        "category": "Companies",
+        "href": "/wiki/companies/skapa-ett-foretag",
+        "aliases": [
+            "Companies",
+            "Företag",
+            "Företaget",
+            "Företagets"
+        ]
+    },
+    {
+        "key": "marketplace",
+        "title": "Marketplace",
+        "definition": "GameZones marknadssystem för köp, försäljning och handel med produkter.",
+        "category": "Marketplace",
+        "href": "/wiki/marketplace/sa-fungerar-marketplace",
+        "aliases": [
+            "Marknadsplats"
+        ]
+    },
+    {
+        "key": "experience",
+        "title": "Experience",
+        "definition": "Spelarens erfarenhet och progression inom GameZones olika system.",
+        "category": "Experience",
+        "href": "/wiki/experience/experience",
+        "aliases": [
+            "XP"
+        ]
+    },
+    {
+        "key": "gruvdrift",
+        "title": "Gruvdrift",
+        "definition": "En produktionskategori där spelare tjänar Coins genom manuell brytning av godkända mineraler och malmer.",
+        "category": "Production",
+        "href": "/wiki/production/gruvdrift",
+        "aliases": [
+            "Mining"
+        ]
+    },
+    {
+        "key": "jordbruk",
+        "title": "Jordbruk",
+        "definition": "En produktionskategori där spelare tjänar Coins genom manuell skörd av godkända grödor.",
+        "category": "Production",
+        "href": "/wiki/production/jordbruk",
+        "aliases": [
+            "Farming"
+        ]
+    },
+    {
+        "key": "skogsbruk",
+        "title": "Skogsbruk",
+        "definition": "En produktionskategori där spelare tjänar Coins genom manuell avverkning av godkända träd och träslag.",
+        "category": "Production",
+        "href": "/wiki/production/skogsbruk",
+        "aliases": [
+            "Forestry"
+        ]
+    },
+    {
+        "key": "boskap",
+        "title": "Boskap",
+        "definition": "En produktionskategori där spelare tjänar Coins genom godkänd manuell produktion kopplad till djurhållning.",
+        "category": "Production",
+        "href": "/wiki/production/boskap",
+        "aliases": [
+            "Djurhållning"
+        ]
+    },
+    {
+        "key": "fiske",
+        "title": "Fiske",
+        "definition": "En produktionskategori där spelare tjänar Coins genom manuell fångst av godkända fiskar och andra fiskeföremål.",
+        "category": "Production",
+        "href": "/wiki/production/fiske",
+        "aliases": [
+            "Fishing"
+        ]
+    },
+    {
+        "key": "byggmaterial",
+        "title": "Byggmaterial",
+        "definition": "En produktionskategori där spelare tjänar Coins genom manuell framställning av godkända byggmaterial.",
+        "category": "Production",
+        "href": "/wiki/production/byggmaterial",
+        "aliases": [
+            "Construction Materials"
+        ]
+    },
+    {
+        "key": "alkemi",
+        "title": "Alkemi",
+        "definition": "En produktionskategori där spelare tjänar Coins genom godkänd manuell framställning av alkemiska produkter.",
+        "category": "Production",
+        "href": "/wiki/production/alkemi",
+        "aliases": [
+            "Alchemy"
+        ]
+    },
+    {
+        "key": "enstoring",
+        "title": "Enstöring",
+        "definition": "Den första settlementnivån. Enstöring är startpunkten för ett nytt settlement och kräver inga Coins för att låsas upp.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/enstoring",
+        "aliases": [
+            "Enstöringen",
+            "Nivå 1"
+        ]
+    },
+    {
+        "key": "lager",
+        "title": "Läger",
+        "definition": "Den andra settlementnivån. Läger utökar territoriet, aktiverar handelsrabatt och låser upp de första produktionsbyggnaderna.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/lager",
+        "aliases": [
+            "Lägret",
+            "Nivå 2"
+        ]
+    },
+    {
+        "key": "by",
+        "title": "By",
+        "definition": "Den tredje settlementnivån. By fortsätter settlementets utveckling och låser upp Handelscentrum.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/by",
+        "aliases": [
+            "Byn",
+            "Nivå 3"
+        ]
+    },
+    {
+        "key": "bosattning",
+        "title": "Bosättning",
+        "definition": "Den fjärde settlementnivån och nästa steg efter By.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/bosattning",
+        "aliases": [
+            "Bosättningen",
+            "Nivå 4"
+        ]
+    },
+    {
+        "key": "samhalle",
+        "title": "Samhälle",
+        "definition": "Den femte settlementnivån och nästa steg efter Bosättning.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/samhalle",
+        "aliases": [
+            "Samhället",
+            "Nivå 5"
+        ]
+    },
+    {
+        "key": "koping",
+        "title": "Köping",
+        "definition": "Den sjätte settlementnivån och nästa steg efter Samhälle.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/koping",
+        "aliases": [
+            "Köpingen",
+            "Nivå 6"
+        ]
+    },
+    {
+        "key": "stad",
+        "title": "Stad",
+        "definition": "Den sjunde settlementnivån och nästa steg efter Köping.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/stad",
+        "aliases": [
+            "Staden",
+            "Nivå 7"
+        ]
+    },
+    {
+        "key": "handelsstad",
+        "title": "Handelsstad",
+        "definition": "Den åttonde settlementnivån och nästa steg efter Stad.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/handelsstad",
+        "aliases": [
+            "Handelsstaden",
+            "Nivå 8"
+        ]
+    },
+    {
+        "key": "fastning",
+        "title": "Fästning",
+        "definition": "Den nionde settlementnivån och nästa steg efter Handelsstad.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/fastning",
+        "aliases": [
+            "Fästningen",
+            "Nivå 9"
+        ]
+    },
+    {
+        "key": "huvudstad",
+        "title": "Huvudstad",
+        "definition": "Den tionde settlementnivån och nästa steg efter Fästning.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/huvudstad",
+        "aliases": [
+            "Huvudstaden",
+            "Nivå 10"
+        ]
+    },
+    {
+        "key": "grevskap",
+        "title": "Grevskap",
+        "definition": "Den elfte settlementnivån och nästa steg efter Huvudstad.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/grevskap",
+        "aliases": [
+            "Grevskapet",
+            "Nivå 11"
+        ]
+    },
+    {
+        "key": "hertigdome",
+        "title": "Hertigdöme",
+        "definition": "Den tolfte settlementnivån och nästa steg efter Grevskap.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/hertigdome",
+        "aliases": [
+            "Hertigdömet",
+            "Nivå 12"
+        ]
+    },
+    {
+        "key": "nation",
+        "title": "Nation",
+        "definition": "Den trettonde settlementnivån och nästa steg efter Hertigdöme.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/nation",
+        "aliases": [
+            "Nationen",
+            "Nivå 13"
+        ]
+    },
+    {
+        "key": "kungadome",
+        "title": "Kungadöme",
+        "definition": "Den fjortonde settlementnivån och nästa steg efter Nation.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/kungadome",
+        "aliases": [
+            "Kungadömet",
+            "Nivå 14"
+        ]
+    },
+    {
+        "key": "imperium",
+        "title": "Imperium",
+        "definition": "Den femtonde och högsta settlementnivån i GameZone.",
+        "category": "Settlementnivå",
+        "href": "/wiki/settlements/imperium",
+        "aliases": [
+            "Imperiet",
+            "Nivå 15"
+        ]
+    },
+    {
+        "key": "gruva",
+        "title": "Gruva",
+        "definition": "En permanent settlementbyggnad som ger 5 procent extra Coins från Gruvdrift.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/lager#byggnader",
+        "aliases": [
+            "Gruvan"
+        ]
+    },
+    {
+        "key": "lada",
+        "title": "Lada",
+        "definition": "En permanent settlementbyggnad som ger 5 procent extra Coins från Jordbruk.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/lager#byggnader",
+        "aliases": [
+            "Ladan"
+        ]
+    },
+    {
+        "key": "ladugard",
+        "title": "Ladugård",
+        "definition": "En permanent settlementbyggnad som ger 5 procent extra Coins från Boskap.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/lager#byggnader",
+        "aliases": [
+            "Ladugården"
+        ]
+    },
+    {
+        "key": "fiskebrygga",
+        "title": "Fiskebrygga",
+        "definition": "En permanent settlementbyggnad som ger 5 procent extra Coins från Fiske.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/lager#byggnader",
+        "aliases": [
+            "Fiskebryggan"
+        ]
+    },
+    {
+        "key": "sagverk",
+        "title": "Sågverk",
+        "definition": "En permanent settlementbyggnad som ger 5 procent extra Coins från Skogsbruk.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/lager#byggnader",
+        "aliases": [
+            "Sågverket"
+        ]
+    },
+    {
+        "key": "stenhuggeri",
+        "title": "Stenhuggeri",
+        "definition": "En permanent settlementbyggnad som ger 5 procent extra Coins från Byggmaterial.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/lager#byggnader",
+        "aliases": [
+            "Stenhuggeriet"
+        ]
+    },
+    {
+        "key": "handelscentrum",
+        "title": "Handelscentrum",
+        "definition": "En permanent settlementbyggnad som låser upp möjligheten att registrera företag inom settlementet.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/by#byggnader",
+        "aliases": [
+            "Handelscentrumet",
+            "Handelscentret"
+        ]
+    },
+    {
+        "key": "bank",
+        "title": "Bank",
+        "definition": "En permanent settlementbyggnad som låser upp settlementets stadskassa.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/bosattning#byggnader",
+        "aliases": [
+            "Banken"
+        ]
+    },
+    {
+        "key": "laboratorium",
+        "title": "Laboratorium",
+        "definition": "En permanent specialbyggnad som låses upp på settlementnivån Samhälle och förstärker Alkemi.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/samhalle#byggnader",
+        "aliases": [
+            "Laboratoriet"
+        ]
+    },
+    {
+        "key": "kyrka",
+        "title": "Kyrka",
+        "definition": "En permanent specialbyggnad som låses upp på settlementnivån Köping.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/koping#byggnader",
+        "aliases": [
+            "Kyrkan"
+        ]
+    },
+    {
+        "key": "marknadsplats",
+        "title": "Marknadsplats",
+        "definition": "En permanent specialbyggnad som låses upp på settlementnivån Handelsstad.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/handelsstad#byggnader",
+        "aliases": [
+            "Marknadsplatsen"
+        ]
+    },
+    {
+        "key": "monument",
+        "title": "Monument",
+        "definition": "En permanent specialbyggnad som låses upp på settlementnivån Huvudstad.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/huvudstad#byggnader",
+        "aliases": [
+            "Monumentet"
+        ]
+    },
+    {
+        "key": "slott",
+        "title": "Slott",
+        "definition": "En permanent specialbyggnad som låses upp på settlementnivån Hertigdöme.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/hertigdome#byggnader",
+        "aliases": [
+            "Slottet"
+        ]
+    },
+    {
+        "key": "underverk",
+        "title": "Underverk",
+        "definition": "Den främsta permanenta specialbyggnaden och en del av settlementnivån Imperium.",
+        "category": "Settlementbyggnad",
+        "href": "/wiki/settlements/imperium#byggnader",
+        "aliases": [
+            "Underverket"
+        ]
+    }
+]

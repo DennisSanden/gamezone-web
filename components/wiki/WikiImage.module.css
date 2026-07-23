@@ -1,0 +1,48 @@
+.figure {
+    margin: 2rem 0;
+}
+
+.imageButton {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    transition: transform .18s ease;
+}
+
+.image:hover {
+    transform: scale(1.01);
+}
+
+.caption {
+    margin-top: .8rem;
+    color: #9aa79d;
+    font-size: .82rem;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.88);
+    cursor: zoom-out;
+}
+
+.fullImage {
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+}

@@ -1,0 +1,258 @@
+.page {
+    min-height: 100vh;
+    background:
+            radial-gradient(
+                    circle at 68% 0%,
+                    rgba(93, 132, 80, 0.15),
+                    transparent 37rem
+            ),
+            #0c120e;
+    color: #edf3ea;
+}
+
+.shell {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    width: min(1500px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.content {
+    width: min(920px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: 34px 0 80px;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 23px;
+    color: #657267;
+    font-size: 0.66rem;
+    font-weight: 750;
+}
+
+.breadcrumbs a {
+    color: #82947e;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: #b0c2aa;
+}
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    min-height: 220px;
+    overflow: hidden;
+    padding: 36px 38px;
+    border: 1px solid rgba(164, 196, 152, 0.17);
+    border-radius: 20px;
+    background:
+            radial-gradient(
+                    circle at 82% 20%,
+                    rgba(127, 171, 111, 0.24),
+                    transparent 23rem
+            ),
+            linear-gradient(
+                    135deg,
+                    rgba(43, 66, 45, 0.97),
+                    rgba(18, 29, 21, 0.98)
+            );
+    box-shadow:
+            0 25px 65px rgba(0, 0, 0, 0.24),
+            inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.heroPattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.14;
+    background-image:
+            linear-gradient(
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px
+            ),
+            linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px
+            );
+    background-size: 32px 32px;
+    mask-image: linear-gradient(
+            90deg,
+            black,
+            transparent 88%
+    );
+}
+
+.heroIcon {
+    display: grid;
+    width: 70px;
+    height: 70px;
+    place-items: center;
+    border: 1px solid rgba(183, 214, 171, 0.23);
+    border-radius: 18px;
+    background: rgba(134, 177, 119, 0.19);
+    color: #c5ddbc;
+}
+
+.eyebrow {
+    color: #a1bd98;
+    font-size: 0.62rem;
+    font-weight: 850;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 9px 0 0;
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 0.95;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 16px 0 0;
+    color: #aebbac;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.articles {
+    margin-top: 42px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 18px;
+}
+
+.sectionHeader h2 {
+    margin: 6px 0 0;
+    font-size: 1.8rem;
+    font-weight: 850;
+    letter-spacing: -0.04em;
+}
+
+.articleCount {
+    color: #6e806b;
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.articleGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.articleCard {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 15px;
+    min-height: 120px;
+    padding: 19px;
+    border: 1px solid rgba(160, 190, 149, 0.12);
+    border-radius: 13px;
+    background:
+            linear-gradient(
+                    145deg,
+                    rgba(29, 43, 32, 0.86),
+                    rgba(16, 24, 18, 0.92)
+            );
+    color: inherit;
+    text-decoration: none;
+    transition:
+            border-color 160ms ease,
+            background 160ms ease,
+            transform 160ms ease;
+}
+
+.articleCard:hover {
+    border-color: rgba(153, 188, 140, 0.29);
+    background:
+            linear-gradient(
+                    145deg,
+                    rgba(38, 56, 41, 0.94),
+                    rgba(19, 29, 21, 0.96)
+            );
+    transform: translateY(-2px);
+}
+
+.articleNumber {
+    color: #6f866a;
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+.articleCard h3 {
+    margin: 0;
+    color: #dce6d9;
+    font-size: 0.87rem;
+    font-weight: 830;
+}
+
+.articleCard p {
+    margin: 7px 0 0;
+    color: #718072;
+    font-size: 0.69rem;
+    line-height: 1.48;
+}
+
+.articleArrow {
+    color: #687c64;
+    transition: transform 160ms ease;
+}
+
+.articleCard:hover .articleArrow {
+    transform: translateX(3px);
+}
+
+@media (max-width: 850px) {
+    .content {
+        width: min(100% - 40px, 920px);
+    }
+
+    .articleGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .shell {
+        display: block;
+    }
+
+    .content {
+        padding-top: 27px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 28px 24px;
+    }
+
+    .heroIcon {
+        width: 58px;
+        height: 58px;
+    }
+}

@@ -1,0 +1,445 @@
+.section {
+    padding: 74px var(--page-padding);
+    background:
+            radial-gradient(
+                    circle at 80% 18%,
+                    rgb(75 137 48 / 10%),
+                    transparent 34rem
+            ),
+            linear-gradient(
+                    180deg,
+                    #080d0a 0%,
+                    #0a100c 100%
+            );
+    border-top: 1px solid rgb(255 255 255 / 6%);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 28px;
+}
+
+.kicker {
+    display: block;
+    margin-bottom: 8px;
+    color: #78ce50;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(30px, 3.6vw, 48px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+}
+
+.liveStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    color: #dfe5df;
+    background: rgb(255 255 255 / 4%);
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.liveDot {
+    width: 9px;
+    height: 9px;
+    background: #ff3e3e;
+    border-radius: 999px;
+    box-shadow: 0 0 16px rgb(255 62 62 / 72%);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(340px, 0.8fr);
+    gap: 20px;
+}
+
+.featured {
+    overflow: hidden;
+    background: #0e1510;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 14px;
+    box-shadow: 0 26px 70px rgb(0 0 0 / 30%);
+}
+
+.featuredImage {
+    position: relative;
+    min-height: 390px;
+    background-image: url("/images/hero-background.jpg");
+    background-position: center 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageOverlay {
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(
+                    180deg,
+                    rgb(4 8 6 / 8%) 0%,
+                    rgb(4 8 6 / 18%) 50%,
+                    rgb(4 8 6 / 78%) 100%
+            );
+}
+
+.liveBadge,
+.viewerBadge,
+.smallLiveBadge,
+.smallViewerBadge {
+    position: absolute;
+    z-index: 2;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.liveBadge {
+    top: 18px;
+    left: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    color: #ffffff;
+    background: #e52f2f;
+}
+
+.badgeDot {
+    width: 7px;
+    height: 7px;
+    background: #ffffff;
+    border-radius: 999px;
+}
+
+.viewerBadge {
+    right: 18px;
+    bottom: 18px;
+    padding: 8px 10px;
+    color: #ffffff;
+    background: rgb(4 8 6 / 78%);
+    border: 1px solid rgb(255 255 255 / 14%);
+    backdrop-filter: blur(10px);
+}
+
+.featuredContent {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+}
+
+.avatar,
+.smallAvatar {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: #0b120c;
+    background: linear-gradient(
+            145deg,
+            #8cda63,
+            #4d9c31
+    );
+    border: 1px solid rgb(179 255 135 / 45%);
+    font-weight: 950;
+}
+
+.avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.streamInfo {
+    min-width: 0;
+}
+
+.streamerName {
+    color: #7ed456;
+    font-size: 13px;
+    font-weight: 850;
+}
+
+.streamInfo h3 {
+    margin: 4px 0 0;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 850;
+    letter-spacing: -0.025em;
+}
+
+.streamInfo p {
+    max-width: 620px;
+    margin: 8px 0 0;
+    color: #aeb8b0;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 13px;
+}
+
+.meta span {
+    padding: 5px 8px;
+    color: #b9c3bb;
+    background: rgb(255 255 255 / 4%);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.watchButton,
+.allStreams {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    background: linear-gradient(
+            145deg,
+            #3f8f29,
+            #28631d
+    );
+    border: 1px solid #65b844;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 850;
+    text-decoration: none;
+    transition:
+            background-color 160ms ease,
+            transform 160ms ease;
+}
+
+.watchButton {
+    padding-inline: 18px;
+}
+
+.watchButton:hover,
+.allStreams:hover {
+    background: linear-gradient(
+            145deg,
+            #4ca633,
+            #327824
+    );
+    transform: translateY(-1px);
+}
+
+.streamList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.streamCard {
+    overflow: hidden;
+    background: #0e1510;
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: 11px;
+    transition:
+            border-color 160ms ease,
+            transform 160ms ease;
+}
+
+.streamCard:hover {
+    border-color: rgb(112 200 72 / 34%);
+    transform: translateY(-2px);
+}
+
+.thumbnail {
+    position: relative;
+    min-height: 112px;
+    background-image: url("/images/hero-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.streamCard:nth-child(1) .thumbnail {
+    background-position: 25% 58%;
+}
+
+.streamCard:nth-child(2) .thumbnail {
+    background-position: 55% 50%;
+}
+
+.streamCard:nth-child(3) .thumbnail {
+    background-position: 82% 54%;
+}
+
+.thumbnailOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            180deg,
+            rgb(4 8 6 / 4%),
+            rgb(4 8 6 / 52%)
+    );
+}
+
+.smallLiveBadge {
+    top: 10px;
+    left: 10px;
+    padding: 5px 7px;
+    color: #ffffff;
+    background: #e52f2f;
+}
+
+.smallViewerBadge {
+    right: 10px;
+    bottom: 10px;
+    padding: 5px 7px;
+    color: #ffffff;
+    background: rgb(4 8 6 / 76%);
+    border: 1px solid rgb(255 255 255 / 12%);
+}
+
+.streamCardContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+}
+
+.smallAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    font-size: 12px;
+}
+
+.smallInfo {
+    min-width: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.smallInfo strong {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.smallInfo span {
+    margin-top: 2px;
+    overflow: hidden;
+    color: #b5beb7;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.smallInfo small {
+    margin-top: 3px;
+    color: #71c84a;
+    font-size: 11px;
+}
+
+.cardNumber {
+    color: rgb(255 255 255 / 12%);
+    font-size: 24px;
+    font-weight: 950;
+}
+
+.allStreams {
+    width: 100%;
+    margin-top: 2px;
+}
+
+@media (max-width: 1000px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .streamList {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .allStreams {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 760px) {
+    .heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .featuredImage {
+        min-height: 310px;
+    }
+
+    .featuredContent {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .watchButton {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .streamList {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .featuredImage {
+        min-height: 250px;
+        background-position: 58% center;
+    }
+
+    .featuredContent {
+        padding: 18px;
+    }
+
+    .avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .streamInfo h3 {
+        font-size: 18px;
+    }
+
+    .streamInfo p {
+        font-size: 13px;
+    }
+}

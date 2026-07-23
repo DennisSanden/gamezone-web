@@ -1,0 +1,25 @@
+.page {
+    min-height: 100vh;
+    background:
+            radial-gradient(
+                    circle at 65% 0%,
+                    rgba(87, 116, 78, 0.1),
+                    transparent 35rem
+            ),
+            #090d0b;
+    color: #edf2eb;
+}
+
+.shell {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    width: min(1500px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+    .shell {
+        display: block;
+    }
+}

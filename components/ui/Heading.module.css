@@ -1,0 +1,5 @@
+.heading {
+    margin: 0 0 20px;
+    font-size: clamp(36px, 6vw, 72px);
+    line-height: 1;
+}

@@ -1,0 +1,128 @@
+.panel {
+    overflow: hidden;
+    margin: 2rem 0;
+    border: 1px solid rgba(151, 180, 138, 0.18);
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(31, 48, 38, 0.92),
+            rgba(13, 21, 17, 0.96)
+        );
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(151, 180, 138, 0.14);
+}
+
+.header h3 {
+    margin: 0.35rem 0 0;
+    color: #f4f7f2;
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+}
+
+.header p {
+    max-width: 650px;
+    margin: 0.7rem 0 0;
+    color: rgba(225, 234, 220, 0.7);
+    line-height: 1.65;
+}
+
+.eyebrow {
+    color: #a9c79b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.countBadge {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgba(151, 180, 138, 0.22);
+    border-radius: 999px;
+    background: rgba(151, 180, 138, 0.08);
+    color: #c8ddbe;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.notice {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    margin: 0 1.5rem 1.5rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(151, 180, 138, 0.14);
+    border-radius: 12px;
+    background: rgba(151, 180, 138, 0.055);
+}
+
+.noticeMarker {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background: #a9c79b;
+    box-shadow: 0 0 14px rgba(169, 199, 155, 0.5);
+}
+
+.notice p,
+.emptyState p {
+    margin: 0;
+    color: rgba(225, 234, 220, 0.72);
+    line-height: 1.65;
+}
+
+.emptyState {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 1.5rem;
+    padding: 1.2rem;
+    border: 1px dashed rgba(151, 180, 138, 0.2);
+    border-radius: 14px;
+    background: rgba(4, 9, 7, 0.22);
+}
+
+.emptyState strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #eef4eb;
+}
+
+.emptyIcon {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 10px;
+    background: rgba(151, 180, 138, 0.1);
+    color: #a9c79b;
+    font-weight: 800;
+}
+
+@media (max-width: 760px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
