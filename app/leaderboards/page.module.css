@@ -1,0 +1,880 @@
+.page {
+    min-height: 100vh;
+    background: #07100b;
+    color: #f5fbf7;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(114, 194, 138, 0.14);
+    background:
+        radial-gradient(circle at 78% 10%, rgba(78, 181, 107, 0.15), transparent 32%),
+        linear-gradient(135deg, #09150e 0%, #07100b 58%, #0b1b11 100%);
+}
+
+.hero::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 42px 42px;
+    content: "";
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 48px;
+    padding-top: 82px;
+    padding-bottom: 72px;
+}
+
+.eyebrow,
+.categoryHeader span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #78d593;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.7rem, 5vw, 5.1rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 24px 0 0;
+    color: #aab8ae;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.statusCard {
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 21px 23px;
+    border: 1px solid rgba(113, 204, 139, 0.22);
+    border-radius: 18px;
+    background: rgba(7, 18, 11, 0.74);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+}
+
+.statusCard strong,
+.statusCard small {
+    display: block;
+}
+
+.statusCard strong {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.statusCard small {
+    color: #829187;
+    font-size: 0.78rem;
+}
+
+.statusDot {
+    width: 11px;
+    height: 11px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #54e27d;
+    box-shadow:
+        0 0 0 6px rgba(84, 226, 125, 0.12),
+        0 0 22px rgba(84, 226, 125, 0.58);
+}
+
+.dashboard {
+    padding-top: 42px;
+    padding-bottom: 100px;
+}
+
+.overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.overviewCard {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid rgba(118, 196, 140, 0.14);
+    border-radius: 15px;
+    background:
+        linear-gradient(145deg, rgba(17, 40, 25, 0.78), rgba(9, 23, 14, 0.9));
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+}
+
+.overviewCard span,
+.overviewCard strong,
+.overviewCard small {
+    display: block;
+}
+
+.overviewCard span {
+    margin-bottom: 18px;
+    color: #8fa197;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.overviewCard strong {
+    overflow: hidden;
+    color: #eaf7ed;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.overviewCard small {
+    margin-top: 7px;
+    color: #65766c;
+    font-size: 0.72rem;
+}
+
+.categoryTabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 44px;
+    padding: 7px;
+    border: 1px solid rgba(118, 196, 140, 0.13);
+    border-radius: 14px;
+    background: #09150e;
+    scrollbar-width: none;
+}
+
+.categoryTabs::-webkit-scrollbar {
+    display: none;
+}
+
+.categoryTab,
+.activeTab {
+    min-width: 132px;
+    flex: 1;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 9px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 800;
+    transition:
+        background 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.categoryTab {
+    color: #899a90;
+    background: transparent;
+}
+
+.categoryTab:hover {
+    color: #e4eee7;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.activeTab {
+    color: #07100b;
+    background: #65d283;
+    box-shadow: 0 8px 24px rgba(57, 160, 86, 0.2);
+}
+
+.categoryHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 34px;
+    margin-bottom: 22px;
+}
+
+.categoryHeader h2 {
+    margin: 0;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    letter-spacing: -0.04em;
+}
+
+.categoryHeader p {
+    max-width: 530px;
+    margin: 0;
+    color: #899a90;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    text-align: right;
+}
+
+.boardGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.boardCard {
+    overflow: hidden;
+    border: 1px solid rgba(118, 196, 140, 0.14);
+    border-radius: 17px;
+    background: #0a1510;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
+}
+
+.boardHeader {
+    min-height: 112px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px 21px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    background:
+        radial-gradient(circle at 100% 0, rgba(74, 180, 103, 0.1), transparent 45%),
+        #0b1811;
+}
+
+.boardHeader h3 {
+    margin: 0 0 7px;
+    font-size: 1.06rem;
+    letter-spacing: -0.02em;
+}
+
+.boardHeader p {
+    max-width: 430px;
+    margin: 0;
+    color: #819087;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.apiBadge {
+    flex: 0 0 auto;
+    padding: 5px 8px;
+    border: 1px solid rgba(102, 215, 132, 0.25);
+    border-radius: 6px;
+    color: #72d98e;
+    background: rgba(62, 154, 87, 0.08);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.rankingList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rankingRow {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 66px;
+    padding: 11px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.rankingRow:last-child {
+    border-bottom: 0;
+}
+
+.rank {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border-radius: 8px;
+    color: #738178;
+    background: rgba(255, 255, 255, 0.035);
+    font-size: 0.74rem;
+    font-weight: 900;
+}
+
+.rank1 {
+    color: #f0d580;
+    background: rgba(232, 190, 59, 0.1);
+}
+
+.rank2 {
+    color: #c6d0ca;
+    background: rgba(194, 207, 198, 0.08);
+}
+
+.rank3 {
+    color: #ca966d;
+    background: rgba(184, 112, 61, 0.1);
+}
+
+.playerPlaceholder {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.avatarPlaceholder {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    border: 1px solid rgba(117, 193, 139, 0.1);
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(99, 198, 128, 0.08), transparent),
+        #0d1c13;
+}
+
+.namePlaceholder {
+    overflow: hidden;
+    color: #77877d;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.valuePlaceholder {
+    min-width: 74px;
+    text-align: right;
+}
+
+.valuePlaceholder strong,
+.valuePlaceholder small {
+    display: block;
+}
+
+.valuePlaceholder strong {
+    color: #68776e;
+    font-size: 0.92rem;
+}
+
+.valuePlaceholder small {
+    margin-top: 3px;
+    color: #526158;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.apiNotice {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 18px 20px;
+    border: 1px solid rgba(105, 197, 132, 0.16);
+    border-radius: 14px;
+    background: rgba(14, 35, 21, 0.62);
+}
+
+.noticeIcon {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    color: #07100b;
+    background: #68d487;
+    font-size: 0.8rem;
+    font-weight: 950;
+}
+
+.apiNotice strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+}
+
+.apiNotice p {
+    margin: 0;
+    color: #84968b;
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 1000px) {
+    .overviewGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .boardGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .heroInner {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .statusCard {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .categoryHeader {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .categoryHeader p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .heroInner {
+        padding-top: 54px;
+        padding-bottom: 48px;
+    }
+
+    .dashboard {
+        padding-top: 28px;
+        padding-bottom: 70px;
+    }
+
+    .overviewGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .categoryTabs {
+        margin-bottom: 34px;
+    }
+
+    .categoryTab,
+    .activeTab {
+        min-width: 112px;
+        padding-inline: 14px;
+    }
+
+    .boardHeader {
+        min-height: 0;
+    }
+
+    .rankingRow {
+        grid-template-columns: 30px minmax(0, 1fr) auto;
+        gap: 9px;
+        padding-inline: 13px;
+    }
+
+    .avatarPlaceholder {
+        display: none;
+    }
+
+    .namePlaceholder {
+        font-size: 0.74rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .categoryTab,
+    .activeTab {
+        transition: none;
+    }
+}
+
+/* Patch 08B: visual leaderboard identity */
+.hero {
+    min-height: 430px;
+    background:
+        linear-gradient(90deg, rgba(4, 10, 7, 0.98) 0%, rgba(4, 10, 7, 0.84) 38%, rgba(4, 10, 7, 0.24) 72%, rgba(4, 10, 7, 0.5) 100%),
+        url("/images/leaderboard.png") center 48% / cover no-repeat;
+}
+
+.hero::after {
+    background:
+        linear-gradient(to top, #07100b 0%, transparent 42%),
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: auto, 42px 42px, 42px 42px;
+    mask-image: none;
+}
+
+.heroInner {
+    min-height: 430px;
+    grid-template-columns: minmax(0, 0.92fr) minmax(330px, 0.58fr);
+    align-items: center;
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+.heroCopy {
+    max-width: 720px;
+}
+
+.heroBadges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.heroBadges span {
+    padding: 8px 12px;
+    border: 1px solid rgba(109, 211, 137, 0.2);
+    border-radius: 999px;
+    color: #b9d8c2;
+    background: rgba(6, 18, 10, 0.72);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.heroVisual {
+    position: relative;
+    min-height: 245px;
+    overflow: hidden;
+    border: 1px solid rgba(117, 211, 144, 0.2);
+    border-radius: 22px;
+    background:
+        linear-gradient(to top, rgba(5, 12, 8, 0.95), rgba(5, 12, 8, 0.08)),
+        url("/images/leaderboard.png") 72% 48% / 180% auto no-repeat;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+}
+
+.heroVisualShade {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 56% 40%, rgba(240, 177, 66, 0.18), transparent 28%),
+        linear-gradient(135deg, rgba(77, 190, 107, 0.06), transparent 60%);
+}
+
+.heroTrophy {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 1px solid rgba(239, 196, 89, 0.3);
+    border-radius: 16px;
+    background: rgba(35, 27, 8, 0.68);
+    box-shadow: 0 0 32px rgba(240, 190, 65, 0.16);
+    font-size: 1.8rem;
+}
+
+.heroVisualText {
+    position: absolute;
+    right: 24px;
+    bottom: 23px;
+    left: 24px;
+}
+
+.heroVisualText span,
+.heroVisualText strong {
+    display: block;
+}
+
+.heroVisualText span {
+    margin-bottom: 7px;
+    color: #78d593;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.heroVisualText strong {
+    max-width: 280px;
+    font-size: 1.35rem;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+}
+
+.overviewCard {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 110px;
+    background:
+        linear-gradient(145deg, rgba(17, 40, 25, 0.88), rgba(9, 23, 14, 0.94)),
+        url("/images/leaderboard.png") center / cover;
+}
+
+.overviewCard > div {
+    min-width: 0;
+}
+
+.overviewIcon {
+    display: grid !important;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    place-items: center;
+    margin: 0 !important;
+    border: 1px solid rgba(116, 218, 145, 0.2);
+    border-radius: 13px;
+    color: #7fe09a !important;
+    background: rgba(70, 173, 98, 0.1);
+    font-size: 1.35rem !important;
+    letter-spacing: 0 !important;
+}
+
+.categoryTabs {
+    position: sticky;
+    top: 76px;
+    z-index: 5;
+    backdrop-filter: blur(16px);
+}
+
+.categoryTab,
+.activeTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.categoryTab span,
+.activeTab span {
+    font-size: 1rem;
+}
+
+.categoryShowcase {
+    position: relative;
+    min-height: 230px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-bottom: 24px;
+    border: 1px solid rgba(118, 196, 140, 0.17);
+    border-radius: 19px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 24px 62px rgba(0, 0, 0, 0.22);
+}
+
+.showcase_players {
+    background-image: url("/images/hero-background.jpg");
+    background-position: center 58%;
+}
+
+.showcase_settlements {
+    background-image: url("/images/hero-background.jpg");
+    background-position: 74% 42%;
+}
+
+.showcase_companies {
+    background-image: url("/images/wiki.png");
+    background-position: center 52%;
+}
+
+.showcase_server {
+    background-image: url("/images/leaderboard.png");
+    background-position: 62% 50%;
+}
+
+.categoryShowcaseShade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(5, 13, 8, 0.97) 0%, rgba(5, 13, 8, 0.78) 45%, rgba(5, 13, 8, 0.2) 100%),
+        linear-gradient(to top, rgba(5, 13, 8, 0.88), transparent 58%);
+}
+
+.categoryShowcaseIcon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 1px solid rgba(127, 224, 154, 0.24);
+    border-radius: 16px;
+    color: #80e29b;
+    background: rgba(8, 24, 13, 0.72);
+    box-shadow: 0 0 30px rgba(86, 195, 116, 0.13);
+    font-size: 1.75rem;
+}
+
+.categoryShowcaseCopy {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    padding: 30px;
+}
+
+.categoryShowcaseCopy span {
+    color: #78d593;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.categoryShowcaseCopy h2 {
+    margin: 7px 0 9px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.categoryShowcaseCopy p {
+    max-width: 530px;
+    margin: 0;
+    color: #b4c3b9;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.boardHeader {
+    position: relative;
+    min-height: 138px;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 22px;
+    background-size: cover;
+    background-position: center;
+}
+
+.boardHeader::before {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top, rgba(7, 17, 10, 0.98) 0%, rgba(7, 17, 10, 0.7) 55%, rgba(7, 17, 10, 0.2) 100%),
+        linear-gradient(90deg, rgba(7, 17, 10, 0.72), transparent);
+    content: "";
+}
+
+.boardVisual1 {
+    background-image: url("/images/leaderboard.png");
+    background-position: 70% 45%;
+}
+
+.boardVisual2 {
+    background-image: url("/images/hero-background.jpg");
+    background-position: 65% 58%;
+}
+
+.boardVisual3 {
+    background-image: url("/images/wiki.png");
+    background-position: 50% 55%;
+}
+
+.boardVisual4 {
+    background-image: url("/images/leaderboard.png");
+    background-position: 45% 60%;
+}
+
+.boardHeader > div,
+.boardIcon,
+.apiBadge {
+    position: relative;
+    z-index: 1;
+}
+
+.boardIcon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(116, 218, 145, 0.24);
+    border-radius: 12px;
+    color: #82e49d;
+    background: rgba(7, 24, 12, 0.75);
+    font-size: 1.25rem;
+}
+
+.boardHeader > div {
+    flex: 1;
+}
+
+.rank {
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    font-size: 1.05rem;
+}
+
+.rank1,
+.rank2,
+.rank3 {
+    background: transparent;
+}
+
+.avatarPlaceholder {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(101, 210, 132, 0.16), transparent),
+        url("/brand/gamezonelogo.png") center / 62% auto no-repeat,
+        #0d1c13;
+}
+
+.avatarPlaceholder::after {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+    content: "";
+}
+
+@media (max-width: 900px) {
+    .heroInner {
+        grid-template-columns: 1fr;
+    }
+
+    .heroVisual {
+        min-height: 210px;
+    }
+
+    .categoryTabs {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 0;
+    }
+
+    .heroVisual {
+        display: none;
+    }
+
+    .heroBadges {
+        margin-top: 20px;
+    }
+
+    .categoryShowcase {
+        min-height: 200px;
+    }
+
+    .categoryShowcaseCopy {
+        padding: 22px;
+    }
+
+    .categoryShowcaseIcon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.35rem;
+    }
+
+    .boardHeader {
+        min-height: 126px;
+    }
+}

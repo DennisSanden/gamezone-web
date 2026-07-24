@@ -1,0 +1,239 @@
+.page { overflow: hidden; }
+
+.hero {
+    position: relative;
+    background:
+        radial-gradient(circle at 78% 22%, rgb(112 158 82 / 18%), transparent 26rem),
+        linear-gradient(135deg, #071009 0%, #0b130e 55%, #080d0a 100%);
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgb(255 255 255 / 4%) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(255 255 255 / 4%) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.heroContainer {
+    position: relative;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+    align-items: center;
+    gap: 76px;
+    padding-block: 82px;
+}
+
+.heroCopy { position: relative; z-index: 2; }
+
+.eyebrow, .kicker, .serverCard > span, .infoBox > div > span, .pathLabel {
+    color: #8fd266;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 16px 0 22px;
+    font-size: clamp(46px, 5.5vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.lead {
+    max-width: 680px;
+    margin: 0;
+    color: #d2d9d3;
+    font-size: 19px;
+    line-height: 1.72;
+}
+
+.heroActions, .inlineActions, .finalActions { display: flex; flex-wrap: wrap; gap: 12px; }
+.heroActions { margin-top: 32px; }
+
+.primaryAction {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    color: #081008;
+    background: #93d66c;
+    border-radius: var(--radius-medium);
+    font-weight: 850;
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.primaryAction:hover {
+    transform: translateY(-2px);
+    background: #a2e37a;
+    box-shadow: 0 14px 34px rgb(83 145 52 / 24%);
+}
+
+.heroVisual { position: relative; min-height: 500px; }
+
+.worldCard {
+    position: absolute;
+    inset: 0 36px 60px 0;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 11%);
+    border-radius: 28px;
+    box-shadow: 0 34px 90px rgb(0 0 0 / 48%);
+    transform: rotate(1.5deg);
+}
+
+.worldCard img { object-fit: cover; }
+.worldOverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgb(5 9 6 / 92%), transparent 62%); }
+
+.worldLabel {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+}
+.worldLabel span { display: block; color: #94d66c; font-size: 12px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+.worldLabel strong { display: block; max-width: 360px; margin-top: 8px; font-size: 25px; line-height: 1.15; }
+
+.serverCard {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: min(340px, 78%);
+    padding: 24px;
+    background: linear-gradient(145deg, rgb(29 39 33 / 98%), rgb(13 18 15 / 98%));
+    border: 1px solid rgb(143 210 102 / 28%);
+    border-radius: var(--radius-large);
+    box-shadow: 0 24px 70px rgb(0 0 0 / 42%);
+    animation: floatCard 5s ease-in-out infinite;
+}
+
+.serverCard strong { display: block; margin: 15px 0 7px; font-size: clamp(21px, 2.5vw, 29px); letter-spacing: -0.035em; }
+.serverCard p { margin: 0 0 16px; color: var(--color-text-muted); }
+.serverPulse { display: flex; align-items: center; gap: 9px; color: #cce8bd; font-size: 13px; font-weight: 750; }
+.serverPulse i { width: 9px; height: 9px; border-radius: 50%; background: #8fd266; box-shadow: 0 0 0 0 rgb(143 210 102 / 55%); animation: pulse 2s infinite; }
+
+.stepsSection, .firstSessionSection, .pathsSection, .finalSection { padding-block: 96px; }
+.sectionHeading { max-width: 790px; }
+.sectionHeading h2, .finalPanel h2 { margin: 12px 0 16px; font-size: clamp(34px, 4vw, 54px); line-height: 1.05; letter-spacing: -0.045em; }
+.sectionHeading > p, .finalPanel p { margin: 0; color: var(--color-text-muted); font-size: 17px; line-height: 1.75; }
+
+.journey {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 48px;
+}
+
+.journeyLine {
+    position: absolute;
+    top: 39px;
+    left: 7%;
+    right: 7%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5e913f 10%, #8fd266 50%, #5e913f 90%, transparent);
+    opacity: .55;
+}
+
+.stepCard {
+    position: relative;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    background: linear-gradient(145deg, rgb(29 39 33 / 88%), rgb(18 25 21 / 88%));
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-small);
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.stepCard:hover { transform: translateY(-7px); border-color: rgb(143 210 102 / 30%); background: linear-gradient(145deg, rgb(35 49 40 / 96%), rgb(18 25 21 / 94%)); }
+.stepTop { display: flex; align-items: center; justify-content: space-between; }
+.stepIcon { position: relative; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; color: #081008; background: #8fd266; border-radius: 13px; font-weight: 900; box-shadow: 0 0 0 8px #101813; }
+.stepNumber { color: rgb(143 210 102 / 40%); font-size: 32px; font-weight: 900; letter-spacing: -0.06em; }
+.stepCard h3, .timeline h3, .pathsGrid h3, .infoBox h3 { margin: 25px 0 12px; font-size: 21px; letter-spacing: -0.025em; }
+.stepCard p, .timeline p, .pathsGrid p, .infoBox p { margin: 0; color: var(--color-text-muted); line-height: 1.7; }
+.stepCard a, .serverValue { margin-top: auto; padding-top: 22px; }
+.stepCard a { color: #9ada73; font-weight: 750; text-decoration: none; }
+.serverValue { display: block; color: #dff2d3; font-family: inherit; font-size: 14px; font-weight: 800; word-break: break-word; }
+
+.firstSessionSection, .finalSection {
+    background: radial-gradient(circle at 50% 0%, rgb(93 136 68 / 12%), transparent 35rem), #0a0f0c;
+    border-block: 1px solid rgb(255 255 255 / 7%);
+}
+
+.firstSessionLayout { display: grid; grid-template-columns: minmax(380px, .9fr) minmax(0, 1.1fr); gap: 78px; align-items: center; }
+.sessionVisual { position: relative; min-height: 610px; overflow: hidden; border: 1px solid rgb(255 255 255 / 10%); border-radius: 28px; box-shadow: 0 34px 90px rgb(0 0 0 / 34%); }
+.sessionVisual img { object-fit: cover; }
+.sessionShade { position: absolute; inset: 0; background: linear-gradient(to top, rgb(5 9 6 / 94%), rgb(5 9 6 / 10%) 60%); }
+.commandCard { position: absolute; left: 24px; right: 24px; bottom: 24px; padding: 22px; background: rgb(11 17 13 / 88%); border: 1px solid rgb(143 210 102 / 24%); border-radius: 18px; backdrop-filter: blur(12px); }
+.commandCard span { display: block; color: #8fd266; font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+.commandCard code { display: block; margin-top: 9px; color: white; font-family: inherit; font-size: 28px; font-weight: 900; }
+.mapBadge { position: absolute; top: 22px; right: 22px; padding: 10px 14px; color: #dff2d3; background: rgb(7 12 9 / 78%); border: 1px solid rgb(255 255 255 / 12%); border-radius: 999px; font-size: 12px; font-weight: 800; backdrop-filter: blur(10px); }
+
+.timeline { display: grid; gap: 12px; margin-top: 34px; }
+.timeline article { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 18px 20px; background: rgb(255 255 255 / 3%); border: 1px solid rgb(255 255 255 / 8%); border-radius: var(--radius-medium); transition: transform 180ms ease, border-color 180ms ease; }
+.timeline article:hover { transform: translateX(6px); border-color: rgb(143 210 102 / 24%); }
+.timelineIndex { display: grid; place-items: center; width: 38px; height: 38px; color: #8fd266; background: rgb(143 210 102 / 9%); border: 1px solid rgb(143 210 102 / 18%); border-radius: 12px; font-size: 12px; font-weight: 900; }
+.timeline small { color: #8fd266; font-size: 10px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.timeline h3 { margin: 5px 0 7px; }
+.inlineActions { margin-top: 24px; }
+
+.pathsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 42px; }
+.pathsGrid article { position: relative; min-height: 260px; display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 28px; overflow: hidden; background: var(--color-background-soft); border: 1px solid var(--color-border); border-radius: var(--radius-large); transition: transform 180ms ease, border-color 180ms ease; }
+.pathsGrid article::after { content: ""; position: absolute; width: 150px; height: 150px; right: -55px; bottom: -70px; background: radial-gradient(circle, rgb(143 210 102 / 18%), transparent 68%); }
+.pathsGrid article:hover { transform: translateY(-6px); border-color: rgb(143 210 102 / 28%); }
+.pathSymbol { color: rgb(143 210 102 / 23%); font-size: 54px; font-weight: 950; line-height: 1; letter-spacing: -.08em; }
+.pathsGrid h3 { margin: 10px 0 12px; }
+
+.infoBox { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr) auto; gap: 30px; align-items: center; margin-top: 22px; padding: 28px 30px; background: rgb(111 143 78 / 10%); border: 1px solid rgb(143 210 102 / 18%); border-radius: var(--radius-large); }
+.infoBox h3 { margin: 8px 0 0; }
+
+.finalPanel { position: relative; overflow: hidden; display: flex; justify-content: space-between; align-items: center; gap: 56px; padding: 44px; background: linear-gradient(145deg, rgb(26 36 30 / 92%), rgb(13 18 15 / 96%)); border: 1px solid rgb(143 210 102 / 20%); border-radius: var(--radius-large); }
+.finalPanel::after { content: ""; position: absolute; width: 330px; height: 330px; right: -120px; top: -140px; background: radial-gradient(circle, rgb(143 210 102 / 20%), transparent 68%); }
+.finalPanel > div { position: relative; z-index: 1; }
+.finalPanel > div:first-child { max-width: 760px; }
+
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgb(143 210 102 / 0%); } 100% { box-shadow: 0 0 0 0 rgb(143 210 102 / 0%); } }
+@keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .serverCard, .serverPulse i { animation: none; }
+    .stepCard, .timeline article, .pathsGrid article, .primaryAction { transition: none; }
+}
+
+@media (max-width: 1100px) {
+    .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .journeyLine { display: none; }
+    .heroContainer, .firstSessionLayout { gap: 48px; }
+    .infoBox { grid-template-columns: 1fr; align-items: start; }
+}
+
+@media (max-width: 820px) {
+    .heroContainer, .firstSessionLayout { grid-template-columns: 1fr; }
+    .heroContainer { min-height: auto; padding-block: 68px; }
+    .heroVisual { min-height: 470px; }
+    .stepsSection, .firstSessionSection, .pathsSection, .finalSection { padding-block: 68px; }
+    .pathsGrid { grid-template-columns: 1fr; }
+    .sessionVisual { min-height: 480px; }
+    .finalPanel { display: grid; padding: 30px; }
+}
+
+@media (max-width: 560px) {
+    .journey { grid-template-columns: 1fr; }
+    .heroVisual { min-height: 390px; }
+    .worldCard { inset: 0 10px 55px 0; }
+    .serverCard { width: 88%; }
+    .pathsGrid article { grid-template-columns: 1fr; min-height: auto; }
+    .pathSymbol { font-size: 42px; }
+    .timeline article { grid-template-columns: 40px 1fr; padding: 16px; }
+}

@@ -1,0 +1,373 @@
+.page {
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgb(7 12 9 / 97%) 0%, rgb(7 12 9 / 82%) 48%, rgb(7 12 9 / 54%) 100%),
+        radial-gradient(circle at 82% 26%, rgb(111 143 78 / 28%), transparent 25rem),
+        url("/images/hero-background.jpg") center / cover no-repeat;
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.hero::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 150px;
+    background: linear-gradient(transparent, var(--color-background));
+    content: "";
+    pointer-events: none;
+}
+
+.heroContainer {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.65fr);
+    align-items: center;
+    gap: 88px;
+    padding-block: 88px 110px;
+}
+
+.heroContent {
+    max-width: 780px;
+}
+
+.eyebrow,
+.kicker,
+.manifestoLabel {
+    color: #8fd266;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 16px 0 22px;
+    font-size: clamp(46px, 5.6vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.lead {
+    max-width: 700px;
+    margin: 0;
+    color: #d2d9d3;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.manifesto {
+    position: relative;
+    padding: 30px;
+    background: linear-gradient(145deg, rgb(24 35 28 / 92%), rgb(12 18 14 / 92%));
+    border: 1px solid rgb(143 210 102 / 28%);
+    border-radius: var(--radius-large);
+    box-shadow: 0 26px 70px rgb(0 0 0 / 34%);
+}
+
+.manifesto::before {
+    position: absolute;
+    top: -1px;
+    left: 30px;
+    width: 92px;
+    height: 2px;
+    background: #81c957;
+    content: "";
+}
+
+.manifesto p {
+    margin: 18px 0 16px;
+    color: #f5f4ed;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.28;
+    letter-spacing: -0.025em;
+}
+
+.manifesto > span:last-child {
+    color: var(--color-text-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.section {
+    padding-block: 94px;
+}
+
+.sectionHeading {
+    max-width: 740px;
+}
+
+.sectionHeading h2,
+.worldStory h2,
+.wikiPanel h2 {
+    margin: 12px 0 16px;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.sectionHeading > p,
+.economyIntro > p,
+.worldStory > p,
+.wikiPanel p {
+    color: var(--color-text-muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.roleGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 42px;
+}
+
+.roleCard {
+    min-height: 250px;
+    padding: 28px;
+    background: linear-gradient(145deg, rgb(29 39 33 / 86%), rgb(18 25 21 / 86%));
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-small);
+}
+
+.roleNumber,
+.stepIndex {
+    color: #78b956;
+    font-size: 13px;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+}
+
+.roleCard h3,
+.economyStep h3 {
+    margin: 38px 0 12px;
+    font-size: 23px;
+    letter-spacing: -0.025em;
+}
+
+.roleCard p,
+.economyStep p,
+.worldPoints p {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.economySection {
+    background:
+        radial-gradient(circle at 50% 0%, rgb(93 136 68 / 14%), transparent 36rem),
+        #0a0f0c;
+    border-block: 1px solid rgb(255 255 255 / 7%);
+}
+
+.economyIntro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    align-items: end;
+    gap: 64px;
+}
+
+.economyIntro > p {
+    margin: 0 0 4px;
+}
+
+.economyFlow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 48px;
+}
+
+.economyStep {
+    min-height: 250px;
+    padding: 24px;
+    background: rgb(255 255 255 / 3%);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-medium);
+}
+
+.stepTopline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stepArrow {
+    color: rgb(143 210 102 / 52%);
+    font-size: 24px;
+}
+
+.economyResult {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 26px;
+    margin-top: 16px;
+    padding: 24px 26px;
+    background: rgb(111 143 78 / 10%);
+    border: 1px solid rgb(143 210 102 / 18%);
+    border-radius: var(--radius-medium);
+}
+
+.economyResult strong {
+    color: #95d66d;
+}
+
+.economyResult span {
+    color: #cfd6d0;
+    line-height: 1.65;
+}
+
+.worldGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.7fr);
+    gap: 90px;
+}
+
+.worldStory p {
+    max-width: 700px;
+    margin: 0 0 18px;
+}
+
+.worldPoints {
+    display: grid;
+    gap: 12px;
+}
+
+.worldPoints article {
+    padding: 22px 24px;
+    background: var(--color-background-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+}
+
+.worldPoints span {
+    display: block;
+    margin-bottom: 8px;
+    color: #f2f3ed;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.wikiSection {
+    padding: 0 0 94px;
+}
+
+.wikiPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 52px;
+    padding-block: 40px;
+    padding-inline: 42px;
+    background:
+        linear-gradient(130deg, rgb(47 68 39 / 58%), rgb(19 27 22 / 96%));
+    border: 1px solid rgb(143 210 102 / 22%);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-medium);
+}
+
+.wikiPanel > div {
+    max-width: 820px;
+}
+
+.wikiPanel h2 {
+    font-size: clamp(28px, 3vw, 42px);
+}
+
+.wikiPanel p {
+    margin: 0;
+}
+
+@media (max-width: 1080px) {
+    .heroContainer,
+    .economyIntro,
+    .worldGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroContainer {
+        gap: 44px;
+    }
+
+    .manifesto {
+        max-width: 720px;
+    }
+
+    .economyFlow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .worldGrid {
+        gap: 42px;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero {
+        min-height: auto;
+    }
+
+    .heroContainer {
+        padding-block: 68px 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 13vw, 62px);
+    }
+
+    .lead {
+        font-size: 17px;
+    }
+
+    .section {
+        padding-block: 72px;
+    }
+
+    .roleGrid,
+    .economyFlow {
+        grid-template-columns: 1fr;
+    }
+
+    .roleCard,
+    .economyStep {
+        min-height: auto;
+    }
+
+    .roleCard h3,
+    .economyStep h3 {
+        margin-top: 28px;
+    }
+
+    .economyResult {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .wikiPanel {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-inline: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page * {
+        scroll-behavior: auto;
+    }
+}

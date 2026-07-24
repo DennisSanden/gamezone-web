@@ -10,6 +10,9 @@ type MainLayoutProps = {
 
 const navigationItems = [
     { label: "Hem", href: "/" },
+    { label: "Om GameZone", href: "/om-gamezone" },
+    { label: "Kom igång", href: "/kom-igang" },
+    { label: "Regler", href: "/regler" },
     { label: "Wiki", href: "/wiki" },
     { label: "Leaderboards", href: "/leaderboards" },
     { label: "Karta", href: "/map" },
@@ -56,7 +59,9 @@ export function MainLayout({ children }: MainLayoutProps) {
 
                         <div className={styles.actions}>
                             <Link
-                                href="/discord"
+                                href="https://discord.gg/Uk9TzJh3DJ"
+                                target="_blank"
+                                rel="noreferrer"
                                 className={styles.discordButton}
                             >
                                 Discord

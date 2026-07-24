@@ -996,3 +996,644 @@
         transition: none;
     }
 }
+
+/* Twitch live data, begränsad till startsidans befintliga streamyta */
+.offlineDot {
+    width: 8px;
+    height: 8px;
+    background: #718078;
+    border-radius: 50%;
+}
+
+.featuredStream {
+    min-height: 0;
+    display: grid;
+    flex: 1;
+    grid-template-rows: minmax(155px, 1fr) auto;
+    overflow: hidden;
+    color: inherit;
+    background: #080e0a;
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: var(--radius-small);
+    text-decoration: none;
+    transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease,
+            transform 160ms ease;
+}
+
+.featuredStream:hover,
+.featuredStream:focus-visible {
+    border-color: rgb(126 216 83 / 52%);
+    box-shadow:
+            0 16px 36px rgb(0 0 0 / 34%),
+            0 0 0 1px rgb(114 201 74 / 7%);
+    transform: translateY(-2px);
+}
+
+.featuredStream:focus-visible {
+    outline: 2px solid #72c94a;
+    outline-offset: 3px;
+}
+
+.featuredStreamImage {
+    position: relative;
+    min-height: 155px;
+    overflow: hidden;
+    background-color: #101a13;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.featuredStreamImage::after {
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(180deg, rgb(3 7 5 / 5%), rgb(3 7 5 / 13%) 55%, rgb(3 7 5 / 66%)),
+            linear-gradient(90deg, rgb(3 7 5 / 18%), transparent 45%);
+    content: "";
+}
+
+.playButton {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: rgb(12 19 15 / 84%);
+    border: 1px solid rgb(255 255 255 / 24%);
+    border-radius: 50%;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 42%);
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(8px);
+    transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.featuredStream:hover .playButton {
+    background: rgb(59 142 39 / 92%);
+    transform: translate(-50%, -50%) scale(1.06);
+}
+
+.featuredStreamInfo {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.streamAvatar {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #081008;
+    background: linear-gradient(145deg, #8cda63, #4d9c31);
+    border: 1px solid rgb(179 255 135 / 40%);
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 950;
+}
+
+.streamText {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.streamText strong {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.streamText small {
+    margin-top: 4px;
+    color: #77ce50;
+    font-size: 8px;
+    font-weight: 750;
+}
+
+.watchNow {
+    color: #8ddd66;
+    font-size: 9px;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.offlineState {
+    min-height: 210px;
+    display: grid;
+    flex: 1;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-content: center;
+    align-items: center;
+    gap: 12px 14px;
+    padding: 22px;
+    background:
+            radial-gradient(circle at 85% 15%, rgb(112 201 74 / 9%), transparent 12rem),
+            linear-gradient(145deg, #0b130e, #080e0a);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-small);
+}
+
+.offlineIcon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    color: #7a8980;
+    background: rgb(255 255 255 / 4%);
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.offlineState strong {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 850;
+}
+
+.offlineState p {
+    max-width: 470px;
+    margin: 6px 0 0;
+    color: #9da9a0;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.followButton {
+    grid-column: 2;
+    width: fit-content;
+    padding: 8px 11px;
+    color: #ffffff;
+    background: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(255 255 255 / 11%);
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.followButton:hover {
+    background: rgb(112 201 74 / 9%);
+    border-color: rgb(112 201 74 / 38%);
+}
+
+@media (max-width: 520px) {
+    .featuredStreamInfo {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .watchNow {
+        display: none;
+    }
+
+    .offlineState {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .offlineIcon {
+        margin: 0 auto;
+    }
+
+    .followButton {
+        grid-column: 1;
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .featuredStream,
+    .playButton,
+    .followButton {
+        transition: none;
+    }
+}
+
+/* Patch 05B: rikare liveinformation och visuellt offline-läge */
+.streamIdentity {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.streamIdentity span {
+    padding: 2px 5px;
+    color: #9be978;
+    background: rgb(114 201 74 / 9%);
+    border: 1px solid rgb(114 201 74 / 22%);
+    border-radius: 999px;
+    font-size: 7px;
+    font-weight: 850;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.streamMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.streamMeta span {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 6px;
+    color: #c8d2ca;
+    background: rgb(255 255 255 / 4%);
+    border: 1px solid rgb(255 255 255 / 7%);
+    border-radius: 5px;
+    font-size: 7px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.offlineState {
+    position: relative;
+    min-height: 210px;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    background: #08100b;
+    isolation: isolate;
+}
+
+.offlineBackdrop,
+.offlineShade {
+    position: absolute;
+    inset: 0;
+}
+
+.offlineBackdrop {
+    z-index: -2;
+    background-image: url("/images/hero-background.jpg");
+    background-position: 67% 47%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(0.75) brightness(0.56);
+    transform: scale(1.02);
+}
+
+.offlineShade {
+    z-index: -1;
+    background:
+            radial-gradient(circle at 82% 22%, rgb(114 201 74 / 15%), transparent 13rem),
+            linear-gradient(90deg, rgb(4 10 6 / 98%) 0%, rgb(4 10 6 / 91%) 48%, rgb(4 10 6 / 42%) 100%),
+            linear-gradient(180deg, transparent 45%, rgb(4 10 6 / 82%) 100%);
+}
+
+.offlineContent {
+    width: min(76%, 430px);
+    min-height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 22px;
+}
+
+.offlineCreator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offlineAvatar {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    color: #071008;
+    background: linear-gradient(145deg, #9ae56f, #4f9f33);
+    border: 1px solid rgb(198 255 162 / 38%);
+    border-radius: 9px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 30%);
+    font-size: 10px;
+    font-weight: 950;
+}
+
+.offlineCreator > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.offlineEyebrow {
+    color: #8bdc65;
+    font-size: 7px;
+    font-weight: 850;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.offlineCreator strong {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.offlineContent h3 {
+    margin: 14px 0 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 920;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+}
+
+.offlineContent p {
+    max-width: 390px;
+    margin: 7px 0 0;
+    color: #bac5bc;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.offlineTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.offlineTags span {
+    padding: 3px 6px;
+    color: #d7dfd8;
+    background: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 999px;
+    font-size: 7px;
+    font-weight: 750;
+}
+
+.offlineContent .followButton {
+    grid-column: auto;
+    margin-top: 12px;
+    padding: 7px 10px;
+    background: rgb(114 201 74 / 11%);
+    border-color: rgb(114 201 74 / 30%);
+}
+
+.offlineContent .followButton:hover {
+    background: rgb(114 201 74 / 18%);
+    border-color: rgb(137 226 94 / 50%);
+}
+
+@media (max-width: 520px) {
+    .streamIdentity span {
+        display: none;
+    }
+
+    .offlineContent {
+        width: 100%;
+        min-height: 230px;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .offlineShade {
+        background:
+                linear-gradient(180deg, rgb(4 10 6 / 58%), rgb(4 10 6 / 96%)),
+                radial-gradient(circle at 50% 20%, rgb(114 201 74 / 14%), transparent 13rem);
+    }
+
+    .offlineTags {
+        justify-content: center;
+    }
+}
+
+/* Patch 05C: Twitch-liknande offline-placeholder i GameZones gröna tema */
+.streamIdentity > span {
+    display: none;
+}
+
+.offlinePlayer {
+    min-height: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.offlinePreview {
+    position: relative;
+    min-height: 190px;
+    flex: 1;
+    display: block;
+    overflow: hidden;
+    color: #ffffff;
+    background: #050907;
+    border: 1px solid rgb(112 199 72 / 25%);
+    border-radius: var(--radius-small);
+    text-decoration: none;
+    box-shadow: inset 0 0 42px rgb(58 135 40 / 8%);
+}
+
+.offlinePreviewImage,
+.offlinePreviewShade {
+    position: absolute;
+    inset: 0;
+}
+
+.offlinePreviewImage {
+    background-image: url("/images/hero-background.jpg");
+    background-position: 68% 48%;
+    background-size: cover;
+    filter: saturate(0.62) brightness(0.45) contrast(1.08);
+    transform: scale(1.015);
+    transition: filter 180ms ease, transform 260ms ease;
+}
+
+.offlinePreviewShade {
+    background:
+        radial-gradient(circle at 50% 45%, rgb(75 154 49 / 15%), transparent 36%),
+        linear-gradient(180deg, rgb(2 6 4 / 16%) 0%, rgb(2 7 4 / 22%) 46%, rgb(1 4 2 / 88%) 100%),
+        linear-gradient(90deg, rgb(3 8 5 / 34%), transparent 48%, rgb(3 8 5 / 34%));
+}
+
+.offlinePreview:hover .offlinePreviewImage,
+.offlinePreview:focus-visible .offlinePreviewImage {
+    filter: saturate(0.78) brightness(0.52) contrast(1.08);
+    transform: scale(1.035);
+}
+
+.offlinePreview:focus-visible {
+    outline: 2px solid #72c94a;
+    outline-offset: 2px;
+}
+
+.offlineBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    padding: 4px 8px;
+    color: #e7f4e2;
+    background: rgb(28 68 19 / 88%);
+    border: 1px solid rgb(126 215 87 / 38%);
+    border-radius: 4px;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.offlineBrand {
+    position: absolute;
+    inset: 24px 20px 43px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 3px 16px rgb(0 0 0 / 86%);
+}
+
+.twitchWordmark {
+    color: #f4f7f2;
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 950;
+    letter-spacing: -0.075em;
+    line-height: 0.9;
+    text-transform: lowercase;
+    filter: drop-shadow(0 0 14px rgb(107 207 66 / 25%));
+}
+
+.offlineBrand strong {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.offlineBrand small {
+    margin-top: 4px;
+    color: #cbd7cc;
+    font-size: 9px;
+}
+
+.fakePlayerControls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    height: 39px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    padding: 8px 10px 7px;
+    background: linear-gradient(180deg, transparent, rgb(0 0 0 / 92%));
+    font-size: 11px;
+}
+
+.fakeProgress {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    left: 10px;
+    height: 3px;
+    overflow: hidden;
+    background: rgb(255 255 255 / 28%);
+    border-radius: 10px;
+}
+
+.fakeProgress i {
+    width: 7%;
+    height: 100%;
+    display: block;
+    background: #72c94a;
+    box-shadow: 0 0 8px rgb(114 201 74 / 60%);
+}
+
+.fakePlayerControls > div {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.fakePlayerControls > div:last-child {
+    justify-self: end;
+}
+
+.offlineChannelBar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    background: #09100c;
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: var(--radius-small);
+}
+
+.offlineChannelText {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.offlineChannelText strong {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.offlineChannelText span {
+    margin-top: 2px;
+    overflow: hidden;
+    color: #aeb8b0;
+    font-size: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.offlineChannelBar .followButton {
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    color: #f4fff0;
+    background: linear-gradient(180deg, #4c9f31, #337521);
+    border: 1px solid rgb(139 222 101 / 38%);
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 850;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 7px 18px rgb(37 103 24 / 18%);
+}
+
+.offlineChannelBar .followButton:hover,
+.offlineChannelBar .followButton:focus-visible {
+    background: linear-gradient(180deg, #5bb73b, #3d8828);
+}
+
+@media (max-width: 520px) {
+    .offlinePreview {
+        min-height: 205px;
+    }
+
+    .offlineChannelBar {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .offlineChannelBar .followButton {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}

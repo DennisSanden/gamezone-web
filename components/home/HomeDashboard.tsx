@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { getApprovedLiveStreams } from "@/lib/twitch";
+import { getFeaturedStreamer } from "@/lib/streamers";
 import styles from "./HomeDashboard.module.css";
 
 const statistics = [
@@ -33,34 +35,31 @@ const statistics = [
     },
 ] as const;
 
-const streams = [
-    {
-        name: "DennisSanden",
-        title: "Bygger framtidens svenska Minecraft-värld",
-        category: "Minecraft • GameZone",
-        viewers: "1.2K",
-        position: "20% center",
-        href: "/live/dennissanden",
-    },
-    {
-        name: "BlockBuilder",
-        title: "Settlement-bygge och handel",
-        category: "Minecraft • GameZone",
-        viewers: "623",
-        position: "52% center",
-        href: "/live/blockbuilder",
-    },
-    {
-        name: "MineExplorer",
-        title: "Gruvdrift, ekonomi och äventyr",
-        category: "Minecraft • GameZone",
-        viewers: "411",
-        position: "82% center",
-        href: "/live/mineexplorer",
-    },
-];
+function formatLiveDuration(startedAt: string): string {
+    const started = new Date(startedAt).getTime();
 
-export function HomeDashboard() {
+    if (!Number.isFinite(started)) {
+        return "Live nu";
+    }
+
+    const totalMinutes = Math.max(0, Math.floor((Date.now() - started) / 60_000));
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+
+    if (hours === 0) {
+        return `${minutes} min`;
+    }
+
+    return `${hours} h ${minutes} min`;
+}
+
+export async function HomeDashboard() {
+    const liveStreams = await getApprovedLiveStreams();
+    const featuredCreator = getFeaturedStreamer();
+    const featuredStream = liveStreams.find(
+        (stream) => stream.login === featuredCreator.twitchLogin,
+    );
+
     return (
         <div className={styles.page}>
             <section className={styles.hero}>
@@ -220,49 +219,135 @@ export function HomeDashboard() {
                     <section className={styles.livePanel}>
                         <header className={styles.panelHeader}>
                             <h2>
-                                <span className={styles.liveDot} />
+                                <span
+                                    className={
+                                        featuredStream
+                                            ? styles.liveDot
+                                            : styles.offlineDot
+                                    }
+                                />
                                 Live på GameZone
                             </h2>
 
-                            <Link href="/live">
-                                Visa alla →
-                            </Link>
+                            <a
+                                href={featuredCreator.channelUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Twitch →
+                            </a>
                         </header>
 
-                        <div className={styles.streamGrid}>
-                            {streams.map((stream) => (
-                                <Link
-                                    key={stream.name}
-                                    href={stream.href}
-                                    className={styles.stream}
-                                    aria-label={`Se ${stream.name} live`}
+                        {featuredStream ? (
+                            <a
+                                href={featuredStream.channelUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={styles.featuredStream}
+                                aria-label={`Se ${featuredStream.displayName} live på Twitch`}
+                            >
+                                <div
+                                    className={styles.featuredStreamImage}
+                                    style={{
+                                        backgroundImage: `url("${featuredStream.thumbnailUrl}")`,
+                                    }}
                                 >
-                                    <div
-                                        className={styles.streamImage}
-                                        style={{
-                                            backgroundPosition:
-                                            stream.position,
-                                        }}
-                                    >
-                                        <span className={styles.liveBadge}>
-                                            Live
-                                        </span>
+                                    <span className={styles.liveBadge}>
+                                        Live
+                                    </span>
 
-                                        <span className={styles.viewers}>
-                                            ◉ {stream.viewers}
-                                        </span>
+                                    <span className={styles.viewers}>
+                                        ◉ {new Intl.NumberFormat("sv-SE").format(
+                                            featuredStream.viewerCount,
+                                        )} tittare
+                                    </span>
+
+                                    <span className={styles.playButton}>
+                                        ▶
+                                    </span>
+                                </div>
+
+                                <div className={styles.featuredStreamInfo}>
+                                    <div className={styles.streamAvatar}>
+                                        DS
                                     </div>
 
-                                    <div className={styles.streamInfo}>
-                                        <strong>{stream.name}</strong>
+                                    <div className={styles.streamText}>
+                                        <div className={styles.streamIdentity}>
+                                            <strong>
+                                                {featuredStream.displayName}
+                                            </strong>
+                                        </div>
+
                                         <span className={styles.streamTitle}>
-                                            {stream.title}
+                                            {featuredStream.title}
                                         </span>
-                                        <small>{stream.category}</small>
+
+                                        <div className={styles.streamMeta}>
+                                            <span>🎮 {featuredStream.gameName}</span>
+                                            <span>👥 {new Intl.NumberFormat("sv-SE").format(featuredStream.viewerCount)}</span>
+                                            <span>⏱ {formatLiveDuration(featuredStream.startedAt)}</span>
+                                        </div>
                                     </div>
-                                </Link>
-                            ))}
-                        </div>
+
+                                    <span className={styles.watchNow}>
+                                        Titta live →
+                                    </span>
+                                </div>
+                            </a>
+                        ) : (
+                            <div className={styles.offlinePlayer}>
+                                <a
+                                    href={featuredCreator.channelUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={styles.offlinePreview}
+                                    aria-label={`Öppna ${featuredCreator.displayName} på Twitch`}
+                                >
+                                    <div className={styles.offlinePreviewImage} aria-hidden="true" />
+                                    <div className={styles.offlinePreviewShade} aria-hidden="true" />
+
+                                    <span className={styles.offlineBadge}>Offline</span>
+
+                                    <div className={styles.offlineBrand}>
+                                        <span className={styles.twitchWordmark}>twitch</span>
+                                        <strong>Streamen är offline</strong>
+                                        <small>Nästa äventyr på GameZone väntar</small>
+                                    </div>
+
+                                    <div className={styles.fakePlayerControls} aria-hidden="true">
+                                        <span className={styles.fakeProgress}>
+                                            <i />
+                                        </span>
+                                        <div>
+                                            <span>▶</span>
+                                            <span>🔊</span>
+                                        </div>
+                                        <div>
+                                            <span>⚙</span>
+                                            <span>⛶</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div className={styles.offlineChannelBar}>
+                                    <div className={styles.offlineAvatar}>{featuredCreator.initials}</div>
+                                    <div className={styles.offlineChannelText}>
+                                        <strong>{featuredCreator.displayName}</strong>
+                                        <span>Nästa stream från GameZone visas här.</span>
+                                    </div>
+
+                                    <a
+                                        href={featuredCreator.channelUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={styles.followButton}
+                                    >
+                                        Följ på Twitch
+                                    </a>
+                                </div>
+                            </div>
+                        )}
                     </section>
 
                 </div>

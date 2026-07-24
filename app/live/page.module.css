@@ -1,0 +1,545 @@
+.page {
+    min-height: 100vh;
+    background: #07100b;
+    color: #f5fbf7;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(114, 194, 138, 0.14);
+    background:
+        radial-gradient(circle at 80% 15%, rgba(78, 181, 107, 0.14), transparent 30%),
+        linear-gradient(135deg, #09150e 0%, #07100b 58%, #0b1b11 100%);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 48px;
+    padding-top: 82px;
+    padding-bottom: 72px;
+}
+
+.eyebrow,
+.sectionHeading span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #78d593;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(2.7rem, 5vw, 5.1rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.hero p {
+    max-width: 710px;
+    margin: 24px 0 0;
+    color: #aab8ae;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.liveSummary {
+    min-width: 230px;
+    padding: 22px 24px;
+    border: 1px solid rgba(113, 204, 139, 0.22);
+    border-radius: 18px;
+    background: rgba(7, 18, 11, 0.72);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+}
+
+.liveSummary strong,
+.liveSummary small {
+    display: block;
+}
+
+.liveSummary strong {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.liveSummary small {
+    color: #7f9185;
+}
+
+.summaryDotLive,
+.summaryDotOffline {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.summaryDotLive {
+    background: #54e27d;
+    box-shadow: 0 0 0 6px rgba(84, 226, 125, 0.12), 0 0 22px rgba(84, 226, 125, 0.7);
+}
+
+.summaryDotOffline {
+    background: #768279;
+    box-shadow: 0 0 0 6px rgba(118, 130, 121, 0.12);
+}
+
+.content {
+    padding-top: 58px;
+    padding-bottom: 100px;
+}
+
+.featuredSection,
+.creatorsSection {
+    margin-bottom: 70px;
+}
+
+.sectionHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+
+.sectionHeading h2 {
+    margin: 0;
+    font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+    letter-spacing: -0.035em;
+}
+
+.sectionHeading a,
+.sectionHeading p {
+    margin: 0;
+    color: #8fa298;
+    font-size: 0.92rem;
+}
+
+.sectionHeading a:hover {
+    color: #78d593;
+}
+
+.featuredPlayer,
+.offlinePlayer {
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(121, 204, 145, 0.16);
+    border-radius: 22px;
+    background: #0b1710;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+}
+
+.featuredPlayer {
+    transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.featuredPlayer:hover {
+    transform: translateY(-3px);
+    border-color: rgba(121, 204, 145, 0.42);
+}
+
+.featuredImage,
+.offlineScreen {
+    position: relative;
+    aspect-ratio: 16 / 7.4;
+    min-height: 360px;
+    overflow: hidden;
+}
+
+.featuredImage {
+    background-position: center;
+    background-size: cover;
+}
+
+.imageShade,
+.offlineShade,
+.creatorShade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(3, 8, 5, 0.7), transparent 52%);
+}
+
+.liveBadge,
+.offlineBadge,
+.cardLiveBadge,
+.cardOfflineBadge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.liveBadge,
+.cardLiveBadge {
+    background: #e52f3f;
+    color: white;
+}
+
+.offlineBadge,
+.cardOfflineBadge {
+    background: rgba(7, 16, 11, 0.82);
+    color: #b8c4bc;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.viewerBadge,
+.cardViewers {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    bottom: 18px;
+    padding: 6px 10px;
+    border-radius: 7px;
+    background: rgba(4, 9, 6, 0.76);
+    color: #f7fbf8;
+    font-size: 0.78rem;
+    backdrop-filter: blur(10px);
+}
+
+.playIcon {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: 76px;
+    height: 76px;
+    place-items: center;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 50%;
+    background: rgba(3, 12, 7, 0.74);
+    color: #89e8a4;
+    font-size: 1.45rem;
+    backdrop-filter: blur(12px);
+}
+
+.featuredInfo,
+.offlineInfo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 24px;
+}
+
+.avatar {
+    display: grid;
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid rgba(114, 218, 145, 0.3);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #173b22, #0b2012);
+    color: #8be3a4;
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.featuredText {
+    min-width: 0;
+    flex: 1;
+}
+
+.featuredText strong,
+.offlineInfo strong {
+    display: block;
+    color: #80df9b;
+    font-size: 0.88rem;
+}
+
+.featuredText h2 {
+    overflow: hidden;
+    margin: 5px 0 9px;
+    font-size: 1.15rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.streamMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    color: #899a90;
+    font-size: 0.82rem;
+}
+
+.watchButton,
+.followButton {
+    flex: 0 0 auto;
+    padding: 11px 16px;
+    border-radius: 9px;
+    background: #5ac878;
+    color: #061009;
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.offlineScreen {
+    background: #07100b;
+}
+
+.offlineBackground,
+.creatorOfflineImage {
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/hero-background.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: saturate(0.72) brightness(0.45);
+    transform: scale(1.02);
+}
+
+.offlineCenter {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: min(520px, 80%);
+    transform: translate(-50%, -54%);
+    text-align: center;
+}
+
+.twitchWordmark {
+    display: block;
+    margin-bottom: 14px;
+    color: #83db9a;
+    font-size: clamp(2.2rem, 5vw, 4.4rem);
+    font-weight: 950;
+    letter-spacing: -0.08em;
+    text-transform: lowercase;
+}
+
+.offlineCenter strong {
+    display: block;
+    font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.offlineCenter p {
+    margin: 9px 0 0;
+    color: #a2b0a7;
+}
+
+.playerControls {
+    position: absolute;
+    z-index: 3;
+    right: 18px;
+    bottom: 14px;
+    left: 18px;
+}
+
+.progress {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.progress span {
+    display: block;
+    width: 12%;
+    height: 100%;
+    background: #66d784;
+}
+
+.controlRow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 10px;
+    color: #e8f0ea;
+    font-size: 0.78rem;
+}
+
+.controlRow small {
+    color: #a8b3ab;
+}
+
+.controlRow i {
+    flex: 1;
+}
+
+.offlineInfo > div:nth-child(2) {
+    flex: 1;
+}
+
+.offlineInfo span {
+    display: block;
+    margin-top: 5px;
+    color: #899a90;
+    font-size: 0.82rem;
+}
+
+.creatorGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.creatorCard {
+    overflow: hidden;
+    border: 1px solid rgba(118, 196, 140, 0.14);
+    border-radius: 17px;
+    background: #0a1510;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.creatorCard:hover {
+    transform: translateY(-4px);
+    border-color: rgba(118, 196, 140, 0.38);
+    background: #0d1b13;
+}
+
+.creatorPreview {
+    position: relative;
+    aspect-ratio: 16 / 8.5;
+    overflow: hidden;
+    background: #06100a;
+}
+
+.creatorLiveImage {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.creatorBody {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 13px;
+    padding: 16px;
+}
+
+.creatorBody strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.creatorBody p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0 0 6px;
+    color: #9dac9f;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.creatorBody span {
+    color: #66c982;
+    font-size: 0.72rem;
+}
+
+.creatorBody b {
+    color: #70d78c;
+}
+
+.cardLiveBadge,
+.cardOfflineBadge {
+    top: 13px;
+    left: 13px;
+}
+
+.cardViewers {
+    right: 13px;
+    bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .heroInner {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .liveSummary {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .creatorGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featuredImage,
+    .offlineScreen {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 640px) {
+    .heroInner {
+        padding-top: 54px;
+        padding-bottom: 48px;
+    }
+
+    .content {
+        padding-top: 38px;
+        padding-bottom: 70px;
+    }
+
+    .sectionHeading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .creatorGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .featuredImage,
+    .offlineScreen {
+        min-height: 245px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .featuredInfo,
+    .offlineInfo {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 17px;
+    }
+
+    .watchButton,
+    .followButton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .offlineCenter {
+        width: 88%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .featuredPlayer,
+    .creatorCard {
+        transition: none;
+    }
+}

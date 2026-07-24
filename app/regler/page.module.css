@@ -1,0 +1,456 @@
+.page {
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    background:
+        linear-gradient(90deg, rgb(7 12 9 / 97%) 0%, rgb(7 12 9 / 84%) 52%, rgb(7 12 9 / 62%) 100%),
+        radial-gradient(circle at 82% 28%, rgb(182 93 82 / 18%), transparent 24rem),
+        url("/images/hero-background.jpg") center / cover no-repeat;
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.heroContainer {
+    min-height: 560px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.65fr);
+    align-items: center;
+    gap: 80px;
+    padding-block: 84px;
+}
+
+.eyebrow,
+.kicker,
+.cardLabel,
+.notice span,
+.principleCard > span {
+    color: #8fd266;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 16px 0 22px;
+    font-size: clamp(46px, 5.5vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.lead {
+    max-width: 720px;
+    margin: 0;
+    color: #d2d9d3;
+    font-size: 19px;
+    line-height: 1.72;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.principleCard {
+    padding: 30px;
+    background: linear-gradient(145deg, rgb(29 34 31 / 95%), rgb(13 18 15 / 95%));
+    border: 1px solid rgb(182 93 82 / 34%);
+    border-radius: var(--radius-large);
+    box-shadow: 0 28px 70px rgb(0 0 0 / 34%);
+}
+
+.principleCard strong {
+    display: block;
+    margin: 18px 0 10px;
+    font-size: 27px;
+    letter-spacing: -0.03em;
+}
+
+.principleCard p,
+.bodyText {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.72;
+}
+
+.noticeStrip {
+    background: #090e0b;
+    border-bottom: 1px solid rgb(255 255 255 / 7%);
+}
+
+.noticeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding-block: 18px;
+}
+
+.notice {
+    padding: 18px 20px;
+    background: rgb(255 255 255 / 3%);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-medium);
+}
+
+.notice p {
+    margin: 7px 0 0;
+    color: #d7ddd8;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.warning span {
+    color: #d7aa55;
+}
+
+.danger span {
+    color: #d67568;
+}
+
+.section {
+    padding-block: 92px;
+}
+
+.sectionHeading {
+    max-width: 780px;
+}
+
+.sectionHeading h2,
+.splitSection h2,
+.finalPanel h2 {
+    margin: 12px 0 16px;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.sectionHeading > p,
+.finalPanel p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.ruleList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.ruleItem,
+.twoColumnRules article,
+.faqGrid article {
+    padding: 26px;
+    background: linear-gradient(145deg, rgb(29 39 33 / 86%), rgb(18 25 21 / 86%));
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-small);
+}
+
+.ruleItem h3,
+.twoColumnRules h3,
+.faqGrid h3,
+.compareCard h3,
+.automationGrid h3,
+.economyGrid h3 {
+    margin: 0 0 12px;
+    font-size: 21px;
+    letter-spacing: -0.025em;
+}
+
+.ruleItem p,
+.twoColumnRules p,
+.faqGrid p,
+.compareCard li,
+.automationGrid p,
+.automationNotes p,
+.economyGrid p,
+.rulePanel p {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.worldSection,
+.economySection,
+.technicalSection {
+    background:
+        radial-gradient(circle at 50% 0%, rgb(93 136 68 / 12%), transparent 35rem),
+        #0a0f0c;
+    border-block: 1px solid rgb(255 255 255 / 7%);
+}
+
+.compareGrid,
+.automationGrid,
+.twoColumnRules {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.compareCard,
+.automationGrid article {
+    padding: 28px;
+    background: rgb(255 255 255 / 3%);
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: var(--radius-large);
+}
+
+.compareCard h3 {
+    margin-top: 14px;
+}
+
+.compareCard ul {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 0;
+    padding-left: 20px;
+}
+
+.reasonBox {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 28px;
+    margin-top: 18px;
+    padding: 24px 26px;
+    background: rgb(111 143 78 / 10%);
+    border: 1px solid rgb(143 210 102 / 18%);
+    border-radius: var(--radius-medium);
+}
+
+.reasonBox strong {
+    color: #98d871;
+}
+
+.reasonBox p {
+    margin: 0;
+    color: #cfd6d0;
+    line-height: 1.67;
+}
+
+.splitSection {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.75fr);
+    gap: 84px;
+}
+
+.rulePanel {
+    display: grid;
+    gap: 12px;
+}
+
+.rulePanel article {
+    padding: 20px 22px;
+    background: var(--color-background-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+}
+
+.rulePanel span,
+.automationGrid > article > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #91d069;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.economyGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.economyGrid article {
+    padding: 28px;
+    background: rgb(255 255 255 / 3%);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: var(--radius-large);
+}
+
+.metric {
+    display: block;
+    margin-bottom: 28px;
+    color: #91d069;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.allowedCard {
+    border-color: rgb(111 155 98 / 30%) !important;
+}
+
+.forbiddenCard {
+    border-color: rgb(182 93 82 / 32%) !important;
+}
+
+.forbiddenCard > span {
+    color: #d67568 !important;
+}
+
+.automationNotes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.automationNotes article {
+    padding: 20px;
+    background: var(--color-background-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+}
+
+.automationNotes strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.reportBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 18px;
+    padding: 24px 26px;
+    background: rgb(200 155 74 / 8%);
+    border: 1px solid rgb(200 155 74 / 22%);
+    border-radius: var(--radius-medium);
+}
+
+.reportBox span {
+    display: block;
+    margin-bottom: 6px;
+    color: #d7aa55;
+    font-weight: 800;
+}
+
+.reportBox p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+}
+
+.faqSection {
+    padding-block: 92px;
+    background: #090e0b;
+    border-block: 1px solid rgb(255 255 255 / 7%);
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 40px;
+}
+
+.finalSection {
+    padding-block: 76px;
+}
+
+.finalPanel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 56px;
+    padding-block: 42px;
+}
+
+.finalPanel > div:first-child {
+    max-width: 760px;
+}
+
+.finalLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.finalLinks > a:last-child {
+    color: #9bd874;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+    .heroContainer,
+    .splitSection {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .principleCard {
+        max-width: 680px;
+    }
+
+    .ruleList,
+    .economyGrid,
+    .automationNotes {
+        grid-template-columns: 1fr;
+    }
+
+    .finalPanel {
+        grid-template-columns: 1fr;
+    }
+
+    .finalLinks {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 760px) {
+    .heroContainer {
+        min-height: auto;
+        padding-block: 64px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 13vw, 60px);
+    }
+
+    .lead {
+        font-size: 17px;
+    }
+
+    .noticeGrid,
+    .compareGrid,
+    .automationGrid,
+    .twoColumnRules,
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .faqSection {
+        padding-block: 68px;
+    }
+
+    .reasonBox {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .reportBox {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .heroActions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
