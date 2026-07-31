@@ -209,7 +209,7 @@ export default async function LivePage() {
                                             <div>
                                                 <strong>{creator.displayName}</strong>
                                                 <p>{stream?.title ?? creator.description}</p>
-                                                <span>{stream ? stream.gameName : `twitch.tv/${creator.twitchLogin}`}</span>
+                                                <span>{stream ? stream.gameName : `twitch.tv/${creator.login}`}</span>
                                             </div>
                                             <b>→</b>
                                         </div>
