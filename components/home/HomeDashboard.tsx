@@ -7,30 +7,30 @@ import styles from "./HomeDashboard.module.css";
 const statistics = [
     {
         icon: "♛",
-        label: "Största donation",
-        value: "Ingen ännu",
-        detail: "0 GZC",
+        label: "Settlementutveckling",
+        value: "15 nivåer",
+        detail: "Från Enstöring till Imperium",
         accent: "donation",
     },
     {
         icon: "▣",
-        label: "Största settlement",
-        value: "Väntar på Alpha",
-        detail: "Nivå 1",
+        label: "Produktion",
+        value: "7 kategorier",
+        detail: "Specialisera dig och bygg handel",
         accent: "settlement",
     },
     {
         icon: "●",
-        label: "Rikaste spelare",
-        value: "Ingen ännu",
-        detail: "0 GZC",
+        label: "Levande ekonomi",
+        value: "GZ Coins",
+        detail: "Företag, skatter och stadskassor",
         accent: "wealth",
     },
     {
         icon: "♟",
-        label: "Spelare online",
-        value: "0 / 50",
-        detail: "TPS 20.0",
+        label: "Marknadssystem",
+        value: "MarketWatch",
+        detail: "Se vilka resurser världen behöver",
         accent: "online",
     },
 ] as const;
@@ -70,32 +70,32 @@ export async function HomeDashboard() {
 
                 <div className={styles.heroContent}>
                     <span className={styles.badge}>
-                        Svensk Minecraft-värld under utveckling
+                        Svensk survival med settlements, företag och levande ekonomi
                     </span>
 
                     <h1>
-                        Ditt äventyr.
+                        Bygg mer än en bas.
                         <br />
-                        Din <span>legacy.</span>
+                        Bygg ett <span>rike.</span>
                     </h1>
 
                     <p className={styles.slogan}>
-                        Varje spelare har en plats.
+                        Skapa ett settlement, forma en ekonomi och bygg något
                         <br />
-                        Varje stad har en historia.
+                        som lämnar avtryck i hela världen.
                     </p>
 
                     <div className={styles.heroActions}>
-                        <Button href="/spela" size="large">
-                            Spela nu
+                        <Button href="/kom-igang" size="large">
+                            Kom igång
                         </Button>
 
                         <Button
-                            href="/whitelist"
+                            href="/regler"
                             variant="secondary"
                             size="large"
                         >
-                            Ansök till whitelist
+                            Läs reglerna
                         </Button>
 
                         <Button
@@ -103,7 +103,7 @@ export async function HomeDashboard() {
                             variant="outline"
                             size="large"
                         >
-                            Läs om GameZone
+                            Utforska wikin
                         </Button>
                     </div>
 
@@ -114,18 +114,18 @@ export async function HomeDashboard() {
                         <div className={styles.statusMain}>
                             <div className={styles.onlineStatus}>
                                 <span className={styles.onlineDot} />
-                                <strong>Under utveckling</strong>
+                                <strong>Servern är live</strong>
                             </div>
 
                             <span className={styles.statusVersion}>
-                                Alpha 0.1
+                                Open Alpha
                             </span>
                         </div>
 
                         <div className={styles.statusDetails}>
-                            <span>0 spelare online</span>
+                            <span>Whitelist via Discord</span>
                             <span className={styles.statusDivider} />
-                            <span>play.gamezone.se</span>
+                            <span>play.gamezonemc.se</span>
                         </div>
                     </div>
                 </div>
@@ -174,18 +174,18 @@ export async function HomeDashboard() {
                         >
                             <div className={styles.featureContent}>
                                 <span className={styles.featureEyebrow}>
-                                    GameZone Wiki
+                                    Settlements
                                 </span>
 
-                                <h2>All kunskap på ett ställe</h2>
+                                <h2>Från ensam spelare till imperium</h2>
 
                                 <p>
-                                    Guider för Economy, Settlements,
-                                    Companies och Production.
+                                    Utöka territoriet, bygg upp stadskassan, lås upp
+                                    byggnader och styr tillsammans med dina invånare.
                                 </p>
 
                                 <span className={styles.featureLink}>
-                                    Utforska Wikin →
+                                    Läs om settlements →
                                 </span>
                             </div>
                         </Link>
@@ -197,18 +197,18 @@ export async function HomeDashboard() {
                         >
                             <div className={styles.featureContent}>
                                 <span className={styles.featureEyebrow}>
-                                    Leaderboards
+                                    Ekonomi och handel
                                 </span>
 
-                                <h2>Se vilka som leder</h2>
+                                <h2>En marknad som formas av spelarna</h2>
 
                                 <p>
-                                    Rikaste spelare, största settlements
-                                    och fler topplistor.
+                                    Starta företag, öppna shopping chests och använd
+                                    MarketWatch för att hitta världens största brister.
                                 </p>
 
                                 <span className={styles.featureLink}>
-                                    Visa topplistor →
+                                    Se världens topplistor →
                                 </span>
                             </div>
                         </Link>
@@ -355,13 +355,13 @@ export async function HomeDashboard() {
 
             <section
                 className={styles.partners}
-                aria-label="GameZone partners"
+                aria-label="GameZones kärnsystem"
             >
-                <span>Våra partners</span>
-                <strong>BisectHosting</strong>
-                <strong>Discord</strong>
-                <strong>YouTube</strong>
-                <strong>Twitch</strong>
+                <span>En värld byggd kring</span>
+                <strong>Settlements</strong>
+                <strong>Companies</strong>
+                <strong>Production</strong>
+                <strong>MarketWatch</strong>
             </section>
         </div>
     );
