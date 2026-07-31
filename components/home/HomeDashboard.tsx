@@ -71,7 +71,7 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.playSection} aria-label="Spela på GameZone">
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
+      <a href="https://discord.gg/TV4ntGCfzg" target="_blank" rel="noreferrer" className={styles.playButton}>
         <span className={styles.playButtonIcon}>▶</span>
         <span>Spela nu</span>
       </a>
@@ -87,7 +87,7 @@ export async function HomeDashboard() {
 
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
+      <a href="https://discord.gg/TV4ntGCfzg" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
       <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Alla system på ett ställe</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
