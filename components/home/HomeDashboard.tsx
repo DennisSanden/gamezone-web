@@ -80,11 +80,11 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.quickGrid}>
-      <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Så här börjar du ditt äventyr</small></Link>
-      <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs våra regler och riktlinjer</small></Link>
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Få tillgång till servern via Discord</small></a>
-      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Lär dig systemen och funktionerna</small></Link>
-      <Link href="/status" className={styles.quickCard}><Icon name="sales"/><strong>Serverstatus</strong><small>{serverStatus.online ? `${serverStatus.playersOnline} spelare online` : "Servern är offline"}</small></Link>
+      <Link href="/kom-igang" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="compass"/></span><strong>Kom igång</strong><small>Så här börjar du ditt äventyr</small><span className={styles.quickArrow}>↗</span></Link>
+      <Link href="/regler" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="rules"/></span><strong>Regler</strong><small>Läs våra regler och riktlinjer</small><span className={styles.quickArrow}>↗</span></Link>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><span className={styles.quickIcon}><Icon name="discord"/></span><strong>Bli whitelistad</strong><small>Få tillgång till servern via Discord</small><span className={styles.quickArrow}>↗</span></a>
+      <Link href="/wiki" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="rules"/></span><strong>Wiki</strong><small>Lär dig systemen och funktionerna</small><span className={styles.quickArrow}>↗</span></Link>
+      <Link href="/status" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="sales"/></span><strong>Serverstatus</strong><small>{serverStatus.online ? `${serverStatus.playersOnline} av 40 spelare online` : "Servern är offline"}</small><span className={styles.quickArrow}>↗</span></Link>
     </section>
 
     <section className={styles.dashboardGrid}>
