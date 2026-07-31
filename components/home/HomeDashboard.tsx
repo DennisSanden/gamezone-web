@@ -79,19 +79,26 @@ export async function HomeDashboard() {
       </div>
     </section>
 
-    <section className={styles.quickGrid}>
-      <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Så här börjar du ditt äventyr</small></Link>
-      <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs våra regler och riktlinjer</small></Link>
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Få tillgång till servern via Discord</small></a>
-      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Lär dig systemen och funktionerna</small></Link>
+    <section className={styles.playSection} aria-label="Spela på GameZone">
+      <div className={styles.playStatus}>
+        <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
+        <span>{serverStatus.online ? `${serverStatus.playersOnline} spelare online` : "Servern är offline"}</span>
+      </div>
+      <Link href="/kom-igang" className={styles.playButton}>
+        <span className={styles.playButtonIcon}>▶</span>
+        <span>Spela nu</span>
+      </Link>
+      <div className={styles.playAddress}>
+        <span>Java 26.1.2</span>
+        <strong>play.gamezonemc.se</strong>
+      </div>
     </section>
 
-    <section className={styles.playNowSection}>
-      <Link href="/kom-igang" className={styles.playNowButton}>
-        <span className={styles.playNowPulse}/>
-        <span>Spela nu</span>
-        <small>{serverStatus.online ? `${serverStatus.playersOnline} av 40 spelare online` : "Servern är offline"}</small>
-      </Link>
+    <section className={styles.quickGrid}>
+      <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Guide från whitelist till första settlement</small></Link>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Ansök direkt genom vår Discord</small></a>
+      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Settlement, ekonomi och alla system</small></Link>
+      <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Allt du behöver känna till innan start</small></Link>
     </section>
 
     <section className={styles.dashboardGrid}>
@@ -114,9 +121,8 @@ export async function HomeDashboard() {
           <div><span><Icon name="players"/> Spelare</span><strong>{serverStatus.online ? `${serverStatus.playersOnline} / ${serverStatus.playersMax || "?"}` : "0 / ?"}</strong></div>
           <div><span><Icon name="clock"/> Status</span><strong className={serverStatus.online ? styles.online : styles.offline}>{serverStatus.online ? "Online" : "Offline"}</strong></div>
         </div>
-        <Link href="/status" className={styles.panelCta}>Se full status <span>↗</span></Link>
+        <Link href="/status" className={styles.panelCta}>Detaljerad serverstatus <span>↗</span></Link>
       </article>
-
     </section>
 
     <section className={styles.leaderboardPanel}>
