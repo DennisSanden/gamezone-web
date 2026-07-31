@@ -32,11 +32,18 @@ function formatValue(value: number) {
   return new Intl.NumberFormat("sv-SE").format(value);
 }
 
-function MiniBoard({ title, icon, entries, suffix }: { title: string; icon: IconName; entries: LeaderboardEntry[]; suffix: string }) {
-  return <article className={styles.miniBoard}>
+function MiniBoard({ title, eyebrow, icon, entries, suffix, tone }: { title: string; eyebrow: string; icon: IconName; entries: LeaderboardEntry[]; suffix: string; tone: "coins" | "residents" | "sales" }) {
+  const leader = entries[0];
+  const runnerUp = entries[1];
+  const lead = leader && runnerUp ? Math.max(0, leader.value - runnerUp.value) : null;
+
+  return <article className={`${styles.miniBoard} ${styles[`boardTone_${tone}`]}`}>
     <div className={styles.miniBoardHeader}>
       <span className={styles.boardIcon}><Icon name={icon}/></span>
-      <h3>{title}</h3>
+      <span className={styles.boardHeading}>
+        <small>{eyebrow}</small>
+        <h3>{title}</h3>
+      </span>
     </div>
     <ol>
       {[0,1,2].map((index) => {
@@ -45,9 +52,10 @@ function MiniBoard({ title, icon, entries, suffix }: { title: string; icon: Icon
           <span className={`${styles.rank} ${styles[`rank${index + 1}`]}`}>
             {index === 0 ? <Icon name="crown"/> : index + 1}
           </span>
+          <span className={styles.playerHead} style={entry ? { backgroundImage: `url(https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/48)` } : undefined} aria-hidden="true"/>
           <span className={styles.playerName}>
             <strong>{entry?.displayName ?? "Inväntar data"}</strong>
-            {index === 0 && entry ? <small>Nuvarande ledare</small> : null}
+            {index === 0 && entry ? <small>{lead !== null ? `${formatValue(lead)} före tvåan` : "Nuvarande ledare"}</small> : null}
           </span>
           <b>{entry ? `${formatValue(entry.value)} ${suffix}` : "–"}</b>
         </li>;
@@ -125,11 +133,11 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.leaderboardPanel}>
-      <div className={styles.sectionHeader}><h2>Leaderboards</h2><Link href="/leaderboards">Se alla →</Link></div>
+      <div className={styles.sectionHeader}><span><small>Serverns topp just nu</small><h2>Leaderboards</h2></span><Link href="/leaderboards">Se alla →</Link></div>
       <div className={styles.leaderboardGrid}>
-        <MiniBoard title="Topp 3 rikaste spelare" icon="coin" entries={richest} suffix="Coins"/>
-        <MiniBoard title="Topp 3 flest invånare" icon="players" entries={residents} suffix="inv."/>
-        <MiniBoard title="Topp 3 mest försäljning" icon="sales" entries={sales} suffix="Coins"/>
+        <MiniBoard eyebrow="Förmögenhet" title="Rikaste spelare" icon="coin" entries={richest} suffix="Coins" tone="coins"/>
+        <MiniBoard eyebrow="Settlement" title="Flest invånare" icon="players" entries={residents} suffix="inv." tone="residents"/>
+        <MiniBoard eyebrow="Handel" title="Mest försäljning" icon="sales" entries={sales} suffix="Coins" tone="sales"/>
       </div>
     </section>
 
