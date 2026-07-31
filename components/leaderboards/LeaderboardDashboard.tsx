@@ -1,4 +1,4 @@
-git push"use client";
+"use client";
 
 import { useState } from "react";
 import styles from "@/app/leaderboards/page.module.css";
