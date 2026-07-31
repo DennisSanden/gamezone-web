@@ -1,4 +1,4 @@
-npm run buildexport type ServerStatus = {
+export type ServerStatus = {
   online: boolean;
   playersOnline: number;
   playersMax: number;
