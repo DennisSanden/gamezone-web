@@ -34,13 +34,21 @@ function formatValue(value: number) {
 
 function MiniBoard({ title, icon, entries, suffix }: { title: string; icon: IconName; entries: LeaderboardEntry[]; suffix: string }) {
   return <article className={styles.miniBoard}>
-    <h3><Icon name={icon}/>{title}</h3>
+    <div className={styles.miniBoardHeader}>
+      <span className={styles.boardIcon}><Icon name={icon}/></span>
+      <h3>{title}</h3>
+    </div>
     <ol>
       {[0,1,2].map((index) => {
         const entry = entries[index];
-        return <li key={index}>
-          <span className={styles.rank}>{index + 1}</span>
-          <strong>{entry?.displayName ?? "Inväntar data"}</strong>
+        return <li key={index} className={index === 0 ? styles.firstPlace : undefined}>
+          <span className={`${styles.rank} ${styles[`rank${index + 1}`]}`}>
+            {index === 0 ? <Icon name="crown"/> : index + 1}
+          </span>
+          <span className={styles.playerName}>
+            <strong>{entry?.displayName ?? "Inväntar data"}</strong>
+            {index === 0 && entry ? <small>Nuvarande ledare</small> : null}
+          </span>
           <b>{entry ? `${formatValue(entry.value)} ${suffix}` : "–"}</b>
         </li>;
       })}
@@ -71,7 +79,7 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.playSection} aria-label="Spela på GameZone">
-      <a href="https://discord.gg/TV4ntGCfzg" target="_blank" rel="noreferrer" className={styles.playButton}>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
         <span className={styles.playButtonIcon}>▶</span>
         <span>Spela nu</span>
       </a>
@@ -87,7 +95,7 @@ export async function HomeDashboard() {
 
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
-      <a href="https://discord.gg/TV4ntGCfzg" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
       <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Alla system på ett ställe</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
