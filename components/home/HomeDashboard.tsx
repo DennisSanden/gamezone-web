@@ -28,15 +28,6 @@ function Icon({ name }: { name: IconName }) {
   return icons[name];
 }
 
-const systems: Array<{ icon: IconName; title: string; text: string }> = [
-  { icon: "crown", title: "15 nivåer", text: "Från Enstöring till Imperium" },
-  { icon: "tools", title: "7 kategorier", text: "Specialisera din produktion" },
-  { icon: "coin", title: "GZ Coins", text: "Tjäna, investera och väx" },
-  { icon: "bank", title: "Stadskassor", text: "Skatter, bonusar och underhåll" },
-  { icon: "chest", title: "Shopping Chests", text: "Handel mellan spelare" },
-  { icon: "watch", title: "MarketWatch", text: "Se vad servern behöver" },
-];
-
 function formatValue(value: number) {
   return new Intl.NumberFormat("sv-SE").format(value);
 }
@@ -80,25 +71,25 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.playSection} aria-label="Spela på GameZone">
-      <div className={styles.playStatus}>
-        <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
-        <span>{serverStatus.online ? `${serverStatus.playersOnline} spelare online` : "Servern är offline"}</span>
-      </div>
-      <Link href="/kom-igang" className={styles.playButton}>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
         <span className={styles.playButtonIcon}>▶</span>
         <span>Spela nu</span>
-      </Link>
-      <div className={styles.playAddress}>
+      </a>
+      <div className={styles.playMeta}>
+        <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
+        <strong>{serverStatus.online ? `${serverStatus.playersOnline} / ${serverStatus.playersMax || 40} online` : "Servern offline"}</strong>
+        <span>•</span>
         <span>Java 26.1.2</span>
-        <strong>play.gamezonemc.se</strong>
+        <span>•</span>
+        <span>play.gamezonemc.se</span>
       </div>
     </section>
 
     <section className={styles.quickGrid}>
-      <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Guide från whitelist till första settlement</small></Link>
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Ansök direkt genom vår Discord</small></a>
-      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Settlement, ekonomi och alla system</small></Link>
-      <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Allt du behöver känna till innan start</small></Link>
+      <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
+      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Alla system på ett ställe</small></Link>
+      <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
     <section className={styles.dashboardGrid}>
@@ -134,9 +125,5 @@ export async function HomeDashboard() {
       </div>
     </section>
 
-    <section className={styles.systemPanel}>
-      <div className={styles.systemHeading}><h2>Ekonomi & spelsystem</h2></div>
-      <div className={styles.systemGrid}>{systems.map((system)=><div className={styles.systemItem} key={system.title}><span className={styles.systemIcon}><Icon name={system.icon}/></span><span><strong>{system.title}</strong><small>{system.text}</small></span></div>)}</div>
-    </section>
   </div>;
 }
