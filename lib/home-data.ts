@@ -1,4 +1,4 @@
-export type ServerStatus = {
+npm run buildexport type ServerStatus = {
   online: boolean;
   playersOnline: number;
   playersMax: number;
@@ -31,11 +31,11 @@ export async function getServerStatus(): Promise<ServerStatus> {
     return {
       online: data.online === true,
       playersOnline: data.players?.online ?? 0,
-      playersMax: data.players?.max ?? 0,
+      playersMax: 40,
       motd: data.motd?.clean?.join(" "),
     };
   } catch {
-    return { online: false, playersOnline: 0, playersMax: 0 };
+    return { online: false, playersOnline: 0, playersMax: 40 };
   }
 }
 
