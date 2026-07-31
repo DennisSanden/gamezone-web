@@ -3,13 +3,22 @@ import { getApprovedLiveStreams } from "@/lib/twitch";
 import { getFeaturedStreamer } from "@/lib/streamers";
 import styles from "./HomeDashboard.module.css";
 
-const quickLinks = [
+type QuickLink = {
+    icon: string;
+    title: string;
+    text: string;
+    href: string;
+    featured?: boolean;
+    external?: boolean;
+};
+
+const quickLinks: QuickLink[] = [
     { icon: "◈", title: "Kom igång", text: "Så här börjar du ditt äventyr", href: "/kom-igang" },
     { icon: "▤", title: "Regler", text: "Läs våra regler och riktlinjer", href: "/regler" },
     { icon: "☻", title: "Bli whitelistad", text: "Få tillgång till servern via Discord", href: "https://discord.gg/Uk9TzJh3DJ", featured: true, external: true },
     { icon: "◇", title: "Wiki", text: "Lär dig systemen och funktionerna", href: "/wiki" },
     { icon: "▥", title: "Serverstatus", text: "Se status och spelare online", href: "/status" },
-] as const;
+];
 
 const systems = [
     { icon: "♛", title: "15 nivåer", text: "Från Enstöring till Imperium" },
