@@ -15,6 +15,7 @@ const navigationItems = [
     { label: "Regler", href: "/regler" },
     { label: "Wiki", href: "/wiki" },
     { label: "Leaderboards", href: "/leaderboards" },
+    { label: "MarketWatch", href: "/marketwatch" },
     { label: "Karta", href: "/map" },
     { label: "Settlements", href: "/settlements" },
     { label: "Companies", href: "/companies" },
