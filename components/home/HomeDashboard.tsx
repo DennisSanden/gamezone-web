@@ -80,11 +80,18 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.quickGrid}>
-      <Link href="/kom-igang" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="compass"/></span><strong>Kom igång</strong><small>Så här börjar du ditt äventyr</small><span className={styles.quickArrow}>↗</span></Link>
-      <Link href="/regler" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="rules"/></span><strong>Regler</strong><small>Läs våra regler och riktlinjer</small><span className={styles.quickArrow}>↗</span></Link>
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><span className={styles.quickIcon}><Icon name="discord"/></span><strong>Bli whitelistad</strong><small>Få tillgång till servern via Discord</small><span className={styles.quickArrow}>↗</span></a>
-      <Link href="/wiki" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="rules"/></span><strong>Wiki</strong><small>Lär dig systemen och funktionerna</small><span className={styles.quickArrow}>↗</span></Link>
-      <Link href="/status" className={styles.quickCard}><span className={styles.quickIcon}><Icon name="sales"/></span><strong>Serverstatus</strong><small>{serverStatus.online ? `${serverStatus.playersOnline} av 40 spelare online` : "Servern är offline"}</small><span className={styles.quickArrow}>↗</span></Link>
+      <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Så här börjar du ditt äventyr</small></Link>
+      <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs våra regler och riktlinjer</small></Link>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Få tillgång till servern via Discord</small></a>
+      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Lär dig systemen och funktionerna</small></Link>
+    </section>
+
+    <section className={styles.playNowSection}>
+      <Link href="/kom-igang" className={styles.playNowButton}>
+        <span className={styles.playNowPulse}/>
+        <span>Spela nu</span>
+        <small>{serverStatus.online ? `${serverStatus.playersOnline} av 40 spelare online` : "Servern är offline"}</small>
+      </Link>
     </section>
 
     <section className={styles.dashboardGrid}>
@@ -110,15 +117,6 @@ export async function HomeDashboard() {
         <Link href="/status" className={styles.panelCta}>Se full status <span>↗</span></Link>
       </article>
 
-      <article className={`${styles.panel} ${styles.statusPanel}`}>
-        <div className={styles.panelHeader}><h2>Aktuell serverstatus</h2></div>
-        <div className={styles.statusContent}>
-          <span className={serverStatus.online ? styles.statusOrbOnline : styles.statusOrbOffline}/>
-          <strong>{serverStatus.online ? "ONLINE" : "OFFLINE"}</strong>
-          <p>{serverStatus.online ? `${serverStatus.playersOnline} spelare online just nu` : "Servern svarar inte just nu"}</p>
-        </div>
-        <Link href="/kom-igang" className={styles.panelCta}>Gå med nu <span>↗</span></Link>
-      </article>
     </section>
 
     <section className={styles.leaderboardPanel}>
