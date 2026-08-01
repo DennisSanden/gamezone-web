@@ -109,22 +109,69 @@ function RankingCard({ board, definition, serverCard }: { board?: LeaderboardBoa
   );
 }
 
-function TitleOverview({ board }: { board?: LeaderboardBoard }) {
-  const counts = useMemo(() => {
-    const map = new Map<string, number>();
-    for (const entry of board?.entries ?? []) map.set(entry.detail ?? "Okänd titel", (map.get(entry.detail ?? "Okänd titel") ?? 0) + 1);
-    return [...map.entries()].sort((a, b) => b[1] - a[1]);
-  }, [board]);
-  const total = counts.reduce((sum, [, count]) => sum + count, 0);
+function TitleMiniTable({ title, subtitle, icon, entries, accent = false }: { title: string; subtitle: string; icon: string; entries: LeaderboardEntry[]; accent?: boolean }) {
   return (
-    <article className={styles.titleOverview}>
-      <div className={styles.titleArtwork}><span>♛</span><strong>Titlar på GameZone</strong><small>En överblick över hela titelstrukturen</small></div>
-      <div className={styles.titleContent}>
-        <span className={styles.eyebrowInline}>Titelstege</span>
-        <h3>Mer än bara fem kungar</h3>
-        <p>Här visas hur spelarna är fördelade mellan Kung, Lord och produktionssystemets titlar. Hela listan går att öppna separat.</p>
-        <div className={styles.titleChips}>{counts.slice(0, 8).map(([title, count]) => <span key={title}><strong>{count}</strong>{title}</span>)}</div>
-        <div className={styles.titleFooter}><span>{number.format(total)} spelare med aktiv titel</span><Link href="/leaderboards/player_titles">Visa alla titlar →</Link></div>
+    <section className={`${styles.titleTableCard} ${accent ? styles.titleTablePrimary : ""}`}>
+      <header className={styles.titleTableHeader}>
+        <span className={styles.titleTableIcon}>{icon}</span>
+        <div><strong>{title}</strong><small>{subtitle}</small></div>
+        <span className={styles.titleTableCount}>{number.format(entries.length)}</span>
+      </header>
+      <div className={styles.titleTableRows}>
+        {entries.slice(0, accent ? 8 : 5).map((entry, index) => (
+          <div className={styles.titleTableRow} key={`${title}-${entry.entityId}`}>
+            <span className={styles.titleTableRank}>#{index + 1}</span>
+            <PlayerAvatar name={entry.displayName} />
+            <div><strong>{entry.displayName}</strong><small>{entry.detail ?? "Ingen titel"}</small></div>
+            <span className={styles.titleName}>{entry.detail ?? "–"}</span>
+          </div>
+        ))}
+        {entries.length === 0 && <div className={styles.titleTableEmpty}>Ingen spelare i denna grupp ännu.</div>}
+      </div>
+    </section>
+  );
+}
+
+function TitleOverview({ board }: { board?: LeaderboardBoard }) {
+  const groups = useMemo(() => {
+    const all = board?.entries ?? [];
+    const kings = all.filter((entry) => (entry.detail ?? "").toLocaleLowerCase("sv-SE") === "kung");
+    const lords = all.filter((entry) => (entry.detail ?? "").toLocaleLowerCase("sv-SE") === "lord");
+    const regular = all.filter((entry) => {
+      const title = (entry.detail ?? "").toLocaleLowerCase("sv-SE");
+      return title !== "kung" && title !== "lord";
+    });
+    return { kings, lords, regular };
+  }, [board]);
+
+  const titleCounts = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const entry of groups.regular) {
+      const title = entry.detail ?? "Okänd titel";
+      map.set(title, (map.get(title) ?? 0) + 1);
+    }
+    return [...map.entries()].sort((a, b) => b[1] - a[1]);
+  }, [groups.regular]);
+
+  return (
+    <article className={styles.titleHub}>
+      <div className={styles.titleHubIntro}>
+        <div><span className={styles.eyebrowInline}>Spelartitlar</span><h3>Titlarna spelarna faktiskt jagar</h3></div>
+        <p>Kung och Lord visas separat eftersom de är roller i ett settlement. Huvudfokus ligger på de vanliga progressionstitlarna som spelarna tjänar genom sitt arbete på servern.</p>
+        <div className={styles.titleDistribution}>
+          {titleCounts.slice(0, 8).map(([title, count]) => <span key={title}><strong>{count}</strong>{title}</span>)}
+        </div>
+      </div>
+      <div className={styles.titleTablesGrid}>
+        <div className={styles.titlePrimaryColumn}><TitleMiniTable title="Vanliga titlar" subtitle="Produktion och progression" icon="✦" entries={groups.regular} accent /></div>
+        <div className={styles.titleSideColumn}>
+          <TitleMiniTable title="Kungar" subtitle="Settlement-ledare" icon="♛" entries={groups.kings} />
+          <TitleMiniTable title="Lords" subtitle="Settlement-ledning" icon="♜" entries={groups.lords} />
+        </div>
+      </div>
+      <div className={styles.titleHubFooter}>
+        <span>{number.format(groups.regular.length)} vanliga titlar, {number.format(groups.kings.length)} kungar och {number.format(groups.lords.length)} lords</span>
+        <Link href="/leaderboards/player_titles">Visa alla spelartitlar →</Link>
       </div>
     </article>
   );
