@@ -111,9 +111,9 @@ export function PlayerProfile({ username }: { username: string }) {
             <header><span>Identitet</span><h2>Roller och tillhörighet</h2></header>
             <dl className={styles.facts}>
               <div><dt>Titel</dt><dd>{player.productionTitle?.title ?? "Ingen"}</dd></div>
-              <div><dt>Settlement</dt><dd>{player.settlement?.displayName ?? "Inget"}</dd></div>
+              <div><dt>Settlement</dt><dd>{player.settlement?.name ?? "Inget"}</dd></div>
               <div><dt>Settlement-roll</dt><dd>{player.settlement?.role ?? "Ingen"}</dd></div>
-              <div><dt>Företag</dt><dd>{player.company?.displayName ?? "Inget"}</dd></div>
+              <div><dt>Företag</dt><dd>{player.company?.name ?? "Inget"}</dd></div>
             </dl>
           </section>
           <section className={styles.card}>
