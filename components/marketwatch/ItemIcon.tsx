@@ -2,6 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+// Ikonfiler läggs i public/minecraft/items/<minecraft_id>.png (eller
+// public/minecraft/blocks/<minecraft_id>.png om det är ett block).
+// <minecraft_id> är det snake_case-namn som Minecraft själv använder,
+// t.ex. "iron_ingot", "oak_planks", "hay_block" – se minecraftIdFor()
+// i lib/marketwatch-data.ts för hur varje items minecraftId räknas ut.
+// Saknas filen visar komponenten automatiskt en bokstavsbadge istället.
+
 type ItemIconProps = {
   itemId: string;
   itemName: string;
