@@ -93,6 +93,18 @@ function visualFor(category: string) {
     return categoryVisuals[category] ?? fallbackVisual;
 }
 
+function sceneFor(category: string) {
+    const normalized = category.toUpperCase();
+    if (normalized === "FARMING" || normalized === "AGRICULTURE") return "farming";
+    if (normalized === "MINING") return "mining";
+    if (normalized === "FORESTRY") return "forestry";
+    if (normalized === "FISHING") return "fishing";
+    if (normalized === "HUNTING") return "hunting";
+    if (normalized === "INDUSTRY") return "industry";
+    if (normalized === "TRADE" || normalized === "COMMERCE") return "trade";
+    return "settlement";
+}
+
 function roleLabel(role: string) {
     if (role === "KING") return "Kung";
     if (role === "LORD") return "Lord";
@@ -208,7 +220,8 @@ export function SettlementDirectory() {
                     </div>
 
                     {!loading && !error && featured && (
-                        <button type="button" className={styles.featuredCity} onClick={() => setSelectedId(featured.settlementId)}>
+                        <button type="button" className={styles.featuredCity} data-scene={sceneFor(featured.category)} onClick={() => setSelectedId(featured.settlementId)}>
+                            <div className={styles.featuredScene}><i /><b /><em /></div>
                             <div className={styles.featuredShade} />
                             <span className={styles.featuredLabel}>Ledande settlement</span>
                             <div className={styles.featuredBody}>
@@ -284,10 +297,11 @@ export function SettlementDirectory() {
                                     key={settlement.settlementId}
                                     className={styles.card}
                                     data-accent={visual.accent}
+                                    data-scene={sceneFor(settlement.category)}
                                     onClick={() => setSelectedId(settlement.settlementId)}
                                 >
                                     <div className={styles.cardArtwork}>
-                                        <div className={styles.cardLandscape} />
+                                        <div className={styles.cardLandscape}><i /><b /><em /></div>
                                         <img className={styles.cardIcon} src={visual.icon} alt="" />
                                         <span className={styles.rank}>#{index + 1}</span>
                                         <span className={styles.category}>{formatCategory(settlement.category)}</span>
@@ -324,9 +338,10 @@ export function SettlementDirectory() {
                 const visual = visualFor(selectedSettlement.category);
                 return (
                     <div className={styles.modalBackdrop} role="presentation" onMouseDown={() => setSelectedId(null)}>
-                        <section className={styles.modal} data-accent={visual.accent} role="dialog" aria-modal="true" aria-label={`${selectedSettlement.displayName} stadssida`} onMouseDown={(event) => event.stopPropagation()}>
+                        <section className={styles.modal} data-accent={visual.accent} data-scene={sceneFor(selectedSettlement.category)} role="dialog" aria-modal="true" aria-label={`${selectedSettlement.displayName} stadssida`} onMouseDown={(event) => event.stopPropagation()}>
                             <button type="button" className={styles.closeButton} onClick={() => setSelectedId(null)} aria-label="Stäng">×</button>
                             <div className={styles.modalHero}>
+                                <div className={styles.modalScene}><i /><b /><em /></div>
                                 <div className={styles.modalHeroShade} />
                                 <img src={visual.icon} alt="" />
                                 <div>
