@@ -19,12 +19,12 @@ export default function MarketWatchPage() {
                             <span className={styles.eyebrow}>GAMEZONE ECONOMY NETWORK</span>
                             <h1>MARKET<span>WATCH</span></h1>
                             <p>Se vad servern behöver, vad marknaden betalar och var nästa stora affär finns.</p>
-                            <div className={styles.badges}><span>Livepriser</span><span>Resursbrist</span><span>Prisrörelser</span><span>Alla items</span></div>
+                            <div className={styles.badges}><span>Serverdata</span><span>Resursbrist</span><span>Handelsstatistik</span><span>Riktigt lager</span></div>
                         </div>
                         <div className={styles.visual} aria-hidden="true">
                             <div className={styles.orbit}><i /><i /><i /></div>
                             <div className={styles.chart}><span /><span /><span /><span /><span /><span /><span /></div>
-                            <div className={styles.ticker}><span>IRON</span><strong>14 C</strong><b>+6.4%</b></div>
+                            <div className={styles.ticker}><span>BEHOV</span><strong>− LAGER</strong><b>= BRIST</b></div>
                         </div>
                     </div>
                 </PageContainer>
