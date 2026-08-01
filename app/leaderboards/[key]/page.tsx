@@ -1,0 +1,75 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { MainLayout } from "@/components/layout/MainLayout";
+import { PageContainer } from "@/components/layout/PageContainer";
+import { ItemIcon } from "@/components/marketwatch/ItemIcon";
+import { getAllLeaderboardEntries, type LeaderboardEntry } from "@/lib/leaderboard-data";
+import styles from "../page.module.css";
+
+const labels: Record<string, string> = {
+  COINS: "Coins", ITEMS: "Items", SECONDS: "Speltid", KILLS: "Kills", DEATHS: "Deaths", RATIO_X100: "K/D", TITLE_RANK: "Titel", MEMBERS: "Medlemmar", LEVEL: "Nivå", TRANSACTIONS: "Transaktioner", COUNT: "Antal", PLAYERS: "Spelare",
+};
+const number = new Intl.NumberFormat("sv-SE");
+
+function format(entry: LeaderboardEntry, valueType: string) {
+  if (entry.detail) return entry.detail;
+  if (valueType === "SECONDS") {
+    const days = Math.floor(entry.value / 86400); const hours = Math.floor((entry.value % 86400) / 3600); const minutes = Math.floor((entry.value % 3600) / 60);
+    return days > 0 ? `${days} dagar, ${hours} timmar` : `${hours} timmar, ${minutes} minuter`;
+  }
+  if (valueType === "RATIO_X100") return (entry.value / 100).toFixed(2);
+  return valueType === "COINS" ? `${number.format(entry.value)} coins` : number.format(entry.value);
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ key: string }> }): Promise<Metadata> {
+  const { key } = await params;
+  const board = await getAllLeaderboardEntries(key);
+  return { title: board ? `${board.displayName} | GameZone` : "Leaderboard | GameZone" };
+}
+
+export default async function LeaderboardDetailPage({ params, searchParams }: { params: Promise<{ key: string }>; searchParams: Promise<{ page?: string }> }) {
+  const { key } = await params;
+  const { page: rawPage } = await searchParams;
+  const board = await getAllLeaderboardEntries(key);
+  if (!board) notFound();
+
+  const pageSize = 25;
+  const totalPages = Math.max(1, Math.ceil(board.entries.length / pageSize));
+  const page = Math.min(totalPages, Math.max(1, Number.parseInt(rawPage ?? "1", 10) || 1));
+  const entries = board.entries.slice((page - 1) * pageSize, page * pageSize);
+  const pages = Array.from({ length: totalPages }, (_, index) => index + 1).filter(value => value === 1 || value === totalPages || Math.abs(value - page) <= 2);
+
+  return (
+    <MainLayout>
+      <div className={styles.page}>
+        <section className={styles.detailHero}><PageContainer><Link className={styles.backLink} href="/leaderboards">← Alla leaderboards</Link><span className={styles.eyebrow}>{board.entityType}</span><h1>{board.displayName}</h1><p>Hela tabellen, sida {page} av {totalPages}. Data hämtas direkt från GameZone Engine.</p></PageContainer></section>
+        <PageContainer>
+          <div className={styles.detailShell}>
+            <div className={styles.detailStats}><span><strong>{number.format(board.entries.length)}</strong> poster</span><span><strong>{pageSize}</strong> per sida</span><span><strong>60 sek</strong> uppdatering</span></div>
+            <div className={styles.fullTable}>
+              <div className={styles.tableHead}><span>Placering</span><span>Namn</span><span>{labels[board.valueType] ?? "Resultat"}</span></div>
+              {entries.map(entry => (
+                <div className={styles.tableRow} key={`${entry.entityId}-${entry.rank}`}>
+                  <span className={`${styles.tableRank} ${entry.rank <= 3 ? styles[`rank${entry.rank}`] : ""}`}>#{entry.rank}</span>
+                  <span className={styles.tableIdentity}>
+                    {board.entityType === "PLAYER" && <img src={`https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/40`} alt="" />}
+                    {board.entityType === "SETTLEMENT" && <ItemIcon itemId="minecraft:bell" itemName="Settlement" size={40} />}
+                    {board.entityType === "COMPANY" && <ItemIcon itemId="minecraft:emerald" itemName="Företag" size={40} />}
+                    <strong>{entry.displayName}</strong>
+                  </span>
+                  <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
+                </div>
+              ))}
+            </div>
+            <nav className={styles.pagination} aria-label="Sidnavigering">
+              <Link className={page === 1 ? styles.disabledPage : styles.pageButton} href={`?page=${Math.max(1, page - 1)}`}>← Föregående</Link>
+              <div>{pages.map((value, index) => <span key={value}>{index > 0 && value - pages[index - 1] > 1 ? <i>…</i> : null}<Link className={value === page ? styles.activePage : styles.pageNumber} href={`?page=${value}`}>{value}</Link></span>)}</div>
+              <Link className={page === totalPages ? styles.disabledPage : styles.pageButton} href={`?page=${Math.min(totalPages, page + 1)}`}>Nästa →</Link>
+            </nav>
+          </div>
+        </PageContainer>
+      </div>
+    </MainLayout>
+  );
+}

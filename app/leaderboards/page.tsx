@@ -1,57 +1,41 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { LeaderboardDashboard } from "@/components/leaderboards/LeaderboardDashboard";
-import { getLeaderboards } from "@/lib/leaderboard-data";
+import { getAllLeaderboardEntries, getLeaderboards } from "@/lib/leaderboard-data";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "Leaderboards | GameZone",
-    description:
-        "Se topplistor för spelare, settlements, företag och serverstatistik på GameZone.",
+  title: "Leaderboards | GameZone",
+  description: "Se topplistor för spelare, settlements, företag och serverstatistik på GameZone.",
 };
 
 export default async function LeaderboardsPage() {
-    const leaderboards = await getLeaderboards(5);
+  const [leaderboards, titleBoard] = await Promise.all([
+    getLeaderboards(5),
+    getAllLeaderboardEntries("player_titles"),
+  ]);
 
-    return (
-        <MainLayout>
-            <div className={styles.page}>
-                <section className={styles.hero}>
-                    <PageContainer>
-                        <div className={styles.heroInner}>
-                            <div className={styles.heroCopy}>
-                                <span className={styles.eyebrow}>GameZone-statistik</span>
-                                <h1>Leaderboards</h1>
-                                <p>
-                                    Följ serverns främsta spelare, mäktigaste settlements
-                                    och mest framgångsrika företag på en samlad plats.
-                                </p>
-
-                                <div className={styles.heroBadges}>
-                                    <span>Spelare</span>
-                                    <span>Settlements</span>
-                                    <span>Företag</span>
-                                    <span>Server</span>
-                                </div>
-                            </div>
-
-                            <div className={styles.heroVisual} aria-hidden="true">
-                                <div className={styles.heroVisualShade} />
-                                <div className={styles.heroTrophy}>🏆</div>
-                                <div className={styles.heroVisualText}>
-                                    <span>Topplistor</span>
-                                    <strong>Vem leder GameZone?</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </PageContainer>
-                </section>
-
-                <PageContainer>
-                    <LeaderboardDashboard leaderboards={leaderboards} />
-                </PageContainer>
+  return (
+    <MainLayout>
+      <div className={styles.page}>
+        <section className={styles.hero}>
+          <Image className={styles.heroImage} src="/images/leaderboard.png" alt="GameZone leaderboardhall med trofé och topplista" fill priority sizes="100vw" />
+          <div className={styles.heroOverlay} />
+          <PageContainer>
+            <div className={styles.heroInner}>
+              <div className={styles.heroCopy}>
+                <span className={styles.eyebrow}>GameZone-statistik</span>
+                <h1>Legender skrivs i siffror.</h1>
+                <p>Följ serverns främsta spelare, mäktigaste settlements och mest framgångsrika företag. Varje topplista hämtas direkt från GameZone Engine.</p>
+                <div className={styles.heroBadges}><span>Live-data</span><span>Alla spelare</span><span>Sidvisning</span><span>Uppdateras automatiskt</span></div>
+              </div>
             </div>
-        </MainLayout>
-    );
+          </PageContainer>
+        </section>
+        <PageContainer><LeaderboardDashboard leaderboards={leaderboards} titleBoard={titleBoard} /></PageContainer>
+      </div>
+    </MainLayout>
+  );
 }

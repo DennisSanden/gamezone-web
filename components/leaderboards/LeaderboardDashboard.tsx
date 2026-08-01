@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
+import { ItemIcon } from "@/components/marketwatch/ItemIcon";
 import type { LeaderboardBoard, LeaderboardEntry } from "@/lib/leaderboard-data";
 import styles from "@/app/leaderboards/page.module.css";
 
@@ -8,7 +10,7 @@ type Category = "players" | "settlements" | "companies" | "server";
 type Definition = { key: string; title: string; description: string; label: string; icon: string };
 
 const categories: Record<Category, { label: string; eyebrow: string; description: string; icon: string }> = {
-  players: { label: "Spelare", eyebrow: "Individuella prestationer", description: "Ekonomi, produktion, aktivitet, titlar och stridsstatistik för spelarna som satt störst avtryck på servern.", icon: "♟" },
+  players: { label: "Spelare", eyebrow: "Individuella prestationer", description: "Ekonomi, produktion, aktivitet och stridsstatistik för spelarna som satt störst avtryck på servern.", icon: "♟" },
   settlements: { label: "Settlements", eyebrow: "Städer och samhällen", description: "Jämför stadskassor, befolkning, utvecklingsnivå och hur mycket skatt varje settlement har samlat in.", icon: "♜" },
   companies: { label: "Företag", eyebrow: "Handel och tillväxt", description: "Följ företagen som leder ekonomin genom kapital, försäljning, transaktioner, licensnivå och medlemsantal.", icon: "◆" },
   server: { label: "Servern", eyebrow: "GameZone i siffror", description: "En samlad överblick över ekonomin, organisationerna och hur många unika spelare som varit aktiva.", icon: "◎" },
@@ -19,7 +21,6 @@ const definitions: Record<Category, Definition[]> = {
     { key: "PLAYER_COINS", title: "Rikaste spelare", description: "Högst aktuellt personligt coin-saldo.", label: "Coins", icon: "◉" },
     { key: "PLAYER_PRODUCTION", title: "Mest producerat", description: "Flest registrerade producerade items totalt.", label: "Items", icon: "⚒" },
     { key: "PLAYER_PLAY_TIME", title: "Mest spelad tid", description: "Flest aktiva timmar registrerade på GameZone.", label: "Speltid", icon: "◷" },
-    { key: "PLAYER_TITLES", title: "Högsta titel", description: "Spelarna som nått serverns högst rankade titel.", label: "Titel", icon: "♛" },
     { key: "PLAYER_KILLS", title: "Flest kills", description: "Flest registrerade spelarkills.", label: "Kills", icon: "⚔" },
     { key: "PLAYER_DEATHS", title: "Flest deaths", description: "Flest registrerade dödsfall.", label: "Deaths", icon: "☠" },
     { key: "PLAYER_KD", title: "Högst K/D", description: "Bäst förhållande mellan kills och deaths.", label: "K/D", icon: "✦" },
@@ -48,7 +49,7 @@ const definitions: Record<Category, Definition[]> = {
 
 const number = new Intl.NumberFormat("sv-SE");
 
-function formatValue(entry: LeaderboardEntry, board: LeaderboardBoard | undefined, label: string) {
+export function formatLeaderboardValue(entry: LeaderboardEntry, board: LeaderboardBoard | undefined, label: string) {
   if (entry.detail) return entry.detail;
   if (board?.valueType === "SECONDS" || board?.valueType === "PLAY_TIME_SECONDS") {
     const days = Math.floor(entry.value / 86400);
@@ -66,10 +67,18 @@ function PlayerAvatar({ name }: { name: string }) {
   return <img className={styles.avatar} src={`https://mc-heads.net/avatar/${encodeURIComponent(name)}/48`} alt="" loading="lazy" />;
 }
 
-function RankingCard({ board, definition }: { board?: LeaderboardBoard; definition: Definition }) {
+function EntityVisual({ board, name }: { board?: LeaderboardBoard; name: string }) {
+  if (board?.entityType === "PLAYER") return <PlayerAvatar name={name} />;
+  if (board?.entityType === "SETTLEMENT") return <span className={styles.minecraftIcon}><ItemIcon itemId="minecraft:bell" itemName="Settlement" size={38} /></span>;
+  if (board?.entityType === "COMPANY") return <span className={styles.minecraftIcon}><ItemIcon itemId="minecraft:emerald" itemName="Företag" size={38} /></span>;
+  return <span className={styles.entityIcon}>◎</span>;
+}
+
+function RankingCard({ board, definition, serverCard }: { board?: LeaderboardBoard; definition: Definition; serverCard: boolean }) {
   const entries = board?.entries ?? [];
+  const shown = entries.length ? entries : Array.from({ length: serverCard ? 1 : 5 }, (_, index) => ({ rank: index + 1, entityId: `empty-${index}`, displayName: "Ingen data ännu", value: 0 }));
   return (
-    <article className={styles.boardCard}>
+    <article className={`${styles.boardCard} ${serverCard ? styles.serverBoardCard : ""}`}>
       <header className={styles.boardHeader}>
         <div className={styles.boardIcon}>{definition.icon}</div>
         <div className={styles.boardHeading}>
@@ -78,25 +87,50 @@ function RankingCard({ board, definition }: { board?: LeaderboardBoard; definiti
         </div>
       </header>
       <ol className={styles.rankingList}>
-        {(entries.length ? entries : Array.from({ length: 5 }, (_, index) => ({ rank: index + 1, entityId: `empty-${index}`, displayName: "Ingen data ännu", value: 0 }))).map((entry) => {
+        {shown.map((entry) => {
           const empty = entries.length === 0;
           return (
-            <li key={`${definition.key}-${entry.entityId}-${entry.rank}`} className={`${styles.rankingRow} ${entry.rank <= 3 ? styles.podiumRow : ""}`}>
-              <span className={`${styles.rank} ${styles[`rank${entry.rank}`] ?? ""}`}>{entry.rank}</span>
+            <li key={`${definition.key}-${entry.entityId}-${entry.rank}`} className={`${styles.rankingRow} ${entry.rank <= 3 && !serverCard ? styles.podiumRow : ""}`}>
+              {!serverCard && <span className={`${styles.rank} ${styles[`rank${entry.rank}`] ?? ""}`}>{entry.rank}</span>}
               <div className={styles.identity}>
-                {board?.entityType === "PLAYER" && !empty ? <PlayerAvatar name={entry.displayName} /> : <span className={styles.entityIcon}>{board?.entityType === "SETTLEMENT" ? "♜" : board?.entityType === "COMPANY" ? "◆" : "◎"}</span>}
-                <div><strong>{entry.displayName}</strong>{entry.rank === 1 && !empty ? <small>Nuvarande etta</small> : <small>{definition.label}</small>}</div>
+                {!empty && <EntityVisual board={board} name={entry.displayName} />}
+                {empty && <span className={styles.entityIcon}>?</span>}
+                <div><strong>{entry.displayName}</strong><small>{definition.label}</small></div>
               </div>
-              <div className={styles.value}><strong>{empty ? "–" : formatValue(entry, board, definition.label)}</strong><small>{definition.label}</small></div>
+              <div className={styles.value}><strong>{empty ? "–" : formatLeaderboardValue(entry, board, definition.label)}</strong><small>{definition.label}</small></div>
             </li>
           );
         })}
       </ol>
+      {!serverCard && entries.length > 0 && (
+        <Link className={styles.fullTableLink} href={`/leaderboards/${definition.key.toLowerCase()}`}>Visa hela tabellen <span>→</span></Link>
+      )}
     </article>
   );
 }
 
-export function LeaderboardDashboard({ leaderboards }: { leaderboards: LeaderboardBoard[] }) {
+function TitleOverview({ board }: { board?: LeaderboardBoard }) {
+  const counts = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const entry of board?.entries ?? []) map.set(entry.detail ?? "Okänd titel", (map.get(entry.detail ?? "Okänd titel") ?? 0) + 1);
+    return [...map.entries()].sort((a, b) => b[1] - a[1]);
+  }, [board]);
+  const total = counts.reduce((sum, [, count]) => sum + count, 0);
+  return (
+    <article className={styles.titleOverview}>
+      <div className={styles.titleArtwork}><span>♛</span><strong>Titlar på GameZone</strong><small>En överblick över hela titelstrukturen</small></div>
+      <div className={styles.titleContent}>
+        <span className={styles.eyebrowInline}>Titelstege</span>
+        <h3>Mer än bara fem kungar</h3>
+        <p>Här visas hur spelarna är fördelade mellan Kung, Lord och produktionssystemets titlar. Hela listan går att öppna separat.</p>
+        <div className={styles.titleChips}>{counts.slice(0, 8).map(([title, count]) => <span key={title}><strong>{count}</strong>{title}</span>)}</div>
+        <div className={styles.titleFooter}><span>{number.format(total)} spelare med aktiv titel</span><Link href="/leaderboards/player_titles">Visa alla titlar →</Link></div>
+      </div>
+    </article>
+  );
+}
+
+export function LeaderboardDashboard({ leaderboards, titleBoard }: { leaderboards: LeaderboardBoard[]; titleBoard?: LeaderboardBoard | null }) {
   const [active, setActive] = useState<Category>("players");
   const map = useMemo(() => new Map(leaderboards.map((board) => [board.key.toUpperCase(), board])), [leaderboards]);
   const highlights = [
@@ -113,7 +147,7 @@ export function LeaderboardDashboard({ leaderboards }: { leaderboards: Leaderboa
         {highlights.map((item) => {
           const board = map.get(item.key);
           const entry = board?.entries[0];
-          return <article key={item.key} className={styles.highlightCard}><span className={styles.highlightIcon}>{item.icon}</span><div><small>{item.label}</small><strong>{entry?.displayName ?? "Ingen data"}</strong><span>{entry ? formatValue(entry, board, item.valueLabel) : "Väntar på Engine API"}</span></div></article>;
+          return <article key={item.key} className={styles.highlightCard}><span className={styles.highlightIcon}>{item.icon}</span><div><small>{item.label}</small><strong>{entry?.displayName ?? "Ingen data"}</strong><span>{entry ? formatLeaderboardValue(entry, board, item.valueLabel) : "Väntar på Engine API"}</span></div></article>;
         })}
       </section>
 
@@ -127,8 +161,10 @@ export function LeaderboardDashboard({ leaderboards }: { leaderboards: Leaderboa
         <div className={styles.categoryCount}><strong>{definitions[active].length}</strong><small>topplistor</small></div>
       </section>
 
-      <section className={styles.boardGrid}>
-        {definitions[active].map((definition) => <RankingCard key={definition.key} definition={definition} board={map.get(definition.key)} />)}
+      {active === "players" && <TitleOverview board={titleBoard ?? undefined} />}
+
+      <section className={`${styles.boardGrid} ${active === "server" ? styles.serverGrid : ""}`}>
+        {definitions[active].map((definition) => <RankingCard key={definition.key} definition={definition} board={map.get(definition.key)} serverCard={active === "server"} />)}
       </section>
 
       {leaderboards.length === 0 && <aside className={styles.notice}><strong>Ingen live-data kunde hämtas</strong><p>Kontrollera att ENGINE_API_URL är satt och att webbservern kan nå GameZone Engine.</p></aside>}
