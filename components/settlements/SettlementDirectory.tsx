@@ -93,16 +93,31 @@ function visualFor(category: string) {
     return categoryVisuals[category] ?? fallbackVisual;
 }
 
-function sceneFor(category: string) {
+function artworkFor(category: string) {
     const normalized = category.toUpperCase();
-    if (normalized === "FARMING" || normalized === "AGRICULTURE") return "farming";
-    if (normalized === "MINING") return "mining";
-    if (normalized === "FORESTRY") return "forestry";
-    if (normalized === "FISHING") return "fishing";
-    if (normalized === "HUNTING") return "hunting";
-    if (normalized === "INDUSTRY") return "industry";
-    if (normalized === "TRADE" || normalized === "COMMERCE") return "trade";
-    return "settlement";
+
+    if (normalized === "FARMING" || normalized === "AGRICULTURE") {
+        return ["/minecraft/items/wheat.png", "/minecraft/items/carrot.png", "/minecraft/items/golden_hoe.png"];
+    }
+    if (normalized === "MINING") {
+        return ["/minecraft/items/diamond.png", "/minecraft/items/iron_ingot.png", "/minecraft/items/diamond_pickaxe.png"];
+    }
+    if (normalized === "FORESTRY") {
+        return ["/minecraft/items/spruce_sapling.png", "/minecraft/items/stick.png", "/minecraft/items/golden_axe.png"];
+    }
+    if (normalized === "FISHING") {
+        return ["/minecraft/items/cod.png", "/minecraft/items/salmon.png", "/minecraft/items/fishing_rod_cast.png"];
+    }
+    if (normalized === "HUNTING") {
+        return ["/minecraft/items/arrow.png", "/minecraft/items/leather.png", "/minecraft/items/bow.png"];
+    }
+    if (normalized === "INDUSTRY") {
+        return ["/minecraft/items/copper_ingot.png", "/minecraft/items/redstone.png", "/minecraft/items/iron_pickaxe.png"];
+    }
+    if (normalized === "TRADE" || normalized === "COMMERCE") {
+        return ["/minecraft/items/emerald.png", "/minecraft/items/gold_ingot.png", "/minecraft/items/chest_minecart.png"];
+    }
+    return ["/minecraft/items/filled_map.png", "/minecraft/items/compass_20.png", "/minecraft/items/name_tag.png"];
 }
 
 function roleLabel(role: string) {
@@ -220,8 +235,8 @@ export function SettlementDirectory() {
                     </div>
 
                     {!loading && !error && featured && (
-                        <button type="button" className={styles.featuredCity} data-scene={sceneFor(featured.category)} onClick={() => setSelectedId(featured.settlementId)}>
-                            <div className={styles.featuredScene}><i /><b /><em /></div>
+                        <button type="button" className={styles.featuredCity} onClick={() => setSelectedId(featured.settlementId)}>
+                            <div className={styles.featuredScene}>{artworkFor(featured.category).map((src, index) => <img key={src} src={src} alt="" data-position={index} />)}</div>
                             <div className={styles.featuredShade} />
                             <span className={styles.featuredLabel}>Ledande settlement</span>
                             <div className={styles.featuredBody}>
@@ -297,11 +312,10 @@ export function SettlementDirectory() {
                                     key={settlement.settlementId}
                                     className={styles.card}
                                     data-accent={visual.accent}
-                                    data-scene={sceneFor(settlement.category)}
                                     onClick={() => setSelectedId(settlement.settlementId)}
                                 >
                                     <div className={styles.cardArtwork}>
-                                        <div className={styles.cardLandscape}><i /><b /><em /></div>
+                                        <div className={styles.cardLandscape}>{artworkFor(settlement.category).map((src, artIndex) => <img key={src} src={src} alt="" data-position={artIndex} />)}</div>
                                         <img className={styles.cardIcon} src={visual.icon} alt="" />
                                         <span className={styles.rank}>#{index + 1}</span>
                                         <span className={styles.category}>{formatCategory(settlement.category)}</span>
@@ -338,10 +352,10 @@ export function SettlementDirectory() {
                 const visual = visualFor(selectedSettlement.category);
                 return (
                     <div className={styles.modalBackdrop} role="presentation" onMouseDown={() => setSelectedId(null)}>
-                        <section className={styles.modal} data-accent={visual.accent} data-scene={sceneFor(selectedSettlement.category)} role="dialog" aria-modal="true" aria-label={`${selectedSettlement.displayName} stadssida`} onMouseDown={(event) => event.stopPropagation()}>
+                        <section className={styles.modal} data-accent={visual.accent} role="dialog" aria-modal="true" aria-label={`${selectedSettlement.displayName} stadssida`} onMouseDown={(event) => event.stopPropagation()}>
                             <button type="button" className={styles.closeButton} onClick={() => setSelectedId(null)} aria-label="Stäng">×</button>
                             <div className={styles.modalHero}>
-                                <div className={styles.modalScene}><i /><b /><em /></div>
+                                <div className={styles.modalScene}>{artworkFor(selectedSettlement.category).map((src, index) => <img key={src} src={src} alt="" data-position={index} />)}</div>
                                 <div className={styles.modalHeroShade} />
                                 <img src={visual.icon} alt="" />
                                 <div>

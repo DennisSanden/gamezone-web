@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MainLayout } from "@/components/layout/MainLayout";
 import { SettlementDirectory } from "@/components/settlements/SettlementDirectory";
 
 export const metadata: Metadata = {
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function SettlementsPage() {
-    return <SettlementDirectory />;
+    return (
+        <MainLayout>
+            <SettlementDirectory />
+        </MainLayout>
+    );
 }
