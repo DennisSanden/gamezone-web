@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { LeaderboardDashboard } from "@/components/leaderboards/LeaderboardDashboard";
+import { getLeaderboards } from "@/lib/leaderboard-data";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
         "Se topplistor för spelare, settlements, företag och serverstatistik på GameZone.",
 };
 
-export default function LeaderboardsPage() {
+export default async function LeaderboardsPage() {
+    const leaderboards = await getLeaderboards(5);
+
     return (
         <MainLayout>
             <div className={styles.page}>
@@ -46,7 +49,7 @@ export default function LeaderboardsPage() {
                 </section>
 
                 <PageContainer>
-                    <LeaderboardDashboard />
+                    <LeaderboardDashboard leaderboards={leaderboards} />
                 </PageContainer>
             </div>
         </MainLayout>
