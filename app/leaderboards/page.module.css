@@ -40,3 +40,5 @@
 .titleSectionHeader{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px;border-bottom:1px solid rgba(255,255,255,.055);background:radial-gradient(circle at 100% 0,rgba(77,194,109,.1),transparent 45%),#0d1b12}.titleSectionHeader h2{margin:0;font-size:1.18rem}.titleSectionHeader p{margin:5px 0 0;color:#7d8d83;font-size:.74rem}.titleSectionHeader span{padding:7px 10px;border-radius:9px;color:#07100b;background:#72d98f;font-size:.74rem;font-weight:900}
 @media(max-width:900px){.titleTablesGrid{grid-template-columns:1fr}.titleSideColumn{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.titleHubIntro{padding:22px 18px}.titleTablesGrid{padding:12px}.titleSideColumn{grid-template-columns:1fr}.titleTableRow{grid-template-columns:28px 36px minmax(0,1fr)}.titleName{grid-column:3;justify-self:start;margin-top:-5px}.titleHubFooter{align-items:flex-start;flex-direction:column}}
+
+.identity a,.titleTableRows a{color:inherit;text-decoration:none;font-weight:800}.identity a:hover,.titleTableRows a:hover{color:#7dccff;text-decoration:underline}

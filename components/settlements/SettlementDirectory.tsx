@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { PlayerLink } from "@/components/player/PlayerLink";
 import styles from "./SettlementDirectory.module.css";
 
 type SettlementMember = {
     playerId: string;
     username: string;
     role: string;
+    title: string | null;
     joinedAt: string;
 };
 
@@ -123,7 +125,7 @@ function artworkFor(category: string) {
 function roleLabel(role: string) {
     if (role === "KING") return "Kung";
     if (role === "LORD") return "Lord";
-    return "Medlem";
+    return "Invånare";
 }
 
 function kingOf(settlement: Settlement) {
@@ -366,7 +368,7 @@ export function SettlementDirectory() {
                             </div>
 
                             <div className={styles.detailGrid}>
-                                <div><img src="/minecraft/items/golden_helmet.png" alt="" /><span>Kung</span><strong>{kingOf(selectedSettlement)}</strong></div>
+                                <div><img src="/minecraft/items/golden_helmet.png" alt="" /><span>Kung</span><PlayerLink username={kingOf(selectedSettlement)}>{kingOf(selectedSettlement)}</PlayerLink></div>
                                 <div><img src="/minecraft/items/name_tag.png" alt="" /><span>Invånare</span><strong>{selectedSettlement.memberCount}</strong></div>
                                 <div><img src="/minecraft/items/recovery_compass_22.png" alt="" /><span>Territorieradie</span><strong>{selectedSettlement.territoryRadius}</strong></div>
                                 <div><img src="/minecraft/items/emerald.png" alt="" /><span>Stadskassa</span><strong>{formatCoins(selectedSettlement.treasuryBalance)}</strong></div>
@@ -380,8 +382,8 @@ export function SettlementDirectory() {
                                     {selectedSettlement.members.map((member) => (
                                         <div key={member.playerId} className={styles.memberRow}>
                                             <span className={styles.avatar}>{member.username.slice(0, 1).toUpperCase()}</span>
-                                            <strong>{member.username}</strong>
-                                            <span data-role={member.role}>{roleLabel(member.role)}</span>
+                                            <PlayerLink username={member.username}>{member.username}</PlayerLink>
+                                            <span data-role={member.role}>{member.title ?? roleLabel(member.role)}</span>
                                         </div>
                                     ))}
                                 </div>

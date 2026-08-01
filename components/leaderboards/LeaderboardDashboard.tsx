@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ItemIcon } from "@/components/marketwatch/ItemIcon";
+import { PlayerLink } from "@/components/player/PlayerLink";
 import type { LeaderboardBoard, LeaderboardEntry } from "@/lib/leaderboard-data";
 import styles from "@/app/leaderboards/page.module.css";
 
@@ -95,7 +96,9 @@ function RankingCard({ board, definition, serverCard }: { board?: LeaderboardBoa
               <div className={styles.identity}>
                 {!empty && <EntityVisual board={board} name={entry.displayName} />}
                 {empty && <span className={styles.entityIcon}>?</span>}
-                <div><strong>{entry.displayName}</strong><small>{definition.label}</small></div>
+                <div>{board?.entityType === "PLAYER" && !empty
+                  ? <PlayerLink username={entry.displayName}>{entry.displayName}</PlayerLink>
+                  : <strong>{entry.displayName}</strong>}<small>{definition.label}</small></div>
               </div>
               <div className={styles.value}><strong>{empty ? "–" : formatLeaderboardValue(entry, board, definition.label)}</strong><small>{definition.label}</small></div>
             </li>
@@ -122,7 +125,7 @@ function TitleMiniTable({ title, subtitle, icon, entries, accent = false }: { ti
           <div className={styles.titleTableRow} key={`${title}-${entry.entityId}`}>
             <span className={styles.titleTableRank}>#{index + 1}</span>
             <PlayerAvatar name={entry.displayName} />
-            <div><strong>{entry.displayName}</strong><small>{entry.detail ?? "Ingen titel"}</small></div>
+            <div><PlayerLink username={entry.displayName}>{entry.displayName}</PlayerLink><small>{entry.detail ?? "Ingen titel"}</small></div>
             <span className={styles.titleName}>{entry.detail ?? "–"}</span>
           </div>
         ))}
