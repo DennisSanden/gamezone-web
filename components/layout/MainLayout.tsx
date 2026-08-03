@@ -15,7 +15,7 @@ const navigationItems = [
     { label: "Regler", href: "/regler" },
     { label: "Leaderboards", href: "/leaderboards" },
     { label: "MarketWatch", href: "/marketwatch" },
-    { label: "Karta", href: "http://184.170.201.111:8100", external: true },
+    { label: "Karta", href: "/map" },
     { label: "Settlements", href: "/settlements" },
     { label: "Företag", href: "/companies" },
     { label: "Live", href: "/live" },
@@ -50,8 +50,6 @@ export function MainLayout({ children }: MainLayoutProps) {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    target={item.external ? "_blank" : undefined}
-                                    rel={item.external ? "noreferrer" : undefined}
                                     className={styles.navigationLink}
                                 >
                                     {item.label}
@@ -70,7 +68,7 @@ export function MainLayout({ children }: MainLayoutProps) {
                             </Link>
 
                             <Link
-                                href="/play"
+                                href="/kom-igang"
                                 className={styles.playButton}
                             >
                                 Spela nu
