@@ -17,7 +17,11 @@ export type LeaderboardBoard = {
 type EngineEnvelope<T> = { status?: string; result?: T };
 
 function apiBase() {
-  return process.env.ENGINE_API_URL?.replace(/\/$/, "");
+  return (
+    process.env.GAMEZONE_ENGINE_API_URL ??
+    process.env.ENGINE_API_URL ??
+    "http://184.170.201.111:8765"
+  ).replace(/\/$/, "");
 }
 
 async function engineFetch<T>(path: string): Promise<T | null> {
