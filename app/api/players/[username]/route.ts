@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+navigationItemsimport { NextResponse } from "next/server";
 
 const ENGINE_API_URL = process.env.GAMEZONE_ENGINE_API_URL ?? "http://184.170.201.111:8765";
 
