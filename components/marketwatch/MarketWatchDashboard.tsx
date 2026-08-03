@@ -1,33 +1,85 @@
 "use client";
 
-import Link from "next/link";
-import { useMemo, useState } from "react";
-import { marketCategories, marketItems, marketShops, type MarketItem } from "@/lib/marketwatch-data";
+import { useEffect, useMemo, useState } from "react";
+import { parseMarketWatch, type MarketItem, type MarketWatchPayload } from "@/lib/marketwatch-data";
 import { ItemIcon } from "./ItemIcon";
 import styles from "./MarketWatchDashboard.module.css";
 
-type SortKey = "shortage" | "sellPrice" | "buyPrice" | "change24h" | "volume24h" | "name";
+type SortKey = "shortage" | "projectedNeed" | "stock" | "latestUnitPrice" | "soldUnits" | "name";
 const levelLabel = { critical: "Kritisk brist", high: "Mycket hög", rising: "Ökande", stable: "Stabil", surplus: "Överskott" };
-const formatNumber = (value: number) => new Intl.NumberFormat("sv-SE").format(value);
-
-function Sparkline({ item }: { item: MarketItem }) {
-    const min = Math.min(...item.history); const max = Math.max(...item.history); const range = Math.max(1, max - min);
-    const points = item.history.map((value, index) => `${(index / (item.history.length - 1)) * 100},${26 - ((value - min) / range) * 22}`).join(" ");
-    return <svg className={`${styles.sparkline} ${styles[item.trend]}`} viewBox="0 0 100 28" preserveAspectRatio="none"><polyline points={points} fill="none" vectorEffect="non-scaling-stroke" /></svg>;
-}
+const formatNumber = (value: number) => new Intl.NumberFormat("sv-SE").format(Math.round(value));
+const formatCoins = (value: number) => value > 0 ? `${formatNumber(value)} C` : "Ingen data";
 
 export function MarketWatchDashboard() {
-    const [query, setQuery] = useState(""); const [category, setCategory] = useState("Alla"); const [sort, setSort] = useState<SortKey>("shortage");
-    const [onlyShortage, setOnlyShortage] = useState(false); const [selectedItem, setSelectedItem] = useState<MarketItem | null>(null);
-    const filteredItems = useMemo(() => { const normalized = query.trim().toLowerCase(); return marketItems.filter(i => category === "Alla" || i.category === category).filter(i => !onlyShortage || i.shortage > 0).filter(i => !normalized || `${i.name} ${i.category} ${i.offers.map(o => marketShops.find(s => s.id === o.shopId)?.name).join(" ")}`.toLowerCase().includes(normalized)).sort((a,b) => sort === "name" ? a.name.localeCompare(b.name,"sv") : b[sort] - a[sort]); }, [category, onlyShortage, query, sort]);
-    const critical = marketItems.filter(i => i.level === "critical").length; const totalShortage = marketItems.reduce((s,i) => s+i.shortage,0); const volume = marketItems.reduce((s,i) => s+i.volume24h,0); const hottest = [...marketItems].sort((a,b)=>b.change24h-a.change24h)[0]; const spotlight=[...marketItems].sort((a,b)=>b.shortage-a.shortage).slice(0,3);
+    const [items, setItems] = useState<MarketItem[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    const [query, setQuery] = useState("");
+    const [category, setCategory] = useState("Alla");
+    const [sort, setSort] = useState<SortKey>("shortage");
+    const [onlyShortage, setOnlyShortage] = useState(false);
+    const [selectedItem, setSelectedItem] = useState<MarketItem | null>(null);
+
+    useEffect(() => {
+        let cancelled = false;
+        async function load() {
+            try {
+                const response = await fetch("/api/marketwatch", { cache: "no-store" });
+                const payload = await response.json() as MarketWatchPayload;
+                if (!response.ok || payload.status === "FAILED" || payload.status === "INTERNAL_ERROR") {
+                    throw new Error(payload.errors?.[0]?.message || "MarketWatch kunde inte laddas.");
+                }
+                if (!cancelled) setItems(parseMarketWatch(payload));
+            } catch (cause) {
+                if (!cancelled) setError(cause instanceof Error ? cause.message : "MarketWatch kunde inte laddas.");
+            } finally {
+                if (!cancelled) setLoading(false);
+            }
+        }
+        void load();
+        return () => { cancelled = true; };
+    }, []);
+
+    const categories = useMemo(() => ["Alla", ...Array.from(new Set(items.map(item => item.category))).sort((a, b) => a.localeCompare(b, "sv"))], [items]);
+    const filteredItems = useMemo(() => {
+        const normalized = query.trim().toLowerCase();
+        return items
+            .filter(item => category === "Alla" || item.category === category)
+            .filter(item => !onlyShortage || item.shortage > 0)
+            .filter(item => !normalized || `${item.name} ${item.category} ${item.minecraftId}`.toLowerCase().includes(normalized))
+            .sort((a, b) => sort === "name" ? a.name.localeCompare(b.name, "sv") : b[sort] - a[sort]);
+    }, [category, items, onlyShortage, query, sort]);
+
+    if (loading) return <div className={styles.dashboard}><section className={styles.marketPulse}><h2>Läser riktig marknadsdata...</h2></section></div>;
+    if (error) return <div className={styles.dashboard}><section className={styles.marketPulse}><h2>MarketWatch är tillfälligt offline</h2><p>{error}</p><p>Ingen dummy-data visas.</p></section></div>;
+    if (items.length === 0) return <div className={styles.dashboard}><section className={styles.marketPulse}><h2>Ingen marknadsdata ännu</h2><p>Engine svarade korrekt, men det finns ännu inga behov, annonser eller köp att visa.</p></section></div>;
+
+    const critical = items.filter(item => item.level === "critical").length;
+    const totalShortage = items.reduce((sum, item) => sum + item.shortage, 0);
+    const soldUnits = items.reduce((sum, item) => sum + item.soldUnits, 0);
+    const activeListings = items.reduce((sum, item) => sum + item.activeListings, 0);
+    const spotlight = [...items].sort((a, b) => b.shortage - a.shortage).slice(0, 3);
+
     return <div className={styles.dashboard}>
-        <section className={styles.marketPulse}><div className={styles.pulseHeader}><div><span className={styles.liveBadge}><i /> Marknaden live</span><h2>Serverns ekonomiska puls</h2><p>Priser, lager, brist och riktiga affärer på ett ställe.</p></div><div className={styles.marketActions}><Link href="/marketwatch/stores">Utforska affärer</Link><Link href="/marketwatch/compare">Jämför priser</Link></div></div><div className={styles.statGrid}><article><span>Kritiska resurser</span><strong>{critical}</strong><small>kräver omedelbar produktion</small></article><article><span>Total brist</span><strong>{formatNumber(totalShortage)}</strong><small>items saknas i settlements</small></article><article><span>Handelsvolym 24h</span><strong>{formatNumber(volume)}</strong><small>registrerade items</small></article><article><span>Hetast just nu</span><strong>{hottest.name}</strong><small className={styles.positive}>+{hottest.change24h}% pris</small></article></div></section>
-        <section className={styles.spotlight}><div className={styles.sectionTitle}><div><span>MARKET INTELLIGENCE</span><h2>Största möjligheterna just nu</h2></div><p>Resurser där efterfrågan tydligast överstiger serverns lager.</p></div><div className={styles.spotlightGrid}>{spotlight.map((item,index)=><button key={item.id} className={styles.spotlightCard} onClick={()=>setSelectedItem(item)}><div className={styles.rank}>0{index+1}</div><div className={styles.itemIcon}><ItemIcon itemId={item.minecraftId} itemName={item.name} size={48} /></div><div className={styles.spotlightCopy}><span>{item.category}</span><strong>{item.name}</strong><small>{formatNumber(item.shortage)} items i brist</small></div><div className={styles.spotlightPrice}><span>Bästa butik</span><strong>{item.buyPrice} C</strong><small>{item.offers.length} affärer</small></div></button>)}</div></section>
-        <section className={styles.exchange}><div className={styles.exchangeHeader}><div><span className={styles.kicker}>GAMEZONE MARKET EXCHANGE</span><h2>Alla marknadsvaror</h2><p>Sök på item, butik eller kategori och hitta lägsta pris direkt.</p></div><div className={styles.formula}><span>Behov</span><b>−</b><span>Lager</span><b>=</b><strong>Brist</strong></div></div>
-        <div className={styles.toolbar}><label className={styles.searchBox}><span>⌕</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Sök item, kategori eller affär..." />{query&&<button type="button" onClick={()=>setQuery("")}>×</button>}</label><select value={sort} onChange={e=>setSort(e.target.value as SortKey)}><option value="shortage">Störst brist</option><option value="buyPrice">Lägsta butikpris</option><option value="sellPrice">Högst marknadspris</option><option value="change24h">Störst prisökning</option><option value="volume24h">Mest handlad</option><option value="name">Namn A–Ö</option></select><button className={`${styles.shortageToggle} ${onlyShortage?styles.active:""}`} onClick={()=>setOnlyShortage(v=>!v)}><i /> Endast brist</button></div>
-        <div className={styles.categoryBar}>{marketCategories.map(item=><button key={item} className={category===item?styles.activeCategory:""} onClick={()=>setCategory(item)}>{item}</button>)}</div><div className={styles.resultMeta}><span><strong>{filteredItems.length}</strong> av {marketItems.length} items</span><span>Klicka på ett item för affärer och prisjämförelse</span></div>
-        <div className={styles.tableWrap}><table><thead><tr><th>Item</th><th>Status</th><th>Bästa köppris</th><th>Billigaste affär</th><th>Affärer</th><th>24h</th><th>Behov / lager</th><th>Brist</th><th>Trend</th></tr></thead><tbody>{filteredItems.map(item=>{const fill=Math.min(100,(item.stock/Math.max(1,item.demand))*100); const best=item.offers[0]; const bestShop=marketShops.find(s=>s.id===best?.shopId); return <tr key={item.id} onClick={()=>setSelectedItem(item)}><td><div className={styles.itemCell}><span className={styles.smallIcon}><ItemIcon itemId={item.minecraftId} itemName={item.name} /></span><div><strong>{item.name}</strong><small>minecraft:{item.minecraftId}</small></div></div></td><td><span className={`${styles.status} ${styles[item.level]}`}>{levelLabel[item.level]}</span></td><td className={styles.coin}>{best?.buyPrice ?? item.buyPrice} C</td><td>{bestShop?<Link className={styles.shopLink} href={`/marketwatch/stores/${bestShop.id}`} onClick={e=>e.stopPropagation()}>{bestShop.name}<small>{bestShop.settlement}</small></Link>:"Ingen butik"}</td><td><span className={styles.offerCount}>{item.offers.length} st</span></td><td><span className={item.change24h>=0?styles.positive:styles.negative}>{item.change24h>=0?"▲":"▼"} {Math.abs(item.change24h)}%</span></td><td><div className={styles.supply}><span>{formatNumber(item.demand)} / {formatNumber(item.stock)}</span><div><i style={{width:`${fill}%`}}/></div></div></td><td className={item.shortage>0?styles.shortage:styles.muted}>{item.shortage>0?`−${formatNumber(item.shortage)}`:"Täckt"}</td><td><Sparkline item={item}/></td></tr>})}</tbody></table></div></section>
-        {selectedItem&&<div className={styles.modalBackdrop} onMouseDown={()=>setSelectedItem(null)}><article className={styles.modal} onMouseDown={e=>e.stopPropagation()}><button className={styles.close} onClick={()=>setSelectedItem(null)}>×</button><div className={styles.modalHero}><div className={styles.largeIcon}><ItemIcon itemId={selectedItem.minecraftId} itemName={selectedItem.name} size={48} /></div><div><span>{selectedItem.category}</span><h2>{selectedItem.name}</h2><div className={`${styles.status} ${styles[selectedItem.level]}`}>{levelLabel[selectedItem.level]}</div></div></div><div className={styles.offerHeader}><div><span>Finns hos</span><strong>{selectedItem.offers.length} affärer</strong></div><Link href={`/marketwatch/compare?item=${selectedItem.id}`}>Öppna full jämförelse</Link></div><div className={styles.offerList}>{selectedItem.offers.map((offer,index)=>{const shop=marketShops.find(s=>s.id===offer.shopId)!; return <Link key={shop.id} href={`/marketwatch/stores/${shop.id}`} className={styles.offerRow}><span className={styles.offerRank}>{index+1}</span><div><strong>{shop.name}</strong><small>{shop.settlement} · {shop.open?"Öppet":"Stängt"}</small></div><span>{offer.stock} i lager</span><b>{offer.buyPrice} C</b></Link>})}</div><div className={styles.modalPrice}><div><span>Marknadens säljpris</span><strong>{selectedItem.sellPrice} Coins</strong></div><div><span>Prisförändring 24h</span><strong className={selectedItem.change24h>=0?styles.positive:styles.negative}>{selectedItem.change24h>=0?"+":""}{selectedItem.change24h}%</strong></div></div></article></div>}
+        <section className={styles.marketPulse}>
+            <div className={styles.pulseHeader}><div><span className={styles.liveBadge}><i /> Data från GameZone Engine</span><h2>Serverns ekonomiska puls</h2><p>Behov, registrerat lager, annonser och genomförda köp. Inget låtsaslager, inga fejkpriser.</p></div></div>
+            <div className={styles.statGrid}>
+                <article><span>Kritiska resurser</span><strong>{critical}</strong><small>kräver omedelbar produktion</small></article>
+                <article><span>Total brist</span><strong>{formatNumber(totalShortage)}</strong><small>behov minus registrerat lager</small></article>
+                <article><span>Sålda enheter 24h</span><strong>{formatNumber(soldUnits)}</strong><small>verkliga genomförda köp</small></article>
+                <article><span>Aktiva annonser</span><strong>{formatNumber(activeListings)}</strong><small>registrerade Shopping Chests</small></article>
+            </div>
+        </section>
+
+        <section className={styles.spotlight}><div className={styles.sectionTitle}><div><span>MARKET INTELLIGENCE</span><h2>Största möjligheterna just nu</h2></div><p>Resurser där verkligt behov tydligast överstiger registrerat lager.</p></div><div className={styles.spotlightGrid}>{spotlight.map((item, index) => <button key={item.id} className={styles.spotlightCard} onClick={() => setSelectedItem(item)}><div className={styles.rank}>0{index + 1}</div><div className={styles.itemIcon}><ItemIcon itemId={item.minecraftId} itemName={item.name} size={48} /></div><div className={styles.spotlightCopy}><span>{item.category}</span><strong>{item.name}</strong><small>{formatNumber(item.shortage)} items i brist</small></div><div className={styles.spotlightPrice}><span>Senaste pris</span><strong>{formatCoins(item.latestUnitPrice)}</strong><small>{item.activeListings} annonser</small></div></button>)}</div></section>
+
+        <section className={styles.exchange}><div className={styles.exchangeHeader}><div><span className={styles.kicker}>GAMEZONE MARKET EXCHANGE</span><h2>Alla marknadsvaror</h2><p>Data räknas av Engine från settlementkrav, registrerade inventory-kistor och handel.</p></div><div className={styles.formula}><span>Behov</span><b>−</b><span>Lager</span><b>=</b><strong>Brist</strong></div></div>
+            <div className={styles.toolbar}><label className={styles.searchBox}><span>⌕</span><input value={query} onChange={event => setQuery(event.target.value)} placeholder="Sök item eller kategori..." />{query && <button type="button" onClick={() => setQuery("")}>×</button>}</label><select value={sort} onChange={event => setSort(event.target.value as SortKey)}><option value="shortage">Störst brist</option><option value="projectedNeed">Störst behov</option><option value="stock">Störst lager</option><option value="latestUnitPrice">Senaste pris</option><option value="soldUnits">Mest såld</option><option value="name">Namn A–Ö</option></select><button className={`${styles.shortageToggle} ${onlyShortage ? styles.active : ""}`} onClick={() => setOnlyShortage(value => !value)}><i /> Endast brist</button></div>
+            <div className={styles.categoryBar}>{categories.map(item => <button key={item} className={category === item ? styles.activeCategory : ""} onClick={() => setCategory(item)}>{item}</button>)}</div>
+            <div className={styles.resultMeta}><span><strong>{filteredItems.length}</strong> av {items.length} items</span><span>Uppgifterna kommer direkt från GameZone Engine</span></div>
+            <div className={styles.tableWrap}><table><thead><tr><th>Item</th><th>Status</th><th>Senaste pris</th><th>Annonser</th><th>Sålt 24h</th><th>Behov / lager</th><th>Brist</th><th>Settlements</th></tr></thead><tbody>{filteredItems.map(item => { const fill = Math.min(100, item.stock / Math.max(1, item.projectedNeed) * 100); return <tr key={item.id} onClick={() => setSelectedItem(item)}><td><div className={styles.itemCell}><span className={styles.smallIcon}><ItemIcon itemId={item.minecraftId} itemName={item.name} /></span><div><strong>{item.name}</strong><small>minecraft:{item.minecraftId}</small></div></div></td><td><span className={`${styles.status} ${styles[item.level]}`}>{levelLabel[item.level]}</span></td><td className={styles.coin}>{formatCoins(item.latestUnitPrice)}</td><td><span className={styles.offerCount}>{item.activeListings} st</span></td><td>{formatNumber(item.soldUnits)}</td><td><div className={styles.supply}><span>{formatNumber(item.projectedNeed)} / {formatNumber(item.stock)}</span><div><i style={{ width: `${fill}%` }} /></div></div></td><td className={item.shortage > 0 ? styles.shortage : styles.muted}>{item.shortage > 0 ? `−${formatNumber(item.shortage)}` : "Täckt"}</td><td>{formatNumber(item.contributingSettlements)}</td></tr>; })}</tbody></table></div>
+        </section>
+
+        {selectedItem && <div className={styles.modalBackdrop} onMouseDown={() => setSelectedItem(null)}><article className={styles.modal} onMouseDown={event => event.stopPropagation()}><button className={styles.close} onClick={() => setSelectedItem(null)}>×</button><div className={styles.modalHero}><div className={styles.largeIcon}><ItemIcon itemId={selectedItem.minecraftId} itemName={selectedItem.name} size={48} /></div><div><span>{selectedItem.category}</span><h2>{selectedItem.name}</h2><div className={`${styles.status} ${styles[selectedItem.level]}`}>{levelLabel[selectedItem.level]}</div></div></div><div className={styles.modalPrice}><div><span>Beräknat behov</span><strong>{formatNumber(selectedItem.projectedNeed)}</strong></div><div><span>Registrerat lager</span><strong>{formatNumber(selectedItem.stock)}</strong></div><div><span>Beräknad brist</span><strong>{formatNumber(selectedItem.shortage)}</strong></div><div><span>Aktiva annonser</span><strong>{formatNumber(selectedItem.activeListings)}</strong></div><div><span>Snittpris 24h</span><strong>{formatCoins(selectedItem.averageUnitPrice)}</strong></div><div><span>Senaste pris</span><strong>{formatCoins(selectedItem.latestUnitPrice)}</strong></div><div><span>Sålda enheter 24h</span><strong>{formatNumber(selectedItem.soldUnits)}</strong></div><div><span>Genomförda köp</span><strong>{formatNumber(selectedItem.transactionCount)}</strong></div></div></article></div>}
     </div>;
 }
