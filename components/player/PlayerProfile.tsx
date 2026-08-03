@@ -37,16 +37,22 @@ function duration(seconds: number) {
   const days = Math.floor(seconds / 86400);
   const hours = Math.floor((seconds % 86400) / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
-  return days > 0 ? `${days} d ${hours} h` : `${hours} h ${minutes} min`;
+  return days > 0 ? `${days} dagar, ${hours} timmar` : `${hours} timmar, ${minutes} minuter`;
 }
 
-function date(value?: string | null) {
+function date(value?: string | null, withTime = true) {
   if (!value) return "Okänt";
-  return new Intl.DateTimeFormat("sv-SE", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value));
+  return new Intl.DateTimeFormat("sv-SE", withTime ? { dateStyle: "medium", timeStyle: "short" } : { dateStyle: "medium" }).format(new Date(value));
 }
 
 function statLabel(key: string) {
   return key.toLowerCase().replaceAll("_", " ").replace(/^./, (letter) => letter.toUpperCase());
+}
+
+function roleLabel(role?: string | null) {
+  if (!role) return "Ingen roll";
+  const labels: Record<string, string> = { KING: "Kung", LORD: "Lord", MEMBER: "Invånare", OWNER: "Ägare" };
+  return labels[role.toUpperCase()] ?? statLabel(role);
 }
 
 export function PlayerProfile({ username }: { username: string }) {
@@ -69,56 +75,83 @@ export function PlayerProfile({ username }: { username: string }) {
     return () => { cancelled = true; };
   }, [username]);
 
-  const stats = useMemo(() => profile?.statistics ?? [], [profile]);
+  const stats = useMemo(() => [...(profile?.statistics ?? [])].sort((a, b) => b.value - a.value), [profile]);
+  const economy = useMemo(() => Object.entries(profile?.economy ?? {}).filter(([, value]) => Number.isFinite(value)), [profile]);
 
-  if (loading) return <main className={styles.state}><div className={styles.loader} /><h1>Hämtar spelarprofil</h1></main>;
-  if (error || !profile) return <main className={styles.state}><span>404</span><h1>Spelaren hittades inte</h1><p>{error}</p><Link href="/leaderboards">Till topplistorna</Link></main>;
+  if (loading) return <main className={styles.state}><div className={styles.loader} /><span>GAMEZONE PROFILREGISTER</span><h1>Hämtar spelarprofil</h1><p>Samlar statistik, tillhörighet och historik.</p></main>;
+  if (error || !profile) return <main className={styles.state}><b>404</b><span>OKÄND SPELARE</span><h1>Spelaren hittades inte</h1><p>{error}</p><Link href="/leaderboards">Till topplistorna</Link></main>;
 
   const { player } = profile;
+  const title = player.productionTitle;
+
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.grid} />
-        <img className={styles.skin} src={`https://mc-heads.net/body/${encodeURIComponent(player.username)}/left`} alt={`${player.username}s Minecraft-skin`} />
-        <div className={styles.heroCopy}>
-          <div className={styles.status}><i data-online={player.online} />{player.online ? "Online nu" : `Senast sedd ${date(player.lastSeenAt)}`}</div>
-          <span className={styles.eyebrow}>GameZone spelarprofil</span>
-          <h1>{player.username}</h1>
-          <p className={styles.title}>{player.productionTitle?.title ?? "Ingen aktiv titel"}</p>
-          <div className={styles.badges}>
-            {player.settlement && <Link href="/settlements">{player.settlement.name}, {player.settlement.levelName}</Link>}
-            {player.company && <span>{player.company.name}</span>}
-            <span>{number.format(player.coins)} coins</span>
+        <div className={styles.heroPattern} />
+        <div className={styles.heroInner}>
+          <Link href="/leaderboards" className={styles.backLink}>← Till topplistorna</Link>
+          <div className={styles.identity}>
+            <div className={styles.avatarFrame}>
+              <div className={styles.avatarGlow} />
+              <img className={styles.skin} src={`https://mc-heads.net/body/${encodeURIComponent(player.username)}/left`} alt={`${player.username}s Minecraft-skin`} />
+            </div>
+            <div className={styles.heroCopy}>
+              <div className={styles.status}><i data-online={player.online} />{player.online ? "Online på servern" : `Senast sedd ${date(player.lastSeenAt)}`}</div>
+              <span className={styles.eyebrow}>Officiell spelarprofil</span>
+              <h1>{player.username}</h1>
+              <p className={styles.subtitle}>{title?.title ?? "Invånare i GameZone"}</p>
+              <div className={styles.tags}>
+                {player.settlement && <span><small>Settlement</small>{player.settlement.name}</span>}
+                {player.company && <span><small>Företag</small>{player.company.name}</span>}
+                {title && <span><small>Produktion</small>{title.category}</span>}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className={styles.summary}>
-        <article><span>Speltid</span><strong>{duration(profile.totalPlayTimeSeconds)}</strong></article>
-        <article><span>Producerade items</span><strong>{number.format(profile.totalProducedItems)}</strong></article>
-        <article><span>Coins</span><strong>{number.format(player.coins)}</strong></article>
-        <article><span>Första besök</span><strong>{date(player.firstJoinAt)}</strong></article>
+      <section className={styles.overview} aria-label="Spelaröversikt">
+        <article><span>Förmögenhet</span><strong>{number.format(player.coins)}</strong><small>coins</small></article>
+        <article><span>Total speltid</span><strong>{duration(profile.totalPlayTimeSeconds)}</strong><small>sedan första besöket</small></article>
+        <article><span>Producerat</span><strong>{number.format(profile.totalProducedItems)}</strong><small>registrerade items</small></article>
+        <article><span>Medlem sedan</span><strong>{date(player.firstJoinAt, false)}</strong><small>första anslutningen</small></article>
       </section>
 
-      <div className={styles.columns}>
-        <section className={styles.card}>
-          <header><span>Statistik</span><h2>Spelarens siffror</h2></header>
-          {stats.length ? <div className={styles.stats}>{stats.map((stat) => <div key={stat.key}><span>{statLabel(stat.key)}</span><strong>{number.format(stat.value)}</strong></div>)}</div> : <p className={styles.empty}>Ingen detaljerad statistik registrerad ännu.</p>}
-        </section>
+      <div className={styles.content}>
+        <div className={styles.mainColumn}>
+          <section className={styles.panel}>
+            <header className={styles.panelHeader}><div><span className={styles.eyebrow}>PRESTATION</span><h2>Spelarens statistik</h2></div><p>Registrerade framsteg och aktivitet från GameZone.</p></header>
+            {stats.length ? <div className={styles.statGrid}>{stats.map((stat, index) => <article key={stat.key} className={styles.statCard}><span className={styles.statRank}>{String(index + 1).padStart(2, "0")}</span><div><small>{statLabel(stat.key)}</small><strong>{number.format(stat.value)}</strong></div></article>)}</div> : <p className={styles.empty}>Ingen detaljerad statistik har registrerats ännu.</p>}
+          </section>
 
-        <aside className={styles.stack}>
-          <section className={styles.card}>
-            <header><span>Identitet</span><h2>Roller och tillhörighet</h2></header>
+          <section className={styles.panel}>
+            <header className={styles.panelHeader}><div><span className={styles.eyebrow}>RESAN</span><h2>Settlementhistorik</h2></div><p>Spelarens tidigare och nuvarande hem i världen.</p></header>
+            {profile.settlementHistory.length ? <div className={styles.timeline}>{profile.settlementHistory.map((entry) => <article key={`${entry.settlementId}-${entry.joinedAt}`} className={styles.timelineItem}><div className={styles.timelineDot} data-active={!entry.leftAt} /><div><div className={styles.timelineTitle}><strong>{entry.settlementName}</strong><span>{entry.leftAt ? "Tidigare" : "Nuvarande"}</span></div><p>{entry.settlementLevelName}, {roleLabel(entry.role)}</p><small>{date(entry.joinedAt)} till {entry.leftAt ? date(entry.leftAt) : "idag"}</small></div></article>)}</div> : <p className={styles.empty}>Ingen settlementhistorik ännu.</p>}
+          </section>
+        </div>
+
+        <aside className={styles.sidebar}>
+          <section className={styles.panel}>
+            <header className={styles.compactHeader}><span className={styles.eyebrow}>IDENTITET</span><h2>Roller och tillhörighet</h2></header>
             <dl className={styles.facts}>
-              <div><dt>Titel</dt><dd>{player.productionTitle?.title ?? "Ingen"}</dd></div>
-              <div><dt>Settlement</dt><dd>{player.settlement?.name ?? "Inget"}</dd></div>
-              <div><dt>Settlement-roll</dt><dd>{player.settlement?.role ?? "Ingen"}</dd></div>
+              <div><dt>Aktiv titel</dt><dd>{title?.title ?? "Ingen"}</dd></div>
+              <div><dt>Titelnivå</dt><dd>{title ? `Nivå ${title.level}` : "Ingen"}</dd></div>
+              <div><dt>Produktionsbonus</dt><dd>{title ? `+${title.productionBonusPercent}%` : "0%"}</dd></div>
+              <div><dt>Settlement</dt><dd>{player.settlement?.name ?? "Fristående"}</dd></div>
+              <div><dt>Roll</dt><dd>{roleLabel(player.settlement?.role)}</dd></div>
               <div><dt>Företag</dt><dd>{player.company?.name ?? "Inget"}</dd></div>
             </dl>
           </section>
-          <section className={styles.card}>
-            <header><span>Historik</span><h2>Settlements</h2></header>
-            {profile.settlementHistory.length ? <div className={styles.history}>{profile.settlementHistory.map((entry) => <div key={`${entry.settlementId}-${entry.joinedAt}`}><strong>{entry.settlementName}</strong><span>{entry.settlementLevelName}, {entry.role}</span><small>{date(entry.joinedAt)}{entry.leftAt ? ` till ${date(entry.leftAt)}` : " till idag"}</small></div>)}</div> : <p className={styles.empty}>Ingen settlementhistorik ännu.</p>}
+
+          {economy.length > 0 && <section className={styles.panel}>
+            <header className={styles.compactHeader}><span className={styles.eyebrow}>EKONOMI</span><h2>Ekonomisk aktivitet</h2></header>
+            <div className={styles.economyList}>{economy.map(([key, value]) => <div key={key}><span>{statLabel(key)}</span><strong>{number.format(value)}</strong></div>)}</div>
+          </section>}
+
+          <section className={styles.profileStamp}>
+            <span>GAMEZONE CITIZEN</span>
+            <strong>{player.username}</strong>
+            <small>UUID {player.minecraftUuid.slice(0, 8).toUpperCase()}</small>
           </section>
         </aside>
       </div>
