@@ -32,7 +32,7 @@ function formatValue(value: number) {
   return new Intl.NumberFormat("sv-SE").format(value);
 }
 
-function MiniBoard({ title, eyebrow, icon, entries, suffix, tone }: { title: string; eyebrow: string; icon: IconName; entries: LeaderboardEntry[]; suffix: string; tone: "coins" | "residents" | "sales" }) {
+function MiniBoard({ title, eyebrow, icon, entries, suffix, tone, linkCompanies = false }: { title: string; eyebrow: string; icon: IconName; entries: LeaderboardEntry[]; suffix: string; tone: "coins" | "residents" | "sales"; linkCompanies?: boolean }) {
   const leader = entries[0];
   const runnerUp = entries[1];
   const lead = leader && runnerUp ? Math.max(0, leader.value - runnerUp.value) : null;
@@ -48,7 +48,7 @@ function MiniBoard({ title, eyebrow, icon, entries, suffix, tone }: { title: str
     <ol>
       {[0,1,2].map((index) => {
         const entry = entries[index];
-        return <li key={index} className={index === 0 ? styles.firstPlace : undefined}>
+        const row = <li className={index === 0 ? styles.firstPlace : undefined}>
           <span className={`${styles.rank} ${styles[`rank${index + 1}`]}`}>
             {index === 0 ? <Icon name="crown"/> : index + 1}
           </span>
@@ -59,6 +59,7 @@ function MiniBoard({ title, eyebrow, icon, entries, suffix, tone }: { title: str
           </span>
           <b>{entry ? `${formatValue(entry.value)} ${suffix}` : "–"}</b>
         </li>;
+        return entry && linkCompanies && entry.entityId ? <Link className={styles.boardRowLink} href={`/companies/${encodeURIComponent(entry.entityId)}`} key={entry.entityId}>{row}</Link> : <span className={styles.boardRowLink} key={entry?.entityId ?? index}>{row}</span>;
       })}
     </ol>
   </article>;
@@ -104,7 +105,7 @@ export async function HomeDashboard() {
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
       <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
-      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>Alla system på ett ställe</small></Link>
+      <Link href="/companies" className={styles.quickCard}><Icon name="sales"/><strong>Företag</strong><small>Se sortiment och försäljningshistorik</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
@@ -137,7 +138,7 @@ export async function HomeDashboard() {
       <div className={styles.leaderboardGrid}>
         <MiniBoard eyebrow="Förmögenhet" title="Rikaste spelare" icon="coin" entries={richest} suffix="Coins" tone="coins"/>
         <MiniBoard eyebrow="Settlement" title="Flest invånare" icon="players" entries={residents} suffix="inv." tone="residents"/>
-        <MiniBoard eyebrow="Handel" title="Mest försäljning" icon="sales" entries={sales} suffix="Coins" tone="sales"/>
+        <MiniBoard eyebrow="Handel" title="Mest försäljning" icon="sales" entries={sales} suffix="Coins" tone="sales" linkCompanies/>
       </div>
     </section>
 

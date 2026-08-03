@@ -7,6 +7,7 @@ export type ServerStatus = {
 
 export type LeaderboardEntry = {
   rank: number;
+  entityId?: string;
   displayName: string;
   value: number;
   detail?: string | null;

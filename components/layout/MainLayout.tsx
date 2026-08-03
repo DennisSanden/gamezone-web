@@ -17,7 +17,7 @@ const navigationItems = [
     { label: "MarketWatch", href: "/marketwatch" },
     { label: "Karta", href: "/map" },
     { label: "Settlements", href: "/settlements" },
-    { label: "Companies", href: "/companies" },
+    { label: "Företag", href: "/companies" },
     { label: "Live", href: "/live" },
 ];
 
