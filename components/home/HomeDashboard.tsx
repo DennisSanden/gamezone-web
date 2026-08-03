@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { getApprovedLiveStreams } from "@/lib/twitch";
-import { getFeaturedStreamer } from "@/lib/streamers";
+import { APPROVED_STREAMERS } from "@/lib/streamers";
 import { getLeaderboard, getServerStatus, type LeaderboardEntry } from "@/lib/home-data";
 import styles from "./HomeDashboard.module.css";
 
@@ -73,8 +73,7 @@ export async function HomeDashboard() {
     getLeaderboard("settlement-members"),
     getLeaderboard("company-sales"),
   ]);
-  const creator = getFeaturedStreamer();
-  const stream = liveStreams.find((item) => item.login === creator.twitchLogin);
+  const streamsByLogin = new Map(liveStreams.map((item) => [item.login, item]));
 
   return <div className={styles.page}>
     <section className={styles.hero}>
@@ -110,15 +109,38 @@ export async function HomeDashboard() {
     </section>
 
     <section className={styles.dashboardGrid}>
-      <article className={styles.panel}>
-        <div className={styles.panelHeader}><h2><span className={stream ? styles.liveDot : styles.offlineDot}/> Live på GameZone</h2><a href={creator.channelUrl}>Twitch →</a></div>
-        <a className={styles.streamCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
-          <div className={styles.streamPreview} style={stream ? {backgroundImage:`url(${stream.thumbnailUrl})`} : undefined}>
-            <span className={stream ? styles.liveBadge : styles.offlineBadge}>{stream ? "LIVE" : "OFFLINE"}</span>
-            <div className={styles.streamOverlay}><strong>{stream ? stream.title : "Streamen är offline"}</strong><small>{stream ? `${stream.viewerCount} tittare · ${stream.gameName}` : "Nästa äventyr på GameZone väntar"}</small></div>
-          </div>
-          <div className={styles.streamFooter}><span className={styles.avatar}>{creator.initials}</span><span><strong>{creator.displayName}</strong><small>Nästa stream visas här</small></span><b>Följ</b></div>
-        </a>
+      <article className={`${styles.panel} ${styles.creatorPanel}`}>
+        <div className={styles.panelHeader}>
+          <h2>Följ servern via våra creators</h2>
+          <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli creator →</a>
+        </div>
+        <div className={styles.creatorGrid}>
+          {APPROVED_STREAMERS.slice(0, 3).map((creator) => {
+            const stream = streamsByLogin.get(creator.twitchLogin);
+            return <a key={creator.twitchLogin} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
+              <div className={styles.creatorPreview} style={stream ? { backgroundImage: `url(${stream.thumbnailUrl})` } : undefined}>
+                <span className={stream ? styles.liveBadge : styles.offlineBadge}>{stream ? "LIVE" : "CREATOR"}</span>
+                <span className={styles.creatorAvatar}>{creator.initials}</span>
+              </div>
+              <div className={styles.creatorBody}>
+                <strong>{creator.displayName}</strong>
+                <small>{stream ? `${formatValue(stream.viewerCount)} tittare just nu` : "GameZone Creator"}</small>
+                <span>{stream ? "Titta nu" : "Besök kanalen"} →</span>
+              </div>
+            </a>;
+          })}
+
+          {Array.from({ length: Math.max(0, 3 - APPROVED_STREAMERS.length) }).map((_, index) =>
+            <a key={`creator-slot-${index}`} className={`${styles.creatorCard} ${styles.creatorInviteCard}`} href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">
+              <div className={styles.creatorInviteIcon}>+</div>
+              <div className={styles.creatorBody}>
+                <strong>Skapar du innehåll?</strong>
+                <small>Streama eller gör videos från GameZone</small>
+                <span>Ansök som creator →</span>
+              </div>
+            </a>
+          )}
+        </div>
       </article>
 
       <article className={styles.panel}>
