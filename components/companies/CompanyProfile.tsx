@@ -48,7 +48,7 @@ export function CompanyProfile({ companyId }: { companyId: string }) {
     <main className={styles.profileContent}>
       <section className={styles.marketSection}>
         <div className={styles.sectionHeading}><div><span className={styles.eyebrow}>BUTIKEN</span><h2>Aktuellt sortiment</h2></div><span>{sortedActive.length} varor</span></div>
-        <div className={styles.productGrid}>{sortedActive.map((item, index) => <article className={styles.productCard} key={`${item.itemKey}-${index}`}><div className={styles.productIcon}>◆</div><div><h3>{itemName(item)}</h3><p>{number.format(item.quantity ?? 0)} i lager</p></div><strong>{number.format(item.unitPrice ?? 0)} Coins</strong></article>)}{sortedActive.length === 0 && <div className={styles.emptyBlock}>Företaget har inget publicerat sortiment just nu.</div>}</div>
+        <div className={styles.productGrid}>{sortedActive.map((item, index) => <article className={styles.productCard} key={`${item.itemKey}-${index}`}><div className={styles.productIcon}>◆</div><div><h3>{itemName(item)}</h3><p>{number.format(item.stockItems ?? 0)} i lager</p></div><strong>{number.format(item.unitPrice ?? 0)} Coins</strong></article>)}{sortedActive.length === 0 && <div className={styles.emptyBlock}>Företaget har inget publicerat sortiment just nu.</div>}</div>
       </section>
 
       <section className={styles.marketSection}>

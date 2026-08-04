@@ -1,75 +1,42 @@
 ---
 title: "Monument"
-description: "En logisk specialbyggnad som ytterligare stärker settlementets permanenta grundbonus."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Monument."
 category: "Byggnader"
-order: 11
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+order: 10
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Monument"
 infobox:
-  typ: "Logisk specialbyggnad"
-  kategori: "Grundbonus"
-  nivåkrav: "Huvudstad – nivå 10"
-  kostnad: "160 000 Coins"
-  effekt: "+10 % Grundbonus"
+  typ: "Permanent byggnadslicens"
+  kategori: "Administration"
+  nivåkrav: "Settlementnivå 10"
+  kostnad: "400 000 Coins"
 ---
 
-## Översikt
+## Vad är Monument?
 
-**Monument** är settlementets andra byggnad som förstärker den permanenta grundbonusen.
+**Monument** är en permanent licens som låses upp genom settlementmenyn.
 
-När Monumentet färdigställs ökar settlementets grundbonus med ytterligare **+10 %**, vilket innebär att den totala grundbonusen blir **+35 % Coins**.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Monumentet påverkar endast settlementets permanenta grundbonus och ger ingen separat bonus till en enskild produktionskategori.
+> Byggnaden kräver inga material. Kostnaden på **400 000 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Effekt
+## Krav
 
-Monumentet ger:
+- Settlementnivå: **10 eller högre**
+- Kostnad: **400 000 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-- **+10 % Grundbonus**
+## Funktion
 
-Efter aktivering blir settlementets permanenta grundbonus:
+Ger +20 % Coins från all godkänd produktion inom settlementets kategori.
 
-- **+35 % Coins**
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Bonusen gäller samtliga produktionskategorier som omfattas av settlementets grundbonus enligt GameZone Engine.
+## Fysisk byggnad
 
-## Upplåsning
-
-Monument låses upp på:
-
-- **Settlementnivå:** Huvudstad
-- **Nivå:** 10
-
-Byggnaden aktiveras först när samtliga byggkrav har uppfyllts.
-
-## Byggkostnad
-
-För att färdigställa Monumentet krävs:
-
-- **160 000 Coins**
-
-Coins betalas från settlementets stadskassa.
-
-
-## Registrering
-
-Monumentet är en **logisk byggnad**.
-
-När registreringen är genomförd aktiveras bonusen automatiskt i Settlement Engine.
-
-Ingen fysisk position registreras.
-
-## Nedgradering
-
-Om settlementet faller under nivå 10 blir Monumentet inaktivt.
-
-När settlementet åter når Huvudstad aktiveras Monumentet automatiskt igen.
-
-Coins och material behöver aldrig betalas en andra gång.
-
-## Sammanfattning
-
-Monumentet kostar **160 000 Coins** och ökar settlementets permanenta grundbonus från **+25 %** till **+35 %**.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

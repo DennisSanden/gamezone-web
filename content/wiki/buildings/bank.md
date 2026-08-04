@@ -1,79 +1,42 @@
 ---
 title: "Bank"
-description: "En logisk specialbyggnad som låser upp settlementets bankfunktioner och ekonomiska tjänster."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Bank."
 category: "Byggnader"
-order: 7
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+order: 4
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Bank"
 infobox:
-  typ: "Logisk specialbyggnad"
-  kategori: "Ekonomi"
-  nivåkrav: "Bosättning – nivå 4"
-  kostnad: "10 000 Coins"
-  effekt: "Låser upp Banking System"
+  typ: "Permanent byggnadslicens"
+  kategori: "Administration"
+  nivåkrav: "Settlementnivå 4"
+  kostnad: "25 000 Coins"
 ---
 
-## Översikt
+## Vad är Bank?
 
-**Bank** är settlementets ekonomibyggnad.
+**Bank** är en permanent licens som låses upp genom settlementmenyn.
 
-När banken har färdigställts aktiveras de bankfunktioner som finns definierade i GameZone Engine och framtida ekonomisystem kan användas av settlementet.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Banken är en logisk byggnad och har ingen fysisk registrerad position i världen.
+> Byggnaden kräver inga material. Kostnaden på **25 000 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Effekt
+## Krav
 
-Banken låser upp:
+- Settlementnivå: **4 eller högre**
+- Kostnad: **25 000 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-- Banking System
-- settlementets bankfunktioner
-- framtida ekonomiska tjänster enligt GameZone Engine
+## Funktion
 
-Byggnaden ger ingen produktionsbonus.
+Låser upp utökad ekonomisk statistik och transaktionshistorik. Stadskassan finns redan från start.
 
-## Upplåsning
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Bank låses upp på:
+## Fysisk byggnad
 
-- **Settlementnivå:** Bosättning
-- **Nivå:** 4
-
-Att byggnaden är upplåst innebär inte att den automatiskt är byggd.
-
-Settlementet måste först betala byggkostnaden och uppfylla samtliga byggkrav.
-
-## Byggkostnad
-
-För att färdigställa Banken krävs:
-
-- **10 000 Coins**
-
-Coins betalas från settlementets stadskassa.
-
-
-## Registrering
-
-Banken registreras direkt i Settlement Engine när:
-
-- rätt settlementnivå har uppnåtts
-- byggkostnaden har betalats
-- samtliga byggkrav har uppfyllts
-
-Eftersom Banken är en logisk byggnad registreras ingen fysisk position.
-
-## Nedgradering
-
-Om settlementet faller under nivå 4 blir Banken inaktiv.
-
-När settlementet åter når Bosättning aktiveras banken automatiskt igen.
-
-Coins och material behöver aldrig betalas en andra gång.
-
-## Sammanfattning
-
-Banken är settlementets ekonomibyggnad.
-
-Den kostar **10 000 Coins** och låser upp settlementets bankfunktioner enligt GameZone Engine.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

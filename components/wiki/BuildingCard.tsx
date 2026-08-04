@@ -49,51 +49,6 @@ export default function BuildingCard({
                 </div>
             </div>
 
-            {building.materials.length > 0 && (
-                <div className={styles.materialSection}>
-                    <div className={styles.materialHeader}>
-                        <span>Material</span>
-                        <span>Settlement Inventory</span>
-                    </div>
-
-                    <div className={styles.materialGrid}>
-                        {building.materials.map((material) => (
-                            <div
-                                key={material.id}
-                                className={styles.materialItem}
-                            >
-                                <div className={styles.materialIdentity}>
-                                    <span
-                                        className={styles.materialEmoji}
-                                        aria-hidden="true"
-                                    >
-                                        {material.icon}
-                                    </span>
-
-                                    <span
-                                        className={styles.materialName}
-                                    >
-                                        {material.name}
-                                    </span>
-                                </div>
-
-                                <strong
-                                    className={styles.materialAmount}
-                                >
-                                    ×{material.amount}
-                                </strong>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            {building.materialNote && (
-                <div className={styles.materialNote}>
-                    {building.materialNote}
-                </div>
-            )}
-
             {building.href && (
                 <div className={styles.footer}>
                     <span>Läs mer om byggnaden</span>

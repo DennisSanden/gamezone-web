@@ -1,22 +1,22 @@
 ---
-title: "Stenhuggeri"
-description: "Nivåkrav  Coin-kostnad och faktisk funktion för Stenhuggeri."
+title: "Gruva"
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Gruva."
 category: "Byggnader"
 order: 2
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"
-infoboxTitle: "Stenhuggeri"
+infoboxTitle: "Gruva"
 infobox:
   typ: "Permanent byggnadslicens"
-  kategori: "Byggmaterial"
+  kategori: "Gruvdrift"
   nivåkrav: "Settlementnivå 2"
   kostnad: "2 500 Coins"
 ---
 
-## Vad är Stenhuggeri?
+## Vad är Gruva?
 
-**Stenhuggeri** är en permanent licens som låses upp genom settlementmenyn.
+**Gruva** är en permanent licens som låses upp genom settlementmenyn.
 
 Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
@@ -32,7 +32,7 @@ infobox:
 
 ## Funktion
 
-Ger +5 % Coins från godkänd produktion inom Byggmaterial.
+Ger +5 % Coins från godkänd produktion inom Gruvdrift.
 
 > [!NOTE]
 > Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.

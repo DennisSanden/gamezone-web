@@ -1,97 +1,42 @@
 ---
 title: "Fiskebrygga"
-description: "En specialbyggnad för fiskeinriktade settlements som ger bonus på registrerad produktion från fiske."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Fiskebrygga."
 category: "Byggnader"
 order: 2
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Fiskebrygga"
 infobox:
-  typ: "Specialbyggnad"
+  typ: "Permanent byggnadslicens"
   kategori: "Fiske"
-  nivåkrav: "Läger – nivå 2"
+  nivåkrav: "Settlementnivå 2"
   kostnad: "2 500 Coins"
-  effekt: "+5 % Coins från Fiske"
-relatedArticles:
-  - category: "settlements"
-    article: "lager"
-    title: "Läger"
-    description: "Settlementnivån där Fiskebrygga låses upp."
-  - category: "buildings"
-    article: "ladugard"
-    title: "Ladugård"
-    description: "Specialbyggnaden för settlement med inriktningen Boskap."
-  - category: "buildings"
-    article: "sagverk"
-    title: "Sågverk"
-    description: "Specialbyggnaden för settlement med inriktningen Skogsbruk."
 ---
 
-## Översikt
+## Vad är Fiskebrygga?
 
-**Fiskebrygga** är en specialbyggnad för settlements med inriktningen **Fiske**.
+**Fiskebrygga** är en permanent licens som låses upp genom settlementmenyn.
 
-Byggnaden låses upp när settlementet når nivån **Läger**, nivå 2, och förstärker den registrerade produktionen från fiske.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
-När Fiskebryggan är färdigställd och aktiv får settlementets aktiva medlemmar **+5 % Coins** från produktion som registreras i Fishing Registry.
+> [!IMPORTANT]
+> Byggnaden kräver inga material. Kostnaden på **2 500 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-> [!IMPORTANT] Fiskebryggan kan endast användas av ett settlement med inriktningen Fiske.
+## Krav
 
-## Effekt
+- Settlementnivå: **2 eller högre**
+- Kostnad: **2 500 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-Fiskebryggan ger:
+## Funktion
 
-- **+5 % Coins från Fiske**
+Ger +5 % Coins från godkänd produktion inom Fiske.
 
-Bonusen gäller hela settlementet men endast för aktiva medlemmar.
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Den läggs ovanpå settlementets permanenta grundbonus och andra aktiva produktionsbonusar.
+## Fysisk byggnad
 
-Endast manuell och reward-eligible produktion som godkänns av Fishing Registry omfattas.
-
-## Upplåsning
-
-Fiskebrygga låses upp på:
-
-- **Settlementnivå:** Läger
-- **Nivå:** 2
-- **Inriktning:** Fiske
-
-Att byggnaden är upplåst innebär inte att den automatiskt är byggd.
-
-
-## Byggkostnad
-
-För att färdigställa Fiskebryggan krävs:
-
-- **2 500 Coins**
-
-Coins betalas från settlementets stadskassa enligt byggnadssystemets regler.
-
-
-## Placering och registrering
-
-Fiskebryggan måste placeras inom settlementets territorium.
-
-När byggnaden registreras kopplas den permanent till settlementet och dess position sparas av Settlement Engine.
-
-Byggnaden blir aktiv när:
-
-- settlementet har rätt inriktning
-- settlementet uppfyller nivåkravet
-- byggkostnaden är betald
-- byggnaden har registrerats korrekt
-
-## Nedgradering
-
-En nedgradering förstör aldrig Fiskebryggan och tar inte bort den permanenta byggnadsupplåsningen.
-
-Om settlementet faller under nivå 2 blir byggnaden inaktiv och ger ingen bonus.
-
-
-## Sammanfattning
-
-Fiskebrygga är fiskeinriktningens första specialbyggnad.
-
-Den kostar **2 500 Coins**, kräver de listade materialen och ger ett aktivt settlement **+5 % Coins från Fiske**.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

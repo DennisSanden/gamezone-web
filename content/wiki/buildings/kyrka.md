@@ -1,75 +1,42 @@
 ---
 title: "Kyrka"
-description: "En logisk specialbyggnad som stärker settlementets grundbonus."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Kyrka."
 category: "Byggnader"
-order: 9
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+order: 6
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Kyrka"
 infobox:
-  typ: "Logisk specialbyggnad"
-  kategori: "Grundbonus"
-  nivåkrav: "Köping – nivå 6"
-  kostnad: "40 000 Coins"
-  effekt: "+10 % Grundbonus"
+  typ: "Permanent byggnadslicens"
+  kategori: "Administration"
+  nivåkrav: "Settlementnivå 6"
+  kostnad: "75 000 Coins"
 ---
 
-## Översikt
+## Vad är Kyrka?
 
-**Kyrka** är en logisk specialbyggnad som stärker settlementets permanenta grundbonus.
+**Kyrka** är en permanent licens som låses upp genom settlementmenyn.
 
-När byggnaden har färdigställts ökar settlementets grundbonus från **+15 %** till **+25 %** inom samtliga produktionskategorier som omfattas av settlementets grundbonus.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Kyrkan påverkar settlementets grundbonus och ger ingen separat produktionsbonus för en enskild kategori.
+> Byggnaden kräver inga material. Kostnaden på **75 000 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Effekt
+## Krav
 
-Kyrkan ger:
+- Settlementnivå: **6 eller högre**
+- Kostnad: **75 000 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-- **+10 % Grundbonus**
+## Funktion
 
-Efter aktivering blir settlementets totala grundbonus:
+Ger +20 % Coins från all godkänd produktion inom settlementets kategori.
 
-- **+25 % Coins**
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Bonusen gäller samtliga produktionskategorier som omfattas av settlementets grundbonus enligt GameZone Engine.
+## Fysisk byggnad
 
-## Upplåsning
-
-Kyrkan låses upp på:
-
-- **Settlementnivå:** Köping
-- **Nivå:** 6
-
-Byggnaden aktiveras först när samtliga byggkrav har uppfyllts.
-
-## Byggkostnad
-
-För att färdigställa Kyrkan krävs:
-
-- **40 000 Coins**
-
-Coins betalas från settlementets stadskassa.
-
-
-## Registrering
-
-Kyrkan är en **logisk byggnad**.
-
-När registreringen är genomförd aktiveras bonusen automatiskt i Settlement Engine.
-
-Ingen fysisk position registreras.
-
-## Nedgradering
-
-Om settlementet faller under nivå 6 blir Kyrkan inaktiv.
-
-När settlementet åter når Köping aktiveras bonusen automatiskt igen.
-
-Coins och material behöver aldrig betalas en andra gång.
-
-## Sammanfattning
-
-Kyrkan kostar **40 000 Coins** och ökar settlementets permanenta grundbonus från **+15 %** till **+25 %**.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

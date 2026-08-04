@@ -1,77 +1,42 @@
 ---
 title: "Laboratorium"
-description: "En logisk specialbyggnad som stärker settlementets alkemiproduktion."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Laboratorium."
 category: "Byggnader"
-order: 8
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+order: 5
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Laboratorium"
 infobox:
-  typ: "Logisk specialbyggnad"
+  typ: "Permanent byggnadslicens"
   kategori: "Alkemi"
-  nivåkrav: "Samhälle – nivå 5"
-  kostnad: "20 000 Coins"
-  effekt: "+5 % Coins från Alkemi"
+  nivåkrav: "Settlementnivå 5"
+  kostnad: "2 500 Coins"
 ---
 
-## Översikt
+## Vad är Laboratorium?
 
-**Laboratorium** är settlementets byggnad för **Alkemi**.
+**Laboratorium** är en permanent licens som låses upp genom settlementmenyn.
 
-När byggnaden har färdigställts aktiveras en permanent bonus på **+5 % Coins** från registrerad alkemiproduktion.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Alkemi blir tillgängligt från settlementnivå 5. Innan dess kan ingen alkemiproduktion registreras.
+> Byggnaden kräver inga material. Kostnaden på **2 500 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Effekt
+## Krav
 
-Laboratoriet ger:
+- Settlementnivå: **5 eller högre**
+- Kostnad: **2 500 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-- **+5 % Coins från Alkemi**
+## Funktion
 
-Bonusen gäller:
+Ger +5 % Coins från godkänd produktion inom Alkemi.
 
-- aktiva medlemmar
-- registrerad alkemiproduktion
-- Coin-belönad produktion enligt Alchemy Registry
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Bonusen staplas med settlementets övriga produktionsbonusar.
+## Fysisk byggnad
 
-## Upplåsning
-
-Laboratorium låses upp på:
-
-- **Settlementnivå:** Samhälle
-- **Nivå:** 5
-
-Byggnaden aktiveras först när samtliga krav är uppfyllda.
-
-## Byggkostnad
-
-För att färdigställa Laboratoriet krävs:
-
-- **20 000 Coins**
-
-Coins betalas från settlementets stadskassa.
-
-
-## Registrering
-
-Laboratoriet är en **logisk byggnad**.
-
-När byggnaden registreras i Settlement Engine aktiveras bonusen automatiskt.
-
-Ingen fysisk position registreras.
-
-## Nedgradering
-
-Om settlementet faller under nivå 5 blir Laboratoriet inaktivt.
-
-När settlementet åter når Samhälle aktiveras byggnaden automatiskt igen.
-
-Coins och material behöver aldrig betalas en andra gång.
-
-## Sammanfattning
-
-Laboratoriet kostar **20 000 Coins** och ger settlementet **+5 % Coins från Alkemi**.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

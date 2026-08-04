@@ -46,8 +46,7 @@ export default function SettlementBuildingsPanel({
                     <h3>Byggnader på {levelName}</h3>
 
                     <p>
-                        Byggnadernas kostnader och materialkrav är
-                        separata från settlementuppgraderingen.
+                        Byggnader låses upp som permanenta licenser med Coins från stadskassan. Inga material krävs.
                     </p>
                 </div>
 
@@ -76,11 +75,7 @@ export default function SettlementBuildingsPanel({
                         />
 
                         <p>
-                            Varje byggnad måste låsas upp permanent
-                            innan dess bonus eller funktion blir aktiv.
-                            Samtliga byggnader på den aktuella nivån
-                            måste vara upplåsta innan settlementet kan
-                            avancera vidare.
+                            Varje byggnad är en upplåsningsbar licens. När licensen köps aktiveras byggnadens funktion permanent. Inga fysiska byggmaterial lämnas in.
                         </p>
                     </div>
                 </>

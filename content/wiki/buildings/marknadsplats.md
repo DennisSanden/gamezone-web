@@ -1,39 +1,42 @@
 ---
 title: "Marknadsplats"
-description: "En logisk specialbyggnad för settlementets handel och marknadsfunktioner."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Marknadsplats."
 category: "Byggnader"
-order: 10
-version: "2.0"
-engineVersion: "Settlement Registry"
+order: 8
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"
 infoboxTitle: "Marknadsplats"
 infobox:
-  typ: "Logisk specialbyggnad"
-  kategori: "Handel"
-  nivåkrav: "Handelsstad – nivå 8"
-  kostnad: "80 000 Coins"
-  effekt: "Låser upp marknadsfunktioner"
+  typ: "Permanent byggnadslicens"
+  kategori: "Administration"
+  nivåkrav: "Settlementnivå 8"
+  kostnad: "150 000 Coins"
 ---
 
-## Översikt
+## Vad är Marknadsplats?
 
-**Marknadsplats** är settlementets handelsbyggnad. Den representerar settlementets utvecklade handelsinfrastruktur och används för marknadsrelaterade funktioner.
+**Marknadsplats** är en permanent licens som låses upp genom settlementmenyn.
+
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Marknadsplatsens effekt är begränsad till settlementets marknadsfunktioner.
+> Byggnaden kräver inga material. Kostnaden på **150 000 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Upplåsning
+## Krav
 
-Marknadsplats låses upp på settlementnivå 8, Handelsstad.
+- Settlementnivå: **8 eller högre**
+- Kostnad: **150 000 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-## Byggkostnad
+## Funktion
 
-Marknadsplatsen kostar **80 000 Coins**. Coins betalas från settlementets stadskassa.
+Permanent licens. Ingen aktiv spelbonus kunde bekräftas i den granskade koden.
 
-## Server TAX
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Företagens handel beskattas genom Server TAX. Skatten påverkas av settlementets nivå och företagets shopping license, inte av Marknadsplatsen.
+## Fysisk byggnad
 
-## Sammanfattning
-
-Marknadsplatsen är en handelsbyggnad som låses upp på nivå 8 och representerar settlementets marknadsfunktioner.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

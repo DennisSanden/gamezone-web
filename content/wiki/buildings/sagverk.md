@@ -1,64 +1,42 @@
-Bibliotek
-/
-sagverk-korrigerad.md
-
-
 ---
 title: "Sågverk"
-description: "En specialbyggnad för skogsbruksinriktade settlements som ger bonus på registrerad produktion från skogsbruk."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Sågverk."
 category: "Byggnader"
-order: 3
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+order: 2
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Sågverk"
 infobox:
-typ: "Specialbyggnad"
-kategori: "Skogsbruk"
-nivåkrav: "Läger – nivå 2"
-kostnad: "2 500 Coins"
-effekt: "+5 % Coins från Skogsbruk"
+  typ: "Permanent byggnadslicens"
+  kategori: "Skogsbruk"
+  nivåkrav: "Settlementnivå 2"
+  kostnad: "2 500 Coins"
 ---
 
-## Översikt
+## Vad är Sågverk?
 
-**Sågverk** är specialbyggnaden för settlements med inriktningen **Skogsbruk**.
+**Sågverk** är en permanent licens som låses upp genom settlementmenyn.
 
-När byggnaden registreras och aktiveras får samtliga aktiva medlemmar **+5 % Coins** från registrerad produktion i Forestry Registry.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Sågverket kan endast byggas av settlements med inriktningen Skogsbruk.
+> Byggnaden kräver inga material. Kostnaden på **2 500 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Effekt
+## Krav
 
-- +5 % Coins från Skogsbruk.
-- Bonusen gäller hela settlementet.
-- Staplas med settlementbonus och övriga produktionsbonusar.
-- Gäller endast godkänd produktion enligt Forestry Registry.
+- Settlementnivå: **2 eller högre**
+- Kostnad: **2 500 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-## Upplåsning
+## Funktion
 
-- Settlementnivå: **Läger**
-- Nivå: **2**
-- Inriktning: **Skogsbruk**
+Ger +5 % Coins från godkänd produktion inom Skogsbruk.
 
-Byggnaden måste fortfarande finansieras, byggas och registreras innan bonusen aktiveras.
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-## Byggkostnad
+## Fysisk byggnad
 
-- **2 500 Coins**
-
-
-## Placering och registrering
-
-Sågverket måste placeras inom settlementets territorium och registreras i Settlement Engine innan byggnaden blir aktiv.
-
-## Nedgradering
-
-Vid nedgradering förstörs aldrig byggnaden.
-
-Om settlementet faller under nivå 2 blir Sågverket inaktivt tills settlementet åter når rätt nivå.
-
-## Sammanfattning
-
-Sågverket kostar **2 500 Coins** och ger ett aktivt settlement **+5 % Coins från Skogsbruk**.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.

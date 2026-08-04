@@ -1,130 +1,42 @@
 ---
 title: "Lada"
-description: "En fysisk skyddsbyggnad för jordbruksinriktade settlements som ger produktionsbonus och en extra skyddszon."
+description: "Nivåkrav  Coin-kostnad och faktisk funktion för Lada."
 category: "Byggnader"
-order: 5
-version: "1.0"
-engineVersion: "Building Registry"
-updatedAt: "2026-07-19"
+order: 2
+version: "2.1"
+engineVersion: "GameZoneEngine 1.0.0-RC1"
+updatedAt: "2026-08-04"
 infoboxTitle: "Lada"
 infobox:
-  typ: "Fysisk skyddsbyggnad"
+  typ: "Permanent byggnadslicens"
   kategori: "Jordbruk"
-  nivåkrav: "Läger – nivå 2"
+  nivåkrav: "Settlementnivå 2"
   kostnad: "2 500 Coins"
-  effekt: "+5 % Coins från Jordbruk"
 ---
 
-## Översikt
+## Vad är Lada?
 
-**Lada** är den officiella produktionsbyggnaden för settlements med inriktningen **Jordbruk**.
+**Lada** är en permanent licens som låses upp genom settlementmenyn.
 
-Till skillnad från de logiska byggnaderna är Ladan en **fysisk skyddsbyggnad**. Den har därför både en permanent byggnadsupplåsning och en registrerad position i spelvärlden.
-
-När Ladan är aktiv får settlementets aktiva medlemmar **+5 % Coins** från godkänd jordbruksproduktion. Den registrerade positionen fungerar dessutom som centrum för en extra Grief Protection-zon.
+Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
 
 > [!IMPORTANT]
-> Ladan kan endast användas av ett settlement med inriktningen Jordbruk.
+> Byggnaden kräver inga material. Kostnaden på **2 500 Coins** dras direkt från [stadskassan](/wiki/economy/stadskassan).
 
-## Effekt
+## Krav
 
-Ladan ger:
+- Settlementnivå: **2 eller högre**
+- Kostnad: **2 500 Coins**
+- Behörighet: **King eller Lord**
+- Materialkrav: **Inga**
 
-- **+5 % Coins från Jordbruk**
-- en extra **Grief Protection-zon** runt den registrerade positionen
+## Funktion
 
-Produktionsbonusen gäller endast:
+Ger +5 % Coins från godkänd produktion inom Jordbruk.
 
-- aktiva medlemmar i settlementet
-- produktion inom kategorin Jordbruk
-- registrerade produktionsmetoder
-- aktiviteter som uppfyller Farming Registry
-- produktion som är berättigad till Coin-belöning
+> [!NOTE]
+> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
 
-Bonusen påverkar endast Coins. XP påverkas aldrig.
+## Fysisk byggnad
 
-Automatiserad produktion ger ingen Coin-belöning och påverkas därför inte av Ladans bonus.
-
-## Upplåsning
-
-Ladan låses upp på:
-
-- **Settlementnivå:** Läger
-- **Nivå:** 2
-- **Inriktning:** Jordbruk
-
-För att låsa upp byggnaden krävs:
-
-- rätt settlementnivå
-- byggnadens Coin-kostnad
-- tillräckligt saldo i stadskassan
-- samtliga resurser i Settlement Inventory
-- rätt behörighet
-
-Endast settlementets **KING** eller **LORD** får genomföra upplåsningen.
-
-## Byggkostnad
-
-Ladan kostar:
-
-- **2 500 Coins**
-
-Kostnaden betalas från settlementets stadskassa.
-
-
-## Placering
-
-Efter att byggnaden har låsts upp måste Ladans skyddscentrum registreras av Settlement Engine.
-
-Positionen måste:
-
-- ligga inom settlementets territorium
-- vara godkänd av Settlement Engine
-- sakna otillåten överlappning
-- registreras av KING eller LORD
-- registreras först efter att byggnaden har låsts upp
-
-Settlement Engine sparar:
-
-- värld
-- koordinater
-- skyddszon
-- placeringsstatus
-- aktiveringsstatus
-
-GameZone Engine verifierar inte Ladans blockstruktur. Den registrerade positionen representerar byggnadens skyddscentrum.
-
-## Permanent registrering
-
-När samtliga krav är uppfyllda sker upplåsningen atomärt:
-
-1. Settlementnivån verifieras.
-2. Byggnadens status verifieras.
-3. Behörigheten verifieras.
-4. Coin-kostnaden verifieras.
-6. Coins dras från stadskassan.
-7. Material förbrukas från Settlement Inventory.
-8. Ladan registreras permanent.
-9. Byggnadens funktion aktiveras.
-10. Ett Building Event publiceras.
-
-Byggnaden behöver aldrig låsas upp en andra gång.
-
-## Nedgradering
-
-Om settlementet faller under nivå 2:
-
-- byggnadsregistreringen finns kvar
-- Ladan betraktas fortfarande som färdigställd
-- produktionsbonusen inaktiveras
-- den extra skyddszonen inaktiveras
-
-När settlementet åter når Läger aktiveras funktionerna automatiskt igen.
-
-Coins och material behöver aldrig betalas en andra gång.
-
-## Sammanfattning
-
-Ladan är en fysisk skyddsbyggnad för Jordbruk.
-
-Den kostar **2 500 Coins**, ger **+5 % Coins från Jordbruk** och skapar en extra Grief Protection-zon runt sin registrerade position.
+GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.
