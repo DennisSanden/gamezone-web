@@ -3,7 +3,7 @@ title: "Skapa ett settlement"
 description: "Grunda ett nytt samhälle, välj kategori och börja utveckla en egen plats i GameZone-världen."
 category: "Settlements"
 order: 1
-version: "1.2"
+version: "1.3"
 engineVersion: "Settlement Foundation"
 updatedAt: "2026-08-04"
 infoboxTitle: "Skapa settlement"
@@ -41,7 +41,7 @@ Det kostar för närvarande inga Coins att skapa ett settlement.
 
 ## Efter att settlementet skapats
 
-Grundaren blir automatiskt **King** och kan börja bjuda in eller godkänna medlemmar, registrera inventory och utveckla settlementet. Läs mer om King, Lord och befordringar på sidan [Titlar och ledarskap](/wiki/settlements/titlar-och-ledarskap).
+Grundaren blir automatiskt **King** och kan börja bjuda in eller godkänna medlemmar, registrera inventory och utveckla settlementet.
 
 Öppna settlementets funktioner genom `/gz menu` eller `/settlement menu`.
 
@@ -55,7 +55,7 @@ Material som krävs för nivåuppgraderingar dras från registrerade kistor. Du 
 
 ### Uppgradera settlementet
 
-Öppna `/gz menu`, välj **Settlement** och sedan **Uppgradering**. En uppgradering kan genomföras när settlementet har rätt antal spelare, Coins, material och byggnadskrav.
+Öppna `/gz menu`, välj **Settlement** och sedan **Uppgradering**. En uppgradering kan genomföras när settlementet har rätt Coins, material och eventuella övriga krav.
 
 ### Köpa mer territorium
 
@@ -66,3 +66,9 @@ När settlementet behöver mer plats används:
 3. `/territory buy`
 
 Köpet betalas med Coins från stadskassan.
+
+### Ändra namn eller kategori
+
+King kan byta settlementets namn med `/settlement rename <nytt namn>`. King eller Lord kan byta produktionskategori via `/gz menu`.
+
+Båda ändringarna kostar **50 000 Coins** från stadskassan. Läs hela guiden på sidan [Ändra namn och kategori](/wiki/settlements/andra-namn-och-kategori).

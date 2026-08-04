@@ -3,7 +3,7 @@ title: "Coins"
 description: "GameZones valuta, hur du tjänar Coins och vad de används till."
 category: "Ekonomi"
 order: 1
-version: "1.0"
+version: "1.1"
 engineVersion: "Economy Engine"
 updatedAt: "2026-08-04"
 infoboxTitle: "Coins"
@@ -29,11 +29,14 @@ Coins kan bland annat användas för att:
 - köpa items från andra spelare genom företagens shopping chests
 - köpa items och tjänster från servern
 - uppgradera företagets shopping license
-- befordra invånare till [högre titlar](/wiki/settlements/titlar-och-ledarskap)
+- befordra invånare till högre titlar
 - uppgradera settlementets nivå
 - låsa upp byggnader och funktioner
 - köpa mer mark till settlementet
-- byta namn eller kategori när funktionen är tillgänglig
+- byta settlementets namn för 50 000 Coins
+- byta settlementets produktionskategori för 50 000 Coins
+
+Läs mer om de två sista funktionerna på sidan [Ändra namn och kategori](/wiki/settlements/andra-namn-och-kategori).
 
 ## Köpa från andra spelare
 
