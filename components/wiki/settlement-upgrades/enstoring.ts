@@ -19,16 +19,6 @@ export const enstoringTillLager: SettlementUpgrade = {
             from: "25 block",
             to: "40 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "0 %",
-            to: "5 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "0 Coins",
-            to: "500 Coins",
-        },
     ],
 
     upgradeCost: {

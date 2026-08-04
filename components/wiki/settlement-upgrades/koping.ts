@@ -19,16 +19,6 @@ export const kopingTillStad: SettlementUpgrade = {
             from: "125 block",
             to: "150 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "25 %",
-            to: "30 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "7 500 Coins",
-            to: "12 500 Coins",
-        },
     ],
 
     upgradeCost: {

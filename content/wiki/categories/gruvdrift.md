@@ -10,7 +10,7 @@ infoboxTitle: "Gruvdrift"
 infobox:
   kategori: "Produktion"
   bonusbyggnad: "Ingen"
-  grundbonus: "Ja"
+  coinregel: "Endast vald kategori"
 ---
 
 ## Översikt
@@ -21,6 +21,9 @@ All registrerad produktion inom Gruvdrift kan ge Coins enligt reglerna i Product
 
 Gruvdrift är den enda grundkategori som saknar en egen specialbyggnad.
 
+> [!IMPORTANT]
+> Den här kategorins resurser ger endast Coins till spelare vars settlement har valt kategorin. Resurser utanför settlementets valda kategori ger inga Coins.
+
 ## Vad räknas som Gruvdrift?
 
 Gruvdrift omfattar utvinning av malmer och andra resurser som registreras av Mining Registry.
@@ -29,18 +32,6 @@ Endast produktion som uppfyller reglerna i GameZone Engine är berättigad till 
 
 Automatiserade system ger inga Coins.
 
-## Bonusar
-
-Produktion inom Gruvdrift kan påverkas av:
-
-- Settlementets grundbonus
-- Kyrka (+10 % Grundbonus)
-- Monument (+10 % Grundbonus)
-- Underverk (+10 % Grundbonus)
-
-Eftersom Gruvdrift saknar en egen specialbyggnad finns ingen separat +5 %-bonus.
-
-Samtliga bonusar beräknas automatiskt av GameZone Engine.
 
 ## Specialbyggnad
 

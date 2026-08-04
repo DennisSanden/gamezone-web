@@ -19,16 +19,6 @@ export const grevskapTillHertigdome: SettlementUpgrade = {
             from: "250 block",
             to: "270 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "50 %",
-            to: "55 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "65 000 Coins",
-            to: "90 000 Coins",
-        },
     ],
 
     upgradeCost: {

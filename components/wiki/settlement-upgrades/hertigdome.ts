@@ -19,16 +19,6 @@ export const hertigdomeTillNation: SettlementUpgrade = {
             from: "270 block",
             to: "285 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "55 %",
-            to: "60 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "90 000 Coins",
-            to: "125 000 Coins",
-        },
     ],
 
     upgradeCost: {

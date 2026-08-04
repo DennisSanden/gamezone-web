@@ -19,16 +19,6 @@ export const lagerTillBy: SettlementUpgrade = {
             from: "40 block",
             to: "60 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "5 %",
-            to: "10 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "500 Coins",
-            to: "1 000 Coins",
-        },
     ],
 
     upgradeCost: {

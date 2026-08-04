@@ -1,6 +1,6 @@
 ---
 title: "Kungadöme"
-description: "Den fjortonde settlementnivån med ett enormt territorium, mycket hög handelsrabatt och det sista utvecklingssteget före Imperium."
+description: "Den fjortonde settlementnivån med ett enormt territorium, mycket hög Server TAX och det sista utvecklingssteget före Imperium."
 category: "Settlements"
 order: 15
 version: "1.0"
@@ -24,13 +24,13 @@ relatedArticles:
 
 Ett **Kungadöme** är den fjortonde settlementnivån i GameZone.
 
-På denna nivå har settlementet vuxit till ett enormt politiskt, ekonomiskt och territoriellt centrum med ett territorium på 295 block och en handelsrabatt på 65 procent.
+På denna nivå har settlementet vuxit till ett enormt politiskt, ekonomiskt och territoriellt centrum med ett territorium på 295 block och en Server TAX.
 
 Kungadöme låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som det sista expansionssteget före Imperium.
 
 ## Territorium
 
-Kungadöme ger ett territorium med en radie på **148 block** från settlementets registrerade centrum.
+Kungadöme ger ett territorium med en radie på **295 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 14.
 
@@ -40,7 +40,7 @@ Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas so
 
 ## Grundbonus
 
-Kungadöme behåller settlementets permanenta grundbonus på **+15 % Coins** från all reward-eligible produktion.
+Kungadöme behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
 Grundbonusen gäller:
 
@@ -61,42 +61,7 @@ Slott ger ingen direkt produktionsbonus.
 > [!IMPORTANT]
 > Grundbonusen och Monumentets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
 
-## Handelsrabatt
 
-Företag som är registrerade i ett settlement på nivån Kungadöme ger alla spelare en handelsrabatt på **65 %**.
-
-Rabatten påverkar endast köparens slutpris.
-
-Företaget får fortfarande hela sitt satta försäljningspris och mellanskillnaden finansieras av Economy Engine.
-
-Settlementets stadskassa påverkas inte av handelsrabatten.
-
-## Veckounderhåll
-
-Kungadöme har ett ordinarie veckounderhåll på **175 000 Coins**.
-
-Underhållet dras automatiskt från settlementets stadskassa.
-
-Om settlementet har färdigställt Marknadsplats minskas veckounderhållet med 10 procent.
-
-Det innebär att det faktiska veckounderhållet efter Marknadsplatsens bonus blir:
-
-- Ordinarie veckounderhåll: **175 000 Coins**
-- Marknadsplatsens minskning: **17 500 Coins**
-- Faktiskt veckounderhåll: **157 500 Coins**
-
-Om stadskassan saknar tillräckligt med Coins nedgraderas settlementet automatiskt.
-
-Vid en nedgradering:
-
-- territoriet minskar
-- handelsrabatten uppdateras
-- nivåbundna funktioner inaktiveras
-- byggnader med högre nivåkrav blir inaktiva
-
-Permanenta byggnadsupplåsningar försvinner inte.
-
-När settlementet åter når byggnadens nivåkrav aktiveras byggnaden automatiskt igen utan en ny betalning.
 
 ## Byggnader
 
@@ -106,9 +71,9 @@ När settlementet åter når byggnadens nivåkrav aktiveras byggnaden automatisk
 
 Nästa nivå är **Imperium**.
 
-Imperium utökar territoriet till 300 block och höjer handelsrabatten till 70 procent.
+Imperium utökar territoriet till 300 block och höjer Server TAX till 70 procent.
 
-Det ordinarie veckounderhållet höjs samtidigt till 250 000 Coins.
+Det ordinarie återkommande avgift höjs samtidigt till 250 000 Coins.
 
 Imperium låser upp **Underverk** som ett separat byggprojekt.
 

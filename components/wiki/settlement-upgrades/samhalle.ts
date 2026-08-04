@@ -19,16 +19,6 @@ export const samhalleTillKoping: SettlementUpgrade = {
             from: "100 block",
             to: "125 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "20 %",
-            to: "25 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "4 000 Coins",
-            to: "7 500 Coins",
-        },
     ],
 
     upgradeCost: {

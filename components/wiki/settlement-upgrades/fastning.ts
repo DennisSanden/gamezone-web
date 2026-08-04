@@ -19,16 +19,6 @@ export const fastningTillHuvudstad: SettlementUpgrade = {
             from: "200 block",
             to: "225 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "40 %",
-            to: "45 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "30 000 Coins",
-            to: "45 000 Coins",
-        },
     ],
 
     upgradeCost: {

@@ -1,83 +1,45 @@
 ---
 title: "Produktion"
-description: "Översikt över GameZones produktionssystem."
+description: "Så fungerar kategoribaserad produktion och Coin-intäkter på GameZone."
 category: "Produktionskategorier"
 order: 0
-version: "1.0"
+version: "2.0"
 engineVersion: "Production Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-04"
 infoboxTitle: "Produktion"
 infobox:
   kategorier: "7"
-  specialbyggnader: "6"
-  grundbonus: "Ja"
+  coinregel: "Endast vald kategori"
+  tax: "Stadsskatt gäller"
 ---
 
 ## Översikt
 
-Produktionssystemet är en av GameZones viktigaste ekonomiska funktioner.
+När ett settlement skapas väljer det en produktionskategori. Valet avgör vilka resurser som kan ge Coins till settlementets invånare.
 
-Nästan alla aktiviteter som utförs i världen registreras av **Production Engine** och kan ge Coins när de uppfyller motorns regler.
-
-Produktionssystemet är uppdelat i sju olika kategorier.
+> [!IMPORTANT]
+> Spelare får endast Coins från resurser som tillhör settlementets valda kategori. Resurser utanför kategorin kan fortfarande samlas in, användas och säljas, men själva produktionen ger inga Coins.
 
 ## Produktionskategorier
 
+- Gruvdrift
 - Jordbruk
 - Boskap
 - Fiske
 - Skogsbruk
 - Byggmaterial
-- Gruvdrift
 - Alkemi
 
-Varje kategori har egna regler för hur produktionen registreras och hur Coin-belöningar delas ut.
+## Stadsskatt på produktion
 
-## Grundbonus
+När en spelare tjänar Coins genom produktion går en andel automatiskt till settlementets stadskassa. Standardnivån är 25 procent, men settlementets King kan sätta skatten mellan 0 och 100 procent.
 
-Alla settlements får en grundbonus som påverkar produktionen.
-
-Grundbonusen gäller för:
-
-- Gruvdrift
-- Jordbruk
-- Boskap
-- Fiske
-- Skogsbruk
-- Byggmaterial
-
-Från och med **nivå 5 (Samhälle)** omfattas även **Alkemi**.
-
-Grundbonusen förstärks senare genom vissa settlementbyggnader.
-
-## Specialbyggnader
-
-Sex av produktionskategorierna har en egen specialbyggnad.
-
-| Produktionskategori | Specialbyggnad |
-|----------------------|----------------|
-| Jordbruk | Lada |
-| Boskap | Ladugård |
-| Fiske | Fiskebrygga |
-| Skogsbruk | Sågverk |
-| Byggmaterial | Stenhuggeri |
-| Alkemi | Laboratorium |
-
-Gruvdrift saknar en egen specialbyggnad och påverkas därför endast av settlementets grundbonus.
+Detta är inte samma sak som Server TAX på företagshandel.
 
 ## Registrering
 
-All produktion verifieras automatiskt av Production Engine.
-
-Systemet kontrollerar bland annat att:
-
-- produktionen inte är automatiserad
-- spelaren är berättigad till belöning
-- settlementets bonusar är aktiva
-- alla regler i Production Engine följs
+Production Engine kontrollerar att resursen tillhör spelarens settlementkategori, att spelaren är berättigad till Coins och att produktionen följer serverns regler.
 
 ## Sammanfattning
 
-Produktionssystemet är grunden för GameZones ekonomi.
-
-Genom att utveckla sitt settlement och låsa upp nya byggnader kan spelare successivt öka Coin-belöningarna inom de olika produktionskategorierna.
+Vald kategori avgör vilka resurser som ger Coins. Produktion utanför kategorin ger inga Coins.

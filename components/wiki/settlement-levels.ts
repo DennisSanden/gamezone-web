@@ -24,9 +24,7 @@ export type SettlementLevel = {
     level: number;
     name: string;
     territoryRadius: string;
-    weeklyUpkeep: string;
-    baseBonus: string;
-    tradeDiscount: string;
+    categoryEconomy: string;
     nextLevel: string | null;
 };
 
@@ -39,9 +37,7 @@ const settlementLevels: Record<
         level: 1,
         name: "Enstöring",
         territoryRadius: "13 block",
-        weeklyUpkeep: "0 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "0 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Läger",
     },
     lager: {
@@ -49,9 +45,7 @@ const settlementLevels: Record<
         level: 2,
         name: "Läger",
         territoryRadius: "20 block",
-        weeklyUpkeep: "500 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "5 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "By",
     },
     by: {
@@ -59,9 +53,7 @@ const settlementLevels: Record<
         level: 3,
         name: "By",
         territoryRadius: "30 block",
-        weeklyUpkeep: "1 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "10 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Bosättning",
     },
     bosattning: {
@@ -69,9 +61,7 @@ const settlementLevels: Record<
         level: 4,
         name: "Bosättning",
         territoryRadius: "40 block",
-        weeklyUpkeep: "2 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "15 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Samhälle",
     },
     samhalle: {
@@ -79,9 +69,7 @@ const settlementLevels: Record<
         level: 5,
         name: "Samhälle",
         territoryRadius: "50 block",
-        weeklyUpkeep: "4 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "20 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Köping",
     },
     koping: {
@@ -89,9 +77,7 @@ const settlementLevels: Record<
         level: 6,
         name: "Köping",
         territoryRadius: "63 block",
-        weeklyUpkeep: "7 500 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "25 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Stad",
     },
     stad: {
@@ -99,9 +85,7 @@ const settlementLevels: Record<
         level: 7,
         name: "Stad",
         territoryRadius: "75 block",
-        weeklyUpkeep: "12 500 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "30 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Handelsstad",
     },
     handelsstad: {
@@ -109,9 +93,7 @@ const settlementLevels: Record<
         level: 8,
         name: "Handelsstad",
         territoryRadius: "88 block",
-        weeklyUpkeep: "20 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "35 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Fästning",
     },
     fastning: {
@@ -119,9 +101,7 @@ const settlementLevels: Record<
         level: 9,
         name: "Fästning",
         territoryRadius: "100 block",
-        weeklyUpkeep: "30 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "40 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Huvudstad",
     },
     huvudstad: {
@@ -129,9 +109,7 @@ const settlementLevels: Record<
         level: 10,
         name: "Huvudstad",
         territoryRadius: "113 block",
-        weeklyUpkeep: "45 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "45 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Grevskap",
     },
     grevskap: {
@@ -139,9 +117,7 @@ const settlementLevels: Record<
         level: 11,
         name: "Grevskap",
         territoryRadius: "125 block",
-        weeklyUpkeep: "65 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "50 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Hertigdöme",
     },
     hertigdome: {
@@ -149,9 +125,7 @@ const settlementLevels: Record<
         level: 12,
         name: "Hertigdöme",
         territoryRadius: "135 block",
-        weeklyUpkeep: "90 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "55 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Nation",
     },
     nation: {
@@ -159,9 +133,7 @@ const settlementLevels: Record<
         level: 13,
         name: "Nation",
         territoryRadius: "143 block",
-        weeklyUpkeep: "125 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "60 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Kungadöme",
     },
     kungadome: {
@@ -169,9 +141,7 @@ const settlementLevels: Record<
         level: 14,
         name: "Kungadöme",
         territoryRadius: "148 block",
-        weeklyUpkeep: "175 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "65 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: "Imperium",
     },
     imperium: {
@@ -179,9 +149,7 @@ const settlementLevels: Record<
         level: 15,
         name: "Imperium",
         territoryRadius: "150 block",
-        weeklyUpkeep: "250 000 Coins",
-        baseBonus: "+15 % Coins",
-        tradeDiscount: "70 %",
+        categoryEconomy: "Coins endast från vald kategori",
         nextLevel: null,
     },
 };
@@ -215,16 +183,8 @@ export function getSettlementInfoboxItems(
             value: settlement.territoryRadius,
         },
         {
-            label: "Veckounderhåll",
-            value: settlement.weeklyUpkeep,
-        },
-        {
-            label: "Grundbonus",
-            value: settlement.baseBonus,
-        },
-        {
-            label: "Handelsrabatt",
-            value: settlement.tradeDiscount,
+            label: "Produktion",
+            value: settlement.categoryEconomy,
         },
         {
             label: "Nästa nivå",

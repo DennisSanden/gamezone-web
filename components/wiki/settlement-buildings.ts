@@ -661,8 +661,8 @@ const settlementBuildings: Record<
             name: "Marknadsplats",
             category: "Ekonomi och handel",
             description:
-                "Effektiviserar settlementets administration och handelsinfrastruktur genom att minska det ordinarie veckounderhållet.",
-            effect: "−10 % veckounderhåll",
+                "Representerar settlementets utvecklade handelsinfrastruktur och marknadsfunktioner.",
+            effect: "Marknadsfunktioner",
             cost: "150 000 Coins",
             unlockLevel: 8,
             materials: [

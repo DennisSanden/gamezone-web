@@ -19,16 +19,6 @@ export const handelsstadTillFastning: SettlementUpgrade = {
             from: "175 block",
             to: "200 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "35 %",
-            to: "40 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "20 000 Coins",
-            to: "30 000 Coins",
-        },
     ],
 
     upgradeCost: {

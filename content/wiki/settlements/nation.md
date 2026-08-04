@@ -1,6 +1,6 @@
 ---
 title: "Nation"
-description: "Den trettonde settlementnivån med ett mycket stort territorium, hög handelsrabatt och fortsatt utveckling mot Kungadöme."
+description: "Den trettonde settlementnivån med ett mycket stort territorium, hög Server TAX och fortsatt utveckling mot Kungadöme."
 category: "Settlements"
 order: 14
 version: "1.0"
@@ -24,13 +24,13 @@ relatedArticles:
 
 En **Nation** är den trettonde settlementnivån i GameZone.
 
-På denna nivå har settlementet vuxit till ett mycket stort politiskt, ekonomiskt och territoriellt centrum med ett territorium på 285 block och en handelsrabatt på 60 procent.
+På denna nivå har settlementet vuxit till ett mycket stort politiskt, ekonomiskt och territoriellt centrum med ett territorium på 285 block och en Server TAX.
 
 Nation låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som ett fortsatt expansionssteg inför Kungadöme.
 
 ## Territorium
 
-Nation ger ett territorium med en radie på **143 block** från settlementets registrerade centrum.
+Nation ger ett territorium med en radie på **285 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 13.
 
@@ -40,7 +40,7 @@ Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas so
 
 ## Grundbonus
 
-Nation behåller settlementets permanenta grundbonus på **+15 % Coins** från all reward-eligible produktion.
+Nation behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
 Grundbonusen gäller:
 
@@ -61,42 +61,7 @@ Slott ger ingen direkt produktionsbonus.
 > [!IMPORTANT]
 > Grundbonusen och Monumentets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
 
-## Handelsrabatt
 
-Företag som är registrerade i ett settlement på nivån Nation ger alla spelare en handelsrabatt på **60 %**.
-
-Rabatten påverkar endast köparens slutpris.
-
-Företaget får fortfarande hela sitt satta försäljningspris och mellanskillnaden finansieras av Economy Engine.
-
-Settlementets stadskassa påverkas inte av handelsrabatten.
-
-## Veckounderhåll
-
-Nation har ett ordinarie veckounderhåll på **125 000 Coins**.
-
-Underhållet dras automatiskt från settlementets stadskassa.
-
-Om settlementet har färdigställt Marknadsplats minskas veckounderhållet med 10 procent.
-
-Det innebär att det faktiska veckounderhållet efter Marknadsplatsens bonus blir:
-
-- Ordinarie veckounderhåll: **125 000 Coins**
-- Marknadsplatsens minskning: **12 500 Coins**
-- Faktiskt veckounderhåll: **112 500 Coins**
-
-Om stadskassan saknar tillräckligt med Coins nedgraderas settlementet automatiskt.
-
-Vid en nedgradering:
-
-- territoriet minskar
-- handelsrabatten uppdateras
-- nivåbundna funktioner inaktiveras
-- byggnader med högre nivåkrav blir inaktiva
-
-Permanenta byggnadsupplåsningar försvinner inte.
-
-När settlementet åter når byggnadens nivåkrav aktiveras byggnaden automatiskt igen utan en ny betalning.
 
 ## Byggnader
 
@@ -106,9 +71,9 @@ När settlementet åter når byggnadens nivåkrav aktiveras byggnaden automatisk
 
 Nästa nivå är **Kungadöme**.
 
-Kungadöme utökar territoriet till 295 block och höjer handelsrabatten till 65 procent.
+Kungadöme utökar territoriet till 295 block och höjer Server TAX till 65 procent.
 
-Det ordinarie veckounderhållet höjs samtidigt till 175 000 Coins.
+Det ordinarie återkommande avgift höjs samtidigt till 175 000 Coins.
 
 Kungadöme låser inte upp någon ny unik specialbyggnad.
 

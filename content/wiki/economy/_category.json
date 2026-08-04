@@ -1,6 +1,6 @@
 {
   "title": "Ekonomi",
-  "description": "Coins, stadskassa, invånarskatt, server TAX och MarketWatch.",
-  "order": 5,
-  "icon": "economy"
+  "description": "Coins, stadskassan, produktion och Server TAX.",
+  "order": 4,
+  "icon": "coins"
 }

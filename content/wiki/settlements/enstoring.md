@@ -9,11 +9,8 @@ updatedAt: "2026-07-18"
 infoboxTitle: "Enstöring"
 infobox:
   nivå: "1"
-  territorieradie: "13 block"
+  territorieradie: "25 block"
   skapandekostnad: "0 Coins"
-  veckounderhåll: "0 Coins"
-  grundbonus: "+15 % Coins"
-  handelsrabatt: "0 %"
   nästaNivå: "Läger"
 relatedArticles:
   - category: "settlements"
@@ -34,11 +31,11 @@ relatedArticles:
 
 Alla nya settlements börjar automatiskt på denna nivå. Enstöring representerar den första etableringen innan settlementet har vuxit till ett större samhälle.
 
-> [!INFO] Settlementnivån avgör territoriets storlek, handelsrabatten, veckounderhållet och vilka funktioner och byggnader som är tillgängliga.
+> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX, återkommande avgift och vilka funktioner och byggnader som är tillgängliga.
 
 ## Territorium
 
-Ett settlement på nivån Enstöring kontrollerar ett cirkulärt territorium med en radie på **13 block** från settlementets registrerade centrum.
+Ett settlement på nivån Enstöring kontrollerar ett cirkulärt territorium med en radie på **25 block** från settlementets registrerade centrum.
 
 Settlementets centrum bestäms när settlementet skapas och används därefter som permanent referenspunkt.
 
@@ -52,7 +49,7 @@ När settlementet skapas registreras det direkt som nivå 1, Enstöring.
 
 ## Grundbonus
 
-Alla medlemmar i ett settlement får en grundbonus på **+15 % Coins** från all reward-eligible produktion.
+Alla medlemmar i ett settlement får en grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
 Grundbonusen gäller settlementets aktiva medlemmar och är inte en särskild nivåbonus för Enstöring.
 
@@ -60,17 +57,7 @@ Bonusar från specialbyggnader läggs ovanpå denna grundbonus.
 
 > [!IMPORTANT] Grundbonusen följer settlement-systemet och ska inte blandas ihop med bonusar som låses upp genom enskilda nivåer eller byggnader.
 
-## Handelsrabatt
 
-Företag som är registrerade i ett settlement på nivån Enstöring ger ingen handelsrabatt.
-
-Handelsrabatten på denna nivå är därför **0 %**.
-
-## Veckounderhåll
-
-Enstöring har inget veckounderhåll.
-
-Settlementets stadskassa belastas därför inte med någon återkommande kostnad så länge settlementet ligger kvar på nivå 1.
 
 ## Byggnader
 

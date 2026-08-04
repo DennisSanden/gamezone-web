@@ -1,26 +1,29 @@
 ---
-title: "Stadskassan"
-description: "Settlementets gemensamma ekonomi och invånarnas skatt."
+title: "Stadskassan och stadsskatt"
+description: "Så går en del av invånarnas produktionsintäkter till settlementets stadskassa."
 category: "Ekonomi"
 order: 1
 version: "1.0"
-engineVersion: "Economy"
+engineVersion: "Economy Engine"
 updatedAt: "2026-08-04"
-infoboxTitle: "Stadskassan"
+infoboxTitle: "Stadsskatt"
 infobox:
-  standardskatt: "25 %"
-  tillåtetIntervall: "0 till 100 %"
-  styrsAv: "King"
+  standard: "25 %"
+  minimum: "0 %"
+  maximum: "100 %"
+  bestämsAv: "King"
 ---
 
 ## Översikt
 
-När en spelare är medlem i ett settlement går en del av spelarens Coin-intäkter till stadskassan.
+När en spelare är medlem i ett settlement och tjänar Coins genom godkänd produktion går en andel direkt till settlementets stadskassa.
 
-Settlementets **King** kan ändra invånarskatten. Standardvärdet är **25 procent**, men skatten kan sättas mellan **0 och 100 procent**.
+Standardnivån är **25 procent**. Settlementets King kan ändra stadsskatten mellan **0 och 100 procent**.
 
-En låg skatt kan användas för att locka invånare. En hög skatt ger snabbare intäkter till stadens gemensamma ekonomi.
+## Strategi
 
-## Uppgraderingar
+En låg stadsskatt låter invånarna behålla mer av sina produktionsintäkter och kan göra settlementet mer attraktivt. En hög stadsskatt fyller stadskassan snabbare och kan användas när settlementet behöver finansiera uppgraderingar och byggnader.
 
-Coins för settlementuppgraderingar dras från stadskassan. Materialkraven dras från registrerade settlement inventories.
+## Skillnaden mot Server TAX
+
+Stadsskatt tas från invånarnas produktionsintäkter och går till stadskassan. Server TAX tas från företagsförsäljning och går till servern. Det är två separata system.

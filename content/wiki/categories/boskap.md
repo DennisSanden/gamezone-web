@@ -10,7 +10,7 @@ infoboxTitle: "Boskap"
 infobox:
   kategori: "Produktion"
   bonusbyggnad: "Ladugård"
-  grundbonus: "Ja"
+  coinregel: "Endast vald kategori"
 ---
 
 ## Översikt
@@ -18,6 +18,9 @@ infobox:
 **Boskap** är en av GameZones sju produktionskategorier.
 
 All registrerad produktion inom Boskap kan ge Coins enligt reglerna i Production Engine och påverkas av settlementets aktiva bonusar.
+
+> [!IMPORTANT]
+> Den här kategorins resurser ger endast Coins till spelare vars settlement har valt kategorin. Resurser utanför settlementets valda kategori ger inga Coins.
 
 ## Vad räknas som Boskap?
 
@@ -27,17 +30,6 @@ Endast produktion som uppfyller reglerna i GameZone Engine är berättigad till 
 
 Automatiserade system ger inga Coins.
 
-## Bonusar
-
-Produktion inom Boskap kan påverkas av:
-
-- Settlementets grundbonus
-- **Ladugård** (+5 % Coins)
-- Kyrka (+10 % Grundbonus)
-- Monument (+10 % Grundbonus)
-- Underverk (+10 % Grundbonus)
-
-Samtliga bonusar beräknas automatiskt av GameZone Engine.
 
 ## Ladugård
 

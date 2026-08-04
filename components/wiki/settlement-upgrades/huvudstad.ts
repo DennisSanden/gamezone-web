@@ -19,16 +19,6 @@ export const huvudstadTillGrevskap: SettlementUpgrade = {
             from: "225 block",
             to: "250 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "45 %",
-            to: "50 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "45 000 Coins",
-            to: "65 000 Coins",
-        },
     ],
 
     upgradeCost: {

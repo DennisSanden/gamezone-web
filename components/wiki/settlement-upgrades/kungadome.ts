@@ -19,16 +19,6 @@ export const kungadomeTillImperium: SettlementUpgrade = {
             from: "295 block",
             to: "300 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "65 %",
-            to: "70 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "175 000 Coins",
-            to: "250 000 Coins",
-        },
     ],
 
     upgradeCost: {

@@ -10,7 +10,7 @@ infoboxTitle: "Fiske"
 infobox:
   kategori: "Produktion"
   bonusbyggnad: "Fiskebrygga"
-  grundbonus: "Ja"
+  coinregel: "Endast vald kategori"
 ---
 
 ## Översikt
@@ -18,6 +18,9 @@ infobox:
 **Fiske** är en av GameZones sju produktionskategorier.
 
 All registrerad fiskeproduktion kan ge Coins enligt reglerna i Production Engine och påverkas av settlementets aktiva bonusar.
+
+> [!IMPORTANT]
+> Den här kategorins resurser ger endast Coins till spelare vars settlement har valt kategorin. Resurser utanför settlementets valda kategori ger inga Coins.
 
 ## Vad räknas som Fiske?
 
@@ -27,17 +30,6 @@ Endast produktion som uppfyller reglerna i GameZone Engine är berättigad till 
 
 Automatiserade fiskesystem ger inga Coins.
 
-## Bonusar
-
-Produktion inom Fiske kan påverkas av:
-
-- Settlementets grundbonus
-- **Fiskebrygga** (+5 % Coins)
-- Kyrka (+10 % Grundbonus)
-- Monument (+10 % Grundbonus)
-- Underverk (+10 % Grundbonus)
-
-Samtliga bonusar beräknas automatiskt av GameZone Engine.
 
 ## Fiskebrygga
 

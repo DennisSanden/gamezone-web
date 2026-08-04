@@ -1,26 +1,29 @@
 ---
 title: "Server TAX"
-description: "Skatten som dras när företag säljer varor."
+description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
 order: 2
 version: "1.0"
-engineVersion: "Trade"
+engineVersion: "Economy Engine"
 updatedAt: "2026-08-04"
 infoboxTitle: "Server TAX"
 infobox:
-  grundskatt: "25 %"
-  lägstaSettlementskatt: "10 %"
-  licensrabatt: "Upp till 10 procentenheter"
+  standard: "25 %"
+  lägsta: "0 %"
+  gäller: "Företagsförsäljning"
 ---
 
 ## Översikt
 
-Servern tar TAX när företag säljer varor. Skatten sjunker när settlementet når högre nivåer och när företaget förbättrar sin shopping license.
+Servern tar TAX när företag säljer varor till andra spelare. Grundnivån är 25 procent. Settlementets nivå bestämmer grundskatten och företagets shopping license ger ett avdrag.
 
-## Settlementets skattenivå
+**Total TAX = settlementets TAX minus shopping license-avdraget.** Den totala skatten kan aldrig bli lägre än 0 procent.
 
-| Settlementnivå | TAX före licensrabatt |
-| ---: | ---: |
+## TAX efter settlementnivå
+
+| Nivå | Server TAX |
+|---|---:|
+| 1–2 | Företag ej möjligt |
 | 3 | 25 % |
 | 4 | 23 % |
 | 5 | 21 % |
@@ -35,8 +38,25 @@ Servern tar TAX när företag säljer varor. Skatten sjunker när settlementet n
 | 14 | 11 % |
 | 15 | 10 % |
 
-## Licensrabatt
+## Avdrag från shopping license
 
-Shopping license ger från 0 till 10 procentenheters rabatt, beroende på licensnivå.
+| Licensnivå | Avdrag |
+|---|---:|
+| 1 | 0 % |
+| 2 | 2 % |
+| 3 | 3 % |
+| 4 | 4 % |
+| 5 | 5 % |
+| 6 | 6 % |
+| 7 | 7 % |
+| 8 | 8 % |
+| 9 | 9 % |
+| 10 | 10 % |
 
-> [!INFO] Ett företag med licensnivå 10 i ett settlement på nivå 15 får 0 procent total Server TAX.
+## Räkneexempel
+
+Ett företag utan avdrag säljer för 1 000 Coins med 25 procent TAX. Servern tar 250 Coins och företaget får 750 Coins.
+
+Ett företag med shopping license nivå 6 i ett settlement på nivå 11 betalar 14 minus 6, alltså 8 procent TAX. Servern tar 80 Coins och företaget får 920 Coins.
+
+Ett företag med shopping license nivå 10 i ett settlement på nivå 15 betalar 10 minus 10, alltså 0 procent TAX. Företaget får hela försäljningsbeloppet.

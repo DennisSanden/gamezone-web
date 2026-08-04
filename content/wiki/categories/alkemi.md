@@ -10,7 +10,7 @@ infoboxTitle: "Alkemi"
 infobox:
   kategori: "Produktion"
   bonusbyggnad: "Laboratorium"
-  grundbonus: "Ja (från nivå 5)"
+  coinregel: "Endast vald kategori"
 ---
 
 ## Översikt
@@ -21,6 +21,9 @@ Till skillnad från övriga produktionskategorier blir Alkemi tillgänglig förs
 
 All registrerad alkemiproduktion kan ge Coins enligt reglerna i Production Engine och påverkas av settlementets aktiva bonusar.
 
+> [!IMPORTANT]
+> Den här kategorins resurser ger endast Coins till spelare vars settlement har valt kategorin. Resurser utanför settlementets valda kategori ger inga Coins.
+
 ## Vad räknas som Alkemi?
 
 Alkemi omfattar bryggning och andra aktiviteter som registreras av Alchemy Registry.
@@ -29,17 +32,6 @@ Endast produktion som uppfyller reglerna i GameZone Engine är berättigad till 
 
 Automatiserade system ger inga Coins.
 
-## Bonusar
-
-Produktion inom Alkemi kan påverkas av:
-
-- Settlementets grundbonus (från nivå 5)
-- **Laboratorium** (+5 % Coins)
-- Kyrka (+10 % Grundbonus)
-- Monument (+10 % Grundbonus)
-- Underverk (+10 % Grundbonus)
-
-Samtliga bonusar beräknas automatiskt av GameZone Engine.
 
 ## Laboratorium
 

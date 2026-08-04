@@ -19,16 +19,6 @@ export const nationTillKungadome: SettlementUpgrade = {
             from: "285 block",
             to: "295 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "60 %",
-            to: "65 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "125 000 Coins",
-            to: "175 000 Coins",
-        },
     ],
 
     upgradeCost: {

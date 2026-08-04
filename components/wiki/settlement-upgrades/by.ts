@@ -19,16 +19,6 @@ export const byTillBosattning: SettlementUpgrade = {
             from: "60 block",
             to: "80 block",
         },
-        {
-            label: "Handelsrabatt",
-            from: "10 %",
-            to: "15 %",
-        },
-        {
-            label: "Veckounderhåll",
-            from: "1 000 Coins",
-            to: "2 000 Coins",
-        },
     ],
 
     upgradeCost: {
