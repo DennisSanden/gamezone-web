@@ -86,11 +86,23 @@ export async function HomeDashboard() {
       </div>
     </section>
 
-    <section className={styles.playSection} aria-label="Spela på GameZone">
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
-        <span className={styles.playButtonIcon}>▶</span>
-        <span>Spela nu</span>
-      </a>
+    <section className={styles.playSection} aria-label="Spela och stötta GameZone">
+      <div className={styles.heroActions}>
+        <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
+          <span className={styles.playButtonIcon}>▶</span>
+          <span>Spela nu</span>
+        </a>
+
+        <a
+          href="https://www.patreon.com/16532203/join"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.patreonButton}
+        >
+          <span className={styles.patreonButtonIcon}>♥</span>
+          <span>Stötta oss på Patreon</span>
+        </a>
+      </div>
       <div className={styles.playMeta}>
         <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
         <strong>{serverStatus.online ? `${serverStatus.playersOnline} / ${serverStatus.playersMax || 40} online` : "Servern offline"}</strong>
