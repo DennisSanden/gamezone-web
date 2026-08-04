@@ -30,7 +30,7 @@ Huvudstad låser även upp **Monument**, en permanent specialbyggnad som ger set
 
 ## Territorium
 
-Huvudstad ger ett territorium med en radie på **225 block** från settlementets registrerade centrum.
+Huvudstad ger ett territorium med en radie på **113 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 10.
 
@@ -38,7 +38,7 @@ Settlementets registrerade centrum är permanent och kan inte flyttas.
 
 Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
 
-## Grundbonus
+## Produktion
 
 Huvudstad behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
@@ -52,7 +52,7 @@ Grundbonusen gäller:
 - Byggmaterial
 - Alkemi
 
-Bonusar från upplåsta byggnader läggs ovanpå grundbonusen.
+
 
 Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
 

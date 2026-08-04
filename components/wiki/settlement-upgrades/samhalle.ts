@@ -16,8 +16,8 @@ export const samhalleTillKoping: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "100 block",
-            to: "125 block",
+            from: "50 block",
+            to: "63 block",
         },
     ],
 
@@ -26,47 +26,47 @@ export const samhalleTillKoping: SettlementUpgrade = {
 
         materials: [
             {
-                id: "redstone-ore",
-                name: "Redstone Ore",
-                amount: 512,
-                icon: "⛏️",
+                id: "raw-gold",
+                name: "Raw Gold",
+                amount: 384,
+                icon: "🟨",
             },
             {
-                id: "bread",
-                name: "Bread",
-                amount: 512,
-                icon: "🍞",
+                id: "beetroot",
+                name: "Beetroot",
+                amount: 384,
+                icon: "🫜",
             },
             {
-                id: "chicken",
-                name: "Chicken",
-                amount: 256,
-                icon: "🍗",
+                id: "porkchop",
+                name: "Porkchop",
+                amount: 192,
+                icon: "🥩",
             },
             {
-                id: "acacia-logs",
-                name: "Acacia Logs",
-                amount: 512,
+                id: "jungle-log",
+                name: "Jungle Log",
+                amount: 364,
                 icon: "🪵",
             },
             {
-                id: "cod",
-                name: "Cod",
-                amount: 128,
-                icon: "🐟",
-            },
-            {
-                id: "mud-bricks",
-                name: "Mud Bricks",
-                amount: 1024,
-                icon: "🧱",
-            },
-            {
-                id: "blaze-powder",
-                name: "Blaze Powder",
+                id: "pufferfish",
+                name: "Pufferfish",
                 amount: 96,
-                icon: "🔥",
+                icon: "🐡",
             },
+            {
+                id: "glass",
+                name: "Glass",
+                amount: 768,
+                icon: "🪟",
+            },
+            {
+                id: "nether-wart",
+                name: "Nether Wart",
+                amount: 64,
+                icon: "🔴",
+            }
         ],
     },
 

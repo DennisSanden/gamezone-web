@@ -16,8 +16,8 @@ export const handelsstadTillFastning: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "175 block",
-            to: "200 block",
+            from: "88 block",
+            to: "100 block",
         },
     ],
 
@@ -26,77 +26,47 @@ export const handelsstadTillFastning: SettlementUpgrade = {
 
         materials: [
             {
-                id: "diamond-ore",
-                name: "Diamond Ore",
-                amount: 768,
-                icon: "⛏️",
-            },
-            {
-                id: "iron-ore",
-                name: "Iron Ore",
-                amount: 768,
-                icon: "⛏️",
-            },
-            {
-                id: "wheat",
-                name: "Wheat",
-                amount: 768,
-                icon: "🌾",
-            },
-            {
-                id: "carrots",
-                name: "Carrots",
-                amount: 768,
-                icon: "🥕",
-            },
-            {
-                id: "leather",
-                name: "Leather",
+                id: "emerald",
+                name: "Emerald",
                 amount: 384,
-                icon: "🟫",
+                icon: "💚",
             },
             {
-                id: "beef",
-                name: "Beef",
-                amount: 384,
+                id: "sugar-cane",
+                name: "Sugar Cane",
+                amount: 1024,
+                icon: "🌿",
+            },
+            {
+                id: "mutton",
+                name: "Mutton",
+                amount: 512,
                 icon: "🥩",
             },
             {
-                id: "oak-logs",
-                name: "Oak Logs",
-                amount: 768,
+                id: "mangrove-log",
+                name: "Mangrove Log",
+                amount: 1024,
                 icon: "🪵",
             },
             {
-                id: "birch-logs",
-                name: "Birch Logs",
-                amount: 768,
-                icon: "🪵",
-            },
-            {
-                id: "cod",
-                name: "Cod",
-                amount: 192,
-                icon: "🐟",
-            },
-            {
-                id: "salmon",
-                name: "Salmon",
-                amount: 192,
-                icon: "🐟",
-            },
-            {
-                id: "stone-bricks",
-                name: "Stone Bricks",
-                amount: 2560,
-                icon: "🧱",
-            },
-            {
-                id: "fermented-spider-eye",
-                name: "Fermented Spider Eye",
+                id: "tropical-fish",
+                name: "Tropical Fish",
                 amount: 256,
-                icon: "🕷️",
+                icon: "🐠",
             },
+            {
+                id: "white-concrete",
+                name: "White Concrete",
+                amount: 2048,
+                icon: "⬜",
+            },
+            {
+                id: "glowstone-dust",
+                name: "Glowstone Dust",
+                amount: 192,
+                icon: "✨",
+            }
         ],
     },
 

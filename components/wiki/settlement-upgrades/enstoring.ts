@@ -16,8 +16,8 @@ export const enstoringTillLager: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "25 block",
-            to: "40 block",
+            from: "13 block",
+            to: "20 block",
         },
     ],
 
@@ -26,41 +26,17 @@ export const enstoringTillLager: SettlementUpgrade = {
 
         materials: [
             {
-                id: "coal",
-                name: "Coal",
-                amount: 128,
-                icon: "⬛",
-            },
-            {
-                id: "wheat",
-                name: "Wheat",
-                amount: 128,
-                icon: "🌾",
-            },
-            {
-                id: "leather",
-                name: "Leather",
-                amount: 64,
-                icon: "🟫",
-            },
-            {
-                id: "oak-logs",
-                name: "Oak Logs",
-                amount: 128,
+                id: "oak-log",
+                name: "Oak Log",
+                amount: 32,
                 icon: "🪵",
             },
             {
-                id: "cod",
-                name: "Cod",
-                amount: 32,
-                icon: "🐟",
-            },
-            {
-                id: "stone-bricks",
-                name: "Stone Bricks",
-                amount: 256,
-                icon: "🧱",
-            },
+                id: "cobblestone",
+                name: "Cobblestone",
+                amount: 64,
+                icon: "🪨",
+            }
         ],
     },
 

@@ -16,8 +16,8 @@ export const kopingTillStad: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "125 block",
-            to: "150 block",
+            from: "63 block",
+            to: "75 block",
         },
     ],
 
@@ -26,47 +26,47 @@ export const kopingTillStad: SettlementUpgrade = {
 
         materials: [
             {
-                id: "lapis-lazuli-ore",
-                name: "Lapis Lazuli Ore",
-                amount: 768,
-                icon: "⛏️",
+                id: "redstone",
+                name: "Redstone",
+                amount: 512,
+                icon: "🔴",
             },
             {
-                id: "pumpkin",
-                name: "Pumpkin",
-                amount: 768,
-                icon: "🎃",
+                id: "bread",
+                name: "Bread",
+                amount: 512,
+                icon: "🍞",
             },
             {
-                id: "egg",
-                name: "Egg",
-                amount: 384,
-                icon: "🥚",
+                id: "chicken",
+                name: "Chicken",
+                amount: 256,
+                icon: "🍗",
             },
             {
-                id: "dark-oak-logs",
-                name: "Dark Oak Logs",
-                amount: 768,
+                id: "acacia-log",
+                name: "Acacia Log",
+                amount: 512,
                 icon: "🪵",
             },
             {
-                id: "salmon",
-                name: "Salmon",
-                amount: 192,
+                id: "cod",
+                name: "Cod",
+                amount: 128,
                 icon: "🐟",
             },
             {
-                id: "polished-andesite",
-                name: "Polished Andesite",
-                amount: 1536,
+                id: "mud-bricks",
+                name: "Mud Bricks",
+                amount: 1024,
                 icon: "🧱",
             },
             {
-                id: "magma-cream",
-                name: "Magma Cream",
-                amount: 128,
+                id: "blaze-powder",
+                name: "Blaze Powder",
+                amount: 96,
                 icon: "🔥",
-            },
+            }
         ],
     },
 

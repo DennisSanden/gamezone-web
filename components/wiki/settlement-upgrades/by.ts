@@ -16,8 +16,8 @@ export const byTillBosattning: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "60 block",
-            to: "80 block",
+            from: "30 block",
+            to: "40 block",
         },
     ],
 
@@ -26,41 +26,41 @@ export const byTillBosattning: SettlementUpgrade = {
 
         materials: [
             {
-                id: "copper-ore",
-                name: "Copper Ore",
-                amount: 256,
+                id: "raw-iron",
+                name: "Raw Iron",
+                amount: 64,
                 icon: "⛏️",
             },
             {
-                id: "potatoes",
-                name: "Potatoes",
-                amount: 256,
-                icon: "🥔",
+                id: "carrot",
+                name: "Carrot",
+                amount: 32,
+                icon: "🥕",
             },
             {
-                id: "white-wool",
-                name: "White Wool",
-                amount: 128,
-                icon: "🐑",
+                id: "beef",
+                name: "Beef",
+                amount: 64,
+                icon: "🥩",
             },
             {
-                id: "spruce-logs",
-                name: "Spruce Logs",
-                amount: 256,
+                id: "birch-log",
+                name: "Birch Log",
+                amount: 64,
                 icon: "🪵",
             },
             {
-                id: "tropical-fish",
-                name: "Tropical Fish",
-                amount: 64,
-                icon: "🐠",
+                id: "salmon",
+                name: "Salmon",
+                amount: 32,
+                icon: "🐟",
             },
             {
-                id: "deepslate-bricks",
-                name: "Deepslate Bricks",
-                amount: 512,
+                id: "bricks",
+                name: "Bricks",
+                amount: 128,
                 icon: "🧱",
-            },
+            }
         ],
     },
 

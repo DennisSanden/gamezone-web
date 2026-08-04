@@ -16,8 +16,8 @@ export const lagerTillBy: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "40 block",
-            to: "60 block",
+            from: "20 block",
+            to: "30 block",
         },
     ],
 
@@ -26,41 +26,41 @@ export const lagerTillBy: SettlementUpgrade = {
 
         materials: [
             {
-                id: "iron-ore",
-                name: "Iron Ore",
-                amount: 192,
-                icon: "⛏️",
+                id: "coal",
+                name: "Coal",
+                amount: 32,
+                icon: "⬛",
             },
             {
-                id: "carrots",
-                name: "Carrots",
-                amount: 192,
-                icon: "🥕",
+                id: "wheat",
+                name: "Wheat",
+                amount: 32,
+                icon: "🌾",
             },
             {
-                id: "beef",
-                name: "Beef",
-                amount: 96,
-                icon: "🥩",
+                id: "leather",
+                name: "Leather",
+                amount: 16,
+                icon: "🟫",
             },
             {
-                id: "birch-logs",
-                name: "Birch Logs",
-                amount: 192,
+                id: "oak-log",
+                name: "Oak Log",
+                amount: 64,
                 icon: "🪵",
             },
             {
-                id: "salmon",
-                name: "Salmon",
-                amount: 48,
+                id: "cod",
+                name: "Cod",
+                amount: 16,
                 icon: "🐟",
             },
             {
-                id: "bricks",
-                name: "Bricks",
-                amount: 384,
+                id: "stone-bricks",
+                name: "Stone Bricks",
+                amount: 128,
                 icon: "🧱",
-            },
+            }
         ],
     },
 

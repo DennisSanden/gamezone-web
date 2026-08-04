@@ -48,18 +48,6 @@ Byggnaden måste fortfarande finansieras, byggas och registreras innan bonusen a
 
 - **2 500 Coins**
 
-## Materialkrav
-
-| Material | Antal |
-|---|---:|
-| Iron Ingots | 16 |
-| Oak Logs | 128 |
-| Spruce Logs | 128 |
-| Birch Logs | 64 |
-| Oak Planks | 128 |
-| Stick | 128 |
-| Chest | 8 |
-| Stone Bricks | 64 |
 
 ## Placering och registrering
 

@@ -9,7 +9,7 @@ updatedAt: "2026-07-18"
 infoboxTitle: "Enstöring"
 infobox:
   nivå: "1"
-  territorieradie: "25 block"
+  territorieradie: "13 block"
   skapandekostnad: "0 Coins"
   nästaNivå: "Läger"
 relatedArticles:
@@ -31,11 +31,11 @@ relatedArticles:
 
 Alla nya settlements börjar automatiskt på denna nivå. Enstöring representerar den första etableringen innan settlementet har vuxit till ett större samhälle.
 
-> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX, återkommande avgift och vilka funktioner och byggnader som är tillgängliga.
+> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka funktioner och byggnader som är tillgängliga.
 
 ## Territorium
 
-Ett settlement på nivån Enstöring kontrollerar ett cirkulärt territorium med en radie på **25 block** från settlementets registrerade centrum.
+Ett settlement på nivån Enstöring kontrollerar ett cirkulärt territorium med en radie på **13 block** från settlementets registrerade centrum.
 
 Settlementets centrum bestäms när settlementet skapas och används därefter som permanent referenspunkt.
 
@@ -47,7 +47,7 @@ Det kostar inga Coins att skapa ett nytt settlement.
 
 När settlementet skapas registreras det direkt som nivå 1, Enstöring.
 
-## Grundbonus
+## Produktion
 
 Alla medlemmar i ett settlement får en grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 

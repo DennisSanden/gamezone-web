@@ -53,13 +53,6 @@ För att färdigställa Banken krävs:
 
 Coins betalas från settlementets stadskassa.
 
-## Materialkrav
-
-GameZone Engine Bible anger att byggnaden kräver material för att färdigställas.
-
-Den uppladdade versionen av Building Registry specificerar däremot inte vilka material eller antal som används.
-
-Därför listas inga påhittade materialvärden på denna sida.
 
 ## Registrering
 

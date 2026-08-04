@@ -55,13 +55,6 @@ För att färdigställa Laboratoriet krävs:
 
 Coins betalas från settlementets stadskassa.
 
-## Materialkrav
-
-GameZone Engine Bible anger att Laboratoriet kräver material för att färdigställas.
-
-Den uppladdade versionen av Building Registry innehåller däremot inga specificerade material eller antal.
-
-Därför listas inga påhittade materialvärden på denna sida.
 
 ## Registrering
 

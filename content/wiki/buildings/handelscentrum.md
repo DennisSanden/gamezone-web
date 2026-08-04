@@ -45,7 +45,6 @@ Handelscentrum låses upp på:
 
 Att byggnaden är upplåst innebär inte att den automatiskt är byggd.
 
-Settlementet måste betala byggkostnaden och lämna in samtliga material innan byggnaden aktiveras.
 
 ## Byggkostnad
 
@@ -55,13 +54,6 @@ För att färdigställa Handelscentrum krävs:
 
 Coins betalas från settlementets stadskassa.
 
-## Materialkrav
-
-GameZone Engine Bible anger att Handelscentrum kräver material för att färdigställas.
-
-Den uppladdade versionen av bibeln specificerar däremot inte vilka material eller antal som ska användas.
-
-Därför listas inga påhittade materialvärden på denna sida.
 
 ## Registrering
 

@@ -50,15 +50,15 @@ King och Lord kan hantera settlementets finanser, medlemmar och invånarnas titl
 
 King och Lord kan belöna aktiva invånare genom att ge dem högre titlar. Ju högre titel en spelare har, desto större produktionsbonus får spelaren på godkänd produktion inom settlementets kategori.
 
-Det kostar Coins att befordra en spelare. Kostnaden dras från [stadskassan](/wiki/economy/stadskassan), inte från den befordrade spelarens privata saldo.
+Det kostar Coins att befordra en spelare. Titelnivå 2 kostar **1 000 Coins**, nivå 3 kostar **5 000 Coins**, nivå 4 kostar **15 000 Coins** och nivå 5 kostar **50 000 Coins**. Kostnaden dras från [stadskassan](/wiki/economy/stadskassan), inte från den befordrade spelarens privata saldo.
 
-| Titelnivå | Produktionsbonus | Max antal spelare |
-|---:|---:|---:|
-| 1 | +0 % | Obegränsat |
-| 2 | +5 % | 5 |
-| 3 | +10 % | 3 |
-| 4 | +15 % | 2 |
-| 5 | +20 % | 1 |
+| Titelnivå | Produktionsbonus | Max antal spelare | Kostnad |
+|---:|---:|---:|---:|
+| 1 | +0 % | Obegränsat | 0 Coins |
+| 2 | +5 % | 5 | 1 000 Coins |
+| 3 | +10 % | 3 | 5 000 Coins |
+| 4 | +15 % | 2 | 15 000 Coins |
+| 5 | +20 % | 1 | 50 000 Coins |
 
 > [!NOTE]
 > Platsgränserna gäller samtidigt inom settlementet. Ett settlement kan alltså ha högst fem spelare på titelnivå 2, tre på nivå 3, två på nivå 4 och en på nivå 5.

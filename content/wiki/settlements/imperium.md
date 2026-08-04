@@ -30,7 +30,7 @@ Imperium låser även upp **Underverk**, settlementets högsta permanenta specia
 
 ## Territorium
 
-Imperium ger ett territorium med en radie på **300 block** från settlementets registrerade centrum.
+Imperium ger ett territorium med en radie på **150 block** från settlementets registrerade centrum.
 
 Detta är det största territorium som ett settlement kan uppnå.
 
@@ -40,7 +40,7 @@ Settlementets registrerade centrum är permanent och kan inte flyttas.
 
 Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
 
-## Grundbonus
+## Produktion
 
 Imperium behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
@@ -54,7 +54,7 @@ Grundbonusen gäller:
 - Byggmaterial
 - Alkemi
 
-Bonusar från upplåsta byggnader läggs ovanpå grundbonusen.
+
 
 Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
 

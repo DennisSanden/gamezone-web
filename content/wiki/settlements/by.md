@@ -9,7 +9,7 @@ updatedAt: "2026-07-18"
 infoboxTitle: "By"
 infobox:
   nivå: "3"
-  territorieradie: "60 block"
+  territorieradie: "30 block"
   nästaNivå: "Bosättning"
 relatedArticles:
   - category: "settlements"
@@ -30,11 +30,11 @@ relatedArticles:
 
 På denna nivå blir settlementet ett etablerat samhälle med organiserad handel. Server TAX ökar ytterligare och den första samhällsbyggnaden blir tillgänglig genom Handelscentrum, vilket också låser upp möjligheten att registrera företag.
 
-> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX, återkommande avgift och vilka byggnader och funktioner som är tillgängliga.
+> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka byggnader och funktioner som är tillgängliga.
 
 ## Territorium
 
-Ett settlement på nivån By kontrollerar ett cirkulärt territorium med en radie på **60 block** från settlementets registrerade centrum.
+Ett settlement på nivån By kontrollerar ett cirkulärt territorium med en radie på **30 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 3.
 
@@ -42,9 +42,9 @@ Settlementets registrerade centrum är permanent och kan inte flyttas.
 
 Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
 
-## Grundbonus
+## Produktion
 
-Alla aktiva invånare får settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
+Invånare får endast Coins från resurser som tillhör settlementets valda kategori.
 
 Grundbonusen gäller:
 
@@ -56,9 +56,9 @@ Grundbonusen gäller:
 - Byggmaterial
 - Alkemi
 
-Bonusar från upplåsta byggnader läggs ovanpå grundbonusen.
 
-> [!IMPORTANT] Grundbonusen gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
+
+> [!IMPORTANT] Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
 
 
 

@@ -16,8 +16,8 @@ export const bosattningTillSamhalle: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "80 block",
-            to: "100 block",
+            from: "40 block",
+            to: "50 block",
         },
     ],
 
@@ -26,47 +26,41 @@ export const bosattningTillSamhalle: SettlementUpgrade = {
 
         materials: [
             {
-                id: "gold-ore",
-                name: "Gold Ore",
-                amount: 384,
-                icon: "⛏️",
+                id: "raw-copper",
+                name: "Raw Copper",
+                amount: 256,
+                icon: "🟧",
             },
             {
-                id: "beetroot",
-                name: "Beetroot",
-                amount: 384,
-                icon: "🌱",
+                id: "potato",
+                name: "Potato",
+                amount: 128,
+                icon: "🥔",
             },
             {
-                id: "porkchop",
-                name: "Porkchop",
-                amount: 192,
-                icon: "🥩",
+                id: "white-wool",
+                name: "White Wool",
+                amount: 128,
+                icon: "⬜",
             },
             {
-                id: "jungle-logs",
-                name: "Jungle Logs",
-                amount: 384,
+                id: "spruce-log",
+                name: "Spruce Log",
+                amount: 256,
                 icon: "🪵",
             },
             {
-                id: "pufferfish",
-                name: "Pufferfish",
-                amount: 96,
-                icon: "🐡",
-            },
-            {
-                id: "glass",
-                name: "Glass",
-                amount: 768,
-                icon: "🪟",
-            },
-            {
-                id: "nether-wart",
-                name: "Nether Wart",
+                id: "tropical-fish",
+                name: "Tropical Fish",
                 amount: 64,
-                icon: "🍄",
+                icon: "🐠",
             },
+            {
+                id: "deepslate-bricks",
+                name: "Deepslate Bricks",
+                amount: 512,
+                icon: "🧱",
+            }
         ],
     },
 

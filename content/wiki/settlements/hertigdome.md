@@ -30,7 +30,7 @@ Hertigdöme låser även upp **Slott**, ett permanent byggprojekt som represente
 
 ## Territorium
 
-Hertigdöme ger ett territorium med en radie på **270 block** från settlementets registrerade centrum.
+Hertigdöme ger ett territorium med en radie på **135 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 12.
 
@@ -38,7 +38,7 @@ Settlementets registrerade centrum är permanent och kan inte flyttas.
 
 Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
 
-## Grundbonus
+## Produktion
 
 Hertigdöme behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
@@ -52,7 +52,7 @@ Grundbonusen gäller:
 - Byggmaterial
 - Alkemi
 
-Bonusar från upplåsta byggnader läggs ovanpå grundbonusen.
+
 
 Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
 

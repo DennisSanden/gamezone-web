@@ -16,8 +16,8 @@ export const stadTillHandelsstad: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "150 block",
-            to: "175 block",
+            from: "75 block",
+            to: "88 block",
         },
     ],
 
@@ -26,47 +26,47 @@ export const stadTillHandelsstad: SettlementUpgrade = {
 
         materials: [
             {
-                id: "emerald-ore",
-                name: "Emerald Ore",
-                amount: 1024,
-                icon: "⛏️",
+                id: "lapis-lazuli",
+                name: "Lapis Lazuli",
+                amount: 768,
+                icon: "🔵",
             },
             {
-                id: "sugar-cane",
-                name: "Sugar Cane",
-                amount: 1024,
-                icon: "🌿",
+                id: "pumpkin",
+                name: "Pumpkin",
+                amount: 768,
+                icon: "🎃",
             },
             {
-                id: "mutton",
-                name: "Mutton",
-                amount: 512,
-                icon: "🥩",
+                id: "egg",
+                name: "Egg",
+                amount: 384,
+                icon: "🥚",
             },
             {
-                id: "mangrove-logs",
-                name: "Mangrove Logs",
-                amount: 1024,
+                id: "dark-oak-log",
+                name: "Dark Oak Log",
+                amount: 768,
                 icon: "🪵",
             },
             {
-                id: "tropical-fish",
-                name: "Tropical Fish",
-                amount: 256,
-                icon: "🐠",
-            },
-            {
-                id: "white-concrete",
-                name: "White Concrete",
-                amount: 2048,
-                icon: "⬜",
-            },
-            {
-                id: "glowstone-dust",
-                name: "Glowstone Dust",
+                id: "salmon",
+                name: "Salmon",
                 amount: 192,
-                icon: "✨",
+                icon: "🐟",
             },
+            {
+                id: "polished-andesite",
+                name: "Polished Andesite",
+                amount: 1536,
+                icon: "🪨",
+            },
+            {
+                id: "magma-cream",
+                name: "Magma Cream",
+                amount: 128,
+                icon: "🟠",
+            }
         ],
     },
 
@@ -75,5 +75,5 @@ export const stadTillHandelsstad: SettlementUpgrade = {
     requiredCurrentBuildings: ["Kyrka"],
 
     footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Handelsstad. Marknadsplats låses upp på nivå 8 som ett separat byggprojekt med en kostnad på 150 000 Coins och egna materialkrav.",
+        "Kostnaden ovan gäller settlementuppgraderingen till Handelsstad. Marknadsplats låses upp på nivå 8 som ett separat byggprojekt med en kostnad på 150 000 Coins.",
 };

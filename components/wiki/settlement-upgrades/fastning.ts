@@ -16,8 +16,8 @@ export const fastningTillHuvudstad: SettlementUpgrade = {
     changes: [
         {
             label: "Territorieradie",
-            from: "200 block",
-            to: "225 block",
+            from: "100 block",
+            to: "113 block",
         },
     ],
 
@@ -26,77 +26,77 @@ export const fastningTillHuvudstad: SettlementUpgrade = {
 
         materials: [
             {
-                id: "gold-ore",
-                name: "Gold Ore",
-                amount: 1024,
+                id: "diamond",
+                name: "Diamond",
+                amount: 300,
+                icon: "💎",
+            },
+            {
+                id: "iron-ore",
+                name: "Iron Ore",
+                amount: 768,
                 icon: "⛏️",
             },
             {
-                id: "copper-ore",
-                name: "Copper Ore",
-                amount: 1024,
-                icon: "⛏️",
+                id: "wheat",
+                name: "Wheat",
+                amount: 768,
+                icon: "🌾",
             },
             {
-                id: "potatoes",
-                name: "Potatoes",
-                amount: 1024,
-                icon: "🥔",
+                id: "carrot",
+                name: "Carrot",
+                amount: 768,
+                icon: "🥕",
             },
             {
-                id: "beetroot",
-                name: "Beetroot",
-                amount: 1024,
-                icon: "🌱",
+                id: "leather",
+                name: "Leather",
+                amount: 384,
+                icon: "🟫",
             },
             {
-                id: "white-wool",
-                name: "White Wool",
-                amount: 512,
-                icon: "🐑",
-            },
-            {
-                id: "porkchop",
-                name: "Porkchop",
-                amount: 512,
+                id: "beef",
+                name: "Beef",
+                amount: 384,
                 icon: "🥩",
             },
             {
-                id: "spruce-logs",
-                name: "Spruce Logs",
-                amount: 1024,
+                id: "oak-log",
+                name: "Oak Log",
+                amount: 768,
                 icon: "🪵",
             },
             {
-                id: "jungle-logs",
-                name: "Jungle Logs",
-                amount: 1024,
+                id: "birch-log",
+                name: "Birch Log",
+                amount: 768,
                 icon: "🪵",
             },
             {
-                id: "tropical-fish",
-                name: "Tropical Fish",
+                id: "cod",
+                name: "Cod",
+                amount: 192,
+                icon: "🐟",
+            },
+            {
+                id: "salmon",
+                name: "Salmon",
+                amount: 192,
+                icon: "🐟",
+            },
+            {
+                id: "stone-bricks",
+                name: "Stone Bricks",
+                amount: 2560,
+                icon: "🧱",
+            },
+            {
+                id: "fermented-spider-eye",
+                name: "Fermented Spider Eye",
                 amount: 256,
-                icon: "🐠",
-            },
-            {
-                id: "pufferfish",
-                name: "Pufferfish",
-                amount: 256,
-                icon: "🐡",
-            },
-            {
-                id: "glass",
-                name: "Glass",
-                amount: 3072,
-                icon: "🪟",
-            },
-            {
-                id: "phantom-membrane",
-                name: "Phantom Membrane",
-                amount: 384,
-                icon: "👻",
-            },
+                icon: "🕷️",
+            }
         ],
     },
 
@@ -105,5 +105,5 @@ export const fastningTillHuvudstad: SettlementUpgrade = {
     requiredCurrentBuildings: [],
 
     footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Huvudstad. Monument låses upp på nivå 10 som ett separat byggprojekt med en kostnad på 400 000 Coins och egna materialkrav.",
+        "Kostnaden ovan gäller settlementuppgraderingen till Huvudstad. Monument låses upp på nivå 10 som ett separat byggprojekt med en kostnad på 400 000 Coins.",
 };

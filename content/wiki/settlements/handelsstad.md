@@ -31,7 +31,7 @@ Handelsstad låser även upp **Marknadsplats**, en permanent specialbyggnad som 
 
 ## Territorium
 
-Handelsstad ger ett territorium med en radie på **175 block** från settlementets registrerade centrum.
+Handelsstad ger ett territorium med en radie på **88 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 8.
 
@@ -39,7 +39,7 @@ Settlementets registrerade centrum är permanent och kan inte flyttas.
 
 Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
 
-## Grundbonus
+## Produktion
 
 Handelsstad behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
 
@@ -53,10 +53,10 @@ Grundbonusen gäller:
 - Byggmaterial
 - Alkemi
 
-Bonusar från upplåsta byggnader läggs ovanpå grundbonusen.
+
 
 > [!IMPORTANT]
-> Grundbonusen gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
+> Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
 
 
 

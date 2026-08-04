@@ -60,7 +60,6 @@ Ladugård låses upp på:
 
 Att byggnaden är upplåst innebär inte att den automatiskt är byggd.
 
-Settlementet måste betala byggkostnaden, lämna in samtliga material och registrera byggnaden innan bonusen aktiveras.
 
 ## Byggkostnad
 
@@ -70,22 +69,6 @@ För att färdigställa Ladugården krävs:
 
 Coins betalas från settlementets stadskassa enligt byggnadssystemets regler.
 
-## Materialkrav
-
-| Material | Antal |
-|---|---:|
-| Iron Ingots | 32 |
-| Wheat | 128 |
-| Hay Bales | 64 |
-| Leather | 64 |
-| Beef | 32 |
-| Oak Logs | 128 |
-| Oak Planks | 128 |
-| Cod | 32 |
-
-Samtliga material måste lämnas in innan byggnaden kan färdigställas.
-
-Materialen förbrukas permanent när byggprojektet slutförs.
 
 ## Placering och registrering
 
@@ -98,7 +81,6 @@ Byggnaden blir aktiv när:
 - settlementet har rätt inriktning
 - settlementet uppfyller nivåkravet
 - byggkostnaden är betald
-- alla materialkrav är uppfyllda
 - byggnaden har registrerats korrekt
 
 ## Nedgradering
@@ -107,7 +89,6 @@ En nedgradering förstör aldrig Ladugården och tar inte bort den permanenta by
 
 Om settlementet faller under nivå 2 blir byggnaden inaktiv och ger ingen bonus.
 
-När settlementet åter når Läger aktiveras byggnaden automatiskt igen utan en ny betalning eller nya material.
 
 ## Sammanfattning
 

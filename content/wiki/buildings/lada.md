@@ -57,7 +57,6 @@ För att låsa upp byggnaden krävs:
 
 - rätt settlementnivå
 - byggnadens Coin-kostnad
-- byggnadens materialkrav
 - tillräckligt saldo i stadskassan
 - samtliga resurser i Settlement Inventory
 - rätt behörighet
@@ -72,13 +71,6 @@ Ladan kostar:
 
 Kostnaden betalas från settlementets stadskassa.
 
-## Materialkrav
-
-Ladan kräver även byggnadsmaterial som levereras genom **Settlement Inventory**.
-
-GameZone Engine Bible anger att de exakta materialkraven ska definieras i Building Registry och presenteras i GameZone Wiki. Den uppladdade versionen av Building Registry innehåller däremot ingen specificerad materiallista eller några antal för Ladan.
-
-Därför listas inga påhittade materialvärden på denna sida.
 
 ## Placering
 
@@ -110,7 +102,6 @@ När samtliga krav är uppfyllda sker upplåsningen atomärt:
 2. Byggnadens status verifieras.
 3. Behörigheten verifieras.
 4. Coin-kostnaden verifieras.
-5. Materialkraven verifieras.
 6. Coins dras från stadskassan.
 7. Material förbrukas från Settlement Inventory.
 8. Ladan registreras permanent.

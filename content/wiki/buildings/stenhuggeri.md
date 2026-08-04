@@ -43,18 +43,6 @@ Byggnaden måste finansieras, byggas och registreras innan bonusen aktiveras.
 
 - **2 500 Coins**
 
-## Materialkrav
-
-| Material | Antal |
-|---|---:|
-| Stone | 256 |
-| Cobblestone | 256 |
-| Stone Bricks | 128 |
-| Andesite | 64 |
-| Granite | 64 |
-| Diorite | 64 |
-| Iron Ingots | 32 |
-| Oak Logs | 64 |
 
 ## Placering och registrering
 

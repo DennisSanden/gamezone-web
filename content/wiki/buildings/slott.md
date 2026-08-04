@@ -49,13 +49,6 @@ För att färdigställa Slottet krävs:
 
 Coins betalas från settlementets stadskassa.
 
-## Materialkrav
-
-GameZone Engine Bible anger att Slottet kräver material för att färdigställas.
-
-Den uppladdade versionen av Building Registry innehåller däremot inga specificerade material eller antal.
-
-Därför listas inga påhittade materialvärden på denna sida.
 
 ## Registrering
 
