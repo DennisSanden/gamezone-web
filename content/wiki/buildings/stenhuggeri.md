@@ -39,4 +39,4 @@ Ger +5 % Coins från godkänd produktion inom Byggmaterial.
 
 ## Fysisk byggnad
 
-GameZone Engine kräver inte att en särskild fysisk byggnad registreras i världen. Spelarna får själva utforma byggnaden  men licensen och dess funktion aktiveras genom menyn.
+Byggnadens funktion aktiveras automatiskt när den låses upp. Det finns inget krav på att placera ut eller registrera en fysisk byggnad i världen. Du får gärna bygga en passande byggnad, men det är helt frivilligt och påverkar inte funktionaliteten.
