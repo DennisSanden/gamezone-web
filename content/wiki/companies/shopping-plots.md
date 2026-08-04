@@ -18,7 +18,9 @@ Vid spawn finns shopping plots som företag kan köpa och använda som butikstom
 
 Varje företag kan äga högst en shopping plot.
 
-En Shopping Plot-ägare kan dessutom hyra ut försäljningsplatser till andra spelare mot en valfri provisionsavgift. På så sätt kan flera handlare bedriva försäljning från samma butik.
+En Shopping Plot-ägare kan dessutom hyra ut försäljningsplatser till andra företagsägare mot en valfri provisionsavgift. På så sätt kan flera företag bedriva försäljning från samma butik.
+
+Den som hyr måste äga ett aktivt företag. Ett företag kan bara hyra en plats på en Shopping Plot åt gången.
 
 ## Managers
 
@@ -30,10 +32,12 @@ Företagsägaren kan ge en annan spelare byggrättigheter med:
 
 ## Hyresgäster
 
-En Shopping Plot-ägare kan hyra ut en plats till en annan spelare.
+En Shopping Plot-ägare kan hyra ut en plats till ägaren av ett annat aktivt företag. Vanliga spelare och vanliga företagsmedlemmar kan inte registreras som hyresgäster.
+
+Hyresgästens företag får inte redan hyra en plats på en annan Shopping Plot.
 
 ```text
-/shoppingplot rent <spelare> <procent>
+/shoppingplot rent <företagsägare> <procent>
 ```
 
 Exempel:
@@ -42,7 +46,7 @@ Exempel:
 /shoppingplot rent Dennis 5
 ```
 
-Det innebär att Dennis blir hyresgäst och att 5 % av Dennis försäljningar automatiskt betalas till Shopping Plot-ägaren.
+Det innebär att Dennis företag får en hyrd försäljningsplats och att 5 % av Dennis försäljningar automatiskt betalas till Shopping Plot-ägaren. Dennis måste vara registrerad ägare till ett aktivt företag.
 
 ### Provision
 
@@ -93,7 +97,7 @@ En hyresgäst kan inte sägas upp så länge någon av dennes registrerade kisto
 /shoppingplot buy
 /shoppingplot sell
 /shoppingplot info
-/shoppingplot rent <spelare> <procent>
+/shoppingplot rent <företagsägare> <procent>
 /shoppingplot unrent <spelare>
 /shoppingplot tenants
 ```
