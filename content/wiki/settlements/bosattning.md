@@ -9,7 +9,7 @@ updatedAt: "2026-07-18"
 infoboxTitle: "Bosättning"
 infobox:
   nivå: "4"
-  territorieradie: "80 block"
+  territorieradie: "40 block"
   veckounderhåll: "2 000 Coins"
   grundbonus: "+15 % Coins"
   handelsrabatt: "15 %"
@@ -37,7 +37,7 @@ På denna nivå fortsätter settlementet att utvecklas genom ett större territo
 
 ## Territorium
 
-Ett settlement på nivån Bosättning kontrollerar ett cirkulärt territorium med en radie på **80 block** från settlementets registrerade centrum.
+Ett settlement på nivån Bosättning kontrollerar ett cirkulärt territorium med en radie på **40 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 4.
 

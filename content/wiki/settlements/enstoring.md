@@ -9,7 +9,7 @@ updatedAt: "2026-07-18"
 infoboxTitle: "Enstöring"
 infobox:
   nivå: "1"
-  territorieradie: "25 block"
+  territorieradie: "13 block"
   skapandekostnad: "0 Coins"
   veckounderhåll: "0 Coins"
   grundbonus: "+15 % Coins"
@@ -38,7 +38,7 @@ Alla nya settlements börjar automatiskt på denna nivå. Enstöring representer
 
 ## Territorium
 
-Ett settlement på nivån Enstöring kontrollerar ett cirkulärt territorium med en radie på **25 block** från settlementets registrerade centrum.
+Ett settlement på nivån Enstöring kontrollerar ett cirkulärt territorium med en radie på **13 block** från settlementets registrerade centrum.
 
 Settlementets centrum bestäms när settlementet skapas och används därefter som permanent referenspunkt.
 

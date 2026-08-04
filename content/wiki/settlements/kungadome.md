@@ -30,7 +30,7 @@ Kungadöme låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stä
 
 ## Territorium
 
-Kungadöme ger ett territorium med en radie på **295 block** från settlementets registrerade centrum.
+Kungadöme ger ett territorium med en radie på **148 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 14.
 

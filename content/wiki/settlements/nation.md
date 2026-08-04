@@ -30,7 +30,7 @@ Nation låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället
 
 ## Territorium
 
-Nation ger ett territorium med en radie på **285 block** från settlementets registrerade centrum.
+Nation ger ett territorium med en radie på **143 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 13.
 

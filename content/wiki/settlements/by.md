@@ -9,7 +9,7 @@ updatedAt: "2026-07-18"
 infoboxTitle: "By"
 infobox:
   nivå: "3"
-  territorieradie: "60 block"
+  territorieradie: "30 block"
   veckounderhåll: "1 000 Coins"
   grundbonus: "+15 % Coins"
   handelsrabatt: "10 %"
@@ -37,7 +37,7 @@ På denna nivå blir settlementet ett etablerat samhälle med organiserad handel
 
 ## Territorium
 
-Ett settlement på nivån By kontrollerar ett cirkulärt territorium med en radie på **60 block** från settlementets registrerade centrum.
+Ett settlement på nivån By kontrollerar ett cirkulärt territorium med en radie på **30 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 3.
 

@@ -30,7 +30,7 @@ Huvudstad låser även upp **Monument**, en permanent specialbyggnad som ger set
 
 ## Territorium
 
-Huvudstad ger ett territorium med en radie på **225 block** från settlementets registrerade centrum.
+Huvudstad ger ett territorium med en radie på **113 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 10.
 

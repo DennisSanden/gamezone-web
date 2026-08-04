@@ -29,7 +29,7 @@ På denna nivå växer settlementets territorium och handelsrabatt ytterligare. 
 
 ## Territorium
 
-Köping ger ett territorium med en radie på **125 block** från settlementets registrerade centrum.
+Köping ger ett territorium med en radie på **63 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 6.
 

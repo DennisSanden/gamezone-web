@@ -31,7 +31,7 @@ Den nya byggnaden är **Laboratorium**, som ger settlementets aktiva medlemmar e
 
 ## Territorium
 
-Samhälle ger ett territorium med en radie på **100 block** från settlementets registrerade centrum.
+Samhälle ger ett territorium med en radie på **50 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 5.
 

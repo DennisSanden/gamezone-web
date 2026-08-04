@@ -30,7 +30,7 @@ Hertigdöme låser även upp **Slott**, ett permanent byggprojekt som represente
 
 ## Territorium
 
-Hertigdöme ger ett territorium med en radie på **270 block** från settlementets registrerade centrum.
+Hertigdöme ger ett territorium med en radie på **135 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 12.
 

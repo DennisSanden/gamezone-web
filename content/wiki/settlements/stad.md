@@ -31,7 +31,7 @@ Stad låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället s
 
 ## Territorium
 
-Stad ger ett territorium med en radie på **150 block** från settlementets registrerade centrum.
+Stad ger ett territorium med en radie på **75 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 7.
 

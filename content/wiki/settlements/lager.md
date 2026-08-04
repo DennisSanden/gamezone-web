@@ -9,7 +9,7 @@ updatedAt: "2026-07-18"
 infoboxTitle: "Läger"
 infobox:
   nivå: "2"
-  territorieradie: "40 block"
+  territorieradie: "20 block"
   veckounderhåll: "500 Coins"
   grundbonus: "+15 % Coins"
   handelsrabatt: "5 %"
@@ -37,7 +37,7 @@ På denna nivå har settlementet börjat utvecklas från en ensam etablering til
 
 ## Territorium
 
-Ett settlement på nivån Läger kontrollerar ett cirkulärt territorium med en radie på **40 block** från settlementets registrerade centrum.
+Ett settlement på nivån Läger kontrollerar ett cirkulärt territorium med en radie på **20 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 2.
 

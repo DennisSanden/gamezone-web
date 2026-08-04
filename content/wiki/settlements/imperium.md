@@ -30,7 +30,7 @@ Imperium låser även upp **Underverk**, settlementets högsta permanenta specia
 
 ## Territorium
 
-Imperium ger ett territorium med en radie på **300 block** från settlementets registrerade centrum.
+Imperium ger ett territorium med en radie på **150 block** från settlementets registrerade centrum.
 
 Detta är det största territorium som ett settlement kan uppnå.
 

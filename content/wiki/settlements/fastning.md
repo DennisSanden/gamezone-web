@@ -30,7 +30,7 @@ Fästning låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stäl
 
 ## Territorium
 
-Fästning ger ett territorium med en radie på **200 block** från settlementets registrerade centrum.
+Fästning ger ett territorium med en radie på **100 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 9.
 

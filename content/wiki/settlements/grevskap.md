@@ -30,7 +30,7 @@ Grevskap låser inte upp någon ny unik specialbyggnad. Nivån fungerar i ställ
 
 ## Territorium
 
-Grevskap ger ett territorium med en radie på **250 block** från settlementets registrerade centrum.
+Grevskap ger ett territorium med en radie på **125 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 11.
 

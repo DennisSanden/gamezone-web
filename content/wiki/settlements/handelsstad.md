@@ -31,7 +31,7 @@ Handelsstad låser även upp **Marknadsplats**, en permanent specialbyggnad som 
 
 ## Territorium
 
-Handelsstad ger ett territorium med en radie på **175 block** från settlementets registrerade centrum.
+Handelsstad ger ett territorium med en radie på **88 block** från settlementets registrerade centrum.
 
 Territoriet utökas automatiskt när settlementet når nivå 8.
 
