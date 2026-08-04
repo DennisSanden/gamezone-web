@@ -1,59 +1,43 @@
 ---
 title: "Boskap"
-description: "Information om produktionskategorin Boskap."
+description: "Djurhållning, kött, ull, läder och ägg."
 category: "Produktionskategorier"
-order: 2
-version: "1.0"
+order: 3
+version: "1.1"
 engineVersion: "Production Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-04"
 infoboxTitle: "Boskap"
 infobox:
-  kategori: "Produktion"
-  bonusbyggnad: "Ladugård"
   coinregel: "Endast vald kategori"
+  automation: "Ger inga Coins"
 ---
 
-## Översikt
+## Vad är Boskap?
 
-**Boskap** är en av GameZones sju produktionskategorier.
-
-All registrerad produktion inom Boskap kan ge Coins enligt reglerna i Production Engine och påverkas av settlementets aktiva bonusar.
+Boskap handlar om att föda upp och ta hand om djur. Exempel på resurser är beef, leather, porkchop, chicken, egg, wool och mutton. Får, kor, grisar, hönor, kaniner och getter är därför viktiga delar av kategorin.
 
 > [!IMPORTANT]
-> Den här kategorins resurser ger endast Coins till spelare vars settlement har valt kategorin. Resurser utanför settlementets valda kategori ger inga Coins.
+> Resurser från djur ger bara Coins om settlementet valde Boskap när det skapades med `/settlement create <namn>`. Automatiserad insamling ger inga Coins.
 
-## Vad räknas som Boskap?
+## Max antal per chunk
 
-Boskap omfattar aktiviteter kopplade till djurhållning som registreras av Production Engine.
+För att skydda serverns prestanda finns ett tak för hur många djur och vissa andra entiteter som får finnas i samma chunk. Sprid ut större gårdar över flera chunks.
 
-Endast produktion som uppfyller reglerna i GameZone Engine är berättigad till Coin-belöningar.
+| Typ | Max per chunk |
+|---|---:|
+| Chicken | 20 |
+| Cow | 20 |
+| Sheep | 20 |
+| Pig | 20 |
+| Villager | 20 |
+| Horse | 10 |
+| Donkey | 10 |
+| Mule | 10 |
+| Llama | 10 |
+| Camel | 10 |
+| Bee | 15 |
+| Rabbit | 20 |
+| Goat | 20 |
 
-Automatiserade system ger inga Coins.
-
-
-## Ladugård
-
-Ladugård är Boskaps specialbyggnad.
-
-När byggnaden har färdigställts får settlementets aktiva medlemmar:
-
-- **+5 % Coins från Boskap**
-
-Bonusen gäller endast registrerad och godkänd produktion.
-
-## Registrering
-
-Varje aktivitet verifieras av Production Engine.
-
-Systemet kontrollerar bland annat:
-
-- att spelaren är berättigad till belöning
-- att produktionen inte är automatiserad
-- att settlementets bonusar är aktiva
-- att alla regler i Production Engine följs
-
-## Sammanfattning
-
-Boskap är en av GameZones sju produktionskategorier.
-
-Produktionen påverkas av settlementets grundbonus och kan förstärkas ytterligare genom **Ladugård**.
+> [!TIP]
+> Kontrollera chunkgränser innan du bygger ladugårdar och hagar. En gård som ser ut som ett enda område kan ligga i flera chunks.

@@ -1,57 +1,24 @@
 ---
 title: "Gruvdrift"
-description: "Information om produktionskategorin Gruvdrift."
+description: "Mineraler, malm och skatter."
 category: "Produktionskategorier"
-order: 6
-version: "1.0"
+order: 1
+version: "1.1"
 engineVersion: "Production Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-04"
 infoboxTitle: "Gruvdrift"
 infobox:
-  kategori: "Produktion"
-  bonusbyggnad: "Ingen"
   coinregel: "Endast vald kategori"
+  automation: "Ger inga Coins"
 ---
 
-## Översikt
+## Vad är Gruvdrift?
 
-**Gruvdrift** är en av GameZones sju produktionskategorier.
-
-All registrerad produktion inom Gruvdrift kan ge Coins enligt reglerna i Production Engine och påverkas av settlementets aktiva bonusar.
-
-Gruvdrift är den enda grundkategori som saknar en egen specialbyggnad.
+Gruvdrift passar settlements som vill utforska grottor, bryta malm och leta efter värdefulla mineraler. Exempel är coal, raw iron, raw copper, raw gold, redstone, lapis lazuli, emeralds och diamonds.
 
 > [!IMPORTANT]
-> Den här kategorins resurser ger endast Coins till spelare vars settlement har valt kategorin. Resurser utanför settlementets valda kategori ger inga Coins.
+> Resurserna ger bara Coins om settlementet valde Gruvdrift när det skapades med `/settlement create <namn>`.
 
-## Vad räknas som Gruvdrift?
+## Att tänka på
 
-Gruvdrift omfattar utvinning av malmer och andra resurser som registreras av Mining Registry.
-
-Endast produktion som uppfyller reglerna i GameZone Engine är berättigad till Coin-belöningar.
-
-Automatiserade system ger inga Coins.
-
-
-## Specialbyggnad
-
-Gruvdrift har **ingen egen specialbyggnad**.
-
-Den enda bonusen utöver settlementets grundbonus kommer därför från byggnader som förstärker grundbonusen.
-
-## Registrering
-
-Varje aktivitet verifieras av Production Engine.
-
-Systemet kontrollerar bland annat:
-
-- att spelaren är berättigad till belöning
-- att produktionen inte är automatiserad
-- att settlementets bonusar är aktiva
-- att alla regler i Production Engine följs
-
-## Sammanfattning
-
-Gruvdrift är en av GameZones sju produktionskategorier.
-
-Till skillnad från övriga grundkategorier saknar Gruvdrift en egen specialbyggnad och påverkas därför endast av settlementets grundbonus.
+Gruvdrift kan ge värdefulla resurser men fynden beror på tur och områdets tillgångar. Automatiserad insamling ger inga Coins.

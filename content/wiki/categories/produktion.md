@@ -1,45 +1,32 @@
 ---
 title: "Produktion"
-description: "Så fungerar kategoribaserad produktion och Coin-intäkter på GameZone."
+description: "Översikt över GameZones sju kategorier."
 category: "Produktionskategorier"
 order: 0
-version: "2.0"
+version: "1.1"
 engineVersion: "Production Registry"
 updatedAt: "2026-08-04"
 infoboxTitle: "Produktion"
 infobox:
-  kategorier: "7"
   coinregel: "Endast vald kategori"
-  tax: "Stadsskatt gäller"
+  automation: "Ger inga Coins"
 ---
 
-## Översikt
+## Välj en kategori
 
-När ett settlement skapas väljer det en produktionskategori. Valet avgör vilka resurser som kan ge Coins till settlementets invånare.
+När ett settlement skapas med `/settlement create <namn>` öppnas en meny där ni väljer vilken typ av resurser settlementet ska specialisera sig på.
 
 > [!IMPORTANT]
-> Spelare får endast Coins från resurser som tillhör settlementets valda kategori. Resurser utanför kategorin kan fortfarande samlas in, användas och säljas, men själva produktionen ger inga Coins.
+> Endast resurser inom den valda kategorin ger Coins från produktion. Resurser från andra kategorier kan fortfarande samlas in, användas och säljas, men de ger inga produktions-Coins.
 
-## Produktionskategorier
+## Kategorierna
 
-- Gruvdrift
-- Jordbruk
-- Boskap
-- Fiske
-- Skogsbruk
-- Byggmaterial
-- Alkemi
+- **Gruvdrift**, mineraler, malm och skatter
+- **Jordbruk**, grödor och odling
+- **Boskap**, djurhållning och resurser från djur
+- **Skogsbruk**, stockar och träresurser
+- **Byggmaterial**, förädlade block och byggresurser
+- **Fiske**, fisk och resurser från fiske
+- **Alkemi**, bryggning och alkemiska resurser
 
-## Stadsskatt på produktion
-
-När en spelare tjänar Coins genom produktion går en andel automatiskt till settlementets stadskassa. Standardnivån är 25 procent, men settlementets King kan sätta skatten mellan 0 och 100 procent.
-
-Detta är inte samma sak som Server TAX på företagshandel.
-
-## Registrering
-
-Production Engine kontrollerar att resursen tillhör spelarens settlementkategori, att spelaren är berättigad till Coins och att produktionen följer serverns regler.
-
-## Sammanfattning
-
-Vald kategori avgör vilka resurser som ger Coins. Produktion utanför kategorin ger inga Coins.
+Läs sidan för varje kategori innan ni väljer. Kategorin påverkar vilka aktiviteter som kan ge Coins.

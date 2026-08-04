@@ -1,99 +1,68 @@
 ---
 title: "Skapa ett settlement"
-description: "Grunda ett nytt samhälle, samla spelare och påbörja utvecklingen av en egen plats i GameZone-världen."
+description: "Grunda ett nytt samhälle, välj kategori och börja utveckla en egen plats i GameZone-världen."
 category: "Settlements"
 order: 1
-version: "1.1"
+version: "1.2"
 engineVersion: "Settlement Foundation"
-updatedAt: "2026-07-16"
-relatedArticles:
-  - category: "settlements"
-    article: "medlemskap"
-    title: "Medlemskap"
-    description: "Ansökningar, roller och hur spelare ansluter."
-  - category: "settlements"
-    article: "settlementnivaer"
-    title: "Settlementnivåer"
-    description: "Så utvecklas ett settlement genom femton nivåer."
-  - category: "government"
-    article: "roller"
-    title: "Roller"
-    description: "King, Lord och Member."
-  - category: "settlements"
-    article: "byggnader"
-    title: "Byggnader"
-    description: "Byggnader och bonusar som låses upp."
+updatedAt: "2026-08-04"
+infoboxTitle: "Skapa settlement"
+infobox:
+  kommando: "/settlement create <namn>"
+  startnivå: "1, Enstöring"
+  kostnad: "0 Coins"
 ---
 
-## Bildtest
+## Skapa ett settlement
 
-![Ett settlement i GameZone](/wiki/images/settlements/testbild.jpg)
+Ett settlement är en spelarstyrd bosättning med medlemmar, gemensam ekonomi, skyddad mark och möjlighet att utvecklas genom 15 nivåer.
 
-Ett settlement är en spelarstyrd bosättning som samlar medlemmar, resurser och gemensam utveckling på en bestämd plats i GameZone-världen.
+Skapa ett settlement genom att skriva:
 
-> [!INFO] Settlement-systemet hanteras av GameZone Engine. Wikin presenterar reglerna, men innehåller ingen egen spelogik.
+`/settlement create <namn>`
 
-## Översikt
+Exempel: `/settlement create Röstånga`
 
-När ett settlement skapas blir grundaren dess första ledare och får rollen **King**.
+När kommandot har godkänts öppnas en meny där du väljer settlementets produktionskategori. Stadens centrum placeras där du står när settlementet skapas, så välj platsen noggrant.
 
-Settlementet börjar på den första nivån och kan därefter utvecklas genom aktivitet, resurser och framtida uppgraderingar.
+> [!IMPORTANT]
+> Endast resurser inom settlementets valda kategori ger Coins från produktion. Läs mer under [Produktionskategorier](/wiki/categories/produktion).
 
-## Krav
+## Innan du skapar settlementet
 
-För att skapa ett settlement måste följande krav vara uppfyllda:
+Kontrollera att:
 
-- Spelaren får inte redan tillhöra ett settlement.
-- Namnet måste vara unikt.
-- Namnet får inte vara reserverat.
-- Spelaren får inte omfattas av en aktiv cooldown.
-- Platsen måste uppfylla GameZones områdesregler.
-
-> [!IMPORTANT] En spelare kan endast vara medlem i ett settlement åt gången.
-
-## Kostnad
+- du inte redan tillhör ett settlement
+- namnet är unikt och följer serverns regler
+- platsen ligger tillräckligt långt från andra settlements
+- platsen passar även när settlementet växer
 
 Det kostar för närvarande inga Coins att skapa ett settlement.
 
-> [!TIP] Välj namn och placering noggrant. Settlementets identitet kommer senare att synas i profiler, kartan, leaderboards och Chronicles.
-
-## Namn
-
-Settlementets namn används på webben, i spelet och i framtida integrationer.
-
-Namnet ska därför vara:
-
-- Unikt
-- Lätt att läsa
-- Lämpligt för GameZone
-- Förenligt med serverns regler
-
-## Ledarskap
-
-Grundaren blir automatiskt **King**
-
-King ansvarar bland annat för:
-
-- Medlemskap
-- Ledarskap
-- Behörigheter
-- Settlementets utveckling
-- Framtida uppgraderingar
-
-> [!WARNING] Om den enda kvarvarande spelaren är King och lämnar settlementet upplöses settlementet.
-
 ## Efter att settlementet skapats
 
-När settlementet har skapats kan ledaren börja utveckla organisationen.
+Grundaren blir automatiskt **King** och kan börja bjuda in eller godkänna medlemmar, registrera inventory och utveckla settlementet.
 
-### Rekrytera medlemmar
+Öppna settlementets funktioner genom `/gz menu` eller `/settlement menu`.
 
-Nya spelare ansöker om medlemskap. Behöriga ledare kan sedan godkänna eller avslå ansökan.
+### Registrera settlement inventory
 
-### Utse en Lord
+Titta på en kista och skriv:
 
-En [[King]] kan ge lämpliga medlemmar rollen **[[Lord]]** och tilldela särskilda behörigheter.
+`/settlement inventory register`
 
-### Utveckla settlementet
+Material som krävs för nivåuppgraderingar dras från registrerade kistor. Du kan se registrerade kistor med `/settlement inventory list` och ta bort en registrering med `/settlement inventory remove` medan du tittar på kistan.
 
-Settlementet kan växa genom nivåer, byggnader, resurser och andra krav som definieras av GameZone Engine.
+### Uppgradera settlementet
+
+Öppna `/gz menu`, välj **Settlement** och sedan **Uppgradering**. En uppgradering kan genomföras när settlementet har rätt antal spelare, Coins, material och byggnadskrav.
+
+### Köpa mer territorium
+
+När settlementet behöver mer plats används:
+
+1. `/territory mark`
+2. `/territory preview`
+3. `/territory buy`
+
+Köpet betalas med Coins från stadskassan.

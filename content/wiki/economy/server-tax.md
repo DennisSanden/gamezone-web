@@ -2,8 +2,8 @@
 title: "Server TAX"
 description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
-order: 2
-version: "1.0"
+order: 3
+version: "1.1"
 engineVersion: "Economy Engine"
 updatedAt: "2026-08-04"
 infoboxTitle: "Server TAX"
@@ -13,17 +13,25 @@ infobox:
   gäller: "Företagsförsäljning"
 ---
 
-## Översikt
+## Vad är Server TAX?
 
-Servern tar TAX när företag säljer varor till andra spelare. Grundnivån är 25 procent. Settlementets nivå bestämmer grundskatten och företagets shopping license ger ett avdrag.
+Server TAX är skatten som tas när ett företag säljer items till andra spelare genom en shopping chest.
 
-**Total TAX = settlementets TAX minus shopping license-avdraget.** Den totala skatten kan aldrig bli lägre än 0 procent.
+Registrera en shopping chest genom att titta på kistan och skriva:
+
+`/company chest register <pris>`
+
+Priset gäller per item i kistan.
+
+Grundnivån är **25 procent**. Settlementets nivå bestämmer grundskatten och företagets shopping license ger ett avdrag.
+
+**Total TAX = settlementets TAX minus shopping license-avdraget.** Skatten kan aldrig bli lägre än 0 procent.
 
 ## TAX efter settlementnivå
 
 | Nivå | Server TAX |
 |---|---:|
-| 1–2 | Företag ej möjligt |
+| 1 till 2 | Företag ej möjligt |
 | 3 | 25 % |
 | 4 | 23 % |
 | 5 | 21 % |
@@ -39,6 +47,8 @@ Servern tar TAX när företag säljer varor till andra spelare. Grundnivån är 
 | 15 | 10 % |
 
 ## Avdrag från shopping license
+
+Företagets ägare kan öppna licensmenyn med `/company license`.
 
 | Licensnivå | Avdrag |
 |---|---:|
@@ -60,3 +70,6 @@ Ett företag utan avdrag säljer för 1 000 Coins med 25 procent TAX. Servern ta
 Ett företag med shopping license nivå 6 i ett settlement på nivå 11 betalar 14 minus 6, alltså 8 procent TAX. Servern tar 80 Coins och företaget får 920 Coins.
 
 Ett företag med shopping license nivå 10 i ett settlement på nivå 15 betalar 10 minus 10, alltså 0 procent TAX. Företaget får hela försäljningsbeloppet.
+
+> [!INFO]
+> Server TAX är inte samma sak som [stadsskatt](/wiki/economy/stadskassan). Stadsskatt tas från invånarnas produktionsintäkter och går till settlementets stadskassa.

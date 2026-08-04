@@ -2,8 +2,8 @@
 title: "Stadskassan och stadsskatt"
 description: "Så går en del av invånarnas produktionsintäkter till settlementets stadskassa."
 category: "Ekonomi"
-order: 1
-version: "1.0"
+order: 2
+version: "1.1"
 engineVersion: "Economy Engine"
 updatedAt: "2026-08-04"
 infoboxTitle: "Stadsskatt"
@@ -14,16 +14,26 @@ infobox:
   bestämsAv: "King"
 ---
 
-## Översikt
+## Vad är stadskassan?
 
-När en spelare är medlem i ett settlement och tjänar Coins genom godkänd produktion går en andel direkt till settlementets stadskassa.
+Stadskassan är settlementets gemensamma Coin-saldo. Den används bland annat till nivåuppgraderingar, byggnader, titlar och köp av mer territorium.
 
-Standardnivån är **25 procent**. Settlementets King kan ändra stadsskatten mellan **0 och 100 procent**.
+När en spelare är medlem i ett settlement och tjänar Coins genom godkänd produktion går en andel direkt till stadskassan.
 
-## Strategi
+Standardnivån är **25 procent**. Settlementets King kan ändra stadsskatten mellan **0 och 100 procent** med:
 
-En låg stadsskatt låter invånarna behålla mer av sina produktionsintäkter och kan göra settlementet mer attraktivt. En hög stadsskatt fyller stadskassan snabbare och kan användas när settlementet behöver finansiera uppgraderingar och byggnader.
+`/settlement tax <procent>`
+
+Exempel: `/settlement tax 20`
+
+## Varför ändra stadsskatten?
+
+En låg stadsskatt låter invånarna behålla mer av sina produktionsintäkter och kan göra settlementet mer attraktivt för nya medlemmar.
+
+En hög stadsskatt fyller stadskassan snabbare och kan vara användbar när settlementet sparar till en uppgradering, byggnad eller mer mark.
 
 ## Skillnaden mot Server TAX
 
-Stadsskatt tas från invånarnas produktionsintäkter och går till stadskassan. Server TAX tas från företagsförsäljning och går till servern. Det är två separata system.
+Stadsskatt tas från invånarnas produktionsintäkter och går till stadskassan.
+
+Detta är inte samma sak som [Server TAX på företagshandel](/wiki/economy/server-tax). Server TAX tas när företag säljer items till andra spelare och går till servern.
