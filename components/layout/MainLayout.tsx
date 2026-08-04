@@ -20,7 +20,7 @@ const navigationItems = [
     { label: "Wiki", href: "/wiki" },
     { label: "Leaderboards", href: "/leaderboards" },
     { label: "MarketWatch", href: "/marketwatch" },
-    { label: "Karta", href: "/map" },
+    { label: "Karta", href: "http://184.170.201.111:8100/" },
     { label: "Settlements", href: "/settlements" },
     { label: "Företag", href: "/companies" },
     { label: "Live", href: "/live" },
