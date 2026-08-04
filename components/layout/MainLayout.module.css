@@ -262,3 +262,110 @@
         transition: none;
     }
 }
+
+.navigationLinkActive {
+    color: #ffffff;
+}
+
+.navigationLinkActive::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.mobileMenuButton {
+    width: 42px;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    color: #ffffff;
+    background: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: var(--radius-small);
+    cursor: pointer;
+}
+
+.mobileMenuButton span {
+    width: 18px;
+    height: 2px;
+    display: block;
+    background: currentColor;
+    border-radius: 999px;
+    transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.mobileMenuButtonOpen span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.mobileMenuButtonOpen span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobileMenuButtonOpen span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileNavigation {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .mobileMenuButton {
+        display: inline-flex;
+    }
+
+    .mobileNavigation {
+        max-height: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0;
+        border-top: 1px solid transparent;
+        transition: max-height 220ms ease, opacity 160ms ease, padding 220ms ease, border-color 160ms ease;
+    }
+
+    .mobileNavigationOpen {
+        max-height: 620px;
+        opacity: 1;
+        padding: 14px 0 18px;
+        border-top-color: rgb(255 255 255 / 8%);
+    }
+
+    .mobileNavigationLink,
+    .mobileDiscordLink {
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        color: #d8ded9;
+        background: rgb(255 255 255 / 4%);
+        border: 1px solid rgb(255 255 255 / 8%);
+        border-radius: var(--radius-small);
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .mobileNavigationLinkActive {
+        color: #ffffff;
+        background: rgb(74 146 46 / 20%);
+        border-color: rgb(114 201 74 / 46%);
+    }
+
+    .mobileDiscordLink {
+        color: #ffffff;
+        border-color: rgb(255 255 255 / 14%);
+    }
+}
+
+@media (max-width: 600px) {
+    .mobileNavigation {
+        grid-template-columns: 1fr;
+    }
+}

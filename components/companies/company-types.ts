@@ -7,6 +7,8 @@ export type CompanyProduct = {
   totalRevenue?: number;
   soldQuantity?: number;
   lastSoldAt?: string;
+  latestSaleValue?: number;
+  latestSaleQuantity?: number;
   active?: boolean;
 };
 

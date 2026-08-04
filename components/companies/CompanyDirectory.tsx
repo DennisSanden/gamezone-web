@@ -67,34 +67,29 @@ export function CompanyDirectory() {
   const leaders = useMemo(() => [...companies].sort((a, b) => sales(b) - sales(a)).slice(0, 3), [companies]);
 
   const productMarket = useMemo(() => {
-    const products = new Map<string, { name: string; sellers: number; stock: number; cheapest: number; companyId: string; company: string }>();
+    const products = new Map<string, { name: string; sold: number; revenue: number; companies: Set<string> }>();
+
     companies.forEach(company => {
-      listings(company).forEach(item => {
+      const history = company.salesHistory ?? company.topProducts ?? [];
+      history.forEach(item => {
         const key = (item.itemKey ?? item.itemName ?? item.displayName ?? "unknown").toLowerCase();
-        const price = item.unitPrice ?? 0;
-        const current = products.get(key);
-        if (!current) {
-          products.set(key, {
-            name: itemName(item),
-            sellers: 1,
-            stock: item.quantity ?? 0,
-            cheapest: price,
-            companyId: company.companyId,
-            company: companyName(company),
-          });
-          return;
-        }
-        current.sellers += 1;
-        current.stock += item.quantity ?? 0;
-        if (price > 0 && (current.cheapest <= 0 || price < current.cheapest)) {
-          current.cheapest = price;
-          current.companyId = company.companyId;
-          current.company = companyName(company);
-        }
+        const current = products.get(key) ?? {
+          name: itemName(item),
+          sold: 0,
+          revenue: 0,
+          companies: new Set<string>(),
+        };
+        current.sold += item.soldQuantity ?? 0;
+        current.revenue += item.totalRevenue ?? 0;
+        current.companies.add(company.companyId);
+        products.set(key, current);
       });
     });
-    return Array.from(products.values())
-      .sort((a, b) => b.sellers - a.sellers || b.stock - a.stock)
+
+    return Array.from(products.entries())
+      .map(([itemKey, value]) => ({ itemKey, ...value, sellers: value.companies.size }))
+      .filter(product => product.sold > 0)
+      .sort((a, b) => b.sold - a.sold || b.revenue - a.revenue)
       .slice(0, 6);
   }, [companies]);
 
@@ -161,12 +156,12 @@ export function CompanyDirectory() {
 
         <section className={styles.marketDashboard}>
           <div className={styles.dashboardCard}>
-            <div className={styles.compactHeading}><div><span className={styles.eyebrow}>PRISJÄMFÖRELSE</span><h2>Populärt på marknaden</h2></div></div>
+            <div className={styles.compactHeading}><div><span className={styles.eyebrow}>MEST SÅLDA</span><h2>Populärt på marknaden</h2></div></div>
             <div className={styles.productMarketList}>
-              {productMarket.map(product => <Link href={`/companies/${encodeURIComponent(product.companyId)}`} key={`${product.name}-${product.companyId}`}>
+              {productMarket.map(product => <Link href={`/marketwatch?item=${encodeURIComponent(product.itemKey)}`} key={product.itemKey}>
                 <div className={styles.marketIcon}>◆</div>
-                <div><strong>{product.name}</strong><span>{product.sellers} säljare · {number.format(product.stock)} i lager</span></div>
-                <div className={styles.marketPrice}><small>från</small><b>{number.format(product.cheapest)} Coins</b><span>{product.company}</span></div>
+                <div><strong>{product.name}</strong><span>{number.format(product.sold)} sålda · {product.sellers} företag</span></div>
+                <div className={styles.marketPrice}><small>omsättning</small><b>{number.format(product.revenue)} Coins</b><span>Visa i MarketWatch</span></div>
               </Link>)}
               {productMarket.length === 0 && <div className={styles.emptyInline}>Inga aktiva varor har publicerats ännu.</div>}
             </div>
@@ -185,8 +180,11 @@ export function CompanyDirectory() {
             <div className={styles.pulseList}>
               {marketPulse.map(({ company, item }, index) => <Link href={`/companies/${encodeURIComponent(company.companyId)}`} key={`${company.companyId}-${item.itemKey}-${index}`}>
                 <span className={styles.pulseDot} />
-                <div><strong>{companyName(company)}</strong><span>sålde {itemName(item)}</span></div>
-                <time>{item.lastSoldAt ? new Date(item.lastSoldAt).toLocaleDateString("sv-SE") : ""}</time>
+                <div><strong>{companyName(company)}</strong><span>sålde {item.latestSaleQuantity ? `${number.format(item.latestSaleQuantity)} × ` : ""}{itemName(item)}</span></div>
+                <div className={styles.marketPrice}>
+                  <b>{number.format(item.latestSaleValue ?? 0)} Coins</b>
+                  <time>{item.lastSoldAt ? new Date(item.lastSoldAt).toLocaleString("sv-SE", { dateStyle: "short", timeStyle: "short" }) : ""}</time>
+                </div>
               </Link>)}
               {marketPulse.length === 0 && <div className={styles.emptyInline}>Ingen försäljningspuls är tillgänglig ännu.</div>}
             </div>
