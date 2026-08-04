@@ -34,6 +34,11 @@ Kategoribytet kostar **50 000 Coins** och betalas från [stadskassan](/wiki/econ
 
 Efter ett genomfört byte gäller en cooldown på **24 timmar** innan kategorin kan ändras igen.
 
+
+> [!CAUTION]
+> När ett settlement byter produktionskategori återställs **alla utdelade titlar**. Kungen behöver därefter dela ut titlar på nytt till settlementets invånare. Detta säkerställer att titelbonusar och behörigheter stämmer överens med den nya kategorin.
+
+
 > [!WARNING]
 > Endast resurser inom settlementets valda kategori ger Coins från produktion. Kontrollera därför vilka resurser kategorin omfattar innan bytet genomförs.
 
