@@ -3,12 +3,12 @@ export type CompanyProduct = {
   itemName?: string;
   displayName?: string;
   quantity?: number;
-  stockItems?: number;
-  availablePurchases?: number;
   unitPrice?: number;
   totalRevenue?: number;
   soldQuantity?: number;
   lastSoldAt?: string;
+  latestSaleValue?: number;
+  latestSaleQuantity?: number;
   active?: boolean;
 };
 
