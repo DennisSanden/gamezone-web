@@ -212,11 +212,11 @@ export function LeaderboardDashboard({ leaderboards, titleBoard }: { leaderboard
         <div className={styles.categoryCount}><strong>{definitions[active].length}</strong><small>topplistor</small></div>
       </section>
 
-      {active === "players" && <TitleOverview board={titleBoard ?? undefined} />}
-
       <section className={`${styles.boardGrid} ${active === "server" ? styles.serverGrid : ""}`}>
         {definitions[active].map((definition) => <RankingCard key={definition.key} definition={definition} board={map.get(definition.key)} serverCard={active === "server"} />)}
       </section>
+
+      {active === "players" && <TitleOverview board={titleBoard ?? undefined} />}
 
       {leaderboards.length === 0 && <aside className={styles.notice}><strong>Ingen live-data kunde hämtas</strong><p>Kontrollera att ENGINE_API_URL är satt och att webbservern kan nå GameZone Engine.</p></aside>}
     </div>
