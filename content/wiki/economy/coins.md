@@ -3,7 +3,7 @@ title: "Coins"
 description: "GameZones valuta, hur du tjänar Coins och vad de används till."
 category: "Ekonomi"
 order: 1
-version: "1.1"
+version: "1.2"
 engineVersion: "Economy Engine"
 updatedAt: "2026-08-04"
 infoboxTitle: "Coins"
@@ -31,12 +31,14 @@ Coins kan bland annat användas för att:
 - uppgradera företagets shopping license
 - befordra invånare till högre titlar
 - uppgradera settlementets nivå
-- låsa upp byggnader och funktioner
+- låsa upp byggnadslicenser och funktioner
 - köpa mer mark till settlementet
 - byta settlementets namn för 50 000 Coins
 - byta settlementets produktionskategori för 50 000 Coins
+- sätta in egna Coins i settlementets stadskassa
+- göra utbetalningar från stadskassan till settlementets invånare
 
-Läs mer om de två sista funktionerna på sidan [Ändra namn och kategori](/wiki/settlements/andra-namn-och-kategori).
+Läs mer om namnbyte och kategoribyte på sidan [Ändra namn och kategori](/wiki/settlements/andra-namn-och-kategori).
 
 ## Köpa från andra spelare
 
@@ -45,6 +47,22 @@ Företag kan registrera en shopping chest genom att titta på kistan och skriva:
 `/company chest register <pris>`
 
 Priset gäller per item. När en köpare tar ett item ur kistan dras Coins automatiskt från köparens konto.
+
+## Stadskassan
+
+Alla aktiva settlementmedlemmar kan sätta in egna Coins med:
+
+`/settlement deposit <belopp>`
+
+King kan ta ut Coins till sig själv med:
+
+`/settlement withdraw <belopp>`
+
+King kan skicka Coins till en annan aktiv invånare i samma settlement med:
+
+`/settlement send <spelare> <belopp>`
+
+Uttag och utbetalningar från stadskassan har en transaktionsavgift på 2 procent. Läs mer på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
 
 ## Uppgradera settlementet
 

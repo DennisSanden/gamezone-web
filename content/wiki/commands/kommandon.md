@@ -3,7 +3,7 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.0"
+version: "1.1"
 engineVersion: "Commands"
 updatedAt: "2026-08-04"
 infoboxTitle: "Kommandon"
@@ -20,6 +20,8 @@ infobox:
 
 ## Settlement
 
+### Översikt och medlemmar
+
 ```text
 /settlements
 /settlement menu
@@ -27,13 +29,40 @@ infobox:
 /settlement members
 /settlement upgrade
 /settlement treasury
+```
+
+### Skapa och hantera settlement
+
+```text
 /settlement create <namn>
 /settlement join <settlement>
 /settlement leave
 /settlement kick <spelare>
 /settlement lord <spelare>
 /settlement transfer <spelare>
+/settlement rename <nytt namn>
 /settlement tax <procent>
+```
+
+### Stadskassan
+
+```text
+/settlement deposit <belopp>
+/settlement withdraw <belopp>
+/settlement send <spelare> <belopp>
+```
+
+`/settlement deposit <belopp>` sätter in Coins från ditt eget saldo i stadskassan. Alla aktiva settlementmedlemmar kan använda kommandot.
+
+`/settlement withdraw <belopp>` tar ut Coins från stadskassan till Kings eget saldo. Endast King kan använda kommandot och en avgift på 2 procent tillkommer.
+
+`/settlement send <spelare> <belopp>` skickar Coins från stadskassan till en aktiv invånare i samma settlement. Endast King kan använda kommandot och en avgift på 2 procent tillkommer.
+
+Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
+
+### Settlement inventory
+
+```text
 /settlement inventory register
 /settlement inventory remove
 /settlement inventory list
@@ -73,6 +102,7 @@ infobox:
 /territory mark
 /territory preview
 /territory buy
+/territory clear
 ```
 
 ## Duell
