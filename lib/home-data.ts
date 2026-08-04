@@ -41,21 +41,31 @@ export async function getServerStatus(): Promise<ServerStatus> {
 }
 
 export async function getLeaderboard(type: string): Promise<LeaderboardEntry[]> {
+  const source = process.env.GAMEZONE_ENGINE_API_URL
+      ? "GAMEZONE_ENGINE_API_URL"
+      : process.env.ENGINE_API_URL
+          ? "ENGINE_API_URL"
+          : "fallback default";
   const apiBase = (
       process.env.GAMEZONE_ENGINE_API_URL ??
       process.env.ENGINE_API_URL ??
       "http://184.170.201.111:8765"
   ).replace(/\/$/, "");
+  console.log(`[home-data] using ${source}: ${apiBase}`);
 
   try {
     const response = await fetch(`${apiBase}/api/v1/leaderboards/${type}?limit=3`, {
       next: { revalidate: 60 },
       signal: AbortSignal.timeout(8_000),
     });
-    if (!response.ok) return [];
+    if (!response.ok) {
+      console.error(`[home-data] ${apiBase}/api/v1/leaderboards/${type} responded with HTTP ${response.status}`);
+      return [];
+    }
     const data = await response.json() as EngineEnvelope<EngineBoard>;
     return data.result?.entries?.slice(0, 3) ?? [];
-  } catch {
+  } catch (err) {
+    console.error(`[home-data] ${apiBase}/api/v1/leaderboards/${type} failed:`, err);
     return [];
   }
 }

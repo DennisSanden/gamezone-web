@@ -17,11 +17,18 @@ export type LeaderboardBoard = {
 type EngineEnvelope<T> = { status?: string; result?: T };
 
 function apiBase() {
-  return (
+  const source = process.env.GAMEZONE_ENGINE_API_URL
+      ? "GAMEZONE_ENGINE_API_URL"
+      : process.env.ENGINE_API_URL
+          ? "ENGINE_API_URL"
+          : "fallback default";
+  const base = (
       process.env.GAMEZONE_ENGINE_API_URL ??
       process.env.ENGINE_API_URL ??
       "http://184.170.201.111:8765"
   ).replace(/\/$/, "");
+  console.log(`[engineFetch] using ${source}: ${base}`);
+  return base;
 }
 
 async function engineFetch<T>(path: string): Promise<T | null> {
@@ -32,10 +39,14 @@ async function engineFetch<T>(path: string): Promise<T | null> {
       next: { revalidate: 60 },
       signal: AbortSignal.timeout(8_000),
     });
-    if (!response.ok) return null;
+    if (!response.ok) {
+      console.error(`[engineFetch] ${base}${path} responded with HTTP ${response.status}`);
+      return null;
+    }
     const payload = (await response.json()) as EngineEnvelope<T>;
     return payload.result ?? null;
-  } catch {
+  } catch (err) {
+    console.error(`[engineFetch] ${base}${path} failed:`, err);
     return null;
   }
 }
