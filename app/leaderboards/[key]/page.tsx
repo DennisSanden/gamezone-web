@@ -36,6 +36,10 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
   const board = await getAllLeaderboardEntries(key);
   if (!board) notFound();
 
+  const resultLabel = board.key.toUpperCase() === "PLAYER_DUEL_WINS"
+      ? "Vunna dueller"
+      : labels[board.valueType] ?? "Resultat";
+
   const pageSize = 25;
   const isTitleBoard = board.key.toLowerCase() === "player_titles";
   const regularTitles = board.entries.filter((entry) => {
@@ -88,7 +92,7 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
                   </div>
               ) : (
                   <div className={styles.fullTable}>
-                    <div className={styles.tableHead}><span>Placering</span><span>Namn</span><span>{labels[board.valueType] ?? "Resultat"}</span></div>
+                    <div className={styles.tableHead}><span>Placering</span><span>Namn</span><span>{resultLabel}</span></div>
                     {entries.map(entry => (
                         <div className={styles.tableRow} key={`${entry.entityId}-${entry.rank}`}>
                           <span className={`${styles.tableRank} ${entry.rank <= 3 ? styles[`rank${entry.rank}`] : ""}`}>#{entry.rank}</span>
