@@ -42,14 +42,15 @@ export async function getServerStatus(): Promise<ServerStatus> {
 
 export async function getLeaderboard(type: string): Promise<LeaderboardEntry[]> {
   const apiBase = (
-    process.env.GAMEZONE_ENGINE_API_URL ??
-    process.env.ENGINE_API_URL ??
-    "http://184.170.201.111:8765"
+      process.env.GAMEZONE_ENGINE_API_URL ??
+      process.env.ENGINE_API_URL ??
+      "http://184.170.201.111:8765"
   ).replace(/\/$/, "");
 
   try {
     const response = await fetch(`${apiBase}/api/v1/leaderboards/${type}?limit=3`, {
       next: { revalidate: 60 },
+      signal: AbortSignal.timeout(8_000),
     });
     if (!response.ok) return [];
     const data = await response.json() as EngineEnvelope<EngineBoard>;

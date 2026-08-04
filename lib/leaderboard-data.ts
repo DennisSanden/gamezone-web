@@ -18,9 +18,9 @@ type EngineEnvelope<T> = { status?: string; result?: T };
 
 function apiBase() {
   return (
-    process.env.GAMEZONE_ENGINE_API_URL ??
-    process.env.ENGINE_API_URL ??
-    "http://184.170.201.111:8765"
+      process.env.GAMEZONE_ENGINE_API_URL ??
+      process.env.ENGINE_API_URL ??
+      "http://184.170.201.111:8765"
   ).replace(/\/$/, "");
 }
 
@@ -28,7 +28,10 @@ async function engineFetch<T>(path: string): Promise<T | null> {
   const base = apiBase();
   if (!base) return null;
   try {
-    const response = await fetch(`${base}${path}`, { next: { revalidate: 60 } });
+    const response = await fetch(`${base}${path}`, {
+      next: { revalidate: 60 },
+      signal: AbortSignal.timeout(8_000),
+    });
     if (!response.ok) return null;
     const payload = (await response.json()) as EngineEnvelope<T>;
     return payload.result ?? null;

@@ -12,6 +12,8 @@ const labels: Record<string, string> = {
 };
 const number = new Intl.NumberFormat("sv-SE");
 
+export const dynamic = "force-dynamic";
+
 function format(entry: LeaderboardEntry, valueType: string) {
   if (entry.detail) return entry.detail;
   if (valueType === "SECONDS") {
@@ -49,66 +51,66 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1).filter(value => value === 1 || value === totalPages || Math.abs(value - page) <= 2);
 
   const renderRows = (rows: LeaderboardEntry[], showRank = true) => rows.map((entry, index) => (
-    <div className={styles.tableRow} key={`${entry.entityId}-${entry.rank}`}>
-      <span className={`${styles.tableRank} ${(showRank ? entry.rank : index + 1) <= 3 ? styles[`rank${showRank ? entry.rank : index + 1}`] : ""}`}>#{showRank ? entry.rank : index + 1}</span>
-      <span className={styles.tableIdentity}>
+      <div className={styles.tableRow} key={`${entry.entityId}-${entry.rank}`}>
+        <span className={`${styles.tableRank} ${(showRank ? entry.rank : index + 1) <= 3 ? styles[`rank${showRank ? entry.rank : index + 1}`] : ""}`}>#{showRank ? entry.rank : index + 1}</span>
+        <span className={styles.tableIdentity}>
         <img src={`https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/40`} alt="" />
         <strong>{entry.displayName}</strong>
       </span>
-      <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
-    </div>
+        <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
+      </div>
   ));
 
   return (
-    <MainLayout>
-      <div className={styles.page}>
-        <section className={styles.detailHero}><PageContainer><Link className={styles.backLink} href="/leaderboards">← Alla leaderboards</Link><span className={styles.eyebrow}>{board.entityType}</span><h1>{board.displayName}</h1><p>Hela tabellen, sida {page} av {totalPages}. Data hämtas direkt från GameZone Engine.</p></PageContainer></section>
-        <PageContainer>
-          <div className={styles.detailShell}>
-            <div className={styles.detailStats}><span><strong>{number.format(board.entries.length)}</strong> poster</span><span><strong>{isTitleBoard ? number.format(regularTitles.length) : pageSize}</strong> {isTitleBoard ? "vanliga titlar" : "per sida"}</span><span><strong>60 sek</strong> uppdatering</span></div>
-            {isTitleBoard ? (
-              <div className={styles.titleSections}>
-                <section className={`${styles.titleSection} ${styles.titleSectionPrimary}`}>
-                  <header className={styles.titleSectionHeader}><div><h2>Vanliga titlar</h2><p>Produktions- och progressionstitlar. Det här är huvudrankingen.</p></div><span>{number.format(regularTitles.length)}</span></header>
-                  <div className={styles.tableHead}><span>Placering</span><span>Spelare</span><span>Titel</span></div>
-                  {renderRows(entries)}
-                </section>
-                <section className={styles.titleSection}>
-                  <header className={styles.titleSectionHeader}><div><h2>Kungar</h2><p>Spelare som leder ett settlement.</p></div><span>{number.format(kings.length)}</span></header>
-                  <div className={styles.tableHead}><span>#</span><span>Spelare</span><span>Roll</span></div>
-                  {renderRows(kings, false)}
-                </section>
-                <section className={styles.titleSection}>
-                  <header className={styles.titleSectionHeader}><div><h2>Lords</h2><p>Spelare med ledningsroll i ett settlement.</p></div><span>{number.format(lords.length)}</span></header>
-                  <div className={styles.tableHead}><span>#</span><span>Spelare</span><span>Roll</span></div>
-                  {renderRows(lords, false)}
-                </section>
-              </div>
-            ) : (
-              <div className={styles.fullTable}>
-                <div className={styles.tableHead}><span>Placering</span><span>Namn</span><span>{labels[board.valueType] ?? "Resultat"}</span></div>
-                {entries.map(entry => (
-                  <div className={styles.tableRow} key={`${entry.entityId}-${entry.rank}`}>
-                    <span className={`${styles.tableRank} ${entry.rank <= 3 ? styles[`rank${entry.rank}`] : ""}`}>#{entry.rank}</span>
-                    <span className={styles.tableIdentity}>
-                      {board.entityType === "PLAYER" && <img src={`https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/40`} alt="" />}
-                      {board.entityType === "SETTLEMENT" && <ItemIcon itemId="minecraft:bell" itemName="Settlement" size={40} />}
-                      {board.entityType === "COMPANY" && <ItemIcon itemId="minecraft:emerald" itemName="Företag" size={40} />}
-                      <strong>{entry.displayName}</strong>
-                    </span>
-                    <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
+      <MainLayout>
+        <div className={styles.page}>
+          <section className={styles.detailHero}><PageContainer><Link className={styles.backLink} href="/leaderboards">← Alla leaderboards</Link><span className={styles.eyebrow}>{board.entityType}</span><h1>{board.displayName}</h1><p>Hela tabellen, sida {page} av {totalPages}. Data hämtas direkt från GameZone Engine.</p></PageContainer></section>
+          <PageContainer>
+            <div className={styles.detailShell}>
+              <div className={styles.detailStats}><span><strong>{number.format(board.entries.length)}</strong> poster</span><span><strong>{isTitleBoard ? number.format(regularTitles.length) : pageSize}</strong> {isTitleBoard ? "vanliga titlar" : "per sida"}</span><span><strong>60 sek</strong> uppdatering</span></div>
+              {isTitleBoard ? (
+                  <div className={styles.titleSections}>
+                    <section className={`${styles.titleSection} ${styles.titleSectionPrimary}`}>
+                      <header className={styles.titleSectionHeader}><div><h2>Vanliga titlar</h2><p>Produktions- och progressionstitlar. Det här är huvudrankingen.</p></div><span>{number.format(regularTitles.length)}</span></header>
+                      <div className={styles.tableHead}><span>Placering</span><span>Spelare</span><span>Titel</span></div>
+                      {renderRows(entries)}
+                    </section>
+                    <section className={styles.titleSection}>
+                      <header className={styles.titleSectionHeader}><div><h2>Kungar</h2><p>Spelare som leder ett settlement.</p></div><span>{number.format(kings.length)}</span></header>
+                      <div className={styles.tableHead}><span>#</span><span>Spelare</span><span>Roll</span></div>
+                      {renderRows(kings, false)}
+                    </section>
+                    <section className={styles.titleSection}>
+                      <header className={styles.titleSectionHeader}><div><h2>Lords</h2><p>Spelare med ledningsroll i ett settlement.</p></div><span>{number.format(lords.length)}</span></header>
+                      <div className={styles.tableHead}><span>#</span><span>Spelare</span><span>Roll</span></div>
+                      {renderRows(lords, false)}
+                    </section>
                   </div>
-                ))}
-              </div>
-            )}
-            <nav className={styles.pagination} aria-label="Sidnavigering">
-              <Link className={page === 1 ? styles.disabledPage : styles.pageButton} href={`?page=${Math.max(1, page - 1)}`}>← Föregående</Link>
-              <div>{pages.map((value, index) => <span key={value}>{index > 0 && value - pages[index - 1] > 1 ? <i>…</i> : null}<Link className={value === page ? styles.activePage : styles.pageNumber} href={`?page=${value}`}>{value}</Link></span>)}</div>
-              <Link className={page === totalPages ? styles.disabledPage : styles.pageButton} href={`?page=${Math.min(totalPages, page + 1)}`}>Nästa →</Link>
-            </nav>
-          </div>
-        </PageContainer>
-      </div>
-    </MainLayout>
+              ) : (
+                  <div className={styles.fullTable}>
+                    <div className={styles.tableHead}><span>Placering</span><span>Namn</span><span>{labels[board.valueType] ?? "Resultat"}</span></div>
+                    {entries.map(entry => (
+                        <div className={styles.tableRow} key={`${entry.entityId}-${entry.rank}`}>
+                          <span className={`${styles.tableRank} ${entry.rank <= 3 ? styles[`rank${entry.rank}`] : ""}`}>#{entry.rank}</span>
+                          <span className={styles.tableIdentity}>
+                      {board.entityType === "PLAYER" && <img src={`https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/40`} alt="" />}
+                            {board.entityType === "SETTLEMENT" && <ItemIcon itemId="minecraft:bell" itemName="Settlement" size={40} />}
+                            {board.entityType === "COMPANY" && <ItemIcon itemId="minecraft:emerald" itemName="Företag" size={40} />}
+                            <strong>{entry.displayName}</strong>
+                    </span>
+                          <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
+                        </div>
+                    ))}
+                  </div>
+              )}
+              <nav className={styles.pagination} aria-label="Sidnavigering">
+                <Link className={page === 1 ? styles.disabledPage : styles.pageButton} href={`?page=${Math.max(1, page - 1)}`}>← Föregående</Link>
+                <div>{pages.map((value, index) => <span key={value}>{index > 0 && value - pages[index - 1] > 1 ? <i>…</i> : null}<Link className={value === page ? styles.activePage : styles.pageNumber} href={`?page=${value}`}>{value}</Link></span>)}</div>
+                <Link className={page === totalPages ? styles.disabledPage : styles.pageButton} href={`?page=${Math.min(totalPages, page + 1)}`}>Nästa →</Link>
+              </nav>
+            </div>
+          </PageContainer>
+        </div>
+      </MainLayout>
   );
 }
