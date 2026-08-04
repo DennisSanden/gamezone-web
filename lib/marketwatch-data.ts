@@ -138,3 +138,31 @@ export function parseMarketWatch(payload: MarketWatchPayload): MarketItem[] {
         };
     });
 }
+
+export type MarketCompanySale = {
+    companyId: string;
+    companyName: string;
+    soldUnits: number;
+    transactionCount: number;
+    totalTurnover: number;
+    averageUnitPrice: number;
+    latestUnitPrice: number;
+    lastSaleAt: string | null;
+};
+
+export function parseCompanySales(payload: MarketWatchPayload): MarketCompanySale[] {
+    const result = Array.isArray(payload.result) ? payload.result : [];
+    return result.map(entry => {
+        const row = entry && typeof entry === "object" ? entry as Record<string, unknown> : {};
+        return {
+            companyId: textValue(row.companyId),
+            companyName: textValue(row.companyName) || "Okänt företag",
+            soldUnits: numberValue(row.soldUnits),
+            transactionCount: numberValue(row.transactionCount),
+            totalTurnover: numberValue(row.totalTurnover),
+            averageUnitPrice: numberValue(row.averageUnitPrice),
+            latestUnitPrice: numberValue(row.latestUnitPrice),
+            lastSaleAt: textValue(row.lastSaleAt) || null,
+        };
+    });
+}

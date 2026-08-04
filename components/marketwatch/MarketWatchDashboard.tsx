@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { parseMarketWatch, type MarketItem, type MarketWatchPayload } from "@/lib/marketwatch-data";
+import { parseCompanySales, parseMarketWatch, type MarketCompanySale, type MarketItem, type MarketWatchPayload } from "@/lib/marketwatch-data";
 import { ItemIcon } from "./ItemIcon";
 import styles from "./MarketWatchDashboard.module.css";
 
@@ -19,6 +19,8 @@ export function MarketWatchDashboard() {
     const [sort, setSort] = useState<SortKey>("shortage");
     const [onlyShortage, setOnlyShortage] = useState(false);
     const [selectedItem, setSelectedItem] = useState<MarketItem | null>(null);
+    const [companySales, setCompanySales] = useState<MarketCompanySale[]>([]);
+    const [companySalesLoading, setCompanySalesLoading] = useState(false);
 
     useEffect(() => {
         let cancelled = false;
@@ -39,6 +41,21 @@ export function MarketWatchDashboard() {
         void load();
         return () => { cancelled = true; };
     }, []);
+
+    useEffect(() => {
+        if (!selectedItem) { setCompanySales([]); return; }
+        let cancelled = false;
+        setCompanySalesLoading(true);
+        fetch(`/api/marketwatch/item-companies?item=${encodeURIComponent(selectedItem.minecraftId.toUpperCase())}`, { cache: "no-store" })
+            .then(async response => {
+                const payload = await response.json() as MarketWatchPayload;
+                if (!response.ok) throw new Error(payload.errors?.[0]?.message || "Kunde inte hämta företag.");
+                if (!cancelled) setCompanySales(parseCompanySales(payload));
+            })
+            .catch(() => { if (!cancelled) setCompanySales([]); })
+            .finally(() => { if (!cancelled) setCompanySalesLoading(false); });
+        return () => { cancelled = true; };
+    }, [selectedItem]);
 
     const categories = useMemo(() => ["Alla", ...Array.from(new Set(items.map(item => item.category))).sort((a, b) => a.localeCompare(b, "sv"))], [items]);
     const filteredItems = useMemo(() => {
@@ -80,6 +97,6 @@ export function MarketWatchDashboard() {
             <div className={styles.tableWrap}><table><thead><tr><th>Item</th><th>Status</th><th>Senaste pris</th><th>Annonser</th><th>Sålt 24h</th><th>Behov / lager</th><th>Brist</th><th>Settlements</th></tr></thead><tbody>{filteredItems.map(item => { const fill = Math.min(100, item.stock / Math.max(1, item.projectedNeed) * 100); return <tr key={item.id} onClick={() => setSelectedItem(item)}><td><div className={styles.itemCell}><span className={styles.smallIcon}><ItemIcon itemId={item.minecraftId} itemName={item.name} /></span><div><strong>{item.name}</strong><small>minecraft:{item.minecraftId}</small></div></div></td><td><span className={`${styles.status} ${styles[item.level]}`}>{levelLabel[item.level]}</span></td><td className={styles.coin}>{formatCoins(item.latestUnitPrice)}</td><td><span className={styles.offerCount}>{item.activeListings} st</span></td><td>{formatNumber(item.soldUnits)}</td><td><div className={styles.supply}><span>{formatNumber(item.projectedNeed)} / {formatNumber(item.stock)}</span><div><i style={{ width: `${fill}%` }} /></div></div></td><td className={item.shortage > 0 ? styles.shortage : styles.muted}>{item.shortage > 0 ? `−${formatNumber(item.shortage)}` : "Täckt"}</td><td>{formatNumber(item.contributingSettlements)}</td></tr>; })}</tbody></table></div>
         </section>
 
-        {selectedItem && <div className={styles.modalBackdrop} onMouseDown={() => setSelectedItem(null)}><article className={styles.modal} onMouseDown={event => event.stopPropagation()}><button className={styles.close} onClick={() => setSelectedItem(null)}>×</button><div className={styles.modalHero}><div className={styles.largeIcon}><ItemIcon itemId={selectedItem.minecraftId} itemName={selectedItem.name} size={48} /></div><div><span>{selectedItem.category}</span><h2>{selectedItem.name}</h2><div className={`${styles.status} ${styles[selectedItem.level]}`}>{levelLabel[selectedItem.level]}</div></div></div><div className={styles.modalPrice}><div><span>Beräknat behov</span><strong>{formatNumber(selectedItem.projectedNeed)}</strong></div><div><span>Registrerat lager</span><strong>{formatNumber(selectedItem.stock)}</strong></div><div><span>Beräknad brist</span><strong>{formatNumber(selectedItem.shortage)}</strong></div><div><span>Aktiva annonser</span><strong>{formatNumber(selectedItem.activeListings)}</strong></div><div><span>Snittpris 24h</span><strong>{formatCoins(selectedItem.averageUnitPrice)}</strong></div><div><span>Senaste pris</span><strong>{formatCoins(selectedItem.latestUnitPrice)}</strong></div><div><span>Sålda enheter 24h</span><strong>{formatNumber(selectedItem.soldUnits)}</strong></div><div><span>Genomförda köp</span><strong>{formatNumber(selectedItem.transactionCount)}</strong></div></div></article></div>}
+        {selectedItem && <div className={styles.modalBackdrop} onMouseDown={() => setSelectedItem(null)}><article className={styles.modal} onMouseDown={event => event.stopPropagation()}><button className={styles.close} onClick={() => setSelectedItem(null)}>×</button><div className={styles.modalHero}><div className={styles.largeIcon}><ItemIcon itemId={selectedItem.minecraftId} itemName={selectedItem.name} size={48} /></div><div><span>{selectedItem.category}</span><h2>{selectedItem.name}</h2><div className={`${styles.status} ${styles[selectedItem.level]}`}>{levelLabel[selectedItem.level]}</div></div></div><div className={styles.modalPrice}><div><span>Beräknat behov</span><strong>{formatNumber(selectedItem.projectedNeed)}</strong></div><div><span>Registrerat lager</span><strong>{formatNumber(selectedItem.stock)}</strong></div><div><span>Beräknad brist</span><strong>{formatNumber(selectedItem.shortage)}</strong></div><div><span>Aktiva annonser</span><strong>{formatNumber(selectedItem.activeListings)}</strong></div><div><span>Snittpris 24h</span><strong>{formatCoins(selectedItem.averageUnitPrice)}</strong></div><div><span>Senaste pris</span><strong>{formatCoins(selectedItem.latestUnitPrice)}</strong></div><div><span>Sålda enheter 24h</span><strong>{formatNumber(selectedItem.soldUnits)}</strong></div><div><span>Genomförda köp</span><strong>{formatNumber(selectedItem.transactionCount)}</strong></div></div><section className={styles.companySales}><div className={styles.companySalesHeader}><div><span>SENASTE 7 DAGARNA</span><h3>Företag som sålt {selectedItem.name}</h3></div><small>Sorterat efter sålda enheter</small></div>{companySalesLoading ? <p className={styles.companySalesEmpty}>Hämtar försäljningar...</p> : companySales.length === 0 ? <p className={styles.companySalesEmpty}>Inget företag har sålt varan under den senaste veckan.</p> : <div className={styles.companySalesList}>{companySales.map((sale, index) => <a key={sale.companyId} href={`/companies/${sale.companyId}`} className={styles.companySaleRow}><span className={styles.companyRank}>{index + 1}</span><div><strong>{sale.companyName}</strong><small>{formatNumber(sale.transactionCount)} affärer · {formatCoins(sale.totalTurnover)} omsättning</small></div><div><strong>{formatNumber(sale.soldUnits)} st</strong><small>Senast {formatCoins(sale.latestUnitPrice)}</small></div></a>)}</div>}</section></article></div>}
     </div>;
 }
