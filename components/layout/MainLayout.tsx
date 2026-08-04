@@ -13,6 +13,7 @@ const navigationItems = [
     { label: "Om GameZone", href: "/om-gamezone" },
     { label: "Kom igång", href: "/kom-igang" },
     { label: "Regler", href: "/regler" },
+    { label: "Wiki", href: "/wiki" },
     { label: "Leaderboards", href: "/leaderboards" },
     { label: "MarketWatch", href: "/marketwatch" },
     { label: "Karta", href: "/map" },

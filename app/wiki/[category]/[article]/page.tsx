@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import WikiArticle from "@/components/wiki/WikiArticle";
 import WikiSidebar from "@/components/wiki/WikiSidebar";
+import { MainLayout } from "@/components/layout/MainLayout";
 import {
     getAllWikiArticlePaths,
     getWikiArticle,
@@ -48,7 +49,8 @@ export default async function WikiArticlePage({
     }
 
     return (
-        <main className={styles.page}>
+        <MainLayout>
+        <div className={styles.page}>
             <div className={styles.shell}>
                 <WikiSidebar
                     activeCategorySlug={category}
@@ -57,6 +59,7 @@ export default async function WikiArticlePage({
 
                 <WikiArticle article={wikiArticle} />
             </div>
-        </main>
+        </div>
+        </MainLayout>
     );
 }

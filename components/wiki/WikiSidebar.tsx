@@ -16,25 +16,6 @@ export default function WikiSidebar({
 
     return (
         <aside className={styles.sidebar}>
-            <div className={styles.topNavigation}>
-                <Link
-                    className={styles.gameZoneButton}
-                    href="/"
-                >
-                    <span
-                        className={styles.gameZoneButtonIcon}
-                        aria-hidden="true"
-                    >
-                        <WikiIcon name="home" size={18} />
-                    </span>
-
-                    <span className={styles.gameZoneButtonText}>
-                        <span aria-hidden="true">←</span>
-                        Tillbaka till GameZone
-                    </span>
-                </Link>
-            </div>
-
             <div className={styles.header}>
                 <Link className={styles.brand} href="/wiki">
                     <span className={styles.brandIcon}>
@@ -43,7 +24,7 @@ export default function WikiSidebar({
 
                     <span>
                         <span className={styles.label}>
-                            Knowledge Base
+                            Spelarguide
                         </span>
 
                         <strong>GameZone Wiki</strong>
@@ -140,10 +121,10 @@ export default function WikiSidebar({
             <div className={styles.footer}>
                 <span className={styles.status}>
                     <span className={styles.statusDot} />
-                    Synkroniserad dokumentation
+                    GameZone Wiki
                 </span>
 
-                <p>Byggd för GameZone Engine</p>
+                <p>Guider för spelare</p>
             </div>
         </aside>
     );
