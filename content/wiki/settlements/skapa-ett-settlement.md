@@ -41,7 +41,7 @@ Det kostar för närvarande inga Coins att skapa ett settlement.
 
 ## Efter att settlementet skapats
 
-Grundaren blir automatiskt **King** och kan börja bjuda in eller godkänna medlemmar, registrera inventory och utveckla settlementet.
+Grundaren blir automatiskt **King** och kan börja bjuda in eller godkänna medlemmar, registrera inventory och utveckla settlementet. Läs mer om King, Lord och befordringar på sidan [Titlar och ledarskap](/wiki/settlements/titlar-och-ledarskap).
 
 Öppna settlementets funktioner genom `/gz menu` eller `/settlement menu`.
 

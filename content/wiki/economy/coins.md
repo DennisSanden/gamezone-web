@@ -29,7 +29,7 @@ Coins kan bland annat användas för att:
 - köpa items från andra spelare genom företagens shopping chests
 - köpa items och tjänster från servern
 - uppgradera företagets shopping license
-- befordra invånare till högre titlar
+- befordra invånare till [högre titlar](/wiki/settlements/titlar-och-ledarskap)
 - uppgradera settlementets nivå
 - låsa upp byggnader och funktioner
 - köpa mer mark till settlementet
