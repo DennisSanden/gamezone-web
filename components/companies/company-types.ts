@@ -3,6 +3,7 @@ export type CompanyProduct = {
   itemName?: string;
   displayName?: string;
   quantity?: number;
+  stockItems?: number;
   unitPrice?: number;
   totalRevenue?: number;
   soldQuantity?: number;
