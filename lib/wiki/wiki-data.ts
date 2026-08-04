@@ -171,16 +171,16 @@ export const wikiCategories: WikiCategory[] = [
         number: "08",
         articles: [
             {
-                slug: "skapa-ett-foretag",
-                title: "Skapa ett företag",
+                slug: "foretag",
+                title: "Företag",
             },
             {
-                slug: "inbjudningar",
-                title: "Inbjudningar",
+                slug: "shopping-chests",
+                title: "Shopping Chests",
             },
             {
-                slug: "foretagsroller",
-                title: "Företagsroller",
+                slug: "shopping-plots",
+                title: "Shopping Plots",
             },
         ],
     },
