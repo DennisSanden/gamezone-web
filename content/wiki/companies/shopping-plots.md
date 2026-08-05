@@ -27,7 +27,7 @@ Den som hyr måste äga ett aktivt företag. Ett företag kan bara hyra en plats
 Företagsägaren kan ge en annan spelare byggrättigheter med:
 
 ```text
-/company manager <spelare>
+/company add manager <spelare>
 ```
 
 ## Hyresgäster

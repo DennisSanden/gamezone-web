@@ -85,7 +85,7 @@ Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassa
 /company chest resume
 /company chest remove
 /company chests
-/company manager <spelare>
+/company add manager <spelare>
 ```
 
 ## Shopping Plot
