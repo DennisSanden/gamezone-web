@@ -3,9 +3,9 @@ title: "Skapa ett settlement"
 description: "Grunda ett nytt samhälle, välj kategori och börja utveckla en egen plats i GameZone-världen."
 category: "Settlements"
 order: 1
-version: "1.3"
+version: "1.4"
 engineVersion: "Settlement Foundation"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-06"
 infoboxTitle: "Skapa settlement"
 infobox:
   kommando: "/settlement create <namn>"
@@ -52,6 +52,14 @@ Titta på en kista och skriv:
 `/settlement inventory register`
 
 Material som krävs för nivåuppgraderingar dras från registrerade kistor. Du kan se registrerade kistor med `/settlement inventory list` och ta bort en registrering med `/settlement inventory remove` medan du tittar på kistan.
+
+### Välj settlementets hemteleport
+
+Settlementets King kan välja var medlemmarna ska hamna när de använder klockan vid spawn. Ställ dig på den önskade platsen och skriv:
+
+`/settlement setspawn`
+
+Platsen måste ligga inom settlementets territorium. Om ingen egen spawn har satts används settlementets registrerade centrum. Läs mer på sidan [Settlement spawn](/wiki/settlements/settlement-spawn).
 
 ### Uppgradera settlementet
 

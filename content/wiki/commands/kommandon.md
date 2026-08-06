@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.1"
+version: "1.2"
 engineVersion: "Commands"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-06"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -42,7 +42,20 @@ infobox:
 /settlement transfer <spelare>
 /settlement rename <nytt namn>
 /settlement tax <procent>
+/settlement setspawn
 ```
+
+### Settlement spawn
+
+```text
+/settlement setspawn
+```
+
+`/settlement setspawn` sparar platsen där du står som settlementets hemteleport. När en medlem använder klockan vid spawn teleporteras spelaren till den sparade platsen.
+
+Endast settlementets **King** kan använda kommandot. Platsen måste ligga inom settlementets eget territorium. Om ingen egen spawn har satts används settlementets registrerade centrum.
+
+Läs hela guiden på sidan [Settlement spawn](/wiki/settlements/settlement-spawn).
 
 ### Stadskassan
 
