@@ -1,11 +1,11 @@
 ---
 title: "Företag"
-description: "Så fungerar företag, medlemskap och företagslicenser på GameZone."
+description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.0"
+version: "1.1"
 engineVersion: "Company"
-updatedAt: "2026-08-05"
+updatedAt: "2026-08-06"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 3 och Handelscentrum"
@@ -38,6 +38,21 @@ Företagets licens avgör hur många shopping chests företaget får registrera 
 | Nivå 9 till 10 | 1 500 000 Coins | 10 | 10 procentenheter |
 
 > [!INFO] Endast företagsägaren kan uppgradera licensen. Använd `/company license upgrade`.
+
+## Företagsskatt och settlementets skatteöversikt
+
+När företagets handel genererar skatt till settlementet registreras den som **företagsskatt**.
+
+Om settlementet har låst upp byggnaden **Bank** kan King och andra behöriga spelare följa företagsskatten i settlementets [Skatteöversikt](/wiki/economy/stadskassan#skatteöversikt).
+
+Där visas:
+
+- settlementets totala företagsskatt
+- en lista över registrerade företag
+- hur mycket skatt varje företag har genererat
+- statistik för 7 dagar, 30 dagar eller totalt
+
+Det gör att settlementets ledning kan se vilka företag som faktiskt bidrar mest till stadskassan, utan att behöva sitta med ett Excel-ark som någon kommunal ekonomichef.
 
 ## Medlemmar och intäkter
 

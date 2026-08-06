@@ -1,11 +1,11 @@
 ---
 title: "Stadskassan och stadsskatt"
-description: "Så fungerar settlementets gemensamma Coins, stadsskatt, insättningar, uttag och utbetalningar till invånare."
+description: "Så fungerar settlementets gemensamma Coins, stadsskatt, skatteöversikt, insättningar, uttag och utbetalningar."
 category: "Ekonomi"
 order: 2
-version: "1.2"
+version: "1.3"
 engineVersion: "Economy Engine"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-06"
 infoboxTitle: "Stadskassan"
 infobox:
   standardSkatt: "25 %"
@@ -29,7 +29,27 @@ Du öppnar översikten med:
 
 `/settlement treasury`
 
-Menyn visar saldo, statistik och transaktionshistorik. Det går inte att sätta in eller ta ut Coins genom menyn. Alla överföringar görs med kommandon.
+Menyn visar settlementets saldo och ekonomiska funktioner. Det går inte att sätta in eller ta ut Coins genom menyn. Alla överföringar görs med kommandon.
+
+## Skatteöversikt
+
+När settlementet har låst upp byggnaden [Bank](/wiki/buildings/bank) blir **Skatteöversikten** tillgänglig under Stadskassan.
+
+Översikten visar hur mycket skatt settlementet har fått in och var pengarna kommer från:
+
+- **Total skatt**, all registrerad skatt under den valda perioden
+- **Produktionsskatt**, skatt från medlemmarnas godkända produktion
+- **Företagsskatt**, skatt från företag registrerade i settlementet
+- **Företagslista**, hur mycket varje företag har genererat till stadskassan
+
+Du kan växla mellan tre tidsperioder:
+
+- senaste 7 dagarna
+- senaste 30 dagarna
+- totalt
+
+> [!NOTE]
+> Skatteöversikten är statistik. Pengarna sätts fortfarande in direkt i stadskassan när skatten tas ut.
 
 ## Sätta in Coins
 
