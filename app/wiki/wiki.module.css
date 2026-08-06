@@ -282,3 +282,123 @@
         grid-template-columns: 1fr;
     }
 }
+
+.featuredSection {
+    margin-bottom: 42px;
+}
+
+.featuredCard {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 22px;
+    padding: 26px 28px;
+    overflow: hidden;
+    border: 1px solid rgba(191, 226, 177, 0.28);
+    border-radius: 17px;
+    background:
+        radial-gradient(circle at 86% 20%, rgba(137, 185, 117, 0.2), transparent 22rem),
+        linear-gradient(135deg, rgba(38, 58, 41, 0.98), rgba(18, 29, 21, 0.98));
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.featuredCard::after {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0.035), transparent 36%);
+    content: "";
+    pointer-events: none;
+}
+
+.featuredCard:hover {
+    border-color: rgba(197, 234, 182, 0.48);
+    box-shadow: 0 26px 65px rgba(0, 0, 0, 0.26);
+    transform: translateY(-2px);
+}
+
+.featuredIcon {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    border: 1px solid rgba(198, 230, 185, 0.2);
+    border-radius: 15px;
+    background: rgba(128, 174, 110, 0.15);
+    color: #bdd4b4;
+}
+
+.featuredCopy {
+    position: relative;
+    z-index: 1;
+}
+
+.featuredLabel {
+    color: #a8c79c;
+    font-size: 0.66rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.featuredCopy h2 {
+    margin: 7px 0 0;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    letter-spacing: -0.045em;
+}
+
+.featuredCopy p {
+    max-width: 720px;
+    margin: 8px 0 0;
+    color: #9daa9f;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.featuredAction {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #c5d9be;
+    font-size: 0.76rem;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.featuredCard:hover .featuredAction span {
+    transform: translateX(3px);
+}
+
+.featuredAction span {
+    transition: transform 160ms ease;
+}
+
+@media (max-width: 760px) {
+    .featuredCard {
+        grid-template-columns: auto minmax(0, 1fr);
+        padding: 22px;
+    }
+
+    .featuredAction {
+        grid-column: 1 / -1;
+        justify-content: space-between;
+        padding-top: 4px;
+    }
+}
+
+@media (max-width: 520px) {
+    .featuredCard {
+        gap: 16px;
+    }
+
+    .featuredIcon {
+        width: 52px;
+        height: 52px;
+    }
+}

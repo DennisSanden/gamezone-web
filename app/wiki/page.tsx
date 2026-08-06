@@ -118,6 +118,30 @@ export default function WikiPage() {
                 </section>
 
                 <PageContainer className={styles.content}>
+                    <section className={styles.featuredSection}>
+                        <Link
+                            className={styles.featuredCard}
+                            href="/wiki/settlements/settlement-upgrades"
+                        >
+                            <div className={styles.featuredIcon}>
+                                <WikiIcon name="settlements" size={30} />
+                            </div>
+
+                            <div className={styles.featuredCopy}>
+                                <span className={styles.featuredLabel}>Mest använda guiden</span>
+                                <h2>Settlement Upgrade</h2>
+                                <p>
+                                    Alla nivåer, kostnader, material, byggnadskrav och
+                                    fördelar samlade på en enda lång sida.
+                                </p>
+                            </div>
+
+                            <span className={styles.featuredAction}>
+                                Visa alla upgrades <span aria-hidden="true">→</span>
+                            </span>
+                        </Link>
+                    </section>
+
                     <section className={styles.startSection}>
                         <div className={styles.sectionHeading}>
                             <div>
