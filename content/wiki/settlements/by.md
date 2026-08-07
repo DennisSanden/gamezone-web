@@ -2,7 +2,7 @@
 title: "By"
 description: "Den tredje settlementnivån där handel och företag blir en naturlig del av settlementets utveckling."
 category: "Settlements"
-order: 4
+order: 12
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

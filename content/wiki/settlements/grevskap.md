@@ -2,7 +2,7 @@
 title: "Grevskap"
 description: "Den elfte settlementnivån med ett större territorium, högre Server TAX och fortsatt expansion mot Hertigdöme."
 category: "Settlements"
-order: 12
+order: 20
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

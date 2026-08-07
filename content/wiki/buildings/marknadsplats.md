@@ -2,7 +2,7 @@
 title: "Marknadsplats"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Marknadsplats."
 category: "Byggnader"
-order: 8
+order: 14
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

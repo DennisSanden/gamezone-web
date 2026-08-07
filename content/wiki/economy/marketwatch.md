@@ -2,7 +2,7 @@
 title: "MarketWatch"
 description: "Se vilka resurser som efterfrågas av serverns settlements."
 category: "Ekonomi"
-order: 3
+order: 5
 version: "1.0"
 engineVersion: "MarketWatch"
 updatedAt: "2026-08-04"

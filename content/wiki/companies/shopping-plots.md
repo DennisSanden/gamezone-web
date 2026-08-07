@@ -2,7 +2,7 @@
 title: "Shopping Plots"
 description: "Företagstomter vid spawn där företag kan bygga butik."
 category: "Företag"
-order: 3
+order: 4
 version: "1.1"
 engineVersion: "Shopping Plot"
 updatedAt: "2026-08-04"

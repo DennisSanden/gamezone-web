@@ -2,7 +2,7 @@
 title: "Hertigdöme"
 description: "Den tolfte settlementnivån där Slott låses upp och settlementet fortsätter sin utveckling mot Nation."
 category: "Settlements"
-order: 13
+order: 21
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

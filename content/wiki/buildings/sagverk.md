@@ -2,7 +2,7 @@
 title: "Sågverk"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Sågverk."
 category: "Byggnader"
-order: 2
+order: 4
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

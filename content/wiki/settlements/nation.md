@@ -2,7 +2,7 @@
 title: "Nation"
 description: "Den trettonde settlementnivån med ett mycket stort territorium, hög Server TAX och fortsatt utveckling mot Kungadöme."
 category: "Settlements"
-order: 14
+order: 22
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

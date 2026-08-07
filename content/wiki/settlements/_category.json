@@ -1,6 +1,6 @@
 {
   "title": "Settlements",
-  "description": "Allt om grundande, medlemskap, ledarskap, nivåer och utveckling av spelarstyrda samhällen.",
-  "order": 6,
+  "description": "Grundande, ledarskap, nivåer, territorium och utveckling av spelarstyrda samhällen.",
+  "order": 1,
   "icon": "settlements"
 }

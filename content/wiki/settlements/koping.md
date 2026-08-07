@@ -2,7 +2,7 @@
 title: "Köping"
 description: "Den sjätte settlementnivån där Kyrkan ger en permanent bonus till all registrerad produktion."
 category: "Settlements"
-order: 7
+order: 15
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

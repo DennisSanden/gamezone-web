@@ -2,7 +2,7 @@
 title: "Titlar och ledarskap"
 description: "King, Lord, titelbonusar och hur invånare befordras inom ett settlement."
 category: "Settlements"
-order: 2
+order: 3
 version: "1.0"
 engineVersion: "Settlement Titles"
 updatedAt: "2026-08-04"

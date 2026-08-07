@@ -2,7 +2,7 @@
 title: "Monument"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Monument."
 category: "Byggnader"
-order: 10
+order: 15
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

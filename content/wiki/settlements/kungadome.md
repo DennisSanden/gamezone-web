@@ -2,7 +2,7 @@
 title: "Kungadöme"
 description: "Den fjortonde settlementnivån med ett enormt territorium, mycket hög Server TAX och det sista utvecklingssteget före Imperium."
 category: "Settlements"
-order: 15
+order: 23
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

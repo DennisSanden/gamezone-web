@@ -2,7 +2,7 @@
 title: "Handelsstad"
 description: "Den åttonde settlementnivån där handel och ekonomisk infrastruktur får en större roll."
 category: "Settlements"
-order: 9
+order: 17
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

@@ -2,7 +2,7 @@
 title: "Bank"
 description: "Nivåkrav, Coin-kostnad och funktioner som låses upp av Bank."
 category: "Byggnader"
-order: 4
+order: 11
 version: "2.2"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-06"

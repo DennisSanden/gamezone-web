@@ -2,7 +2,7 @@
 title: "Handelscentrum"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Handelscentrum."
 category: "Byggnader"
-order: 3
+order: 10
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

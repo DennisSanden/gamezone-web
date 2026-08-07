@@ -2,7 +2,7 @@
 title: "Huvudstad"
 description: "Den tionde settlementnivån där Monument låses upp och settlementets ekonomiska styrka fortsätter att växa."
 category: "Settlements"
-order: 11
+order: 19
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

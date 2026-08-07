@@ -2,7 +2,7 @@
 title: "Kyrka"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Kyrka."
 category: "Byggnader"
-order: 6
+order: 13
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

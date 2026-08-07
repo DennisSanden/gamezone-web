@@ -2,7 +2,7 @@
 title: "Ändra namn och kategori"
 description: "Byt settlementets namn eller produktionskategori och se kostnad, behörighet och cooldown."
 category: "Settlements"
-order: 3
+order: 5
 version: "1.0"
 engineVersion: "Settlement Settings"
 updatedAt: "2026-08-04"

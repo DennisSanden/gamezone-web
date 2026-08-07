@@ -2,7 +2,7 @@
 title: "Fästning"
 description: "Den nionde settlementnivån med ett större territorium och fortsatt expansion mot Huvudstad."
 category: "Settlements"
-order: 10
+order: 18
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

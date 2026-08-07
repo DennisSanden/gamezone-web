@@ -2,7 +2,7 @@
 title: "Läger"
 description: "Den andra settlementnivån där flera spelare börjar utveckla ett gemensamt samhälle."
 category: "Settlements"
-order: 3
+order: 11
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

@@ -2,7 +2,7 @@
 title: "Samhälle"
 description: "Den femte settlementnivån där alkemi blir en del av settlementets produktion."
 category: "Settlements"
-order: 6
+order: 14
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

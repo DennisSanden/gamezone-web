@@ -2,7 +2,7 @@
 title: "Stad"
 description: "Den sjunde settlementnivån med ett större territorium, högre Server TAX och fortsatt ekonomisk expansion."
 category: "Settlements"
-order: 8
+order: 16
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

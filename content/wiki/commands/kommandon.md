@@ -5,7 +5,7 @@ category: "Kommandon"
 order: 1
 version: "1.2"
 engineVersion: "Commands"
-updatedAt: "2026-08-06"
+updatedAt: "2026-08-07"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -17,6 +17,15 @@ infobox:
 ```text
 /gz menu
 ```
+
+## Daily Rewards
+
+```text
+/daily
+/gz daily
+```
+
+Öppnar Daily Rewards där du kan hämta dagens Coins och ett slumpmässigt item. Belöningarna ökar från dag 1 till den stora jackpot-belöningen på dag 7. Läs hela guiden på sidan [Daily Rewards](/wiki/economy/daily-rewards).
 
 ## Settlement
 

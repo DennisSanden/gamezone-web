@@ -2,7 +2,7 @@
 title: "Laboratorium"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Laboratorium."
 category: "Byggnader"
-order: 5
+order: 12
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

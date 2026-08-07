@@ -2,7 +2,7 @@
 title: "Imperium"
 description: "Den femtonde och högsta settlementnivån med maximalt territorium, maximal Server TAX och tillgång till Underverk."
 category: "Settlements"
-order: 16
+order: 24
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-19"

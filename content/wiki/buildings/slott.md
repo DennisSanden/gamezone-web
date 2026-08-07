@@ -2,7 +2,7 @@
 title: "Slott"
 description: "Nivåkrav  Coin-kostnad och faktisk funktion för Slott."
 category: "Byggnader"
-order: 12
+order: 16
 version: "2.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-08-04"

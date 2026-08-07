@@ -2,7 +2,7 @@
 title: "Bosättning"
 description: "Den fjärde settlementnivån där settlementets ekonomi och administration blir mer avancerad."
 category: "Settlements"
-order: 5
+order: 13
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"

@@ -2,7 +2,7 @@
 title: "Enstöring"
 description: "Den första settlementnivån och starten på ett nytt samhälle i GameZone."
 category: "Settlements"
-order: 2
+order: 10
 version: "1.0"
 engineVersion: "Settlement Registry"
 updatedAt: "2026-07-18"
