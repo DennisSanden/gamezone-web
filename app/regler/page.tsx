@@ -19,7 +19,7 @@ type Rule = {
 const conductRules: Rule[] = [
     {
         title: "Respektera andra",
-        text: "Trakasserier, hot, diskriminering och annat olämpligt beteende accepteras inte. Behandla andra spelare som du själv vill bli behandlad.",
+        text: "Behandla andra med respekt. Trakasserier, hot, diskriminering eller annat olämpligt beteende accepteras inte.",
     },
     {
         title: "Namn och skins",
@@ -27,22 +27,22 @@ const conductRules: Rule[] = [
     },
     {
         title: "Serverteamets beslut",
-        text: "Serverteamets beslut är slutgiltiga. Regler kan uppdateras när det behövs för att bevara en rättvis och rolig spelupplevelse.",
+        text: "Serverteamets beslut är slutgiltiga. Regler kan uppdateras när det behövs för att skapa en rättvis och rolig spelupplevelse för alla.",
     },
 ];
 
 const technicalRules: Rule[] = [
     {
         title: "Exploits och buggar",
-        text: "Det är förbjudet att medvetet utnyttja buggar eller andra fel för att skaffa sig en fördel. Upptäcker du ett fel ska det rapporteras till serverteamet.",
+        text: "Det är förbjudet att medvetet utnyttja buggar eller andra fel i spelet för att skaffa sig en fördel. Upptäcker du ett fel ska det rapporteras i 🐛│rapportera-bugg.",
     },
     {
         title: "Fusk",
-        text: "Cheats, hacks, x-ray, autoclickers, makron och annan otillåten programvara är förbjudna.",
+        text: "Alla former av cheats, hacks, x-ray, autoclickers, makron eller annan otillåten programvara är förbjudna.",
     },
     {
         title: "Coinboosting",
-        text: "Det är förbjudet att använda alternativa konton, samarbeten eller andra upplägg för att skapa Coins på ett sätt som systemet inte är avsett för.",
+        text: "All form av Coinboosting är förbjuden. Det gäller exempelvis att använda alternativa konton eller samarbeta för att skapa Coins på ett sätt som inte är avsett.",
     },
 ];
 
@@ -65,7 +65,7 @@ const quickAnswers = [
     },
     {
         question: "Får jag döda någon med lava eller en fälla?",
-        answer: "Nej, inte utanför ditt eget settlement. Inom ditt eget settlement får du bygga fällor och försvar.",
+        answer: "Nej, inte utanför ditt eget settlement. Inom ditt eget settlement får du bygga fällor och försvar som kan döda, men inte fällor som fångar spelare eller hindrar dem från att ta sig ut.",
     },
     {
         question: "Vad gör jag om jag hittar en gråzon?",
@@ -227,7 +227,8 @@ export default function RulesPage() {
                                 <span>Undantag</span>
                                 <p>
                                     Inom ditt eget settlement får du bygga fällor och
-                                    försvar för att skydda området.
+                                    försvar som kan döda spelare. Fällor som fångar spelare
+                                    eller hindrar dem från att ta sig ut är inte tillåtna.
                                 </p>
                             </article>
                         </div>
@@ -287,10 +288,10 @@ export default function RulesPage() {
                             <span className={styles.kicker}>Fabriker och automation</span>
                             <h2>Specialisering ska skapa handel</h2>
                             <p>
-                                Automation är tillåten, men bara inom resurser som hör till
-                                ditt settlements produktionskategori. Begränsningen gäller
-                                konstruktioner som producerar resurser utan eller med minimal
-                                spelarinsats.
+                                Automatiska farmar, fabriker och andra former av automation får
+                                endast användas för resurser som tillhör ditt settlements
+                                produktionskategori. Begränsningen gäller system som producerar
+                                resurser utan eller med minimal spelarinsats.
                             </p>
                         </div>
 
@@ -319,17 +320,18 @@ export default function RulesPage() {
                         <div className={styles.automationNotes}>
                             <article>
                                 <strong>Manuell insamling</strong>
-                                <p>Alla resurser får alltid samlas in manuellt.</p>
+                                <p>Manuell insamling av resurser är alltid tillåten.</p>
                             </article>
                             <article>
                                 <strong>Automatiska resurser</strong>
-                                <p>Ger aldrig GZ Coins, även när farmen är tillåten.</p>
+                                <p>Ger aldrig GZ Coins, även om farmen är tillåten enligt ditt settlements produktionskategori. Endast manuellt insamlade resurser ger GZ Coins.</p>
                             </article>
                             <article>
                                 <strong>Syftet</strong>
                                 <p>
-                                    Settlements ska behöva handla med varandra i stället för
-                                    att varje stad automatiserar all produktion själv.
+                                    Om en automatisk konstruktion producerar resurser från en
+                                    annan produktionskategori än ditt settlements kategori är
+                                    den förbjuden, oavsett konstruktion eller teknik.
                                 </p>
                             </article>
                         </div>
