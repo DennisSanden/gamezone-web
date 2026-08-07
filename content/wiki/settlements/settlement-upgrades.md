@@ -1,35 +1,25 @@
 ---
 title: "Settlement Upgrade"
-description: "Alla settlementuppgraderingar samlade på en enda sida, från Enstöring till Imperium."
+description: "Upplåsningskraven för varje settlementnivå, byggnader, items och Coins."
 category: "Settlements"
 order: 2
-version: "1.0"
+version: "1.1"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-08-06"
+updatedAt: "2026-08-07"
 infoboxTitle: "Settlement Upgrade"
 infobox:
   nivåer: "15"
   uppgraderingar: "14"
-  startnivå: "Enstöring"
-  slutnivå: "Imperium"
 relatedArticles:
   - category: "settlements"
     article: "skapa-ett-settlement"
     title: "Skapa ett settlement"
     description: "Så grundar du ett nytt settlement och kommer igång."
-  - category: "settlements"
-    article: "andra-namn-och-kategori"
-    title: "Ändra namn och kategori"
-    description: "Regler och konsekvenser när ett settlement ändras."
 ---
 
-## Alla upgrades på samma sida
+## Upplåsningskrav
 
-Här finns hela vägen från **Enstöring** till **Imperium** samlad i rätt ordning. Du behöver inte längre öppna varje settlementnivå separat för att jämföra kostnader, material, byggnadskrav och nya fördelar.
-
-> [!IMPORTANT] Coins tas från stadskassan. Material hämtas från Settlement Inventory. En uppgradering genomförs endast om samtliga krav kan uppfyllas samtidigt.
-
-> [!TIP] Använd innehållsförteckningen för att hoppa direkt till den uppgradering du planerar.
+Här ser du exakt vad som krävs för att låsa upp nästa settlementnivå, vilka byggnader som måste vara upplåsta, vilka items som behövs och hur många Coins uppgraderingen kostar.
 
 ## Nivå 1 till 2, Enstöring till Läger
 
