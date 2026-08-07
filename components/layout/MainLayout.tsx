@@ -20,7 +20,7 @@ const navigationItems = [
     { label: "Företag", href: "/companies" },
     { label: "MarketWatch", href: "/marketwatch" },
     { label: "Leaderboards", href: "/leaderboards" },
-    { label: "Karta", href: "http://184.170.201.111:8100/" }
+    { label: "Karta", href: "http://184.170.201.111:8100/" },
     { label: "Live", href: "/live" },
     { label: "Regler", href: "/regler" },
     { label: "Om GameZone", href: "/om-gamezone" },
