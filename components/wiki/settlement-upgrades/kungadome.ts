@@ -26,10 +26,16 @@ export const kungadomeTillImperium: SettlementUpgrade = {
 
         materials: [
             {
-                id: "diamond-ore",
-                name: "Diamond Ore",
-                amount: 3072,
-                icon: "💎",
+                id: "elytra",
+                name: "Elytra",
+                amount: 3,
+                icon: "🪽",
+            },
+            {
+                id: "emerald",
+                name: "Emerald",
+                amount: 5000,
+                icon: "💚",
             },
             {
                 id: "copper-ore",
