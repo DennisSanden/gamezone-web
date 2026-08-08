@@ -1,32 +1,34 @@
 ---
 title: "Titlar och ledarskap"
-description: "King, Lord, titelbonusar och hur invånare befordras inom ett settlement."
+description: "King, upp till två Lords, titelbonusar och hur invånare befordras inom ett settlement."
 category: "Settlements"
 order: 3
 version: "1.0"
 engineVersion: "Settlement Titles"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-08"
 infoboxTitle: "Titlar"
 infobox:
-  ansvariga: "King och Lord"
+  ansvariga: "King och upp till 2 Lords"
   högstaTitelbonus: "+20 %"
   betalning: "Stadskassan"
 ---
 
-## King och Lord
+## King och Lords
 
 Varje settlement har en **King**. Grundaren blir automatiskt King när settlementet skapas med `/settlement create <namn>`.
 
-King kan utse en annan spelare till **Lord** med:
+King kan utse upp till **två andra spelare till Lord** med:
 
 `/settlement lord <spelare>`
 
-King och Lord kan hantera settlementets finanser, medlemmar och invånarnas titlar. De kan också använda settlementets gemensamma funktioner genom `/gz menu` eller `/settlement menu`.
+Ett settlement kan alltså ha **1 King och maximalt 2 Lords samtidigt**. När båda Lord-platserna är upptagna måste en befintlig Lord lämna rollen innan en ny kan utses.
+
+King och Lords kan hantera settlementets finanser, medlemmar och invånarnas titlar. De kan också använda settlementets gemensamma funktioner genom `/gz menu` eller `/settlement menu`.
 
 > [!IMPORTANT]
-> King och Lord får en produktionsbonus som baseras på settlementets nivå. Bonusen gäller bara produktion som redan är berättigad till Coins, alltså resurser inom settlementets valda kategori.
+> King och Lords får en produktionsbonus som baseras på settlementets nivå. Bonusen gäller bara produktion som redan är berättigad till Coins, alltså resurser inom settlementets valda kategori.
 
-## Bonus för King och Lord
+## Bonus för King och Lords
 
 | Settlementnivå | Produktionsbonus |
 |---:|---:|
@@ -48,7 +50,7 @@ King och Lord kan hantera settlementets finanser, medlemmar och invånarnas titl
 
 ## Befordra invånare
 
-King och Lord kan belöna aktiva invånare genom att ge dem högre titlar. Ju högre titel en spelare har, desto större produktionsbonus får spelaren på godkänd produktion inom settlementets kategori.
+King och Lords kan belöna aktiva invånare genom att ge dem högre titlar. Ju högre titel en spelare har, desto större produktionsbonus får spelaren på godkänd produktion inom settlementets kategori.
 
 Det kostar Coins att befordra en spelare. Titelnivå 2 kostar **1 000 Coins**, nivå 3 kostar **5 000 Coins**, nivå 4 kostar **15 000 Coins** och nivå 5 kostar **50 000 Coins**. Kostnaden dras från [stadskassan](/wiki/economy/stadskassan), inte från den befordrade spelarens privata saldo.
 

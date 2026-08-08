@@ -54,6 +54,10 @@ infobox:
 /settlement setspawn
 ```
 
+`/settlement lord <spelare>` utser en medlem till Lord. Ett settlement kan ha **maximalt två Lords samtidigt**, utöver settlementets King.
+
+`/settlement transfer <spelare>` överför King-rollen till en av settlementets Lords.
+
 ### Settlement spawn
 
 ```text
