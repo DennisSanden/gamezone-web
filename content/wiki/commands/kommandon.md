@@ -5,7 +5,7 @@ category: "Kommandon"
 order: 1
 version: "1.2"
 engineVersion: "Commands"
-updatedAt: "2026-08-07"
+updatedAt: "2026-08-09"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -26,6 +26,16 @@ infobox:
 ```
 
 Öppnar Daily Rewards där du kan hämta dagens Coins och ett slumpmässigt item. Belöningarna ökar från dag 1 till den stora jackpot-belöningen på dag 7. Läs hela guiden på sidan [Daily Rewards](/wiki/economy/daily-rewards).
+
+## Teleport
+
+```text
+/spawn
+```
+
+`/spawn` teleporterar dig till serverns spawn när du befinner dig i ditt eget settlement.
+
+När du är vid spawn kan du ringa i **klockan på kyrkan** för att teleporteras hem till ditt settlement igen. Om settlementet har satt en egen hemteleport med `/settlement setspawn` används den platsen. Annars används settlementets registrerade centrum.
 
 ## Settlement
 
