@@ -457,5 +457,17 @@
         "aliases": [
             "Underverket"
         ]
+    },
+    {
+        "key": "riksvag",
+        "title": "Riksväg",
+        "definition": "En officiellt registrerad väg som ger 100 procent extra färdhastighet på marken och med ridbara mounts. Elytra får ingen bonus.",
+        "category": "Settlements",
+        "href": "/wiki/settlements/riksvagar",
+        "aliases": [
+            "Riksvägar",
+            "Riksvägen",
+            "Riksvägarna"
+        ]
     }
 ]

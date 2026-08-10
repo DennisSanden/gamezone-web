@@ -3,8 +3,8 @@ title: "Teleport"
 description: "Så tar du dig mellan ditt settlement och serverns spawn."
 category: "Settlements"
 order: 5
-version: "1.0"
-updatedAt: "2026-08-09"
+version: "1.1"
+updatedAt: "2026-08-10"
 infoboxTitle: "Teleport"
 infobox:
   till_spawn: "/spawn"
@@ -42,5 +42,9 @@ Om ditt settlement har satt en egen spawnpunkt med `/settlement setspawn` kommer
 - **Spawn → Settlement:** ring i klockan på kyrkan vid spawn.
 
 Det här gör spawn till serverns naturliga knutpunkt samtidigt som resor ute i världen fortfarande behöver ske på vanligt sätt.
+
+För längre resor på marken finns också **riksvägar**. Registrerade riksvägar ger **+100 % färdhastighet** på marken och med ridbara mounts, men ingen bonus med elytra. Vägarna visas även på BlueMap.
+
+Läs hela guiden på sidan [Riksvägar](/wiki/settlements/riksvagar).
 
 Läs mer om hur settlementets King väljer hemkomstplats på sidan [Settlement spawn](/wiki/settlements/settlement-spawn).

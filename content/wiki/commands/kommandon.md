@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.2"
+version: "1.3"
 engineVersion: "Commands"
-updatedAt: "2026-08-09"
+updatedAt: "2026-08-10"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -140,6 +140,22 @@ Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassa
 /territory buy
 /territory clear
 ```
+
+## Riksvägar, admin
+
+Riksvägar markeras och färdigställs av serverns admins. Vanliga spelare behöver inte använda dessa kommandon.
+
+```text
+/road create <namn>
+/road setpoint
+/road complete
+/road cancel
+/road list
+```
+
+`/road setpoint` kan användas flera gånger för att låta vägen följa svängar. När vägen är färdig registreras sträckan med `/road complete`.
+
+Läs reglerna och hur hastighetsbonusen fungerar på sidan [Riksvägar](/wiki/settlements/riksvagar).
 
 ## Duell
 
