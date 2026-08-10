@@ -3,9 +3,9 @@ title: "Byggmaterial"
 description: "Förädlade block och byggresurser."
 category: "Produktionskategorier"
 order: 5
-version: "1.1"
+version: "1.2"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-10"
 infoboxTitle: "Byggmaterial"
 infobox:
   coinregel: "Endast vald kategori"
@@ -18,6 +18,285 @@ Byggmaterial fokuserar på att förädla resurser till block som används i bygg
 
 > [!IMPORTANT]
 > Byggmaterial ger bara Coins om settlementet valde Byggmaterial när det skapades med `/settlement create <namn>`.
+
+
+## Items som ingår
+
+- Crafted Saddle
+- Stick
+- Oak Planks
+- Spruce Planks
+- Birch Planks
+- Jungle Planks
+- Acacia Planks
+- Dark Oak Planks
+- Mangrove Planks
+- Cherry Planks
+- Bamboo Planks
+- Crimson Planks
+- Warped Planks
+- Pale Oak Planks
+- Oak Slab
+- Spruce Slab
+- Birch Slab
+- Jungle Slab
+- Acacia Slab
+- Dark Oak Slab
+- Mangrove Slab
+- Cherry Slab
+- Bamboo Slab
+- Crimson Slab
+- Warped Slab
+- Pale Oak Slab
+- Oak Stairs
+- Spruce Stairs
+- Birch Stairs
+- Jungle Stairs
+- Acacia Stairs
+- Dark Oak Stairs
+- Mangrove Stairs
+- Cherry Stairs
+- Bamboo Stairs
+- Crimson Stairs
+- Warped Stairs
+- Pale Oak Stairs
+- Oak Fence
+- Spruce Fence
+- Birch Fence
+- Jungle Fence
+- Acacia Fence
+- Dark Oak Fence
+- Mangrove Fence
+- Cherry Fence
+- Bamboo Fence
+- Crimson Fence
+- Warped Fence
+- Pale Oak Fence
+- Oak Fence Gate
+- Spruce Fence Gate
+- Birch Fence Gate
+- Jungle Fence Gate
+- Acacia Fence Gate
+- Dark Oak Fence Gate
+- Mangrove Fence Gate
+- Cherry Fence Gate
+- Bamboo Fence Gate
+- Crimson Fence Gate
+- Warped Fence Gate
+- Pale Oak Fence Gate
+- Oak Door
+- Spruce Door
+- Birch Door
+- Jungle Door
+- Acacia Door
+- Dark Oak Door
+- Mangrove Door
+- Cherry Door
+- Bamboo Door
+- Crimson Door
+- Warped Door
+- Pale Oak Door
+- Oak Trapdoor
+- Spruce Trapdoor
+- Birch Trapdoor
+- Jungle Trapdoor
+- Acacia Trapdoor
+- Dark Oak Trapdoor
+- Mangrove Trapdoor
+- Cherry Trapdoor
+- Bamboo Trapdoor
+- Crimson Trapdoor
+- Warped Trapdoor
+- Pale Oak Trapdoor
+- Stone Bricks
+- Mossy Stone Bricks
+- Cracked Stone Bricks
+- Chiseled Stone Bricks
+- Stone Brick Slab
+- Stone Brick Stairs
+- Stone Brick Wall
+- Bricks
+- Brick Slab
+- Brick Stairs
+- Brick Wall
+- Mud Bricks
+- Mud Brick Slab
+- Mud Brick Stairs
+- Mud Brick Wall
+- Sandstone
+- Cut Sandstone
+- Chiseled Sandstone
+- Smooth Sandstone
+- Sandstone Slab
+- Sandstone Stairs
+- Sandstone Wall
+- Red Sandstone
+- Cut Red Sandstone
+- Chiseled Red Sandstone
+- Smooth Red Sandstone
+- Red Sandstone Slab
+- Red Sandstone Stairs
+- Red Sandstone Wall
+- Polished Granite
+- Granite Slab
+- Granite Stairs
+- Granite Wall
+- Polished Diorite
+- Diorite Slab
+- Diorite Stairs
+- Diorite Wall
+- Polished Andesite
+- Andesite Slab
+- Andesite Stairs
+- Andesite Wall
+- Polished Tuff
+- Tuff Bricks
+- Tuff Brick Slab
+- Tuff Brick Stairs
+- Tuff Brick Wall
+- Polished Blackstone
+- Polished Blackstone Bricks
+- Polished Blackstone Slab
+- Polished Blackstone Stairs
+- Polished Blackstone Wall
+- Chiseled Polished Blackstone
+- Blackstone Wall
+- Blackstone Stairs
+- Blackstone Slab
+- Deepslate Bricks
+- Cracked Deepslate Bricks
+- Deepslate Tiles
+- Cracked Deepslate Tiles
+- Cobbled Deepslate Stairs
+- Cobbled Deepslate Slab
+- Cobbled Deepslate Wall
+- Deepslate Brick Stairs
+- Deepslate Brick Slab
+- Deepslate Brick Wall
+- Deepslate Tile Stairs
+- Deepslate Tile Slab
+- Deepslate Tile Wall
+- Glass
+- Glass Pane
+- Tinted Glass
+- White Stained Glass
+- Orange Stained Glass
+- Magenta Stained Glass
+- Light Blue Stained Glass
+- Yellow Stained Glass
+- Lime Stained Glass
+- Pink Stained Glass
+- Gray Stained Glass
+- Light Gray Stained Glass
+- Cyan Stained Glass
+- Purple Stained Glass
+- Blue Stained Glass
+- Brown Stained Glass
+- Green Stained Glass
+- Red Stained Glass
+- Black Stained Glass
+- White Concrete
+- Orange Concrete
+- Magenta Concrete
+- Light Blue Concrete
+- Yellow Concrete
+- Lime Concrete
+- Pink Concrete
+- Gray Concrete
+- Light Gray Concrete
+- Cyan Concrete
+- Purple Concrete
+- Blue Concrete
+- Brown Concrete
+- Green Concrete
+- Red Concrete
+- Black Concrete
+- White Concrete Powder
+- Orange Concrete Powder
+- Magenta Concrete Powder
+- Light Blue Concrete Powder
+- Yellow Concrete Powder
+- Lime Concrete Powder
+- Pink Concrete Powder
+- Gray Concrete Powder
+- Light Gray Concrete Powder
+- Cyan Concrete Powder
+- Purple Concrete Powder
+- Blue Concrete Powder
+- Brown Concrete Powder
+- Green Concrete Powder
+- Red Concrete Powder
+- Black Concrete Powder
+- White Terracotta
+- Orange Terracotta
+- Magenta Terracotta
+- Light Blue Terracotta
+- Yellow Terracotta
+- Lime Terracotta
+- Pink Terracotta
+- Gray Terracotta
+- Light Gray Terracotta
+- Cyan Terracotta
+- Purple Terracotta
+- Blue Terracotta
+- Brown Terracotta
+- Green Terracotta
+- Red Terracotta
+- Black Terracotta
+- White Glazed Terracotta
+- Orange Glazed Terracotta
+- Magenta Glazed Terracotta
+- Light Blue Glazed Terracotta
+- Yellow Glazed Terracotta
+- Lime Glazed Terracotta
+- Pink Glazed Terracotta
+- Gray Glazed Terracotta
+- Light Gray Glazed Terracotta
+- Cyan Glazed Terracotta
+- Purple Glazed Terracotta
+- Blue Glazed Terracotta
+- Brown Glazed Terracotta
+- Green Glazed Terracotta
+- Red Glazed Terracotta
+- Black Glazed Terracotta
+- Iron Bars
+- Chain
+- Lantern
+- Soul Lantern
+- Campfire
+- Soul Campfire
+- Anvil
+- Chipped Anvil
+- Damaged Anvil
+- Cauldron
+- Hopper
+- Minecart
+- Rail
+- Powered Rail
+- Detector Rail
+- Activator Rail
+- Lightning Rod
+- Iron Door
+- Iron Trapdoor
+- Heavy Weighted Pressure Plate
+- Light Weighted Pressure Plate
+- Block of Copper
+- Cut Copper
+- Cut Copper Slab
+- Cut Copper Stairs
+- Chiseled Copper
+- Copper Grate
+- Copper Bulb
+- Copper Door
+- Copper Trapdoor
+- Exposed Copper Block
+- Weathered Copper Block
+- Oxidized Copper Block
+- Waxed Copper Block
+- Waxed Cut Copper
+- Waxed Copper Door
+- Waxed Copper Trapdoor
+- Waxed Copper Bulb
 
 ## Att tänka på
 

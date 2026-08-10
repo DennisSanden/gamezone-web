@@ -3,9 +3,9 @@ title: "Boskap"
 description: "Djurhållning, kött, ull, läder och ägg."
 category: "Produktionskategorier"
 order: 3
-version: "1.1"
+version: "1.2"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-10"
 infoboxTitle: "Boskap"
 infobox:
   coinregel: "Endast vald kategori"
@@ -18,6 +18,30 @@ Boskap handlar om att föda upp och ta hand om djur. Exempel på resurser är be
 
 > [!IMPORTANT]
 > Resurser från djur ger bara Coins om settlementet valde Boskap när det skapades med `/settlement create <namn>`. Automatiserad insamling ger inga Coins.
+
+
+## Items som ingår
+
+- Beef
+- Cooked Beef
+- Leather
+- Milk Bucket
+- Porkchop
+- Cooked Porkchop
+- Chicken
+- Cooked Chicken
+- Feather
+- Egg
+- White Wool
+- Any Dyed Wool
+- Mutton
+- Cooked Mutton
+- Rabbit
+- Cooked Rabbit
+- Rabbit Hide
+- Rabbit Foot
+- Honey Bottle
+- Honeycomb
 
 ## Max antal per chunk
 
