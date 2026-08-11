@@ -53,10 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **1 Bell**
-- **32 Candles**
-- **8 Lanterns**
-- **2 Lecterns**
+<BuildingRequirementsTable building="kyrka" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

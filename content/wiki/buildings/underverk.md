@@ -53,10 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **8 Beacons**
-- **6 Bells**
-- **8 Vaults**
-- **4 Ender Chests**
+<BuildingRequirementsTable building="underverk" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

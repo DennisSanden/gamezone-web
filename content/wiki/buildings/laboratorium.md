@@ -53,10 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **6 Brewing Stands**
-- **4 Cauldrons**
-- **12 Bookshelves**
-- **4 Decorated Pots**
+<BuildingRequirementsTable building="laboratorium" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

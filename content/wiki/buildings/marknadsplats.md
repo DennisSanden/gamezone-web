@@ -53,11 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **24 Chests**
-- **24 Barrels**
-- **12 Item Frames**
-- **6 Armor Stands**
-- **2 Bells**
+<BuildingRequirementsTable building="marknadsplats" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

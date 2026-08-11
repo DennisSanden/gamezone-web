@@ -53,10 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **2 Beacons**
-- **4 Bells**
-- **16 Lanterns**
-- **2 Vaults**
+<BuildingRequirementsTable building="slott" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

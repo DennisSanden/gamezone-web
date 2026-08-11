@@ -11,12 +11,17 @@ import {
 } from "@/lib/wiki/wiki-definitions";
 import remarkWikiDefinitions from "@/lib/wiki/remark-wiki-definitions";
 import SettlementBuildingsPanel from "./SettlementBuildingsPanel";
+import BuildingRequirementsTable from "./BuildingRequirementsTable";
 import SettlementInfoBox from "./SettlementInfoBox";
 import SettlementUpgradePanel from "./SettlementUpgradePanel";
 import {
     isSettlementBuildingGroup,
     type SettlementBuildingGroup,
 } from "./settlement-buildings";
+import {
+    isBuildingRequirementKey,
+    type BuildingRequirementKey,
+} from "./building-requirements";
 import {
     isSettlementLevelKey,
     type SettlementLevelKey,
@@ -63,10 +68,14 @@ type ArticleContentPart =
     | {
     type: "settlement-info";
     settlement: SettlementLevelKey;
+}
+    | {
+    type: "building-requirements";
+    building: BuildingRequirementKey;
 };
 
 const componentPattern =
-    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox)\s+(?:upgradeKey|group|settlement)=["']([a-z0-9-]+)["']\s*\/>/gi;
+    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable)\s+(?:upgradeKey|group|settlement|building)=["']([a-z0-9-]+)["']\s*\/>/gi;
 
 export default function WikiArticle({
                                         article,
@@ -209,6 +218,15 @@ export default function WikiArticle({
                                 <SettlementBuildingsPanel
                                     group={part.group}
                                     key={`${part.group}-${index}`}
+                                />
+                            );
+                        }
+
+                        if (part.type === "building-requirements") {
+                            return (
+                                <BuildingRequirementsTable
+                                    building={part.building}
+                                    key={`${part.building}-${index}`}
                                 />
                             );
                         }
@@ -550,6 +568,14 @@ function splitArticleContent(
                 type: "settlement-info",
                 settlement: componentValue,
             });
+        } else if (
+            componentName === "BuildingRequirementsTable" &&
+            isBuildingRequirementKey(componentValue)
+        ) {
+            parts.push({
+                type: "building-requirements",
+                building: componentValue,
+            });
         } else {
             parts.push({
                 type: "markdown",
@@ -609,15 +635,15 @@ function parseCallout(
         .trim();
 
     const match = rawText.match(
-        /^\s*\[!(TIP|IMPORTANT|WARNING|INFO)\]\s*([\s\S]*)$/i,
+        /^\s*\[!(TIP|IMPORTANT|WARNING|INFO|NOTE)\]\s*([\s\S]*)$/i,
     );
 
     if (!match) {
         return null;
     }
 
-    const type =
-        match[1].toLowerCase() as CalloutType;
+    const rawType = match[1].toLowerCase();
+    const type = (rawType === "note" ? "info" : rawType) as CalloutType;
 
     const content = match[2].trim();
 

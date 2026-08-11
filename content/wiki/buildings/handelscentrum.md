@@ -53,11 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **8 Barrels**
-- **8 Chests**
-- **4 Item Frames**
-- **1 Bell**
-- **2 Lecterns**
+<BuildingRequirementsTable building="handelscentrum" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

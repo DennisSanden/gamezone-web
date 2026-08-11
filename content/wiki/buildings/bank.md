@@ -67,12 +67,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **1 Vault**
-- **1 Ender Chest**
-- **2 Iron Doors**
-- **1 Bell**
-- **4 Chiseled Bookshelves**
-- **2 Heavy Weighted Pressure Plates**
+<BuildingRequirementsTable building="bank" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

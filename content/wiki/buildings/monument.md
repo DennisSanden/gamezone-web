@@ -53,10 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **1 Beacon**
-- **1 Bell**
-- **8 Lanterns**
-- **16 Chiseled Stone Bricks**
+<BuildingRequirementsTable building="monument" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 

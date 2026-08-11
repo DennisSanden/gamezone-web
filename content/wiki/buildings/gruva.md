@@ -53,11 +53,7 @@ Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek,
 
 ### Specialkrav
 
-- **1 Crafter**
-- **2 Chests**
-- **1 Barrel**
-- **1 Grindstone**
-- **2 Lanterns**
+<BuildingRequirementsTable building="gruva" />
 
 Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
 
