@@ -40,7 +40,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Gruvdrift",
             cost: "2 500 Coins",
             unlockLevel: 2,
-            href: "/wiki/settlements/lager#byggnader",
+            href: "/wiki/buildings/gruva",
         },
         {
             id: "lada",
@@ -51,7 +51,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Jordbruk",
             cost: "2 500 Coins",
             unlockLevel: 2,
-            href: "/wiki/settlements/lager#byggnader",
+            href: "/wiki/buildings/lada",
         },
         {
             id: "ladugard",
@@ -62,7 +62,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Boskap",
             cost: "2 500 Coins",
             unlockLevel: 2,
-            href: "/wiki/settlements/lager#byggnader",
+            href: "/wiki/buildings/ladugard",
         },
         {
             id: "fiskebrygga",
@@ -73,7 +73,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Fiske",
             cost: "2 500 Coins",
             unlockLevel: 2,
-            href: "/wiki/settlements/lager#byggnader",
+            href: "/wiki/buildings/fiskebrygga",
         },
         {
             id: "sagverk",
@@ -84,7 +84,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Skogsbruk",
             cost: "2 500 Coins",
             unlockLevel: 2,
-            href: "/wiki/settlements/lager#byggnader",
+            href: "/wiki/buildings/sagverk",
         },
         {
             id: "stenhuggeri",
@@ -95,7 +95,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Byggmaterial",
             cost: "2 500 Coins",
             unlockLevel: 2,
-            href: "/wiki/settlements/lager#byggnader",
+            href: "/wiki/buildings/stenhuggeri",
         },
     ],
 
@@ -109,7 +109,7 @@ const settlementBuildings: Record<
             effect: "Låser upp företagsregistrering",
             cost: "10 000 Coins",
             unlockLevel: 3,
-            href: "/wiki/settlements/by#byggnader",
+            href: "/wiki/buildings/handelscentrum",
         },
     ],
 
@@ -123,7 +123,7 @@ const settlementBuildings: Record<
             effect: "Låser upp utökad ekonomisk statistik",
             cost: "25 000 Coins",
             unlockLevel: 4,
-            href: "/wiki/settlements/bosattning#byggnader",
+            href: "/wiki/buildings/bank",
         },
     ],
 
@@ -137,7 +137,7 @@ const settlementBuildings: Record<
             effect: "+5 % Coins från Alkemi",
             cost: "2 500 Coins",
             unlockLevel: 5,
-            href: "/wiki/settlements/samhalle#byggnader",
+            href: "/wiki/buildings/laboratorium",
         },
     ],
 
@@ -152,7 +152,7 @@ const settlementBuildings: Record<
                 "+10 % Coins från all registrerad manuell produktion",
             cost: "75 000 Coins",
             unlockLevel: 6,
-            href: "/wiki/settlements/koping#byggnader",
+            href: "/wiki/buildings/kyrka",
         },
     ],
 
@@ -168,7 +168,7 @@ const settlementBuildings: Record<
             effect: "Marknadsfunktioner",
             cost: "150 000 Coins",
             unlockLevel: 8,
-            href: "/wiki/settlements/handelsstad#byggnader",
+            href: "/wiki/buildings/marknadsplats",
         },
     ],
 
@@ -185,7 +185,7 @@ const settlementBuildings: Record<
                 "+10 % Coins från all registrerad manuell produktion",
             cost: "400 000 Coins",
             unlockLevel: 10,
-            href: "/wiki/settlements/huvudstad#byggnader",
+            href: "/wiki/buildings/monument",
         },
     ],
 
@@ -201,7 +201,7 @@ const settlementBuildings: Record<
             effect: "Ingen direkt spelbonus",
             cost: "1 000 000 Coins",
             unlockLevel: 12,
-            href: "/wiki/settlements/hertigdome#byggnader",
+            href: "/wiki/buildings/slott",
         },
     ],
 
@@ -219,10 +219,30 @@ const settlementBuildings: Record<
             effect: "+10 % ränta på stadskassan",
             cost: "5 000 000 Coins",
             unlockLevel: 15,
-            href: "/wiki/settlements/imperium#byggnader",
+            href: "/wiki/buildings/underverk",
         },
     ],
 };
+
+
+export function getSettlementBuildingHrefByRequirement(
+    requirement: string,
+): string | undefined {
+    const normalized = requirement.trim().toLocaleLowerCase("sv-SE");
+
+    for (const buildings of Object.values(settlementBuildings)) {
+        const building = buildings.find((candidate) => {
+            const name = candidate.name.toLocaleLowerCase("sv-SE");
+            return normalized === name || normalized.startsWith(`${name},`);
+        });
+
+        if (building?.href) {
+            return building.href;
+        }
+    }
+
+    return undefined;
+}
 
 export function getSettlementBuildings(
     group: SettlementBuildingGroup,

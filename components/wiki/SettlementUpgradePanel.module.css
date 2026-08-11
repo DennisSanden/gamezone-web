@@ -470,6 +470,42 @@
     font-weight: 750;
 }
 
+.requiredBuildingLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        border-color 0.16s ease,
+        background 0.16s ease,
+        color 0.16s ease,
+        transform 0.16s ease;
+}
+
+.requiredBuildingLink:hover {
+    transform: translateY(-1px);
+    border-color: rgba(193, 162, 103, 0.34);
+    background: rgba(113, 83, 41, 0.24);
+    color: #d3bd94;
+}
+
+.requiredBuildingLink:focus-visible {
+    outline: 2px solid rgba(193, 162, 103, 0.52);
+    outline-offset: 2px;
+}
+
+.requiredBuildingArrow {
+    font-size: 0.68rem;
+    line-height: 1;
+    opacity: 0.72;
+    transition: transform 0.16s ease;
+}
+
+.requiredBuildingLink:hover .requiredBuildingArrow {
+    transform: translateX(2px);
+}
+
 /* Panelens nederdel */
 
 .footer {

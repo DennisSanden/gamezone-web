@@ -4,6 +4,7 @@ import {
     getSettlementUpgrade,
     type SettlementUpgradeKey,
 } from "./settlement-upgrades";
+import { getSettlementBuildingHrefByRequirement } from "./settlement-buildings";
 
 import styles from "./SettlementUpgradePanel.module.css";
 
@@ -108,14 +109,37 @@ export default function SettlementUpgradePanel({
 
                             {hasRequiredBuildings ? (
                                 <div className={styles.requiredBuildingList}>
-                                    {upgrade.requiredCurrentBuildings.map((building) => (
-                                        <span
-                                            className={styles.requiredBuilding}
-                                            key={building}
-                                        >
-                                            {building}
-                                        </span>
-                                    ))}
+                                    {upgrade.requiredCurrentBuildings.map((building) => {
+                                        const href =
+                                            getSettlementBuildingHrefByRequirement(building);
+
+                                        if (!href) {
+                                            return (
+                                                <span
+                                                    className={styles.requiredBuilding}
+                                                    key={building}
+                                                >
+                                                    {building}
+                                                </span>
+                                            );
+                                        }
+
+                                        return (
+                                            <Link
+                                                className={`${styles.requiredBuilding} ${styles.requiredBuildingLink}`}
+                                                href={href}
+                                                key={building}
+                                            >
+                                                <span>{building}</span>
+                                                <span
+                                                    className={styles.requiredBuildingArrow}
+                                                    aria-hidden="true"
+                                                >
+                                                    →
+                                                </span>
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             ) : (
                                 <p>Inga byggnader krävs.</p>
