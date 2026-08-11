@@ -1,6 +1,6 @@
 {
   "title": "Byggnader",
-  "description": "Produktionsbyggnader och specialbyggnader som låser upp bonusar och funktioner.",
+  "description": "Bygglicenser, fysiska byggkrav, material, bonusar, skador och flytt av settlementbyggnader.",
   "order": 3,
   "icon": "buildings"
 }

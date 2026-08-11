@@ -5,7 +5,7 @@ category: "Kommandon"
 order: 1
 version: "1.3"
 engineVersion: "Commands"
-updatedAt: "2026-08-10"
+updatedAt: "2026-08-11"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -103,6 +103,23 @@ Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassa
 /settlement inventory remove
 /settlement inventory list
 ```
+
+## Byggnader
+
+```text
+/building info
+/building place <byggnad>
+/building status
+/building complete
+/building cancel
+/building outline
+/building revalidate <byggnad>
+/building relocate <byggnad>
+/building relocate <byggnad> confirm
+/building relocate cancel <byggnad>
+```
+
+King och Lord använder byggkommandona för att placera, kontrollera, färdigställa, reparera och flytta settlementets fysiska byggnader. Läs hela guiden på sidan [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
 
 ## Företag
 

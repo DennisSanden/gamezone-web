@@ -5,7 +5,7 @@ category: "Settlements"
 order: 2
 version: "1.1"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-08-07"
+updatedAt: "2026-08-11"
 infoboxTitle: "Settlement Upgrade"
 infobox:
   nivåer: "15"
@@ -19,7 +19,10 @@ relatedArticles:
 
 ## Upplåsningskrav
 
-Här ser du exakt vad som krävs för att låsa upp nästa settlementnivå, vilka byggnader som måste vara upplåsta, vilka items som behövs och hur många Coins uppgraderingen kostar.
+Här ser du exakt vad som krävs för att låsa upp nästa settlementnivå, vilka byggnader som måste vara färdigställda, vilka items som behövs och hur många Coins uppgraderingen kostar.
+
+> [!IMPORTANT]
+> En köpt bygglicens och en färdigställd fysisk byggnad är två olika saker. Där en byggnad ingår i progressionen måste den vara fysiskt färdigställd. Äldre settlements behåller redan upplåsta funktioner, men måste färdigställa äldre obligatoriska byggnader innan nästa nya byggnad kan låsas upp. Läs [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
 
 ## Nivå 1 till 2, Enstöring till Läger
 
