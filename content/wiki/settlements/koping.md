@@ -1,11 +1,11 @@
 ---
 title: "Köping"
-description: "Den sjätte settlementnivån där Kyrkan ger en permanent bonus till all registrerad produktion."
+description: "Den sjätte settlementnivån där Kyrkan kan byggas för en bonus till all registrerad produktion."
 category: "Settlements"
 order: 15
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-18"
+updatedAt: "2026-08-11"
 
 
 relatedArticles:
@@ -25,7 +25,7 @@ relatedArticles:
 
 En **Köping** är den sjätte settlementnivån i GameZone.
 
-På denna nivå växer settlementets territorium och Server TAX ytterligare. Köping låser även upp **Kyrka**, en permanent specialbyggnad som förstärker all registrerad produktion för settlementets aktiva medlemmar.
+På denna nivå växer settlementets territorium och Server TAX ytterligare. Köping låser även upp bygglicensen för **Kyrka**. När Kyrkan har byggts fysiskt och godkänts förstärker den all registrerad produktion för settlementets aktiva medlemmar.
 
 ## Territorium
 

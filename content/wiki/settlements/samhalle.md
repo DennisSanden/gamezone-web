@@ -5,7 +5,7 @@ category: "Settlements"
 order: 14
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-18"
+updatedAt: "2026-08-11"
 
 
 relatedArticles:
@@ -27,7 +27,7 @@ Ett **Samhälle** är den femte settlementnivån i GameZone.
 
 På denna nivå utökas settlementets territorium och Server TAX samtidigt som produktionskategorin Alkemi får sin första tillhörande produktionsbyggnad.
 
-Den nya byggnaden är **Laboratorium**, som ger settlementets aktiva medlemmar en permanent produktionsbonus från Alkemi.
+Den nya byggnaden är **Laboratorium**. När licensen har köpts och den fysiska byggnaden har färdigställts ger den settlementets aktiva medlemmar **+5 % Coins från Alkemi**. Om byggnaden senare blir skadad pausas bonusen tills den valideras igen.
 
 ## Territorium
 

@@ -1,4 +1,5 @@
 export type SettlementBuildingGroup =
+    | "enstoring"
     | "lager"
     | "by"
     | "bosattning"
@@ -30,6 +31,8 @@ const settlementBuildings: Record<
     SettlementBuildingGroup,
     SettlementBuilding[]
 > = {
+    enstoring: [],
+
     lager: [
         {
             id: "gruva",
@@ -149,7 +152,7 @@ const settlementBuildings: Record<
             description:
                 "Ger settlementets aktiva medlemmar en permanent bonus från all registrerad manuell produktion.",
             effect:
-                "+10 % Coins från all registrerad manuell produktion",
+                "+20 % Coins från all registrerad manuell produktion",
             cost: "75 000 Coins",
             unlockLevel: 6,
             href: "/wiki/buildings/kyrka",
@@ -164,8 +167,8 @@ const settlementBuildings: Record<
             name: "Marknadsplats",
             category: "Ekonomi och handel",
             description:
-                "Representerar settlementets utvecklade handelsinfrastruktur och marknadsfunktioner.",
-            effect: "Marknadsfunktioner",
+                "En fysisk handelsbyggnad som ingår i settlementets fortsatta byggnadsprogression. Marknadsplats har ingen egen direkt bonus i nuvarande system.",
+            effect: "Ingen direkt bonus i nuläget",
             cost: "150 000 Coins",
             unlockLevel: 8,
             href: "/wiki/buildings/marknadsplats",
@@ -182,7 +185,7 @@ const settlementBuildings: Record<
             description:
                 "Ett monumentalt byggprojekt som ger settlementets aktiva medlemmar en permanent bonus från all registrerad manuell produktion.",
             effect:
-                "+10 % Coins från all registrerad manuell produktion",
+                "+20 % Coins från all registrerad manuell produktion",
             cost: "400 000 Coins",
             unlockLevel: 10,
             href: "/wiki/buildings/monument",

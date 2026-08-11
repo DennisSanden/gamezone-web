@@ -5,7 +5,7 @@ category: "Settlements"
 order: 16
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-18"
+updatedAt: "2026-08-11"
 
 
 relatedArticles:
@@ -70,11 +70,9 @@ Nästa nivå är **Handelsstad**.
 
 Handelsstad utökar territoriet till 175 block och höjer Server TAX till 35 procent.
 
-Nivån introducerar även **Marknadsplats**, som ger settlementet:
+Nivån introducerar även bygglicensen för **Marknadsplats**. Marknadsplats har **ingen egen direkt bonus i nuvarande system**, men är en fysisk byggnad i settlementets progression och måste färdigställas för att settlementet senare ska kunna avancera från Handelsstad till Fästning.
 
-- **10 % lägre återkommande avgift**
-
-Marknadsplatsen är en permanent logisk byggnad och har ingen fysisk position eller blockstruktur som behöver verifieras av GameZone Engine.
+Marknadsplatsen byggs och valideras på samma sätt som övriga fysiska settlementbyggnader.
 
 ## Nästa nivå
 

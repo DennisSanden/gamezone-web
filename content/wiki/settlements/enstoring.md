@@ -5,7 +5,7 @@ category: "Settlements"
 order: 10
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-18"
+updatedAt: "2026-08-11"
 infoboxTitle: "Enstöring"
 infobox:
   nivå: "1"

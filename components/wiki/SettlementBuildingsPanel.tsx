@@ -10,6 +10,7 @@ type SettlementBuildingsPanelProps = {
 };
 
 const levelNames: Record<SettlementBuildingGroup, string> = {
+    enstoring: "Enstöring",
     lager: "Läger",
     by: "By",
     bosattning: "Bosättning",
@@ -46,7 +47,7 @@ export default function SettlementBuildingsPanel({
                     <h3>Byggnader på {levelName}</h3>
 
                     <p>
-                        Byggnader låses upp som permanenta licenser med Coins från stadskassan. Inga material krävs.
+                        När en byggnad blir tillgänglig köper settlementet först bygglicensen med Coins från stadskassan. Därefter måste byggnaden uppföras fysiskt och godkännas innan dess bonus eller funktion blir aktiv.
                     </p>
                 </div>
 
@@ -75,7 +76,7 @@ export default function SettlementBuildingsPanel({
                         />
 
                         <p>
-                            Varje byggnad är en upplåsningsbar licens. När licensen köps aktiveras byggnadens funktion permanent. Inga fysiska byggmaterial lämnas in.
+                            Licensen är permanent när den väl har köpts, men bonusen är knuten till den fysiska byggnaden. Byggnaden måste uppfylla storlek, väggar, tak och specialkrav. Om den senare skadas pausas bonusen tills byggnaden repareras och valideras igen.
                         </p>
                     </div>
                 </>
@@ -93,9 +94,7 @@ export default function SettlementBuildingsPanel({
 
                         <p>
                             {levelName} låser inte upp någon ny unik
-                            byggnad. Tidigare permanenta
-                            byggnadsupplåsningar behålls så länge deras
-                            nivåkrav är uppfyllda.
+                            byggnad. Tidigare köpta bygglicenser behålls. En fysisk byggnad måste däremot vara färdigställd och aktiv för att dess bonus eller funktion ska räknas.
                         </p>
                     </div>
                 </div>

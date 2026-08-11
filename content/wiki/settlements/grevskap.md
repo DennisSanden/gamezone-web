@@ -5,7 +5,7 @@ category: "Settlements"
 order: 20
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-11"
 
 relatedArticles:
   - category: "settlements"
@@ -54,7 +54,7 @@ Grundbonusen gäller:
 
 
 
-Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
 
 > [!IMPORTANT]
 > Grundbonusen och Monumentets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
@@ -73,9 +73,9 @@ Hertigdöme utökar territoriet till 270 block och höjer Server TAX till 55 pro
 
 Det ordinarie återkommande avgift höjs samtidigt till 90 000 Coins.
 
-Hertigdöme låser även upp **Slott**, en permanent specialbyggnad med egna byggnadskrav och en kostnad på 1 000 000 Coins.
+Hertigdöme låser även upp bygglicensen för **Slott**, en fysisk byggnad med egna byggnadskrav och en kostnad på 1 000 000 Coins.
 
-Slott är ett separat byggprojekt efter att Hertigdöme har låsts upp. Byggnaden ingår inte i kostnaden för själva settlementuppgraderingen.
+Slott är ett separat fysiskt byggprojekt efter att Hertigdöme har låsts upp. Licensen köps separat och Slott måste färdigställas för den fortsatta progressionen.
 
 För att avancera måste settlementet bland annat:
 

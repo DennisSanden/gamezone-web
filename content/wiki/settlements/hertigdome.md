@@ -5,7 +5,7 @@ category: "Settlements"
 order: 21
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-11"
 
 relatedArticles:
   - category: "settlements"
@@ -26,7 +26,7 @@ Ett **Hertigdöme** är den tolfte settlementnivån i GameZone.
 
 På denna nivå har settlementet utvecklats till ett mycket stort politiskt och territoriellt centrum med ett territorium på 270 block och en Server TAX.
 
-Hertigdöme låser även upp **Slott**, ett permanent byggprojekt som representerar settlementets politiska och territoriella utveckling.
+Hertigdöme låser även upp bygglicensen för **Slott**, ett stort fysiskt byggprojekt som representerar settlementets politiska och territoriella utveckling.
 
 ## Territorium
 
@@ -54,7 +54,7 @@ Grundbonusen gäller:
 
 
 
-Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
 
 Slott ger ingen direkt produktionsbonus.
 

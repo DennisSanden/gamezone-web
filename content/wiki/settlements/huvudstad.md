@@ -5,7 +5,7 @@ category: "Settlements"
 order: 19
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-11"
 
 relatedArticles:
   - category: "settlements"
@@ -26,7 +26,7 @@ En **Huvudstad** är den tionde settlementnivån i GameZone.
 
 På denna nivå har settlementet utvecklats till ett omfattande ekonomiskt och administrativt centrum med ett territorium på 225 block och en Server TAX.
 
-Huvudstad låser även upp **Monument**, en permanent specialbyggnad som ger settlementets aktiva medlemmar en produktionsbonus.
+Huvudstad låser även upp bygglicensen för **Monument**. Bonusen blir aktiv först när Monument har byggts fysiskt och godkänts.
 
 ## Territorium
 
@@ -54,7 +54,7 @@ Grundbonusen gäller:
 
 
 
-Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
 
 > [!IMPORTANT]
 > Grundbonusen och Monumentets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.

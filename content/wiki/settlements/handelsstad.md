@@ -5,7 +5,7 @@ category: "Settlements"
 order: 17
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-18"
+updatedAt: "2026-08-11"
 
 
 relatedArticles:
@@ -27,7 +27,7 @@ En **Handelsstad** är den åttonde settlementnivån i GameZone.
 
 På denna nivå har settlementet utvecklats till ett större ekonomiskt centrum med ett territorium på 175 block och en Server TAX.
 
-Handelsstad låser även upp **Marknadsplats**, en permanent specialbyggnad som minskar settlementets återkommande avgift.
+Handelsstad låser även upp bygglicensen för **Marknadsplats**. Marknadsplats har ingen egen direkt bonus i nuvarande system, men den måste byggas fysiskt och färdigställas för fortsatt progression mot Fästning.
 
 ## Territorium
 

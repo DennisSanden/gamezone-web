@@ -5,7 +5,7 @@ category: "Settlements"
 order: 24
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-11"
 
 relatedArticles:
   - category: "settlements"
@@ -26,7 +26,7 @@ Ett **Imperium** är den femtonde och högsta settlementnivån i GameZone.
 
 På denna nivå har settlementet nått sin maximala politiska, ekonomiska och territoriella utveckling med ett territorium på 300 block och en Server TAX.
 
-Imperium låser även upp **Underverk**, settlementets högsta permanenta specialbyggnad.
+Imperium låser även upp bygglicensen för **Underverk**, settlementets största fysiska specialbyggnad.
 
 ## Territorium
 
@@ -56,14 +56,14 @@ Grundbonusen gäller:
 
 
 
-Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
 
-Om Underverk har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+Underverk är registrerat som byggnaden som låser upp **+10 % ränta på stadskassan**. Funktionen kräver att Underverk är färdigställt och aktivt.
 
 Slott ger ingen direkt produktionsbonus.
 
 > [!IMPORTANT]
-> Grundbonusen, Monumentets bonus och Underverkets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
+> Monumentets produktionsbonus gäller settlementets aktiva medlemmar och reward-eligible produktion. Underverkets bonus är i stället kopplad till stadskassan.
 
 
 
@@ -77,9 +77,9 @@ Imperium är settlementssystemets slutnivå.
 
 Det finns ingen ytterligare settlementnivå att uppgradera till.
 
-Imperium låser upp **Underverk** som ett separat permanent byggprojekt.
+Imperium låser upp **Underverk** som ett separat fysiskt byggprojekt.
 
-När Underverk har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+När Underverk har färdigställts och är aktivt låser det upp **+10 % ränta på stadskassan**.
 
 Settlementet kan därefter fortsätta att:
 

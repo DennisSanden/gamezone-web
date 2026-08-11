@@ -5,7 +5,7 @@ category: "Settlements"
 order: 22
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-11"
 
 relatedArticles:
   - category: "settlements"
@@ -54,7 +54,7 @@ Grundbonusen gäller:
 
 
 
-Om Monument har färdigställts får settlementets aktiva medlemmar ytterligare **+10 % Coins** från all registrerad manuell produktion.
+Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
 
 Slott ger ingen direkt produktionsbonus.
 

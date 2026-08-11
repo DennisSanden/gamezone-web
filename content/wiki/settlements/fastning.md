@@ -5,7 +5,7 @@ category: "Settlements"
 order: 18
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-19"
+updatedAt: "2026-08-11"
 
 relatedArticles:
   - category: "settlements"
@@ -71,11 +71,11 @@ Huvudstad utökar territoriet till 225 block och höjer Server TAX till 45 proce
 
 Det ordinarie återkommande avgift höjs samtidigt till 45 000 Coins.
 
-Huvudstad låser även upp **Monument**, en permanent specialbyggnad som ger settlementet:
+Huvudstad låser även upp bygglicensen för **Monument**. När Monument har byggts fysiskt och godkänts ger det settlementet:
 
-- **+10 % Coins från all reward-eligible produktion**
+- **+20 % Coins från all reward-eligible produktion**
 
-Monument är ett separat byggprojekt efter att Huvudstad har låsts upp. Byggnaden ingår inte i kostnaden för själva settlementuppgraderingen.
+Monument är ett separat fysiskt byggprojekt efter att Huvudstad har låsts upp. Licensen köps separat och byggnaden måste klara sina struktur- och specialkrav innan bonusen aktiveras.
 
 För att avancera måste settlementet bland annat:
 

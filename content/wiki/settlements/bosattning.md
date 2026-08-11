@@ -5,7 +5,7 @@ category: "Settlements"
 order: 13
 version: "1.0"
 engineVersion: "Settlement Registry"
-updatedAt: "2026-07-18"
+updatedAt: "2026-08-11"
 infoboxTitle: "Bosättning"
 infobox:
   nivå: "4"
