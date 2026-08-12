@@ -159,6 +159,8 @@ King och Lord använder byggkommandona för att placera, kontrollera, färdigst�
 ```text
 /company
 /company create <företagsnamn>
+/company rename <nytt namn>
+/company namnbyte <nytt namn>
 /company members
 /company kick <spelare>
 /company license

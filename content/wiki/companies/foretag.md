@@ -3,9 +3,9 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.1"
+version: "1.2"
 engineVersion: "Company"
-updatedAt: "2026-08-06"
+updatedAt: "2026-08-12"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 3 och Handelscentrum"
@@ -66,3 +66,15 @@ Företagsägaren kan fördela en procentandel av företagets nettointäkter till
 - En andel tas bort automatiskt när medlemmen lämnar eller blir kickad.
 
 > [!INFO] Använd `/company salary <spelare> <procent>` för att ändra en medlems andel. Sätt andelen till 0 procent för att ta bort den.
+
+## Byta företagsnamn
+
+Företagsägaren kan byta namn på sitt befintliga företag utan att skapa ett nytt företag. Namnbytet ändrar bara företagets namn. Företagets medlemmar, licens, shopping chests, Shopping Plots, statistik och övriga kopplingar ligger kvar.
+
+Använd `/company rename <nytt namn>`. Aliaset `/company namnbyte <nytt namn>` fungerar också.
+
+- Endast företagsägaren kan byta namn.
+- Det nya namnet måste vara mellan 3 och 32 tecken.
+- Namnet får inte redan användas av ett annat företag.
+
+> [!INFO] Ett namnbyte återställer inte företaget. Företagets identitet och befintliga kopplingar behålls.
