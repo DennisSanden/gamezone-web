@@ -162,6 +162,17 @@ export default function WikiIcon({
                 </svg>
             );
 
+        case "war":
+            return (
+                <svg {...commonProps}>
+                    <path d="M6 4l14 14" />
+                    <path d="M18 4 4 18" />
+                    <path d="m4 4 4 1-3 3z" />
+                    <path d="m20 4-4 1 3 3z" />
+                    <path d="m5 19-1 1M19 19l1 1" />
+                </svg>
+            );
+
         case "warning":
             return (
                 <svg {...commonProps}>
@@ -226,6 +237,8 @@ export function getCategoryIcon(categorySlug: string) {
 
         kommandon: "commands",
         commands: "commands",
+
+        war: "war",
     };
 
     return iconMap[categorySlug] ?? "rules";

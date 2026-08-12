@@ -1,6 +1,6 @@
 {
-  "title": "Krig",
-  "description": "Frivilliga krig mellan settlements, fred, kapitulation och vapenvila.",
+  "title": "Krig & Diplomati",
+  "description": "Settlement War, allianser, tickets, fred, kapitulation och diplomatiska konsekvenser.",
   "order": 6,
   "icon": "war"
 }

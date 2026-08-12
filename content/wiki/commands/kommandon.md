@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.3"
+version: "1.4"
 engineVersion: "Commands"
-updatedAt: "2026-08-11"
+updatedAt: "2026-08-12"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -95,6 +95,39 @@ Läs hela guiden på sidan [Settlement spawn](/wiki/settlements/settlement-spawn
 `/settlement send <spelare> <belopp>` skickar Coins från stadskassan till en aktiv invånare i samma settlement. Endast King kan använda kommandot och en avgift på 2 procent tillkommer.
 
 Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
+
+### Krig & Diplomati
+
+Krig och allianser kan hanteras från settlementets **Krig & Diplomati-meny** eller med commands. Endast King kan skicka krigsförklaringar och hantera allianser.
+
+#### Settlement War
+
+```text
+/settlement war declare <settlement>
+/settlement war declare <settlement> confirm
+/settlement war accept
+/settlement war decline
+/settlement war cancel
+/settlement war status
+/settlement war peace
+/settlement war peace cancel
+/settlement war surrender
+```
+
+Om allianser påverkar en declaration visar systemet först vilka settlements som kommer att dras in. Läs hela guiden på sidan [Krigssystemet](/wiki/war/krigssystemet).
+
+#### Allianser
+
+```text
+/settlement alliance invite <settlement>
+/settlement alliance accept <settlement>
+/settlement alliance decline <settlement>
+/settlement alliance cancel <settlement>
+/settlement alliance leave <settlement>
+/settlement alliance status
+```
+
+Direkta allierade dras automatiskt in på samma sida när ett krig accepteras. Läs mer på sidan [Allianser](/wiki/war/allianser).
 
 ### Settlement inventory
 

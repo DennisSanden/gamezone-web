@@ -13,7 +13,7 @@ import styles from "./wiki.module.css";
 
 export const metadata: Metadata = {
     title: "Wiki | GameZone",
-    description: "Guider till GameZones settlements, ekonomi, företag och system.",
+    description: "Guider till GameZones settlements, ekonomi, företag, allianser, krig och system.",
 };
 
 function findArticleHref(
@@ -138,6 +138,28 @@ export default function WikiPage() {
 
                             <span className={styles.featuredAction}>
                                 Visa alla upgrades <span aria-hidden="true">→</span>
+                            </span>
+                        </Link>
+
+                        <Link
+                            className={styles.featuredCard}
+                            href="/wiki/war/krigssystemet"
+                        >
+                            <div className={styles.featuredIcon}>
+                                <WikiIcon name="war" size={30} />
+                            </div>
+
+                            <div className={styles.featuredCopy}>
+                                <span className={styles.featuredLabel}>Nytt system</span>
+                                <h2>Krig & Diplomati</h2>
+                                <p>
+                                    Allianser, krigssidor, gemensamma tickets, PvP,
+                                    fred, kapitulation och krigsskadestånd förklarat.
+                                </p>
+                            </div>
+
+                            <span className={styles.featuredAction}>
+                                Läs krigsguiden <span aria-hidden="true">→</span>
                             </span>
                         </Link>
                     </section>

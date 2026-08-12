@@ -284,6 +284,8 @@
 }
 
 .featuredSection {
+    display: grid;
+    gap: 14px;
     margin-bottom: 42px;
 }
 

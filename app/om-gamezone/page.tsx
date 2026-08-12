@@ -161,8 +161,8 @@ export default function AboutGameZonePage() {
                             <p>
                                 Andra spelare producerar, handlar, bygger och fattar
                                 beslut. Ett settlement kan växa. En ny handelsväg kan
-                                uppstå. En allians kan förändra balansen mellan världens
-                                maktcentrum.
+                                uppstå. Allianser kan knyta städer samman och automatiskt
+                                dra in dem på samma sida när ett settlementkrig bryter ut.
                             </p>
                             <p>
                                 När du återvänder finns samma värld kvar, men historien
@@ -188,8 +188,8 @@ export default function AboutGameZonePage() {
                             <article>
                                 <span>Konflikter</span>
                                 <p>
-                                    Konkurrens, allianser och krig kan rita om kartan och
-                                    skapa nya kapitel i serverns historia.
+                                    Konkurrens, direkta allianser och ticketbaserade settlementkrig
+                                    kan förändra maktbalansen och skapa nya kapitel i serverns historia.
                                 </p>
                             </article>
                         </div>

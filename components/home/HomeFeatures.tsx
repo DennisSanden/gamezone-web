@@ -6,7 +6,7 @@ const features = [
         eyebrow: "Kunskapsbanken",
         title: "Wiki",
         description:
-            "Lär dig allt om GameZones ekonomi, produktion, settlements, företag och världen omkring dig.",
+            "Lär dig allt om GameZones ekonomi, produktion, settlements, företag, allianser, krig och världen omkring dig.",
         href: "/wiki",
         linkLabel: "Utforska Wiki",
         icon: "W",
@@ -16,7 +16,7 @@ const features = [
         eyebrow: "Tävla och jämför",
         title: "Leaderboards",
         description:
-            "Följ rikaste spelarna, största städerna, donationer, produktion och andra topplistor.",
+            "Följ rikaste spelarna, största städerna, produktion, krigsvinster, ticket-differens och andra topplistor.",
         href: "/leaderboards",
         linkLabel: "Visa topplistor",
         icon: "L",
