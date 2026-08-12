@@ -8,7 +8,7 @@ import { getAllLeaderboardEntries, type LeaderboardEntry } from "@/lib/leaderboa
 import styles from "../page.module.css";
 
 const labels: Record<string, string> = {
-  COINS: "Coins", ITEMS: "Items", SECONDS: "Speltid", KILLS: "Kills", DEATHS: "Deaths", RATIO_X100: "K/D", TITLE_RANK: "Titel", MEMBERS: "Medlemmar", LEVEL: "Nivå", TRANSACTIONS: "Transaktioner", COUNT: "Antal", PLAYERS: "Spelare",
+  COINS: "Coins", ITEMS: "Items", SECONDS: "Speltid", KILLS: "Kills", DEATHS: "Deaths", RATIO_X100: "K/D", TITLE_RANK: "Titel", MEMBERS: "Medlemmar", LEVEL: "Nivå", TRANSACTIONS: "Transaktioner", COUNT: "Antal", PLAYERS: "Spelare", WINS: "Vinster", LOSSES: "Förluster", TICKET_DIFFERENTIAL: "Ticket-differens",
 };
 const number = new Intl.NumberFormat("sv-SE");
 

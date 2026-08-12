@@ -12,7 +12,7 @@ type Definition = { key: string; title: string; description: string; label: stri
 
 const categories: Record<Category, { label: string; eyebrow: string; description: string; icon: string }> = {
   players: { label: "Spelare", eyebrow: "Individuella prestationer", description: "Ekonomi, produktion, aktivitet och stridsstatistik för spelarna som satt störst avtryck på servern.", icon: "♟" },
-  settlements: { label: "Settlements", eyebrow: "Städer och samhällen", description: "Jämför stadskassor, befolkning, utvecklingsnivå och hur mycket skatt varje settlement har samlat in.", icon: "♜" },
+  settlements: { label: "Settlements", eyebrow: "Städer och samhällen", description: "Jämför stadskassor, befolkning, utvecklingsnivå, skatt och resultaten från settlementkrigen.", icon: "♜" },
   companies: { label: "Företag", eyebrow: "Handel och tillväxt", description: "Följ företagen som leder ekonomin genom kapital, försäljning, transaktioner, licensnivå och medlemsantal.", icon: "◆" },
   server: { label: "Servern", eyebrow: "GameZone i siffror", description: "En samlad överblick över ekonomin, organisationerna och hur många unika spelare som varit aktiva.", icon: "◎" },
 };
@@ -32,6 +32,9 @@ const definitions: Record<Category, Definition[]> = {
     { key: "SETTLEMENT_MEMBERS", title: "Flest invånare", description: "Störst registrerad befolkning.", label: "Invånare", icon: "♟" },
     { key: "SETTLEMENT_LEVEL", title: "Högst nivå", description: "Settlements som nått längst i utvecklingen.", label: "Nivå", icon: "▲" },
     { key: "SETTLEMENT_TAX_COLLECTED", title: "Mest skatt insamlad", description: "Störst totalt skatteinflöde till stadskassan.", label: "Coins", icon: "▣" },
+    { key: "SETTLEMENT_WAR_WINS", title: "Flest krigsvinster", description: "Flest vunna Settlement Wars.", label: "Vinster", icon: "⚔" },
+    { key: "SETTLEMENT_WAR_LOSSES", title: "Flest krigsförluster", description: "Flest förlorade Settlement Wars.", label: "Förluster", icon: "☠" },
+    { key: "SETTLEMENT_WAR_TICKET_DIFFERENTIAL", title: "Bäst ticket-differens", description: "Skillnaden mellan egna och motståndarens återstående tickets över avslutade krig. Högre är bättre.", label: "Tickets", icon: "✦" },
   ],
   companies: [
     { key: "COMPANY_WEALTH", title: "Rikaste företag", description: "Högst aktuellt företagskapital.", label: "Coins", icon: "◉" },
