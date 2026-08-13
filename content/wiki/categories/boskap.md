@@ -5,11 +5,12 @@ category: "Produktionskategorier"
 order: 3
 version: "1.2"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-10"
+updatedAt: "2026-08-13"
 infoboxTitle: "Boskap"
 infobox:
   coinregel: "Endast vald kategori"
   automation: "Ger inga Coins"
+  djurdrops: "+100% vid spelardöd"
 ---
 
 ## Vad är Boskap?
@@ -18,6 +19,18 @@ Boskap handlar om att föda upp och ta hand om djur. Exempel på resurser är be
 
 > [!IMPORTANT]
 > Resurser från djur ger bara Coins om settlementet valde Boskap när det skapades med `/settlement create <namn>`. Automatiserad insamling ger inga Coins.
+
+## Dubbel drop från djur
+
+Spelare som tillhör ett settlement med kategorin **Boskap** får **+100% drops** när de själva dödar ett boskapsdjur. Det innebär att de vanliga drops som Minecraft räknar fram dubblas.
+
+Bonusen gäller **kyckling, ko, mooshroom, gris, får och kanin**. Den appliceras efter vanliga dropberäkningar, vilket betyder att även resultatet från exempelvis Looting dubblas.
+
+> [!IMPORTANT]
+> Djuret måste dödas av spelaren själv. Djur som dör av exempelvis lava, fallskada, entity cramming eller automatiska slaktmaskiner får ingen dubbel drop. XP dubblas inte.
+
+> [!TIP]
+> Boskap är begränsat av hur många djur som får finnas i samma chunk. Den dubbla droppen gör därför varje djur mer värdefullt utan att gården behöver innehålla fler levande entiteter.
 
 
 ## Items som ingår
