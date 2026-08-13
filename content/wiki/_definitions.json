@@ -74,12 +74,15 @@
     },
     {
         "key": "experience",
-        "title": "Experience",
-        "definition": "Spelarens erfarenhet och progression inom GameZones olika system.",
-        "category": "Experience",
+        "title": "Character XP",
+        "definition": "GameZones personliga progression. Character XP tjänas genom aktivt spel och används för att höja spelarens Character Level.",
+        "category": "Level & XP",
         "href": "/wiki/experience/experience",
         "aliases": [
-            "XP"
+            "XP",
+            "Experience",
+            "Level",
+            "Character Level"
         ]
     },
     {

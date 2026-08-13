@@ -3,7 +3,7 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.4"
+version: "1.5"
 engineVersion: "Commands"
 updatedAt: "2026-08-12"
 infoboxTitle: "Kommandon"
@@ -17,6 +17,16 @@ infobox:
 ```text
 /gz menu
 ```
+
+## Level & XP
+
+```text
+/level
+```
+
+Visar din nuvarande Character Level, total Character XP, progress mot nästa level och nästa förmåga som går att låsa upp.
+
+Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 
 ## Daily Rewards
 
