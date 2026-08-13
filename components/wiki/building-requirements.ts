@@ -35,7 +35,7 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
         item("lectern", "Lectern", 2),
     ],
     bank: [
-        item("vault", "Vault", 1),
+        item("heavy_core", "Heavy Core", 1),
         item("ender_chest", "Ender Chest", 1),
         item("iron_door", "Iron Door", 2),
         item("bell", "Bell", 1),
@@ -71,12 +71,12 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
         item("beacon", "Beacon", 2),
         item("bell", "Bell", 4),
         item("lantern", "Lantern", 16),
-        item("vault", "Vault", 2),
+        item("heavy_core", "Heavy Core", 1),
     ],
     underverk: [
         item("beacon", "Beacon", 8),
         item("bell", "Bell", 6),
-        item("vault", "Vault", 8),
+        item("heavy_core", "Heavy Core", 2),
         item("ender_chest", "Ender Chest", 4),
     ],
 };
