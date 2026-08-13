@@ -20,6 +20,7 @@ const categories: Record<Category, { label: string; eyebrow: string; description
 const definitions: Record<Category, Definition[]> = {
   players: [
     { key: "PLAYER_COINS", title: "Rikaste spelare", description: "Högst aktuellt personligt coin-saldo.", label: "Coins", icon: "◉" },
+    { key: "PLAYER_CHARACTER_LEVEL", title: "Högsta level", description: "Högst nuvarande level i Liv och Levelsystemet. Leveln återställs vid död.", label: "Level", icon: "▲" },
     { key: "PLAYER_PRODUCTION", title: "Mest producerat", description: "Flest registrerade producerade items totalt.", label: "Items", icon: "⚒" },
     { key: "PLAYER_PLAY_TIME", title: "Mest spelad tid", description: "Flest aktiva timmar registrerade på GameZone.", label: "Speltid", icon: "◷" },
     { key: "PLAYER_KILLS", title: "Flest kills", description: "Flest registrerade spelarkills.", label: "Kills", icon: "⚔" },
