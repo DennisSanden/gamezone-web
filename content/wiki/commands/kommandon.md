@@ -3,7 +3,7 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.7"
+version: "1.8"
 engineVersion: "Commands"
 updatedAt: "2026-08-14"
 infoboxTitle: "Kommandon"
@@ -108,7 +108,9 @@ Läs hela guiden på sidan [Invånarplots](/wiki/settlements/invanarplots).
 
 Alla settlements börjar som diktatur. King kan ändra till demokrati, där aktiva invånare kan starta King-val. Ett val pågår i 24 timmar och följs av 7 dagars cooldown.
 
-Policies ger settlementet valbara bonusar. Fler policyplatser låses upp vid settlement level 5 och 15.
+Policies hanteras normalt från settlementets **Government-meny**. Alla invånare kan se aktiva policies och upplåsta slots, medan endast King kan ändra dem. Commands ovan finns kvar som fallback. Fler policyplatser låses upp vid settlement level 5 och 15.
+
+Connected Realm och Open Borders är framtida policies och kan inte aktiveras ännu.
 
 Läs mer på [Government](/wiki/settlements/government) och [Policies](/wiki/settlements/policies).
 

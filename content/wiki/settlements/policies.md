@@ -3,7 +3,7 @@ title: "Policies"
 description: "Settlementets valbara bonusar för produktion, ekonomi, krig och infrastruktur."
 category: "Settlements"
 order: 5
-version: "1.0"
+version: "1.1"
 engineVersion: "Settlement Policies"
 updatedAt: "2026-08-14"
 infoboxTitle: "Policies"
@@ -36,23 +36,19 @@ Antalet aktiva policies låses upp när settlementet växer:
 | 5–14 | 2 |
 | 15 | 3 |
 
-King kan se alla policies med:
+Policies hanteras normalt direkt från settlementets **Government-meny**. Där kan alla invånare se vilka policies som är aktiva, vilka slots som är upplåsta och hur lång cooldown som återstår.
 
-```text
-/settlement policy list
-```
-
-Aktiva policies visas med:
-
-```text
-/settlement policy active
-```
+Endast **King** kan ändra policies. Vanliga medlemmar kan öppna menyn och läsa, men inte aktivera eller avaktivera något.
 
 ## Aktivera och byta policy
 
-Endast **King** kan aktivera eller avaktivera policies.
+King väljer policy direkt i GUI-menyn. Aktiva policies markeras tydligt och låsta policyplatser visar vilken settlement level som krävs.
+
+Commands finns kvar som fallback och för felsökning:
 
 ```text
+/settlement policy list
+/settlement policy active
 /settlement policy activate <policy>
 /settlement policy deactivate <policy>
 ```
@@ -120,6 +116,6 @@ Detta läggs ovanpå Riksvägens vanliga hastighetsbonus.
 
 ## Policies som kommer senare
 
-**Connected Realm** och **Open Borders** är förberedda för framtida byggnader och funktioner men ska inte räknas som aktiva gameplayfunktioner ännu.
+**Connected Realm** och **Open Borders** är förberedda för framtida byggnader och funktioner men är **inte valbara ännu**. De kan inte aktiveras via GUI eller commands.
 
 Connected Realm är tänkt att kopplas till settlementets anslutning till Riksvägsnätet. Open Borders är tänkt att kopplas till turism och Landmark-systemet.
