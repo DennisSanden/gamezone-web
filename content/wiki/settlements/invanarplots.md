@@ -17,6 +17,10 @@ relatedArticles:
     article: "skapa-ett-settlement"
     title: "Skapa ett settlement"
     description: "Grunderna för settlements och skyddat territorium."
+  - category: "settlements"
+    article: "government"
+    title: "Government"
+    description: "Så styrs settlementets ledarskap och policies."
 ---
 
 ## Vad är en invånarplot?

@@ -3,7 +3,7 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.6"
+version: "1.7"
 engineVersion: "Commands"
 updatedAt: "2026-08-14"
 infoboxTitle: "Kommandon"
@@ -89,6 +89,28 @@ När du är vid spawn kan du ringa i **klockan på kyrkan** för att teleportera
 King och Lord kan markera två hörn inom settlementets territorium och tilldela området till en invånare. Den tilldelade invånaren får ensamrätt att bygga, riva och hantera kistor inom plotten.
 
 Läs hela guiden på sidan [Invånarplots](/wiki/settlements/invanarplots).
+
+### Government & Policies
+
+```text
+/settlement government status
+/settlement government democracy
+/settlement government election start
+/settlement government election vote <spelare>
+/settlement government referendum start
+/settlement government referendum vote yes
+/settlement government referendum vote no
+/settlement policy list
+/settlement policy active
+/settlement policy activate <policy>
+/settlement policy deactivate <policy>
+```
+
+Alla settlements börjar som diktatur. King kan ändra till demokrati, där aktiva invånare kan starta King-val. Ett val pågår i 24 timmar och följs av 7 dagars cooldown.
+
+Policies ger settlementet valbara bonusar. Fler policyplatser låses upp vid settlement level 5 och 15.
+
+Läs mer på [Government](/wiki/settlements/government) och [Policies](/wiki/settlements/policies).
 
 ### Settlement spawn
 

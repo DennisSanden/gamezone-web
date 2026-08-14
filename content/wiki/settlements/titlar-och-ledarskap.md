@@ -5,8 +5,17 @@ category: "Settlements"
 order: 3
 version: "1.0"
 engineVersion: "Settlement Titles"
-updatedAt: "2026-08-08"
+updatedAt: "2026-08-14"
 infoboxTitle: "Titlar"
+relatedArticles:
+  - category: "settlements"
+    article: "government"
+    title: "Government"
+    description: "Diktatur, demokrati och hur en ny King utses."
+  - category: "settlements"
+    article: "policies"
+    title: "Policies"
+    description: "Settlementets valbara bonusar och specialiseringar."
 infobox:
   ansvariga: "King och upp till 2 Lords"
   högstaTitelbonus: "+20 %"
