@@ -3,9 +3,9 @@ title: "Allianser"
 description: "Så skapar settlements allianser och så påverkar de automatiskt Settlement War."
 category: "Krig & Diplomati"
 order: 2
-version: "1.0"
+version: "1.1"
 engineVersion: "Settlement Alliances"
-updatedAt: "2026-08-12"
+updatedAt: "2026-08-14"
 infoboxTitle: "Settlement Alliances"
 infobox:
   skapasAv: "King"
@@ -153,8 +153,8 @@ En allierad King kan alltså inte ensam kapitulera eller avsluta hela koalitione
 
 ## Allianser och krigsskadestånd
 
-Om en allianssida förlorar betalar varje settlement på den förlorande sidan **5 procent av sin egen stadskassa**.
+Om en allianssida förlorar får **varje settlement på förlorarsidan ett eget krigsskadestånd baserat på sin settlement level**. Det innebär att två settlements på samma förlorarsida kan få olika stora skadestånd.
 
-Den totala summan delas lika mellan alla settlements på vinnarsidan.
+Systemet tar först vad som finns tillgängligt i respektive stadskassa. Det som inte kan betalas direkt blir en persistent krigsskuld. Så länge skulden finns går 50 procent av framtida systemgenererade settlementintäkter till avbetalning.
 
-Alliansen påverkar alltså både vem som riskerar att dras in och hur ett eventuellt krigsskadestånd fördelas.
+Skadeståndet från förlorarsidan fördelas mellan settlementen på vinnarsidan. Läs hela modellen och nivåbeloppen på sidan [Krigssystemet](/wiki/war/krigssystemet).

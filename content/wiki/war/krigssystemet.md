@@ -5,7 +5,7 @@ category: "Krig & Diplomati"
 order: 1
 version: "3.0"
 engineVersion: "Settlement War + Alliances"
-updatedAt: "2026-08-12"
+updatedAt: "2026-08-14"
 infoboxTitle: "Settlement War"
 infobox:
   starttickets: "100 per sida"
@@ -13,7 +13,7 @@ infobox:
   allianser: "Direkta allierade dras in automatiskt"
   griefProtection: "Alltid aktiv"
   vinst: "Motståndarsidan når 0 tickets"
-  krigsskadestand: "5 % från varje förlorande stadskassa"
+  krigsskadestand: "50 000–1 000 000 Coins per förlorande settlement"
   vapenvila: "48 timmar"
 relatedArticles:
   - category: "war"
@@ -221,24 +221,29 @@ En sida vinner när motståndarsidan når 0 tickets eller när motståndarsidans
 /settlement war surrender
 ```
 
-Vid en faktisk seger betalar **varje settlement på förlorarsidan 5 procent av sin egen aktuella stadskassa**.
+Vid en faktisk seger åläggs **varje settlement på förlorarsidan ett fast krigsskadestånd baserat på settlementets level**. Skadeståndet går alltså inte längre att minska genom att tömma stadskassan före kriget.
 
-Den sammanlagda summan delas lika mellan settlementen på vinnarsidan.
+| Settlement level | Krigsskadestånd |
+| --- | ---: |
+| 1–5 | 50 000 Coins |
+| 6–10 | 150 000 Coins |
+| 11–20 | 300 000 Coins |
+| 21–30 | 500 000 Coins |
+| 31–40 | 750 000 Coins |
+| 41–50 | 1 000 000 Coins |
 
-Exempel:
+Systemet tar först så mycket som möjligt direkt från förlorarens stadskassa. Om stadskassan inte räcker blir den obetalda delen en **krigsskuld**.
 
-```text
-Förlorarsida
-Town B betalar 5 % av sin stadskassa
-Town C betalar 5 % av sin stadskassa
+Så länge ett settlement har krigsskuld går **50 procent av framtida systemgenererade intäkter till stadskassan** till att betala av skulden. Det gäller bland annat produktionsskatt och settlementets intäkter från företagshandel. Resterande del går till den egna stadskassan.
 
-Vinnarsida
-Town A och Town D delar den sammanlagda summan lika
-```
+Exempel: Om 100 Coins skulle gå till stadskassan och settlementet har en aktiv krigsskuld går 50 Coins till skulden och 50 Coins till den egna stadskassan.
 
-Ett settlement betalar alltså inte 5 procent flera gånger bara för att flera fiender deltog.
+> [!IMPORTANT]
+> Att sätta stadsskatten till 0 procent tar inte bort skulden. Om inga skatteintäkter kommer in står skulden kvar och fortsätter betalas när settlementet senare börjar få sådana intäkter igen.
 
-Krigsskadeståndet registreras som en separat Settlement War-transaktion.
+Har settlementet flera krigsskulder betalas den äldsta skulden först. När hela skulden är betald går framtida intäkter åter fullt ut till den egna stadskassan.
+
+Om flera settlements finns på vinnarsidan delas skadeståndet mellan vinnarna. Krigsskadestånd och avbetalningar registreras som Settlement War-transaktioner.
 
 ## Fred
 

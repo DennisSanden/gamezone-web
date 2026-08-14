@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.5"
+version: "1.6"
 engineVersion: "Commands"
-updatedAt: "2026-08-12"
+updatedAt: "2026-08-14"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -77,6 +77,18 @@ När du är vid spawn kan du ringa i **klockan på kyrkan** för att teleportera
 `/settlement lord <spelare>` utser en medlem till Lord. Ett settlement kan ha **maximalt två Lords samtidigt**, utöver settlementets King.
 
 `/settlement transfer <spelare>` överför King-rollen till en av settlementets Lords.
+
+### Invånarplots
+
+```text
+/settlement pos1
+/settlement pos2
+/settlement assign <spelare>
+```
+
+King och Lord kan markera två hörn inom settlementets territorium och tilldela området till en invånare. Den tilldelade invånaren får ensamrätt att bygga, riva och hantera kistor inom plotten.
+
+Läs hela guiden på sidan [Invånarplots](/wiki/settlements/invanarplots).
 
 ### Settlement spawn
 
