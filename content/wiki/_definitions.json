@@ -472,5 +472,49 @@
             "Riksvägen",
             "Riksvägarna"
         ]
+    },
+    {
+        "key": "culture",
+        "title": "Kultur",
+        "definition": "Din karaktärs tillhörighet till Andvari, Varkesh, Gondoria eller Vaelthor. Kulturen väljs i spelet och ger en unik bonus och ett eget sigill.",
+        "category": "Kulturer",
+        "href": "/wiki/cultures/kulturer",
+        "aliases": [
+            "Kulturer",
+            "Kulturval",
+            "Culture"
+        ]
+    },
+    {
+        "key": "andvari",
+        "title": "Andvari",
+        "definition": "En av GameZones fyra kulturer. Andvari ger +5% produktion och visas med ett aqua ᚱ-sigill.",
+        "category": "Kulturer",
+        "href": "/wiki/cultures/kulturer",
+        "aliases": []
+    },
+    {
+        "key": "varkesh",
+        "title": "Varkesh",
+        "definition": "En av GameZones fyra kulturer. Varkesh ger +5% skada och visas med ett rött ⚔-sigill.",
+        "category": "Kulturer",
+        "href": "/wiki/cultures/kulturer",
+        "aliases": []
+    },
+    {
+        "key": "gondoria",
+        "title": "Gondoria",
+        "definition": "En av GameZones fyra kulturer. Gondoria skyddar dina Coins från den vanliga coin-förlusten vid död och visas med ett guldfärgat ⚜-sigill.",
+        "category": "Kulturer",
+        "href": "/wiki/cultures/kulturer",
+        "aliases": []
+    },
+    {
+        "key": "vaelthor",
+        "title": "Vaelthor",
+        "definition": "En av GameZones fyra kulturer. Vaelthor ger +5% Character XP och visas med ett mörklila ✦-sigill.",
+        "category": "Kulturer",
+        "href": "/wiki/cultures/kulturer",
+        "aliases": []
     }
 ]

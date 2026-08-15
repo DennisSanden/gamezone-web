@@ -137,6 +137,14 @@ export default function WikiIcon({
                 </svg>
             );
 
+        case "cultures":
+            return (
+                <svg {...commonProps}>
+                    <path d="M12 3 5 6v5c0 4.6 2.7 8 7 10 4.3-2 7-5.4 7-10V6z" />
+                    <path d="M9 9h6M12 7v8" />
+                </svg>
+            );
+
         case "marketplace":
             return (
                 <svg {...commonProps}>
@@ -219,6 +227,8 @@ export function getCategoryIcon(categorySlug: string) {
         economy: "economy",
 
         experience: "experience",
+
+        cultures: "cultures",
 
         production: "production",
 
