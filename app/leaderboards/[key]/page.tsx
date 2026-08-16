@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ key: stri
   return { title: board ? `${board.displayName} | GameZone` : "Leaderboard | GameZone" };
 }
 
-export default async function LeaderboardDetailPage({ params, searchParams }: { params: Promise<{ key: string }>; searchParams: Promise<{ page?: string }> }) {
+export default async function LeaderboardDetailPage({ params, searchParams }: { params: Promise<{ key: string }>; searchParams: Promise<{ page?: string; q?: string }> }) {
   const { key } = await params;
-  const { page: rawPage } = await searchParams;
+  const { page: rawPage, q: rawQuery } = await searchParams;
   const board = await getAllLeaderboardEntries(key);
   if (!board) notFound();
 
@@ -41,14 +41,19 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
       : labels[board.valueType] ?? "Resultat";
 
   const pageSize = 25;
+  const query = (rawQuery ?? "").trim();
+  const normalizedQuery = query.toLocaleLowerCase("sv-SE");
+  const searchedEntries = normalizedQuery
+      ? board.entries.filter((entry) => entry.displayName.toLocaleLowerCase("sv-SE").includes(normalizedQuery) || (entry.detail ?? "").toLocaleLowerCase("sv-SE").includes(normalizedQuery))
+      : board.entries;
   const isTitleBoard = board.key.toLowerCase() === "player_titles";
-  const regularTitles = board.entries.filter((entry) => {
+  const regularTitles = searchedEntries.filter((entry) => {
     const title = (entry.detail ?? "").toLocaleLowerCase("sv-SE");
     return title !== "kung" && title !== "lord";
   });
-  const kings = board.entries.filter((entry) => (entry.detail ?? "").toLocaleLowerCase("sv-SE") === "kung");
-  const lords = board.entries.filter((entry) => (entry.detail ?? "").toLocaleLowerCase("sv-SE") === "lord");
-  const pagedSource = isTitleBoard ? regularTitles : board.entries;
+  const kings = searchedEntries.filter((entry) => (entry.detail ?? "").toLocaleLowerCase("sv-SE") === "kung");
+  const lords = searchedEntries.filter((entry) => (entry.detail ?? "").toLocaleLowerCase("sv-SE") === "lord");
+  const pagedSource = isTitleBoard ? regularTitles : searchedEntries;
   const totalPages = Math.max(1, Math.ceil(pagedSource.length / pageSize));
   const page = Math.min(totalPages, Math.max(1, Number.parseInt(rawPage ?? "1", 10) || 1));
   const entries = pagedSource.slice((page - 1) * pageSize, page * pageSize);
@@ -71,7 +76,13 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
           <section className={styles.detailHero}><PageContainer><Link className={styles.backLink} href="/leaderboards">← Alla leaderboards</Link><span className={styles.eyebrow}>{board.entityType}</span><h1>{board.displayName}</h1><p>Hela tabellen, sida {page} av {totalPages}. Data hämtas direkt från GameZone Engine.</p></PageContainer></section>
           <PageContainer>
             <div className={styles.detailShell}>
-              <div className={styles.detailStats}><span><strong>{number.format(board.entries.length)}</strong> poster</span><span><strong>{isTitleBoard ? number.format(regularTitles.length) : pageSize}</strong> {isTitleBoard ? "vanliga titlar" : "per sida"}</span><span><strong>60 sek</strong> uppdatering</span></div>
+              <form className={styles.detailSearch} method="get">
+                <span>⌕</span>
+                <input name="q" defaultValue={query} placeholder={`Sök ${board.entityType === "PLAYER" ? "spelare" : board.entityType === "SETTLEMENT" ? "settlement" : board.entityType === "COMPANY" ? "företag" : "i tabellen"}...`} aria-label="Sök i leaderboard" />
+                <button type="submit">Sök</button>
+                {query && <Link href="?">Rensa</Link>}
+              </form>
+              <div className={styles.detailStats}><span><strong>{number.format(searchedEntries.length)}</strong> {query ? "träffar" : "poster"}</span><span><strong>{isTitleBoard ? number.format(regularTitles.length) : pageSize}</strong> {isTitleBoard ? "vanliga titlar" : "per sida"}</span><span><strong>60 sek</strong> uppdatering</span></div>
               {isTitleBoard ? (
                   <div className={styles.titleSections}>
                     <section className={`${styles.titleSection} ${styles.titleSectionPrimary}`}>
@@ -107,11 +118,12 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
                     ))}
                   </div>
               )}
-              <nav className={styles.pagination} aria-label="Sidnavigering">
-                <Link className={page === 1 ? styles.disabledPage : styles.pageButton} href={`?page=${Math.max(1, page - 1)}`}>← Föregående</Link>
-                <div>{pages.map((value, index) => <span key={value}>{index > 0 && value - pages[index - 1] > 1 ? <i>…</i> : null}<Link className={value === page ? styles.activePage : styles.pageNumber} href={`?page=${value}`}>{value}</Link></span>)}</div>
-                <Link className={page === totalPages ? styles.disabledPage : styles.pageButton} href={`?page=${Math.min(totalPages, page + 1)}`}>Nästa →</Link>
-              </nav>
+              {pagedSource.length === 0 && <div className={styles.searchEmpty}>Ingen matchade {query ? `“${query}”` : "sökningen"}.</div>}
+              {pagedSource.length > 0 && <nav className={styles.pagination} aria-label="Sidnavigering">
+                <Link className={page === 1 ? styles.disabledPage : styles.pageButton} href={`?page=${Math.max(1, page - 1)}${query ? `&q=${encodeURIComponent(query)}` : ""}`}>← Föregående</Link>
+                <div>{pages.map((value, index) => <span key={value}>{index > 0 && value - pages[index - 1] > 1 ? <i>…</i> : null}<Link className={value === page ? styles.activePage : styles.pageNumber} href={`?page=${value}${query ? `&q=${encodeURIComponent(query)}` : ""}`}>{value}</Link></span>)}</div>
+                <Link className={page === totalPages ? styles.disabledPage : styles.pageButton} href={`?page=${Math.min(totalPages, page + 1)}${query ? `&q=${encodeURIComponent(query)}` : ""}`}>Nästa →</Link>
+              </nav>}
             </div>
           </PageContainer>
         </div>

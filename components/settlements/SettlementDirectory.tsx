@@ -304,6 +304,11 @@ export function SettlementDirectory() {
                         <span className={styles.eyebrow}>GAMEZONE WORLD</span>
                         <h1>Städer med <em>egen historia.</em></h1>
                         <p>Utforska serverns settlements, deras kungar, framsteg, invånare och växande territorier.</p>
+                        <label className={styles.heroSearch}>
+                            <span>⌕</span>
+                            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Sök settlement, kung eller spelare..." aria-label="Sök settlements" />
+                            {query && <button type="button" onClick={() => setQuery("")} aria-label="Rensa sökning">×</button>}
+                        </label>
                         <div className={styles.heroActions}>
                             <a href="#alla-settlements" className={styles.primaryAction}>Utforska städer</a>
                             <span className={styles.liveIndicator}><i /> Live från servern</span>
