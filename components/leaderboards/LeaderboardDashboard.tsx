@@ -101,9 +101,13 @@ function RankingCard({ board, definition, serverCard }: { board?: LeaderboardBoa
               <div className={styles.identity}>
                 {!empty && <EntityVisual board={board} name={entry.displayName} />}
                 {empty && <span className={styles.entityIcon}>?</span>}
-                <div>{board?.entityType === "PLAYER" && !empty
+                <div>{!empty && board?.entityType === "PLAYER"
                   ? <PlayerLink username={entry.displayName}>{entry.displayName}</PlayerLink>
-                  : <strong>{entry.displayName}</strong>}<small>{definition.label}</small></div>
+                  : !empty && board?.entityType === "SETTLEMENT"
+                    ? <Link href={`/settlements?settlement=${encodeURIComponent(entry.entityId)}`}>{entry.displayName}</Link>
+                    : !empty && board?.entityType === "COMPANY"
+                      ? <Link href={`/companies/${encodeURIComponent(entry.entityId)}`}>{entry.displayName}</Link>
+                      : <strong>{entry.displayName}</strong>}<small>{definition.label}</small></div>
               </div>
               <div className={styles.value}><strong>{empty ? "–" : formatLeaderboardValue(entry, board, definition.label)}</strong><small>{definition.label}</small></div>
             </li>

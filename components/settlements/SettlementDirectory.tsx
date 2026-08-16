@@ -220,6 +220,8 @@ export function SettlementDirectory() {
 
     useEffect(() => {
         let cancelled = false;
+        const directSettlementId = new URLSearchParams(window.location.search).get("settlement");
+        if (directSettlementId) setSelectedId(directSettlementId);
 
         async function loadSettlements() {
             try {
@@ -301,6 +303,15 @@ export function SettlementDirectory() {
         }),
         [settlements],
     );
+
+    function closeSettlement() {
+        setSelectedId(null);
+        const url = new URL(window.location.href);
+        if (url.searchParams.has("settlement")) {
+            url.searchParams.delete("settlement");
+            window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+        }
+    }
 
     return (
         <div className={styles.page}>
@@ -453,9 +464,9 @@ export function SettlementDirectory() {
             {selectedSettlement && (() => {
                 const visual = visualFor(selectedSettlement.category);
                 return (
-                    <div className={styles.modalBackdrop} role="presentation" onMouseDown={() => setSelectedId(null)}>
+                    <div className={styles.modalBackdrop} role="presentation" onMouseDown={closeSettlement}>
                         <section className={styles.modal} data-accent={visual.accent} role="dialog" aria-modal="true" aria-label={`${selectedSettlement.displayName} stadssida`} onMouseDown={(event) => event.stopPropagation()}>
-                            <button type="button" className={styles.closeButton} onClick={() => setSelectedId(null)} aria-label="Stäng">×</button>
+                            <button type="button" className={styles.closeButton} onClick={closeSettlement} aria-label="Stäng">×</button>
                             <div className={styles.modalHero}>
                                 <div className={styles.modalScene}>{artworkFor(selectedSettlement.category).map((src, index) => <img key={src} src={src} alt="" data-position={index} />)}</div>
                                 <div className={styles.modalHeroShade} />

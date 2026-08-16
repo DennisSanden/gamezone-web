@@ -24,6 +24,13 @@ function format(entry: LeaderboardEntry, valueType: string) {
   return valueType === "COINS" ? `${number.format(entry.value)} coins` : number.format(entry.value);
 }
 
+function entityHref(entityType: string, entry: LeaderboardEntry) {
+  if (entityType === "PLAYER") return `/spelare/${encodeURIComponent(entry.displayName)}`;
+  if (entityType === "SETTLEMENT") return `/settlements?settlement=${encodeURIComponent(entry.entityId)}`;
+  if (entityType === "COMPANY") return `/companies/${encodeURIComponent(entry.entityId)}`;
+  return null;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ key: string }> }): Promise<Metadata> {
   const { key } = await params;
   const board = await getAllLeaderboardEntries(key);
@@ -64,7 +71,7 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
         <span className={`${styles.tableRank} ${(showRank ? entry.rank : index + 1) <= 3 ? styles[`rank${showRank ? entry.rank : index + 1}`] : ""}`}>#{showRank ? entry.rank : index + 1}</span>
         <span className={styles.tableIdentity}>
         <img src={`https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/40`} alt="" />
-        <strong>{entry.displayName}</strong>
+        <Link className={styles.entityLink} href={`/spelare/${encodeURIComponent(entry.displayName)}`}>{entry.displayName}</Link>
       </span>
         <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
       </div>
@@ -111,7 +118,9 @@ export default async function LeaderboardDetailPage({ params, searchParams }: { 
                       {board.entityType === "PLAYER" && <img src={`https://mc-heads.net/avatar/${encodeURIComponent(entry.displayName)}/40`} alt="" />}
                             {board.entityType === "SETTLEMENT" && <ItemIcon itemId="minecraft:bell" itemName="Settlement" size={40} />}
                             {board.entityType === "COMPANY" && <ItemIcon itemId="minecraft:emerald" itemName="Företag" size={40} />}
-                            <strong>{entry.displayName}</strong>
+                            {entityHref(board.entityType, entry)
+                              ? <Link className={styles.entityLink} href={entityHref(board.entityType, entry)!}>{entry.displayName}</Link>
+                              : <strong>{entry.displayName}</strong>}
                     </span>
                           <strong className={styles.tableValue}>{format(entry, board.valueType)}</strong>
                         </div>
