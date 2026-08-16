@@ -3,9 +3,9 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.2"
+version: "1.3"
 engineVersion: "Company"
-updatedAt: "2026-08-12"
+updatedAt: "2026-08-16"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 3 och Handelscentrum"
@@ -27,15 +27,15 @@ Företagets licens avgör hur många shopping chests företaget får registrera 
 | Uppgradering | Kostnad | Shopping chests | Sänkt serverskatt |
 | --- | ---: | ---: | ---: |
 | Startnivå, licens 1 | Gratis | 1 | 0 procentenheter |
-| Nivå 1 till 2 | 100 000 Coins | 2 | 2 procentenheter |
-| Nivå 2 till 3 | 150 000 Coins | 3 | 3 procentenheter |
-| Nivå 3 till 4 | 200 000 Coins | 4 | 4 procentenheter |
-| Nivå 4 till 5 | 250 000 Coins | 5 | 5 procentenheter |
-| Nivå 5 till 6 | 500 000 Coins | 6 | 6 procentenheter |
-| Nivå 6 till 7 | 750 000 Coins | 7 | 7 procentenheter |
-| Nivå 7 till 8 | 1 000 000 Coins | 8 | 8 procentenheter |
-| Nivå 8 till 9 | 1 250 000 Coins | 9 | 9 procentenheter |
-| Nivå 9 till 10 | 1 500 000 Coins | 10 | 10 procentenheter |
+| Nivå 1 till 2 | 1 000 000 Coins | 2 | 2 procentenheter |
+| Nivå 2 till 3 | 1 500 000 Coins | 3 | 3 procentenheter |
+| Nivå 3 till 4 | 2 000 000 Coins | 4 | 4 procentenheter |
+| Nivå 4 till 5 | 2 500 000 Coins | 5 | 5 procentenheter |
+| Nivå 5 till 6 | 5 000 000 Coins | 6 | 6 procentenheter |
+| Nivå 6 till 7 | 7 500 000 Coins | 7 | 7 procentenheter |
+| Nivå 7 till 8 | 10 000 000 Coins | 8 | 8 procentenheter |
+| Nivå 8 till 9 | 12 500 000 Coins | 9 | 9 procentenheter |
+| Nivå 9 till 10 | 15 000 000 Coins | 10 | 10 procentenheter |
 
 > [!INFO] Endast företagsägaren kan uppgradera licensen. Använd `/company license upgrade`.
 

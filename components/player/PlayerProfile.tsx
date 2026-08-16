@@ -67,6 +67,44 @@ function roleLabel(role?: string | null) {
   return labels[role.toUpperCase()] ?? statLabel(role);
 }
 
+function finiteNumber(value: unknown, fallback = 0) {
+  return typeof value === "number" && Number.isFinite(value) ? value : fallback;
+}
+
+function normalizeProfile(input: Profile): Profile {
+  if (!input?.player || !input?.character) {
+    throw new Error("Spelarprofilen saknar nödvändig data från GameZone Engine.");
+  }
+
+  const level = Math.max(1, Math.trunc(finiteNumber(input.character.level, 1)));
+  const levelExperience = Math.max(0, finiteNumber(input.character.levelExperience));
+  const experience = Math.max(levelExperience, finiteNumber(input.character.experience, levelExperience));
+  const nextLevelExperience = Math.max(
+    levelExperience + 1,
+    finiteNumber(input.character.nextLevelExperience, levelExperience + 1),
+  );
+
+  return {
+    ...input,
+    totalProducedItems: Math.max(0, finiteNumber(input.totalProducedItems)),
+    totalPlayTimeSeconds: Math.max(0, finiteNumber(input.totalPlayTimeSeconds)),
+    economy: input.economy && typeof input.economy === "object" ? input.economy : {},
+    statistics: Array.isArray(input.statistics) ? input.statistics : [],
+    settlementHistory: Array.isArray(input.settlementHistory) ? input.settlementHistory : [],
+    character: {
+      ...input.character,
+      level,
+      experience,
+      levelExperience,
+      nextLevelExperience,
+      highestLevelEver: Math.max(level, Math.trunc(finiteNumber(input.character.highestLevelEver, level))),
+      secondChanceAvailable: Boolean(input.character.secondChanceAvailable),
+      culture: input.character.culture ?? null,
+      unlockedAbilities: Array.isArray(input.character.unlockedAbilities) ? input.character.unlockedAbilities : [],
+    },
+  };
+}
+
 export function PlayerProfile({ username }: { username: string }) {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -80,7 +118,7 @@ export function PlayerProfile({ username }: { username: string }) {
         if (!response.ok || payload.status !== "SUCCESS" || !payload.result) {
           throw new Error(payload.message ?? payload.errors?.[0]?.message ?? "Spelaren kunde inte hittas.");
         }
-        if (!cancelled) setProfile(payload.result);
+        if (!cancelled) setProfile(normalizeProfile(payload.result));
       })
       .catch((reason) => { if (!cancelled) setError(reason instanceof Error ? reason.message : "Spelaren kunde inte hittas."); })
       .finally(() => { if (!cancelled) setLoading(false); });
