@@ -10,7 +10,7 @@ type Company = { companyId: string; name: string; role: string; status: string }
 type Statistic = { key: string; value: number };
 type Membership = { settlementId: string; settlementName: string; settlementLevel: number; settlementLevelName: string; role: string; status: string; joinedAt: string; leftAt: string | null };
 type Culture = { key: string; displayName: string; subtitle: string; bonus: string; symbol: string };
-type Bonus = { category: string; source: string; effect: string; scope: string };
+type Bonus = { origin: "PERSONAL" | "SETTLEMENT"; category: string; source: string; effect: string; scope: string };
 type Character = {
   level: number;
   experience: number;
@@ -120,7 +120,12 @@ function normalizeProfile(input: Profile): Profile {
       culture: input.character.culture ?? null,
       unlockedAbilities: Array.isArray(input.character.unlockedAbilities) ? input.character.unlockedAbilities : [],
       productionBonusBasisPoints: Math.max(0, finiteNumber(input.character.productionBonusBasisPoints)),
-      bonuses: Array.isArray(input.character.bonuses) ? input.character.bonuses : [],
+      bonuses: Array.isArray(input.character.bonuses)
+        ? input.character.bonuses.map((bonus) => ({
+            ...bonus,
+            origin: bonus?.origin === "SETTLEMENT" ? "SETTLEMENT" : "PERSONAL",
+          }))
+        : [],
     },
   };
 }
@@ -148,12 +153,16 @@ export function PlayerProfile({ username }: { username: string }) {
   const stats = useMemo(() => [...(profile?.statistics ?? [])].sort((a, b) => b.value - a.value), [profile]);
   const economy = useMemo(() => Object.entries(profile?.economy ?? {}).filter(([, value]) => Number.isFinite(value)), [profile]);
   const bonusGroups = useMemo(() => {
-    const groups = new Map<string, Bonus[]>();
+    const grouped = { PERSONAL: new Map<string, Bonus[]>(), SETTLEMENT: new Map<string, Bonus[]>() };
     for (const bonus of profile?.character.bonuses ?? []) {
+      const origin = bonus.origin === "SETTLEMENT" ? "SETTLEMENT" : "PERSONAL";
       const key = bonus.category || "OTHER";
-      groups.set(key, [...(groups.get(key) ?? []), bonus]);
+      grouped[origin].set(key, [...(grouped[origin].get(key) ?? []), bonus]);
     }
-    return [...groups.entries()];
+    return {
+      personal: [...grouped.PERSONAL.entries()],
+      settlement: [...grouped.SETTLEMENT.entries()],
+    };
   }, [profile]);
 
   if (loading) return <main className={styles.state}><div className={styles.loader} /><span>GAMEZONE PROFILREGISTER</span><h1>Hämtar spelarprofil</h1><p>Samlar statistik, tillhörighet och historik.</p></main>;
@@ -222,21 +231,49 @@ export function PlayerProfile({ username }: { username: string }) {
               <div><span className={styles.eyebrow}>ALLA BONUSAR</span><h2>Aktiva effekter</h2></div>
               <div className={styles.productionTotal}><small>Total produktion</small><strong>{percentFromBasisPoints(character.productionBonusBasisPoints)}</strong></div>
             </header>
-            {bonusGroups.length ? (
-              <div className={styles.bonusGroups}>
-                {bonusGroups.map(([category, bonuses]) => (
-                  <div className={styles.bonusGroup} key={category}>
-                    <h3>{bonusCategoryLabels[category] ?? statLabel(category)}</h3>
-                    <div className={styles.bonusGrid}>
-                      {bonuses.map((bonus, index) => (
-                        <article className={styles.bonusCard} key={`${category}-${bonus.source}-${bonus.effect}-${index}`}>
-                          <div><strong>{bonus.source}</strong><span>{bonus.effect}</span></div>
-                          <small>{bonus.scope}</small>
-                        </article>
+            {(bonusGroups.personal.length || bonusGroups.settlement.length) ? (
+              <div className={styles.bonusOrigins}>
+                <div className={styles.bonusOrigin}>
+                  <div className={styles.bonusOriginHeader}><span>PERSONLIGA BONUSAR</span><p>Kultur, level, titlar och andra effekter som följer spelaren.</p></div>
+                  {bonusGroups.personal.length ? (
+                    <div className={styles.bonusGroups}>
+                      {bonusGroups.personal.map(([category, bonuses]) => (
+                        <div className={styles.bonusGroup} key={`personal-${category}`}>
+                          <h3>{bonusCategoryLabels[category] ?? statLabel(category)}</h3>
+                          <div className={styles.bonusGrid}>
+                            {bonuses.map((bonus, index) => (
+                              <article className={styles.bonusCard} key={`personal-${category}-${bonus.source}-${bonus.effect}-${index}`}>
+                                <div><strong>{bonus.source}</strong><span>{bonus.effect}</span></div>
+                                <small>{bonus.scope}</small>
+                              </article>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
-                  </div>
-                ))}
+                  ) : <p className={styles.empty}>Inga personliga bonusar just nu.</p>}
+                </div>
+
+                <div className={styles.bonusOrigin}>
+                  <div className={styles.bonusOriginHeader}><span>SETTLEMENTBONUSAR</span><p>Byggnader, policies och roller som spelaren får genom sitt Settlement.</p></div>
+                  {bonusGroups.settlement.length ? (
+                    <div className={styles.bonusGroups}>
+                      {bonusGroups.settlement.map(([category, bonuses]) => (
+                        <div className={styles.bonusGroup} key={`settlement-${category}`}>
+                          <h3>{bonusCategoryLabels[category] ?? statLabel(category)}</h3>
+                          <div className={styles.bonusGrid}>
+                            {bonuses.map((bonus, index) => (
+                              <article className={styles.bonusCard} key={`settlement-${category}-${bonus.source}-${bonus.effect}-${index}`}>
+                                <div><strong>{bonus.source}</strong><span>{bonus.effect}</span></div>
+                                <small>{bonus.scope}</small>
+                              </article>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : <p className={styles.empty}>Inga aktiva Settlementbonusar just nu.</p>}
+                </div>
               </div>
             ) : <p className={styles.empty}>Inga aktiva bonusar just nu.</p>}
           </section>
