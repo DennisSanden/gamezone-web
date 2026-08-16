@@ -235,7 +235,21 @@ export function SettlementDirectory() {
                     throw new Error(message ?? "Settlement-data kunde inte hämtas.");
                 }
 
-                if (!cancelled) setSettlements(payload.result);
+                const normalizedSettlements = payload.result.map((settlement) => ({
+                    ...settlement,
+                    governmentType: settlement.governmentType ?? "DICTATORSHIP",
+                    maxPolicySlots: settlement.maxPolicySlots ?? 0,
+                    activePolicies: Array.isArray(settlement.activePolicies) ? settlement.activePolicies : [],
+                    warStatistics: settlement.warStatistics ?? { wins: 0, losses: 0, ticketDifferential: 0 },
+                    outstandingWarDebt: settlement.outstandingWarDebt ?? 0,
+                    companyCount: settlement.companyCount ?? 0,
+                    territoryChunkCount: settlement.territoryChunkCount ?? 0,
+                    alliances: Array.isArray(settlement.alliances) ? settlement.alliances : [],
+                    members: Array.isArray(settlement.members) ? settlement.members : [],
+                    buildings: Array.isArray(settlement.buildings) ? settlement.buildings : [],
+                }));
+
+                if (!cancelled) setSettlements(normalizedSettlements);
             } catch (loadError) {
                 if (!cancelled) {
                     setError(loadError instanceof Error ? loadError.message : "Settlement-data kunde inte hämtas.");
