@@ -9,6 +9,17 @@ type Settlement = { settlementId: string; name: string; level: number; levelName
 type Company = { companyId: string; name: string; role: string; status: string };
 type Statistic = { key: string; value: number };
 type Membership = { settlementId: string; settlementName: string; settlementLevel: number; settlementLevelName: string; role: string; status: string; joinedAt: string; leftAt: string | null };
+type Culture = { key: string; displayName: string; subtitle: string; bonus: string; symbol: string };
+type Character = {
+  level: number;
+  experience: number;
+  levelExperience: number;
+  nextLevelExperience: number;
+  highestLevelEver: number;
+  secondChanceAvailable: boolean;
+  culture?: Culture | null;
+  unlockedAbilities: string[];
+};
 type Profile = {
   player: {
     playerId: string;
@@ -23,6 +34,7 @@ type Profile = {
     company?: Company | null;
     productionTitle?: Title | null;
   };
+  character: Character;
   totalProducedItems: number;
   totalPlayTimeSeconds: number;
   economy: Record<string, number>;
@@ -81,8 +93,11 @@ export function PlayerProfile({ username }: { username: string }) {
   if (loading) return <main className={styles.state}><div className={styles.loader} /><span>GAMEZONE PROFILREGISTER</span><h1>Hämtar spelarprofil</h1><p>Samlar statistik, tillhörighet och historik.</p></main>;
   if (error || !profile) return <main className={styles.state}><b>404</b><span>OKÄND SPELARE</span><h1>Spelaren hittades inte</h1><p>{error}</p><Link href="/leaderboards">Till topplistorna</Link></main>;
 
-  const { player } = profile;
+  const { player, character } = profile;
   const title = player.productionTitle;
+  const culture = character.culture;
+  const levelSpan = Math.max(1, character.nextLevelExperience - character.levelExperience);
+  const levelProgress = Math.max(0, Math.min(100, ((character.experience - character.levelExperience) / levelSpan) * 100));
 
   return (
     <main className={styles.page}>
@@ -99,11 +114,12 @@ export function PlayerProfile({ username }: { username: string }) {
               <div className={styles.status}><i data-online={player.online} />{player.online ? "Online på servern" : `Senast sedd ${date(player.lastSeenAt)}`}</div>
               <span className={styles.eyebrow}>Officiell spelarprofil</span>
               <h1>{player.username}</h1>
-              <p className={styles.subtitle}>{title?.title ?? "Invånare i GameZone"}</p>
+              <p className={styles.subtitle}>{culture ? `${culture.symbol} ${culture.displayName}` : (title?.title ?? "Invånare i GameZone")}</p>
               <div className={styles.tags}>
+                <span><small>Karaktär</small>Level {character.level}</span>
+                {culture && <span><small>Kultur</small>{culture.displayName}</span>}
                 {player.settlement && <span><small>Settlement</small>{player.settlement.name}</span>}
                 {player.company && <span><small>Företag</small>{player.company.name}</span>}
-                {title && <span><small>Produktion</small>{title.category}</span>}
               </div>
             </div>
           </div>
@@ -111,14 +127,29 @@ export function PlayerProfile({ username }: { username: string }) {
       </section>
 
       <section className={styles.overview} aria-label="Spelaröversikt">
-        <article><span>Förmögenhet</span><strong>{number.format(player.coins)}</strong><small>coins</small></article>
+        <article><span>Level</span><strong>{character.level}</strong><small>{number.format(character.experience)} XP totalt</small></article>
+        <article><span>Personligt rekord</span><strong>Level {character.highestLevelEver}</strong><small>högsta level någonsin</small></article>
+        <article><span>Kultur</span><strong>{culture ? `${culture.symbol} ${culture.displayName}` : "Ej vald"}</strong><small>{culture?.bonus ?? "ingen kulturbonus"}</small></article>
         <article><span>Total speltid</span><strong>{duration(profile.totalPlayTimeSeconds)}</strong><small>sedan första besöket</small></article>
-        <article><span>Producerat</span><strong>{number.format(profile.totalProducedItems)}</strong><small>registrerade items</small></article>
-        <article><span>Medlem sedan</span><strong>{date(player.firstJoinAt, false)}</strong><small>första anslutningen</small></article>
       </section>
 
       <div className={styles.content}>
         <div className={styles.mainColumn}>
+          <section className={`${styles.panel} ${styles.characterPanel}`}>
+            <header className={styles.panelHeader}><div><span className={styles.eyebrow}>KARAKTÄREN</span><h2>Level {character.level}</h2></div><p>{culture ? `${culture.symbol} ${culture.displayName}, ${culture.subtitle}` : "Ingen kultur har valts ännu."}</p></header>
+            <div className={styles.levelProgressHeader}><span>{number.format(character.experience - character.levelExperience)} / {number.format(character.nextLevelExperience - character.levelExperience)} XP</span><strong>{Math.floor(levelProgress)}%</strong></div>
+            <div className={styles.levelProgress}><i style={{ width: `${levelProgress}%` }} /></div>
+            <div className={styles.characterMeta}>
+              <div><small>Nästa level</small><strong>{number.format(character.nextLevelExperience - character.experience)} XP kvar</strong></div>
+              <div><small>Kulturbonus</small><strong>{culture?.bonus ?? "Ingen"}</strong></div>
+              <div><small>Rekord</small><strong>Level {character.highestLevelEver}</strong></div>
+            </div>
+            <div className={styles.abilities}>
+              <span>Upplåsta levelbonusar</span>
+              {character.unlockedAbilities.length ? <div>{character.unlockedAbilities.map((ability) => <b key={ability}>{ability}</b>)}</div> : <p>Första bonusen låses upp på Level 10.</p>}
+            </div>
+          </section>
+
           <section className={styles.panel}>
             <header className={styles.panelHeader}><div><span className={styles.eyebrow}>PRESTATION</span><h2>Spelarens statistik</h2></div><p>Registrerade framsteg och aktivitet från GameZone.</p></header>
             {stats.length ? <div className={styles.statGrid}>{stats.map((stat, index) => <article key={stat.key} className={styles.statCard}><span className={styles.statRank}>{String(index + 1).padStart(2, "0")}</span><div><small>{statLabel(stat.key)}</small><strong>{number.format(stat.value)}</strong></div></article>)}</div> : <p className={styles.empty}>Ingen detaljerad statistik har registrerats ännu.</p>}
@@ -134,6 +165,9 @@ export function PlayerProfile({ username }: { username: string }) {
           <section className={styles.panel}>
             <header className={styles.compactHeader}><span className={styles.eyebrow}>IDENTITET</span><h2>Roller och tillhörighet</h2></header>
             <dl className={styles.facts}>
+              <div><dt>Kultur</dt><dd>{culture ? `${culture.symbol} ${culture.displayName}` : "Ej vald"}</dd></div>
+              <div><dt>Level</dt><dd>{character.level}</dd></div>
+              <div><dt>Högsta level</dt><dd>{character.highestLevelEver}</dd></div>
               <div><dt>Aktiv titel</dt><dd>{title?.title ?? "Ingen"}</dd></div>
               <div><dt>Titelnivå</dt><dd>{title ? `Nivå ${title.level}` : "Ingen"}</dd></div>
               <div><dt>Produktionsbonus</dt><dd>{title ? `+${title.productionBonusPercent}%` : "0%"}</dd></div>
