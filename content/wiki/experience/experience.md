@@ -70,10 +70,10 @@ De stora milstolparna är:
 | **30** | Överlevare | Hunger minskar 5 % långsammare |
 | **40** | Krigare | +5 % skada |
 | **50** | Livskraft | +1 hjärta |
-| **75** | Mästare | Procentbonusarna höjs till 7,5 % |
+| **75** | Mästare | Procentbonusarna höjs till 7,5 % och produktion får ytterligare +5 % |
 | **100** | Second Chance | Skyddar din Character XP och level från en död, en gång per liv |
 
-På Level 75 ersätter Mästare de tidigare procentbonusarna. Produktion, movement speed, hungerbesparing och skada blir då **7,5 %**. Det extra hjärtat från Level 50 ligger kvar.
+På Level 75 ersätter Mästare de tidigare procentbonusarna med **7,5 %**. Produktion får dessutom ytterligare **+5 %**, vilket ger totalt **+12,5 % produktion**. Movement speed, hungerbesparing och skada blir **7,5 %**. Det extra hjärtat från Level 50 ligger kvar.
 
 ## Vad är ett liv?
 

@@ -512,7 +512,7 @@
     {
         "key": "vaelthor",
         "title": "Vaelthor",
-        "definition": "En av GameZones fyra kulturer. Vaelthor ger +5% Character XP och visas med ett mörklila ✦-sigill.",
+        "definition": "En av GameZones fyra kulturer. Vaelthor ger +10% Character XP och visas med ett mörklila ✦-sigill.",
         "category": "Kulturer",
         "href": "/wiki/cultures/kulturer",
         "aliases": []

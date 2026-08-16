@@ -77,7 +77,7 @@ Gondoria använder **⚜** som sigill. Kronan används inte som kultursymbol eft
 ### Vaelthor
 
 **Sigill:** ✦, mörklila  
-**Bonus:** +5% Character XP
+**Bonus:** +10% Character XP
 
 Vaelthor ökar mängden Character XP du tjänar och påverkar därmed din personliga levelprogression.
 

@@ -82,16 +82,16 @@ Det extra hjärtat är kopplat till din Character Level. Om livet återställs f
 
 ## Level 75, Mästare
 
-På Level 75 uppgraderas dina procentbaserade förmågor till **7,5 %**.
+På Level 75 uppgraderas dina procentbaserade förmågor till **7,5 %**. Produktion får dessutom ytterligare **+5 %**.
 
 Det innebär:
 
-- Produktion, +7,5 %
+- Produktion, +12,5 % totalt
 - Movement speed, +7,5 %
 - Hungerbesparing, 7,5 %
 - Skada, +7,5 %
 
-Mästare staplar inte ytterligare 7,5 procent ovanpå de gamla 5 procenten. Den **ersätter 5 procent med 7,5 procent**.
+Mästare ersätter de tidigare 5 procenten med 7,5 procent för de procentbaserade förmågorna. För produktion läggs dessutom **+5 %** ovanpå Mästare-bonusen, vilket ger totalt **+12,5 % produktion**.
 
 Livskraft från Level 50 ligger kvar, så du behåller även ditt extra hjärta.
 

@@ -286,7 +286,9 @@ Tabellerna nedan visar de produktionsresurser som faktiskt ger Character XP i de
 
 Character XP är byggd runt aktivt spel. Produktionssystemets vanliga eligibilityregler gäller fortfarande. Om en aktivitet inte räknas som en godkänd produktion får den inte Character XP bara för att samma item finns i tabellen.
 
-Det betyder bland annat att systemet inte är tänkt att belöna spelare för att placera och bryta samma resurs om och om igen eller för att låta automatisering skapa obegränsad Character XP.
+För att motverka extrem grind och automatisering minskar mängden Character XP du får när du producerar väldigt stora mängder av samma resurs på kort tid. Ju fler items av samma typ du producerar, desto mindre XP får du per item.
+
+Du slutar inte få Character XP helt, men systemet gör att variation och normalt spelande ger bättre utdelning än att massproducera samma resurs.
 
 ## Vad ger inte Character XP?
 
