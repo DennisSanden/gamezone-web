@@ -49,7 +49,6 @@ type Settlement = {
     levelName: string;
     territoryRadius: number;
     nextUpgradeCost: number;
-    weeklyMaintenanceCost: number;
     serverTaxBasisPoints: number | null;
     productionTaxBasisPoints: number;
     productionTaxPercentage: number;
@@ -489,7 +488,6 @@ export function SettlementDirectory() {
                                 <div><img src="/minecraft/items/clock_14.png" alt="" /><span>Grundat</span><strong>{formatDate(selectedSettlement.createdAt)}</strong></div>
                                 <div><img src="/minecraft/items/brick.png" alt="" /><span>Byggnader</span><strong>{selectedSettlement.buildings.length}</strong></div>
                                 <div><img src="/minecraft/items/golden_apple.png" alt="" /><span>Nästa uppgradering</span><strong>{selectedSettlement.nextUpgradeCost === 0 ? "Maxnivå" : formatCoins(selectedSettlement.nextUpgradeCost)}</strong></div>
-                                <div><img src="/minecraft/items/clock_14.png" alt="" /><span>Veckounderhåll</span><strong>{formatCoins(selectedSettlement.weeklyMaintenanceCost)}</strong></div>
                             </div>
 
                             <div className={styles.modalSection}>
