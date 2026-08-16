@@ -19,6 +19,26 @@ type SettlementBuilding = {
     registeredSettlementLevel: number;
 };
 
+type SettlementPolicy = {
+    key: string;
+    displayName: string;
+    category: string;
+    description: string;
+};
+
+type SettlementAlliance = {
+    settlementId: string;
+    displayName: string;
+    level: number;
+    levelName: string;
+};
+
+type SettlementWarStatistics = {
+    wins: number;
+    losses: number;
+    ticketDifferential: number;
+};
+
 type Settlement = {
     settlementId: string;
     displayName: string;
@@ -38,6 +58,19 @@ type Settlement = {
     treasuryBalance: number | null;
     totalTaxCollected: number;
     memberCount: number;
+    governmentType: string;
+    maxPolicySlots: number;
+    activePolicies: SettlementPolicy[];
+    warStatistics: SettlementWarStatistics;
+    outstandingWarDebt: number;
+    companyCount: number;
+    territoryChunkCount: number;
+    alliances: SettlementAlliance[];
+    currentVoteEndsAt: string | null;
+    currentVoteType: string | null;
+    currentVoteBallotsCast: number | null;
+    currentVoteEligibleVoters: number | null;
+    electionCooldownUntil: string | null;
     members: SettlementMember[];
     buildings: SettlementBuilding[];
     createdAt: string;
@@ -126,6 +159,47 @@ function roleLabel(role: string) {
     if (role === "KING") return "Kung";
     if (role === "LORD") return "Lord";
     return "Invånare";
+}
+
+
+function governmentLabel(value: string) {
+    return value === "DEMOCRACY" ? "Demokrati" : "Diktatur";
+}
+
+function formatDate(value: string | null | undefined) {
+    if (!value) return "Ingen";
+    return new Intl.DateTimeFormat("sv-SE", { year: "numeric", month: "short", day: "numeric" }).format(new Date(value));
+}
+
+function formatDateTime(value: string | null | undefined) {
+    if (!value) return "Ingen";
+    return new Intl.DateTimeFormat("sv-SE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(value));
+}
+
+function settlementIdentity(policies: SettlementPolicy[]) {
+    if (policies.length === 0) return { title: "Ingen tydlig inriktning", text: "Settlementet har ännu inte valt några aktiva policies." };
+    const scores = new Map<string, number>();
+    policies.forEach((policy) => scores.set(policy.category, (scores.get(policy.category) ?? 0) + 1));
+    const category = [...scores.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? "";
+    const identities: Record<string, { title: string; text: string }> = {
+        Krig: { title: "Militär inriktning", text: "Stadens politik prioriterar krig, försvar och uthållighet." },
+        Ekonomi: { title: "Handelsstad", text: "Staden satsar på företag, handel och en starkare lokal ekonomi." },
+        Produktion: { title: "Produktionscentrum", text: "Staden prioriterar produktion och effektivitet för sina invånare." },
+        Infrastruktur: { title: "Rörligt rike", text: "Staden satsar på rörelse, transporter och snabbare resor." },
+        Progression: { title: "Kunskapssamhälle", text: "Staden prioriterar invånarnas personliga progression." },
+        Tävling: { title: "Tävlingsstad", text: "Staden belönar tävling och framgång i turneringar." },
+        Turism: { title: "Besöksstad", text: "Staden prioriterar besökare, landmarks och turism." },
+    };
+    return identities[category] ?? { title: "Blandad inriktning", text: "Stadens policies är spridda över flera olika områden." };
+}
+
+function buildingLabel(value: string) {
+    const labels: Record<string, string> = {
+        GRUVA: "Gruva", LADUGARD: "Ladugård", LADA: "Lada", FISKEBRYGGA: "Fiskebrygga", SAGVERK: "Sågverk",
+        STENHUGGERI: "Stenhuggeri", HANDELSCENTRUM: "Handelscentrum", BANK: "Bank", LABORATORIUM: "Laboratorium",
+        KYRKA: "Kyrka", MARKNADSPLATS: "Marknadsplats", MONUMENT: "Monument", SLOTT: "Slott", UNDERVERK: "Underverk",
+    };
+    return labels[value] ?? formatCategory(value);
 }
 
 function kingOf(settlement: Settlement) {
@@ -332,6 +406,14 @@ export function SettlementDirectory() {
 
                                         <div className={styles.kingRow}><span>Kung</span><strong>{kingOf(settlement)}</strong></div>
 
+                                        <div className={styles.cardPolicies}>
+                                            <span>Policies</span>
+                                            <div>
+                                                {settlement.activePolicies.slice(0, 3).map((policy) => <b key={policy.key}>{policy.displayName}</b>)}
+                                                {settlement.activePolicies.length === 0 && <em>Inga aktiva</em>}
+                                            </div>
+                                        </div>
+
                                         <div className={styles.progressBlock}>
                                             <div><span>Vägen mot Imperium</span><strong>{levelProgress(settlement.level)}%</strong></div>
                                             <div className={styles.progressTrack}><i style={{ width: `${levelProgress(settlement.level)}%` }} /></div>
@@ -367,13 +449,87 @@ export function SettlementDirectory() {
                                 </div>
                             </div>
 
+                            <div className={styles.identityStrip}>
+                                <div>
+                                    <span>Stadens inriktning</span>
+                                    <strong>{settlementIdentity(selectedSettlement.activePolicies).title}</strong>
+                                    <p>{settlementIdentity(selectedSettlement.activePolicies).text}</p>
+                                </div>
+                                <div className={styles.governmentBadge} data-government={selectedSettlement.governmentType}>
+                                    <span>Statsskick</span>
+                                    <strong>{governmentLabel(selectedSettlement.governmentType)}</strong>
+                                </div>
+                            </div>
+
                             <div className={styles.detailGrid}>
                                 <div><img src="/minecraft/items/golden_helmet.png" alt="" /><span>Kung</span><PlayerLink username={kingOf(selectedSettlement)}>{kingOf(selectedSettlement)}</PlayerLink></div>
                                 <div><img src="/minecraft/items/name_tag.png" alt="" /><span>Invånare</span><strong>{selectedSettlement.memberCount}</strong></div>
-                                <div><img src="/minecraft/items/recovery_compass_22.png" alt="" /><span>Territorieradie</span><strong>{selectedSettlement.territoryRadius}</strong></div>
+                                <div><img src="/minecraft/items/recovery_compass_22.png" alt="" /><span>Territorium</span><strong>{selectedSettlement.territoryChunkCount} chunks</strong></div>
                                 <div><img src="/minecraft/items/emerald.png" alt="" /><span>Stadskassa</span><strong>{formatCoins(selectedSettlement.treasuryBalance)}</strong></div>
-                                <div><img src="/minecraft/items/clock_14.png" alt="" /><span>Veckounderhåll</span><strong>{formatCoins(selectedSettlement.weeklyMaintenanceCost)}</strong></div>
+                                <div><img src="/minecraft/items/chest.png" alt="" /><span>Företag</span><strong>{selectedSettlement.companyCount}</strong></div>
+                                <div><img src="/minecraft/items/clock_14.png" alt="" /><span>Grundat</span><strong>{formatDate(selectedSettlement.createdAt)}</strong></div>
+                                <div><img src="/minecraft/items/brick.png" alt="" /><span>Byggnader</span><strong>{selectedSettlement.buildings.length}</strong></div>
                                 <div><img src="/minecraft/items/golden_apple.png" alt="" /><span>Nästa uppgradering</span><strong>{selectedSettlement.nextUpgradeCost === 0 ? "Maxnivå" : formatCoins(selectedSettlement.nextUpgradeCost)}</strong></div>
+                                <div><img src="/minecraft/items/clock_14.png" alt="" /><span>Veckounderhåll</span><strong>{formatCoins(selectedSettlement.weeklyMaintenanceCost)}</strong></div>
+                            </div>
+
+                            <div className={styles.modalSection}>
+                                <div className={styles.sectionHeading}><h3>Aktiva policies</h3><span>{selectedSettlement.activePolicies.length}/{selectedSettlement.maxPolicySlots}</span></div>
+                                {selectedSettlement.activePolicies.length > 0 ? (
+                                    <div className={styles.policyGrid}>
+                                        {selectedSettlement.activePolicies.map((policy) => (
+                                            <article key={policy.key} className={styles.policyCard} title={policy.description}>
+                                                <span>{policy.category}</span>
+                                                <strong>{policy.displayName}</strong>
+                                                <p>{policy.description}</p>
+                                            </article>
+                                        ))}
+                                    </div>
+                                ) : <p className={styles.emptyText}>Inga aktiva policies.</p>}
+                            </div>
+
+                            {selectedSettlement.governmentType === "DEMOCRACY" && (
+                                <div className={styles.modalSection}>
+                                    <div className={styles.sectionHeading}><h3>Demokrati</h3><span>Politik</span></div>
+                                    <div className={styles.governmentGrid}>
+                                        <div><span>Pågående omröstning</span><strong>{selectedSettlement.currentVoteType ? (selectedSettlement.currentVoteType === "KING_ELECTION" ? "King-val" : "Folkomröstning") : "Ingen"}</strong></div>
+                                        <div><span>Röster</span><strong>{selectedSettlement.currentVoteBallotsCast === null ? "-" : `${selectedSettlement.currentVoteBallotsCast}/${selectedSettlement.currentVoteEligibleVoters ?? 0}`}</strong></div>
+                                        <div><span>Avslutas</span><strong>{selectedSettlement.currentVoteEndsAt ? formatDateTime(selectedSettlement.currentVoteEndsAt) : "-"}</strong></div>
+                                        <div><span>Nytt King-val</span><strong>{selectedSettlement.electionCooldownUntil ? formatDateTime(selectedSettlement.electionCooldownUntil) : "Kan startas"}</strong></div>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className={styles.modalSection}>
+                                <div className={styles.sectionHeading}><h3>Ledning</h3><span>{selectedSettlement.members.filter((member) => member.role === "KING" || member.role === "LORD").length}</span></div>
+                                <div className={styles.memberList}>
+                                    {selectedSettlement.members.filter((member) => member.role === "KING" || member.role === "LORD").map((member) => (
+                                        <div key={member.playerId} className={styles.memberRow}>
+                                            <span className={styles.avatar}>{member.username.slice(0, 1).toUpperCase()}</span>
+                                            <PlayerLink username={member.username}>{member.username}</PlayerLink>
+                                            <span data-role={member.role}>{roleLabel(member.role)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className={styles.modalSection}>
+                                <div className={styles.sectionHeading}><h3>Krig</h3><span>{selectedSettlement.warStatistics.wins + selectedSettlement.warStatistics.losses} avgjorda</span></div>
+                                <div className={styles.warGrid}>
+                                    <div><span>Vinster</span><strong>{selectedSettlement.warStatistics.wins}</strong></div>
+                                    <div><span>Förluster</span><strong>{selectedSettlement.warStatistics.losses}</strong></div>
+                                    <div><span>Winrate</span><strong>{selectedSettlement.warStatistics.wins + selectedSettlement.warStatistics.losses === 0 ? "-" : `${Math.round((selectedSettlement.warStatistics.wins / (selectedSettlement.warStatistics.wins + selectedSettlement.warStatistics.losses)) * 100)}%`}</strong></div>
+                                    <div className={selectedSettlement.outstandingWarDebt > 0 ? styles.debtMetric : ""}><span>Krigsskuld</span><strong>{formatCoins(selectedSettlement.outstandingWarDebt)}</strong></div>
+                                </div>
+                            </div>
+
+                            <div className={styles.modalSection}>
+                                <div className={styles.sectionHeading}><h3>Allianser</h3><span>{selectedSettlement.alliances.length}</span></div>
+                                {selectedSettlement.alliances.length > 0 ? (
+                                    <div className={styles.allianceList}>
+                                        {selectedSettlement.alliances.map((ally) => <span key={ally.settlementId}><strong>{ally.displayName}</strong><small>Nivå {ally.level}, {ally.levelName}</small></span>)}
+                                    </div>
+                                ) : <p className={styles.emptyText}>Settlementet har inga aktiva allianser.</p>}
                             </div>
 
                             <div className={styles.modalSection}>
@@ -394,7 +550,7 @@ export function SettlementDirectory() {
                                 {selectedSettlement.buildings.length > 0 ? (
                                     <div className={styles.buildingList}>
                                         {selectedSettlement.buildings.map((building) => (
-                                            <span key={building.buildingId}><img src="/minecraft/items/brick.png" alt="" />{formatCategory(building.buildingType)}</span>
+                                            <span key={building.buildingId} data-notable={["BANK", "LABORATORIUM", "SLOTT", "UNDERVERK", "MONUMENT"].includes(building.buildingType) ? "true" : "false"}><img src="/minecraft/items/brick.png" alt="" />{buildingLabel(building.buildingType)}</span>
                                         ))}
                                     </div>
                                 ) : <p className={styles.emptyText}>Inga registrerade byggnader ännu.</p>}
