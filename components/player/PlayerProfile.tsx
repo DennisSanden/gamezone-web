@@ -10,6 +10,7 @@ type Company = { companyId: string; name: string; role: string; status: string }
 type Statistic = { key: string; value: number };
 type Membership = { settlementId: string; settlementName: string; settlementLevel: number; settlementLevelName: string; role: string; status: string; joinedAt: string; leftAt: string | null };
 type Culture = { key: string; displayName: string; subtitle: string; bonus: string; symbol: string };
+type Bonus = { category: string; source: string; effect: string; scope: string };
 type Character = {
   level: number;
   experience: number;
@@ -19,6 +20,8 @@ type Character = {
   secondChanceAvailable: boolean;
   culture?: Culture | null;
   unlockedAbilities: string[];
+  productionBonusBasisPoints: number;
+  bonuses: Bonus[];
 };
 type Profile = {
   player: {
@@ -71,6 +74,21 @@ function finiteNumber(value: unknown, fallback = 0) {
   return typeof value === "number" && Number.isFinite(value) ? value : fallback;
 }
 
+function percentFromBasisPoints(basisPoints: number) {
+  const percent = basisPoints / 100;
+  return `+${new Intl.NumberFormat("sv-SE", { maximumFractionDigits: 1 }).format(percent)}%`;
+}
+
+const bonusCategoryLabels: Record<string, string> = {
+  PRODUCTION: "Produktion",
+  MOVEMENT: "Rörelse",
+  SURVIVAL: "Överlevnad",
+  COMBAT: "Strid",
+  ECONOMY: "Ekonomi",
+  PROGRESSION: "Progression",
+  WAR: "Krig",
+};
+
 function normalizeProfile(input: Profile): Profile {
   if (!input?.player || !input?.character) {
     throw new Error("Spelarprofilen saknar nödvändig data från GameZone Engine.");
@@ -101,6 +119,8 @@ function normalizeProfile(input: Profile): Profile {
       secondChanceAvailable: Boolean(input.character.secondChanceAvailable),
       culture: input.character.culture ?? null,
       unlockedAbilities: Array.isArray(input.character.unlockedAbilities) ? input.character.unlockedAbilities : [],
+      productionBonusBasisPoints: Math.max(0, finiteNumber(input.character.productionBonusBasisPoints)),
+      bonuses: Array.isArray(input.character.bonuses) ? input.character.bonuses : [],
     },
   };
 }
@@ -127,6 +147,14 @@ export function PlayerProfile({ username }: { username: string }) {
 
   const stats = useMemo(() => [...(profile?.statistics ?? [])].sort((a, b) => b.value - a.value), [profile]);
   const economy = useMemo(() => Object.entries(profile?.economy ?? {}).filter(([, value]) => Number.isFinite(value)), [profile]);
+  const bonusGroups = useMemo(() => {
+    const groups = new Map<string, Bonus[]>();
+    for (const bonus of profile?.character.bonuses ?? []) {
+      const key = bonus.category || "OTHER";
+      groups.set(key, [...(groups.get(key) ?? []), bonus]);
+    }
+    return [...groups.entries()];
+  }, [profile]);
 
   if (loading) return <main className={styles.state}><div className={styles.loader} /><span>GAMEZONE PROFILREGISTER</span><h1>Hämtar spelarprofil</h1><p>Samlar statistik, tillhörighet och historik.</p></main>;
   if (error || !profile) return <main className={styles.state}><b>404</b><span>OKÄND SPELARE</span><h1>Spelaren hittades inte</h1><p>{error}</p><Link href="/leaderboards">Till topplistorna</Link></main>;
@@ -168,6 +196,7 @@ export function PlayerProfile({ username }: { username: string }) {
         <article><span>Level</span><strong>{character.level}</strong><small>{number.format(character.experience)} XP totalt</small></article>
         <article><span>Personligt rekord</span><strong>Level {character.highestLevelEver}</strong><small>högsta level någonsin</small></article>
         <article><span>Kultur</span><strong>{culture ? `${culture.symbol} ${culture.displayName}` : "Ej vald"}</strong><small>{culture?.bonus ?? "ingen kulturbonus"}</small></article>
+        <article className={styles.productionOverview}><span>Produktionsbonus</span><strong>{percentFromBasisPoints(character.productionBonusBasisPoints)}</strong><small>nuvarande totala bonus</small></article>
         <article><span>Total speltid</span><strong>{duration(profile.totalPlayTimeSeconds)}</strong><small>sedan första besöket</small></article>
       </section>
 
@@ -186,6 +215,30 @@ export function PlayerProfile({ username }: { username: string }) {
               <span>Upplåsta levelbonusar</span>
               {character.unlockedAbilities.length ? <div>{character.unlockedAbilities.map((ability) => <b key={ability}>{ability}</b>)}</div> : <p>Första bonusen låses upp på Level 10.</p>}
             </div>
+          </section>
+
+          <section className={`${styles.panel} ${styles.bonusPanel}`}>
+            <header className={styles.panelHeader}>
+              <div><span className={styles.eyebrow}>ALLA BONUSAR</span><h2>Aktiva effekter</h2></div>
+              <div className={styles.productionTotal}><small>Total produktion</small><strong>{percentFromBasisPoints(character.productionBonusBasisPoints)}</strong></div>
+            </header>
+            {bonusGroups.length ? (
+              <div className={styles.bonusGroups}>
+                {bonusGroups.map(([category, bonuses]) => (
+                  <div className={styles.bonusGroup} key={category}>
+                    <h3>{bonusCategoryLabels[category] ?? statLabel(category)}</h3>
+                    <div className={styles.bonusGrid}>
+                      {bonuses.map((bonus, index) => (
+                        <article className={styles.bonusCard} key={`${category}-${bonus.source}-${bonus.effect}-${index}`}>
+                          <div><strong>{bonus.source}</strong><span>{bonus.effect}</span></div>
+                          <small>{bonus.scope}</small>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : <p className={styles.empty}>Inga aktiva bonusar just nu.</p>}
           </section>
 
           <section className={styles.panel}>
@@ -208,7 +261,7 @@ export function PlayerProfile({ username }: { username: string }) {
               <div><dt>Högsta level</dt><dd>{character.highestLevelEver}</dd></div>
               <div><dt>Aktiv titel</dt><dd>{title?.title ?? "Ingen"}</dd></div>
               <div><dt>Titelnivå</dt><dd>{title ? `Nivå ${title.level}` : "Ingen"}</dd></div>
-              <div><dt>Produktionsbonus</dt><dd>{title ? `+${title.productionBonusPercent}%` : "0%"}</dd></div>
+              <div><dt>Produktionsbonus</dt><dd>{percentFromBasisPoints(character.productionBonusBasisPoints)}</dd></div>
               <div><dt>Settlement</dt><dd>{player.settlement?.name ?? "Fristående"}</dd></div>
               <div><dt>Roll</dt><dd>{roleLabel(player.settlement?.role)}</dd></div>
               <div><dt>Företag</dt><dd>{player.company?.name ?? "Inget"}</dd></div>
