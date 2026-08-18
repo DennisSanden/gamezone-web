@@ -215,6 +215,7 @@ export function SettlementDirectory() {
     const [error, setError] = useState<string | null>(null);
     const [query, setQuery] = useState("");
     const [category, setCategory] = useState("ALL");
+    const [government, setGovernment] = useState("ALL");
     const [sortMode, setSortMode] = useState<SortMode>("level");
     const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -275,12 +276,13 @@ export function SettlementDirectory() {
         const normalizedQuery = query.trim().toLowerCase();
         const result = settlements.filter((settlement) => {
             const matchesCategory = category === "ALL" || settlement.category === category;
+            const matchesGovernment = government === "ALL" || settlement.governmentType === government;
             const matchesQuery = normalizedQuery.length === 0
                 || settlement.displayName.toLowerCase().includes(normalizedQuery)
                 || kingOf(settlement).toLowerCase().includes(normalizedQuery)
                 || settlement.members.some((member) => member.username.toLowerCase().includes(normalizedQuery));
 
-            return matchesCategory && matchesQuery;
+            return matchesCategory && matchesGovernment && matchesQuery;
         });
 
         return result.sort((left, right) => {
@@ -289,7 +291,7 @@ export function SettlementDirectory() {
             if (sortMode === "treasury") return (right.treasuryBalance ?? -1) - (left.treasuryBalance ?? -1);
             return right.level - left.level || right.memberCount - left.memberCount;
         });
-    }, [settlements, query, category, sortMode]);
+    }, [settlements, query, category, government, sortMode]);
 
     const selectedSettlement = settlements.find((settlement) => settlement.settlementId === selectedId) ?? null;
     const featured = settlements.slice().sort((a, b) => b.level - a.level || b.memberCount - a.memberCount)[0] ?? null;
@@ -393,6 +395,14 @@ export function SettlementDirectory() {
                         </select>
                     </label>
                     <label className={styles.selectField}>
+                        <span>Statsskick</span>
+                        <select value={government} onChange={(event) => setGovernment(event.target.value)}>
+                            <option value="ALL">Alla statsskick</option>
+                            <option value="DEMOCRACY">Demokrati</option>
+                            <option value="DICTATORSHIP">Diktatur</option>
+                        </select>
+                    </label>
+                    <label className={styles.selectField}>
                         <span>Sortera</span>
                         <select value={sortMode} onChange={(event) => setSortMode(event.target.value as SortMode)}>
                             <option value="level">Högsta nivå</option>
@@ -434,6 +444,10 @@ export function SettlementDirectory() {
                                         </div>
 
                                         <div className={styles.kingRow}><span>Kung</span><strong>{kingOf(settlement)}</strong></div>
+                                        <div className={styles.governmentRow} data-government={settlement.governmentType}>
+                                            <span>Statsskick</span>
+                                            <strong>{governmentLabel(settlement.governmentType)}</strong>
+                                        </div>
 
                                         <div className={styles.cardPolicies}>
                                             <span>Policies</span>
