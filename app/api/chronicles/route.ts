@@ -1,0 +1,21 @@
+import { NextResponse } from "next/server";
+
+const ENGINE_API_URL = process.env.GAMEZONE_ENGINE_API_URL ?? "http://184.170.201.111:8765";
+export const dynamic = "force-dynamic";
+
+export async function GET(request: Request) {
+  const url = new URL(request.url);
+  const category = url.searchParams.get("category") ?? "ALL";
+  const limit = url.searchParams.get("limit") ?? "100";
+  try {
+    const response = await fetch(`${ENGINE_API_URL}/api/v1/chronicles?category=${encodeURIComponent(category)}&limit=${encodeURIComponent(limit)}`, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(8_000),
+    });
+    const body = await response.json().catch(() => null);
+    return NextResponse.json(body ?? { status: "FAILED", message: "Ogiltigt svar från Engine." }, { status: response.status, headers: { "Cache-Control": "no-store" } });
+  } catch (error) {
+    console.error("Failed to fetch Chronicles from GameZone Engine", error);
+    return NextResponse.json({ status: "FAILED", message: "Chronicles är tillfälligt otillgänglig." }, { status: 503 });
+  }
+}

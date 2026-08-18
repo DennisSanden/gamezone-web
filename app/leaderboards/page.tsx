@@ -13,7 +13,9 @@ export const metadata: Metadata = {
   description: "Se topplistor för spelare, settlements, företag och serverstatistik på GameZone.",
 };
 
-export default async function LeaderboardsPage() {
+export default async function LeaderboardsPage({ searchParams }: { searchParams: Promise<{ tab?: string }> }) {
+  const params = await searchParams;
+  const initialCategory = (["players", "settlements", "companies", "server"] as const).includes(params.tab as any) ? params.tab as "players" | "settlements" | "companies" | "server" : "players";
   const [leaderboards, titleBoard] = await Promise.all([
     getLeaderboards(5),
     getAllLeaderboardEntries("player_titles"),
@@ -36,7 +38,7 @@ export default async function LeaderboardsPage() {
               </div>
             </PageContainer>
           </section>
-          <PageContainer><LeaderboardDashboard leaderboards={leaderboards} titleBoard={titleBoard} /></PageContainer>
+          <PageContainer><LeaderboardDashboard leaderboards={leaderboards} titleBoard={titleBoard} initialCategory={initialCategory} /></PageContainer>
         </div>
       </MainLayout>
   );

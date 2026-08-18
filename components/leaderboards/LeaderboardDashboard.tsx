@@ -189,8 +189,8 @@ function TitleOverview({ board }: { board?: LeaderboardBoard }) {
   );
 }
 
-export function LeaderboardDashboard({ leaderboards, titleBoard }: { leaderboards: LeaderboardBoard[]; titleBoard?: LeaderboardBoard | null }) {
-  const [active, setActive] = useState<Category>("players");
+export function LeaderboardDashboard({ leaderboards, titleBoard, initialCategory = "players" }: { leaderboards: LeaderboardBoard[]; titleBoard?: LeaderboardBoard | null; initialCategory?: Category }) {
+  const [active, setActive] = useState<Category>(initialCategory in categories ? initialCategory : "players");
   const map = useMemo(() => new Map(leaderboards.map((board) => [board.key.toUpperCase(), board])), [leaderboards]);
   const highlights = [
     { label: "Rikaste spelare", key: "PLAYER_COINS", icon: "◉", valueLabel: "Coins" },
