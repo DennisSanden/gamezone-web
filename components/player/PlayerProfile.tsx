@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./PlayerProfile.module.css";
+import { getPatreonSupporter, patreonTierLabel } from "@/lib/patreon-supporters";
 
 type Title = { title: string; category: string; level: number; productionBonusPercent: number };
 type Settlement = { settlementId: string; name: string; level: number; levelName: string; role: string };
@@ -171,6 +172,7 @@ export function PlayerProfile({ username }: { username: string }) {
   const { player, character } = profile;
   const title = player.productionTitle;
   const culture = character.culture;
+  const patreon = getPatreonSupporter(player.username);
   const levelSpan = Math.max(1, character.nextLevelExperience - character.levelExperience);
   const levelProgress = Math.max(0, Math.min(100, ((character.experience - character.levelExperience) / levelSpan) * 100));
 
@@ -188,7 +190,10 @@ export function PlayerProfile({ username }: { username: string }) {
             <div className={styles.heroCopy}>
               <div className={styles.status}><i data-online={player.online} />{player.online ? "Online på servern" : `Senast sedd ${date(player.lastSeenAt)}`}</div>
               <span className={styles.eyebrow}>Officiell spelarprofil</span>
-              <h1>{player.username}</h1>
+              <div className={styles.nameLine}>
+                <h1>{player.username}</h1>
+                {patreon && <Link href="/patreon" className={styles.patreonBadge} data-tier={patreon.tier}>{patreon.tier === "gold" ? "◆" : "♥"} {patreonTierLabel(patreon.tier)}</Link>}
+              </div>
               <p className={styles.subtitle}>{culture ? `${culture.symbol} ${culture.displayName}` : (title?.title ?? "Invånare i GameZone")}</p>
               <div className={styles.tags}>
                 <span><small>Karaktär</small>Level {character.level}</span>
@@ -302,6 +307,7 @@ export function PlayerProfile({ username }: { username: string }) {
               <div><dt>Settlement</dt><dd>{player.settlement?.name ?? "Fristående"}</dd></div>
               <div><dt>Roll</dt><dd>{roleLabel(player.settlement?.role)}</dd></div>
               <div><dt>Företag</dt><dd>{player.company?.name ?? "Inget"}</dd></div>
+              {patreon && <div><dt>Patreon</dt><dd><Link href="/patreon" className={styles.supporterFact} data-tier={patreon.tier}>{patreonTierLabel(patreon.tier)}</Link></dd></div>}
             </dl>
           </section>
 

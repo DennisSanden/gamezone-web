@@ -16,7 +16,7 @@ export function MarketWatchDashboard() {
     const [error, setError] = useState<string | null>(null);
     const [query, setQuery] = useState("");
     const [category, setCategory] = useState("Alla");
-    const [sort, setSort] = useState<SortKey>("shortage");
+    const [sort, setSort] = useState<SortKey>("soldUnits");
     const [onlyShortage, setOnlyShortage] = useState(false);
     const [selectedItem, setSelectedItem] = useState<MarketItem | null>(null);
     const [companySales, setCompanySales] = useState<MarketCompanySale[]>([]);

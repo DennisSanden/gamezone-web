@@ -81,12 +81,21 @@ export default function SettlementUpgradePanel({
                                             key={material.id}
                                         >
                                             <div className={styles.materialIdentity}>
-                                                <span
-                                                    className={styles.materialEmoji}
-                                                    aria-hidden="true"
-                                                >
-                                                    {material.icon}
-                                                </span>
+                                                {material.id === "stone-bricks" ? (
+                                                    <img
+                                                        className={styles.materialBlockIcon}
+                                                        src="/minecraft/blocks/stone_bricks.png"
+                                                        alt=""
+                                                        aria-hidden="true"
+                                                    />
+                                                ) : (
+                                                    <span
+                                                        className={styles.materialEmoji}
+                                                        aria-hidden="true"
+                                                    >
+                                                        {material.icon}
+                                                    </span>
+                                                )}
 
                                                 <span className={styles.materialName}>
                                                     {material.name}

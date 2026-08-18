@@ -93,15 +93,10 @@ export async function HomeDashboard() {
           <span>Spela nu</span>
         </a>
 
-        <a
-          href="https://www.patreon.com/16532203/join"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.patreonButton}
-        >
+        <Link href="/patreon" className={styles.patreonButton}>
           <span className={styles.patreonButtonIcon}>♥</span>
           <span>Stötta oss på Patreon</span>
-        </a>
+        </Link>
       </div>
       <div className={styles.playMeta}>
         <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
@@ -115,8 +110,8 @@ export async function HomeDashboard() {
 
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
-      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={`${styles.quickCard} ${styles.featuredCard}`}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
-      <Link href="/companies" className={styles.quickCard}><Icon name="sales"/><strong>Företag</strong><small>Se sortiment och försäljningshistorik</small></Link>
+      <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.quickCard}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
+      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
