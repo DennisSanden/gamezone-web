@@ -30,7 +30,9 @@ export function CompanyProfile({ companyId }: { companyId: string }) {
   if (!company) return <div className={styles.profileState}>Hämtar företagets marknadsprofil...</div>;
 
   const history = company.salesHistory ?? company.topProducts ?? [];
-  const revenue = company.totalRevenue ?? company.totalSales ?? 0;
+  const salesRevenue = company.totalSales ?? 0;
+  const rentalRevenue = company.rentalRevenue ?? 0;
+  const revenue = company.totalRevenue ?? (salesRevenue + rentalRevenue);
   const created = company.createdAt ? new Date(company.createdAt).toLocaleDateString("sv-SE") : "Okänt";
 
   return <div className={styles.profilePage}>
@@ -41,7 +43,7 @@ export function CompanyProfile({ companyId }: { companyId: string }) {
           <div className={styles.bigLogo}>{nameOf(company).slice(0, 2).toUpperCase()}</div>
           <div><span className={styles.eyebrow}>{company.category ?? "GAMEZONE FÖRETAG"}</span><h1>{nameOf(company)}</h1><p>{company.description || "Handel, entreprenörskap och tillväxt i GameZones levande ekonomi."}</p></div>
         </div>
-        <div className={styles.profileMetrics}><div><strong>{number.format(revenue)}</strong><span>Coins omsatt</span></div><div><strong>{company.transactionCount ?? 0}</strong><span>genomförda köp</span></div><div><strong>{sortedActive.length}</strong><span>varor till salu</span></div><div><strong>{company.licenseLevel ?? 1}</strong><span>licensnivå</span></div></div>
+        <div className={styles.profileMetrics}><div><strong>{number.format(salesRevenue)}</strong><span>försäljning</span></div><div><strong>{number.format(rentalRevenue)}</strong><span>hyresintäkter</span></div><div><strong>{number.format(revenue)}</strong><span>total omsättning</span></div><div><strong>{company.transactionCount ?? 0}</strong><span>genomförda köp</span></div></div>
       </div>
     </section>
 

@@ -29,6 +29,7 @@ export type Company = {
   members?: CompanyMember[];
   balance?: number | null;
   totalSales?: number;
+  rentalRevenue?: number;
   totalRevenue?: number;
   transactionCount?: number;
   productsForSale?: CompanyProduct[];
