@@ -2,27 +2,29 @@ import Link from "next/link";
 import { PATREON_SUPPORTERS, patreonTierLabel } from "@/lib/patreon-supporters";
 import styles from "./page.module.css";
 
+const gamezoneImages = [
+  { src: "/images/hero-background.jpg", alt: "GameZone-världen", label: "Världen växer" },
+  { src: "/images/wiki.png", alt: "GameZone Wiki", label: "Nya system & guider" },
+  { src: "/images/leaderboard.png", alt: "GameZone Leaderboards", label: "Tävling & historia" },
+];
+
 export default function PatreonPage() {
   const gold = PATREON_SUPPORTERS.filter((supporter) => supporter.tier === "gold");
   const supporters = PATREON_SUPPORTERS.filter((supporter) => supporter.tier === "supporter");
+  const allSupporters = [...gold, ...supporters];
 
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.heroPixels} aria-hidden="true">
-          <span className={styles.pixelOne} />
-          <span className={styles.pixelTwo} />
-          <span className={styles.pixelThree} />
-          <span className={styles.pixelFour} />
-        </div>
-
+        <img className={styles.heroBackground} src="/images/hero-background.jpg" alt="" />
+        <div className={styles.heroShade} />
         <div className={styles.heroInner}>
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}>GAMEZONE SUPPORTERS</span>
-            <h1>Ni gör GameZone <em>större.</em></h1>
+            <h1>Ni håller <span>världen</span> vid liv.</h1>
             <p>
-              Servern är gratis att spela, men inte gratis att driva. Våra supporters hjälper till att hålla världen online,
-              utvecklingen rullande och nästa stora idé möjlig.
+              GameZone är gratis att spela. Supporters hjälper oss att betala servern, utveckla nya system
+              och fortsätta bygga vidare på världen tillsammans.
             </p>
             <div className={styles.heroActions}>
               <a href="https://www.patreon.com/16532203/join" target="_blank" rel="noreferrer" className={styles.primary}>
@@ -32,38 +34,63 @@ export default function PatreonPage() {
             </div>
           </div>
 
-          <div className={styles.heroCard}>
-            <div className={styles.heroBadge}>TACK!</div>
-            <div className={styles.heroFaces}>
-              {[...gold, ...supporters].slice(0, 8).map((supporter, index) => (
+          <div className={styles.heroVisual}>
+            <div className={styles.worldFrame}>
+              <img src="/images/hero-background.jpg" alt="GameZone Minecraft-värld" />
+              <div className={styles.worldLabel}>BYGGT AV COMMUNITYN</div>
+            </div>
+            <div className={styles.faceCloud}>
+              {allSupporters.slice(0, 10).map((supporter, index) => (
                 <img
                   key={supporter.minecraftUsername}
-                  src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/64`}
-                  alt=""
-                  style={{ zIndex: 10 - index }}
+                  src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/80`}
+                  alt={supporter.minecraftUsername}
+                  style={{ transform: `rotate(${index % 2 === 0 ? -4 : 4}deg)` }}
                 />
               ))}
             </div>
-            <strong>{PATREON_SUPPORTERS.length} personer stöttar GameZone</strong>
-            <span>och får en permanent plats här på sidan.</span>
+            <div className={styles.totalBadge}>
+              <strong>{PATREON_SUPPORTERS.length}</strong>
+              <span>supporters</span>
+            </div>
           </div>
         </div>
       </section>
 
       <main className={styles.content}>
-        <section className={styles.thankYou}>
-          <div className={styles.thankIcon}>♥</div>
+        <section className={styles.introStrip}>
           <div>
-            <span className={styles.eyebrow}>TILL ER SOM STÖTTAR</span>
-            <h2>På riktigt, tack.</h2>
-            <p>
-              Patreon ska inte köpa makt på servern. Det ska visa vilka som valt att hjälpa projektet framåt.
-              Därför får supporters synlighet, status och lite extra kärlek, utan att gameplay blir pay to win.
-            </p>
+            <img src="/minecraft/items/nether_star.png" alt="" />
+            <strong>Ni gör mer möjligt</strong>
+            <span>Serverkostnader, utveckling, events och nya idéer.</span>
           </div>
-          <div className={styles.miniStats}>
-            <div><strong>{gold.length}</strong><span>Guldsupporters</span></div>
-            <div><strong>{supporters.length}</strong><span>Supporters</span></div>
+          <div>
+            <img src="/minecraft/items/diamond.png" alt="" />
+            <strong>Status, inte makt</strong>
+            <span>Supporterstatus syns, men gameplay förblir rättvist.</span>
+          </div>
+          <div>
+            <img src="/minecraft/items/golden_apple.png" alt="" />
+            <strong>En del av historien</strong>
+            <span>Ditt namn och din profil får en permanent plats här.</span>
+          </div>
+        </section>
+
+        <section className={styles.visualSection}>
+          <div className={styles.visualHeading}>
+            <div>
+              <span className={styles.eyebrow}>DET HÄR HJÄLPER NI OSS BYGGA</span>
+              <h2>Mer än bara en server.</h2>
+            </div>
+            <p>Världen, systemen och tävlingen växer hela tiden. Supporten gör att vi kan fortsätta trycka framåt.</p>
+          </div>
+          <div className={styles.imageGrid}>
+            {gamezoneImages.map((image, index) => (
+              <figure className={index === 0 ? styles.imageCardLarge : styles.imageCard} key={image.src}>
+                <img src={image.src} alt={image.alt} />
+                <figcaption>{image.label}</figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 
@@ -74,20 +101,18 @@ export default function PatreonPage() {
               <h2>Hall of Gold</h2>
               <p>De som gått ett steg längre och stöttar GameZone på högsta nivån.</p>
             </div>
-            <div className={styles.goldCount}>{gold.length}</div>
+            <div className={styles.sectionIcon}><img src="/minecraft/items/golden_apple.png" alt="" /></div>
           </div>
 
           <div className={styles.goldGrid}>
             {gold.map((supporter) => (
-              <Link
-                href={`/spelare/${encodeURIComponent(supporter.minecraftUsername)}`}
-                className={styles.goldCard}
-                key={supporter.minecraftUsername}
-              >
-                <div className={styles.crown}>◆</div>
-                <img src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/96`} alt="" />
+              <Link href={`/spelare/${encodeURIComponent(supporter.minecraftUsername)}`} className={styles.goldCard} key={supporter.minecraftUsername}>
+                <div className={styles.avatarWrap}>
+                  <img src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/112`} alt={supporter.minecraftUsername} />
+                  <span>◆</span>
+                </div>
                 <strong>{supporter.displayName ?? supporter.minecraftUsername}</strong>
-                <span>{patreonTierLabel(supporter.tier)}</span>
+                <small>{patreonTierLabel(supporter.tier)}</small>
               </Link>
             ))}
           </div>
@@ -100,17 +125,13 @@ export default function PatreonPage() {
               <h2>Supporter Wall</h2>
               <p>Spelarna som hjälper oss fortsätta bygga servern månad efter månad.</p>
             </div>
-            <div className={styles.supporterCount}>{supporters.length}</div>
+            <div className={styles.sectionIcon}><img src="/minecraft/items/emerald.png" alt="" /></div>
           </div>
 
           <div className={styles.supporterGrid}>
             {supporters.map((supporter) => (
-              <Link
-                href={`/spelare/${encodeURIComponent(supporter.minecraftUsername)}`}
-                className={styles.supporterCard}
-                key={supporter.minecraftUsername}
-              >
-                <img src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/64`} alt="" />
+              <Link href={`/spelare/${encodeURIComponent(supporter.minecraftUsername)}`} className={styles.supporterCard} key={supporter.minecraftUsername}>
+                <img src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/80`} alt={supporter.minecraftUsername} />
                 <div>
                   <strong>{supporter.displayName ?? supporter.minecraftUsername}</strong>
                   <span>{patreonTierLabel(supporter.tier)}</span>
@@ -121,22 +142,21 @@ export default function PatreonPage() {
           </div>
         </section>
 
-        <section className={styles.perks}>
-          <article>
-            <div>★</div>
-            <strong>Syns på profilen</strong>
-            <span>Supporterstatus visas direkt på din spelarprofil.</span>
-          </article>
-          <article>
-            <div>♥</div>
-            <strong>Plats på väggen</strong>
-            <span>Ditt namn blir en permanent del av supportersidan.</span>
-          </article>
-          <article>
-            <div>◆</div>
-            <strong>Utan pay to win</strong>
-            <span>Status och uppskattning, inte köpta gameplayfördelar.</span>
-          </article>
+        <section className={styles.finalCta}>
+          <div className={styles.ctaArt}>
+            <img src="/brand/gamezonelogo.png" alt="GameZone" />
+            <div className={styles.ctaHeads}>
+              {allSupporters.slice(0, 7).map((supporter) => (
+                <img key={supporter.minecraftUsername} src={`https://mc-heads.net/avatar/${encodeURIComponent(supporter.minecraftUsername)}/64`} alt="" />
+              ))}
+            </div>
+          </div>
+          <div>
+            <span className={styles.eyebrow}>VILL DU VARA MED?</span>
+            <h2>Hjälp oss bygga nästa kapitel.</h2>
+            <p>Du behöver inte stötta för att spela. Men de som gör det får vårt väldigt synliga tack.</p>
+            <a href="https://www.patreon.com/16532203/join" target="_blank" rel="noreferrer" className={styles.primary}>♥ Bli supporter</a>
+          </div>
         </section>
 
         <section className={styles.supportNotice}>
