@@ -80,8 +80,13 @@ export async function HomeDashboard() {
       <div className={styles.heroOverlay}/>
       <div className={styles.heroInner}>
         <div className={styles.heroCopy}>
-          <h1><span>Bygg mer än en bas.</span><span>Bygg ett <em>rike.</em></span></h1>
-          <p className={styles.intro}>GameZone är en svensk Minecraft-server där spelare skapar städer, driver ekonomi och formar historien tillsammans.</p>
+          <div className={styles.relaunchBadge}>GAMEZONE 1.0</div>
+          <h1><span>Vi bygger om världen.</span><span>Vi är tillbaka <em>28 augusti.</em></span></h1>
+          <p className={styles.intro}>En helt ny värld väntar. GameZone 1.0 öppnar den 28 augusti kl. 19:00.</p>
+          <div className={styles.relaunchTime}>
+            <strong>28 AUGUSTI</strong>
+            <span>19:00</span>
+          </div>
         </div>
       </div>
     </section>
@@ -89,8 +94,8 @@ export async function HomeDashboard() {
     <section className={styles.playSection} aria-label="Spela och stötta GameZone">
       <div className={styles.heroActions}>
         <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
-          <span className={styles.playButtonIcon}>▶</span>
-          <span>Spela nu</span>
+          <span className={styles.playButtonIcon}>↗</span>
+          <span>Följ återkomsten på Discord</span>
         </a>
 
         <Link href="/patreon" className={styles.patreonButton}>
@@ -100,9 +105,9 @@ export async function HomeDashboard() {
       </div>
       <div className={styles.playMeta}>
         <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
-        <strong>{serverStatus.online ? `${serverStatus.playersOnline} / ${serverStatus.playersMax || 40} online` : "Servern offline"}</strong>
+        <strong>Servern är under uppbyggnad</strong>
         <span>•</span>
-        <span>Java 26.1.2</span>
+        <span>Öppnar 28 augusti kl. 19:00</span>
         <span>•</span>
         <span>play.gamezonemc.se</span>
       </div>
