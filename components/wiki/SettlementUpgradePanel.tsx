@@ -5,8 +5,6 @@ import {
     type SettlementUpgradeKey,
 } from "./settlement-upgrades";
 
-import { getSettlementBuildingHrefByRequirement } from "./settlement-buildings";
-
 import styles from "./SettlementUpgradePanel.module.css";
 
 type SettlementUpgradePanelProps = {
@@ -23,7 +21,6 @@ export default function SettlementUpgradePanel({
     }
 
     const hasMaterials = upgrade.upgradeCost.materials.length > 0;
-    const hasRequiredBuildings = upgrade.requiredCurrentBuildings.length > 0;
 
     return (
         <section
@@ -83,7 +80,10 @@ export default function SettlementUpgradePanel({
                                         >
                                             <div className={styles.materialIdentity}>
                                                 {material.texture ? (
-                                                    <span className={styles.materialEmoji} aria-hidden="true">
+                                                    <span
+                                                        className={styles.materialEmoji}
+                                                        aria-hidden="true"
+                                                    >
                                                         <img
                                                             className={styles.materialBlockIcon}
                                                             src={material.texture}
@@ -109,41 +109,6 @@ export default function SettlementUpgradePanel({
                                             </strong>
                                         </div>
                                     ))}
-                                </div>
-                            </div>
-                        )}
-
-                        </div>
-
-                        {hasRequiredBuildings && (
-                            <div className={styles.progressionRequirement}>
-                                <span className={styles.progressionEyebrow}>Byggnadskrav</span>
-                                <h3>Färdigställ innan uppgradering</h3>
-                                <div className={styles.requiredBuildingList}>
-                                    {upgrade.requiredCurrentBuildings.map((building) => {
-                                        const href = getSettlementBuildingHrefByRequirement(building);
-
-                                        if (!href) {
-                                            return (
-                                                <span className={styles.requiredBuilding} key={building}>
-                                                    {building}
-                                                </span>
-                                            );
-                                        }
-
-                                        return (
-                                            <Link
-                                                className={`${styles.requiredBuilding} ${styles.requiredBuildingLink}`}
-                                                href={href}
-                                                key={building}
-                                            >
-                                                <span>{building}</span>
-                                                <span className={styles.requiredBuildingArrow} aria-hidden="true">
-                                                    →
-                                                </span>
-                                            </Link>
-                                        );
-                                    })}
                                 </div>
                             </div>
                         )}

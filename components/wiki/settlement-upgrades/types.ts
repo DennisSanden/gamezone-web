@@ -83,4 +83,10 @@ export type SettlementUpgrade = {
     };
 
     requiredCurrentBuildings: string[];
+
+    // Legacy fields kept optional so older upgrade definition files
+    // continue to type-check. The current 1-50 progression does not
+    // use buildings as level requirements.
+    buildings?: import("../settlement-buildings").SettlementBuilding[];
+    footerText?: string;
 };
