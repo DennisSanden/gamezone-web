@@ -28,6 +28,9 @@ Settlementbyggnader är riktiga konstruktioner i världen. Licensen är bara sta
 
 Byggnader får byggas i **valfri stil och valfria material**. Pluginet kontrollerar funktion, yta, väggar, tak, höjd och specialkrav, inte estetik.
 
+> [!IMPORTANT]
+> Specialkraven i byggnadstabellerna nedan följer **Engine-validatorn**. Bara block och entiteter som faktiskt kontrolleras av pluginet listas som krav.
+
 ## Grundregler
 
 Alla byggnader måste:

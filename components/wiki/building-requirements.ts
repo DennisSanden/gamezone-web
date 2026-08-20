@@ -98,9 +98,7 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
     stall: [
         item("hay_block", "Hay Bale", 32),
         item("barrel", "Barrel", 8),
-        item("oak_fence", "Fence, valfri träsort", 16),
-        item("oak_fence_gate", "Fence Gate, valfri träsort", 8),
-        item("cauldron", "Water Cauldron", 4),
+        item("water_cauldron", "Water Cauldron", 4),
     ],
     kontor: [
         item("chiseled_bookshelf", "Chiseled Bookshelf", 8),
@@ -112,7 +110,6 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
     kyrka: [
         item("bell", "Bell", 2),
         item("candle", "Candle", 64),
-        item("oak_stairs", "Trappblock, valfri sort", 40),
         item("lantern", "Lantern", 16),
         item("lectern", "Lectern", 4),
     ],
@@ -138,12 +135,10 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
     radhus: [
         item("lectern", "Lectern", 8),
         item("bell", "Bell", 8),
-        item("white_banner", "Banner, valfri färg", 16),
         item("lantern", "Lantern", 32),
     ],
     slott: [
         item("beacon", "Beacon", 4),
-        item("white_banner", "Banner, valfri färg", 16),
         item("bell", "Bell", 8),
         item("lantern", "Lantern", 32),
         item("vault", "Vault", 4),
