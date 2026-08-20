@@ -3,9 +3,9 @@ title: "Produktion"
 description: "Översikt över GameZones sju kategorier."
 category: "Produktionskategorier"
 order: 0
-version: "1.2"
+version: "1.3"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-16"
+updatedAt: "2026-08-20"
 infoboxTitle: "Produktion"
 infobox:
   coinregel: "Endast vald kategori"
@@ -23,10 +23,10 @@ När ett settlement skapas med `/settlement create <namn>` öppnas en meny där 
 
 - **Gruvdrift**, mineraler, malm och skatter
 - **Jordbruk**, grödor och odling
-- **Boskap**, djurhållning och resurser från djur
+- **Boskap**, djurhållning och resurser från djur, +100% spelardödade djurdrops och +15% hastighet på hästar
 - **Skogsbruk**, stockar och träresurser
 - **Byggmaterial**, förädlade block och byggresurser
-- **Fiske**, fisk och resurser från fiske
+- **Fiske**, fisk och resurser från fiske, +15% rörelsehastighet i vatten och +15% längre andetag under vatten
 - **Alkemi**, bryggning och alkemiska resurser
 
 Läs sidan för varje kategori innan ni väljer. Kategorin påverkar vilka aktiviteter som kan ge Coins.

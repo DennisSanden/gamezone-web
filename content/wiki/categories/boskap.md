@@ -3,14 +3,15 @@ title: "Boskap"
 description: "Djurhållning, kött, ull, läder och ägg."
 category: "Produktionskategorier"
 order: 3
-version: "1.2"
+version: "1.3"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-13"
+updatedAt: "2026-08-20"
 infoboxTitle: "Boskap"
 infobox:
   coinregel: "Endast vald kategori"
   automation: "Ger inga Coins"
   djurdrops: "+100% vid spelardöd"
+  hastbonus: "+15% på hästar"
 ---
 
 ## Vad är Boskap?
@@ -31,6 +32,15 @@ Bonusen gäller **kyckling, ko, mooshroom, gris, får och kanin**. Den applicera
 
 > [!TIP]
 > Boskap är begränsat av hur många djur som får finnas i samma chunk. Den dubbla droppen gör därför varje djur mer värdefullt utan att gården behöver innehålla fler levande entiteter.
+
+
+## Bonus på hästar
+
+Alla spelare som tillhör ett settlement med kategorin **Boskap** får **+15% hastighet när de rider häst**.
+
+Bonusen ökar hästens egen rörelsehastighet med 15%, vilket betyder att hästar fortfarande behåller sina individuella skillnader. En snabb häst blir alltså fortfarande snabbare än en långsam häst.
+
+Bonusen gäller överallt och kräver inte att spelaren rider inom settlementets territorium.
 
 
 ## Items som ingår
