@@ -5,7 +5,7 @@ category: "Settlements"
 order: 1
 version: "1.4"
 engineVersion: "Settlement Foundation"
-updatedAt: "2026-08-06"
+updatedAt: "2026-08-20"
 infoboxTitle: "Skapa settlement"
 infobox:
   kommando: "/settlement create <namn>"
@@ -15,7 +15,9 @@ infobox:
 
 ## Skapa ett settlement
 
-Ett settlement är en spelarstyrd bosättning med medlemmar, gemensam ekonomi, skyddad mark och möjlighet att utvecklas genom 15 nivåer.
+Ett settlement är en spelarstyrd bosättning med medlemmar, gemensam ekonomi, skyddad mark och möjlighet att utvecklas genom 50 nivåer.
+
+Se hela progressionen och samtliga uppgraderingskrav under [Settlement Upgrade](/wiki/settlements/settlement-upgrades).
 
 Skapa ett settlement genom att skriva:
 
