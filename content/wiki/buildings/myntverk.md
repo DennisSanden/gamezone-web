@@ -18,6 +18,8 @@ infobox:
 
 **Myntverk** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Myntverk](/wiki/buildings/myntverk.png)
+
 ## Bonus
 
 - Betalar 50 000 Coins per dag direkt till settlementets stadskassa.

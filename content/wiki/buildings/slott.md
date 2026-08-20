@@ -18,6 +18,8 @@ infobox:
 
 **Slott** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Slott](/wiki/buildings/slott.png)
+
 ## Bonus
 
 - Sänker Kingens ticketvärde i krig med 4, från 10 till 6 tickets.

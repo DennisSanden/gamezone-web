@@ -18,6 +18,8 @@ infobox:
 
 **Reliktempel** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Reliktempel](/wiki/buildings/reliktempel.png)
+
 ## Bonus
 
 - Låser upp settlementets relikbonusar för reliker som förvaras i settlementets inventory chests.

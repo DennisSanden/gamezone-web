@@ -18,6 +18,8 @@ infobox:
 
 **Rådhus** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Rådhus](/wiki/buildings/radhus.png)
+
 ## Bonus
 
 - Låser upp två extra Lord-platser, från 2 till totalt 4 Lords.

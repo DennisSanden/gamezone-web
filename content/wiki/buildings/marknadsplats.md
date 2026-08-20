@@ -18,6 +18,8 @@ infobox:
 
 **Marknadsplats** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Marknadsplats](/wiki/buildings/marknadsplats.png)
+
 ## Bonus
 
 - Sänker Server TAX med 10 procentenheter för företag i settlementet.

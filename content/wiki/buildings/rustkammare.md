@@ -18,6 +18,8 @@ infobox:
 
 **Rustkammare** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Rustkammare](/wiki/buildings/rustkammare.png)
+
 ## Bonus
 
 - Höjer settlementets grundtickets i krig från 100 till 110.

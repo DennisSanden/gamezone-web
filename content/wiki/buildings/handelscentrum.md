@@ -18,6 +18,8 @@ infobox:
 
 **Handelscentrum** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Handelscentrum](/wiki/buildings/handelscentrum.png)
+
 ## Bonus
 
 - Låser upp företag, företagslicenser och företagshandel för settlementets invånare.

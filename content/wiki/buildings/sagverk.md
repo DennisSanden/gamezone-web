@@ -18,6 +18,8 @@ infobox:
 
 **Sågverk** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Sågverk](/wiki/buildings/sagverk.png)
+
 ## Bonus
 
 - Ger +5 % produktionsbonus inom settlementets valda kategori, **Skogsbruk**.

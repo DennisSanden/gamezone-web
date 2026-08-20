@@ -18,6 +18,8 @@ infobox:
 
 **Turistbyrå** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Turistbyrå](/wiki/buildings/turistbyra.png)
+
 ## Bonus
 
 - Första besöket i en ny stad med aktiv Turistbyrå ger besökaren 5 000 Coins.

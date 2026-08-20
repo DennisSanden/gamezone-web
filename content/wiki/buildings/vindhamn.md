@@ -18,6 +18,8 @@ infobox:
 
 **Vindhamn** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Vindhamn](/wiki/buildings/vindhamn.png)
+
 ## Bonus
 
 - Låser upp Elytra för settlementets medlemmar.

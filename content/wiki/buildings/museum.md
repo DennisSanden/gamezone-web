@@ -18,6 +18,8 @@ infobox:
 
 **Museum** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Museum](/wiki/buildings/museum.png)
+
 ## Bonus
 
 - Höjer settlementets belöning för ett nytt unikt turistbesök från 10 000 till 100 000 Coins.

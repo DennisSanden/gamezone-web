@@ -18,6 +18,8 @@ infobox:
 
 **Stall** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Stall](/wiki/buildings/stall.png)
+
 ## Bonus
 
 - Ger +25 % hastighet på hästar för settlementets medlemmar.

@@ -18,6 +18,8 @@ infobox:
 
 **Stenhuggeri** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Stenhuggeri](/wiki/buildings/stenhuggeri.png)
+
 ## Bonus
 
 - Ger +5 % produktionsbonus inom settlementets valda kategori, **Byggmaterial**.

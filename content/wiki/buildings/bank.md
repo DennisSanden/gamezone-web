@@ -18,6 +18,8 @@ infobox:
 
 **Bank** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Bank](/wiki/buildings/bank.png)
+
 ## Bonus
 
 - Låser upp detaljerad settlementstatistik och den utökade ekonomiska översikten.

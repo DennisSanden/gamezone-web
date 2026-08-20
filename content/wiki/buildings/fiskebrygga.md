@@ -18,6 +18,8 @@ infobox:
 
 **Fiskebrygga** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Fiskebrygga](/wiki/buildings/fiskebrygga.png)
+
 ## Bonus
 
 - Ger +5 % produktionsbonus inom settlementets valda kategori, **Fiske**.

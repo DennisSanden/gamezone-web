@@ -18,6 +18,8 @@ infobox:
 
 **Kyrka** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Kyrka](/wiki/buildings/kyrka.png)
+
 ## Bonus
 
 - Ger +20 % produktionsbonus.

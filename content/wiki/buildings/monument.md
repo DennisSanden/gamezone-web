@@ -13,6 +13,8 @@ infobox:
 
 ## Status
 
+![Monument](/wiki/buildings/monument.png)
+
 **Monument ingår inte i den aktuella Building System 1.0-progressionskedjan.**
 
 Den nuvarande byggnadsprogressionen använder de byggnader som listas på sidan [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).

@@ -18,6 +18,8 @@ infobox:
 
 **Myntförvaring** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Myntförvaring](/wiki/buildings/myntforvaring.png)
+
 ## Bonus
 
 - Sänker stadskassans transaktionsavgift från 7,5 % till 2,5 %.

@@ -18,6 +18,8 @@ infobox:
 
 **Laboratorium** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Laboratorium](/wiki/buildings/laboratorium.png)
+
 ## Bonus
 
 - Låser upp alkemi.

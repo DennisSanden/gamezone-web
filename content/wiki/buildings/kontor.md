@@ -18,6 +18,8 @@ infobox:
 
 **Kontor** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
+![Kontor](/wiki/buildings/kontor.png)
+
 ## Bonus
 
 - Varje företag i settlementet får 3 extra Shopping Chests.
