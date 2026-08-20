@@ -4,7 +4,6 @@ import {
     getSettlementUpgrade,
     type SettlementUpgradeKey,
 } from "./settlement-upgrades";
-import { getSettlementBuildingHrefByRequirement } from "./settlement-buildings";
 
 import styles from "./SettlementUpgradePanel.module.css";
 
@@ -22,7 +21,6 @@ export default function SettlementUpgradePanel({
     }
 
     const hasMaterials = upgrade.upgradeCost.materials.length > 0;
-    const hasRequiredBuildings = upgrade.requiredCurrentBuildings.length > 0;
 
     return (
         <section
@@ -81,13 +79,14 @@ export default function SettlementUpgradePanel({
                                             key={material.id}
                                         >
                                             <div className={styles.materialIdentity}>
-                                                {material.id === "stone-bricks" ? (
-                                                    <img
-                                                        className={styles.materialBlockIcon}
-                                                        src="/minecraft/blocks/stone_bricks.png"
-                                                        alt=""
-                                                        aria-hidden="true"
-                                                    />
+                                                {material.texture ? (
+                                                    <span className={styles.materialEmoji} aria-hidden="true">
+                                                        <img
+                                                            className={styles.materialBlockIcon}
+                                                            src={material.texture}
+                                                            alt=""
+                                                        />
+                                                    </span>
                                                 ) : (
                                                     <span
                                                         className={styles.materialEmoji}

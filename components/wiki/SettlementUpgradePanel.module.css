@@ -203,8 +203,8 @@
 .upgradeCost {
     display: grid;
     grid-template-columns:
-        minmax(170px, 0.7fr)
-        minmax(0, 2fr);
+        minmax(170px, 0.65fr)
+        minmax(0, 2.35fr);
     gap: 13px;
     margin-top: 17px;
 }

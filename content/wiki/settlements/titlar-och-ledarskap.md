@@ -3,9 +3,9 @@ title: "Titlar och ledarskap"
 description: "King, upp till två Lords, titelbonusar och hur invånare befordras inom ett settlement."
 category: "Settlements"
 order: 3
-version: "1.0"
+version: "1.1"
 engineVersion: "Settlement Titles"
-updatedAt: "2026-08-14"
+updatedAt: "2026-08-20"
 infoboxTitle: "Titlar"
 relatedArticles:
   - category: "settlements"
@@ -18,7 +18,7 @@ relatedArticles:
     description: "Settlementets valbara bonusar och specialiseringar."
 infobox:
   ansvariga: "King och upp till 2 Lords"
-  högstaTitelbonus: "+20 %"
+  högstaTitelbonus: "+50 %"
   betalning: "Stadskassan"
 ---
 
@@ -39,23 +39,17 @@ King och Lords kan hantera settlementets finanser, medlemmar och invånarnas tit
 
 ## Bonus för King och Lords
 
+King och Lords får **+1 % produktionsbonus per settlementnivå**. Bonusen växer alltså tillsammans med settlementet och når maximalt **+50 % på settlementnivå 50**.
+
 | Settlementnivå | Produktionsbonus |
 |---:|---:|
-| 1 | +3 % |
-| 2 | +6 % |
-| 3 | +9 % |
-| 4 | +12 % |
-| 5 | +15 % |
-| 6 | +18 % |
-| 7 | +21 % |
-| 8 | +24 % |
-| 9 | +27 % |
-| 10 | +30 % |
-| 11 | +33 % |
-| 12 | +36 % |
-| 13 | +39 % |
-| 14 | +42 % |
-| 15 | +45 % |
+| 1 | +1 % |
+| 10 | +10 % |
+| 15 | +15 % |
+| 25 | +25 % |
+| 30 | +30 % |
+| 40 | +40 % |
+| 50 | +50 % |
 
 ## Befordra invånare
 

@@ -17,8 +17,6 @@ infobox:
 
 Ett settlement är en spelarstyrd bosättning med medlemmar, gemensam ekonomi, skyddad mark och möjlighet att utvecklas genom 50 nivåer.
 
-Se hela progressionen och samtliga uppgraderingskrav under [Settlement Upgrade](/wiki/settlements/settlement-upgrades).
-
 Skapa ett settlement genom att skriva:
 
 `/settlement create <namn>`

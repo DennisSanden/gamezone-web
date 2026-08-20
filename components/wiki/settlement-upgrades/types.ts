@@ -1,20 +1,53 @@
-import type { SettlementBuilding } from "../settlement-buildings";
-
 export type SettlementUpgradeKey =
-    | "enstoring-till-lager"
-    | "lager-till-by"
-    | "by-till-bosattning"
-    | "bosattning-till-samhalle"
-    | "samhalle-till-koping"
-    | "koping-till-stad"
-    | "stad-till-handelsstad"
-    | "handelsstad-till-fastning"
-    | "fastning-till-huvudstad"
-    | "huvudstad-till-grevskap"
-    | "grevskap-till-hertigdome"
-    | "hertigdome-till-nation"
-    | "nation-till-kungadome"
-    | "kungadome-till-imperium";
+    | "level-1-till-2"
+    | "level-2-till-3"
+    | "level-3-till-4"
+    | "level-4-till-5"
+    | "level-5-till-6"
+    | "level-6-till-7"
+    | "level-7-till-8"
+    | "level-8-till-9"
+    | "level-9-till-10"
+    | "level-10-till-11"
+    | "level-11-till-12"
+    | "level-12-till-13"
+    | "level-13-till-14"
+    | "level-14-till-15"
+    | "level-15-till-16"
+    | "level-16-till-17"
+    | "level-17-till-18"
+    | "level-18-till-19"
+    | "level-19-till-20"
+    | "level-20-till-21"
+    | "level-21-till-22"
+    | "level-22-till-23"
+    | "level-23-till-24"
+    | "level-24-till-25"
+    | "level-25-till-26"
+    | "level-26-till-27"
+    | "level-27-till-28"
+    | "level-28-till-29"
+    | "level-29-till-30"
+    | "level-30-till-31"
+    | "level-31-till-32"
+    | "level-32-till-33"
+    | "level-33-till-34"
+    | "level-34-till-35"
+    | "level-35-till-36"
+    | "level-36-till-37"
+    | "level-37-till-38"
+    | "level-38-till-39"
+    | "level-39-till-40"
+    | "level-40-till-41"
+    | "level-41-till-42"
+    | "level-42-till-43"
+    | "level-43-till-44"
+    | "level-44-till-45"
+    | "level-45-till-46"
+    | "level-46-till-47"
+    | "level-47-till-48"
+    | "level-48-till-49"
+    | "level-49-till-50";
 
 export type SettlementUpgradeChange = {
     label: string;
@@ -25,8 +58,9 @@ export type SettlementUpgradeChange = {
 export type SettlementUpgradeMaterial = {
     id: string;
     name: string;
-    amount: number;
+    amount: number | string;
     icon: string;
+    texture?: string;
 };
 
 export type SettlementUpgrade = {
@@ -48,9 +82,5 @@ export type SettlementUpgrade = {
         materials: SettlementUpgradeMaterial[];
     };
 
-    buildings: SettlementBuilding[];
-
     requiredCurrentBuildings: string[];
-
-    footerText: string;
 };
