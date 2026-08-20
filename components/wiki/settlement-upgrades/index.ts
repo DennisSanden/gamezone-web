@@ -463,7 +463,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "pufferfish-5", name: "Pufferfish", amount: 96, icon: "🐡", texture: "/minecraft/items/pufferfish.png" },
             { id: "copper-grate-6", name: "Copper Grate", amount: 384, icon: "◆", texture: "/minecraft/blocks/copper_grate.png" },
             { id: "blaze-rod-7", name: "Blaze Rod", amount: 48, icon: "◆", texture: "/minecraft/items/blaze_rod.png" },
-            { id: "sniffer-egg-8", name: "Sniffer Egg", amount: 1, icon: "🥚", texture: "/minecraft/items/sniffer_egg.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -532,7 +531,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 16, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
             { id: "prismarine-bricks-6", name: "Prismarine Bricks", amount: 1024, icon: "◆", texture: "/minecraft/blocks/prismarine_bricks.png" },
             { id: "phantom-membrane-7", name: "Phantom Membrane", amount: 24, icon: "◆", texture: "/minecraft/items/phantom_membrane.png" },
-            { id: "heavy-core-8", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -578,7 +576,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "cod-5", name: "Cod", amount: 512, icon: "🐟", texture: "/minecraft/items/cod.png" },
             { id: "chiseled-tuff-6", name: "Chiseled Tuff", amount: 1536, icon: "◆", texture: "/minecraft/blocks/chiseled_tuff.png" },
             { id: "potion-of-invisibility-7", name: "Potion of Invisibility", amount: 24, icon: "◆", texture: "/minecraft/items/potion.png" },
-            { id: "trident-8", name: "Trident", amount: 1, icon: "🔱", texture: "/minecraft/items/trident.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -624,7 +621,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "tropical-fish-5", name: "Tropical Fish", amount: 128, icon: "🐠", texture: "/minecraft/items/tropical_fish.png" },
             { id: "black-concrete-6", name: "Black Concrete", amount: 2048, icon: "◆", texture: "/minecraft/blocks/black_concrete.png" },
             { id: "lingering-potion-of-strength-7", name: "Lingering Potion of Strength", amount: 12, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
-            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -764,7 +760,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "cod-5", name: "Cod", amount: 768, icon: "🐟", texture: "/minecraft/items/cod.png" },
             { id: "end-stone-bricks-6", name: "End Stone Bricks", amount: 2048, icon: "◆", texture: "/minecraft/blocks/end_stone_bricks.png" },
             { id: "lingering-potion-of-healing-7", name: "Lingering Potion of Healing", amount: 16, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
-            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
             { id: "nether-star-9", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" }
             ],
         },
@@ -836,7 +831,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "prismarine-bricks-6", name: "Prismarine Bricks", amount: 2048, icon: "◆", texture: "/minecraft/blocks/prismarine_bricks.png" },
             { id: "lingering-potion-of-regeneration-7", name: "Lingering Potion of Regeneration", amount: 16, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
             { id: "recovery-compass-8", name: "Recovery Compass", amount: 1, icon: "🧭", texture: "/minecraft/items/recovery_compass_00.png" },
-            { id: "elytra-9", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -885,7 +879,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 48, icon: "🐉" },
             { id: "end-crystal-8", name: "End Crystal", amount: 4, icon: "🔮", texture: "/minecraft/items/end_crystal.png" },
             { id: "enchanted-golden-apple-9", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
-            { id: "elytra-10", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -932,8 +925,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "salmon-5", name: "Salmon", amount: 768, icon: "🐟", texture: "/minecraft/items/salmon.png" },
             { id: "copper-bulb-6", name: "Copper Bulb", amount: 768, icon: "◆", texture: "/minecraft/blocks/copper_bulb.png" },
             { id: "potion-of-regeneration-7", name: "Potion of Regeneration", amount: 48, icon: "◆", texture: "/minecraft/items/potion.png" },
-            { id: "sniffer-egg-8", name: "Sniffer Egg", amount: 1, icon: "🥚", texture: "/minecraft/items/sniffer_egg.png" },
-            { id: "heavy-core-9", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -957,7 +948,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "quartz-bricks-6", name: "Quartz Bricks", amount: 2560, icon: "◆", texture: "/minecraft/blocks/quartz_bricks.png" },
             { id: "potion-of-strength-7", name: "Potion of Strength", amount: 48, icon: "◆", texture: "/minecraft/items/potion.png" },
             { id: "goat-horn-8", name: "Goat Horn", amount: "2 olika", icon: "📯", texture: "/minecraft/items/goat_horn.png" },
-            { id: "trident-9", name: "Trident", amount: 1, icon: "🔱", texture: "/minecraft/items/trident.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -981,7 +971,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "end-stone-bricks-6", name: "End Stone Bricks", amount: 2560, icon: "◆", texture: "/minecraft/blocks/end_stone_bricks.png" },
             { id: "lingering-potion-of-healing-7", name: "Lingering Potion of Healing", amount: 24, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
             { id: "music-disc-8", name: "Music Disc", amount: "2 olika", icon: "💿", texture: "/minecraft/items/music_disc_13.png" },
-            { id: "enchanted-golden-apple-9", name: "Enchanted Golden Apple", amount: 2, icon: "🍎" }
+            { id: "enchanted-golden-apple-9", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -1005,7 +995,6 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "purpur-block-6", name: "Purpur Block", amount: 2560, icon: "◆", texture: "/minecraft/blocks/purpur_block.png" },
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 64, icon: "🐉" },
             { id: "armor-trim-template-8", name: "Armor Trim Template", amount: "3 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
-            { id: "elytra-9", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -1053,7 +1042,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "sea-lantern-6", name: "Sea Lantern", amount: 1024, icon: "◆", texture: "/minecraft/blocks/sea_lantern.png" },
             { id: "lingering-potion-of-strength-7", name: "Lingering Potion of Strength", amount: 24, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
             { id: "echo-shard-8", name: "Echo Shard", amount: 8, icon: "◆", texture: "/minecraft/items/echo_shard.png" },
-            { id: "nether-star-9", name: "Nether Star", amount: 2, icon: "⭐", texture: "/minecraft/items/nether_star.png" }
+            { id: "nether-star-9", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -1076,9 +1065,8 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "prismarine-crystals-5", name: "Prismarine Crystals", amount: 512, icon: "◆", texture: "/minecraft/items/prismarine_crystals.png" },
             { id: "black-concrete-6", name: "Black Concrete", amount: 3072, icon: "◆", texture: "/minecraft/blocks/black_concrete.png" },
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 64, icon: "🐉" },
-            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 2, icon: "🍎" },
-            { id: "heavy-core-9", name: "Heavy Core", amount: 2, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
-            { id: "elytra-10", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" }
+            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
+            { id: "heavy-core-9", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -1101,9 +1089,9 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 48, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
             { id: "copper-bulb-6", name: "Copper Bulb", amount: 1024, icon: "◆", texture: "/minecraft/blocks/copper_bulb.png" },
             { id: "lingering-potion-of-regeneration-7", name: "Lingering Potion of Regeneration", amount: 32, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
-            { id: "armor-trim-template-8", name: "Armor Trim Template", amount: "4 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
-            { id: "totem-9", name: "Totem", amount: 4, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" },
-            { id: "nether-star-10", name: "Nether Star", amount: 2, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
+            { id: "armor-trim-template-8", name: "Armor Trim Template", amount: "2 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
+            { id: "totem-9", name: "Totem", amount: 2, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" },
+            { id: "nether-star-10", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
             { id: "elytra-11", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" }
             ],
         },
@@ -1127,18 +1115,16 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 48, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
             { id: "sea-lantern-6", name: "Sea Lantern", amount: 1536, icon: "◆", texture: "/minecraft/blocks/sea_lantern.png" },
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 64, icon: "🐉" },
-            { id: "music-disc-8", name: "Music Disc", amount: "4 olika", icon: "💿", texture: "/minecraft/items/music_disc_13.png" },
-            { id: "goat-horn-9", name: "Goat Horn", amount: "2 olika", icon: "📯", texture: "/minecraft/items/goat_horn.png" },
-            { id: "armor-trim-template-10", name: "Armor Trim Template", amount: "4 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
-            { id: "sniffer-egg-11", name: "Sniffer Egg", amount: 1, icon: "🥚", texture: "/minecraft/items/sniffer_egg.png" },
-            { id: "recovery-compass-12", name: "Recovery Compass", amount: 2, icon: "🧭", texture: "/minecraft/items/recovery_compass_00.png" },
-            { id: "enchanted-golden-apple-13", name: "Enchanted Golden Apple", amount: 2, icon: "🍎" },
-            { id: "elytra-14", name: "Elytra", amount: 2, icon: "🪽", texture: "/minecraft/items/elytra.png" },
-            { id: "nether-star-15", name: "Nether Star", amount: 3, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
-            { id: "beacon-16", name: "Beacon", amount: 2, icon: "🔦", texture: "/minecraft/blocks/beacon.png" },
-            { id: "heavy-core-17", name: "Heavy Core", amount: 2, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
-            { id: "trident-18", name: "Trident", amount: 2, icon: "🔱", texture: "/minecraft/items/trident.png" },
-            { id: "totem-of-undying-19", name: "Totem of Undying", amount: 5, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" }
+            { id: "music-disc-8", name: "Music Disc", amount: "2 olika", icon: "💿", texture: "/minecraft/items/music_disc_13.png" },
+            { id: "goat-horn-9", name: "Goat Horn", amount: "1 olika", icon: "📯", texture: "/minecraft/items/goat_horn.png" },
+            { id: "armor-trim-template-10", name: "Armor Trim Template", amount: "2 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
+            { id: "recovery-compass-12", name: "Recovery Compass", amount: 1, icon: "🧭", texture: "/minecraft/items/recovery_compass_00.png" },
+            { id: "enchanted-golden-apple-13", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
+            { id: "elytra-14", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" },
+            { id: "nether-star-15", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
+            { id: "heavy-core-17", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
+            { id: "trident-18", name: "Trident", amount: 1, icon: "🔱", texture: "/minecraft/items/trident.png" },
+            { id: "totem-of-undying-19", name: "Totem of Undying", amount: 2, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" }
             ],
         },
         requiredCurrentBuildings: [],
