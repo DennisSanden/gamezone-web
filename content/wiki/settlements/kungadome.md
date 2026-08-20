@@ -1,6 +1,6 @@
 ---
 title: "Kungadöme"
-description: "Den fjortonde settlementnivån med ett enormt territorium, mycket hög Server TAX och det sista utvecklingssteget före Imperium."
+description: "Den fjortonde settlementnivån med ett enormt territorium, nivåbaserad Server TAX och det sista utvecklingssteget före Imperium."
 category: "Settlements"
 order: 23
 version: "1.0"
@@ -24,9 +24,12 @@ relatedArticles:
 
 Ett **Kungadöme** är den fjortonde settlementnivån i GameZone.
 
-På denna nivå har settlementet vuxit till ett enormt politiskt, ekonomiskt och territoriellt centrum med ett territorium på 295 block och en Server TAX.
+På denna nivå har settlementet vuxit till ett enormt politiskt, ekonomiskt och territoriellt centrum med ett territorium på 295 block och en nivåbaserad Server TAX.
 
 Kungadöme låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som det sista expansionssteget före Imperium.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -71,7 +74,7 @@ Slott ger ingen direkt produktionsbonus.
 
 Nästa nivå är **Imperium**.
 
-Imperium utökar territoriet till 300 block och höjer Server TAX till 70 procent.
+Imperium utökar territoriet till 300 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Det ordinarie återkommande avgift höjs samtidigt till 250 000 Coins.
 

@@ -24,9 +24,12 @@ relatedArticles:
 
 En **Fästning** är den nionde settlementnivån i GameZone.
 
-På denna nivå har settlementet vuxit till ett omfattande och välutvecklat samhälle med ett territorium på 200 block och en Server TAX.
+På denna nivå har settlementet vuxit till ett omfattande och välutvecklat samhälle med ett territorium på 200 block och en nivåbaserad Server TAX.
 
 Fästning låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som ett större expansionssteg inför Huvudstad och den kommande byggnaden Monument.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -67,7 +70,7 @@ Grundbonusen gäller:
 
 Nästa nivå är **Huvudstad**.
 
-Huvudstad utökar territoriet till 225 block och höjer Server TAX till 45 procent.
+Huvudstad utökar territoriet till 225 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Det ordinarie återkommande avgift höjs samtidigt till 45 000 Coins.
 

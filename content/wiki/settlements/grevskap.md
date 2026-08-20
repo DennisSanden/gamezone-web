@@ -1,6 +1,6 @@
 ---
 title: "Grevskap"
-description: "Den elfte settlementnivån med ett större territorium, högre Server TAX och fortsatt expansion mot Hertigdöme."
+description: "Den elfte settlementnivån med ett större territorium, nivåbaserad Server TAX och fortsatt expansion mot Hertigdöme."
 category: "Settlements"
 order: 20
 version: "1.0"
@@ -24,9 +24,12 @@ relatedArticles:
 
 Ett **Grevskap** är den elfte settlementnivån i GameZone.
 
-På denna nivå har settlementet vuxit till ett mycket omfattande ekonomiskt och administrativt område med ett territorium på 250 block och en Server TAX.
+På denna nivå har settlementet vuxit till ett mycket omfattande ekonomiskt och administrativt område med ett territorium på 250 block och en nivåbaserad Server TAX.
 
 Grevskap låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som ett större expansionssteg inför Hertigdöme och den kommande byggnaden Slott.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -69,7 +72,7 @@ Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar yt
 
 Nästa nivå är **Hertigdöme**.
 
-Hertigdöme utökar territoriet till 270 block och höjer Server TAX till 55 procent.
+Hertigdöme utökar territoriet till 270 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Det ordinarie återkommande avgift höjs samtidigt till 90 000 Coins.
 

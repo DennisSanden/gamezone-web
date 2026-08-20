@@ -24,9 +24,12 @@ relatedArticles:
 
 Ett **Hertigdöme** är den tolfte settlementnivån i GameZone.
 
-På denna nivå har settlementet utvecklats till ett mycket stort politiskt och territoriellt centrum med ett territorium på 270 block och en Server TAX.
+På denna nivå har settlementet utvecklats till ett mycket stort politiskt och territoriellt centrum med ett territorium på 270 block och en nivåbaserad Server TAX.
 
 Hertigdöme låser även upp bygglicensen för **Slott**, ett stort fysiskt byggprojekt som representerar settlementets politiska och territoriella utveckling.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -71,7 +74,7 @@ Slott ger ingen direkt produktionsbonus.
 
 Nästa nivå är **Nation**.
 
-Nation utökar territoriet till 285 block och höjer Server TAX till 60 procent.
+Nation utökar territoriet till 285 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Det ordinarie återkommande avgift höjs samtidigt till 125 000 Coins.
 

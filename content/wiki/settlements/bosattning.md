@@ -24,11 +24,14 @@ relatedArticles:
 
 <SettlementInfoBox settlement="bosattning" />
 
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
+
 ## Översikt
 
 **Bosättning** är den fjärde av GameZones femton settlementnivåer.
 
-På denna nivå fortsätter settlementet att utvecklas genom ett större territorium, en högre Server TAX och tillgång till Bank. Banken låser upp utökad ekonomisk statistik och ger settlementets ledning en mer detaljerad överblick över ekonomins utveckling.
+På denna nivå fortsätter settlementet att utvecklas genom ett större territorium, en nivåbaserad Server TAX och tillgång till Bank. Banken låser upp utökad ekonomisk statistik och ger settlementets ledning en mer detaljerad överblick över ekonomins utveckling.
 
 > [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka byggnader och funktioner som är tillgängliga.
 

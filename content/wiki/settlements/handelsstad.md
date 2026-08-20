@@ -25,9 +25,12 @@ relatedArticles:
 
 En **Handelsstad** är den åttonde settlementnivån i GameZone.
 
-På denna nivå har settlementet utvecklats till ett större ekonomiskt centrum med ett territorium på 175 block och en Server TAX.
+På denna nivå har settlementet utvecklats till ett större ekonomiskt centrum med ett territorium på 175 block och en nivåbaserad Server TAX.
 
 Handelsstad låser även upp bygglicensen för **Marknadsplats**. Marknadsplats har ingen egen direkt bonus i nuvarande system, men den måste byggas fysiskt och färdigställas för fortsatt progression mot Fästning.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -68,7 +71,7 @@ Grundbonusen gäller:
 
 Nästa nivå är **Fästning**.
 
-Fästning utökar territoriet till 200 block och höjer Server TAX till 40 procent.
+Fästning utökar territoriet till 200 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Det ordinarie återkommande avgift höjs samtidigt till 30 000 Coins.
 

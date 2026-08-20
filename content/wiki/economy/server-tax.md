@@ -3,12 +3,13 @@ title: "Server TAX"
 description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
 order: 4
-version: "1.1"
+version: "2.0"
 engineVersion: "Economy Engine"
-updatedAt: "2026-08-04"
+updatedAt: "2026-08-20"
 infoboxTitle: "Server TAX"
 infobox:
-  standard: "25 %"
+  startnivå: "45 %"
+  grundnivåFrån23: "25 %"
   lägsta: "0 %"
   gäller: "Företagsförsäljning"
 ---
@@ -23,53 +24,86 @@ Registrera en shopping chest genom att titta på kistan och skriva:
 
 Priset gäller per item i kistan.
 
-Grundnivån är **25 procent**. Settlementets nivå bestämmer grundskatten och företagets shopping license ger ett avdrag.
+När företag blir tillgängliga på **settlementnivå 3** börjar grundskatten på **45 procent**. Därefter sjunker grundskatten med **1 procentenhet per settlementnivå** fram till nivå 23.
 
-**Total TAX = settlementets TAX minus shopping license-avdraget.** Skatten kan aldrig bli lägre än 0 procent.
+Från **nivå 23 till nivå 50 är grundskatten 25 procent**.
+
+Företagslicensen och vissa settlementpolicies kan sedan sänka den faktiska Server TAX som företaget betalar.
+
+**Total TAX = settlementets grund-TAX minus företagslicensens avdrag minus andra aktiva TAX-reduktioner.**
+
+Server TAX kan aldrig bli lägre än **0 procent**.
 
 ## TAX efter settlementnivå
 
-| Nivå | Server TAX |
+| Settlementnivå | Grund-TAX |
 |---|---:|
 | 1 till 2 | Företag ej möjligt |
-| 3 | 25 % |
-| 4 | 23 % |
-| 5 | 21 % |
-| 6 | 20 % |
-| 7 | 18 % |
-| 8 | 17 % |
-| 9 | 16 % |
-| 10 | 15 % |
-| 11 | 14 % |
-| 12 | 13 % |
-| 13 | 12 % |
-| 14 | 11 % |
-| 15 | 10 % |
+| 3 | 45 % |
+| 4 | 44 % |
+| 5 | 43 % |
+| 6 | 42 % |
+| 7 | 41 % |
+| 8 | 40 % |
+| 9 | 39 % |
+| 10 | 38 % |
+| 11 | 37 % |
+| 12 | 36 % |
+| 13 | 35 % |
+| 14 | 34 % |
+| 15 | 33 % |
+| 16 | 32 % |
+| 17 | 31 % |
+| 18 | 30 % |
+| 19 | 29 % |
+| 20 | 28 % |
+| 21 | 27 % |
+| 22 | 26 % |
+| 23 | 25 % |
+| 24 till 50 | 25 % |
 
-## Avdrag från shopping license
+> [!INFO]
+> Settlementets grund-TAX slutar sjunka efter nivå 23. Högre settlementnivåer behåller 25 procent i grund-TAX.
+
+## Avdrag från företagslicens
 
 Företagets ägare kan öppna licensmenyn med `/company license`.
 
 | Licensnivå | Avdrag |
 |---|---:|
-| 1 | 0 % |
-| 2 | 2 % |
-| 3 | 3 % |
-| 4 | 4 % |
-| 5 | 5 % |
-| 6 | 6 % |
-| 7 | 7 % |
-| 8 | 8 % |
-| 9 | 9 % |
-| 10 | 10 % |
+| 1 | 0 procentenheter |
+| 2 | 2 procentenheter |
+| 3 | 3 procentenheter |
+| 4 | 4 procentenheter |
+| 5 | 5 procentenheter |
+| 6 | 6 procentenheter |
+| 7 | 7 procentenheter |
+| 8 | 8 procentenheter |
+| 9 | 9 procentenheter |
+| 10 | 10 procentenheter |
+
+En maxad företagslicens sänker alltså Server TAX med **10 procentenheter**.
+
+## Merchant Republic
+
+Settlementpolicyn **Merchant Republic** sänker Server TAX med ytterligare **5 procentenheter**.
+
+Reduktionen räknas tillsammans med företagslicensen. Skatten har alltid ett golv på 0 procent.
+
+Läs mer på sidan [Policies](/wiki/settlements/policies).
 
 ## Räkneexempel
 
-Ett företag utan avdrag säljer för 1 000 Coins med 25 procent TAX. Servern tar 250 Coins och företaget får 750 Coins.
+Ett företag med licensnivå 1 i ett settlement på nivå 3 har **45 procent Server TAX**. Vid en försäljning på 1 000 Coins går 450 Coins till servern och 550 Coins återstår efter Server TAX.
 
-Ett företag med shopping license nivå 6 i ett settlement på nivå 11 betalar 14 minus 6, alltså 8 procent TAX. Servern tar 80 Coins och företaget får 920 Coins.
+Ett företag med licensnivå 6 i ett settlement på nivå 11 har **37 procent grund-TAX** och **6 procentenheter licensavdrag**. Den faktiska Server TAX blir därför **31 procent**.
 
-Ett företag med shopping license nivå 10 i ett settlement på nivå 15 betalar 10 minus 10, alltså 0 procent TAX. Företaget får hela försäljningsbeloppet.
+Ett företag med licensnivå 10 i ett settlement på nivå 23 har **25 procent grund-TAX** och **10 procentenheter licensavdrag**. Den faktiska Server TAX blir **15 procent**.
+
+Om samma settlement dessutom använder **Merchant Republic** blir skatten ytterligare 5 procentenheter lägre, alltså **10 procent**.
+
+> [!IMPORTANT]
+> Procentenheter dras från skattesatsen. En reduktion på 10 procentenheter från 25 procent Server TAX ger därför 15 procent Server TAX.
 
 > [!INFO]
 > Server TAX är inte samma sak som [stadsskatt](/wiki/economy/stadskassan). Stadsskatt tas från invånarnas produktionsintäkter och går till settlementets stadskassa.

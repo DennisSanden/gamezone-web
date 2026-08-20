@@ -1,6 +1,6 @@
 ---
 title: "Imperium"
-description: "Den femtonde och högsta settlementnivån med maximalt territorium, maximal Server TAX och tillgång till Underverk."
+description: "Den femtonde och högsta settlementnivån med maximalt territorium, nivåbaserad Server TAX och tillgång till Underverk."
 category: "Settlements"
 order: 24
 version: "1.0"
@@ -24,9 +24,12 @@ relatedArticles:
 
 Ett **Imperium** är den femtonde och högsta settlementnivån i GameZone.
 
-På denna nivå har settlementet nått sin maximala politiska, ekonomiska och territoriella utveckling med ett territorium på 300 block och en Server TAX.
+På denna nivå har settlementet nått sin maximala politiska, ekonomiska och territoriella utveckling med ett territorium på 300 block och en nivåbaserad Server TAX.
 
 Imperium låser även upp bygglicensen för **Underverk**, settlementets största fysiska specialbyggnad.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 

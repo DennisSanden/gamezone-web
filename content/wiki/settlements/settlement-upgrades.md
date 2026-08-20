@@ -3,7 +3,7 @@ title: "Settlement Upgrade"
 description: "Alla 50 settlementnivåer med Coins och material som krävs för varje uppgradering."
 category: "Settlements"
 order: 2
-version: "2.1"
+version: "2.2"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-08-20"
 infoboxTitle: "Settlement Upgrade"
@@ -27,6 +27,26 @@ Settlementprogressionen består av **50 nivåer**. Varje uppgradering kräver Co
 
 > [!NOTE]
 > Alla krav måste finnas när uppgraderingen genomförs. Materialen förbrukas vid levelup. Där ett krav säger flera olika varianter, exempelvis Music Discs eller Armor Trim Templates, måste varianterna faktiskt vara olika.
+
+## Server TAX och settlementnivå
+
+Företag blir tillgängliga från **settlementnivå 3**. Då är settlementets grund-TAX **45 procent**.
+
+Från nivå 3 till nivå 23 sjunker Server TAX med **1 procentenhet för varje settlementnivå**:
+
+| Nivå | Grund-TAX |
+|---:|---:|
+| 3 | 45 % |
+| 5 | 43 % |
+| 10 | 38 % |
+| 15 | 33 % |
+| 20 | 28 % |
+| 23 | 25 % |
+| 24 till 50 | 25 % |
+
+Efter nivå 23 sjunker grundskatten inte längre. Företagslicenser och aktiva policies kan däremot sänka företagets faktiska Server TAX ytterligare.
+
+Se [Server TAX](/wiki/economy/server-tax) för hela tabellen och räkneexempel.
 
 ## Nivå 2, Läger
 

@@ -24,11 +24,14 @@ relatedArticles:
 
 <SettlementInfoBox settlement="by" />
 
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
+
 ## Översikt
 
 **By** är den tredje av GameZones femton settlementnivåer.
 
-På denna nivå blir settlementet ett etablerat samhälle med organiserad handel. Server TAX ökar ytterligare och den första samhällsbyggnaden blir tillgänglig genom Handelscentrum, vilket också låser upp möjligheten att registrera företag.
+På denna nivå blir settlementet ett etablerat samhälle med organiserad handel. Server TAX följer den nivåbaserade skattetrappan och den första samhällsbyggnaden blir tillgänglig genom Handelscentrum, vilket också låser upp möjligheten att registrera företag.
 
 > [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka byggnader och funktioner som är tillgängliga.
 

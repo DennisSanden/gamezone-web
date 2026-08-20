@@ -25,9 +25,12 @@ relatedArticles:
 
 Ett **Samhälle** är den femte settlementnivån i GameZone.
 
-På denna nivå utökas settlementets territorium och Server TAX samtidigt som produktionskategorin Alkemi får sin första tillhörande produktionsbyggnad.
+På denna nivå utökas settlementets territorium och Server TAX enligt den nivåbaserade skattetrappan samtidigt som produktionskategorin Alkemi får sin första tillhörande produktionsbyggnad.
 
 Den nya byggnaden är **Laboratorium**. När licensen har köpts och den fysiska byggnaden har färdigställts ger den settlementets aktiva medlemmar **+5 % Coins från Alkemi**. Om byggnaden senare blir skadad pausas bonusen tills den valideras igen.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 

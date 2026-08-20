@@ -78,7 +78,11 @@ Ger **+10 % produktion** så länge settlementet har högst 5 medlemmar.
 
 ### Merchant Republic
 
-Minskar settlementets **Server Tax med 5 procentenheter**.
+Minskar settlementets **Server TAX med 5 procentenheter**.
+
+Reduktionen räknas efter settlementets nivåbaserade grund-TAX och kan kombineras med företagets licensavdrag. Server TAX kan aldrig bli lägre än 0 procent.
+
+Läs hela skattetrappan på sidan [Server TAX](/wiki/economy/server-tax).
 
 ### Entrepreneurship
 

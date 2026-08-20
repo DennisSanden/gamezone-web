@@ -25,7 +25,10 @@ relatedArticles:
 
 En **Köping** är den sjätte settlementnivån i GameZone.
 
-På denna nivå växer settlementets territorium och Server TAX ytterligare. Köping låser även upp bygglicensen för **Kyrka**. När Kyrkan har byggts fysiskt och godkänts förstärker den all registrerad produktion för settlementets aktiva medlemmar.
+På denna nivå växer settlementets territorium och Server TAX enligt den nivåbaserade skattetrappan. Köping låser även upp bygglicensen för **Kyrka**. När Kyrkan har byggts fysiskt och godkänts förstärker den all registrerad produktion för settlementets aktiva medlemmar.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 

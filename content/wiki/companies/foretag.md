@@ -3,9 +3,9 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.3"
+version: "1.4"
 engineVersion: "Company"
-updatedAt: "2026-08-16"
+updatedAt: "2026-08-20"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 3 och Handelscentrum"
@@ -38,6 +38,17 @@ Företagets licens avgör hur många shopping chests företaget får registrera 
 | Nivå 9 till 10 | 15 000 000 Coins | 10 | 10 procentenheter |
 
 > [!INFO] Endast företagsägaren kan uppgradera licensen. Använd `/company license upgrade`.
+
+
+### Så påverkar licensen Server TAX
+
+Settlementets nivå bestämmer företagets **grund-TAX**. På settlementnivå 3 är den **45 procent**, därefter sjunker den med 1 procentenhet per nivå tills den når **25 procent på nivå 23**. Från nivå 23 till 50 ligger grundskatten kvar på 25 procent.
+
+Företagslicensen dras sedan från denna grundskatt. En licens på nivå 10 ger **10 procentenheters avdrag**.
+
+Exempel: ett företag med licensnivå 10 i ett settlement på nivå 23 betalar **15 procent Server TAX** innan eventuella ytterligare reduktioner från settlementpolicies.
+
+Läs hela skattetrappan på sidan [Server TAX](/wiki/economy/server-tax).
 
 ## Företagsskatt och settlementets skatteöversikt
 

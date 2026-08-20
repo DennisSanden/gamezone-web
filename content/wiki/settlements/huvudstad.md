@@ -24,9 +24,12 @@ relatedArticles:
 
 En **Huvudstad** är den tionde settlementnivån i GameZone.
 
-På denna nivå har settlementet utvecklats till ett omfattande ekonomiskt och administrativt centrum med ett territorium på 225 block och en Server TAX.
+På denna nivå har settlementet utvecklats till ett omfattande ekonomiskt och administrativt centrum med ett territorium på 225 block och en nivåbaserad Server TAX.
 
 Huvudstad låser även upp bygglicensen för **Monument**. Bonusen blir aktiv först när Monument har byggts fysiskt och godkänts.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -69,7 +72,7 @@ Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar yt
 
 Nästa nivå är **Grevskap**.
 
-Grevskap utökar territoriet till 250 block och höjer Server TAX till 50 procent.
+Grevskap utökar territoriet till 250 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Det ordinarie återkommande avgift höjs samtidigt till 65 000 Coins.
 

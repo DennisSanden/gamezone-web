@@ -3,9 +3,9 @@ title: "Stadskassan och stadsskatt"
 description: "Så fungerar settlementets gemensamma Coins, stadsskatt, skatteöversikt, insättningar, uttag och utbetalningar."
 category: "Ekonomi"
 order: 3
-version: "1.4"
+version: "1.5"
 engineVersion: "Economy Engine"
-updatedAt: "2026-08-14"
+updatedAt: "2026-08-20"
 infoboxTitle: "Stadskassan"
 infobox:
   standardSkatt: "25 %"
@@ -127,4 +127,4 @@ Läs nivåbelopp och hela modellen på sidan [Krigssystemet](/wiki/war/krigssyst
 
 Stadsskatt tas från invånarnas produktionsintäkter och går till stadskassan.
 
-Detta är inte samma sak som [Server TAX på företagshandel](/wiki/economy/server-tax). Server TAX tas när företag säljer items till andra spelare och går till servern.
+Detta är inte samma sak som [Server TAX på företagshandel](/wiki/economy/server-tax). Server TAX tas när företag säljer items till andra spelare och går till servern. Grundnivån styrs av settlementets level och kan sänkas av bland annat företagslicensen.

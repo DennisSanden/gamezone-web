@@ -1,6 +1,6 @@
 ---
 title: "Stad"
-description: "Den sjunde settlementnivån med ett större territorium, högre Server TAX och fortsatt ekonomisk expansion."
+description: "Den sjunde settlementnivån med ett större territorium, nivåbaserad Server TAX och fortsatt ekonomisk expansion."
 category: "Settlements"
 order: 16
 version: "1.0"
@@ -25,9 +25,12 @@ relatedArticles:
 
 En **Stad** är den sjunde settlementnivån i GameZone.
 
-På denna nivå har settlementet vuxit till ett större organiserat samhälle med ett territorium på 150 block och en Server TAX.
+På denna nivå har settlementet vuxit till ett större organiserat samhälle med ett territorium på 150 block och en nivåbaserad Server TAX.
 
 Stad låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som ett betydande expansionssteg inför Handelsstad och den kommande Marknadsplatsen.
+
+> [!INFO]
+> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
 
 ## Territorium
 
@@ -68,7 +71,7 @@ Grundbonusen gäller:
 
 Nästa nivå är **Handelsstad**.
 
-Handelsstad utökar territoriet till 175 block och höjer Server TAX till 35 procent.
+Handelsstad utökar territoriet till 175 block och följer den aktuella nivåbaserade Server TAX-trappan.
 
 Nivån introducerar även bygglicensen för **Marknadsplats**. Marknadsplats har **ingen egen direkt bonus i nuvarande system**, men är en fysisk byggnad i settlementets progression och måste färdigställas för att settlementet senare ska kunna avancera från Handelsstad till Fästning.
 
