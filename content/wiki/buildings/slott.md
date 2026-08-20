@@ -1,63 +1,52 @@
 ---
 title: "Slott"
-description: "Nivåkrav  Coin-kostnad och faktisk funktion för Slott."
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Slott."
 category: "Byggnader"
-order: 16
-version: "3.0"
-engineVersion: "GameZoneEngine 1.0.0-RC1"
-updatedAt: "2026-08-11"
+order: 30
+version: "4.0"
+engineVersion: "Building System 1.0"
+updatedAt: "2026-08-20"
 infoboxTitle: "Slott"
 infobox:
-  typ: "Permanent byggnadslicens"
-  kategori: "Administration"
-  nivåkrav: "Settlementnivå 12"
-  kostnad: "1 000 000 Coins"
+  typ: "Settlementbyggnad"
+  nivåkrav: "Settlementnivå 30"
+  kostnad: "5 000 000 Coins"
+  storlek: "35×35"
 ---
 
 ## Vad är Slott?
 
-**Slott** är en permanent licens som låses upp genom settlementmenyn.
+**Slott** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
-Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
+## Bonus
 
-> [!IMPORTANT]
-> Licensen ger inte längre bonusen direkt. Den fysiska byggnaden måste placeras och godkännas först.
+- Sänker Kingens ticketvärde i krig med 4, från 10 till 6 tickets.
 
 ## Krav
 
-- Settlementnivå: **12 eller högre**
-- Kostnad: **1 000 000 Coins**
-- Behörighet: **King eller Lord**
-- Fysisk storlek: **35×35, minst 20 block hög**
-- Väggar: **minst 70 %**
-- Tak: **minst 75 %**
-
-## Funktion
-
-Permanent licens och uppgraderingskrav. Ingen direkt spelbonus.
-
-> [!NOTE]
-> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
-
-## Fysisk byggnad
-
-Efter att licensen köpts ska **King eller Lord** placera byggytan i världen.
-
-```text
-/building place slott
-```
-
-Kommandot använder blocket du tittar på som byggnadens centrum. En partikelram visar hela byggytan. Ingen Lodestone eller annan permanent markör behöver finnas i byggnaden.
-
-Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek, väggar, tak, eventuellt höjdkrav samt specialkraven nedan.
+- Settlementnivå: **30 eller högre**
+- Licens: **5 000 000 Coins**
+- Fysisk storlek: **35×35**
+- Minsta höjd: **20 block**
+- Väggar: **minst 70 % täckning**
+- Tak: **minst 75 % täckning**
+- Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav
 
 <BuildingRequirementsTable building="slott" />
 
-Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
+Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
-Kontrollera bygget med:
+## Byggprocess
+
+Efter att licensen köpts placeras byggytan i världen:
+
+```text
+/building place slott
+```
+
+Kontrollera bygget när det börjar bli färdigt:
 
 ```text
 /building status
@@ -69,37 +58,27 @@ När alla krav är uppfyllda:
 /building complete
 ```
 
-Först då blir **Slott** färdigställd och dess bonus eller funktion aktiveras.
+Bonusen aktiveras först efter en godkänd slutkontroll.
 
 ## Om byggnaden skadas
 
-Färdigställda byggnader måste fortsätta uppfylla kraven. När block ändras i byggnaden väntar systemet en kort stund och kontrollerar sedan byggnaden igen.
-
-Om kraven inte längre uppfylls blir byggnaden **skadad** och bonusen pausas. Settlementets onlinespelare får en varning med vad som behöver repareras.
-
-Efter reparation kör King eller Lord:
+En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
 /building revalidate slott
 ```
 
-En godkänd kontroll återaktiverar byggnaden utan ny licens eller Coin-kostnad.
+Licensen behöver inte köpas igen.
 
 ## Flytta byggnaden
-
-En färdigställd byggnad kan flyttas utan att licensen köps igen.
 
 ```text
 /building relocate slott
 /building relocate slott confirm
 ```
 
-Bonusen pausas under flytten. Placera därefter den nya byggytan med `/building place slott` och färdigställ den som vanligt.
-
-Flytten kan ångras med:
+Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
 /building relocate cancel slott
 ```
-
-Den gamla byggnaden måste fortfarande uppfylla kraven för att kunna återaktiveras. Den gamla konstruktionen behöver inte rivas när flytten är klar, men räknas inte längre som settlementets officiella Slott.

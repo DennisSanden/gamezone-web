@@ -1,6 +1,6 @@
 {
   "title": "Byggnader",
-  "description": "Bygglicenser, fysiska byggkrav, material, bonusar, skador och flytt av settlementbyggnader.",
+  "description": "Building System 1.0, bygglicenser, fysiska krav, bonusar, skador och settlementets byggnadsprogression.",
   "order": 4,
   "icon": "buildings"
 }

@@ -1,63 +1,54 @@
 ---
 title: "Marknadsplats"
-description: "Nivåkrav  Coin-kostnad och faktisk funktion för Marknadsplats."
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Marknadsplats."
 category: "Byggnader"
-order: 14
-version: "3.0"
-engineVersion: "GameZoneEngine 1.0.0-RC1"
-updatedAt: "2026-08-11"
+order: 20
+version: "4.0"
+engineVersion: "Building System 1.0"
+updatedAt: "2026-08-20"
 infoboxTitle: "Marknadsplats"
 infobox:
-  typ: "Permanent byggnadslicens"
-  kategori: "Administration"
-  nivåkrav: "Settlementnivå 8"
-  kostnad: "150 000 Coins"
+  typ: "Settlementbyggnad"
+  nivåkrav: "Settlementnivå 20"
+  kostnad: "1 500 000 Coins"
+  storlek: "25×25"
 ---
 
 ## Vad är Marknadsplats?
 
-**Marknadsplats** är en permanent licens som låses upp genom settlementmenyn.
+**Marknadsplats** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
-Öppna `/gz menu`  välj **Settlement** och därefter **Byggnader**. Endast **King eller Lord** kan bekräfta upplåsningen.
+## Bonus
 
-> [!IMPORTANT]
-> Licensen ger inte längre bonusen direkt. Den fysiska byggnaden måste placeras och godkännas först.
+- Sänker Server TAX med 10 procentenheter för företag i settlementet.
+
+> [!NOTE]
+> Reduktionen kombineras med företagslicensen och aktiva policies. Server TAX kan aldrig bli lägre än 0 %.
 
 ## Krav
 
-- Settlementnivå: **8 eller högre**
-- Kostnad: **150 000 Coins**
-- Behörighet: **King eller Lord**
+- Settlementnivå: **20 eller högre**
+- Licens: **1 500 000 Coins**
 - Fysisk storlek: **25×25**
-- Väggar: **minst 70 %**
-- Tak: **minst 75 %**
-
-## Funktion
-
-Permanent licens. Ingen aktiv spelbonus kunde bekräftas i den granskade koden.
-
-> [!NOTE]
-> Licensen blir permanent upplåst. Om settlementet senare ligger under nivåkravet visas byggnaden som inaktiv tills rätt nivå nås igen.
-
-## Fysisk byggnad
-
-Efter att licensen köpts ska **King eller Lord** placera byggytan i världen.
-
-```text
-/building place marknadsplats
-```
-
-Kommandot använder blocket du tittar på som byggnadens centrum. En partikelram visar hela byggytan. Ingen Lodestone eller annan permanent markör behöver finnas i byggnaden.
-
-Byggnaden måste ligga helt inom settlementets territorium och uppfylla storlek, väggar, tak, eventuellt höjdkrav samt specialkraven nedan.
+- Väggar: **minst 70 % täckning**
+- Tak: **minst 75 % täckning**
+- Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav
 
 <BuildingRequirementsTable building="marknadsplats" />
 
-Det finns inga krav på vilket material väggar, golv eller tak byggs av. Settlementet får välja stil fritt.
+Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
-Kontrollera bygget med:
+## Byggprocess
+
+Efter att licensen köpts placeras byggytan i världen:
+
+```text
+/building place marknadsplats
+```
+
+Kontrollera bygget när det börjar bli färdigt:
 
 ```text
 /building status
@@ -69,37 +60,27 @@ När alla krav är uppfyllda:
 /building complete
 ```
 
-Först då blir **Marknadsplats** färdigställd och dess bonus eller funktion aktiveras.
+Bonusen aktiveras först efter en godkänd slutkontroll.
 
 ## Om byggnaden skadas
 
-Färdigställda byggnader måste fortsätta uppfylla kraven. När block ändras i byggnaden väntar systemet en kort stund och kontrollerar sedan byggnaden igen.
-
-Om kraven inte längre uppfylls blir byggnaden **skadad** och bonusen pausas. Settlementets onlinespelare får en varning med vad som behöver repareras.
-
-Efter reparation kör King eller Lord:
+En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
 /building revalidate marknadsplats
 ```
 
-En godkänd kontroll återaktiverar byggnaden utan ny licens eller Coin-kostnad.
+Licensen behöver inte köpas igen.
 
 ## Flytta byggnaden
-
-En färdigställd byggnad kan flyttas utan att licensen köps igen.
 
 ```text
 /building relocate marknadsplats
 /building relocate marknadsplats confirm
 ```
 
-Bonusen pausas under flytten. Placera därefter den nya byggytan med `/building place marknadsplats` och färdigställ den som vanligt.
-
-Flytten kan ångras med:
+Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
 /building relocate cancel marknadsplats
 ```
-
-Den gamla byggnaden måste fortfarande uppfylla kraven för att kunna återaktiveras. Den gamla konstruktionen behöver inte rivas när flytten är klar, men räknas inte längre som settlementets officiella Marknadsplats.

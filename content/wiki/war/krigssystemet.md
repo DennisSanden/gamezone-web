@@ -3,12 +3,12 @@ title: "Krigssystemet"
 description: "Så fungerar Settlement War med allianser, gemensamma tickets, PvP, fred, kapitulation och krigsskadestånd."
 category: "Krig & Diplomati"
 order: 1
-version: "3.0"
+version: "3.1"
 engineVersion: "Settlement War + Alliances"
-updatedAt: "2026-08-14"
+updatedAt: "2026-08-20"
 infoboxTitle: "Settlement War"
 infobox:
-  starttickets: "100 per sida"
+  starttickets: "100 per sida, 110 med Rustkammare"
   startasAv: "King"
   allianser: "Direkta allierade dras in automatiskt"
   griefProtection: "Alltid aktiv"
@@ -26,7 +26,7 @@ relatedArticles:
 
 Settlement War är ett organiserat krigssystem mellan **två sidor**. En sida kan bestå av ett enda settlement eller av flera settlements som dragits in genom direkta allianser.
 
-Krig avgörs med **100 gemensamma tickets per sida**. Det betyder att en allians inte får fler tickets bara för att fler settlements deltar. Alla dödsfall på samma sida belastar samma gemensamma ticketpool.
+Krig avgörs normalt med **100 gemensamma tickets per sida**. Det betyder att en allians inte får fler tickets bara för att fler settlements deltar. Alla dödsfall på samma sida belastar samma gemensamma ticketpool.
 
 > [!IMPORTANT]
 > Allianser kan förändra vilka som deltar i ett krig. Kontrollera alltid hela krigsförklaringen innan du bekräftar den.
@@ -145,10 +145,17 @@ När en deltagande spelare dör förlorar spelarens sida tickets beroende på sp
 | Member | 1 |
 | Lord | 5 |
 | King | 10 |
+| King med aktivt Slott | 6 |
 
 Om en spelare loggar ut under ett aktivt krig räknas det som en död och sidan förlorar samma antal tickets som spelarens roll är värd. Systemet skyddar samtidigt mot att samma death och direkt efterföljande logout räknas dubbelt.
 
 När en sida når **0 tickets** förlorar hela sidan kriget.
+
+### Slott och Rustkammare
+
+En aktiv [Slott](/wiki/buildings/slott) sänker Kingens ticketvärde med 4, från **10 till 6 tickets**.
+
+En aktiv [Rustkammare](/wiki/buildings/rustkammare) höjer settlementets grundtickets från **100 till 110**. Övriga aktiva krigsbonusar och policies räknas därefter enligt sina egna regler.
 
 Aktuell ställning kan ses i War-menyn eller med:
 

@@ -3,12 +3,12 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.4"
+version: "1.5"
 engineVersion: "Company"
 updatedAt: "2026-08-20"
 infoboxTitle: "Företag"
 infobox:
-  krav: "Settlement nivå 3 och Handelscentrum"
+  krav: "Settlement nivå 4 och aktivt Handelscentrum"
   startkostnad: "Gratis"
   medlemskap: "Ett företag per spelare"
   maxlicens: "Nivå 10"
@@ -16,7 +16,7 @@ infobox:
 
 ## Översikt
 
-När ett settlement har nått **nivå 3** och låst upp **Handelscentrum** kan invånarna skapa företag.
+När ett settlement har nått **nivå 4** och färdigställt **Handelscentrum** kan invånarna skapa företag.
 
 Det är gratis att starta ett företag. Varje spelare kan vara medlem i högst ett företag åt gången.
 
@@ -49,6 +49,12 @@ Företagslicensen dras sedan från denna grundskatt. En licens på nivå 10 ger 
 Exempel: ett företag med licensnivå 10 i ett settlement på nivå 23 betalar **15 procent Server TAX** innan eventuella ytterligare reduktioner från settlementpolicies.
 
 Läs hela skattetrappan på sidan [Server TAX](/wiki/economy/server-tax).
+
+## Kontor och extra Shopping Chests
+
+När settlementet färdigställer [Kontor](/wiki/buildings/kontor) får varje företag **3 extra Shopping Chests**.
+
+Bonusen läggs ovanpå företagets vanliga licensgräns och andra aktiva bonusar.
 
 ## Företagsskatt och settlementets skatteöversikt
 

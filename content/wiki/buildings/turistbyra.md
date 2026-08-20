@@ -1,31 +1,36 @@
 ---
-title: "Bank"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Bank."
+title: "Turistbyrå"
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Turistbyrå."
 category: "Byggnader"
-order: 6
+order: 12
 version: "4.0"
 engineVersion: "Building System 1.0"
 updatedAt: "2026-08-20"
-infoboxTitle: "Bank"
+infoboxTitle: "Turistbyrå"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 6"
-  kostnad: "50 000 Coins"
+  nivåkrav: "Settlementnivå 12"
+  kostnad: "350 000 Coins"
   storlek: "17×17"
 ---
 
-## Vad är Bank?
+## Vad är Turistbyrå?
 
-**Bank** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Turistbyrå** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
 ## Bonus
 
-- Låser upp detaljerad settlementstatistik och den utökade ekonomiska översikten.
+- Första besöket i en ny stad med aktiv Turistbyrå ger besökaren 5 000 Coins.
+- Settlementet får 10 000 Coins när en spelare besöker staden för första gången.
+- Låser upp statistik över unika besökare.
+
+> [!NOTE]
+> Belöningarna bygger på unika förstabesök. Samma besökare kan inte generera samma förstabesöksbelöning om och om igen.
 
 ## Krav
 
-- Settlementnivå: **6 eller högre**
-- Licens: **50 000 Coins**
+- Settlementnivå: **12 eller högre**
+- Licens: **350 000 Coins**
 - Fysisk storlek: **17×17**
 - Väggar: **minst 70 % täckning**
 - Tak: **minst 75 % täckning**
@@ -33,7 +38,7 @@ infobox:
 
 ### Specialkrav
 
-<BuildingRequirementsTable building="bank" />
+<BuildingRequirementsTable building="turistbyra" />
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
@@ -42,7 +47,7 @@ Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. 
 Efter att licensen köpts placeras byggytan i världen:
 
 ```text
-/building place bank
+/building place turistbyra
 ```
 
 Kontrollera bygget när det börjar bli färdigt:
@@ -64,7 +69,7 @@ Bonusen aktiveras först efter en godkänd slutkontroll.
 En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
-/building revalidate bank
+/building revalidate turistbyra
 ```
 
 Licensen behöver inte köpas igen.
@@ -72,12 +77,12 @@ Licensen behöver inte köpas igen.
 ## Flytta byggnaden
 
 ```text
-/building relocate bank
-/building relocate bank confirm
+/building relocate turistbyra
+/building relocate turistbyra confirm
 ```
 
 Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
-/building relocate cancel bank
+/building relocate cancel turistbyra
 ```

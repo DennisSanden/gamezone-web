@@ -1,42 +1,39 @@
 ---
-title: "Fiskebrygga"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Fiskebrygga."
+title: "Rustkammare"
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Rustkammare."
 category: "Byggnader"
-order: 3
+order: 40
 version: "4.0"
 engineVersion: "Building System 1.0"
 updatedAt: "2026-08-20"
-infoboxTitle: "Fiskebrygga"
+infoboxTitle: "Rustkammare"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 3"
-  kostnad: "10 000 Coins"
-  storlek: "11×11"
+  nivåkrav: "Settlementnivå 40"
+  kostnad: "12 500 000 Coins"
+  storlek: "35×35"
 ---
 
-## Vad är Fiskebrygga?
+## Vad är Rustkammare?
 
-**Fiskebrygga** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Rustkammare** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
 ## Bonus
 
-- Ger +5 % produktionsbonus inom settlementets valda kategori, **Fiske**.
-
-> [!NOTE]
-> Settlementet använder kategoribyggnaden som hör till dess valda produktionskategori.
+- Höjer settlementets grundtickets i krig från 100 till 110.
 
 ## Krav
 
-- Settlementnivå: **3 eller högre**
-- Licens: **10 000 Coins**
-- Fysisk storlek: **11×11**
+- Settlementnivå: **40 eller högre**
+- Licens: **12 500 000 Coins**
+- Fysisk storlek: **35×35**
 - Väggar: **minst 70 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav
 
-<BuildingRequirementsTable building="fiskebrygga" />
+<BuildingRequirementsTable building="rustkammare" />
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
@@ -45,7 +42,7 @@ Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. 
 Efter att licensen köpts placeras byggytan i världen:
 
 ```text
-/building place fiskebrygga
+/building place rustkammare
 ```
 
 Kontrollera bygget när det börjar bli färdigt:
@@ -67,7 +64,7 @@ Bonusen aktiveras först efter en godkänd slutkontroll.
 En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
-/building revalidate fiskebrygga
+/building revalidate rustkammare
 ```
 
 Licensen behöver inte köpas igen.
@@ -75,12 +72,12 @@ Licensen behöver inte köpas igen.
 ## Flytta byggnaden
 
 ```text
-/building relocate fiskebrygga
-/building relocate fiskebrygga confirm
+/building relocate rustkammare
+/building relocate rustkammare confirm
 ```
 
 Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
-/building relocate cancel fiskebrygga
+/building relocate cancel rustkammare
 ```

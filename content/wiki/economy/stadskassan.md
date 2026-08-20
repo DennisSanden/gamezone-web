@@ -3,7 +3,7 @@ title: "Stadskassan och stadsskatt"
 description: "Så fungerar settlementets gemensamma Coins, stadsskatt, skatteöversikt, insättningar, uttag och utbetalningar."
 category: "Ekonomi"
 order: 3
-version: "1.5"
+version: "1.6"
 engineVersion: "Economy Engine"
 updatedAt: "2026-08-20"
 infoboxTitle: "Stadskassan"
@@ -12,6 +12,7 @@ infobox:
   minstaSkatt: "0 %"
   högstaSkatt: "100 %"
   bestämsAv: "King"
+  transaktionsavgift: "7,5 %, eller 2,5 % med Myntförvaring"
 ---
 
 ## Vad är stadskassan?
@@ -57,47 +58,40 @@ Alla aktiva invånare kan sätta in Coins från sitt eget saldo i stadskassan me
 
 `/settlement deposit <belopp>`
 
-Exempel:
+Standardavgiften är **7,5 procent**. Avgiften betalas av spelaren utöver beloppet som sätts in.
 
-`/settlement deposit 50000`
+Exempel, `/settlement deposit 50000` utan Myntförvaring:
 
-Då flyttas 50 000 Coins från spelarens saldo till settlementets stadskassa.
+- 50 000 Coins går till stadskassan
+- 3 750 Coins tas i transaktionsavgift
+- spelaren behöver alltså 53 750 Coins
+
+Med en aktiv [Myntförvaring](/wiki/buildings/myntforvaring) sjunker avgiften till **2,5 procent**. Samma insättning kostar då 1 250 Coins i avgift.
 
 ## Ta ut Coins till King
 
-Endast settlementets King kan ta ut Coins från stadskassan till sitt eget spelarsaldo:
+Endast settlementets King kan ta ut Coins från stadskassan till sitt eget saldo:
 
 `/settlement withdraw <belopp>`
 
-Exempel:
+Standardavgiften är **7,5 procent** och tas från stadskassan utöver uttaget.
 
-`/settlement withdraw 50000`
-
-En transaktionsavgift på **2 procent** tillkommer och tas också från stadskassan.
-
-Om King tar ut 50 000 Coins kostar det därför stadskassan totalt 51 000 Coins:
+Ett uttag på 50 000 Coins kostar därför totalt 53 750 Coins:
 
 - 50 000 Coins går till King
-- 1 000 Coins går i transaktionsavgift
+- 3 750 Coins går i transaktionsavgift
+
+Med aktiv Myntförvaring blir avgiften **2,5 procent**, alltså 1 250 Coins på ett uttag på 50 000.
 
 ## Skicka Coins till en invånare
 
-King kan skicka Coins från stadskassan direkt till en aktiv invånare i samma settlement med:
+King kan skicka Coins från stadskassan direkt till en aktiv invånare i samma settlement:
 
 `/settlement send <spelare> <belopp>`
 
-Exempel:
+Utbetalningen använder samma transaktionsavgift som vanliga uttag, **7,5 procent som standard och 2,5 procent med aktiv Myntförvaring**.
 
-`/settlement send Petter 50000`
-
-En transaktionsavgift på **2 procent** tillkommer även här.
-
-I exemplet kostar utbetalningen stadskassan totalt 51 000 Coins:
-
-- 50 000 Coins går till Petter
-- 1 000 Coins går i transaktionsavgift
-
-Mottagaren behöver inte vara online, men måste vara registrerad som aktiv invånare i samma settlement. King kan inte skicka till sig själv med detta kommando. För ett eget uttag används `/settlement withdraw <belopp>`.
+Mottagaren behöver inte vara online, men måste vara registrerad som aktiv invånare i samma settlement.
 
 ## Stadsskatt på produktion
 

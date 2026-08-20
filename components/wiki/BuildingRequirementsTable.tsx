@@ -18,7 +18,7 @@ export default function BuildingRequirementsTable({
         <div className={styles.wrapper}>
             <div className={styles.header}>
                 <span>Specialkrav</span>
-                <strong>{requirements.length} typer av block eller items</strong>
+                <strong>{requirements.length} typer av block, items eller entiteter</strong>
             </div>
 
             <div className={styles.tableWrap}>
@@ -26,7 +26,7 @@ export default function BuildingRequirementsTable({
                     <thead>
                         <tr>
                             <th aria-label="Ikon" />
-                            <th>Block eller item</th>
+                            <th>Block, item eller entitet</th>
                             <th>Antal</th>
                         </tr>
                     </thead>

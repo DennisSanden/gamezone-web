@@ -1,42 +1,42 @@
 ---
-title: "Fiskebrygga"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Fiskebrygga."
+title: "Myntverk"
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Myntverk."
 category: "Byggnader"
-order: 3
+order: 45
 version: "4.0"
 engineVersion: "Building System 1.0"
 updatedAt: "2026-08-20"
-infoboxTitle: "Fiskebrygga"
+infoboxTitle: "Myntverk"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 3"
-  kostnad: "10 000 Coins"
-  storlek: "11×11"
+  nivåkrav: "Settlementnivå 45"
+  kostnad: "20 000 000 Coins"
+  storlek: "39×39"
 ---
 
-## Vad är Fiskebrygga?
+## Vad är Myntverk?
 
-**Fiskebrygga** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Myntverk** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
 ## Bonus
 
-- Ger +5 % produktionsbonus inom settlementets valda kategori, **Fiske**.
+- Betalar 50 000 Coins per dag direkt till settlementets stadskassa.
 
 > [!NOTE]
-> Settlementet använder kategoribyggnaden som hör till dess valda produktionskategori.
+> Utbetalningen sparas per datum så att en serverrestart inte kan ge flera dagsutbetalningar.
 
 ## Krav
 
-- Settlementnivå: **3 eller högre**
-- Licens: **10 000 Coins**
-- Fysisk storlek: **11×11**
+- Settlementnivå: **45 eller högre**
+- Licens: **20 000 000 Coins**
+- Fysisk storlek: **39×39**
 - Väggar: **minst 70 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav
 
-<BuildingRequirementsTable building="fiskebrygga" />
+<BuildingRequirementsTable building="myntverk" />
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
@@ -45,7 +45,7 @@ Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. 
 Efter att licensen köpts placeras byggytan i världen:
 
 ```text
-/building place fiskebrygga
+/building place myntverk
 ```
 
 Kontrollera bygget när det börjar bli färdigt:
@@ -67,7 +67,7 @@ Bonusen aktiveras först efter en godkänd slutkontroll.
 En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
-/building revalidate fiskebrygga
+/building revalidate myntverk
 ```
 
 Licensen behöver inte köpas igen.
@@ -75,12 +75,12 @@ Licensen behöver inte köpas igen.
 ## Flytta byggnaden
 
 ```text
-/building relocate fiskebrygga
-/building relocate fiskebrygga confirm
+/building relocate myntverk
+/building relocate myntverk confirm
 ```
 
 Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
-/building relocate cancel fiskebrygga
+/building relocate cancel myntverk
 ```

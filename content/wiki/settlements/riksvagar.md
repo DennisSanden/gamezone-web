@@ -3,9 +3,9 @@ title: "Riksvägar"
 description: "Officiella vägar mellan settlements och Spawn som ger högre färdhastighet och visas på BlueMap."
 category: "Settlements"
 order: 6
-version: "1.0"
+version: "1.1"
 engineVersion: "GameZoneEngine 1.0.0-RC1"
-updatedAt: "2026-08-10"
+updatedAt: "2026-08-20"
 infoboxTitle: "Riksvägar"
 infobox:
   hastighetsbonus: "+100 %"
@@ -63,6 +63,15 @@ Admin markerar vägen med flera punkter. Varje rak sträcka går från en punkt 
 ```
 
 Fler `/road setpoint` kan användas om vägen behöver fler svängar.
+
+## Gatukontor och anslutningsbelöning
+
+För att ett settlement ska få sin officiella riksvägsanslutningsbonus måste det ha en aktiv [Gatukontor](/wiki/buildings/gatukontor).
+
+När en färdig riksväg för första gången ansluter settlementet till nätverket får settlementets stadskassa **1 000 000 Coins**.
+
+> [!IMPORTANT]
+> Anslutningsbelöningen betalas bara ut en gång per settlement. Att bygga om vägen eller starta om servern skapar ingen ny belöning.
 
 ## BlueMap
 

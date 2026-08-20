@@ -3,7 +3,7 @@ title: "Server TAX"
 description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
 order: 4
-version: "2.0"
+version: "2.1"
 engineVersion: "Economy Engine"
 updatedAt: "2026-08-20"
 infoboxTitle: "Server TAX"
@@ -24,7 +24,7 @@ Registrera en shopping chest genom att titta på kistan och skriva:
 
 Priset gäller per item i kistan.
 
-När företag blir tillgängliga på **settlementnivå 3** börjar grundskatten på **45 procent**. Därefter sjunker grundskatten med **1 procentenhet per settlementnivå** fram till nivå 23.
+När företag blir tillgängliga genom **Handelscentrum på settlementnivå 4** börjar grundskatten på **45 procent**. Därefter sjunker grundskatten med **1 procentenhet per settlementnivå** fram till nivå 23.
 
 Från **nivå 23 till nivå 50 är grundskatten 25 procent**.
 
@@ -84,6 +84,12 @@ Företagets ägare kan öppna licensmenyn med `/company license`.
 
 En maxad företagslicens sänker alltså Server TAX med **10 procentenheter**.
 
+## Marknadsplats
+
+En aktiv [Marknadsplats](/wiki/buildings/marknadsplats) sänker Server TAX med **10 procentenheter** för företag i settlementet.
+
+Reduktionen kombineras med företagslicensen och eventuella policies.
+
 ## Merchant Republic
 
 Settlementpolicyn **Merchant Republic** sänker Server TAX med ytterligare **5 procentenheter**.
@@ -100,7 +106,7 @@ Ett företag med licensnivå 6 i ett settlement på nivå 11 har **37 procent gr
 
 Ett företag med licensnivå 10 i ett settlement på nivå 23 har **25 procent grund-TAX** och **10 procentenheter licensavdrag**. Den faktiska Server TAX blir **15 procent**.
 
-Om samma settlement dessutom använder **Merchant Republic** blir skatten ytterligare 5 procentenheter lägre, alltså **10 procent**.
+Om settlementet dessutom har en aktiv **Marknadsplats** blir skatten 5 procent. Med **Merchant Republic** ovanpå detta når den 0 procent. Server TAX kan aldrig bli negativ.
 
 > [!IMPORTANT]
 > Procentenheter dras från skattesatsen. En reduktion på 10 procentenheter från 25 procent Server TAX ger därför 15 procent Server TAX.

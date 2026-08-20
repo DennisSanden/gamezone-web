@@ -1,42 +1,42 @@
 ---
-title: "Fiskebrygga"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Fiskebrygga."
+title: "Museum"
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Museum."
 category: "Byggnader"
-order: 3
+order: 35
 version: "4.0"
 engineVersion: "Building System 1.0"
 updatedAt: "2026-08-20"
-infoboxTitle: "Fiskebrygga"
+infoboxTitle: "Museum"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 3"
-  kostnad: "10 000 Coins"
-  storlek: "11×11"
+  nivåkrav: "Settlementnivå 35"
+  kostnad: "8 000 000 Coins"
+  storlek: "31×31"
 ---
 
-## Vad är Fiskebrygga?
+## Vad är Museum?
 
-**Fiskebrygga** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Museum** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
 ## Bonus
 
-- Ger +5 % produktionsbonus inom settlementets valda kategori, **Fiske**.
+- Höjer settlementets belöning för ett nytt unikt turistbesök från 10 000 till 100 000 Coins.
 
 > [!NOTE]
-> Settlementet använder kategoribyggnaden som hör till dess valda produktionskategori.
+> Besökaren får fortfarande sin vanliga turistbonus. Museum förstärker settlementets del av belöningen.
 
 ## Krav
 
-- Settlementnivå: **3 eller högre**
-- Licens: **10 000 Coins**
-- Fysisk storlek: **11×11**
+- Settlementnivå: **35 eller högre**
+- Licens: **8 000 000 Coins**
+- Fysisk storlek: **31×31**
 - Väggar: **minst 70 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav
 
-<BuildingRequirementsTable building="fiskebrygga" />
+<BuildingRequirementsTable building="museum" />
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
@@ -45,7 +45,7 @@ Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. 
 Efter att licensen köpts placeras byggytan i världen:
 
 ```text
-/building place fiskebrygga
+/building place museum
 ```
 
 Kontrollera bygget när det börjar bli färdigt:
@@ -67,7 +67,7 @@ Bonusen aktiveras först efter en godkänd slutkontroll.
 En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
-/building revalidate fiskebrygga
+/building revalidate museum
 ```
 
 Licensen behöver inte köpas igen.
@@ -75,12 +75,12 @@ Licensen behöver inte köpas igen.
 ## Flytta byggnaden
 
 ```text
-/building relocate fiskebrygga
-/building relocate fiskebrygga confirm
+/building relocate museum
+/building relocate museum confirm
 ```
 
 Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
-/building relocate cancel fiskebrygga
+/building relocate cancel museum
 ```

@@ -1,34 +1,31 @@
 ---
-title: "Fiskebrygga"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Fiskebrygga."
+title: "Stadskärna"
+description: "Nivåkrav, licenskostnad, byggkrav och funktion för Stadskärna."
 category: "Byggnader"
-order: 3
+order: 2
 version: "4.0"
 engineVersion: "Building System 1.0"
 updatedAt: "2026-08-20"
-infoboxTitle: "Fiskebrygga"
+infoboxTitle: "Stadskärna"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 3"
-  kostnad: "10 000 Coins"
+  nivåkrav: "Settlementnivå 2"
+  kostnad: "5 000 Coins"
   storlek: "11×11"
 ---
 
-## Vad är Fiskebrygga?
+## Vad är Stadskärna?
 
-**Fiskebrygga** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Stadskärna** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
 
 ## Bonus
 
-- Ger +5 % produktionsbonus inom settlementets valda kategori, **Fiske**.
-
-> [!NOTE]
-> Settlementet använder kategoribyggnaden som hör till dess valda produktionskategori.
+- Låser upp settlementets fortsatta byggsystem.
 
 ## Krav
 
-- Settlementnivå: **3 eller högre**
-- Licens: **10 000 Coins**
+- Settlementnivå: **2 eller högre**
+- Licens: **5 000 Coins**
 - Fysisk storlek: **11×11**
 - Väggar: **minst 70 % täckning**
 - Tak: **minst 75 % täckning**
@@ -36,7 +33,7 @@ infobox:
 
 ### Specialkrav
 
-<BuildingRequirementsTable building="fiskebrygga" />
+<BuildingRequirementsTable building="stadskarna" />
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
@@ -45,7 +42,7 @@ Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. 
 Efter att licensen köpts placeras byggytan i världen:
 
 ```text
-/building place fiskebrygga
+/building place stadskarna
 ```
 
 Kontrollera bygget när det börjar bli färdigt:
@@ -67,7 +64,7 @@ Bonusen aktiveras först efter en godkänd slutkontroll.
 En färdig byggnad måste fortsätta uppfylla kraven. Om den skadas pausas bonusen tills byggnaden reparerats och validerats på nytt:
 
 ```text
-/building revalidate fiskebrygga
+/building revalidate stadskarna
 ```
 
 Licensen behöver inte köpas igen.
@@ -75,12 +72,12 @@ Licensen behöver inte köpas igen.
 ## Flytta byggnaden
 
 ```text
-/building relocate fiskebrygga
-/building relocate fiskebrygga confirm
+/building relocate stadskarna
+/building relocate stadskarna confirm
 ```
 
 Bonusen pausas under flytten. Flytten kan avbrytas med:
 
 ```text
-/building relocate cancel fiskebrygga
+/building relocate cancel stadskarna
 ```

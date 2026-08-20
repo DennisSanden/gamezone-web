@@ -1,113 +1,94 @@
 ---
 title: "Fysiska byggnader"
-description: "Så fungerar bygglicenser, byggytor, validering, skador och flytt av settlementbyggnader."
+description: "Hela Building System 1.0, från Stadskärna till Myntverk."
 category: "Byggnader"
 order: 0
-version: "1.0"
-engineVersion: "GameZoneEngine 1.0.0-RC1"
-updatedAt: "2026-08-11"
-infoboxTitle: "Fysiska byggnader"
+version: "2.0"
+engineVersion: "Building System 1.0"
+updatedAt: "2026-08-20"
+infoboxTitle: "Building System 1.0"
 infobox:
   process: "Licens → bygg → godkänn"
-  behörighet: "King eller Lord"
+  förstaByggnad: "Stadskärna, nivå 2"
+  senasteAktivaByggnad: "Myntverk, nivå 45"
   territorium: "Hela byggnaden måste ligga inom settlementet"
 ---
 
 ## Så fungerar byggsystemet
 
-Settlementbyggnader är inte längre bara licenser i en meny. Settlementet köper först licensen och bygger därefter byggnaden fysiskt i världen. Bonusen eller funktionen aktiveras när byggnaden har klarat pluginets kontroll.
+Settlementbyggnader är riktiga konstruktioner i världen. Licensen är bara startpunkten, bonusen aktiveras först när byggnaden har byggts och godkänts.
 
-1. Nå byggnadens nivåkrav.
-2. Köp licensen via `/gz menu`.
-3. Placera byggytan med `/building place <byggnad>`.
-4. Bygg inom partikelramen.
-5. Kontrollera med `/building status`.
-6. Färdigställ med `/building complete`.
+1. Settlementet når byggnadens nivåkrav.
+2. Licensen köps.
+3. Byggytan placeras med `/building place <byggnad>`.
+4. Settlementet bygger inom den markerade ytan.
+5. `/building status` visar vad som saknas.
+6. `/building complete` gör slutkontrollen.
+7. Bonusen aktiveras när kontrollen godkänns.
 
-## Byggytan
+Byggnader får byggas i **valfri stil och valfria material**. Pluginet kontrollerar funktion, yta, väggar, tak, höjd och specialkrav, inte estetik.
 
-`/building place <byggnad>` använder blocket King eller Lord tittar på som centrum. Pluginet sparar positionen och visar en partikelram runt hela footprinten.
+## Grundregler
 
-Det finns ingen Lodestone eller fysisk markör som måste byggas in.
+Alla byggnader måste:
 
-Hela footprinten måste ligga inom settlementets territorium. Byggnaden får byggas i valfri stil och med valfria material.
+- ligga helt innanför settlementets territorium
+- uppfylla sin minsta storlek
+- ha minst **70 % väggtäckning**
+- ha minst **75 % taktäckning**
+- uppfylla eventuellt höjdkrav
+- innehålla byggnadens specialblock och entiteter
 
-## Vad kontrolleras?
+## Byggnadsprogression
 
-Varje byggnad har en bestämd minsta yta och en lista med specialblock. Systemet kontrollerar även:
+| Nivå | Byggnad | Licens | Huvudbonus |
+|---:|---|---:|---|
+| 2 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Låser upp byggsystemet |
+| 3 | [Kategoribyggnad](/wiki/buildings/kategoribyggnad) | 10 000 | +5 % i vald kategori |
+| 4 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Företag |
+| 5 | [Laboratorium](/wiki/buildings/laboratorium) | 35 000 | Alkemi och +5 % produktion |
+| 6 | [Bank](/wiki/buildings/bank) | 50 000 | Detaljerad statistik |
+| 7 | [Reliktempel](/wiki/buildings/reliktempel) | 50 000 | Relikbonusar |
+| 8 | [Vindhamn](/wiki/buildings/vindhamn) | 100 000 | Elytra |
+| 10 | [Gatukontor](/wiki/buildings/gatukontor) | 200 000 | Riksvägsanslutning |
+| 12 | [Turistbyrå](/wiki/buildings/turistbyra) | 350 000 | Turism och unika besök |
+| 14 | [Stall](/wiki/buildings/stall) | 500 000 | +25 % hästhastighet |
+| 16 | [Kontor](/wiki/buildings/kontor) | 750 000 | +3 Shopping Chests |
+| 18 | [Kyrka](/wiki/buildings/kyrka) | 1 000 000 | +20 % produktion |
+| 20 | [Marknadsplats](/wiki/buildings/marknadsplats) | 1 500 000 | −10 procentenheter Server TAX |
+| 22 | [Myntförvaring](/wiki/buildings/myntforvaring) | 2 000 000 | 7,5 % → 2,5 % stadskasseavgift |
+| 25 | [Rådhus](/wiki/buildings/radhus) | 2 500 000 | +2 Lord-platser |
+| 30 | [Slott](/wiki/buildings/slott) | 5 000 000 | King kostar 6 tickets |
+| 35 | [Museum](/wiki/buildings/museum) | 8 000 000 | 100 000 Coins turistbonus |
+| 40 | [Rustkammare](/wiki/buildings/rustkammare) | 12 500 000 | 110 grundtickets |
+| 45 | [Myntverk](/wiki/buildings/myntverk) | 20 000 000 | 50 000 Coins per dag |
 
-- minst **70 % väggtäckning**
-- minst **75 % taktäckning**
-- särskilt höjdkrav där byggnaden har ett sådant
-- att specialblocken faktiskt finns kvar vid kontrollen
-- att hela byggytan ligger inom settlementet
-
-Dörrar räknas som dörrar, inte som två separata block. Candleblock räknas efter faktiskt antal candles.
-
-## Status och färdigställning
-
-```text
-/building status
-/building complete
-/building info
-/building outline
-```
-
-`/building status` gör en färsk kontroll av världen och visar vad som saknas. `complete` gör en ny slutkontroll och aktiverar byggnaden först när alla krav är uppfyllda.
-
-`/building outline` visar eller döljer partikelramen.
+> [!NOTE]
+> Underverk på nivå 50 görs om separat och ingår därför inte i den aktiva byggnadsprogressionen ännu.
 
 ## Skadade byggnader
 
-En färdigställd byggnad måste fortsätta existera. Om spelare river eller ändrar block i byggnaden kontrolleras den igen efter en kort fördröjning. Det gör att vanlig ombyggnad inte orsakar en kontroll för varje enskilt block.
+Färdigställda byggnader kontrolleras när de förändras. Om en byggnad inte längre klarar kraven blir den **skadad** och bonusen pausas.
 
-Om byggnaden inte längre klarar kraven får den status **Skadad** och bonusen pausas. Onlinespelare i settlementet får veta vad som saknas.
-
-Reparera byggnaden och kör:
+Efter reparation:
 
 ```text
 /building revalidate <byggnad>
 ```
 
-Licensen försvinner aldrig och ingen ny avgift tas ut.
+Licensen finns kvar och behöver inte köpas igen.
 
 ## Flytta en byggnad
-
-King eller Lord kan flytta en färdigställd byggnad:
 
 ```text
 /building relocate <byggnad>
 /building relocate <byggnad> confirm
 ```
 
-Bonusen pausas medan flytten pågår. Placera sedan den nya ytan med `/building place <byggnad>`, bygg och kör `/building complete`.
+Bonusen pausas under flytten. Placera sedan byggnaden på nytt och färdigställ den igen.
 
-Vill ni ångra flytten:
+Flytten kan avbrytas med:
 
 ```text
 /building relocate cancel <byggnad>
 ```
-
-Den gamla byggnaden kontrolleras på nytt innan den återaktiveras. Har den redan rivits måste den repareras eller den nya byggnaden färdigställas.
-
-## Befintliga settlements
-
-Bygglicenser som köptes innan det fysiska byggsystemet infördes behåller sina befintliga funktioner. Settlementet behöver alltså inte köpa samma licens igen.
-
-Äldre obligatoriska byggnader måste däremot färdigställas fysiskt innan settlementet kan låsa upp nästa nya byggnad. På så sätt förlorar gamla settlements inget över en natt, samtidigt som alla settlements successivt går över till det nya systemet.
-
-## Byggnadsstorlekar
-
-| Byggnad | Storlek |
-| --- | --- |
-| Kategoribyggnad | 11×11 |
-| Handelscentrum | 15×15 |
-| Bank | 17×17 |
-| Laboratorium | 17×17 |
-| Kyrka | 21×15, minst 15 hög |
-| Marknadsplats | 25×25 |
-| Monument | 21×21, minst 15 hög |
-| Slott | 35×35, minst 20 hög |
-| Underverk | 51×51, minst 30 hög |
-
-Se respektive byggnadssida för exakt materiallista och funktion.
