@@ -3,9 +3,9 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.5"
+version: "1.6"
 engineVersion: "Company"
-updatedAt: "2026-08-20"
+updatedAt: "2026-08-21"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 4 och aktivt Handelscentrum"
@@ -19,6 +19,40 @@ infobox:
 När ett settlement har nått **nivå 4** och färdigställt **Handelscentrum** kan invånarna skapa företag.
 
 Det är gratis att starta ett företag. Varje spelare kan vara medlem i högst ett företag åt gången.
+
+
+## Företagsroller
+
+Ett företag har tre roller: **Owner**, **Manager** och **Member**.
+
+### Owner
+
+Owner är företagets ägare och har kontroll över företagets ägarbeslut, bland annat företagslicensen och funktioner som uttryckligen kräver ägarbehörighet. Shopping Plotens löpande dygnshyra belastar också Ownerns privata coin-konto.
+
+### Manager
+
+Manager är företagets operativa butiksroll. Rollen är tänkt som en **butikschef**, inte som delägare.
+
+En Manager får bland annat:
+
+- bygga och riva inom företagets Shopping Plot
+- placera och hantera företagets Shopping Chests
+- registrera nya Shopping Chests
+- pausa och återuppta försäljning
+- ta bort företagets Shopping Chests
+- sköta den praktiska driften av företagets butik
+
+En Manager får däremot **inte automatiskt företagets ägarbehörigheter**. Ägarbeslut som kräver Owner ligger fortfarande hos företagsägaren. Manager blir inte heller betalningsansvarig för Shopping Plotens dygnshyra.
+
+Företagsägaren utser en Manager med:
+
+```text
+/company add manager <spelare>
+```
+
+### Member
+
+Member är en vanlig företagsmedlem. Rollen ger inte samma bygg- och administrationsrättigheter på företagets Shopping Plot som Manager eller Owner.
 
 ## Företagslicens
 

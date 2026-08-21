@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.8"
+version: "1.9"
 engineVersion: "Commands"
-updatedAt: "2026-08-14"
+updatedAt: "2026-08-21"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -228,7 +228,12 @@ King och Lord använder byggkommandona för att placera, kontrollera, färdigst�
 /shoppingplot buy
 /shoppingplot sell
 /shoppingplot info
+/shoppingplot rent <företagsägare> <procent>
+/shoppingplot unrent <spelare>
+/shoppingplot tenants
 ```
+
+Shopping Plots kan ha en separat dygnshyra som dras från företagets Owners privata coin-konto varje dag klockan 18:00. Om betalningen misslyckas försöker systemet dra dubbel hyra nästa dag. Misslyckas även den betalningen sägs plotten upp.
 
 ## Territorium
 
