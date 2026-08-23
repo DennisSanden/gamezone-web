@@ -3,9 +3,9 @@ title: "Reliktempel"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Reliktempel."
 category: "Byggnader"
 order: 7
-version: "4.0"
+version: "4.1"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-08-23"
 infoboxTitle: "Reliktempel"
 infobox:
   typ: "Settlementbyggnad"
@@ -25,7 +25,7 @@ infobox:
 - Låser upp settlementets relikbonusar för reliker som förvaras i settlementets inventory chests.
 
 > [!NOTE]
-> Reliktemplet är gaten för relikbonusarna. Själva bonusen bestäms av reliken som förvaras i settlementet.
+> Reliktemplet är kopplat till settlementets relikbonusar. Själva bonusen bestäms av vilka giltiga reliker som förvaras i settlementets registrerade inventory. Läs hela systemet på sidan [Settlementbonusar från reliker](/wiki/relics/settlementbonusar).
 
 ## Krav
 

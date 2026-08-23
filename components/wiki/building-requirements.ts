@@ -59,16 +59,14 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
         item("decorated_pot", "Decorated Pot", 8),
     ],
     bank: [
-        item("vault", "Vault", 1),
-        item("ender_chest", "Ender Chest", 1),
+        item("ender_chest", "Ender Chest", 2),
         item("iron_door", "Iron Door", 4),
         item("bell", "Bell", 2),
         item("chiseled_bookshelf", "Chiseled Bookshelf", 8),
         item("heavy_weighted_pressure_plate", "Heavy Weighted Pressure Plate", 4),
     ],
     reliktempel: [
-        item("vault", "Vault", 1),
-        item("ender_chest", "Ender Chest", 1),
+        item("ender_chest", "Ender Chest", 2),
         item("chiseled_bookshelf", "Chiseled Bookshelf", 4),
         item("lectern", "Lectern", 2),
         item("candle", "Candle", 4),
@@ -120,7 +118,7 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
         item("bell", "Bell", 4),
     ],
     myntforvaring: [
-        item("vault", "Vault", 4),
+        item("ender_chest", "Ender Chest", 4),
         item("chest", "Chest", 16),
         item("barrel", "Barrel", 8),
         item("chiseled_bookshelf", "Chiseled Bookshelf", 8),
@@ -140,7 +138,7 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
         item("beacon", "Beacon", 1),
         item("bell", "Bell", 8),
         item("lantern", "Lantern", 32),
-        item("vault", "Vault", 4),
+        item("ender_chest", "Ender Chest", 4),
     ],
     museum: [
         item("item_frame", "Item Frame", 32),
@@ -157,7 +155,7 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
         item("armor_stand", "Armor Stand", 8),
     ],
     myntverk: [
-        item("vault", "Vault", 8),
+        item("ender_chest", "Ender Chest", 8),
         item("beacon", "Beacon", 2),
         item("bell", "Bell", 8),
         item("heavy_weighted_pressure_plate", "Heavy Weighted Pressure Plate", 16),

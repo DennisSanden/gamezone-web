@@ -181,6 +181,16 @@ export default function WikiIcon({
                 </svg>
             );
 
+        case "relics":
+            return (
+                <svg {...commonProps}>
+                    <path d="M12 3 8.5 8 12 21l3.5-13z" />
+                    <path d="M8.5 8 4 10.5 12 21" />
+                    <path d="m15.5 8 4.5 2.5L12 21" />
+                    <path d="M8.5 8h7" />
+                </svg>
+            );
+
         case "warning":
             return (
                 <svg {...commonProps}>
@@ -249,6 +259,9 @@ export function getCategoryIcon(categorySlug: string) {
         commands: "commands",
 
         war: "war",
+
+        relics: "relics",
+        relic: "relics",
     };
 
     return iconMap[categorySlug] ?? "rules";
