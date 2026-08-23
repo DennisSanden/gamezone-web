@@ -84,7 +84,7 @@
 
 .row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(118px, 0.9fr) minmax(0, 1.1fr);
     align-items: center;
     gap: 18px;
     min-height: 61px;
@@ -114,7 +114,9 @@
     line-height: 1.4;
     letter-spacing: 0.075em;
     text-transform: uppercase;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 .row dd {
@@ -122,8 +124,10 @@
     font-size: 0.83rem;
     font-weight: 850;
     line-height: 1.4;
+    min-width: 0;
     text-align: right;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .footer {

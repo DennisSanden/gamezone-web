@@ -16,6 +16,7 @@ const navigationItems = [
     { label: "Hem", href: "/" },
     { label: "Kom igång", href: "/kom-igang" },
     { label: "Wiki", href: "/wiki" },
+    { label: "Reliker", href: "/relics" },
     { label: "MarketWatch", href: "/marketwatch" },
     { label: "Leaderboards", href: "/leaderboards" },
     { label: "Chronicles", href: "/chronicles" },

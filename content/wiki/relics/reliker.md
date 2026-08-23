@@ -37,6 +37,8 @@ En relik är inte bara ett namn och lite färgad lore. Engine känner igen den g
 
 GameZone har **50 definierade reliker** i det ursprungliga registret. Alla behöver inte vara släppta samtidigt. Vissa kan ligga gömda i världen, vissa kan introduceras genom events och andra kan fortfarande vara helt unreleased.
 
+[Öppna Relikarkivet](/relics) för att se hela registret som en levande samling med upptäckta, kända och fortfarande okända reliker.
+
 > [!IMPORTANT]
 > En relik är ett riktigt item. Om du äger en relik kan du tappa den, ge bort den, sälja den, lägga den i en kista eller förlora den genom legitim gameplay.
 
