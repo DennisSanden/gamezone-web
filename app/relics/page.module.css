@@ -98,7 +98,7 @@
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     overflow: hidden;
     border: 1px solid rgba(165, 198, 153, 0.13);
     border-radius: 14px;
@@ -230,7 +230,7 @@
 
 .relicGrid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
 }
 
@@ -238,7 +238,7 @@
     position: relative;
     isolation: isolate;
     min-width: 0;
-    min-height: 360px;
+    min-height: 430px;
     overflow: hidden;
     padding: 18px;
     border: 1px solid rgba(163, 194, 152, 0.12);
@@ -540,3 +540,82 @@
 @media (prefers-reduced-motion: reduce) {
     .loader { animation: none; }
 }
+
+
+.relicArt {
+    position: relative;
+    display: grid;
+    height: 150px;
+    place-items: center;
+    margin: 20px 0 22px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 13px;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.035), transparent 42%),
+        rgba(0,0,0,.17);
+}
+
+.artGlow {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(185,195,188,.12);
+    filter: blur(24px);
+}
+
+.itemGlyph {
+    position: relative;
+    z-index: 1;
+    color: #c7d0ca;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.1rem;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 8px 24px rgba(0,0,0,.55);
+    transform: rotate(-5deg);
+}
+
+.artCaption {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    left: 10px;
+    overflow: hidden;
+    color: rgba(230,238,232,.38);
+    font-size: .52rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.secretArt {
+    border-style: dashed;
+    background: rgba(255,255,255,.018);
+}
+
+.secretGlyph {
+    color: #515d54;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.relicCard[data-tier="RARE"] .relicArt { border-color: rgba(88,151,224,.22); background: radial-gradient(circle at 50% 45%, rgba(65,133,221,.15), transparent 45%), rgba(0,0,0,.17); }
+.relicCard[data-tier="RARE"] .artGlow { background: rgba(65,133,221,.24); }
+.relicCard[data-tier="RARE"] .itemGlyph { color: #8fc2ff; }
+
+.relicCard[data-tier="EPIC"] .relicArt { border-color: rgba(177,92,224,.24); background: radial-gradient(circle at 50% 45%, rgba(163,73,215,.17), transparent 45%), rgba(0,0,0,.17); }
+.relicCard[data-tier="EPIC"] .artGlow { background: rgba(163,73,215,.27); }
+.relicCard[data-tier="EPIC"] .itemGlyph { color: #d79bfa; }
+
+.relicCard[data-tier="LEGENDARY"] .relicArt { border-color: rgba(221,163,55,.28); background: radial-gradient(circle at 50% 45%, rgba(224,156,42,.19), transparent 45%), rgba(0,0,0,.17); }
+.relicCard[data-tier="LEGENDARY"] .artGlow { background: rgba(224,156,42,.30); }
+.relicCard[data-tier="LEGENDARY"] .itemGlyph { color: #efc36d; }
+
+.relicCard[data-tier="MYTHIC"] .relicArt { border-color: rgba(204,70,78,.3); background: radial-gradient(circle at 50% 45%, rgba(194,54,64,.2), transparent 45%), rgba(0,0,0,.17); }
+.relicCard[data-tier="MYTHIC"] .artGlow { background: rgba(194,54,64,.31); }
+.relicCard[data-tier="MYTHIC"] .itemGlyph { color: #ef858b; }

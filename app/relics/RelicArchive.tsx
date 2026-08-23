@@ -77,12 +77,29 @@ function isDiscovered(relic: Relic) {
     return Boolean(relic.discoveredBy);
 }
 
+
+function relicGlyph(relic: Relic) {
+    const material = (relic.material ?? "").toUpperCase();
+    if (material.includes("PICKAXE")) return "⛏";
+    if (material.includes("AXE")) return "🪓";
+    if (material.includes("SWORD")) return "⚔";
+    if (material.includes("BOW") || material.includes("CROSSBOW")) return "➶";
+    if (material.includes("BOOK")) return "▤";
+    if (material.includes("HELMET") || material.includes("CROWN")) return "♛";
+    if (material.includes("BOOTS")) return "♟";
+    if (material.includes("SHIELD")) return "◈";
+    if (material.includes("TRIDENT")) return "Ψ";
+    if (material.includes("COMPASS")) return "✥";
+    if (material.includes("SPYGLASS")) return "◉";
+    if (material.includes("FISHING")) return "⌁";
+    if (material.includes("STAR")) return "✦";
+    return "◆";
+}
+
 function statusLabel(relic: Relic) {
     if (isDiscovered(relic)) return "Upptäckt";
     if (isSecret(relic)) return "Okänd";
-    if (relic.status === "HIDDEN") return "Finns någonstans i världen";
-    if (relic.status === "UNRELEASED") return "Inte släppt ännu";
-    return relic.status.replaceAll("_", " ").toLocaleLowerCase("sv-SE");
+    return "Känd relik";
 }
 
 function bonusSummary(relic: Relic) {
@@ -137,7 +154,6 @@ export default function RelicArchive() {
 
     const discovered = relics.filter(isDiscovered).length;
     const secret = publicRelics.filter(isSecret).length;
-    const released = relics.filter((relic) => relic.status !== "UNRELEASED").length;
 
     if (loading) {
         return <section className={styles.loadingState}><span className={styles.loader} /><strong>Öppnar relikarkivet</strong><p>Hämtar serverns registrerade reliker.</p></section>;
@@ -151,10 +167,9 @@ export default function RelicArchive() {
         <>
             <section className={styles.archiveHeader}>
                 <div className={styles.stats}>
-                    <div><span>Registrerade</span><strong>{relics.length}</strong></div>
+                    <div><span>Reliker i arkivet</span><strong>{relics.length}</strong></div>
                     <div><span>Upptäckta</span><strong>{discovered}</strong></div>
-                    <div><span>Utgivna</span><strong>{released}</strong></div>
-                    <div><span>Fortfarande okända</span><strong>{secret}</strong></div>
+                    <div><span>Okända</span><strong>{secret}</strong></div>
                 </div>
 
                 <div className={styles.filterBar} aria-label="Filtrera reliker">
@@ -198,9 +213,17 @@ export default function RelicArchive() {
                                 <span className={styles.dexNumber}>#{relic.serial.replace(/\D/g, "").padStart(4, "0")}</span>
                             </div>
 
-                            <div className={styles.relicMark} aria-hidden="true">
-                                {discoveredRelic ? "✦" : secretRelic ? "?" : "◇"}
-                            </div>
+                            {secretRelic ? (
+                                <div className={`${styles.relicArt} ${styles.secretArt}`} aria-hidden="true">
+                                    <span className={styles.secretGlyph}>?</span>
+                                </div>
+                            ) : (
+                                <div className={styles.relicArt} aria-hidden="true">
+                                    <span className={styles.artGlow} />
+                                    <span className={styles.itemGlyph}>{relicGlyph(relic)}</span>
+                                    <span className={styles.artCaption}>{relic.material?.replaceAll("_", " ") ?? "RELIC"}</span>
+                                </div>
+                            )}
 
                             <div className={styles.cardContent}>
                                 <div className={styles.badges}>
