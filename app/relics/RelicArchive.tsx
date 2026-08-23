@@ -45,6 +45,30 @@ const tierLabels: Record<string, string> = {
     MYTHIC: "Mythic",
 };
 
+// Reliker som är offentligt kända innan discovery. Upptäckta reliker avslöjas alltid.
+// Fördelning: 10 Common, 4 Rare, 3 Epic, 1 Legendary.
+const publicBeforeDiscovery = new Set([
+    "GZR-0001", "GZR-0002", "GZR-0003", "GZR-0004", "GZR-0005",
+    "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010",
+    "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
+    "GZR-0033", "GZR-0034", "GZR-0035",
+    "GZR-0042",
+]);
+
+function maskRelic(relic: Relic): Relic {
+    if (isDiscovered(relic) || publicBeforeDiscovery.has(relic.serial)) return relic;
+    return {
+        ...relic,
+        name: "Okänd relik",
+        tier: null,
+        culture: null,
+        material: null,
+        productionBonusBasisPoints: 0,
+        xpBonusBasisPoints: 0,
+        warTickets: 0,
+    };
+}
+
 function isSecret(relic: Relic) {
     return relic.name.toLocaleLowerCase("sv-SE") === "okänd relik";
 }
@@ -103,14 +127,16 @@ export default function RelicArchive() {
         return aSerial - bSerial;
     }), [relics]);
 
-    const visibleRelics = useMemo(() => sortedRelics.filter((relic) => {
+    const publicRelics = useMemo(() => sortedRelics.map(maskRelic), [sortedRelics]);
+
+    const visibleRelics = useMemo(() => publicRelics.filter((relic) => {
         if (filter === "DISCOVERED") return isDiscovered(relic);
         if (filter === "UNDISCOVERED") return !isDiscovered(relic);
         return true;
-    }), [filter, sortedRelics]);
+    }), [filter, publicRelics]);
 
     const discovered = relics.filter(isDiscovered).length;
-    const secret = relics.filter(isSecret).length;
+    const secret = publicRelics.filter(isSecret).length;
     const released = relics.filter((relic) => relic.status !== "UNRELEASED").length;
 
     if (loading) {
@@ -136,6 +162,14 @@ export default function RelicArchive() {
                     <button className={filter === "DISCOVERED" ? styles.filterActive : ""} onClick={() => setFilter("DISCOVERED")}>Upptäckta <span>{discovered}</span></button>
                     <button className={filter === "UNDISCOVERED" ? styles.filterActive : ""} onClick={() => setFilter("UNDISCOVERED")}>Ej upptäckta <span>{relics.length - discovered}</span></button>
                 </div>
+
+                <div className={styles.rarityLegend} aria-label="Relikrariteter">
+                    <span data-tier="COMMON"><i />Common</span>
+                    <span data-tier="RARE"><i />Rare</span>
+                    <span data-tier="EPIC"><i />Epic</span>
+                    <span data-tier="LEGENDARY"><i />Legendary</span>
+                    <span data-tier="MYTHIC"><i />Mythic</span>
+                </div>
             </section>
 
             <section className={styles.dexIntro}>
@@ -143,7 +177,7 @@ export default function RelicArchive() {
                     <span className={styles.eyebrow}>Relic Index</span>
                     <h2>{filter === "ALL" ? "Alla registrerade reliker" : filter === "DISCOVERED" ? "Upptäckta reliker" : "Reliker som återstår"}</h2>
                 </div>
-                <p>Upptäckta reliker fylls i med sin identitet och nuvarande historia. Hemliga reliker förblir maskerade tills världen avslöjar dem.</p>
+                <p>En liten del av arkivet är känt från början. Resten avslöjas först när spelarna faktiskt hittar dem i världen.</p>
             </section>
 
             <div className={styles.relicGrid}>

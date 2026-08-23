@@ -164,6 +164,46 @@
     color: #d6e3d2;
 }
 
+.rarityLegend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.rarityLegend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.025);
+    color: #8f9b91;
+    font-size: 0.61rem;
+    font-weight: 820;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.rarityLegend i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #87918a;
+    box-shadow: 0 0 12px currentColor;
+}
+
+.rarityLegend span[data-tier="COMMON"] { color: #b9c1bb; }
+.rarityLegend span[data-tier="COMMON"] i { background: #aeb7b1; }
+.rarityLegend span[data-tier="RARE"] { color: #7db6ff; }
+.rarityLegend span[data-tier="RARE"] i { background: #5e9de9; }
+.rarityLegend span[data-tier="EPIC"] { color: #cf8cff; }
+.rarityLegend span[data-tier="EPIC"] i { background: #af61e3; }
+.rarityLegend span[data-tier="LEGENDARY"] { color: #f2c368; }
+.rarityLegend span[data-tier="LEGENDARY"] i { background: #d89a33; }
+.rarityLegend span[data-tier="MYTHIC"] { color: #f0787e; }
+.rarityLegend span[data-tier="MYTHIC"] i { background: #c84f57; }
+
 .dexIntro {
     display: flex;
     align-items: end;
@@ -219,10 +259,41 @@
     box-shadow: 0 0 0 28px rgba(148, 184, 135, 0.018), 0 0 0 58px rgba(148, 184, 135, 0.012);
 }
 
-.discoveredCard[data-tier="RARE"] { border-color: rgba(87, 137, 196, 0.32); }
-.discoveredCard[data-tier="EPIC"] { border-color: rgba(159, 94, 204, 0.34); }
-.discoveredCard[data-tier="LEGENDARY"] { border-color: rgba(210, 157, 64, 0.38); }
-.discoveredCard[data-tier="MYTHIC"] { border-color: rgba(172, 60, 62, 0.42); }
+.relicCard[data-tier="COMMON"] {
+    border-color: rgba(183, 194, 186, 0.22);
+    background: radial-gradient(circle at 82% 12%, rgba(190, 201, 193, 0.07), transparent 38%), linear-gradient(155deg, rgba(28, 36, 30, 0.98), rgba(13, 19, 15, 0.99));
+}
+.relicCard[data-tier="RARE"] {
+    border-color: rgba(88, 151, 224, 0.38);
+    background: radial-gradient(circle at 82% 12%, rgba(65, 133, 221, 0.17), transparent 40%), linear-gradient(155deg, rgba(20, 33, 49, 0.97), rgba(11, 18, 27, 0.99));
+}
+.relicCard[data-tier="EPIC"] {
+    border-color: rgba(177, 92, 224, 0.42);
+    background: radial-gradient(circle at 82% 12%, rgba(163, 73, 215, 0.19), transparent 40%), linear-gradient(155deg, rgba(39, 24, 47, 0.97), rgba(20, 13, 25, 0.99));
+}
+.relicCard[data-tier="LEGENDARY"] {
+    border-color: rgba(221, 163, 55, 0.46);
+    background: radial-gradient(circle at 82% 12%, rgba(224, 156, 42, 0.20), transparent 40%), linear-gradient(155deg, rgba(48, 36, 18, 0.97), rgba(25, 19, 10, 0.99));
+}
+.relicCard[data-tier="MYTHIC"] {
+    border-color: rgba(204, 70, 78, 0.5);
+    background: radial-gradient(circle at 82% 12%, rgba(194, 54, 64, 0.23), transparent 40%), linear-gradient(155deg, rgba(49, 20, 24, 0.98), rgba(25, 10, 13, 0.99));
+}
+
+.relicCard[data-tier="RARE"] .relicMark { border-color: rgba(94, 157, 232, 0.32); background: rgba(61, 126, 207, 0.13); color: #83b9f5; }
+.relicCard[data-tier="EPIC"] .relicMark { border-color: rgba(184, 101, 229, 0.34); background: rgba(155, 69, 201, 0.14); color: #d398f1; }
+.relicCard[data-tier="LEGENDARY"] .relicMark { border-color: rgba(227, 171, 67, 0.36); background: rgba(195, 130, 31, 0.14); color: #edc46f; }
+.relicCard[data-tier="MYTHIC"] .relicMark { border-color: rgba(215, 78, 86, 0.38); background: rgba(180, 46, 55, 0.16); color: #ed7b82; }
+
+.relicCard[data-tier="RARE"] .tierBadge { background: rgba(63, 129, 211, 0.18); color: #8fc2ff; }
+.relicCard[data-tier="EPIC"] .tierBadge { background: rgba(158, 72, 205, 0.2); color: #d79bfa; }
+.relicCard[data-tier="LEGENDARY"] .tierBadge { background: rgba(198, 134, 31, 0.2); color: #efc36d; }
+.relicCard[data-tier="MYTHIC"] .tierBadge { background: rgba(181, 49, 58, 0.22); color: #ef858b; }
+
+.relicCard[data-tier="RARE"] .bonus { color: #8dbcf1; border-top-color: rgba(83, 145, 216, 0.17); }
+.relicCard[data-tier="EPIC"] .bonus { color: #d098ee; border-top-color: rgba(174, 90, 220, 0.18); }
+.relicCard[data-tier="LEGENDARY"] .bonus { color: #e9bf69; border-top-color: rgba(219, 159, 52, 0.18); }
+.relicCard[data-tier="MYTHIC"] .bonus { color: #e57c83; border-top-color: rgba(204, 66, 76, 0.2); }
 
 .undiscoveredCard {
     background: linear-gradient(155deg, rgba(20, 28, 22, 0.88), rgba(10, 15, 12, 0.98));
