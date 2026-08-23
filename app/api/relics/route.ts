@@ -1,33 +1,94 @@
 import { NextResponse } from "next/server";
 
-const ENGINE_API_URL =
-    process.env.GAMEZONE_ENGINE_API_URL ?? "http://184.170.201.111:8765";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+const FALLBACK_ENGINE_URLS = [
+    "http://162.120.2.221:25569",
+    "http://184.170.201.111:25569",
+    "http://184.170.201.111:8765",
+];
+
+function engineCandidates() {
+    const configured = [
+        process.env.GAMEZONE_ENGINE_RELIC_API_URL,
+        process.env.GAMEZONE_ENGINE_API_URL,
+        ...FALLBACK_ENGINE_URLS,
+    ];
+
+    return [...new Set(
+        configured
+            .filter((value): value is string => Boolean(value?.trim()))
+            .map((value) => value.trim().replace(/\/$/, "")),
+    )];
+}
+
+type EnginePayload = {
+    status?: string;
+    data?: unknown;
+    error?: unknown;
+};
 
 export async function GET() {
-    try {
-        const response = await fetch(`${ENGINE_API_URL.replace(/\/$/, "")}/api/v1/relics`, {
-            cache: "no-store",
-        });
+    const failures: string[] = [];
 
-        const body = await response.text();
-
-        return new NextResponse(body, {
-            status: response.status,
-            headers: {
-                "content-type": response.headers.get("content-type") ?? "application/json; charset=utf-8",
-                "cache-control": "no-store",
-            },
-        });
-    } catch {
-        return NextResponse.json(
-            {
-                status: "error",
-                error: {
-                    code: "ENGINE_UNAVAILABLE",
-                    message: "Relikarkivet kunde inte nå GameZone Engine.",
+    for (const engineApi of engineCandidates()) {
+        try {
+            const response = await fetch(`${engineApi}/api/v1/relics`, {
+                cache: "no-store",
+                signal: AbortSignal.timeout(5_000),
+                headers: {
+                    accept: "application/json",
                 },
-            },
-            { status: 503 },
-        );
+            });
+
+            const text = await response.text();
+            let payload: EnginePayload | null = null;
+
+            try {
+                payload = text ? JSON.parse(text) as EnginePayload : null;
+            } catch {
+                failures.push(`${engineApi}: invalid JSON (${response.status})`);
+                continue;
+            }
+
+            if (!response.ok) {
+                failures.push(`${engineApi}: HTTP ${response.status}`);
+                continue;
+            }
+
+            if (!payload || !Array.isArray(payload.data)) {
+                failures.push(`${engineApi}: response did not contain relic data`);
+                continue;
+            }
+
+            return NextResponse.json(payload, {
+                status: 200,
+                headers: {
+                    "Cache-Control": "no-store, no-cache, must-revalidate",
+                },
+            });
+        } catch (error) {
+            const message = error instanceof Error ? error.message : "unknown error";
+            failures.push(`${engineApi}: ${message}`);
+        }
     }
+
+    console.error("Relic archive could not reach GameZone Engine", failures);
+
+    return NextResponse.json(
+        {
+            status: "error",
+            error: {
+                code: "ENGINE_UNAVAILABLE",
+                message: "Relikarkivet kunde inte nå GameZone Engine.",
+            },
+        },
+        {
+            status: 503,
+            headers: {
+                "Cache-Control": "no-store, no-cache, must-revalidate",
+            },
+        },
+    );
 }
