@@ -28,7 +28,7 @@
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(430px, 1.1fr);
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
     gap: 68px;
     align-items: center;
     padding: 66px 0 64px;
@@ -71,7 +71,7 @@
 
 .hero h1 {
     margin: 10px 0 0;
-    font-size: clamp(3.6rem, 8vw, 7rem);
+    font-size: clamp(3.15rem, 5.7vw, 5.8rem);
     font-weight: 920;
     letter-spacing: -0.075em;
     line-height: 0.9;
@@ -365,5 +365,20 @@
     .relicSystemCta > a {
         width: 100%;
         justify-content: space-between;
+    }
+}
+
+.heroCopy {
+    min-width: 0;
+}
+
+.hero h1 {
+    max-width: 100%;
+    overflow-wrap: normal;
+}
+
+@media (min-width: 901px) {
+    .heroCopy {
+        padding-right: 10px;
     }
 }

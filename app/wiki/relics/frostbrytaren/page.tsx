@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import styles from "./page.module.css";
+import relicImage from "../../_assets/frostbrytaren.png";
 
 export const metadata: Metadata = {
     title: "Frostbrytaren | GameZone Wiki",
@@ -50,7 +51,7 @@ export default function FrostbrytarenWikiPage() {
                         <div className={styles.art}>
                             <div className={styles.artGlow} aria-hidden="true" />
                             <Image
-                                src="/relics/frostbrytaren.png"
+                                src={relicImage}
                                 alt="Frostbrytaren, en isblå hacka från Andvari"
                                 width={1536}
                                 height={1136}

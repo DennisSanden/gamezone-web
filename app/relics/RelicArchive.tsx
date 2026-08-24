@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import minersCompanionImage from "../wiki/relics/_assets/miners-companion.png";
+import frostbrytarenImage from "../wiki/relics/_assets/frostbrytaren.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -226,12 +228,12 @@ export default function RelicArchive() {
                                 </div>
                             ) : relic.serial === "GZR-0001" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src="/relics/miners-companion.png" alt="" />
+                                    <img src={minersCompanionImage.src} alt="" />
                                     <span className={styles.artCaption}>IRON PICKAXE</span>
                                 </div>
                             ) : relic.serial === "GZR-0019" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src="/relics/frostbrytaren.png" alt="" />
+                                    <img src={frostbrytarenImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND PICKAXE</span>
                                 </div>
                             ) : (
