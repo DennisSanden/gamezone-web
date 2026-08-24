@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import desertPiercerImage from "../wiki/relics/assets/desert-piercer.png";
 import legionnairesBladeImage from "../wiki/relics/assets/legionnaires-blade.png";
 import theRedStandardImage from "../wiki/relics/assets/the-red-standard.png";
 import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
@@ -111,6 +112,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0005") return "/wiki/relics/legionnaires-blade";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     if (relic.serial === "GZR-0006") return "/wiki/relics/the-red-standard";
+    if (relic.serial === "GZR-0007") return "/wiki/relics/desert-piercer";
     return null;
 }
 
@@ -270,6 +272,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={theRedStandardImage.src} alt="" />
                                     <span className={styles.artCaption}>RED BANNER</span>
+                                </div>
+                            ) : relic.serial === "GZR-0007" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={desertPiercerImage.src} alt="" />
+                                    <span className={styles.artCaption}>CROSSBOW</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
