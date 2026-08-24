@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { getApprovedLiveStreams } from "@/lib/twitch";
-import { APPROVED_STREAMERS } from "@/lib/streamers";
+import { getTwitchCreators } from "@/lib/twitch";
 import { getLeaderboard, getServerStatus, type LeaderboardEntry } from "@/lib/home-data";
 import styles from "./HomeDashboard.module.css";
 
@@ -66,14 +65,14 @@ function MiniBoard({ title, eyebrow, icon, entries, suffix, tone, linkCompanies 
 }
 
 export async function HomeDashboard() {
-  const [liveStreams, serverStatus, richest, residents, sales] = await Promise.all([
-    getApprovedLiveStreams(),
+  const [twitch, serverStatus, richest, residents, sales] = await Promise.all([
+    getTwitchCreators(),
     getServerStatus(),
     getLeaderboard("player-coins"),
     getLeaderboard("settlement-members"),
     getLeaderboard("company-sales"),
   ]);
-  const streamsByLogin = new Map(liveStreams.map((item) => [item.login, item]));
+  const creators = [...twitch.creators].sort((a, b) => Number(b.live) - Number(a.live));
 
   return <div className={styles.page}>
     <section className={styles.hero}>
@@ -127,28 +126,27 @@ export async function HomeDashboard() {
           <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli creator →</a>
         </div>
         <div className={styles.creatorGrid}>
-          {APPROVED_STREAMERS.slice(0, 3).map((creator) => {
-            const stream = streamsByLogin.get(creator.twitchLogin);
-            return <a key={creator.twitchLogin} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
-              <div className={styles.creatorPreview} style={stream ? { backgroundImage: `url(${stream.thumbnailUrl})` } : undefined}>
-                <span className={stream ? styles.liveBadge : styles.offlineBadge}>{stream ? "LIVE" : "CREATOR"}</span>
-                <span className={styles.creatorAvatar}>{creator.initials}</span>
+          {creators.slice(0, 3).map((creator) => {
+            return <a key={creator.login} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
+              <div className={styles.creatorPreview} style={creator.live && creator.thumbnailUrl ? { backgroundImage: `url(${creator.thumbnailUrl})` } : undefined}>
+                <span className={creator.live ? styles.liveBadge : styles.offlineBadge}>{creator.live ? "LIVE" : "CREATOR"}</span>
+                <span className={styles.creatorAvatar}>{creator.displayName.slice(0, 2).toUpperCase()}</span>
               </div>
               <div className={styles.creatorBody}>
                 <strong>{creator.displayName}</strong>
-                <small>{stream ? `${formatValue(stream.viewerCount)} tittare just nu` : "GameZone Creator"}</small>
-                <span>{stream ? "Titta nu" : "Besök kanalen"} →</span>
+                <small>{creator.live ? `${formatValue(creator.viewerCount)} tittare just nu` : `twitch.tv/${creator.login}`}</small>
+                <span>{creator.live ? "Titta nu" : "Besök kanalen"} →</span>
               </div>
             </a>;
           })}
 
-          {Array.from({ length: Math.max(0, 3 - APPROVED_STREAMERS.length) }).map((_, index) =>
+          {Array.from({ length: Math.max(0, 3 - creators.length) }).map((_, index) =>
             <a key={`creator-slot-${index}`} className={`${styles.creatorCard} ${styles.creatorInviteCard}`} href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">
               <div className={styles.creatorInviteIcon}>+</div>
               <div className={styles.creatorBody}>
                 <strong>Skapar du innehåll?</strong>
-                <small>Streama eller gör videos från GameZone</small>
-                <span>Ansök som creator →</span>
+                <small>Koppla Twitch med /twitch link</small>
+                <span>Bli GameZone Creator →</span>
               </div>
             </a>
           )}
