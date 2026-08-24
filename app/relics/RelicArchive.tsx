@@ -3,9 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
-import desertPiercerImage from "../wiki/relics/assets/desert-piercer.png";
-import legionnairesBladeImage from "../wiki/relics/assets/legionnaires-blade.png";
-import theRedStandardImage from "../wiki/relics/assets/the-red-standard.png";
+import marchersBootsImage from "../wiki/relics/assets/marchers-boots.png";
 import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
 import frostbrytarenImage from "../wiki/relics/assets/frostbrytaren.png";
 import frostbiteImage from "../wiki/relics/assets/frostbite.png";
@@ -109,10 +107,8 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0002") return "/wiki/relics/frostbite";
     if (relic.serial === "GZR-0003") return "/wiki/relics/book-of-fortune";
     if (relic.serial === "GZR-0004") return "/wiki/relics/deepdelver";
-    if (relic.serial === "GZR-0005") return "/wiki/relics/legionnaires-blade";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
-    if (relic.serial === "GZR-0006") return "/wiki/relics/the-red-standard";
-    if (relic.serial === "GZR-0007") return "/wiki/relics/desert-piercer";
+    if (relic.serial === "GZR-0008") return "/wiki/relics/marchers-boots";
     return null;
 }
 
@@ -263,20 +259,10 @@ export default function RelicArchive() {
                                     <img src={frostbrytarenImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND PICKAXE</span>
                                 </div>
-                            ) : relic.serial === "GZR-0005" ? (
+                            ) : relic.serial === "GZR-0008" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={legionnairesBladeImage.src} alt="" />
-                                    <span className={styles.artCaption}>IRON SWORD</span>
-                                </div>
-                            ) : relic.serial === "GZR-0006" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={theRedStandardImage.src} alt="" />
-                                    <span className={styles.artCaption}>RED BANNER</span>
-                                </div>
-                            ) : relic.serial === "GZR-0007" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={desertPiercerImage.src} alt="" />
-                                    <span className={styles.artCaption}>CROSSBOW</span>
+                                    <img src={marchersBootsImage.src} alt="" />
+                                    <span className={styles.artCaption}>IRON BOOTS</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
