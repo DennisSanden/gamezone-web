@@ -96,6 +96,11 @@ function relicGlyph(relic: Relic) {
     return "◆";
 }
 
+function relicWikiHref(relic: Relic) {
+    if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
+    return null;
+}
+
 function statusLabel(relic: Relic) {
     if (isDiscovered(relic)) return "Upptäckt";
     if (isSecret(relic)) return "Okänd";
@@ -202,11 +207,12 @@ export default function RelicArchive() {
                     const bonus = bonusSummary(relic);
                     const tier = relic.tier ? tierLabels[relic.tier] : null;
 
-                    return (
+                    const wikiHref = relicWikiHref(relic);
+
+                    const card = (
                         <article
-                            className={`${styles.relicCard} ${discoveredRelic ? styles.discoveredCard : styles.undiscoveredCard} ${secretRelic ? styles.secretCard : ""}`}
+                            className={`${styles.relicCard} ${discoveredRelic ? styles.discoveredCard : styles.undiscoveredCard} ${secretRelic ? styles.secretCard : ""} ${wikiHref ? styles.clickableCard : ""}`}
                             data-tier={relic.tier ?? "UNKNOWN"}
-                            key={relic.serial}
                         >
                             <div className={styles.cardTopline}>
                                 <span className={styles.serial}>{relic.serial}</span>
@@ -216,6 +222,11 @@ export default function RelicArchive() {
                             {secretRelic ? (
                                 <div className={`${styles.relicArt} ${styles.secretArt}`} aria-hidden="true">
                                     <span className={styles.secretGlyph}>?</span>
+                                </div>
+                            ) : relic.serial === "GZR-0019" ? (
+                                <div className={`${styles.relicArt} ${styles.frostbrytarenPreview}`} aria-hidden="true">
+                                    <img src="/relics/frostbrytaren.png" alt="" />
+                                    <span className={styles.artCaption}>DIAMOND PICKAXE</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
@@ -245,7 +256,22 @@ export default function RelicArchive() {
 
                                 {bonus && !secretRelic && <p className={styles.bonus}>{bonus}</p>}
                             </div>
+                            {wikiHref && (
+                                <span className={styles.cardLinkHint}>
+                                    Öppna reliksidan <span aria-hidden="true">→</span>
+                                </span>
+                            )}
                         </article>
+                    );
+
+                    return wikiHref ? (
+                        <Link className={styles.cardLink} href={wikiHref} key={relic.serial}>
+                            {card}
+                        </Link>
+                    ) : (
+                        <div className={styles.cardShell} key={relic.serial}>
+                            {card}
+                        </div>
                     );
                 })}
             </div>
