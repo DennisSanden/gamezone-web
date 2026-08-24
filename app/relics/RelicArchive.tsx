@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
 import frostbrytarenImage from "../wiki/relics/assets/frostbrytaren.png";
 import bookOfFortuneImage from "../wiki/relics/assets/book-of-fortune.png";
+import deepdelverImage from "../wiki/relics/assets/deepdelver.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -102,6 +103,7 @@ function relicGlyph(relic: Relic) {
 function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0001") return "/wiki/relics/miners-companion";
     if (relic.serial === "GZR-0003") return "/wiki/relics/book-of-fortune";
+    if (relic.serial === "GZR-0004") return "/wiki/relics/deepdelver";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     return null;
 }
@@ -237,6 +239,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={bookOfFortuneImage.src} alt="" />
                                     <span className={styles.artCaption}>WRITTEN BOOK</span>
+                                </div>
+                            ) : relic.serial === "GZR-0004" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={deepdelverImage.src} alt="" />
+                                    <span className={styles.artCaption}>GOLDEN PICKAXE</span>
                                 </div>
                             ) : relic.serial === "GZR-0019" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
