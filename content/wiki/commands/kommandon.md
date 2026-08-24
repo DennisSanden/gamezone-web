@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "1.9"
+version: "2.0"
 engineVersion: "Commands"
-updatedAt: "2026-08-21"
+updatedAt: "2026-08-24"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -36,6 +36,16 @@ Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 ```
 
 Öppnar Daily Rewards där du kan hämta dagens Coins och ett slumpmässigt item. Belöningarna ökar från dag 1 till den stora jackpot-belöningen på dag 7. Läs hela guiden på sidan [Daily Rewards](/wiki/economy/daily-rewards).
+
+## Twitch
+
+```text
+/twitch link
+/twitch status
+/twitch unlink
+```
+
+Koppla ditt Twitchkonto till GameZone. Kopplade spelare kan tjäna Coins genom att titta på godkända GameZone Creators, och godkända kreatörer kan visas automatiskt på hemsidan när de är live. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
 
 ## Teleport
 

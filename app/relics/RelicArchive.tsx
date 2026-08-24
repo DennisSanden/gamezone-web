@@ -107,6 +107,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0002") return "/wiki/relics/frostbite";
     if (relic.serial === "GZR-0003") return "/wiki/relics/book-of-fortune";
     if (relic.serial === "GZR-0004") return "/wiki/relics/deepdelver";
+    if (relic.serial === "GZR-0005") return "/wiki/relics/legionnaires-blade";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     if (relic.serial === "GZR-0006") return "/wiki/relics/the-red-standard";
     return null;
