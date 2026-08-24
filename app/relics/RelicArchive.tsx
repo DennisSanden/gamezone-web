@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import bookOfTheAncientsImage from "../wiki/relics/assets/book-of-the-ancients.png";
 import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
 import frostbrytarenImage from "../wiki/relics/assets/frostbrytaren.png";
 import frostbiteImage from "../wiki/relics/assets/frostbite.png";
@@ -107,6 +108,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0003") return "/wiki/relics/book-of-fortune";
     if (relic.serial === "GZR-0004") return "/wiki/relics/deepdelver";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
+    if (relic.serial === "GZR-0030") return "/wiki/relics/book-of-the-ancients";
     return null;
 }
 
@@ -256,6 +258,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={frostbrytarenImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND PICKAXE</span>
+                                </div>
+                            ) : relic.serial === "GZR-0030" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={bookOfTheAncientsImage.src} alt="" />
+                                    <span className={styles.artCaption}>WRITTEN BOOK</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
