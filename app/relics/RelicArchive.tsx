@@ -97,6 +97,7 @@ function relicGlyph(relic: Relic) {
 }
 
 function relicWikiHref(relic: Relic) {
+    if (relic.serial === "GZR-0001") return "/wiki/relics/miners-companion";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     return null;
 }
@@ -223,8 +224,13 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.secretArt}`} aria-hidden="true">
                                     <span className={styles.secretGlyph}>?</span>
                                 </div>
+                            ) : relic.serial === "GZR-0001" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src="/relics/miners-companion.png" alt="" />
+                                    <span className={styles.artCaption}>IRON PICKAXE</span>
+                                </div>
                             ) : relic.serial === "GZR-0019" ? (
-                                <div className={`${styles.relicArt} ${styles.frostbrytarenPreview}`} aria-hidden="true">
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src="/relics/frostbrytaren.png" alt="" />
                                     <span className={styles.artCaption}>DIAMOND PICKAXE</span>
                                 </div>
