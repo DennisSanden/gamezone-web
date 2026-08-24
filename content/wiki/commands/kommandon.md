@@ -41,6 +41,7 @@ Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 
 ```text
 /twitch link
+/twitch creator
 /twitch status
 /twitch unlink
 ```

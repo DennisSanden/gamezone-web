@@ -19,7 +19,9 @@ export default async function LivePage() {
     return <MainLayout><div className={styles.page}>
         <section className={styles.hero}><PageContainer className={styles.heroInner}>
             <div><span className={styles.eyebrow}>GameZone Live</span><h1>Titta på servern. Få Coins.</h1>
-                <p>Koppla ditt Twitchkonto med <strong>/twitch link</strong>. När en godkänd GameZone Creator streamar Minecraft får du {new Intl.NumberFormat("sv-SE").format(twitch.rewardCoins)} Coins för varje {twitch.rewardMinutes} minuter du är närvarande i streamens Twitch-chat.</p>
+                <p>Koppla ditt Twitchkonto med <strong>/twitch link</strong>. När en godkänd GameZone Creator är live från GameZone får du {new Intl.NumberFormat("sv-SE").format(twitch.rewardCoins)} Coins för varje {twitch.rewardMinutes} minuter du är närvarande i streamens Twitch-chat. Belöningen är global, så flera öppna streams ger inte flera utbetalningar.</p>
+                {twitch.rewardsEnabled && <p>Max {new Intl.NumberFormat("sv-SE").format(twitch.rewardHourlyCap)} Coins per timme och {new Intl.NumberFormat("sv-SE").format(twitch.rewardDailyCap)} Coins per 24 timmar från Twitch.</p>}
+                {!twitch.rewardsEnabled && <p><strong>Twitch-belöningar är tillfälligt avstängda.</strong> Live-streams visas fortfarande.</p>}
             </div>
             <div className={styles.liveSummary}><span className={liveCount > 0 ? styles.summaryDotLive : styles.summaryDotOffline}/>
                 <strong>{liveCount > 0 ? `${liveCount} live just nu` : "Ingen är live just nu"}</strong>

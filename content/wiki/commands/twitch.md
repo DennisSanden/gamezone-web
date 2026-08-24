@@ -3,15 +3,18 @@ title: "Twitch"
 description: "Koppla ditt Twitchkonto till GameZone, tjäna Coins genom att titta och bli synlig som godkänd GameZone Creator."
 category: "Kommandon"
 order: 2
-version: "1.0"
+version: "1.1"
 engineVersion: "Twitch Integration"
 updatedAt: "2026-08-24"
 infoboxTitle: "Twitch"
 infobox:
   koppla: "/twitch link"
   status: "/twitch status"
+  creator: "/twitch creator"
   kopplaBort: "/twitch unlink"
   tittarbelöning: "1 000 Coins / 10 min"
+  timtak: "6 000 Coins"
+  dygnstak: "30 000 Coins"
   creatorAnnouncement: "Var 30:e minut"
 ---
 
@@ -56,7 +59,7 @@ När systemet har registrerat 10 minuters tittartid får du:
 
 **1 000 Coins**
 
-Belöningen kan fortsätta tjänas in medan den godkända GameZone Creatorn är live och din närvaro registreras.
+Tittartiden är global per spelare. Om du har flera GameZone-streams öppna samtidigt räknas tiden fortfarande bara en gång. Du kan få högst **6 000 Coins per timme** och **30 000 Coins per 24 timmar** från Twitchsystemet.
 
 Du behöver inte vara online på Minecraftservern för att få dina Coins. Belöningen kopplas till ditt GameZonekonto genom Twitchkopplingen.
 
@@ -85,11 +88,19 @@ Att koppla Twitchkontot gör dig **inte automatiskt** till GameZone Creator.
 
 En GameZone-admin måste godkänna dig som creator. Detta gör att bara godkända GameZone-streamers kan visas och annonseras genom serverns officiella Twitchsystem.
 
-### 3. Gå live
+### 3. Aktivera Creator-behörighet
 
-När du är godkänd startar du din Twitchstream som vanligt och streamar i kategorin **Minecraft**.
+När en admin har godkänt dig skriver du:
 
-Du behöver inte aktivera något särskilt streamkommando på GameZone varje gång du går live. Systemet kontrollerar automatiskt om en godkänd creator streamar.
+`/twitch creator`
+
+Öppna länken och godkänn Twitchbehörigheten. Den här extra behörigheten ges bara till creators och används för att kontrollera vilka kopplade Twitchkonton som finns i din chat.
+
+### 4. Gå live från GameZone
+
+Starta din Twitchstream i kategorin **Minecraft** och var samtidigt online på GameZone med det Minecraftkonto som är kopplat till streamern.
+
+GameZone räknar bara streamen som aktiv i vårt Live-system när både Twitchstreamen är live i Minecraft-kategorin och den kopplade creatorn är online på GameZone. Du behöver inte aktivera något kommando varje gång du går live.
 
 ## Vad händer när en GameZone Creator är live?
 
@@ -111,4 +122,4 @@ Som streamer får du inte tittarbelöning från din egen stream.
 
 ### Jag vill streama GameZone
 
-`/twitch link` → koppla ditt streamkonto → bli godkänd av en admin → starta en Minecraftstream på Twitch → GameZone upptäcker streamen automatiskt.
+`/twitch link` → koppla ditt streamkonto → bli godkänd av en admin → `/twitch creator` → starta en Minecraftstream medan du är online på GameZone → streamen visas automatiskt.
