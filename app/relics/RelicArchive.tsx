@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import legionnairesBladeImage from "../wiki/relics/assets/legionnaires-blade.png";
 import theRedStandardImage from "../wiki/relics/assets/the-red-standard.png";
 import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
 import frostbrytarenImage from "../wiki/relics/assets/frostbrytaren.png";
@@ -259,6 +260,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={frostbrytarenImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND PICKAXE</span>
+                                </div>
+                            ) : relic.serial === "GZR-0005" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={legionnairesBladeImage.src} alt="" />
+                                    <span className={styles.artCaption}>IRON SWORD</span>
                                 </div>
                             ) : relic.serial === "GZR-0006" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
