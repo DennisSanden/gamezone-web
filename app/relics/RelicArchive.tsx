@@ -3,8 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
-import minersCompanionImage from "../wiki/relics/_assets/miners-companion.png";
-import frostbrytarenImage from "../wiki/relics/_assets/frostbrytaren.png";
+import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
+import frostbrytarenImage from "../wiki/relics/assets/frostbrytaren.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 

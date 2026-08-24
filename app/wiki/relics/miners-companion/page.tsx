@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import styles from "./page.module.css";
-import relicImage from "../../_assets/miners-companion.png";
+import relicImage from "../assets/miners-companion.png";
 
 export const metadata: Metadata = {
     title: "Miner's Companion | GameZone Wiki",

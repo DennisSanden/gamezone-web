@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainLayout } from "@/components/layout/MainLayout";
 import styles from "./page.module.css";
-import relicImage from "../../_assets/frostbrytaren.png";
+import relicImage from "../assets/frostbrytaren.png";
 
 export const metadata: Metadata = {
     title: "Frostbrytaren | GameZone Wiki",
