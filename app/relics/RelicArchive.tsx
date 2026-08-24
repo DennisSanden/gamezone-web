@@ -4,8 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 import minersCompanionImage from "../wiki/relics/assets/miners-companion.png";
-import frostbiteImage from "../wiki/relics/assets/frostbite.png";
 import frostbrytarenImage from "../wiki/relics/assets/frostbrytaren.png";
+import bookOfFortuneImage from "../wiki/relics/assets/book-of-fortune.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -101,7 +101,7 @@ function relicGlyph(relic: Relic) {
 
 function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0001") return "/wiki/relics/miners-companion";
-    if (relic.serial === "GZR-0002") return "/wiki/relics/frostbite";
+    if (relic.serial === "GZR-0003") return "/wiki/relics/book-of-fortune";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     return null;
 }
@@ -233,10 +233,10 @@ export default function RelicArchive() {
                                     <img src={minersCompanionImage.src} alt="" />
                                     <span className={styles.artCaption}>IRON PICKAXE</span>
                                 </div>
-                            ) : relic.serial === "GZR-0002" ? (
+                            ) : relic.serial === "GZR-0003" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={frostbiteImage.src} alt="" />
-                                    <span className={styles.artCaption}>IRON AXE</span>
+                                    <img src={bookOfFortuneImage.src} alt="" />
+                                    <span className={styles.artCaption}>WRITTEN BOOK</span>
                                 </div>
                             ) : relic.serial === "GZR-0019" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
