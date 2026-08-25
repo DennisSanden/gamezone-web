@@ -43,7 +43,7 @@ Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 /twitch <Twitch-namn>
 ```
 
-Länkar ditt Twitchkonto till din Minecraftspelare via StreamingModule. När du tittar på en registrerad GameZone-streamer kan du få **1 000 Coins per 10 minuters godkänd tittarbelöning**, med ett tak på **6 000 Coins per timme** och **30 000 Coins per 24 timmar**. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
+Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **1 000 GZ Coins per 10 minuter**, upp till **6 000 per timme** och **30 000 per dygn**. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
 
 ## Teleport
 
