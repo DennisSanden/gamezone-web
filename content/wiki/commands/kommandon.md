@@ -40,13 +40,10 @@ Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 ## Twitch
 
 ```text
-/twitch link
-/twitch creator
-/twitch status
-/twitch unlink
+/twitch <Twitch-namn>
 ```
 
-Koppla ditt Twitchkonto till GameZone. Kopplade spelare kan tjäna Coins genom att titta på godkända GameZone Creators, och godkända kreatörer kan visas automatiskt på hemsidan när de är live. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
+Länkar ditt Twitchkonto till din Minecraftspelare via StreamingModule. När du tittar på en registrerad GameZone-streamer kan du få **1 000 Coins per 10 minuters godkänd tittarbelöning**, med ett tak på **6 000 Coins per timme** och **30 000 Coins per 24 timmar**. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
 
 ## Teleport
 

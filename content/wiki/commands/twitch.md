@@ -1,125 +1,123 @@
 ---
 title: "Twitch"
-description: "Koppla ditt Twitchkonto till GameZone, tjäna Coins genom att titta och bli synlig som godkänd GameZone Creator."
+description: "Länka ditt Twitchkonto till GameZone och få Coins när du tittar på godkända GameZone-streamers."
 category: "Kommandon"
 order: 2
-version: "1.1"
-engineVersion: "Twitch Integration"
-updatedAt: "2026-08-24"
+version: "2.0"
+engineVersion: "StreamingModule + GameZoneEngine"
+updatedAt: "2026-08-25"
 infoboxTitle: "Twitch"
 infobox:
-  koppla: "/twitch link"
-  status: "/twitch status"
-  creator: "/twitch creator"
-  kopplaBort: "/twitch unlink"
+  koppla: "/twitch <Twitch-namn>"
   tittarbelöning: "1 000 Coins / 10 min"
   timtak: "6 000 Coins"
   dygnstak: "30 000 Coins"
-  creatorAnnouncement: "Var 30:e minut"
+  system: "StreamingModule"
 ---
 
-## Koppla Twitch till GameZone
+## Twitch på GameZone
 
-Du kan koppla ditt Twitchkonto direkt till ditt Minecraftkonto på GameZone. Samma koppling används oavsett om du är **spelare som vill tjäna Coins genom att titta** eller **kreatör som streamar från servern**.
+GameZone använder **StreamingModule** för att koppla Twitchkonton, registrera tittande och hantera Twitch drops. **GameZoneEngine** tar därefter hand om själva Coin-belöningen och ser till att tim- och dygnstaken följs.
 
-Börja på Minecraftservern med:
+Du behöver alltså inte längre öppna någon extern GameZone-länk eller godkänna Twitch via hemsidan.
 
-`/twitch link`
+## Koppla ditt Twitchkonto
 
-Du får en personlig engångslänk. Öppna länken och logga in med det Twitchkonto du vill koppla till ditt Minecraftkonto.
+Skriv på Minecraftservern:
 
-När kopplingen är klar kan du kontrollera den med:
+`/twitch <ditt Twitch-namn>`
 
-`/twitch status`
+Exempel:
 
-Vill du ta bort kopplingen använder du:
+`/twitch DennisPåTwitch`
 
-`/twitch unlink`
+När kopplingen lyckas får du en bekräftelse i Minecraftchatten.
 
 > [!IMPORTANT]
-> Koppla det Twitchkonto du faktiskt använder. Ett Twitchkonto kan inte användas för att registrera tittartid åt flera Minecraftkonton.
+> Ange Twitchkontot som du faktiskt använder när du tittar på GameZone-streams. Kopplingen mellan Minecraftspelaren och Twitchkontot används för att avgöra vem som ska få belöningen.
 
-## För spelare, tjäna Coins genom att titta
+## Tjäna Coins genom att titta
 
-När ditt Twitchkonto är kopplat kan du få **1 000 Coins för varje 10 minuter** du tittar på en godkänd GameZone Creator som är live.
+När ditt konto är länkat kan du få **1 000 Coins per 10 minuters registrerad tittartid** hos en streamer som är registrerad i GameZones Twitchsystem.
 
-### 1. Hitta någon som är live
+### 1. Länka Twitch
 
-Gå till [Live](/live) på GameZoneMC.se. Där listas de godkända GameZone Creators som streamar just nu. Aktiva streams kan även visas på startsidan.
+Använd `/twitch <ditt Twitch-namn>` på servern.
 
-### 2. Titta med ditt kopplade Twitchkonto
+### 2. Titta på en registrerad GameZone-streamer
 
-Öppna streamen och se till att du är inloggad på **samma Twitchkonto som du kopplade med `/twitch link`**.
+Öppna streamen på Twitch med det konto du har länkat till din Minecraftspelare.
 
-Du behöver också vara ansluten till streamens Twitchchatt för att GameZone ska kunna registrera din närvaro. Du behöver **inte skriva något i chatten**.
+StreamingModule sköter registreringen av tittartid och drops. Du behöver därför inte använda GameZones gamla `/twitch link`, `/twitch status` eller `/twitch creator`.
 
-### 3. Få din belöning
+### 3. Få Coins
 
-När systemet har registrerat 10 minuters tittartid får du:
+När ett giltigt 10-minutersintervall ger en reward skickar StreamingModule belöningen vidare till GameZoneEngine.
+
+GameZoneEngine ger då:
 
 **1 000 Coins**
 
-Tittartiden är global per spelare. Om du har flera GameZone-streams öppna samtidigt räknas tiden fortfarande bara en gång. Du kan få högst **6 000 Coins per timme** och **30 000 Coins per 24 timmar** från Twitchsystemet.
+GameZoneEngine har dessutom två hårda gränser:
 
-Du behöver inte vara online på Minecraftservern för att få dina Coins. Belöningen kopplas till ditt GameZonekonto genom Twitchkopplingen.
+- **6 000 Coins per timme**
+- **30 000 Coins per 24 timmar**
 
-> [!IMPORTANT]
-> Twitch ger inte GameZone information om exakt vem som har själva videospelaren öppen. Därför används närvaro i streamens Twitchchatt för att verifiera tittartiden. Det kan finnas en kort fördröjning när du ansluter till eller lämnar chatten.
+Om en ny Twitch reward skulle ta dig över någon av gränserna betalas den inte ut.
 
-## För kreatörer
+## Om du är offline på Minecraft
 
-Streamar du GameZone på Twitch kan du bli godkänd som **GameZone Creator**. Då upptäcker systemet automatiskt när du går live och kan marknadsföra streamen både på hemsidan och inne på servern.
+StreamingModule har stöd för offline drops. Du behöver därför inte sitta inne på Minecraftservern hela tiden bara för att titta på en stream. Väntande drops hanteras av StreamingModule när de kan levereras till spelaren.
 
-### 1. Koppla kontot
+## För streamers
 
-Skriv:
+Att länka ditt Twitchkonto med `/twitch <Twitch-namn>` gör inte automatiskt kanalen till en officiell GameZone-stream.
+
+En streamer måste först läggas till i StreamingModules streamerlista av GameZone-administrationen. Det är den listan som avgör vilka streams Twitchsystemet ska arbeta med.
+
+När streamern är registrerad sköter StreamingModule Twitchanslutningen och viewer drops. Den gamla GameZone-lösningen med egen OAuth, `/twitch creator`, Vercel callback och GameZone Creator-token används inte längre.
+
+## Så fungerar systemen tillsammans
+
+Flödet är:
+
+`Twitch → StreamingModule → GameZoneEngine → Coins`
+
+**StreamingModule ansvarar för:**
+
+- kopplingen mellan Twitchnamn och Minecraftspelare
+- registrerade streamers
+- tittartid
+- Twitch drops
+- offline drops
+
+**GameZoneEngine ansvarar för:**
+
+- 1 000 Coins per godkänd reward
+- timtaket på 6 000 Coins
+- dygnstaket på 30 000 Coins
+- att Coin-utbetalningen registreras i GameZones ekonomi
+
+## Gamla Twitchkommandon
+
+Följande kommandon från GameZones tidigare egenutvecklade Twitchsystem används **inte längre**:
 
 `/twitch link`
 
-Öppna länken och logga in med **Twitchkontot du streamar från**.
-
-Kontrollera sedan att kopplingen lyckades:
-
 `/twitch status`
-
-### 2. Bli godkänd
-
-Att koppla Twitchkontot gör dig **inte automatiskt** till GameZone Creator.
-
-En GameZone-admin måste godkänna dig som creator. Detta gör att bara godkända GameZone-streamers kan visas och annonseras genom serverns officiella Twitchsystem.
-
-### 3. Aktivera Creator-behörighet
-
-När en admin har godkänt dig skriver du:
 
 `/twitch creator`
 
-Öppna länken och godkänn Twitchbehörigheten. Den här extra behörigheten ges bara till creators och används för att kontrollera vilka kopplade Twitchkonton som finns i din chat.
+`/twitch unlink`
 
-### 4. Gå live från GameZone
-
-Starta din Twitchstream i kategorin **Minecraft** och var samtidigt online på GameZone med det Minecraftkonto som är kopplat till streamern.
-
-GameZone räknar bara streamen som aktiv i vårt Live-system när både Twitchstreamen är live i Minecraft-kategorin och den kopplade creatorn är online på GameZone. Du behöver inte aktivera något kommando varje gång du går live.
-
-## Vad händer när en GameZone Creator är live?
-
-När systemet upptäcker streamen kan den:
-
-- visas på GameZoneMC.se:s startsida
-- visas under [Live](/live)
-- visa streamtitel, tittarantal och direktlänk till Twitch
-- annonseras på Minecraftservern var **30:e minut** med en klickbar Twitchlänk
-- ge kopplade GameZone-spelare **1 000 Coins per 10 minuters registrerad tittartid**
-
-Som streamer får du inte tittarbelöning från din egen stream.
+Twitchkommandot ägs nu av StreamingModule.
 
 ## Snabbguide
 
-### Jag vill tjäna Coins
+### Jag vill få Coins när jag tittar
 
-`/twitch link` → koppla Twitch → öppna [Live](/live) → titta på en GameZone Creator med ditt kopplade konto → få **1 000 Coins per 10 minuter**.
+`/twitch <ditt Twitch-namn>` → titta på en registrerad GameZone-streamer → StreamingModule registrerar tittartiden → GameZoneEngine betalar ut **1 000 Coins per godkänd 10-minutersreward**.
 
 ### Jag vill streama GameZone
 
-`/twitch link` → koppla ditt streamkonto → bli godkänd av en admin → `/twitch creator` → starta en Minecraftstream medan du är online på GameZone → streamen visas automatiskt.
+Länka ditt Twitchkonto på servern och kontakta GameZone-administrationen för att få kanalen tillagd som streamer i StreamingModule.
