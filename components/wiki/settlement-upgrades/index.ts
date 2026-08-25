@@ -1,6 +1,37 @@
 import type { SettlementUpgrade, SettlementUpgradeKey } from "./types";
+import { enstoringTillLager } from "./enstoring";
+import { lagerTillBy } from "./lager";
+import { byTillBosattning } from "./by";
+import { bosattningTillSamhalle } from "./bosattning";
+import { samhalleTillKoping } from "./samhalle";
+import { kopingTillStad } from "./koping";
+import { stadTillHandelsstad } from "./stad";
+import { handelsstadTillFastning } from "./handelsstad";
+import { fastningTillHuvudstad } from "./fastning";
+import { huvudstadTillGrevskap } from "./huvudstad";
+import { grevskapTillHertigdome } from "./grevskap";
+import { hertigdomeTillNation } from "./hertigdome";
+import { nationTillKungadome } from "./nation";
+import { kungadomeTillImperium } from "./kungadome";
 
 const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
+    // Legacy named settlement pages still reference these keys.
+    // Keep them registered alongside the newer 1-50 progression so old wiki
+    // routes render their panels instead of falling back to an unknown-component warning.
+    "enstoring-till-lager": enstoringTillLager,
+    "lager-till-by": lagerTillBy,
+    "by-till-bosattning": byTillBosattning,
+    "bosattning-till-samhalle": bosattningTillSamhalle,
+    "samhalle-till-koping": samhalleTillKoping,
+    "koping-till-stad": kopingTillStad,
+    "stad-till-handelsstad": stadTillHandelsstad,
+    "handelsstad-till-fastning": handelsstadTillFastning,
+    "fastning-till-huvudstad": fastningTillHuvudstad,
+    "huvudstad-till-grevskap": huvudstadTillGrevskap,
+    "grevskap-till-hertigdome": grevskapTillHertigdome,
+    "hertigdome-till-nation": hertigdomeTillNation,
+    "nation-till-kungadome": nationTillKungadome,
+    "kungadome-till-imperium": kungadomeTillImperium,
     "level-1-till-2": {
         currentLevel: { name: "Enstöring", level: 1 },
         nextLevel: {
