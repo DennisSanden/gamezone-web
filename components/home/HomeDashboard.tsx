@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { getTwitchCreators } from "@/lib/twitch";
+import { APPROVED_STREAMERS } from "@/lib/streamers";
 import { getLeaderboard, getServerStatus, type LeaderboardEntry } from "@/lib/home-data";
 import styles from "./HomeDashboard.module.css";
 
@@ -65,14 +65,13 @@ function MiniBoard({ title, eyebrow, icon, entries, suffix, tone, linkCompanies 
 }
 
 export async function HomeDashboard() {
-  const [twitch, serverStatus, richest, residents, sales] = await Promise.all([
-    getTwitchCreators(),
+  const [serverStatus, richest, residents, sales] = await Promise.all([
     getServerStatus(),
     getLeaderboard("player-coins"),
     getLeaderboard("settlement-members"),
     getLeaderboard("company-sales"),
   ]);
-  const creators = [...twitch.creators].sort((a, b) => Number(b.live) - Number(a.live));
+  const creators = APPROVED_STREAMERS;
 
   return <div className={styles.page}>
     <section className={styles.hero}>
@@ -127,15 +126,15 @@ export async function HomeDashboard() {
         </div>
         <div className={styles.creatorGrid}>
           {creators.slice(0, 3).map((creator) => {
-            return <a key={creator.login} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
-              <div className={styles.creatorPreview} style={creator.live && creator.thumbnailUrl ? { backgroundImage: `url(${creator.thumbnailUrl})` } : undefined}>
-                <span className={creator.live ? styles.liveBadge : styles.offlineBadge}>{creator.live ? "LIVE" : "CREATOR"}</span>
-                <span className={styles.creatorAvatar}>{creator.displayName.slice(0, 2).toUpperCase()}</span>
+            return <a key={creator.twitchLogin} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
+              <div className={styles.creatorPreview}>
+                <span className={styles.offlineBadge}>TWITCH</span>
+                <span className={styles.creatorAvatar}>{creator.initials}</span>
               </div>
               <div className={styles.creatorBody}>
                 <strong>{creator.displayName}</strong>
-                <small>{creator.live ? `${formatValue(creator.viewerCount)} tittare just nu` : `twitch.tv/${creator.login}`}</small>
-                <span>{creator.live ? "Titta nu" : "Besök kanalen"} →</span>
+                <small>{creator.description}</small>
+                <span>Besök kanalen →</span>
               </div>
             </a>;
           })}
@@ -145,7 +144,7 @@ export async function HomeDashboard() {
               <div className={styles.creatorInviteIcon}>+</div>
               <div className={styles.creatorBody}>
                 <strong>Skapar du innehåll?</strong>
-                <small>Koppla Twitch med /twitch link</small>
+                <small>Ansök om att bli GameZone Creator</small>
                 <span>Bli GameZone Creator →</span>
               </div>
             </a>
