@@ -5,7 +5,7 @@ category: "Reliker"
 order: 1
 version: "2.0"
 engineVersion: "Relic System v2"
-updatedAt: "2026-08-23"
+updatedAt: "2026-08-26"
 infoboxTitle: "Server Relics"
 infobox:
   registrerade: "50 reliker"
@@ -66,7 +66,7 @@ Många reliker har enchants. Common och Rare kan ha bra men relativt normala kom
 Exempel:
 
 - **Frostbrytaren**, Diamond Pickaxe med Efficiency IV och Fortune II
-- **The Forgefather's Hammer**, Netherite Pickaxe med Efficiency V, Fortune III och Silk Touch
+- **Gravekeeper**, Diamond Shovel med Efficiency V, Unbreaking III och Fortune III
 - **The Lost Crown of Gondoria**, Golden Helmet med flera Protectiontyper samtidigt
 - **The Hammer of Creation**, Netherite Pickaxe med Efficiency V, Fortune III, Silk Touch och Sharpness V
 
@@ -85,7 +85,7 @@ Exempel är:
 - bättre verktyg
 - ovanliga enchantkombinationer
 - specialfunktioner när föremålet används
-- personlig Productionbonus när en särskild relik hålls i handen
+- ovanlig rustning eller hästrustning som inte normalt går att få med samma relikprofil
 
 ### Settlementreliker
 
@@ -95,9 +95,7 @@ Exempel:
 
 - **The Book of Fortune**, +2% Production
 - **Vaelthor Secrets**, +5% XP
-- **The Art of War**, +5 War Tickets
 - **The Merchant's Scale**, +1 Shopping Chest per företag
-- **The Emperor's Doctrine**, +10 War Tickets och 10% lägre krigsskadestånd
 
 Läs [Settlementbonusar](/wiki/relics/settlementbonusar) för hela systemet.
 

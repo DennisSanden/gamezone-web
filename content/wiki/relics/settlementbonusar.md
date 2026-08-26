@@ -5,7 +5,7 @@ category: "Reliker"
 order: 2
 version: "2.0"
 engineVersion: "Relic System v2"
-updatedAt: "2026-08-23"
+updatedAt: "2026-08-26"
 infoboxTitle: "Relic Bonuses"
 infobox:
   aktivering: "Giltig relik i Settlement Inventory"
@@ -66,10 +66,7 @@ Exempel:
 |---|---:|
 | The Book of Fortune | +2% Production |
 | Book of the Ancients | +1% Production |
-| The Book of Industry | +5% Production |
-| The Royal Treasury | +5% Production |
-| The Golden Testament | +8% Production |
-| The Forbidden Knowledge | +5% Production |
+| The King's Ledger | +3% Production |
 | The Crown of Dominion | +5% Production |
 | The Worldheart | +5% Production |
 
@@ -91,11 +88,6 @@ Vissa reliker gäller bara en specifik produktionskategori.
 +3% Building Materials Production
 ```
 
-**The Prospector's Codex** ger:
-
-```text
-+3% Mining Production
-```
 
 Det innebär att en specialrelik kan vara betydligt mer värdefull för ett settlement som faktiskt använder rätt produktionskategori.
 
@@ -107,8 +99,6 @@ XP-reliker ökar Experience för spelare i settlementet.
 |---|---:|
 | Vaelthor Secrets | +5% XP |
 | Book of the Ancients | +3% XP |
-| The Grimoire of Vaelthor | +7% XP |
-| The Forbidden Knowledge | +5% XP |
 | The Crown of Dominion | +5% XP |
 | The Worldheart | +5% XP |
 
@@ -123,27 +113,12 @@ Vissa Varkeshreliker och Mythicreliker ger extra War Tickets.
 | Relik | Bonus |
 |---|---:|
 | The Red Standard | +2 War Tickets |
-| The Art of War | +5 War Tickets |
-| The Conqueror's Chronicle | +10 War Tickets |
-| The Emperor's Doctrine | +10 War Tickets |
 | The Crown of Dominion | +5 War Tickets |
 | The Worldheart | +10 War Tickets |
 
 Tickets läggs till de övriga ticketbonusar som gäller när ett krig startar.
 
 Läs [Krigssystemet](/wiki/war/krigssystemet) för hur dödsfall och roller förbrukar tickets.
-
-## Krigsskadestånd
-
-**The Emperor's Doctrine** har en extra Legendaryeffekt:
-
-```text
-10% lägre krigsskadestånd
-```
-
-Effekten är kopplad till settlementet som har reliken aktiv som settlementrelik.
-
-Det påverkar inte War Tickets. Boken har både sin ticketbonus och sin separata effekt på krigsskadestånd.
 
 ## Extra Shopping Chests
 
@@ -170,20 +145,6 @@ En relik kan ge flera olika effekter samtidigt.
 +3% XP
 ```
 
-### The Forbidden Knowledge
-
-```text
-+5% Production
-+5% XP
-```
-
-### The Emperor's Doctrine
-
-```text
-+10 War Tickets
-10% lägre krigsskadestånd
-```
-
 ### The Crown of Dominion
 
 ```text
@@ -207,11 +168,6 @@ Alla relikeffekter kräver inte Settlement Inventory.
 
 Exempel:
 
-**The Forgefather's Hammer** ger spelaren:
-
-```text
-+5% personlig Production när reliken hålls i handen
-```
 
 **The Hammer of Creation** ger:
 

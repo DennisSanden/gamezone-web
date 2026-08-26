@@ -5,7 +5,7 @@ category: "Reliker"
 order: 5
 version: "2.0"
 engineVersion: "Relic System v2"
-updatedAt: "2026-08-23"
+updatedAt: "2026-08-26"
 infoboxTitle: "Relic Identity"
 infobox:
   tier: "Common till Mythic"
@@ -98,7 +98,7 @@ Engine kan behandla den som en ogiltig kvarleva istället för en aktiv relik.
 Den kan exempelvis visas som:
 
 ```text
-Ogiltig kvarleva av The Golden Testament
+Ogiltig kvarleva av Stormhoof
 Denna relikinstans är inte längre giltig.
 ```
 
