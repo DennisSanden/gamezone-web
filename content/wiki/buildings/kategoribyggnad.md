@@ -5,10 +5,10 @@ category: "Byggnader"
 order: 3
 version: "1.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-08-26"
 infoboxTitle: "Kategoribyggnad"
 infobox:
-  nivåkrav: "Settlementnivå 3"
+  nivåkrav: "Settlementnivå 2"
   kostnad: "10 000 Coins"
   storlek: "11×11"
   bonus: "+5 % i vald kategori"
@@ -16,9 +16,9 @@ infobox:
 
 ## Vad är Kategoribyggnaden?
 
-På settlementnivå 3 kan settlementet bygga den **Kategoribyggnad** som hör till dess valda produktionskategori.
+På settlementnivå 2 kan settlementet bygga den **Kategoribyggnad** som hör till dess aktiva produktionskategori.
 
-Byggnaden ger **+5 % produktionsbonus inom settlementets valda kategori**.
+Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategoribyggnaden är alltså inte ett krav för att få Coins. När rätt byggnad är färdigställd ger den istället **+5 % produktionsbonus inom settlementets aktiva kategori**.
 
 | Kategori | Byggnad |
 |---|---|
@@ -32,7 +32,7 @@ Byggnaden ger **+5 % produktionsbonus inom settlementets valda kategori**.
 
 ## Krav
 
-- Settlementnivå: **3 eller högre**
+- Settlementnivå: **2 eller högre**
 - Licens: **10 000 Coins**
 - Storlek: **11×11**
 - Väggar: **minst 70 %**
@@ -43,4 +43,10 @@ Byggnaden ger **+5 % produktionsbonus inom settlementets valda kategori**.
 
 <BuildingRequirementsTable building="kategoribyggnad" />
 
-Bonusen aktiveras först när den fysiska byggnaden har godkänts med `/building complete`.
+Den extra **+5 % produktionsbonusen** aktiveras först när den fysiska byggnaden har godkänts med `/building complete`.
+
+> [!IMPORTANT]
+> Kategoribyggnader ger bara sin **+5 % bonus** när byggnaden hör till settlementets aktiva kategori. Byter settlementet kategori fortsätter den nya kategorin att ge vanliga Coins direkt, även om den nya kategoribyggnaden inte är byggd. Den gamla byggnaden ligger kvar och blir aktiv igen om settlementet senare byter tillbaka.
+
+> [!NOTE]
+> **Laboratorium** är en extra bonusbyggnad för Alkemi. Den krävs inte för att alkemiprodukter ska ge Coins.

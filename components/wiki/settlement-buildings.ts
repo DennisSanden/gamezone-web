@@ -105,7 +105,7 @@ const settlementBuildings: Record<
             name: "Kategoribyggnad, Alkemi",
             category: "Alkemi",
             description:
-                "Alkemins kategoribyggnad. Den krävs tillsammans med Laboratorium för att alkemiprodukter ska ge Coins.",
+                "Alkemins kategoribyggnad. Den ger +5 % bonus när Alkemi är settlementets aktiva kategori.",
             effect: "+5 % Coins från Alkemi när Laboratorium också är färdigt",
             cost: "10 000 Coins",
             unlockLevel: 2,
@@ -147,7 +147,7 @@ const settlementBuildings: Record<
             name: "Laboratorium",
             category: "Alkemi",
             description:
-                "Gäller endast Alkemi. Alkemiprodukter ger inga Coins innan Laboratorium är färdigställt.",
+                "Gäller endast Alkemi och ger +5 % extra Coins från Alkemi när byggnaden är färdigställd.",
             effect: "Aktiverar Coins från Alkemi och ger +5 % Alkemi",
             cost: "35 000 Coins",
             unlockLevel: 5,

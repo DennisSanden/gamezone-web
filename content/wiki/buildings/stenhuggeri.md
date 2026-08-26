@@ -5,11 +5,11 @@ category: "Byggnader"
 order: 3
 version: "4.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-08-26"
 infoboxTitle: "Stenhuggeri"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 3"
+  nivåkrav: "Settlementnivå 2"
   kostnad: "10 000 Coins"
   storlek: "11×11"
 ---
@@ -24,12 +24,12 @@ infobox:
 
 - Ger +5 % produktionsbonus inom settlementets valda kategori, **Byggmaterial**.
 
-> [!NOTE]
-> Settlementet använder kategoribyggnaden som hör till dess valda produktionskategori.
+> [!IMPORTANT]
+> Den här byggnadens **+5 % bonus** gäller bara kategorin **Byggmaterial**. Settlementet kan tjäna vanliga Coins i sin aktiva kategori även utan byggnaden. Vid kategoribyte ligger byggnaden kvar och bonusen blir aktiv igen om settlementet senare återgår till **Byggmaterial**.
 
 ## Krav
 
-- Settlementnivå: **3 eller högre**
+- Settlementnivå: **2 eller högre**
 - Licens: **10 000 Coins**
 - Fysisk storlek: **11×11**
 - Väggar: **minst 70 % täckning**

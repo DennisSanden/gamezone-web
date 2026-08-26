@@ -90,7 +90,7 @@
         "title": "Gruvdrift",
         "definition": "En produktionskategori där spelare tjänar Coins genom manuell brytning av godkända mineraler och malmer.",
         "category": "Production",
-        "href": "/wiki/production/gruvdrift",
+        "href": "/wiki/categories/gruvdrift",
         "aliases": [
             "Mining"
         ]
@@ -100,7 +100,7 @@
         "title": "Jordbruk",
         "definition": "En produktionskategori där spelare tjänar Coins genom manuell skörd av godkända grödor.",
         "category": "Production",
-        "href": "/wiki/production/jordbruk",
+        "href": "/wiki/categories/jordbruk",
         "aliases": [
             "Farming"
         ]
@@ -110,7 +110,7 @@
         "title": "Skogsbruk",
         "definition": "En produktionskategori där spelare tjänar Coins genom manuell avverkning av godkända träd och träslag.",
         "category": "Production",
-        "href": "/wiki/production/skogsbruk",
+        "href": "/wiki/categories/skogsbruk",
         "aliases": [
             "Forestry"
         ]
@@ -120,7 +120,7 @@
         "title": "Boskap",
         "definition": "En produktionskategori där spelare tjänar Coins genom godkänd manuell produktion kopplad till djurhållning.",
         "category": "Production",
-        "href": "/wiki/production/boskap",
+        "href": "/wiki/categories/boskap",
         "aliases": [
             "Djurhållning"
         ]
@@ -130,7 +130,7 @@
         "title": "Fiske",
         "definition": "En produktionskategori där spelare tjänar Coins genom manuell fångst av godkända fiskar och andra fiskeföremål.",
         "category": "Production",
-        "href": "/wiki/production/fiske",
+        "href": "/wiki/categories/fiske",
         "aliases": [
             "Fishing"
         ]
@@ -140,7 +140,7 @@
         "title": "Byggmaterial",
         "definition": "En produktionskategori där spelare tjänar Coins genom manuell framställning av godkända byggmaterial.",
         "category": "Production",
-        "href": "/wiki/production/byggmaterial",
+        "href": "/wiki/categories/byggmaterial",
         "aliases": [
             "Construction Materials"
         ]
@@ -150,7 +150,7 @@
         "title": "Alkemi",
         "definition": "En produktionskategori där spelare tjänar Coins genom godkänd manuell framställning av alkemiska produkter.",
         "category": "Production",
-        "href": "/wiki/production/alkemi",
+        "href": "/wiki/categories/alkemi",
         "aliases": [
             "Alchemy"
         ]

@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 5
 version: "4.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-08-26"
 infoboxTitle: "Laboratorium"
 infobox:
   typ: "Settlementbyggnad"
@@ -20,14 +20,18 @@ infobox:
 
 ![Laboratorium](/wiki/buildings/laboratorium.png)
 
-## Bonus
+## Funktion
 
-- Låser upp alkemi.
-- Ger +5 % produktionsbonus.
+- Gäller **endast settlements med kategorin Alkemi**.
+- Ett aktivt Laboratorium ger dessutom **+5 % produktionsbonus från Alkemi**.
+
+> [!IMPORTANT]
+> Laboratorium är inte ett krav för att få Coins och blockerar inte settlementets progression. Det är en **Alkemi-specifik bonusbyggnad**. Byter settlementet bort från Alkemi ligger byggnaden kvar men bonusen är inaktiv. Byter settlementet tillbaka aktiveras bonusen igen.
 
 ## Krav
 
 - Settlementnivå: **5 eller högre**
+- Aktiv settlementkategori: **Alkemi**
 - Licens: **35 000 Coins**
 - Fysisk storlek: **17×17**
 - Väggar: **minst 70 % täckning**
