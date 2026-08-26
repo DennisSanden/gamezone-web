@@ -60,7 +60,7 @@ const publicBeforeDiscovery = new Set([
     "GZR-0001", "GZR-0002", "GZR-0003", "GZR-0004", "GZR-0005",
     "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010",
     "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
-    "GZR-0033", "GZR-0034", "GZR-0035",
+    "GZR-0033", "GZR-0034", "GZR-0035", "GZR-0039",
     "GZR-0042",
 ]);
 
@@ -115,6 +115,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0007") return "/wiki/relics/desert-piercer";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     if (relic.serial === "GZR-0008") return "/wiki/relics/marchers-boots";
+    if (relic.serial === "GZR-0039") return "/wiki/relics/moonpiercer";
     return null;
 }
 
