@@ -672,17 +672,38 @@
         #0d1419;
 }
 
+.relicImagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
+    opacity: 0.96;
+}
+
+
+/* Relic artwork: always show the complete asset instead of cropping it. */
 .relicImagePreview {
-    padding: 12px 16px 20px;
+    height: clamp(190px, 15vw, 235px);
+    padding: 12px 14px 22px;
+    background:
+        radial-gradient(circle at 50% 42%, rgba(52, 137, 221, 0.14), transparent 52%),
+        #0d1419;
 }
 
 .relicImagePreview img {
     display: block;
-    width: auto !important;
-    height: auto !important;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain !important;
-    object-position: center;
-    opacity: 0.96;
+    object-position: center center !important;
+    padding: 0;
+    opacity: 0.98;
+}
+
+@media (max-width: 600px) {
+    .relicImagePreview {
+        height: 220px;
+    }
 }

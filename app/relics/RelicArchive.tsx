@@ -12,6 +12,7 @@ import deepdelverImage from "../wiki/relics/assets/deepdelver.png";
 import legionnairesBladeImage from "../wiki/relics/assets/legionnaires-blade.png";
 import theRedStandardImage from "../wiki/relics/assets/the-red-standard.png";
 import desertPiercerImage from "../wiki/relics/assets/desert-piercer.png";
+import moonpiercerImage from "../wiki/relics/assets/moonpiercer.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -285,6 +286,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={marchersBootsImage.src} alt="" />
                                     <span className={styles.artCaption}>IRON BOOTS</span>
+                                </div>
+                            ) : relic.serial === "GZR-0039" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={moonpiercerImage.src} alt="" />
+                                    <span className={styles.artCaption}>BOW</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
