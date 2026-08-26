@@ -15,6 +15,7 @@ import desertPiercerImage from "../wiki/relics/assets/desert-piercer.png";
 import moonpiercerImage from "../wiki/relics/assets/moonpiercer.png";
 import masonJournalImage from "../wiki/relics/assets/the-masons-journal.png";
 import kingsguardImage from "../wiki/relics/assets/kingsguard.png";
+import mountainbreakerImage from "../wiki/relics/assets/mountainbreaker.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -121,6 +122,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0009") return "/wiki/relics/the-masons-journal";
     if (relic.serial === "GZR-0010") return "/wiki/relics/kingsguard";
     if (relic.serial === "GZR-0039") return "/wiki/relics/moonpiercer";
+    if (relic.serial === "GZR-0020") return "/wiki/relics/mountainbreaker";
     return null;
 }
 
@@ -305,6 +307,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={moonpiercerImage.src} alt="" />
                                     <span className={styles.artCaption}>BOW</span>
+                                </div>
+                            ) : relic.serial === "GZR-0020" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={mountainbreakerImage.src} alt="" />
+                                    <span className={styles.artCaption}>DIAMOND AXE</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
