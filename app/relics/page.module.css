@@ -545,7 +545,10 @@
 .relicArt {
     position: relative;
     display: grid;
-    height: 150px;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    min-height: 0;
     place-items: center;
     margin: 20px 0 22px;
     overflow: hidden;
@@ -666,27 +669,9 @@
 
 
 .relicImagePreview {
-    padding: 0;
+    padding: clamp(16px, 4.2vw, 28px);
     background:
         radial-gradient(circle at 50% 42%, rgba(52, 137, 221, 0.2), transparent 47%),
-        #0d1419;
-}
-
-.relicImagePreview img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 4px;
-    opacity: 0.96;
-}
-
-
-/* Relic artwork: always show the complete asset instead of cropping it. */
-.relicImagePreview {
-    height: clamp(190px, 15vw, 235px);
-    padding: 12px 14px 22px;
-    background:
-        radial-gradient(circle at 50% 42%, rgba(52, 137, 221, 0.14), transparent 52%),
         #0d1419;
 }
 
@@ -696,14 +681,25 @@
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain !important;
-    object-position: center center !important;
+    object-fit: contain;
+    object-position: center;
     padding: 0;
-    opacity: 0.98;
+    opacity: 0.96;
+}
+
+/* Håll artworken borta från kortets kanter även när originalasseten är tajt komponerad. */
+.relicImagePreview .artCaption {
+    bottom: 7px;
+}
+
+@media (max-width: 900px) {
+    .relicImagePreview {
+        padding: 18px;
+    }
 }
 
 @media (max-width: 600px) {
     .relicImagePreview {
-        height: 220px;
+        padding: 16px;
     }
 }
