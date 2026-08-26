@@ -33,7 +33,7 @@ export default function WinterhideWikiPage() {
                         </div>
                         <div className={styles.art}>
                             <div className={styles.artGlow} aria-hidden="true" />
-                            <Image src={relicImage} alt="Winterhide, en Epic-relik från Andvari" width={704} height={1056} priority />
+                            <Image src={relicImage} alt="Winterhide, en Epic-relik från Andvari" width={1408} height={1056} priority />
                             <div className={styles.artLabel}><span>Epic Relic</span><strong>Winterhide</strong></div>
                         </div>
                     </section>

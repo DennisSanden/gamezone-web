@@ -2,8 +2,8 @@
     min-height: 100vh;
     padding: 28px 0 90px;
     background:
-        radial-gradient(circle at 72% 8%, rgba(56, 126, 190, 0.12), transparent 34rem),
-        radial-gradient(circle at 10% 48%, rgba(76, 112, 66, 0.07), transparent 30rem),
+        radial-gradient(circle at 72% 8%, rgba(120, 62, 164, 0.14), transparent 34rem),
+        radial-gradient(circle at 10% 48%, rgba(151, 69, 39, 0.07), transparent 30rem),
         #090d0b;
     color: #edf2eb;
 }
@@ -62,7 +62,7 @@
 .eyebrow,
 .sectionEyebrow {
     margin: 0;
-    color: #7daee0;
+    color: #b08ad7;
     font-size: 0.64rem;
     font-weight: 850;
     letter-spacing: 0.14em;
@@ -105,9 +105,9 @@
 }
 
 .primaryAction {
-    border: 1px solid rgba(93, 163, 236, 0.35);
-    background: rgba(55, 121, 190, 0.17);
-    color: #dceeff;
+    border: 1px solid rgba(157, 95, 203, 0.35);
+    background: rgba(103, 55, 139, 0.18);
+    color: #f0e2ff;
 }
 
 .secondaryAction {
@@ -120,10 +120,10 @@
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
-    border: 1px solid rgba(91, 157, 225, 0.25);
+    border: 1px solid rgba(145, 86, 190, 0.28);
     border-radius: 22px;
     background:
-        radial-gradient(circle at 52% 42%, rgba(55, 131, 207, 0.18), transparent 40%),
+        radial-gradient(circle at 52% 42%, rgba(119, 62, 160, 0.18), transparent 40%),
         linear-gradient(155deg, #111a20, #0a0f12 72%);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
 }
@@ -135,7 +135,7 @@
     width: 54%;
     height: 54%;
     border-radius: 50%;
-    background: rgba(63, 145, 229, 0.19);
+    background: rgba(143, 75, 190, 0.20);
     filter: blur(55px);
 }
 
@@ -156,14 +156,14 @@
     display: grid;
     gap: 3px;
     padding: 10px 12px;
-    border: 1px solid rgba(124, 183, 241, 0.18);
+    border: 1px solid rgba(174, 117, 218, 0.20);
     border-radius: 9px;
     background: rgba(6, 11, 14, 0.74);
     backdrop-filter: blur(12px);
 }
 
 .artLabel span {
-    color: #75afe9;
+    color: #b98adb;
     font-size: 0.55rem;
     font-weight: 850;
     letter-spacing: 0.12em;
@@ -171,7 +171,7 @@
 }
 
 .artLabel strong {
-    color: #dceafa;
+    color: #f0e4f7;
     font-size: 0.74rem;
 }
 
@@ -208,10 +208,10 @@
 .article blockquote {
     margin: 34px 0 0;
     padding: 22px 25px;
-    border-left: 2px solid #5f9edc;
+    border-left: 2px solid #945cb8;
     border-radius: 0 12px 12px 0;
-    background: rgba(49, 104, 157, 0.08);
-    color: #d2e6f8;
+    background: rgba(103, 55, 132, 0.10);
+    color: #eadbf2;
     font-size: 1.05rem;
     font-style: italic;
     line-height: 1.6;
@@ -220,7 +220,7 @@
 .infoCard {
     align-self: start;
     overflow: hidden;
-    border: 1px solid rgba(91, 153, 214, 0.19);
+    border: 1px solid rgba(145, 86, 190, 0.20);
     border-radius: 15px;
     background: rgba(14, 23, 27, 0.78);
 }
@@ -231,7 +231,7 @@
     justify-content: space-between;
     gap: 18px;
     padding: 17px 18px;
-    border-bottom: 1px solid rgba(91, 153, 214, 0.12);
+    border-bottom: 1px solid rgba(145, 86, 190, 0.12);
 }
 
 .infoTitle span {
@@ -243,7 +243,7 @@
 }
 
 .infoTitle strong {
-    color: #90c4f2;
+    color: #c59be3;
     font-size: 0.68rem;
 }
 

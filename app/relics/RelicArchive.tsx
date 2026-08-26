@@ -20,6 +20,7 @@ import prospectorsHelmImage from "../wiki/relics/assets/prospectors-helm.png";
 import heartOfTheMountainImage from "../wiki/relics/assets/heart-of-the-mountain.png";
 import andvarisPrideImage from "../wiki/relics/assets/andvaris-pride.png";
 import winterhideImage from "../wiki/relics/assets/winterhide.png";
+import theBlackBladeImage from "../wiki/relics/assets/the-black-blade.png";
 import forgefathersGauntletImage from "../wiki/relics/assets/forgefathers-gauntlet.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
@@ -132,6 +133,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0022") return "/wiki/relics/heart-of-the-mountain";
     if (relic.serial === "GZR-0033") return "/wiki/relics/andvaris-pride";
     if (relic.serial === "GZR-0034") return "/wiki/relics/winterhide";
+    if (relic.serial === "GZR-0035") return "/wiki/relics/the-black-blade";
     if (relic.serial === "GZR-0042") return "/wiki/relics/forgefathers-gauntlet";
     return null;
 }
@@ -337,6 +339,16 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={andvarisPrideImage.src} alt="" />
                                     <span className={styles.artCaption}>NETHERITE PICKAXE</span>
+                                </div>
+                            ) : relic.serial === "GZR-0034" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={winterhideImage.src} alt="" />
+                                    <span className={styles.artCaption}>DIAMOND CHESTPLATE</span>
+                                </div>
+                            ) : relic.serial === "GZR-0035" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={theBlackBladeImage.src} alt="" />
+                                    <span className={styles.artCaption}>NETHERITE SWORD</span>
                                 </div>
                             ) : relic.serial === "GZR-0042" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
