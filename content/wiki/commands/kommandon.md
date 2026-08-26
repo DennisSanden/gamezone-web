@@ -5,7 +5,7 @@ category: "Kommandon"
 order: 1
 version: "2.0"
 engineVersion: "Commands"
-updatedAt: "2026-08-24"
+updatedAt: "2026-08-26"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -36,6 +36,16 @@ Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 ```
 
 Öppnar Daily Rewards där du kan hämta dagens Coins och ett slumpmässigt item. Belöningarna ökar från dag 1 till den stora jackpot-belöningen på dag 7. Läs hela guiden på sidan [Daily Rewards](/wiki/economy/daily-rewards).
+
+## Discordkoppling
+
+```text
+/discord
+```
+
+Ger dig en verifieringskod som används för att koppla ditt Minecraftkonto till Discord. När du fått koden skriver du `/verify <kod>` på GameZones Discord. Kopplingen används bland annat för settlementroller och privata settlementkanaler.
+
+Whitelist görs separat på Discord med `/whitelist <Minecraftnamn>` innan du ansluter till servern. Läs hela guiden på sidan [Minecraft & Discord](/wiki/discord/kom-igang).
 
 ## Twitch
 
