@@ -67,7 +67,7 @@ export const lagerTillBy: SettlementUpgrade = {
     buildings: getSettlementBuildings("by"),
 
     requiredCurrentBuildings: [
-        "Kategoribyggnaden för settlementets aktiva kategori",
+        "Kategoribyggnaden för settlementets aktiva kategori, Alkemi är undantaget",
     ],
 
     footerText:

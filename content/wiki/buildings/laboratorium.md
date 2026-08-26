@@ -26,7 +26,7 @@ infobox:
 - Ett aktivt Laboratorium ger dessutom **+5 % produktionsbonus från Alkemi**.
 
 > [!IMPORTANT]
-> Laboratorium är inte ett krav för att få Coins och blockerar inte settlementets progression. Det är en **Alkemi-specifik bonusbyggnad**. Byter settlementet bort från Alkemi ligger byggnaden kvar men bonusen är inaktiv. Byter settlementet tillbaka aktiveras bonusen igen.
+> Alkemi har **ingen kategoribyggnad på nivå 2**. Laboratorium är istället Alkemins enda kategorispecifika byggnad och låses upp senare. Det är inte ett krav för att få Coins och blockerar inte settlementets progression. Byter settlementet bort från Alkemi ligger byggnaden kvar men bonusen är inaktiv. Byter settlementet tillbaka aktiveras bonusen igen.
 
 ## Krav
 

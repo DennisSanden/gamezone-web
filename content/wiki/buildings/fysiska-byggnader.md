@@ -9,7 +9,7 @@ updatedAt: "2026-08-20"
 infoboxTitle: "Building System 1.0"
 infobox:
   process: "Licens → bygg → godkänn"
-  förstaByggnad: "Stadskärna, nivå 2"
+  förstaByggnad: "Stadskärna, nivå 1"
   senasteAktivaByggnad: "Myntverk, nivå 45"
   territorium: "Hela byggnaden måste ligga inom settlementet"
 ---
@@ -46,10 +46,10 @@ Alla byggnader måste:
 
 | Nivå | Byggnad | Licens | Huvudbonus |
 |---:|---|---:|---|
-| 2 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Låser upp byggsystemet |
-| 3 | [Kategoribyggnad](/wiki/buildings/kategoribyggnad) | 10 000 | +5 % i vald kategori |
-| 4 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Företag |
-| 5 | [Laboratorium](/wiki/buildings/laboratorium) | 35 000 | Alkemi och +5 % produktion |
+| 1 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Krävs för nivå 2 |
+| 2 | [Kategoribyggnad](/wiki/buildings/kategoribyggnad) | 10 000 | +5 % i aktiv kategori, gäller inte Alkemi |
+| 3 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Företag, krävs för nivå 4 |
+| 5 | [Laboratorium](/wiki/buildings/laboratorium) | 35 000 | Endast Alkemi, aktiverar Coins och +5 % Alkemi |
 | 6 | [Bank](/wiki/buildings/bank) | 50 000 | Detaljerad statistik |
 | 7 | [Reliktempel](/wiki/buildings/reliktempel) | 50 000 | Relikbonusar |
 | 8 | [Vindhamn](/wiki/buildings/vindhamn) | 100 000 | Elytra |

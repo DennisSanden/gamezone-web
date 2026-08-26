@@ -23,10 +23,8 @@
 }
 
 .tooltip {
-    position: absolute;
-    bottom: calc(100% + 12px);
-    left: 50%;
-    z-index: 100;
+    position: fixed;
+    z-index: 1000;
     display: block;
     width: min(310px, calc(100vw - 32px));
     padding: 15px;
@@ -48,30 +46,30 @@
             inset 0 1px 0 rgba(255, 255, 255, 0.04);
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, 7px);
+    transform: translateY(7px);
     transition:
             opacity 150ms ease,
             transform 150ms ease;
 }
 
 .tooltip::after {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    border-right: 1px solid rgba(164, 200, 152, 0.18);
-    border-bottom: 1px solid rgba(164, 200, 152, 0.18);
-    background: #111b13;
-    content: "";
-    transform: translate(-50%, -5px) rotate(45deg);
+    display: none;
 }
 
 .wrapper:hover .tooltip,
 .wrapper:focus-within .tooltip {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%, 0);
+    transform: translateY(0);
+}
+
+.tooltipBelow {
+    transform: translateY(-7px);
+}
+
+.wrapper:hover .tooltipBelow,
+.wrapper:focus-within .tooltipBelow {
+    transform: translateY(0);
 }
 
 .tooltipHeader {

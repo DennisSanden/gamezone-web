@@ -68,7 +68,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "stone-bricks-6", name: "Stone Bricks", amount: 128, icon: "◆", texture: "/minecraft/blocks/stone_bricks.png" }
             ],
         },
-        requiredCurrentBuildings: ["Kategoribyggnad för settlementets aktiva kategori"],
+        requiredCurrentBuildings: ["Kategoribyggnad för settlementets aktiva kategori, Alkemi är undantaget"],
     },
     "level-3-till-4": {
         currentLevel: { name: "Boplats", level: 3 },

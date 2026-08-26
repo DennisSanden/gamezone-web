@@ -100,17 +100,6 @@ const settlementBuildings: Record<
             unlockLevel: 2,
             href: "/wiki/buildings/stenhuggeri",
         },
-        {
-            id: "kategoribyggnad-alkemi",
-            name: "Kategoribyggnad, Alkemi",
-            category: "Alkemi",
-            description:
-                "Alkemins kategoribyggnad. Den ger +5 % bonus när Alkemi är settlementets aktiva kategori.",
-            effect: "+5 % Coins från Alkemi när Laboratorium också är färdigt",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/kategoribyggnad",
-        },
     ],
 
     by: [

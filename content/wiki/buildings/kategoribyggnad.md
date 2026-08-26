@@ -16,7 +16,7 @@ infobox:
 
 ## Vad är Kategoribyggnaden?
 
-På settlementnivå 2 kan settlementet bygga den **Kategoribyggnad** som hör till dess aktiva produktionskategori.
+På settlementnivå 2 kan settlementet bygga den **Kategoribyggnad** som hör till dess aktiva produktionskategori. Detta gäller alla produktionskategorier utom **Alkemi**.
 
 Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategoribyggnaden är alltså inte ett krav för att få Coins. När rätt byggnad är färdigställd ger den istället **+5 % produktionsbonus inom settlementets aktiva kategori**.
 
@@ -28,7 +28,6 @@ Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategorib
 | Fiske | [Fiskebrygga](/wiki/buildings/fiskebrygga) |
 | Skogsbruk | [Sågverk](/wiki/buildings/sagverk) |
 | Byggmaterial | [Stenhuggeri](/wiki/buildings/stenhuggeri) |
-| Alkemi | Kategoribyggnad, Alkemi |
 
 ## Krav
 
@@ -49,4 +48,4 @@ Den extra **+5 % produktionsbonusen** aktiveras först när den fysiska byggnade
 > Kategoribyggnader ger bara sin **+5 % bonus** när byggnaden hör till settlementets aktiva kategori. Byter settlementet kategori fortsätter den nya kategorin att ge vanliga Coins direkt, även om den nya kategoribyggnaden inte är byggd. Den gamla byggnaden ligger kvar och blir aktiv igen om settlementet senare byter tillbaka.
 
 > [!NOTE]
-> **Laboratorium** är en extra bonusbyggnad för Alkemi. Den krävs inte för att alkemiprodukter ska ge Coins.
+> **Alkemi har ingen kategoribyggnad på nivå 2.** Alkemi kan uppgradera från nivå 2 till 3 utan en kategoribyggnad. Kategorins byggnad är istället [Laboratorium](/wiki/buildings/laboratorium), som låses upp senare och ger +5 % Alkemi-produktion.
