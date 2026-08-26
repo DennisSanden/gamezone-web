@@ -546,7 +546,7 @@
     position: relative;
     display: grid;
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 3;
     height: auto;
     min-height: 0;
     place-items: center;
@@ -669,7 +669,7 @@
 
 
 .relicImagePreview {
-    padding: clamp(16px, 4.2vw, 28px);
+    padding: 8px;
     background:
         radial-gradient(circle at 50% 42%, rgba(52, 137, 221, 0.2), transparent 47%),
         #0d1419;
@@ -694,12 +694,12 @@
 
 @media (max-width: 900px) {
     .relicImagePreview {
-        padding: 18px;
+        padding: 7px;
     }
 }
 
 @media (max-width: 600px) {
     .relicImagePreview {
-        padding: 16px;
+        padding: 6px;
     }
 }
