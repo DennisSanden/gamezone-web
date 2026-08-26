@@ -17,6 +17,7 @@ import masonJournalImage from "../wiki/relics/assets/the-masons-journal.png";
 import kingsguardImage from "../wiki/relics/assets/kingsguard.png";
 import mountainbreakerImage from "../wiki/relics/assets/mountainbreaker.png";
 import prospectorsHelmImage from "../wiki/relics/assets/prospectors-helm.png";
+import heartOfTheMountainImage from "../wiki/relics/assets/heart-of-the-mountain.png";
 import forgefathersGauntletImage from "../wiki/relics/assets/forgefathers-gauntlet.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
@@ -126,6 +127,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0039") return "/wiki/relics/moonpiercer";
     if (relic.serial === "GZR-0020") return "/wiki/relics/mountainbreaker";
     if (relic.serial === "GZR-0021") return "/wiki/relics/prospectors-helm";
+    if (relic.serial === "GZR-0022") return "/wiki/relics/heart-of-the-mountain";
     if (relic.serial === "GZR-0042") return "/wiki/relics/forgefathers-gauntlet";
     return null;
 }
@@ -321,6 +323,11 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={prospectorsHelmImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND HELMET</span>
+                                </div>
+                            ) : relic.serial === "GZR-0022" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={heartOfTheMountainImage.src} alt="" />
+                                    <span className={styles.artCaption}>HEART OF THE SEA</span>
                                 </div>
                             ) : relic.serial === "GZR-0042" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
