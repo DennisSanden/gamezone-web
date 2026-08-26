@@ -13,6 +13,8 @@ import legionnairesBladeImage from "../wiki/relics/assets/legionnaires-blade.png
 import theRedStandardImage from "../wiki/relics/assets/the-red-standard.png";
 import desertPiercerImage from "../wiki/relics/assets/desert-piercer.png";
 import moonpiercerImage from "../wiki/relics/assets/moonpiercer.png";
+import masonJournalImage from "../wiki/relics/assets/the-masons-journal.png";
+import kingsguardImage from "../wiki/relics/assets/kingsguard.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -116,6 +118,8 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0007") return "/wiki/relics/desert-piercer";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     if (relic.serial === "GZR-0008") return "/wiki/relics/marchers-boots";
+    if (relic.serial === "GZR-0009") return "/wiki/relics/the-masons-journal";
+    if (relic.serial === "GZR-0010") return "/wiki/relics/kingsguard";
     if (relic.serial === "GZR-0039") return "/wiki/relics/moonpiercer";
     return null;
 }
@@ -286,6 +290,16 @@ export default function RelicArchive() {
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={marchersBootsImage.src} alt="" />
                                     <span className={styles.artCaption}>IRON BOOTS</span>
+                                </div>
+                            ) : relic.serial === "GZR-0009" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={masonJournalImage.src} alt="" />
+                                    <span className={styles.artCaption}>WRITTEN BOOK</span>
+                                </div>
+                            ) : relic.serial === "GZR-0010" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={kingsguardImage.src} alt="" />
+                                    <span className={styles.artCaption}>IRON SWORD</span>
                                 </div>
                             ) : relic.serial === "GZR-0039" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
