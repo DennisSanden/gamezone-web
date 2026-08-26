@@ -41,7 +41,7 @@ const settlementBuildings: Record<
             description:
                 "Förstärker settlementets produktion från gruvdrift och resurser som registreras i Mining Registry.",
             effect: "+5 % Coins från Gruvdrift",
-            cost: "2 500 Coins",
+            cost: "10 000 Coins",
             unlockLevel: 2,
             href: "/wiki/buildings/gruva",
         },
@@ -52,7 +52,7 @@ const settlementBuildings: Record<
             description:
                 "Förstärker settlementets produktion från jordbruk och resurser som registreras i Farming Registry.",
             effect: "+5 % Coins från Jordbruk",
-            cost: "2 500 Coins",
+            cost: "10 000 Coins",
             unlockLevel: 2,
             href: "/wiki/buildings/lada",
         },
@@ -63,7 +63,7 @@ const settlementBuildings: Record<
             description:
                 "Förstärker settlementets produktion från boskap och resurser som registreras i Livestock Registry.",
             effect: "+5 % Coins från Boskap",
-            cost: "2 500 Coins",
+            cost: "10 000 Coins",
             unlockLevel: 2,
             href: "/wiki/buildings/ladugard",
         },
@@ -74,7 +74,7 @@ const settlementBuildings: Record<
             description:
                 "Förstärker settlementets produktion från fiske och resurser som registreras i Fishing Registry.",
             effect: "+5 % Coins från Fiske",
-            cost: "2 500 Coins",
+            cost: "10 000 Coins",
             unlockLevel: 2,
             href: "/wiki/buildings/fiskebrygga",
         },
@@ -85,7 +85,7 @@ const settlementBuildings: Record<
             description:
                 "Förstärker settlementets produktion från skogsbruk och resurser som registreras i Forestry Registry.",
             effect: "+5 % Coins från Skogsbruk",
-            cost: "2 500 Coins",
+            cost: "10 000 Coins",
             unlockLevel: 2,
             href: "/wiki/buildings/sagverk",
         },
@@ -96,9 +96,20 @@ const settlementBuildings: Record<
             description:
                 "Förstärker settlementets produktion från resurser som registreras i Building Materials Registry.",
             effect: "+5 % Coins från Byggmaterial",
-            cost: "2 500 Coins",
+            cost: "10 000 Coins",
             unlockLevel: 2,
             href: "/wiki/buildings/stenhuggeri",
+        },
+        {
+            id: "kategoribyggnad-alkemi",
+            name: "Kategoribyggnad, Alkemi",
+            category: "Alkemi",
+            description:
+                "Alkemins kategoribyggnad. Den krävs tillsammans med Laboratorium för att alkemiprodukter ska ge Coins.",
+            effect: "+5 % Coins från Alkemi när Laboratorium också är färdigt",
+            cost: "10 000 Coins",
+            unlockLevel: 2,
+            href: "/wiki/buildings/kategoribyggnad",
         },
     ],
 
@@ -110,7 +121,7 @@ const settlementBuildings: Record<
             description:
                 "Låser upp möjligheten för settlementets invånare att registrera företag inom settlementet.",
             effect: "Låser upp företagsregistrering",
-            cost: "10 000 Coins",
+            cost: "20 000 Coins",
             unlockLevel: 3,
             href: "/wiki/buildings/handelscentrum",
         },
@@ -136,9 +147,9 @@ const settlementBuildings: Record<
             name: "Laboratorium",
             category: "Alkemi",
             description:
-                "Förstärker settlementets produktion från alkemi och resurser som registreras i Alchemy Registry.",
-            effect: "+5 % Coins från Alkemi",
-            cost: "2 500 Coins",
+                "Gäller endast Alkemi. Alkemiprodukter ger inga Coins innan Laboratorium är färdigställt.",
+            effect: "Aktiverar Coins från Alkemi och ger +5 % Alkemi",
+            cost: "35 000 Coins",
             unlockLevel: 5,
             href: "/wiki/buildings/laboratorium",
         },

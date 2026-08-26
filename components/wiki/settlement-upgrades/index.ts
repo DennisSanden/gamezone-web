@@ -47,7 +47,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "cobblestone-2", name: "Cobblestone", amount: 64, icon: "◆", texture: "/minecraft/blocks/cobblestone.png" }
             ],
         },
-        requiredCurrentBuildings: [],
+        requiredCurrentBuildings: ["Stadskärna"],
     },
     "level-2-till-3": {
         currentLevel: { name: "Läger", level: 2 },
@@ -68,7 +68,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "stone-bricks-6", name: "Stone Bricks", amount: 128, icon: "◆", texture: "/minecraft/blocks/stone_bricks.png" }
             ],
         },
-        requiredCurrentBuildings: [],
+        requiredCurrentBuildings: ["Kategoribyggnad för settlementets aktiva kategori"],
     },
     "level-3-till-4": {
         currentLevel: { name: "Boplats", level: 3 },
@@ -89,7 +89,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "bricks-6", name: "Bricks", amount: 192, icon: "◆", texture: "/minecraft/blocks/bricks.png" }
             ],
         },
-        requiredCurrentBuildings: [],
+        requiredCurrentBuildings: ["Handelscentrum"],
     },
     "level-4-till-5": {
         currentLevel: { name: "Nybygge", level: 4 },

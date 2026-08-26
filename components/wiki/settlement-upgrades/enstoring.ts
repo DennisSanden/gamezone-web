@@ -42,7 +42,7 @@ export const enstoringTillLager: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("lager"),
 
-    requiredCurrentBuildings: [],
+    requiredCurrentBuildings: ["Stadskärna"],
 
     footerText:
         "Alla Coins och material för settlementuppgraderingen måste finnas tillgängliga samtidigt. Om något krav saknas genomförs ingen del av uppgraderingen.",

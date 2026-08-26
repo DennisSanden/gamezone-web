@@ -69,5 +69,5 @@ export const bosattningTillSamhalle: SettlementUpgrade = {
     requiredCurrentBuildings: ["Bank"],
 
     footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Samhälle. Laboratorium låses upp i samband med den första uppgraderingen till Samhälle och har egna byggnadskrav.",
+        "Laboratorium blir tillgängligt från settlementnivå 5 endast för settlements med kategorin Alkemi. Det är inte ett generellt levelkrav.",
 };

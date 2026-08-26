@@ -72,9 +72,7 @@ export const samhalleTillKoping: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("koping"),
 
-    requiredCurrentBuildings: [
-        "Laboratorium, endast för settlement med inriktningen Alkemi",
-    ],
+    requiredCurrentBuildings: [],
 
     footerText:
         "Kostnaden ovan gäller settlementuppgraderingen till Köping. Kyrka låses upp i samband med den första uppgraderingen till Köping och har egna byggnadskrav.",

@@ -67,14 +67,9 @@ export const lagerTillBy: SettlementUpgrade = {
     buildings: getSettlementBuildings("by"),
 
     requiredCurrentBuildings: [
-        "Gruva",
-        "Lada",
-        "Ladugård",
-        "Fiskebrygga",
-        "Sågverk",
-        "Stenhuggeri",
+        "Kategoribyggnaden för settlementets aktiva kategori",
     ],
 
     footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till By. Handelscentrum har en separat kostnad och låses upp som ett eget byggprojekt.",
+        "Kostnaden ovan gäller settlementuppgraderingen. Endast kategoribyggnaden för settlementets aktiva kategori räknas som krav. Byter settlementet kategori måste den nya kategorins byggnad färdigställas.",
 };
