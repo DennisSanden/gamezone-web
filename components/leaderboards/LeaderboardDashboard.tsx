@@ -25,6 +25,7 @@ const definitions: Record<Category, Definition[]> = {
     { key: "PLAYER_PLAY_TIME", title: "Mest spelad tid", description: "Flest aktiva timmar registrerade på GameZone.", label: "Speltid", icon: "◷" },
     { key: "PLAYER_KILLS", title: "Flest kills", description: "Flest registrerade spelarkills.", label: "Kills", icon: "⚔" },
     { key: "PLAYER_DUEL_WINS", title: "Flest vunna dueller", description: "Flest registrerade vinster i officiella dueller.", label: "Duellvinster", icon: "⚔" },
+    { key: "PLAYER_REFERRALS", title: "Flest värvningar", description: "Flest kvalificerade spelare värvade till GameZone.", label: "Värvningar", icon: "✚" },
     { key: "PLAYER_DEATHS", title: "Flest deaths", description: "Flest registrerade dödsfall.", label: "Deaths", icon: "☠" },
     { key: "PLAYER_KD", title: "Högst K/D", description: "Bäst förhållande mellan kills och deaths.", label: "K/D", icon: "✦" },
   ],
