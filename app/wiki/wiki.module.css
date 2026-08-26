@@ -404,3 +404,99 @@
         height: 52px;
     }
 }
+
+
+/* Compact recommended path used on the wiki landing page. */
+.recommendedSection {
+    margin-bottom: 58px;
+}
+
+.recommendedSection > .eyebrow {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.recommendedGrid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 11px;
+}
+
+.recommendedCard {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 13px;
+    min-height: 118px;
+    padding: 18px;
+    border: 1px solid rgba(166, 197, 155, 0.13);
+    border-radius: 13px;
+    background: rgba(18, 27, 20, 0.8);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.recommendedCard:hover {
+    border-color: rgba(175, 210, 163, 0.28);
+    background: rgba(23, 35, 25, 0.92);
+    transform: translateY(-2px);
+}
+
+.recommendedIcon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(174, 205, 163, 0.13);
+    border-radius: 11px;
+    background: rgba(116, 157, 103, 0.12);
+    color: #a7be9f;
+}
+
+.recommendedCard h3 {
+    margin: 1px 0 0;
+    font-size: 0.92rem;
+    letter-spacing: -0.025em;
+}
+
+.recommendedCard p {
+    margin: 8px 0 0;
+    color: #849087;
+    font-size: 0.72rem;
+    line-height: 1.55;
+}
+
+.browseHint {
+    margin: 26px 0 0;
+    color: #7e8a81;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.browseHint a {
+    color: #9fbd95;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.browseHint a:hover {
+    color: #c4dbbc;
+}
+
+@media (max-width: 1040px) {
+    .recommendedGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .recommendedGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendedCard {
+        min-height: auto;
+    }
+}

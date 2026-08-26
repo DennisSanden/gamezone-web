@@ -50,38 +50,36 @@ export default function WikiPage() {
     const searchEntries = getWikiSearchIndex();
     const articleCount = getWikiArticleCount();
 
-    const startLinks = [
+    const recommendedLinks = [
         {
-            step: "01",
-            label: "Ny på servern",
-            title: "Börja spela",
-            description: "Whitelist, serveradress och dina första steg i världen.",
+            title: "Kom igång",
+            description: "För nya spelare som just har börjat.",
             href: "/kom-igang",
-            action: "Öppna guiden",
+            icon: "start" as const,
         },
         {
-            step: "02",
-            label: "Bygg din stad",
-            title: "Skapa ett settlement",
-            description: "Se hur du grundar ett settlement, väljer kategori och skyddar mark.",
-            href: findArticleHref(
-                categories,
-                ["skapa-ett-settlement", "skapa-settlement", "oversikt"],
-                ["settlements"],
-            ),
-            action: "Läs guiden",
+            title: "Settlements",
+            description: "Bygg, utveckla och styr ditt rike.",
+            href: "/wiki/settlements",
+            icon: "settlements" as const,
         },
         {
-            step: "03",
-            label: "Förstå ekonomin",
-            title: "Coins och handel",
-            description: "Lär dig hur Coins tjänas, används och beskattas på GameZone.",
-            href: findArticleHref(
-                categories,
-                ["coins", "vad-ar-coins", "ekonomi", "server-tax"],
-                ["economy", "ekonomi"],
-            ),
-            action: "Förstå Coins",
+            title: "Företag & Ekonomi",
+            description: "Skapa företag och bygg upp din ekonomi.",
+            href: "/wiki/economy",
+            icon: "economy" as const,
+        },
+        {
+            title: "Reliker",
+            description: "Upptäck, samla och använd reliker.",
+            href: "/wiki/relics",
+            icon: "relics" as const,
+        },
+        {
+            title: "Events",
+            description: "Turneringar, event och speciella aktiviteter.",
+            href: "/wiki/events",
+            icon: "experience" as const,
         },
     ];
 
@@ -141,54 +139,37 @@ export default function WikiPage() {
                             </span>
                         </Link>
 
-                        <Link
-                            className={styles.featuredCard}
-                            href="/wiki/war/krigssystemet"
-                        >
-                            <div className={styles.featuredIcon}>
-                                <WikiIcon name="war" size={30} />
-                            </div>
 
-                            <div className={styles.featuredCopy}>
-                                <span className={styles.featuredLabel}>Nytt system</span>
-                                <h2>Krig & Diplomati</h2>
-                                <p>
-                                    Allianser, krigssidor, gemensamma tickets, PvP,
-                                    fred, kapitulation och krigsskadestånd förklarat.
-                                </p>
-                            </div>
-
-                            <span className={styles.featuredAction}>
-                                Läs krigsguiden <span aria-hidden="true">→</span>
-                            </span>
-                        </Link>
                     </section>
 
-                    <section className={styles.startSection}>
-                        <div className={styles.sectionHeading}>
-                            <div>
-                                <span className={styles.eyebrow}>Rekommenderad väg</span>
-                                <h2>Börja här</h2>
-                            </div>
-                            <p>Tre tydliga steg för dig som inte vet var du ska klicka.</p>
-                        </div>
+                    <section className={styles.recommendedSection}>
+                        <span className={styles.eyebrow}>Rekommenderad väg</span>
 
-                        <div className={styles.startGrid}>
-                            {startLinks.map((item) => (
-                                <Link className={styles.startCard} href={item.href} key={item.step}>
-                                    <span className={styles.stepNumber}>{item.step}</span>
-                                    <span className={styles.cardLabel}>{item.label}</span>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.description}</p>
-                                    <span className={styles.cardAction}>
-                                        {item.action} <span aria-hidden="true">→</span>
+                        <div className={styles.recommendedGrid}>
+                            {recommendedLinks.map((item) => (
+                                <Link
+                                    className={styles.recommendedCard}
+                                    href={item.href}
+                                    key={item.title}
+                                >
+                                    <span className={styles.recommendedIcon}>
+                                        <WikiIcon name={item.icon} size={24} />
                                     </span>
+                                    <div>
+                                        <h3>{item.title}</h3>
+                                        <p>{item.description}</p>
+                                    </div>
                                 </Link>
                             ))}
                         </div>
+
+                        <p className={styles.browseHint}>
+                            Hittar du inte det du söker? Använd sökfältet ovan eller bläddra i{" "}
+                            <a href="#alla-guider">alla kategorier</a>.
+                        </p>
                     </section>
 
-                    <section className={styles.allSection}>
+                    <section className={styles.allSection} id="alla-guider">
                         <div className={styles.sectionHeading}>
                             <div>
                                 <span className={styles.eyebrow}>Alla guider</span>
