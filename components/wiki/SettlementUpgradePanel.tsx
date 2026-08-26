@@ -4,11 +4,157 @@ import {
     getSettlementUpgrade,
     type SettlementUpgradeKey,
 } from "./settlement-upgrades";
+import BuildingRequirementsTable from "./BuildingRequirementsTable";
+import type { BuildingRequirementKey } from "./building-requirements";
 
 import styles from "./SettlementUpgradePanel.module.css";
 
 type SettlementUpgradePanelProps = {
     upgradeKey: SettlementUpgradeKey;
+};
+
+type LevelBuilding = {
+    name: string;
+    slug: string;
+    requirementKey: BuildingRequirementKey;
+    license: string;
+    bonus: string;
+};
+
+const LEVEL_BUILDINGS: Record<number, LevelBuilding> = {
+    2: {
+        name: "Stadskärna",
+        slug: "stadskarna",
+        requirementKey: "stadskarna",
+        license: "5 000 Coins",
+        bonus: "Låser upp byggsystemet",
+    },
+    3: {
+        name: "Kategoribyggnad",
+        slug: "kategoribyggnad",
+        requirementKey: "kategoribyggnad",
+        license: "10 000 Coins",
+        bonus: "+5 % i vald kategori",
+    },
+    4: {
+        name: "Handelscentrum",
+        slug: "handelscentrum",
+        requirementKey: "handelscentrum",
+        license: "20 000 Coins",
+        bonus: "Låser upp företag",
+    },
+    5: {
+        name: "Laboratorium",
+        slug: "laboratorium",
+        requirementKey: "laboratorium",
+        license: "35 000 Coins",
+        bonus: "Alkemi och +5 % produktion",
+    },
+    6: {
+        name: "Bank",
+        slug: "bank",
+        requirementKey: "bank",
+        license: "50 000 Coins",
+        bonus: "Detaljerad statistik",
+    },
+    7: {
+        name: "Reliktempel",
+        slug: "reliktempel",
+        requirementKey: "reliktempel",
+        license: "50 000 Coins",
+        bonus: "Relikbonusar",
+    },
+    8: {
+        name: "Vindhamn",
+        slug: "vindhamn",
+        requirementKey: "vindhamn",
+        license: "100 000 Coins",
+        bonus: "Låser upp Elytra",
+    },
+    10: {
+        name: "Gatukontor",
+        slug: "gatukontor",
+        requirementKey: "gatukontor",
+        license: "200 000 Coins",
+        bonus: "Riksvägsanslutning",
+    },
+    12: {
+        name: "Turistbyrå",
+        slug: "turistbyra",
+        requirementKey: "turistbyra",
+        license: "350 000 Coins",
+        bonus: "Turism och unika besök",
+    },
+    14: {
+        name: "Stall",
+        slug: "stall",
+        requirementKey: "stall",
+        license: "500 000 Coins",
+        bonus: "+25 % hästhastighet",
+    },
+    16: {
+        name: "Kontor",
+        slug: "kontor",
+        requirementKey: "kontor",
+        license: "750 000 Coins",
+        bonus: "+3 Shopping Chests",
+    },
+    18: {
+        name: "Kyrka",
+        slug: "kyrka",
+        requirementKey: "kyrka",
+        license: "1 000 000 Coins",
+        bonus: "+20 % produktion",
+    },
+    20: {
+        name: "Marknadsplats",
+        slug: "marknadsplats",
+        requirementKey: "marknadsplats",
+        license: "1 500 000 Coins",
+        bonus: "−10 procentenheter Server TAX",
+    },
+    22: {
+        name: "Myntförvaring",
+        slug: "myntforvaring",
+        requirementKey: "myntforvaring",
+        license: "2 000 000 Coins",
+        bonus: "7,5 % → 2,5 % stadskasseavgift",
+    },
+    25: {
+        name: "Rådhus",
+        slug: "radhus",
+        requirementKey: "radhus",
+        license: "2 500 000 Coins",
+        bonus: "+2 Lord-platser",
+    },
+    30: {
+        name: "Slott",
+        slug: "slott",
+        requirementKey: "slott",
+        license: "5 000 000 Coins",
+        bonus: "King kostar 6 tickets",
+    },
+    35: {
+        name: "Museum",
+        slug: "museum",
+        requirementKey: "museum",
+        license: "8 000 000 Coins",
+        bonus: "100 000 Coins turistbonus",
+    },
+    40: {
+        name: "Rustkammare",
+        slug: "rustkammare",
+        requirementKey: "rustkammare",
+        license: "12 500 000 Coins",
+        bonus: "110 grundtickets",
+    },
+    45: {
+        name: "Myntverk",
+        slug: "myntverk",
+        requirementKey: "myntverk",
+        license: "20 000 000 Coins",
+        bonus: "50 000 Coins per dag",
+    },
 };
 
 export default function SettlementUpgradePanel({
@@ -21,6 +167,7 @@ export default function SettlementUpgradePanel({
     }
 
     const hasMaterials = upgrade.upgradeCost.materials.length > 0;
+    const levelBuilding = LEVEL_BUILDINGS[upgrade.nextLevel.level];
 
     return (
         <section
@@ -114,6 +261,48 @@ export default function SettlementUpgradePanel({
                         )}
                     </div>
                 </section>
+
+                {levelBuilding && (
+                    <section className={`${styles.section} ${styles.buildingSection}`}>
+                        <div className={styles.buildingHeading}>
+                            <div>
+                                <span className={styles.sectionLabel}>
+                                    Byggnad på nivå {upgrade.nextLevel.level}
+                                </span>
+                                <h3>
+                                    <Link href={`/wiki/buildings/${levelBuilding.slug}`}>
+                                        {levelBuilding.name}
+                                    </Link>
+                                </h3>
+                                <p>
+                                    När settlementet når nivå {upgrade.nextLevel.level} kan byggnaden
+                                    licensieras och uppföras. Byggnaden har egna fysiska byggnadskrav
+                                    utöver själva settlementuppgraderingen.
+                                </p>
+                            </div>
+
+                            <Link
+                                className={styles.buildingLink}
+                                href={`/wiki/buildings/${levelBuilding.slug}`}
+                            >
+                                Öppna byggnadsguiden →
+                            </Link>
+                        </div>
+
+                        <div className={styles.buildingFacts}>
+                            <div>
+                                <span>Licens</span>
+                                <strong>{levelBuilding.license}</strong>
+                            </div>
+                            <div>
+                                <span>Bonus</span>
+                                <strong>{levelBuilding.bonus}</strong>
+                            </div>
+                        </div>
+
+                        <BuildingRequirementsTable building={levelBuilding.requirementKey} />
+                    </section>
+                )}
             </div>
         </section>
     );

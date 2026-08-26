@@ -692,3 +692,99 @@
     }
 }
 .materialBlockIcon{width:28px;height:28px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 3px 5px rgba(0,0,0,.28))}
+
+/* Fysisk byggnad som låses upp på nivån */
+.buildingSection {
+    padding-bottom: 24px;
+}
+
+.buildingHeading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.buildingHeading h3 {
+    margin-top: 7px !important;
+}
+
+.buildingHeading h3 a {
+    color: #e4ede1;
+    text-decoration: none;
+}
+
+.buildingHeading h3 a:hover {
+    color: #b7d1ae;
+}
+
+.buildingHeading p {
+    max-width: 720px;
+    margin: 8px 0 0;
+    color: #768476;
+    font-size: 0.72rem;
+    line-height: 1.6;
+}
+
+.buildingLink {
+    flex: 0 0 auto;
+    margin-top: 20px;
+    color: #9fbd96;
+    font-size: 0.68rem;
+    font-weight: 850;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.buildingLink:hover {
+    color: #c2dab9;
+}
+
+.buildingFacts {
+    display: grid;
+    grid-template-columns: minmax(170px, 0.7fr) minmax(0, 1.3fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.buildingFacts > div {
+    padding: 14px 16px;
+    border: 1px solid rgba(157, 188, 146, 0.11);
+    border-radius: 12px;
+    background: rgba(7, 13, 9, 0.24);
+}
+
+.buildingFacts span,
+.buildingFacts strong {
+    display: block;
+}
+
+.buildingFacts span {
+    color: #71806f;
+    font-size: 0.56rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.buildingFacts strong {
+    margin-top: 5px;
+    color: #c8d8c3;
+    font-size: 0.76rem;
+    font-weight: 850;
+}
+
+@media (max-width: 720px) {
+    .buildingHeading {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .buildingLink {
+        margin-top: 0;
+    }
+
+    .buildingFacts {
+        grid-template-columns: 1fr;
+    }
+}
