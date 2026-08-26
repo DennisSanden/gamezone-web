@@ -1,0 +1,384 @@
+.page {
+    min-height: 100vh;
+    padding: 28px 0 90px;
+    background:
+        radial-gradient(circle at 72% 8%, rgba(56, 126, 190, 0.12), transparent 34rem),
+        radial-gradient(circle at 10% 48%, rgba(76, 112, 66, 0.07), transparent 30rem),
+        #090d0b;
+    color: #edf2eb;
+}
+
+.shell {
+    width: min(1260px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #66716a;
+    font-size: 0.72rem;
+}
+
+.breadcrumbs a {
+    color: #95a991;
+    text-decoration: none;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: 68px;
+    align-items: center;
+    padding: 66px 0 64px;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.badges span {
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.035);
+    color: #829087;
+    font-size: 0.61rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.badges .rare {
+    border-color: rgba(87, 155, 228, 0.28);
+    background: rgba(56, 125, 200, 0.14);
+    color: #87beff;
+}
+
+.eyebrow,
+.sectionEyebrow {
+    margin: 0;
+    color: #7daee0;
+    font-size: 0.64rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 10px 0 0;
+    font-size: clamp(3.15rem, 5.7vw, 5.8rem);
+    font-weight: 920;
+    letter-spacing: -0.075em;
+    line-height: 0.9;
+}
+
+.lead {
+    max-width: 590px;
+    margin: 24px 0 0;
+    color: #9aa69d;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.actions a,
+.relicSystemCta > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    font-weight: 830;
+    text-decoration: none;
+}
+
+.primaryAction {
+    border: 1px solid rgba(93, 163, 236, 0.35);
+    background: rgba(55, 121, 190, 0.17);
+    color: #dceeff;
+}
+
+.secondaryAction {
+    border: 1px solid rgba(166, 197, 154, 0.13);
+    background: rgba(255, 255, 255, 0.025);
+    color: #aab7aa;
+}
+
+.art {
+    position: relative;
+    overflow: hidden;
+    min-height: 510px;
+    border: 1px solid rgba(91, 157, 225, 0.25);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 52% 42%, rgba(55, 131, 207, 0.18), transparent 40%),
+        linear-gradient(155deg, #111a20, #0a0f12 72%);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+}
+
+.artGlow {
+    position: absolute;
+    top: 19%;
+    left: 24%;
+    width: 54%;
+    height: 54%;
+    border-radius: 50%;
+    background: rgba(63, 145, 229, 0.19);
+    filter: blur(55px);
+}
+
+.art img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 510px;
+    object-fit: contain;
+    padding: 18px;
+}
+
+.artLabel {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2;
+    display: grid;
+    gap: 3px;
+    padding: 10px 12px;
+    border: 1px solid rgba(124, 183, 241, 0.18);
+    border-radius: 9px;
+    background: rgba(6, 11, 14, 0.74);
+    backdrop-filter: blur(12px);
+}
+
+.artLabel span {
+    color: #75afe9;
+    font-size: 0.55rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.artLabel strong {
+    color: #dceafa;
+    font-size: 0.74rem;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 64px;
+    padding: 58px 0;
+    border-top: 1px solid rgba(165, 197, 153, 0.1);
+}
+
+.article {
+    max-width: 760px;
+}
+
+.article h2,
+.relicSystemCta h2 {
+    margin: 8px 0 24px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.05em;
+}
+
+.article p {
+    margin: 0 0 18px;
+    color: #a2ada5;
+    font-size: 0.93rem;
+    line-height: 1.82;
+}
+
+.article strong {
+    color: #d8e5d4;
+}
+
+.article blockquote {
+    margin: 34px 0 0;
+    padding: 22px 25px;
+    border-left: 2px solid #5f9edc;
+    border-radius: 0 12px 12px 0;
+    background: rgba(49, 104, 157, 0.08);
+    color: #d2e6f8;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.infoCard {
+    align-self: start;
+    overflow: hidden;
+    border: 1px solid rgba(91, 153, 214, 0.19);
+    border-radius: 15px;
+    background: rgba(14, 23, 27, 0.78);
+}
+
+.infoTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 17px 18px;
+    border-bottom: 1px solid rgba(91, 153, 214, 0.12);
+}
+
+.infoTitle span {
+    color: #7c8d91;
+    font-size: 0.62rem;
+    font-weight: 850;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.infoTitle strong {
+    color: #90c4f2;
+    font-size: 0.68rem;
+}
+
+.infoCard dl {
+    margin: 0;
+}
+
+.infoCard dl div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.infoCard dt {
+    color: #65726d;
+    font-size: 0.66rem;
+    font-weight: 760;
+}
+
+.infoCard dd {
+    margin: 0;
+    color: #c1ccc3;
+    font-size: 0.68rem;
+    font-weight: 780;
+    text-align: right;
+}
+
+.infoCard .rareText {
+    color: #80baf2;
+}
+
+.infoNote {
+    margin: 0;
+    padding: 16px 18px 18px;
+    color: #68766e;
+    font-size: 0.65rem;
+    line-height: 1.6;
+}
+
+.relicSystemCta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-top: 14px;
+    padding: 30px;
+    border: 1px solid rgba(160, 194, 148, 0.12);
+    border-radius: 17px;
+    background: linear-gradient(135deg, rgba(30, 45, 33, 0.78), rgba(13, 21, 15, 0.88));
+}
+
+.relicSystemCta h2 {
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.relicSystemCta p:not(.sectionEyebrow) {
+    max-width: 720px;
+    margin: 0;
+    color: #829087;
+    font-size: 0.75rem;
+    line-height: 1.65;
+}
+
+.relicSystemCta > a {
+    flex: 0 0 auto;
+    border: 1px solid rgba(167, 201, 154, 0.16);
+    background: rgba(101, 143, 88, 0.1);
+    color: #d2dfcf;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-top: 48px;
+    }
+
+    .art,
+    .art img {
+        min-height: 420px;
+        height: 420px;
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .infoCard {
+        width: min(100%, 520px);
+    }
+}
+
+@media (max-width: 620px) {
+    .shell {
+        width: min(100% - 26px, 1260px);
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 17vw, 4.5rem);
+    }
+
+    .art,
+    .art img {
+        min-height: 330px;
+        height: 330px;
+    }
+
+    .relicSystemCta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        padding: 23px;
+    }
+
+    .relicSystemCta > a {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.heroCopy {
+    min-width: 0;
+}
+
+.hero h1 {
+    max-width: 100%;
+    overflow-wrap: normal;
+}
+
+@media (min-width: 901px) {
+    .heroCopy {
+        padding-right: 10px;
+    }
+}
