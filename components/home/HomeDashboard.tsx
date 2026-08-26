@@ -127,9 +127,13 @@ export async function HomeDashboard() {
         <div className={styles.creatorGrid}>
           {creators.slice(0, 3).map((creator) => {
             return <a key={creator.twitchLogin} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
-              <div className={styles.creatorPreview}>
+              <div className={styles.creatorPreview} style={(creator.offlineImageUrl || creator.profileImageUrl) ? { backgroundImage: `url(${creator.offlineImageUrl || creator.profileImageUrl})` } : undefined}>
                 <span className={styles.offlineBadge}>TWITCH</span>
-                <span className={styles.creatorAvatar}>{creator.initials}</span>
+                <span
+                  className={styles.creatorAvatar}
+                  style={creator.profileImageUrl ? { backgroundImage: `url(${creator.profileImageUrl})` } : undefined}
+                  aria-label={`${creator.displayName} profilbild`}
+                >{creator.profileImageUrl ? "" : creator.initials}</span>
               </div>
               <div className={styles.creatorBody}>
                 <strong>{creator.displayName}</strong>

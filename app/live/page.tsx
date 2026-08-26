@@ -28,8 +28,8 @@ export default async function LivePage() {
             <div className={styles.sectionHeading}><div><span>GameZone Creators</span><h2>Registrerade Twitchkanaler</h2></div><p>Livestatus visas på Twitch.</p></div>
             <div className={styles.creatorGrid}>
                 {creators.map((creator) => <Link key={creator.twitchLogin} href={creator.channelUrl} target="_blank" rel="noreferrer" className={styles.creatorCard}>
-                    <div className={styles.creatorPreview}><div className={styles.creatorOfflineImage}/><div className={styles.creatorShade}/><span className={styles.cardOfflineBadge}>TWITCH</span></div>
-                    <div className={styles.creatorBody}><div className={styles.avatar}>{creator.initials}</div><div><strong>{creator.displayName}</strong><p>GameZone Creator på Twitch</p><span>twitch.tv/{creator.twitchLogin}</span></div><b aria-hidden="true">→</b></div>
+                    <div className={styles.creatorPreview}><div className={styles.creatorOfflineImage} style={(creator.offlineImageUrl || creator.profileImageUrl) ? { backgroundImage: `url(${creator.offlineImageUrl || creator.profileImageUrl})` } : undefined}/><div className={styles.creatorShade}/><span className={styles.cardOfflineBadge}>TWITCH</span></div>
+                    <div className={styles.creatorBody}><div className={styles.avatar} style={creator.profileImageUrl ? { backgroundImage: `url(${creator.profileImageUrl})` } : undefined}>{creator.profileImageUrl ? "" : creator.initials}</div><div><strong>{creator.displayName}</strong><p>{creator.description || "GameZone Creator på Twitch"}</p><span>twitch.tv/{creator.twitchLogin}</span></div><b aria-hidden="true">→</b></div>
                 </Link>)}
             </div>
             {creators.length === 0 && <p>Inga GameZone Creators är registrerade ännu.</p>}

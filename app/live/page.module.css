@@ -248,6 +248,9 @@
 }
 
 .avatar {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: grid;
     flex: 0 0 auto;
     width: 48px;

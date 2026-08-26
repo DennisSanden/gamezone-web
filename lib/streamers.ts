@@ -3,6 +3,9 @@ export type Streamer = {
     displayName: string;
     channelUrl: string;
     initials: string;
+    profileImageUrl: string;
+    offlineImageUrl: string;
+    description: string;
 };
 
 type EngineEnvelope<T> = { status?: string; result?: T };
