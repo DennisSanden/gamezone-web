@@ -1,24 +1,35 @@
-export type ApprovedStreamer = {
+export type Streamer = {
     twitchLogin: string;
     displayName: string;
     channelUrl: string;
-    description: string;
     initials: string;
-    featured: boolean;
 };
 
-export const APPROVED_STREAMERS: readonly ApprovedStreamer[] = [
-    {
-        twitchLogin: "dennissanden",
-        displayName: "Dennissanden",
-        channelUrl: "https://www.twitch.tv/dennissanden",
-        description: "Minecraft, GameZone och äventyren som formar serverns historia.",
-        initials: "DS",
-        featured: true,
-    },
-] as const;
+type EngineEnvelope<T> = { status?: string; result?: T };
 
-export function getFeaturedStreamer(): ApprovedStreamer {
-    return APPROVED_STREAMERS.find((streamer) => streamer.featured)
-        ?? APPROVED_STREAMERS[0];
+function apiBase() {
+    return (
+        process.env.GAMEZONE_ENGINE_API_URL ??
+        process.env.ENGINE_API_URL ??
+        "http://184.170.201.111:8765"
+    ).replace(/\/$/, "");
+}
+
+export async function getStreamers(): Promise<Streamer[]> {
+    const base = apiBase();
+    try {
+        const response = await fetch(`${base}/api/v1/creators`, {
+            next: { revalidate: 15 },
+            signal: AbortSignal.timeout(8_000),
+        });
+        if (!response.ok) {
+            console.error(`[streamers] ${base}/api/v1/creators responded with HTTP ${response.status}`);
+            return [];
+        }
+        const payload = await response.json() as EngineEnvelope<Streamer[]>;
+        return Array.isArray(payload.result) ? payload.result : [];
+    } catch (err) {
+        console.error(`[streamers] ${base}/api/v1/creators failed:`, err);
+        return [];
+    }
 }

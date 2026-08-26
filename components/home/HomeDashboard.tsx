@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { APPROVED_STREAMERS } from "@/lib/streamers";
+import { getStreamers } from "@/lib/streamers";
 import { getLeaderboard, getServerStatus, type LeaderboardEntry } from "@/lib/home-data";
 import styles from "./HomeDashboard.module.css";
 
@@ -65,13 +65,13 @@ function MiniBoard({ title, eyebrow, icon, entries, suffix, tone, linkCompanies 
 }
 
 export async function HomeDashboard() {
-  const [serverStatus, richest, residents, sales] = await Promise.all([
+  const [serverStatus, richest, residents, sales, creators] = await Promise.all([
     getServerStatus(),
     getLeaderboard("player-coins"),
     getLeaderboard("settlement-members"),
     getLeaderboard("company-sales"),
+    getStreamers(),
   ]);
-  const creators = APPROVED_STREAMERS;
 
   return <div className={styles.page}>
     <section className={styles.hero}>
@@ -133,7 +133,7 @@ export async function HomeDashboard() {
               </div>
               <div className={styles.creatorBody}>
                 <strong>{creator.displayName}</strong>
-                <small>{creator.description}</small>
+                <small>GameZone Creator på Twitch</small>
                 <span>Besök kanalen →</span>
               </div>
             </a>;
