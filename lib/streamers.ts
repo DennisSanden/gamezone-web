@@ -6,6 +6,10 @@ export type Streamer = {
     profileImageUrl: string;
     offlineImageUrl: string;
     description: string;
+    live: boolean;
+    streamTitle: string;
+    gameName: string;
+    viewers: number;
 };
 
 type EngineEnvelope<T> = { status?: string; result?: T };

@@ -171,3 +171,5 @@
 .relaunchTime strong{color:#fff;font-size:14px;font-weight:950;letter-spacing:.06em}
 .relaunchTime span{color:#72d15b;font-size:20px;font-weight:950;letter-spacing:.03em}
 @media(max-width:760px){.relaunchTime{margin-top:16px}.relaunchTime strong{font-size:12px}.relaunchTime span{font-size:18px}}
+
+.creatorViewerBadge{position:absolute;z-index:2;top:8px;right:8px;padding:3px 7px;color:#fff;background:rgba(4,9,6,.78);border:1px solid rgba(255,255,255,.12);border-radius:4px;font-size:8px;font-weight:850}

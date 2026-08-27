@@ -121,7 +121,8 @@ export async function HomeDashboard() {
           {creators.slice(0, 3).map((creator) => {
             return <a key={creator.twitchLogin} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
               <div className={styles.creatorPreview} style={(creator.offlineImageUrl || creator.profileImageUrl) ? { backgroundImage: `url(${creator.offlineImageUrl || creator.profileImageUrl})` } : undefined}>
-                <span className={styles.offlineBadge}>TWITCH</span>
+                <span className={creator.live ? styles.liveBadge : styles.offlineBadge}>{creator.live ? "LIVE" : "TWITCH"}</span>
+                {creator.live ? <span className={styles.creatorViewerBadge}>{formatValue(creator.viewers)} tittare</span> : null}
                 <span
                   className={styles.creatorAvatar}
                   style={creator.profileImageUrl ? { backgroundImage: `url(${creator.profileImageUrl})` } : undefined}
@@ -130,8 +131,8 @@ export async function HomeDashboard() {
               </div>
               <div className={styles.creatorBody}>
                 <strong>{creator.displayName}</strong>
-                <small>GameZone Creator på Twitch</small>
-                <span>Besök kanalen →</span>
+                <small>{creator.live ? (creator.streamTitle || "Live på GameZone") : "GameZone Creator på Twitch"}</small>
+                <span>{creator.live ? "Titta live →" : "Besök kanalen →"}</span>
               </div>
             </a>;
           })}
