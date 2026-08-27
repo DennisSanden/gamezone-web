@@ -73,6 +73,8 @@ export async function HomeDashboard() {
     getStreamers(),
   ]);
 
+  const primaryLiveCreator = creators.find((creator) => creator.live);
+
   return <div className={styles.page}>
     <section className={styles.hero}>
       <div className={styles.heroOverlay}/>
@@ -110,6 +112,33 @@ export async function HomeDashboard() {
       <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
+
+    {primaryLiveCreator ? <section className={styles.liveStreamFeature} aria-label={`${primaryLiveCreator.displayName} live på Twitch`}>
+      <div className={styles.liveStreamPlayer}>
+        <iframe
+          className={styles.liveStreamFrame}
+          src={`https://player.twitch.tv/?channel=${encodeURIComponent(primaryLiveCreator.twitchLogin)}&parent=gamezonemc.se&parent=www.gamezonemc.se&autoplay=true&muted=true`}
+          title={`${primaryLiveCreator.displayName} live på Twitch`}
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+      <div className={styles.liveStreamMeta}>
+        <span className={styles.liveStreamEyebrow}><i/> LIVE NU</span>
+        <h2>{primaryLiveCreator.displayName}</h2>
+        <p>{primaryLiveCreator.streamTitle || "Live från GameZone"}</p>
+        <div className={styles.liveStreamFacts}>
+          {primaryLiveCreator.gameName ? <span>{primaryLiveCreator.gameName}</span> : null}
+          <span>{formatValue(primaryLiveCreator.viewers)} tittare</span>
+        </div>
+        <a href={primaryLiveCreator.channelUrl} target="_blank" rel="noreferrer" className={styles.liveStreamCta}>Öppna på Twitch →</a>
+      </div>
+      <a href={primaryLiveCreator.channelUrl} target="_blank" rel="noreferrer" className={styles.liveStreamMobileFallback}>
+        <span><b>LIVE</b> {primaryLiveCreator.displayName}</span>
+        <strong>{primaryLiveCreator.streamTitle || "Live från GameZone"}</strong>
+        <small>{formatValue(primaryLiveCreator.viewers)} tittare · Öppna streamen →</small>
+      </a>
+    </section> : null}
 
     <section className={styles.dashboardGrid}>
       <article className={`${styles.panel} ${styles.creatorPanel}`}>
