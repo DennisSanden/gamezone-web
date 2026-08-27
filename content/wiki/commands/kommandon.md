@@ -63,7 +63,7 @@ Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrer
 
 `/spawn` teleporterar dig till serverns spawn när du befinner dig i ditt eget settlement.
 
-När du är vid spawn kan du ringa i **klockan på kyrkan** för att teleporteras hem till ditt settlement igen. Om settlementet har satt en egen hemteleport med `/settlement setspawn` används den platsen. Annars används settlementets registrerade centrum.
+När du är vid spawn kan du ringa i **klockan på fontänen** för att teleporteras hem till ditt settlement igen. Om settlementet har satt en egen hemteleport med `/settlement setspawn` används den platsen. Annars används settlementets registrerade centrum.
 
 ## Settlement
 

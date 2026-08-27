@@ -8,7 +8,7 @@ updatedAt: "2026-08-10"
 infoboxTitle: "Teleport"
 infobox:
   till_spawn: "/spawn"
-  hem: "Klockan på kyrkan vid spawn"
+  hem: "Klockan på fontänen vid spawn"
 ---
 
 ## Teleport mellan settlement och spawn
@@ -30,7 +30,7 @@ Du teleporteras då till serverns spawn.
 
 ### Från spawn tillbaka till ditt settlement
 
-När du befinner dig vid serverns spawn går du till **kyrkan** och ringer i **klockan**.
+När du befinner dig vid serverns spawn går du till **fontänen** och ringer i **klockan**.
 
 Klockan teleporterar dig tillbaka till ditt settlement.
 
@@ -39,7 +39,7 @@ Om ditt settlement har satt en egen spawnpunkt med `/settlement setspawn` kommer
 ## Kort sagt
 
 - **Settlement → Spawn:** använd `/spawn` medan du är i ditt eget settlement.
-- **Spawn → Settlement:** ring i klockan på kyrkan vid spawn.
+- **Spawn → Settlement:** ring i klockan på fontänen vid spawn.
 
 Det här gör spawn till serverns naturliga knutpunkt samtidigt som resor ute i världen fortfarande behöver ske på vanligt sätt.
 

@@ -83,6 +83,6 @@ Det gör BlueMap till det enklaste sättet att planera längre resor och se hur 
 
 Teleport och riksvägar fyller olika funktioner.
 
-`/spawn` används för att resa från ditt eget settlement till Spawn. Från Spawn kan kyrkklockan ta dig tillbaka till ditt settlement. Riksvägar används i stället när du vill resa fysiskt genom världen, till exempel mellan två settlements.
+`/spawn` används för att resa från ditt eget settlement till Spawn. Från Spawn kan klockan på fontänen ta dig tillbaka till ditt settlement. Riksvägar används i stället när du vill resa fysiskt genom världen, till exempel mellan två settlements.
 
 Läs mer på sidan [Teleport](/wiki/settlements/teleport).
