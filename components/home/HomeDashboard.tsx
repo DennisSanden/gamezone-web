@@ -113,31 +113,40 @@ export async function HomeDashboard() {
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
-    {primaryLiveCreator ? <section className={styles.liveStreamFeature} aria-label={`${primaryLiveCreator.displayName} live på Twitch`}>
-      <div className={styles.liveStreamPlayer}>
-        <iframe
-          className={styles.liveStreamFrame}
-          src={`https://player.twitch.tv/?channel=${encodeURIComponent(primaryLiveCreator.twitchLogin)}&parent=gamezonemc.se&parent=www.gamezonemc.se&autoplay=true&muted=true`}
-          title={`${primaryLiveCreator.displayName} live på Twitch`}
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
-      <div className={styles.liveStreamMeta}>
-        <span className={styles.liveStreamEyebrow}><i/> LIVE NU</span>
-        <h2>{primaryLiveCreator.displayName}</h2>
-        <p>{primaryLiveCreator.streamTitle || "Live från GameZone"}</p>
-        <div className={styles.liveStreamFacts}>
-          {primaryLiveCreator.gameName ? <span>{primaryLiveCreator.gameName}</span> : null}
-          <span>{formatValue(primaryLiveCreator.viewers)} tittare</span>
+    {primaryLiveCreator ? <section className={styles.liveNowSection} aria-label="Live från GameZone just nu">
+      <div className={styles.liveNowHeader}>
+        <div>
+          <span className={styles.liveStreamEyebrow}><i/> LIVE PÅ SERVERN JUST NU</span>
+          <h2>Följ GameZone live</h2>
+          <p>{creators.filter((creator) => creator.live).length} creator{creators.filter((creator) => creator.live).length === 1 ? "" : "s"} streamar just nu.</p>
         </div>
-        <a href={primaryLiveCreator.channelUrl} target="_blank" rel="noreferrer" className={styles.liveStreamCta}>Öppna på Twitch →</a>
+        <div className={styles.liveNowActions}>
+          <Link href="/live">Visa alla live →</Link>
+          <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli Creator →</a>
+        </div>
       </div>
-      <a href={primaryLiveCreator.channelUrl} target="_blank" rel="noreferrer" className={styles.liveStreamMobileFallback}>
-        <span><b>LIVE</b> {primaryLiveCreator.displayName}</span>
-        <strong>{primaryLiveCreator.streamTitle || "Live från GameZone"}</strong>
-        <small>{formatValue(primaryLiveCreator.viewers)} tittare · Öppna streamen →</small>
-      </a>
+      <div className={styles.liveStreamFeature} aria-label={`${primaryLiveCreator.displayName} live på Twitch`}>
+        <div className={styles.liveStreamPlayer}>
+          <iframe
+            className={styles.liveStreamFrame}
+            src={`https://player.twitch.tv/?channel=${encodeURIComponent(primaryLiveCreator.twitchLogin)}&parent=gamezonemc.se&parent=www.gamezonemc.se&autoplay=true&muted=true`}
+            title={`${primaryLiveCreator.displayName} live på Twitch`}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div className={styles.liveStreamMeta}>
+          <div>
+            <h3>{primaryLiveCreator.displayName}</h3>
+            <p>{primaryLiveCreator.streamTitle || "Live från GameZone"}</p>
+          </div>
+          <div className={styles.liveStreamFacts}>
+            {primaryLiveCreator.gameName ? <span>{primaryLiveCreator.gameName}</span> : null}
+            <span>{formatValue(primaryLiveCreator.viewers)} tittare</span>
+            <a href={primaryLiveCreator.channelUrl} target="_blank" rel="noreferrer">Twitch →</a>
+          </div>
+        </div>
+      </div>
     </section> : null}
 
     <section className={styles.dashboardGrid}>
