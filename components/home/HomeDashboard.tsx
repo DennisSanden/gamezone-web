@@ -78,13 +78,8 @@ export async function HomeDashboard() {
       <div className={styles.heroOverlay}/>
       <div className={styles.heroInner}>
         <div className={styles.heroCopy}>
-          <div className={styles.relaunchBadge}>GAMEZONE 1.0</div>
-          <h1><span>Vi bygger om världen.</span><span>Vi är tillbaka <em>28 augusti.</em></span></h1>
-          <p className={styles.intro}>En helt ny värld väntar. GameZone 1.0 öppnar den 28 augusti kl. 19:00.</p>
-          <div className={styles.relaunchTime}>
-            <strong>28 AUGUSTI</strong>
-            <span>19:00</span>
-          </div>
+          <h1><span>GameZone</span></h1>
+          <p className={styles.intro}>Varje spelare har en plats. Varje stad har en historia.</p>
         </div>
       </div>
     </section>
@@ -93,7 +88,7 @@ export async function HomeDashboard() {
       <div className={styles.heroActions}>
         <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
           <span className={styles.playButtonIcon}>↗</span>
-          <span>Följ återkomsten på Discord</span>
+          <span>Spela nu</span>
         </a>
 
         <Link href="/patreon" className={styles.patreonButton}>
@@ -103,9 +98,7 @@ export async function HomeDashboard() {
       </div>
       <div className={styles.playMeta}>
         <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
-        <strong>Servern är under uppbyggnad</strong>
-        <span>•</span>
-        <span>Öppnar 28 augusti kl. 19:00</span>
+        <strong>{serverStatus.online ? "Servern är online" : "Servern är offline"}</strong>
         <span>•</span>
         <span>play.gamezonemc.se</span>
       </div>
