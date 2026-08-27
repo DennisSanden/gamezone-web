@@ -183,7 +183,23 @@ export async function HomeDashboard() {
       </div>
     </section> : null}
 
-    <section className={styles.dashboardGrid}>
+    <section className={styles.homeInfoGrid}>
+      <article className={`${styles.panel} ${styles.creatorInfoPanel}`}>
+        <div className={styles.panelHeader}>
+          <div>
+            <small>GAMEZONE CREATORS</small>
+            <h2>Titta, följ och bli en del av communityn</h2>
+          </div>
+        </div>
+        <p className={styles.creatorInfoText}>
+          Följ creators som spelar på GameZone. Länka ditt Twitch-konto på servern för att kunna få Twitch Coins när du tittar på GameZone-streams.
+        </p>
+        <div className={styles.creatorInfoActions}>
+          <Link href="/live">Se alla creators →</Link>
+          <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli Creator →</a>
+        </div>
+      </article>
+
       <article className={styles.panel}>
         <div className={styles.panelHeader}><h2>Serverinformation</h2></div>
         <div className={styles.serverList}>
