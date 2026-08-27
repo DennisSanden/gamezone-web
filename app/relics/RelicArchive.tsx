@@ -16,13 +16,8 @@ import moonpiercerImage from "../wiki/relics/assets/moonpiercer.png";
 import masonJournalImage from "../wiki/relics/assets/the-masons-journal.png";
 import kingsguardImage from "../wiki/relics/assets/kingsguard.png";
 import mountainbreakerImage from "../wiki/relics/assets/mountainbreaker.png";
-import prospectorsHelmImage from "../wiki/relics/assets/prospectors-helm.png";
-import heartOfTheMountainImage from "../wiki/relics/assets/heart-of-the-mountain.png";
-import andvarisPrideImage from "../wiki/relics/assets/andvaris-pride.png";
-import winterhideImage from "../wiki/relics/assets/winterhide.png";
-import theBlackBladeImage from "../wiki/relics/assets/the-black-blade.png";
-import oathkeeperImage from "../wiki/relics/assets/oathkeeper.png";
-import forgefathersGauntletImage from "../wiki/relics/assets/forgefathers-gauntlet.png";
+import warbringersPlateImage from "../wiki/relics/assets/warbringers-plate.png";
+import witchfinderImage from "../wiki/relics/assets/witchfinder.png";
 
 type RelicTier = "COMMON" | "RARE" | "EPIC" | "LEGENDARY" | "MYTHIC" | null;
 
@@ -66,12 +61,12 @@ const tierLabels: Record<string, string> = {
 };
 
 // Reliker som är offentligt kända innan discovery. Upptäckta reliker avslöjas alltid.
-// Fördelning: 10 Common, 4 Rare, 3 Epic, 1 Legendary.
+// Fördelning: 10 Common, 5 Rare, 3 Epic, 1 Legendary.
 const publicBeforeDiscovery = new Set([
     "GZR-0001", "GZR-0002", "GZR-0003", "GZR-0004", "GZR-0005",
-    "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010",
-    "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
-    "GZR-0033", "GZR-0034", "GZR-0035", "GZR-0028", "GZR-0039",
+    "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010", "GZR-0015",
+    "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022", "GZR-0025",
+    "GZR-0033", "GZR-0034", "GZR-0035", "GZR-0039",
     "GZR-0042",
 ]);
 
@@ -128,15 +123,10 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0008") return "/wiki/relics/marchers-boots";
     if (relic.serial === "GZR-0009") return "/wiki/relics/the-masons-journal";
     if (relic.serial === "GZR-0010") return "/wiki/relics/kingsguard";
+    if (relic.serial === "GZR-0015") return "/wiki/relics/witchfinder";
     if (relic.serial === "GZR-0039") return "/wiki/relics/moonpiercer";
     if (relic.serial === "GZR-0020") return "/wiki/relics/mountainbreaker";
-    if (relic.serial === "GZR-0021") return "/wiki/relics/prospectors-helm";
-    if (relic.serial === "GZR-0022") return "/wiki/relics/heart-of-the-mountain";
-    if (relic.serial === "GZR-0033") return "/wiki/relics/andvaris-pride";
-    if (relic.serial === "GZR-0034") return "/wiki/relics/winterhide";
-    if (relic.serial === "GZR-0035") return "/wiki/relics/the-black-blade";
-    if (relic.serial === "GZR-0028") return "/wiki/relics/oathkeeper";
-    if (relic.serial === "GZR-0042") return "/wiki/relics/forgefathers-gauntlet";
+    if (relic.serial === "GZR-0025") return "/wiki/relics/warbringers-plate";
     return null;
 }
 
@@ -317,6 +307,11 @@ export default function RelicArchive() {
                                     <img src={kingsguardImage.src} alt="" />
                                     <span className={styles.artCaption}>IRON SWORD</span>
                                 </div>
+                            ) : relic.serial === "GZR-0015" ? (
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                    <img src={witchfinderImage.src} alt="" />
+                                    <span className={styles.artCaption}>CROSSBOW</span>
+                                </div>
                             ) : relic.serial === "GZR-0039" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
                                     <img src={moonpiercerImage.src} alt="" />
@@ -327,40 +322,10 @@ export default function RelicArchive() {
                                     <img src={mountainbreakerImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND AXE</span>
                                 </div>
-                            ) : relic.serial === "GZR-0021" ? (
+                            ) : relic.serial === "GZR-0025" ? (
                                 <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={prospectorsHelmImage.src} alt="" />
-                                    <span className={styles.artCaption}>DIAMOND HELMET</span>
-                                </div>
-                            ) : relic.serial === "GZR-0022" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={heartOfTheMountainImage.src} alt="" />
-                                    <span className={styles.artCaption}>HEART OF THE SEA</span>
-                                </div>
-                            ) : relic.serial === "GZR-0033" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={andvarisPrideImage.src} alt="" />
-                                    <span className={styles.artCaption}>NETHERITE PICKAXE</span>
-                                </div>
-                            ) : relic.serial === "GZR-0034" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={winterhideImage.src} alt="" />
+                                    <img src={warbringersPlateImage.src} alt="" />
                                     <span className={styles.artCaption}>DIAMOND CHESTPLATE</span>
-                                </div>
-                            ) : relic.serial === "GZR-0035" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={theBlackBladeImage.src} alt="" />
-                                    <span className={styles.artCaption}>NETHERITE SWORD</span>
-                                </div>
-                            ) : relic.serial === "GZR-0028" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={oathkeeperImage.src} alt="" />
-                                    <span className={styles.artCaption}>DIAMOND SWORD</span>
-                                </div>
-                            ) : relic.serial === "GZR-0042" ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
-                                    <img src={forgefathersGauntletImage.src} alt="" />
-                                    <span className={styles.artCaption}>NETHERITE CHESTPLATE</span>
                                 </div>
                             ) : (
                                 <div className={styles.relicArt} aria-hidden="true">
