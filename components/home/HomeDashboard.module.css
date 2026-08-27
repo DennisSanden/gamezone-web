@@ -381,3 +381,116 @@
     grid-template-columns:1fr;
   }
 }
+
+
+/* v8: denser creator/server information row */
+.homeInfoGrid{
+  align-items:stretch;
+  gap:10px;
+  margin-top:10px;
+}
+
+.homeInfoGrid > .panel{
+  min-height:0;
+  padding:12px 14px;
+}
+
+.homeInfoGrid .panelHeader{
+  margin-bottom:8px;
+  padding-bottom:8px;
+}
+
+.homeInfoGrid .panelHeader h2{
+  margin:0;
+  font-size:13px;
+  line-height:1.1;
+}
+
+.creatorInfoPanel{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:8px;
+}
+
+.creatorInfoPanel > span,
+.creatorInfoPanel .eyebrow{
+  margin-bottom:0;
+}
+
+.creatorInfoPanel h2{
+  margin:0;
+  font-size:15px;
+  line-height:1.1;
+}
+
+.creatorInfoBody{
+  margin:0;
+}
+
+.creatorInfoBody p,
+.creatorInfoPanel p{
+  margin:0;
+  max-width:760px;
+  font-size:9px;
+  line-height:1.45;
+}
+
+.creatorInfoActions{
+  margin-top:4px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.creatorInfoActions a{
+  min-height:28px;
+  padding:6px 10px;
+}
+
+.serverInfoPanel{
+  min-height:0;
+}
+
+.serverInfoPanel .serverInfoRows,
+.serverInfoPanel .statusRows{
+  margin-top:0;
+}
+
+.serverInfoPanel .serverInfoRow,
+.serverInfoPanel .statusRow{
+  min-height:31px;
+  padding:6px 0;
+}
+
+.serverInfoPanel .serverStatusButton{
+  margin-top:8px;
+  min-height:30px;
+}
+
+/* Catch existing generic server rows in this section as well */
+.homeInfoGrid > .panel:last-child [class*="serverInfo"]{
+  margin-top:0;
+}
+
+.homeInfoGrid > .panel:last-child [class*="statusRow"],
+.homeInfoGrid > .panel:last-child [class*="serverRow"]{
+  min-height:31px;
+}
+
+/* Remove accidental spacious fixed/min heights inherited from earlier iterations */
+.homeInfoGrid,
+.creatorInfoPanel,
+.serverInfoPanel{
+  height:auto;
+  min-height:0;
+}
+
+@media(max-width:860px){
+  .homeInfoGrid{
+    gap:8px;
+  }
+  .homeInfoGrid > .panel{
+    padding:11px 12px;
+  }
+}
