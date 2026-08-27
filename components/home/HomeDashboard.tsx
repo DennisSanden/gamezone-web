@@ -120,7 +120,21 @@ export async function HomeDashboard() {
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
       <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.quickCard}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
-      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
+              <Link href="/status" className={`${styles.quickCard} ${styles.serverQuickCard}`}>
+          <div className={styles.quickIcon} aria-hidden="true">●</div>
+          <div className={styles.serverQuickBody}>
+            <strong>SERVERINFO</strong>
+            <div className={styles.serverQuickMeta}>
+              <span>play.gamezonemc.se</span>
+              <span>Java 26.1.2</span>
+              <span>{status.onlinePlayers ?? 0} / {status.maxPlayers ?? "?"}</span>
+              <span className={status.online ? styles.serverQuickOnline : styles.serverQuickOffline}>
+                {status.online ? "Online" : "Offline"}
+              </span>
+            </div>
+          </div>
+        </Link>
+<Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
@@ -182,35 +196,6 @@ export async function HomeDashboard() {
         })}
       </div>
     </section> : null}
-
-    <section className={styles.homeInfoGrid}>
-      <article className={`${styles.panel} ${styles.creatorInfoPanel}`}>
-        <div className={styles.panelHeader}>
-          <div>
-            <small>GAMEZONE CREATORS</small>
-            <h2>Titta, följ och bli en del av communityn</h2>
-          </div>
-        </div>
-        <p className={styles.creatorInfoText}>
-          Följ creators som spelar på GameZone. Länka ditt Twitch-konto på servern för att kunna få Twitch Coins när du tittar på GameZone-streams.
-        </p>
-        <div className={styles.creatorInfoActions}>
-          <Link href="/live">Se alla creators →</Link>
-          <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli Creator →</a>
-        </div>
-      </article>
-
-      <article className={styles.panel}>
-        <div className={styles.panelHeader}><h2>Serverinformation</h2></div>
-        <div className={styles.serverList}>
-          <div><span><Icon name="server"/> IP-adress</span><strong>play.gamezonemc.se</strong></div>
-          <div><span><Icon name="version"/> Minecraft</span><strong>Java 26.1.2</strong></div>
-          <div><span><Icon name="players"/> Spelare</span><strong>{serverStatus.online ? `${serverStatus.playersOnline} / ${serverStatus.playersMax || "?"}` : "0 / ?"}</strong></div>
-          <div><span><Icon name="clock"/> Status</span><strong className={serverStatus.online ? styles.online : styles.offline}>{serverStatus.online ? "Online" : "Offline"}</strong></div>
-        </div>
-        <Link href="/status" className={styles.panelCta}>Detaljerad serverstatus <span>↗</span></Link>
-      </article>
-    </section>
 
     <section className={styles.leaderboardPanel}>
       <div className={styles.sectionHeader}><span><small>Serverns topp just nu</small><h2>Leaderboards</h2></span><Link href="/leaderboards">Se alla →</Link></div>

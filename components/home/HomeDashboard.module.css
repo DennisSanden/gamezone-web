@@ -494,3 +494,67 @@
     padding:11px 12px;
   }
 }
+
+
+/* v9: server info lives in the quick-action row */
+.quickGrid,
+.quickLinksGrid,
+.homeQuickGrid{
+  grid-template-columns:repeat(5,minmax(0,1fr));
+}
+
+.serverQuickCard{
+  text-decoration:none;
+}
+
+.serverQuickBody{
+  min-width:0;
+  flex:1;
+}
+
+.serverQuickMeta{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px 7px;
+  margin-top:3px;
+  font-size:7px;
+  line-height:1.25;
+  opacity:.82;
+}
+
+.serverQuickMeta span{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.serverQuickOnline{
+  color:#61ff7d;
+  font-weight:800;
+}
+
+.serverQuickOffline{
+  color:#ff5b62;
+  font-weight:800;
+}
+
+/* Old creator/server info row is intentionally removed in v9 */
+.homeInfoGrid{
+  display:none !important;
+}
+
+@media(max-width:1100px){
+  .quickGrid,
+  .quickLinksGrid,
+  .homeQuickGrid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:720px){
+  .quickGrid,
+  .quickLinksGrid,
+  .homeQuickGrid{
+    grid-template-columns:1fr;
+  }
+}
