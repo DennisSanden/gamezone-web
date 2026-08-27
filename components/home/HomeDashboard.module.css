@@ -286,3 +286,20 @@
   font-weight:850;
   letter-spacing:.06em;
 }
+
+
+/* v6: keep server information compact beneath the single creator row */
+.dashboardGrid{
+  display:block;
+  width:min(920px,calc(100% - 64px));
+  margin:12px auto 0;
+}
+.dashboardGrid > .panel{
+  width:100%;
+  margin:0;
+}
+@media(max-width:860px){
+  .dashboardGrid{
+    width:calc(100% - 28px);
+  }
+}
