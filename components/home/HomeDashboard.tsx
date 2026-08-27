@@ -184,44 +184,6 @@ export async function HomeDashboard() {
     </section> : null}
 
     <section className={styles.dashboardGrid}>
-      <article className={`${styles.panel} ${styles.creatorPanel}`}>
-        <div className={styles.panelHeader}>
-          <h2>Följ servern via våra creators</h2>
-          <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli creator →</a>
-        </div>
-        <div className={styles.creatorGrid}>
-          {creators.slice(0, 4).map((creator) => {
-            return <a key={creator.twitchLogin} className={styles.creatorCard} href={creator.channelUrl} target="_blank" rel="noreferrer">
-              <div className={styles.creatorPreview} style={(creator.offlineImageUrl || creator.profileImageUrl) ? { backgroundImage: `url(${creator.offlineImageUrl || creator.profileImageUrl})` } : undefined}>
-                <span className={creator.live ? styles.liveBadge : styles.offlineBadge}>{creator.live ? "LIVE" : "TWITCH"}</span>
-                {creator.live ? <span className={styles.creatorViewerBadge}>{formatValue(creator.viewers)} tittare</span> : null}
-                <span
-                  className={styles.creatorAvatar}
-                  style={creator.profileImageUrl ? { backgroundImage: `url(${creator.profileImageUrl})` } : undefined}
-                  aria-label={`${creator.displayName} profilbild`}
-                >{creator.profileImageUrl ? "" : creator.initials}</span>
-              </div>
-              <div className={styles.creatorBody}>
-                <strong>{creator.displayName}</strong>
-                <small>{creator.live ? (creator.streamTitle || "Live på GameZone") : "GameZone Creator på Twitch"}</small>
-                <span>{creator.live ? "Titta live →" : "Besök kanalen →"}</span>
-              </div>
-            </a>;
-          })}
-
-          {Array.from({ length: Math.max(0, 4 - creators.length) }).map((_, index) =>
-            <a key={`creator-slot-${index}`} className={`${styles.creatorCard} ${styles.creatorInviteCard}`} href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">
-              <div className={styles.creatorInviteIcon}>+</div>
-              <div className={styles.creatorBody}>
-                <strong>Skapar du innehåll?</strong>
-                <small>Ansök om att bli GameZone Creator</small>
-                <span>Bli GameZone Creator →</span>
-              </div>
-            </a>
-          )}
-        </div>
-      </article>
-
       <article className={styles.panel}>
         <div className={styles.panelHeader}><h2>Serverinformation</h2></div>
         <div className={styles.serverList}>
