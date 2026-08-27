@@ -73,9 +73,18 @@ export async function HomeDashboard() {
     getStreamers(),
   ]);
 
-  const homepageLiveCreators = creators
-    .filter((creator) => creator.live && creator.gameName?.trim().toLowerCase() === "minecraft")
-    .slice(0, 4);
+  const minecraftLiveCreators = creators.filter(
+    (creator) => creator.live && creator.gameName?.trim().toLowerCase() === "minecraft"
+  );
+
+  const homepageFeaturedCreators = [
+    ...minecraftLiveCreators,
+    ...creators.filter(
+      (creator) => !minecraftLiveCreators.some(
+        (liveCreator) => liveCreator.twitchLogin === creator.twitchLogin
+      )
+    ),
+  ].slice(0, 4);
 
   return <div className={styles.page}>
     <section className={styles.hero}>
@@ -115,12 +124,12 @@ export async function HomeDashboard() {
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
-    {homepageLiveCreators.length > 0 ? <section className={styles.liveNowSection} aria-label="Live från GameZone just nu">
+    {homepageFeaturedCreators.length > 0 ? <section className={styles.liveNowSection} aria-label="GameZone Creators">
       <div className={styles.liveNowHeader}>
         <div>
           <span className={styles.liveStreamEyebrow}><i/> LIVE PÅ SERVERN JUST NU</span>
           <h2>Följ GameZone live</h2>
-          <p>{homepageLiveCreators.length} Minecraft-creator{homepageLiveCreators.length === 1 ? "" : "s"} streamar just nu.</p>
+          <p>Live creators prioriteras. Övriga platser fylls med GameZone Creators.</p>
         </div>
         <div className={styles.liveNowActions}>
           <Link href="/live">Visa alla live →</Link>
@@ -129,27 +138,48 @@ export async function HomeDashboard() {
       </div>
 
       <div className={styles.liveStreamGrid}>
-        {homepageLiveCreators.map((creator) => <div key={creator.twitchLogin} className={styles.liveStreamFeature} aria-label={`${creator.displayName} live på Twitch`}>
-          <div className={styles.liveStreamPlayer}>
-            <iframe
-              className={styles.liveStreamFrame}
-              src={`https://player.twitch.tv/?channel=${encodeURIComponent(creator.twitchLogin)}&parent=gamezonemc.se&parent=www.gamezonemc.se&autoplay=true&muted=true`}
-              title={`${creator.displayName} live på Twitch`}
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <div className={styles.liveStreamMeta}>
-            <div>
-              <h3>{creator.displayName}</h3>
-              <p>{creator.streamTitle || "Live från GameZone"}</p>
+        {homepageFeaturedCreators.map((creator) => {
+          const showLivePlayer =
+            creator.live && creator.gameName?.trim().toLowerCase() === "minecraft";
+
+          return <div key={creator.twitchLogin} className={styles.liveStreamFeature} aria-label={`${creator.displayName} på Twitch`}>
+            <div className={styles.liveStreamPlayer}>
+              {showLivePlayer ? (
+                <iframe
+                  className={styles.liveStreamFrame}
+                  src={`https://player.twitch.tv/?channel=${encodeURIComponent(creator.twitchLogin)}&parent=gamezonemc.se&parent=www.gamezonemc.se&autoplay=true&muted=true`}
+                  title={`${creator.displayName} live på Twitch`}
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <a
+                  href={creator.channelUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.offlineStreamPreview}
+                  style={(creator.offlineImageUrl || creator.profileImageUrl)
+                    ? { backgroundImage: `url(${creator.offlineImageUrl || creator.profileImageUrl})` }
+                    : undefined}
+                >
+                  <span className={styles.offlineStreamShade}/>
+                  <span className={styles.offlineStreamBadge}>OFFLINE</span>
+                </a>
+              )}
             </div>
-            <div className={styles.liveStreamFacts}>
-              <span>{formatValue(creator.viewers)} tittare</span>
-              <a href={creator.channelUrl} target="_blank" rel="noreferrer">Twitch →</a>
+
+            <div className={styles.liveStreamMeta}>
+              <div>
+                <h3>{creator.displayName}</h3>
+                <p>{showLivePlayer ? (creator.streamTitle || "Live från GameZone") : (creator.description || "GameZone Creator på Twitch")}</p>
+              </div>
+              <div className={styles.liveStreamFacts}>
+                {showLivePlayer ? <span>{formatValue(creator.viewers)} tittare</span> : <span>Offline</span>}
+                <a href={creator.channelUrl} target="_blank" rel="noreferrer">{showLivePlayer ? "Titta live →" : "Twitch →"}</a>
+              </div>
             </div>
-          </div>
-        </div>)}
+          </div>;
+        })}
       </div>
     </section> : null}
 

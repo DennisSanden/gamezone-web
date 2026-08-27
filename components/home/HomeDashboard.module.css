@@ -255,3 +255,34 @@
   .creatorGrid .creatorCard:nth-child(3),
   .creatorGrid .creatorCard:nth-child(4){display:none}
 }
+
+
+.offlineStreamPreview{
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:0;
+  background-position:center;
+  background-size:cover;
+  text-decoration:none;
+}
+.offlineStreamShade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(3,8,5,.08),rgba(3,8,5,.62));
+}
+.offlineStreamBadge{
+  position:absolute;
+  left:7px;
+  top:7px;
+  z-index:1;
+  padding:3px 6px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:4px;
+  background:rgba(3,8,5,.78);
+  color:#fff;
+  font-size:7px;
+  font-weight:850;
+  letter-spacing:.06em;
+}
