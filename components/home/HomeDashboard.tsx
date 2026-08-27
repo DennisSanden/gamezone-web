@@ -127,9 +127,9 @@ export async function HomeDashboard() {
             <div className={styles.serverQuickMeta}>
               <span>play.gamezonemc.se</span>
               <span>Java 26.1.2</span>
-              <span>{status.onlinePlayers ?? 0} / {status.maxPlayers ?? "?"}</span>
-              <span className={status.online ? styles.serverQuickOnline : styles.serverQuickOffline}>
-                {status.online ? "Online" : "Offline"}
+              <span>{serverStatus.playersOnline} / {serverStatus.playersMax}</span>
+              <span className={serverStatus.online ? styles.serverQuickOnline : styles.serverQuickOffline}>
+                {serverStatus.online ? "Online" : "Offline"}
               </span>
             </div>
           </div>
