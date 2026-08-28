@@ -26,6 +26,7 @@ const definitions: Record<Category, Definition[]> = {
     { key: "PLAYER_KILLS", title: "Flest kills", description: "Flest registrerade spelarkills.", label: "Kills", icon: "⚔" },
     { key: "PLAYER_DUEL_WINS", title: "Flest vunna dueller", description: "Flest registrerade vinster i officiella dueller.", label: "Duellvinster", icon: "⚔" },
     { key: "PLAYER_REFERRALS", title: "Flest värvningar", description: "Flest kvalificerade spelare värvade till GameZone.", label: "Värvningar", icon: "✚" },
+    { key: "PLAYER_BOUNTY_HUNTER", title: "Monsterjägare", description: "Flest inkasserade bounties. Totalt intjänad bounty-belöning visas som extra statistik.", label: "Bounties", icon: "☠" },
     { key: "PLAYER_DEATHS", title: "Flest deaths", description: "Flest registrerade dödsfall.", label: "Deaths", icon: "☠" },
     { key: "PLAYER_KD", title: "Högst K/D", description: "Bäst förhållande mellan kills och deaths.", label: "K/D", icon: "✦" },
   ],
@@ -57,6 +58,10 @@ const definitions: Record<Category, Definition[]> = {
 const number = new Intl.NumberFormat("sv-SE");
 
 export function formatLeaderboardValue(entry: LeaderboardEntry, board: LeaderboardBoard | undefined, label: string) {
+  if (board?.key.toUpperCase() === "PLAYER_BOUNTY_HUNTER") {
+    const claims = `${number.format(entry.value)} ${entry.value === 1 ? "bounty" : "bounties"}`;
+    return entry.detail ? `${claims} • ${entry.detail}` : claims;
+  }
   if (entry.detail) return entry.detail;
   if (board?.valueType === "SECONDS" || board?.valueType === "PLAY_TIME_SECONDS") {
     const days = Math.floor(entry.value / 86400);

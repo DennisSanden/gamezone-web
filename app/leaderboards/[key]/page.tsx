@@ -8,13 +8,17 @@ import { getAllLeaderboardEntries, type LeaderboardEntry } from "@/lib/leaderboa
 import styles from "../page.module.css";
 
 const labels: Record<string, string> = {
-  COINS: "Coins", ITEMS: "Items", SECONDS: "Speltid", KILLS: "Kills", DEATHS: "Deaths", RATIO_X100: "K/D", TITLE_RANK: "Titel", MEMBERS: "Medlemmar", LEVEL: "Nivå", TRANSACTIONS: "Transaktioner", COUNT: "Antal", PLAYERS: "Spelare", WINS: "Vinster", LOSSES: "Förluster", REFERRALS: "Värvningar", TICKET_DIFFERENTIAL: "Ticket-differens",
+  COINS: "Coins", ITEMS: "Items", SECONDS: "Speltid", KILLS: "Kills", DEATHS: "Deaths", RATIO_X100: "K/D", TITLE_RANK: "Titel", MEMBERS: "Medlemmar", LEVEL: "Nivå", TRANSACTIONS: "Transaktioner", COUNT: "Antal", PLAYERS: "Spelare", WINS: "Vinster", LOSSES: "Förluster", REFERRALS: "Värvningar", BOUNTIES: "Bounties", TICKET_DIFFERENTIAL: "Ticket-differens",
 };
 const number = new Intl.NumberFormat("sv-SE");
 
 export const dynamic = "force-dynamic";
 
 function format(entry: LeaderboardEntry, valueType: string) {
+  if (valueType === "BOUNTIES") {
+    const claims = `${number.format(entry.value)} ${entry.value === 1 ? "bounty" : "bounties"}`;
+    return entry.detail ? `${claims} • ${entry.detail}` : claims;
+  }
   if (entry.detail) return entry.detail;
   if (valueType === "SECONDS") {
     const days = Math.floor(entry.value / 86400); const hours = Math.floor((entry.value % 86400) / 3600); const minutes = Math.floor((entry.value % 3600) / 60);
