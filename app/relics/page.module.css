@@ -669,6 +669,7 @@
 
 
 .relicImagePreview {
+    position: relative;
     padding: 8px;
     background:
         radial-gradient(circle at 50% 42%, rgba(52, 137, 221, 0.2), transparent 47%),
@@ -683,7 +684,7 @@
     max-height: 100%;
     object-fit: contain;
     object-position: center;
-    padding: 0;
+    padding: 8px;
     opacity: 0.96;
 }
 

@@ -49,7 +49,7 @@ export async function getLeaderboard(type: string): Promise<LeaderboardEntry[]> 
   const apiBase = (
       process.env.GAMEZONE_ENGINE_API_URL ??
       process.env.ENGINE_API_URL ??
-      "http://184.170.201.111:8765"
+      "http://162.120.2.221:25569"
   ).replace(/\/$/, "");
   console.log(`[home-data] using ${source}: ${apiBase}`);
 

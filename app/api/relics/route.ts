@@ -1,11 +1,8 @@
 import { NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 30;
 
 const FALLBACK_ENGINE_URLS = [
-    "http://162.120.2.221:25569",
-    "http://162.120.2.221:25569",
     "http://162.120.2.221:25569",
 ];
 
@@ -35,7 +32,7 @@ export async function GET() {
     for (const engineApi of engineCandidates()) {
         try {
             const response = await fetch(`${engineApi}/api/v1/relics`, {
-                cache: "no-store",
+                next: { revalidate: 30 },
                 signal: AbortSignal.timeout(5_000),
                 headers: {
                     accept: "application/json",
@@ -65,7 +62,7 @@ export async function GET() {
             return NextResponse.json(payload, {
                 status: 200,
                 headers: {
-                    "Cache-Control": "no-store, no-cache, must-revalidate",
+                    "Cache-Control": "public, s-maxage=30, stale-while-revalidate=300",
                 },
             });
         } catch (error) {
@@ -87,7 +84,7 @@ export async function GET() {
         {
             status: 503,
             headers: {
-                "Cache-Control": "no-store, no-cache, must-revalidate",
+                "Cache-Control": "public, s-maxage=5, stale-while-revalidate=30",
             },
         },
     );
