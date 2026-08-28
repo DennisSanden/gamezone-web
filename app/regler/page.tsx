@@ -25,10 +25,6 @@ const conductRules: Rule[] = [
         title: "Namn och skins",
         text: "Spelarnamn och skins får inte innehålla stötande, diskriminerande eller olämpligt innehåll.",
     },
-    {
-        title: "Serverteamets beslut",
-        text: "Serverteamets beslut är slutgiltiga. Regler kan uppdateras när det behövs för att skapa en rättvis och rolig spelupplevelse för alla.",
-    },
 ];
 
 const technicalRules: Rule[] = [
@@ -57,7 +53,7 @@ const quickAnswers = [
     },
     {
         question: "Får jag bygga en automatisk farm?",
-        answer: "Ja, men endast om farmen producerar resurser inom ditt settlements produktionskategori.",
+        answer: "Ja, men endast för direkta grundresurser inom ditt settlements produktionskategori. Farmar som ökar, samlar eller koncentrerar mobspawns räknas också som automation.",
     },
     {
         question: "Ger automatiska farmar GZ Coins?",
@@ -65,7 +61,7 @@ const quickAnswers = [
     },
     {
         question: "Får jag döda någon med lava eller en fälla?",
-        answer: "Nej, inte utanför ditt eget settlement. Inom ditt eget settlement får du bygga fällor och försvar som kan döda, men inte fällor som fångar spelare eller hindrar dem från att ta sig ut.",
+        answer: "Nej, inte utanför ditt eget settlement. Inom ditt eget settlement får du bygga dödliga fällor och försvar, men du får aldrig lura in spelare i dem genom exempelvis guidade turer, byteshandel eller falska erbjudanden. Fällor som låser fast spelare är inte tillåtna.",
     },
     {
         question: "Vad gör jag om jag hittar en gråzon?",
@@ -227,8 +223,11 @@ export default function RulesPage() {
                                 <span>Undantag</span>
                                 <p>
                                     Inom ditt eget settlement får du bygga fällor och
-                                    försvar som kan döda spelare. Fällor som fångar spelare
-                                    eller hindrar dem från att ta sig ut är inte tillåtna.
+                                    försvar som kan döda spelare. Du får däremot inte lura
+                                    eller locka in spelare i dem genom guidade turer,
+                                    byteshandel, falska erbjudanden eller andra oärliga
+                                    metoder. Fällor som fångar spelare eller hindrar dem från
+                                    att ta sig ut är inte tillåtna.
                                 </p>
                             </article>
                         </div>
@@ -285,55 +284,105 @@ export default function RulesPage() {
                 <section className={styles.section}>
                     <PageContainer>
                         <div className={styles.sectionHeading}>
-                            <span className={styles.kicker}>Fabriker och automation</span>
-                            <h2>Specialisering ska skapa handel</h2>
+                            <span className={styles.kicker}>12. Automatiska farms</span>
+                            <h2>Automation följer settlementets kategori</h2>
                             <p>
-                                Automatiska farmar, fabriker och andra former av automation får
-                                endast användas för resurser som tillhör ditt settlements
-                                produktionskategori. Begränsningen gäller system som producerar
-                                resurser utan eller med minimal spelarinsats.
+                                Automatiska farms och andra metoder som ökar produktionen av
+                                en resurs får endast användas för resurser som tillhör ditt
+                                settlements produktionskategori.
                             </p>
                         </div>
 
                         <div className={styles.automationGrid}>
                             <article className={styles.allowedCard}>
                                 <span>Tillåtet</span>
-                                <h3>Produktion inom kategorin</h3>
+                                <h3>Direkta grundresurser</h3>
                                 <p>
-                                    Ett settlement med Skogsbruk får bygga automatiska
-                                    trädfarmar. Ett settlement med Gruvdrift får bygga
-                                    stone-farms och annan gruvrelaterad automation.
+                                    En resurs får automatiseras om den är en direkt
+                                    grundresurs inom kategorin. Varianter av samma resurs
+                                    räknas också, exempelvis Gold Nugget, Gold Ingot och Gold
+                                    Block. Resurser som tillhör flera kategorier får
+                                    automatiseras av samtliga berörda kategorier.
                                 </p>
                             </article>
 
                             <article className={styles.forbiddenCard}>
-                                <span>Förbjudet</span>
-                                <h3>Produktion utanför kategorin</h3>
+                                <span>Räknas som automation</span>
+                                <h3>Även mobfarms med manuellt slutsteg</h3>
                                 <p>
-                                    Ett Skogsbruks-settlement får inte bygga en stone-farm.
-                                    Ett Gruvdrifts-settlement får inte bygga automatiska
-                                    vete- eller trädfarmar.
+                                    En farm räknas som automatisk om spelmekanik används för
+                                    att automatisera eller öka produktionen. Det gäller även
+                                    mobfarms där spelaren själv dödar mobsen, om farmen ökar,
+                                    samlar eller koncentrerar deras spawns.
                                 </p>
                             </article>
                         </div>
 
                         <div className={styles.automationNotes}>
                             <article>
+                                <strong>Ingen indirekt rätt</strong>
+                                <p>Att en resurs behövs för att tillverka något inom din kategori ger inte rätt att automatisera den.</p>
+                            </article>
+                            <article>
                                 <strong>Manuell insamling</strong>
-                                <p>Manuell insamling av resurser är alltid tillåten.</p>
+                                <p>Manuell insamling är alltid tillåten. Automatiskt insamlade resurser ger aldrig GZ Coins.</p>
                             </article>
                             <article>
-                                <strong>Automatiska resurser</strong>
-                                <p>Ger aldrig GZ Coins, även om farmen är tillåten enligt ditt settlements produktionskategori. Endast manuellt insamlade resurser ger GZ Coins.</p>
+                                <strong>Gråzoner</strong>
+                                <p>Vid tveksamma fall avgör serverteamet vad som räknas som automation och vilken kategori en resurs tillhör.</p>
                             </article>
-                            <article>
-                                <strong>Syftet</strong>
-                                <p>
-                                    Om en automatisk konstruktion producerar resurser från en
-                                    annan produktionskategori än ditt settlements kategori är
-                                    den förbjuden, oavsett konstruktion eller teknik.
-                                </p>
-                            </article>
+                        </div>
+                    </PageContainer>
+                </section>
+
+                <section className={`${styles.section} ${styles.worldSection}`}>
+                    <PageContainer>
+                        <div className={styles.sectionHeading}>
+                            <span className={styles.kicker}>13. Shoppingplots i The Capitol</span>
+                            <h2>Butikerna ska passa in i staden</h2>
+                            <p>
+                                Butiker och andra byggnader på shoppingplots i The Capitol
+                                ska följa stadens medeltida fantasytema. Företag har stor
+                                frihet att utforma sina byggnader, men de ska passa in i
+                                området.
+                            </p>
+                        </div>
+
+                        <div className={styles.reasonBox}>
+                            <strong>Serverteamet kan kräva ombyggnad</strong>
+                            <p>
+                                Om en byggnad tydligt bryter mot temat, känns malplacerad
+                                eller påverkar områdets helhetsintryck negativt kan
+                                serverteamet kräva att företaget bygger om eller anpassar
+                                byggnaden.
+                            </p>
+                        </div>
+                    </PageContainer>
+                </section>
+
+                <section className={styles.section}>
+                    <PageContainer>
+                        <div className={styles.sectionHeading}>
+                            <span className={styles.kicker}>14. Villagers</span>
+                            <h2>Max 8 villagers per settlement</h2>
+                            <p>
+                                Ett settlement får ha maximalt 8 villagers totalt inom sitt
+                                område. Begränsningen gäller settlementet som helhet, inte per
+                                spelare eller byggnad.
+                            </p>
+                        </div>
+                    </PageContainer>
+                </section>
+
+                <section className={styles.section}>
+                    <PageContainer>
+                        <div className={styles.sectionHeading}>
+                            <span className={styles.kicker}>15. Beslut från serverteamet</span>
+                            <h2>Serverteamets beslut är slutgiltiga</h2>
+                            <p>
+                                Regler kan uppdateras och förtydligas när det behövs för att
+                                skapa en rättvis och rolig spelupplevelse för alla.
+                            </p>
                         </div>
                     </PageContainer>
                 </section>
