@@ -12,6 +12,7 @@ import {
 import remarkWikiDefinitions from "@/lib/wiki/remark-wiki-definitions";
 import SettlementBuildingsPanel from "./SettlementBuildingsPanel";
 import BuildingRequirementsTable from "./BuildingRequirementsTable";
+import ActiveBountiesPanel from "./ActiveBountiesPanel";
 import SettlementInfoBox from "./SettlementInfoBox";
 import SettlementUpgradePanel from "./SettlementUpgradePanel";
 import {
@@ -72,10 +73,13 @@ type ArticleContentPart =
     | {
     type: "building-requirements";
     building: BuildingRequirementKey;
+}
+    | {
+    type: "active-bounties";
 };
 
 const componentPattern =
-    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable)\s+(?:upgradeKey|group|settlement|building)=["']([a-z0-9-]+)["']\s*\/>/gi;
+    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable|ActiveBountiesPanel)\s+(?:upgradeKey|group|settlement|building|panel)=["']([a-z0-9-]+)["']\s*\/>/gi;
 
 export default function WikiArticle({
                                         article,
@@ -227,6 +231,14 @@ export default function WikiArticle({
                                 <BuildingRequirementsTable
                                     building={part.building}
                                     key={`${part.building}-${index}`}
+                                />
+                            );
+                        }
+
+                        if (part.type === "active-bounties") {
+                            return (
+                                <ActiveBountiesPanel
+                                    key={`active-bounties-${index}`}
                                 />
                             );
                         }
@@ -575,6 +587,13 @@ function splitArticleContent(
             parts.push({
                 type: "building-requirements",
                 building: componentValue,
+            });
+        } else if (
+            componentName === "ActiveBountiesPanel" &&
+            componentValue === "active"
+        ) {
+            parts.push({
+                type: "active-bounties",
             });
         } else {
             parts.push({

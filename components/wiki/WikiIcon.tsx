@@ -191,6 +191,15 @@ export default function WikiIcon({
                 </svg>
             );
 
+        case "bounties":
+            return (
+                <svg {...commonProps}>
+                    <circle cx="12" cy="12" r="8" />
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                </svg>
+            );
+
         case "warning":
             return (
                 <svg {...commonProps}>
@@ -262,6 +271,9 @@ export function getCategoryIcon(categorySlug: string) {
 
         relics: "relics",
         relic: "relics",
+
+        bounties: "bounties",
+        bounty: "bounties",
     };
 
     return iconMap[categorySlug] ?? "rules";
