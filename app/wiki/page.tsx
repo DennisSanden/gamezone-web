@@ -76,6 +76,12 @@ export default function WikiPage() {
             icon: "relics" as const,
         },
         {
+            title: "Bounties",
+            description: "Se aktiva jakter och jaga efterlysta monster.",
+            href: "/wiki/bounties/bounties",
+            icon: "bounties" as const,
+        },
+        {
             title: "Events",
             description: "Turneringar, event och speciella aktiviteter.",
             href: "/wiki/events",
