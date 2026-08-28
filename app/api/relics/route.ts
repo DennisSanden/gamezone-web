@@ -5,8 +5,8 @@ export const revalidate = 0;
 
 const FALLBACK_ENGINE_URLS = [
     "http://162.120.2.221:25569",
-    "http://184.170.201.111:25569",
-    "http://184.170.201.111:8765",
+    "http://162.120.2.221:25569",
+    "http://162.120.2.221:25569",
 ];
 
 function engineCandidates() {

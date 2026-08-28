@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-const DEFAULT_ENGINE_API = "http://184.170.201.111:8765";
+const DEFAULT_ENGINE_API = "http://162.120.2.221:25569";
 
 export async function GET() {
     const engineApi = (process.env.GAMEZONE_ENGINE_API_URL ?? DEFAULT_ENGINE_API).replace(/\/$/, "");

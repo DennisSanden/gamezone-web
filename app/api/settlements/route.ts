@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const ENGINE_API_URL =
-    process.env.GAMEZONE_ENGINE_API_URL ?? "http://184.170.201.111:8765";
+    process.env.GAMEZONE_ENGINE_API_URL ?? "http://162.120.2.221:25569";
 
 export const dynamic = "force-dynamic";
 
