@@ -203,6 +203,8 @@ Direkta allierade dras automatiskt in på samma sida när ett krig accepteras. L
 
 ## Byggnader
 
+**Bygglicenser köps i `/gz menu` → Settlements → Byggnader.** Byggkommandona nedan används efter köpet för att placera och hantera den fysiska byggnaden.
+
 ```text
 /building info
 /building place <byggnad>

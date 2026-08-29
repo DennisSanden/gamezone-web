@@ -37,8 +37,7 @@ export default function SettlementBuildingsPanel({
                 />
 
                 <p>
-                    Se den aktuella listan med nivåkrav, licenser, storlekar,
-                    specialkrav och bonusar på{" "}
+                    Bygglicenser köps i <strong>/gz menu</strong> → <strong>Settlements</strong> → <strong>Byggnader</strong>. Där ser du även vilka licenser som är upplåsta. Se hela listan med nivåkrav, kostnader, storlekar, specialkrav och bonusar på{" "}
                     <Link href="/wiki/buildings/fysiska-byggnader">
                         Fysiska byggnader
                     </Link>.

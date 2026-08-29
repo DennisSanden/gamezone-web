@@ -43,6 +43,10 @@ infobox:
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 
+## Köpa licensen
+
+Bygglicensen köps i `/gz menu` → **Settlements** → **Byggnader**. Menyn visar om settlementet uppfyller nivåkravet och vilka licenser som går att köpa.
+
 ## Byggprocess
 
 Efter att licensen köpts placeras byggytan i världen:

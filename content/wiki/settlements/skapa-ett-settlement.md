@@ -65,6 +65,12 @@ Platsen måste ligga inom settlementets territorium. Om ingen egen spawn har sat
 
 Öppna `/gz menu`, välj **Settlement** och sedan **Uppgradering**. En uppgradering kan genomföras när settlementet har rätt Coins, material och eventuella övriga krav.
 
+### Köpa bygglicenser
+
+När settlementet låser upp nya byggnader köps licenserna i `/gz menu` → **Settlements** → **Byggnader**. Där ser du vilka byggnader som är tillgängliga, vad licensen kostar och om nivåkravet är uppfyllt.
+
+Efter köpet placeras byggnaden i världen med `/building place <byggnad>`. Läs hela guiden på sidan [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
+
 ### Köpa mer territorium
 
 När settlementet behöver mer plats används:

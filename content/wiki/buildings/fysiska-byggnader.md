@@ -18,8 +18,11 @@ infobox:
 
 Settlementbyggnader är riktiga konstruktioner i världen. Licensen är bara startpunkten, bonusen aktiveras först när byggnaden har byggts och godkänts.
 
+> [!IMPORTANT]
+> **Var köper man bygglicenser?** Öppna `/gz menu` och välj **Settlements** → **Byggnader**. Där ser du vilka byggnader settlementet har låst upp och kan köpa tillgängliga licenser.
+
 1. Settlementet når byggnadens nivåkrav.
-2. Licensen köps.
+2. Licensen köps i `/gz menu` → **Settlements** → **Byggnader**.
 3. Byggytan placeras med `/building place <byggnad>`.
 4. Settlementet bygger inom den markerade ytan.
 5. `/building status` visar vad som saknas.

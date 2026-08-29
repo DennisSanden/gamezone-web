@@ -23,7 +23,7 @@ relatedArticles:
 Settlementprogressionen består av **50 nivåer**. Varje uppgradering kräver Coins och de items som visas i kortet för nästa nivå.
 
 > [!IMPORTANT]
-> Fysiska byggnader har egna nivåkrav och licenser, men är inte materialkrav för själva levelup-kommandot. Se [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
+> Fysiska byggnader har egna nivåkrav och licenser, men är inte materialkrav för själva levelup-kommandot. **Bygglicenser köps i `/gz menu` → Settlements → Byggnader.** Se [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
 
 > [!NOTE]
 > Alla krav måste finnas när uppgraderingen genomförs. Materialen förbrukas vid levelup. Där ett krav säger flera olika varianter, exempelvis Music Discs eller Armor Trim Templates, måste varianterna faktiskt vara olika.
