@@ -28,7 +28,7 @@ export function CompanyDirectory() {
   const [sort, setSort] = useState<"SALES" | "LISTINGS" | "LICENSE" | "NAME">("SALES");
 
   useEffect(() => {
-    fetch("/api/companies", { cache: "no-store" })
+    fetch("/api/companies")
       .then(async response => ({ response, payload: await response.json() as ApiEnvelope<Company[]> }))
       .then(({ response, payload }) => {
         if (!response.ok || payload.status !== "SUCCESS" || !Array.isArray(payload.result)) {

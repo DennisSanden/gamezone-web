@@ -6,7 +6,7 @@ import { LeaderboardDashboard } from "@/components/leaderboards/LeaderboardDashb
 import { getAllLeaderboardEntries, getLeaderboards } from "@/lib/leaderboard-data";
 import styles from "./page.module.css";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Leaderboards | GameZone",

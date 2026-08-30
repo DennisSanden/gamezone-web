@@ -81,7 +81,7 @@ export function ChroniclesTimeline() {
 
   useEffect(() => {
     setLoading(true); setError(null);
-    fetch(`/api/chronicles?category=${category}&limit=100`,{cache:"no-store"})
+    fetch(`/api/chronicles?category=${category}&limit=100`)
       .then(async response => ({response,payload: await response.json() as Envelope}))
       .then(({response,payload}) => {
         if (!response.ok || payload.status !== "SUCCESS") throw new Error(payload.message ?? payload.errors?.[0]?.message ?? "Chronicles kunde inte hämtas.");

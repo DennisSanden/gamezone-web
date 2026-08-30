@@ -14,7 +14,7 @@ export function CompanyProfile({ companyId }: { companyId: string }) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`/api/companies/${encodeURIComponent(companyId)}`, { cache: "no-store" })
+    fetch(`/api/companies/${encodeURIComponent(companyId)}`)
       .then(async response => ({ response, payload: await response.json() as ApiEnvelope<Company> }))
       .then(({ response, payload }) => {
         if (!response.ok || payload.status !== "SUCCESS" || !payload.result) throw new Error(payload.message ?? "Företaget kunde inte hämtas.");

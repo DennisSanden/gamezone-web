@@ -61,7 +61,6 @@ export default function ActiveBountiesPanel() {
         const load = async () => {
             try {
                 const response = await fetch("/api/bounties", {
-                    cache: "no-store",
                     headers: { accept: "application/json" },
                 });
 

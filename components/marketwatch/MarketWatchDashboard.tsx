@@ -26,7 +26,7 @@ export function MarketWatchDashboard() {
         let cancelled = false;
         async function load() {
             try {
-                const response = await fetch("/api/marketwatch", { cache: "no-store" });
+                const response = await fetch("/api/marketwatch");
                 const payload = await response.json() as MarketWatchPayload;
                 if (!response.ok || payload.status === "FAILED" || payload.status === "INTERNAL_ERROR") {
                     throw new Error(payload.errors?.[0]?.message || "MarketWatch kunde inte laddas.");
@@ -46,7 +46,7 @@ export function MarketWatchDashboard() {
         if (!selectedItem) { setCompanySales([]); return; }
         let cancelled = false;
         setCompanySalesLoading(true);
-        fetch(`/api/marketwatch/item-companies?item=${encodeURIComponent(selectedItem.minecraftId.toUpperCase())}`, { cache: "no-store" })
+        fetch(`/api/marketwatch/item-companies?item=${encodeURIComponent(selectedItem.minecraftId.toUpperCase())}`)
             .then(async response => {
                 const payload = await response.json() as MarketWatchPayload;
                 if (!response.ok) throw new Error(payload.errors?.[0]?.message || "Kunde inte hämta företag.");

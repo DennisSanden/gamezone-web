@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 20;
 const DEFAULT_ENGINE_API = "http://162.120.2.221:25569";
 
 export async function GET(request: NextRequest) {
@@ -8,8 +8,8 @@ export async function GET(request: NextRequest) {
     if (!item) return NextResponse.json({ status: "VALIDATION_ERROR", result: null, errors: [{ message: "item saknas." }] }, { status: 400 });
     const engineApi = (process.env.GAMEZONE_ENGINE_API_URL ?? DEFAULT_ENGINE_API).replace(/\/$/, "");
     try {
-        const response = await fetch(`${engineApi}/api/v1/marketwatch/item/companies?item=${encodeURIComponent(item)}&periodHours=168`, { cache: "no-store", signal: AbortSignal.timeout(8_000) });
-        return new NextResponse(await response.text(), { status: response.status, headers: { "Content-Type": response.headers.get("content-type") ?? "application/json; charset=utf-8", "Cache-Control": "no-store" } });
+        const response = await fetch(`${engineApi}/api/v1/marketwatch/item/companies?item=${encodeURIComponent(item)}&periodHours=168`, { next: { revalidate: 20 }, signal: AbortSignal.timeout(8_000) });
+        return new NextResponse(await response.text(), { status: response.status, headers: { "Content-Type": response.headers.get("content-type") ?? "application/json; charset=utf-8", "Cache-Control": "public, s-maxage=20, stale-while-revalidate=60" } });
     } catch {
         return NextResponse.json({ status: "FAILED", result: null, errors: [{ message: "Kunde inte hämta företagsförsäljning." }] }, { status: 503 });
     }

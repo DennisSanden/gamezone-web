@@ -229,7 +229,7 @@ export function SettlementDirectory() {
                 setLoading(true);
                 setError(null);
 
-                const response = await fetch("/api/settlements", { cache: "no-store" });
+                const response = await fetch("/api/settlements");
                 const payload = (await response.json()) as ApiEnvelope;
 
                 if (!response.ok || payload.status !== "SUCCESS" || !Array.isArray(payload.result)) {

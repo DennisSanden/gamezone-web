@@ -138,7 +138,7 @@ export function PlayerProfile({ username }: { username: string }) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch(`/api/players/${encodeURIComponent(username)}`, { cache: "no-store" })
+    fetch(`/api/players/${encodeURIComponent(username)}`)
       .then(async (response) => {
         const payload = await response.json() as Envelope;
         if (!response.ok || payload.status !== "SUCCESS" || !payload.result) {
