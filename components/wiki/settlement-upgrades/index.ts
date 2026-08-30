@@ -168,7 +168,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             coins: "300 000 Coins",
             materials: [
             { id: "lapis-lazuli-1", name: "Lapis Lazuli", amount: 384, icon: "🔵", texture: "/minecraft/items/lapis_lazuli.png" },
-            { id: "pumpkin-2", name: "Pumpkin", amount: 256, icon: "🎃", texture: "/minecraft/items/pumpkin_pie.png" },
+            { id: "pumpkin-2", name: "Pumpkin", amount: 256, icon: "🎃", texture: "/minecraft/blocks/pumpkin_side.png" },
             { id: "egg-3", name: "Egg", amount: 192, icon: "🥚", texture: "/minecraft/items/egg.png" },
             { id: "dark-oak-log-4", name: "Dark Oak Log", amount: 384, icon: "🪵", texture: "/minecraft/blocks/dark_oak_log.png" },
             { id: "salmon-5", name: "Salmon", amount: 128, icon: "🐟", texture: "/minecraft/items/salmon.png" },
@@ -217,7 +217,8 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "cherry-log-4", name: "Cherry Log", amount: 512, icon: "🪵", texture: "/minecraft/blocks/cherry_log.png" },
             { id: "tropical-fish-5", name: "Tropical Fish", amount: 48, icon: "🐠", texture: "/minecraft/items/tropical_fish.png" },
             { id: "tuff-bricks-6", name: "Tuff Bricks", amount: 1024, icon: "◆", texture: "/minecraft/blocks/tuff_bricks.png" },
-            { id: "fermented-spider-eye-7", name: "Fermented Spider Eye", amount: 64, icon: "◆", texture: "/minecraft/items/fermented_spider_eye.png" }
+            { id: "fermented-spider-eye-7", name: "Fermented Spider Eye", amount: 64, icon: "◆", texture: "/minecraft/items/fermented_spider_eye.png" },
+            { id: "bell-8", name: "Bell", amount: 1, icon: "◆", texture: "/minecraft/items/bell.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -349,7 +350,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             coins: "7 000 000 Coins",
             materials: [
             { id: "diamond-1", name: "Diamond", amount: 64, icon: "💎", texture: "/minecraft/items/diamond.png" },
-            { id: "pumpkin-2", name: "Pumpkin", amount: 1024, icon: "🎃", texture: "/minecraft/items/pumpkin_pie.png" },
+            { id: "pumpkin-2", name: "Pumpkin", amount: 1024, icon: "🎃", texture: "/minecraft/blocks/pumpkin_side.png" },
             { id: "beef-3", name: "Beef", amount: 512, icon: "🥩", texture: "/minecraft/items/beef.png" },
             { id: "birch-log-4", name: "Birch Log", amount: 1024, icon: "🪵", texture: "/minecraft/blocks/birch_log.png" },
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 12, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
@@ -418,7 +419,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             coins: "16 000 000 Coins",
             materials: [
             { id: "lapis-lazuli-1", name: "Lapis Lazuli", amount: 1024, icon: "🔵", texture: "/minecraft/items/lapis_lazuli.png" },
-            { id: "pumpkin-2", name: "Pumpkin", amount: 1536, icon: "🎃", texture: "/minecraft/items/pumpkin_pie.png" },
+            { id: "pumpkin-2", name: "Pumpkin", amount: 1536, icon: "🎃", texture: "/minecraft/blocks/pumpkin_side.png" },
             { id: "mutton-3", name: "Mutton", amount: 640, icon: "🥩", texture: "/minecraft/items/mutton.png" },
             { id: "acacia-log-4", name: "Acacia Log", amount: 1536, icon: "🪵", texture: "/minecraft/blocks/acacia_log.png" },
             { id: "cod-5", name: "Cod", amount: 384, icon: "🐟", texture: "/minecraft/items/cod.png" },
@@ -716,7 +717,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             coins: "180 000 000 Coins",
             materials: [
             { id: "redstone-block-1", name: "Redstone Block", amount: 256, icon: "◆", texture: "/minecraft/blocks/redstone_block.png" },
-            { id: "pumpkin-2", name: "Pumpkin", amount: 2560, icon: "🎃", texture: "/minecraft/items/pumpkin_pie.png" },
+            { id: "pumpkin-2", name: "Pumpkin", amount: 2560, icon: "🎃", texture: "/minecraft/blocks/pumpkin_side.png" },
             { id: "mutton-3", name: "Mutton", amount: 1024, icon: "🥩", texture: "/minecraft/items/mutton.png" },
             { id: "dark-oak-log-4", name: "Dark Oak Log", amount: 2048, icon: "🪵", texture: "/minecraft/blocks/dark_oak_log.png" },
             { id: "prismarine-shard-5", name: "Prismarine Shard", amount: 512, icon: "◆", texture: "/minecraft/items/prismarine_shard.png" },
@@ -995,7 +996,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             coins: "1 150 000 000 Coins",
             materials: [
             { id: "ancient-debris-1", name: "Ancient Debris", amount: 48, icon: "◆", texture: "/minecraft/blocks/ancient_debris_top.png" },
-            { id: "pumpkin-2", name: "Pumpkin", amount: 3072, icon: "🎃", texture: "/minecraft/items/pumpkin_pie.png" },
+            { id: "pumpkin-2", name: "Pumpkin", amount: 3072, icon: "🎃", texture: "/minecraft/blocks/pumpkin_side.png" },
             { id: "rabbit-hide-3", name: "Rabbit Hide", amount: 768, icon: "🐇", texture: "/minecraft/items/rabbit_hide.png" },
             { id: "dark-oak-log-4", name: "Dark Oak Log", amount: 2560, icon: "🪵", texture: "/minecraft/blocks/dark_oak_log.png" },
             { id: "tropical-fish-5", name: "Tropical Fish", amount: 192, icon: "🐠", texture: "/minecraft/items/tropical_fish.png" },
