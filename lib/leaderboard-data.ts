@@ -63,16 +63,26 @@ export async function getLeaderboard(key: string, limit = 25, offset = 0): Promi
 export async function getAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {
   const pageSize = 100;
   const maxPages = 20;
-  let template: LeaderboardBoard | null = null;
-  const entries: LeaderboardEntry[] = [];
 
-  for (let page = 0; page < maxPages; page += 1) {
-    const board = await getLeaderboard(key, pageSize, page * pageSize);
-    if (!board) return template ? { ...template, entries } : null;
-    template ??= board;
+  // Fetch page 0 first. Engine now builds a reusable snapshot for large title
+  // requests, so the remaining cached pages can be read concurrently instead
+  // of making the Next server wait through up to 20 sequential round trips.
+  const first = await getLeaderboard(key, pageSize, 0);
+  if (!first) return null;
+  if (first.entries.length < pageSize) return first;
+
+  const remaining = await Promise.all(
+    Array.from({ length: maxPages - 1 }, (_, index) =>
+      getLeaderboard(key, pageSize, (index + 1) * pageSize)
+    ),
+  );
+
+  const entries: LeaderboardEntry[] = [...first.entries];
+  for (const board of remaining) {
+    if (!board) break;
     entries.push(...board.entries);
     if (board.entries.length < pageSize) break;
   }
 
-  return template ? { ...template, entries } : null;
+  return { ...first, entries };
 }
