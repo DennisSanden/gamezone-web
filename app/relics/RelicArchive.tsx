@@ -70,6 +70,7 @@ const relicArtwork: Record<string, RelicArtwork> = {
     "GZR-0022": { src: "/images/relics/archive/heart-of-the-mountain.webp", caption: "HEART OF THE SEA" },
     "GZR-0025": { src: "/images/relics/archive/warbringers-plate.webp", caption: "DIAMOND CHESTPLATE" },
     "GZR-0028": { src: "/images/relics/archive/oathkeeper.webp", caption: "DIAMOND SWORD" },
+    "GZR-0029": { src: "/images/relics/archive/gravekeeper.webp", caption: "DIAMOND SHOVEL" },
     "GZR-0030": { src: "/images/relics/archive/book-of-the-ancients.webp", caption: "WRITTEN BOOK" },
     "GZR-0033": { src: "/images/relics/archive/andvaris-pride.webp", caption: "NETHERITE PICKAXE" },
     "GZR-0034": { src: "/images/relics/archive/winterhide.webp", caption: "DIAMOND CHESTPLATE" },
@@ -84,7 +85,7 @@ const publicBeforeDiscovery = new Set([
     "GZR-0001", "GZR-0002", "GZR-0003", "GZR-0004", "GZR-0005",
     "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010",
     "GZR-0015", "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
-    "GZR-0025", "GZR-0028", "GZR-0030", "GZR-0033", "GZR-0034",
+    "GZR-0025", "GZR-0028", "GZR-0029", "GZR-0030", "GZR-0033", "GZR-0034",
     "GZR-0035", "GZR-0039", "GZR-0042",
 ]);
 
@@ -147,6 +148,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0022") return "/wiki/relics/heart-of-the-mountain";
     if (relic.serial === "GZR-0025") return "/wiki/relics/warbringers-plate";
     if (relic.serial === "GZR-0028") return "/wiki/relics/oathkeeper";
+    if (relic.serial === "GZR-0029") return "/wiki/relics/gravekeeper";
     if (relic.serial === "GZR-0030") return "/wiki/relics/book-of-the-ancients";
     if (relic.serial === "GZR-0033") return "/wiki/relics/andvaris-pride";
     if (relic.serial === "GZR-0034") return "/wiki/relics/winterhide";
