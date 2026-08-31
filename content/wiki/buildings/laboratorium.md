@@ -34,7 +34,7 @@ infobox:
 - Aktiv settlementkategori: **Alkemi**
 - Licens: **35 000 Coins**
 - Fysisk storlek: **17×17**
-- Väggar: **minst 70 % täckning**
+- Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 

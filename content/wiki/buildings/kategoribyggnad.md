@@ -34,7 +34,7 @@ Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategorib
 - Settlementnivå: **2 eller högre**
 - Licens: **10 000 Coins**
 - Storlek: **11×11**
-- Väggar: **minst 70 %**
+- Väggar: **minst 40 %**
 - Tak: **minst 75 %**
 - Hela byggnaden måste ligga inom settlementets territorium
 

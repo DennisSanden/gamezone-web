@@ -30,13 +30,15 @@ infobox:
 - Licens: **100 000 Coins**
 - Fysisk storlek: **21×21**
 - Minsta höjd: **18 block**
-- Väggar: **minst 70 % täckning**
+- Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav
 
 <BuildingRequirementsTable building="vindhamn" />
+
+> Lightning Rods fortsätter räknas mot byggnadskravet även när kopparen oxiderar. Exposed, Weathered, Oxidized och waxade varianter är giltiga.
 
 Det finns inga krav på vilket byggmaterial väggar, golv eller tak består av. Settlementet får bygga i valfri stil.
 

@@ -40,7 +40,7 @@ Alla byggnader måste:
 
 - ligga helt innanför settlementets territorium
 - uppfylla sin minsta storlek
-- ha minst **70 % väggtäckning**
+- ha minst **40 % väggtäckning**
 - ha minst **75 % taktäckning**
 - uppfylla eventuellt höjdkrav
 - innehålla byggnadens specialblock och entiteter

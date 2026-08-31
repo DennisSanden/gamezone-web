@@ -76,7 +76,7 @@ const REQUIREMENTS: Record<BuildingRequirementKey, BuildingRequirement[]> = {
     ],
     vindhamn: [
         item("chain", "Chain", 8),
-        item("lightning_rod", "Lightning Rod", 16),
+        item("lightning_rod", "Lightning Rod (alla oxidationsgrader)", 16),
         item("campfire", "Campfire", 4),
         item("lodestone", "Lodestone", 1),
     ],

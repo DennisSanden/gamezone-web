@@ -30,7 +30,7 @@ infobox:
 - Licens: **5 000 000 Coins**
 - Fysisk storlek: **35×35**
 - Minsta höjd: **20 block**
-- Väggar: **minst 70 % täckning**
+- Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 

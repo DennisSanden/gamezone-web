@@ -29,7 +29,7 @@ infobox:
 - Settlementnivå: **40 eller högre**
 - Licens: **12 500 000 Coins**
 - Fysisk storlek: **35×35**
-- Väggar: **minst 70 % täckning**
+- Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
