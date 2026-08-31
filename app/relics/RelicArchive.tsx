@@ -1,6 +1,6 @@
-import gravekeeperImage from "../wiki/relics/assets/gravekeeper.png";
 "use client";
 
+import gravekeeperImage from "../wiki/relics/assets/gravekeeper.png";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
