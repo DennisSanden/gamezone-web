@@ -1,5 +1,4 @@
 import { cache } from "react";
-
 export type LeaderboardEntry = {
   rank: number;
   entityId: string;
@@ -62,21 +61,16 @@ export async function getLeaderboard(key: string, limit = 25, offset = 0): Promi
   return engineFetch<LeaderboardBoard>(`/api/v1/leaderboards/${encodeURIComponent(key)}?limit=${limit}&offset=${offset}`);
 }
 
-async function loadAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {
+export const getAllLeaderboardEntries = cache(async function getAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {
   const pageSize = 100;
   const maxPages = 20;
 
-  // Never fan out 20 leaderboard requests at once. A single page render used to
-  // fill the Engine's entire HTTP worker pool and queue, especially on a cold cache.
-  // Read pages in order instead. The Engine prebuilds a reusable 2,000-row snapshot
-  // on the first 100-row request, so subsequent pages are cheap cache/snapshot reads.
   const first = await getLeaderboard(key, pageSize, 0);
   if (!first) return null;
-
-  const entries: LeaderboardEntry[] = [...first.entries];
   if (first.entries.length < pageSize) return first;
 
-  for (let page = 1; page < maxPages; page += 1) {
+  const entries: LeaderboardEntry[] = [...first.entries];
+  for (let page = 1; page < maxPages; page++) {
     const board = await getLeaderboard(key, pageSize, page * pageSize);
     if (!board) break;
     entries.push(...board.entries);
@@ -84,7 +78,4 @@ async function loadAllLeaderboardEntries(key: string): Promise<LeaderboardBoard 
   }
 
   return { ...first, entries };
-}
-
-// Deduplicate generateMetadata + page rendering within the same Next request.
-export const getAllLeaderboardEntries = cache(loadAllLeaderboardEntries);
+});
