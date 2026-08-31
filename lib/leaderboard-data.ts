@@ -1,3 +1,5 @@
+import { cache } from "react";
+
 export type LeaderboardEntry = {
   rank: number;
   entityId: string;
@@ -60,25 +62,22 @@ export async function getLeaderboard(key: string, limit = 25, offset = 0): Promi
   return engineFetch<LeaderboardBoard>(`/api/v1/leaderboards/${encodeURIComponent(key)}?limit=${limit}&offset=${offset}`);
 }
 
-export async function getAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {
+async function loadAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {
   const pageSize = 100;
   const maxPages = 20;
 
-  // Fetch page 0 first. Engine now builds a reusable snapshot for large title
-  // requests, so the remaining cached pages can be read concurrently instead
-  // of making the Next server wait through up to 20 sequential round trips.
+  // Never fan out 20 leaderboard requests at once. A single page render used to
+  // fill the Engine's entire HTTP worker pool and queue, especially on a cold cache.
+  // Read pages in order instead. The Engine prebuilds a reusable 2,000-row snapshot
+  // on the first 100-row request, so subsequent pages are cheap cache/snapshot reads.
   const first = await getLeaderboard(key, pageSize, 0);
   if (!first) return null;
-  if (first.entries.length < pageSize) return first;
-
-  const remaining = await Promise.all(
-    Array.from({ length: maxPages - 1 }, (_, index) =>
-      getLeaderboard(key, pageSize, (index + 1) * pageSize)
-    ),
-  );
 
   const entries: LeaderboardEntry[] = [...first.entries];
-  for (const board of remaining) {
+  if (first.entries.length < pageSize) return first;
+
+  for (let page = 1; page < maxPages; page += 1) {
+    const board = await getLeaderboard(key, pageSize, page * pageSize);
     if (!board) break;
     entries.push(...board.entries);
     if (board.entries.length < pageSize) break;
@@ -86,3 +85,6 @@ export async function getAllLeaderboardEntries(key: string): Promise<Leaderboard
 
   return { ...first, entries };
 }
+
+// Deduplicate generateMetadata + page rendering within the same Next request.
+export const getAllLeaderboardEntries = cache(loadAllLeaderboardEntries);
