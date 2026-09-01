@@ -3,10 +3,10 @@ import Image from "next/image";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { LeaderboardDashboard } from "@/components/leaderboards/LeaderboardDashboard";
-import { getAllLeaderboardEntries, getLeaderboards } from "@/lib/leaderboard-data";
+import { getLeaderboard, getLeaderboards } from "@/lib/leaderboard-data";
 import styles from "./page.module.css";
 
-export const revalidate = 60;
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Leaderboards | GameZone",
@@ -18,7 +18,7 @@ export default async function LeaderboardsPage({ searchParams }: { searchParams:
   const initialCategory = (["players", "settlements", "companies", "server"] as const).includes(params.tab as any) ? params.tab as "players" | "settlements" | "companies" | "server" : "players";
   const [leaderboards, titleBoard] = await Promise.all([
     getLeaderboards(5),
-    getAllLeaderboardEntries("player_titles"),
+    getLeaderboard("player_titles", 100, 0),
   ]);
 
   return (

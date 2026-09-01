@@ -37,8 +37,8 @@ async function engineFetch<T>(path: string): Promise<T | null> {
   if (!base) return null;
   try {
     const response = await fetch(`${base}${path}`, {
-      next: { revalidate: 60 },
-      signal: AbortSignal.timeout(8_000),
+      next: { revalidate: 300 },
+      signal: AbortSignal.timeout(12_000),
     });
     if (!response.ok) {
       console.error(`[engineFetch] ${base}${path} responded with HTTP ${response.status}`);
@@ -63,7 +63,7 @@ export async function getLeaderboard(key: string, limit = 25, offset = 0): Promi
 
 export const getAllLeaderboardEntries = cache(async function getAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {
   const pageSize = 100;
-  const maxPages = 20;
+  const maxPages = 5;
 
   const first = await getLeaderboard(key, pageSize, 0);
   if (!first) return null;

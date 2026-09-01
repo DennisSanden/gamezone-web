@@ -12,7 +12,7 @@ const labels: Record<string, string> = {
 };
 const number = new Intl.NumberFormat("sv-SE");
 
-export const revalidate = 60;
+export const revalidate = 300;
 
 function format(entry: LeaderboardEntry, valueType: string) {
   if (valueType === "BOUNTIES") {
