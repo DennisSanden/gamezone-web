@@ -1163,10 +1163,46 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     }
 };
 
+const legacyUpgradeAliases: Partial<Record<SettlementUpgradeKey, SettlementUpgradeKey>> = {
+    "enstoring-till-lager": "level-1-till-2",
+    "lager-till-by": "level-2-till-3",
+    "by-till-bosattning": "level-3-till-4",
+    "bosattning-till-samhalle": "level-4-till-5",
+    "samhalle-till-koping": "level-5-till-6",
+    "koping-till-stad": "level-6-till-7",
+    "stad-till-handelsstad": "level-7-till-8",
+    "handelsstad-till-fastning": "level-8-till-9",
+    "fastning-till-huvudstad": "level-9-till-10",
+    "huvudstad-till-grevskap": "level-10-till-11",
+    "grevskap-till-hertigdome": "level-11-till-12",
+    "hertigdome-till-nation": "level-12-till-13",
+    "nation-till-kungadome": "level-13-till-14",
+    "kungadome-till-imperium": "level-14-till-15",
+};
+
 export function getSettlementUpgrade(
     key: SettlementUpgradeKey,
 ): SettlementUpgrade | null {
-    return settlementUpgrades[key] ?? null;
+    const legacyUpgrade = settlementUpgrades[key] ?? null;
+    const resolvedKey = legacyUpgradeAliases[key];
+    if (!resolvedKey) {
+        return legacyUpgrade;
+    }
+
+    const authoritativeUpgrade = settlementUpgrades[resolvedKey] ?? null;
+    if (!legacyUpgrade || !authoritativeUpgrade) {
+        return authoritativeUpgrade ?? legacyUpgrade;
+    }
+
+    // Individual legacy level articles keep their existing presentation and
+    // links, but all upgrade requirements come from the same 1-50 progression
+    // used by the canonical Settlement Upgrades page. This prevents resource
+    // costs from drifting apart without unexpectedly renaming legacy pages.
+    return {
+        ...legacyUpgrade,
+        upgradeCost: authoritativeUpgrade.upgradeCost,
+        requiredCurrentBuildings: authoritativeUpgrade.requiredCurrentBuildings,
+    };
 }
 
 export function isSettlementUpgradeKey(
