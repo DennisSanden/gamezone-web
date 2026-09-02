@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cache } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MainLayout } from "@/components/layout/MainLayout";
@@ -12,7 +13,12 @@ const labels: Record<string, string> = {
 };
 const number = new Intl.NumberFormat("sv-SE");
 
-export const revalidate = 300;
+export const revalidate = 600;
+
+// Metadata and page rendering run separately in Next.js. Memoize the expensive
+// full-board loader per render request so one page view cannot fan out into two
+// identical walks over every Engine leaderboard page.
+const getCachedLeaderboard = cache(getAllLeaderboardEntries);
 
 function format(entry: LeaderboardEntry, valueType: string) {
   if (valueType === "BOUNTIES") {
@@ -37,14 +43,14 @@ function entityHref(entityType: string, entry: LeaderboardEntry) {
 
 export async function generateMetadata({ params }: { params: Promise<{ key: string }> }): Promise<Metadata> {
   const { key } = await params;
-  const board = await getAllLeaderboardEntries(key);
+  const board = await getCachedLeaderboard(key);
   return { title: board ? `${board.displayName} | GameZone` : "Leaderboard | GameZone" };
 }
 
 export default async function LeaderboardDetailPage({ params, searchParams }: { params: Promise<{ key: string }>; searchParams: Promise<{ page?: string; q?: string }> }) {
   const { key } = await params;
   const { page: rawPage, q: rawQuery } = await searchParams;
-  const board = await getAllLeaderboardEntries(key);
+  const board = await getCachedLeaderboard(key);
   if (!board) notFound();
 
   const resultLabel = board.key.toUpperCase() === "PLAYER_DUEL_WINS"

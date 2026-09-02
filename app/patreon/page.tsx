@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PATREON_SUPPORTERS, patreonTierLabel } from "@/lib/patreon-supporters";
+import { getLivePatreonSupporters, patreonTierLabel } from "@/lib/patreon-supporters";
 import styles from "./page.module.css";
 
 const gamezoneImages = [
@@ -8,9 +8,11 @@ const gamezoneImages = [
   { src: "/images/leaderboard.png", alt: "GameZone Leaderboards", label: "Tävling & historia" },
 ];
 
-export default function PatreonPage() {
-  const gold = PATREON_SUPPORTERS.filter((supporter) => supporter.tier === "gold");
-  const supporters = PATREON_SUPPORTERS.filter((supporter) => supporter.tier === "supporter");
+export default async function PatreonPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const params = await searchParams;
+  const allPatreonSupporters = await getLivePatreonSupporters();
+  const gold = allPatreonSupporters.filter((supporter) => supporter.tier === "gold");
+  const supporters = allPatreonSupporters.filter((supporter) => supporter.tier === "supporter");
   const allSupporters = [...gold, ...supporters];
 
   return (
@@ -50,7 +52,7 @@ export default function PatreonPage() {
               ))}
             </div>
             <div className={styles.totalBadge}>
-              <strong>{PATREON_SUPPORTERS.length}</strong>
+              <strong>{allPatreonSupporters.length}</strong>
               <span>supporters</span>
             </div>
           </div>
@@ -58,6 +60,12 @@ export default function PatreonPage() {
       </section>
 
       <main className={styles.content}>
+        {params.linked === "success" && (
+          <section className={styles.linkStatus}><strong>Patreon kopplad.</strong><span>Dina GameZone-förmåner har aktiverats automatiskt.</span></section>
+        )}
+        {params.linked === "failed" && (
+          <section className={styles.linkStatusError}><strong>Kopplingen misslyckades.</strong><span>Gå tillbaka till #koppla-patreon i Discord och skapa en ny länk.</span></section>
+        )}
         <section className={styles.introStrip}>
           <div>
             <img src="/minecraft/items/nether_star.png" alt="" />
