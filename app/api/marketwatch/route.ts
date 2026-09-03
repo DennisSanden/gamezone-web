@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 15;
+export const revalidate = 10_800;
 
 const DEFAULT_ENGINE_API = "http://162.120.2.221:25569";
 
@@ -9,7 +9,7 @@ export async function GET() {
 
     try {
         const response = await fetch(`${engineApi}/api/v1/marketwatch?periodHours=24`, {
-            next: { revalidate: 15 },
+            next: { revalidate: 10_800 },
             signal: AbortSignal.timeout(8_000),
         });
 
@@ -20,7 +20,7 @@ export async function GET() {
             status: response.status,
             headers: {
                 "Content-Type": contentType,
-                "Cache-Control": "public, s-maxage=15, stale-while-revalidate=60",
+                "Cache-Control": "public, s-maxage=10800, stale-while-revalidate=21600",
             },
         });
     } catch {

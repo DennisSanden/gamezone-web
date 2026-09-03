@@ -26,7 +26,7 @@ export async function getStreamers(): Promise<Streamer[]> {
     const base = apiBase();
     try {
         const response = await fetch(`${base}/api/v1/creators`, {
-            next: { revalidate: 15 },
+            next: { revalidate: 10_800 },
             signal: AbortSignal.timeout(8_000),
         });
         if (!response.ok) {

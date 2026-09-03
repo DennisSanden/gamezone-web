@@ -55,7 +55,7 @@ export async function getLeaderboard(type: string): Promise<LeaderboardEntry[]> 
 
   try {
     const response = await fetch(`${apiBase}/api/v1/leaderboards/${type}?limit=3`, {
-      next: { revalidate: 60 },
+      next: { revalidate: 10_800 },
       signal: AbortSignal.timeout(8_000),
     });
     if (!response.ok) {

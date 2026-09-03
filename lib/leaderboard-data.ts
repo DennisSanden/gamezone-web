@@ -37,7 +37,7 @@ async function engineFetch<T>(path: string): Promise<T | null> {
   if (!base) return null;
   try {
     const response = await fetch(`${base}${path}`, {
-      next: { revalidate: 300 },
+      next: { revalidate: 10_800 },
       signal: AbortSignal.timeout(12_000),
     });
     if (!response.ok) {

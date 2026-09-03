@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 30;
+export const revalidate = 10_800;
 
 const FALLBACK_ENGINE_URLS = [
     "http://162.120.2.221:25569",
@@ -34,7 +34,7 @@ export async function GET() {
     for (const engineApi of engineCandidates()) {
         try {
             const response = await fetch(`${engineApi}/api/v1/bounties`, {
-                next: { revalidate: 30 },
+                next: { revalidate: 10_800 },
                 signal: AbortSignal.timeout(5_000),
                 headers: {
                     accept: "application/json",
@@ -64,7 +64,7 @@ export async function GET() {
             return NextResponse.json(payload, {
                 status: 200,
                 headers: {
-                    "Cache-Control": "public, s-maxage=30, stale-while-revalidate=120",
+                    "Cache-Control": "public, s-maxage=10800, stale-while-revalidate=21600",
                 },
             });
         } catch (error) {

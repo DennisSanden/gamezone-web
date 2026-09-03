@@ -13,7 +13,7 @@ const labels: Record<string, string> = {
 };
 const number = new Intl.NumberFormat("sv-SE");
 
-export const revalidate = 600;
+export const revalidate = 10_800;
 
 // Metadata and page rendering run separately in Next.js. Memoize the expensive
 // full-board loader per render request so one page view cannot fan out into two

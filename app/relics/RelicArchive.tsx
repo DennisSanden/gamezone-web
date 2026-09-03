@@ -1,6 +1,7 @@
 "use client";
 
 import gravekeeperImage from "../wiki/relics/assets/gravekeeper.png";
+import whisperImage from "../wiki/relics/assets/whisper.png";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -64,6 +65,7 @@ const relicArtwork: Record<string, RelicArtwork> = {
     "GZR-0008": { src: "/images/relics/archive/marchers-boots.webp", caption: "IRON BOOTS" },
     "GZR-0009": { src: "/images/relics/archive/the-masons-journal.webp", caption: "WRITTEN BOOK" },
     "GZR-0010": { src: "/images/relics/archive/kingsguard.webp", caption: "IRON SWORD" },
+    "GZR-0014": { src: whisperImage.src, caption: "BOW" },
     "GZR-0015": { src: "/images/relics/archive/witchfinder.webp", caption: "CROSSBOW" },
     "GZR-0019": { src: "/images/relics/archive/frostbrytaren.webp", caption: "DIAMOND PICKAXE" },
     "GZR-0020": { src: "/images/relics/archive/mountainbreaker.webp", caption: "DIAMOND AXE" },
@@ -85,6 +87,7 @@ const relicArtwork: Record<string, RelicArtwork> = {
 const publicBeforeDiscovery = new Set([
     "GZR-0001", "GZR-0002", "GZR-0003", "GZR-0004", "GZR-0005",
     "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010",
+    "GZR-0014",
     "GZR-0015", "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
     "GZR-0025", "GZR-0028", "GZR-0029", "GZR-0030", "GZR-0033", "GZR-0034",
     "GZR-0035", "GZR-0039", "GZR-0042",
@@ -142,6 +145,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0008") return "/wiki/relics/marchers-boots";
     if (relic.serial === "GZR-0009") return "/wiki/relics/the-masons-journal";
     if (relic.serial === "GZR-0010") return "/wiki/relics/kingsguard";
+    if (relic.serial === "GZR-0014") return "/wiki/relics/whisper";
     if (relic.serial === "GZR-0015") return "/wiki/relics/witchfinder";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     if (relic.serial === "GZR-0020") return "/wiki/relics/mountainbreaker";

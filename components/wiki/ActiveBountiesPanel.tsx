@@ -83,7 +83,7 @@ export default function ActiveBountiesPanel() {
         };
 
         void load();
-        const refresh = window.setInterval(load, 60_000);
+        const refresh = window.setInterval(load, 10_800_000);
         const clock = window.setInterval(() => setNow(Date.now()), 60_000);
 
         return () => {

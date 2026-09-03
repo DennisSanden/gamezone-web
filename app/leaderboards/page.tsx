@@ -6,7 +6,7 @@ import { LeaderboardDashboard } from "@/components/leaderboards/LeaderboardDashb
 import { getLeaderboard, getLeaderboards } from "@/lib/leaderboard-data";
 import styles from "./page.module.css";
 
-export const revalidate = 300;
+export const revalidate = 10_800;
 
 export const metadata: Metadata = {
   title: "Leaderboards | GameZone",
