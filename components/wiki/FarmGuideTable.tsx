@@ -4,7 +4,14 @@ import { useMemo, useState } from "react";
 import { farmGuideRows } from "./farm-guide-data";
 import styles from "./FarmGuideTable.module.css";
 
-const categories = ["Alla", "Fiske", "Alkemi", "Jordbruk", "Gruvdrift", "Byggmaterial", "Boskap", "Skogsbruk"];
+const categories = ["Alla", "Gruvdrift", "Fiske", "Alkemi", "Jordbruk", "Byggmaterial", "Boskap", "Skogsbruk"];
+const categoryOrder = ["Gruvdrift", "Fiske", "Alkemi", "Jordbruk", "Byggmaterial", "Boskap", "Skogsbruk"];
+
+function categoryRank(categories: string) {
+    const values = categories.split(",").map((value) => value.trim());
+    const ranks = values.map((value) => categoryOrder.indexOf(value)).filter((rank) => rank >= 0);
+    return ranks.length ? Math.min(...ranks) : categoryOrder.length;
+}
 
 export default function FarmGuideTable() {
     const [query, setQuery] = useState("");
@@ -16,7 +23,7 @@ export default function FarmGuideTable() {
             const matchesQuery = !needle || `${row.farm} ${row.items} ${row.categories}`.toLocaleLowerCase("sv-SE").includes(needle);
             const matchesCategory = category === "Alla" || row.categories.split(",").map((value) => value.trim()).includes(category);
             return matchesQuery && matchesCategory;
-        });
+        }).sort((a, b) => categoryRank(a.categories) - categoryRank(b.categories) || a.farm.localeCompare(b.farm, "sv-SE"));
     }, [query, category]);
 
     return (
