@@ -1,0 +1,24 @@
+.panel { margin: 26px 0 34px; }
+.toolbar { display:grid; grid-template-columns:minmax(240px,1fr) 190px 160px; gap:10px; padding:14px; border:1px solid rgba(174,197,166,.12); border-radius:14px 14px 0 0; background:rgba(18,27,20,.82); }
+.toolbar label { display:flex; flex-direction:column; gap:7px; color:#89958b; font-size:.68rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase; }
+.toolbar input,.toolbar select { width:100%; min-height:42px; box-sizing:border-box; border:1px solid rgba(174,197,166,.14); border-radius:9px; outline:none; background:#0d1510; color:#dfe9dc; padding:0 12px; font:inherit; font-size:.78rem; letter-spacing:0; text-transform:none; }
+.toolbar input:focus,.toolbar select:focus { border-color:rgba(151,190,137,.5); box-shadow:0 0 0 3px rgba(105,150,90,.09); }
+.summary { padding:10px 14px; border-right:1px solid rgba(174,197,166,.12); border-left:1px solid rgba(174,197,166,.12); background:rgba(87,121,78,.07); color:#7e8c81; font-size:.72rem; }
+.summary strong { color:#bfd0b9; }
+.tableWrap { overflow-x:auto; border:1px solid rgba(174,197,166,.12); border-radius:0 0 14px 14px; }
+.tableWrap table { width:100%; min-width:900px; margin:0; border-collapse:collapse; font-size:.76rem; }
+.tableWrap th { position:sticky; top:0; z-index:1; padding:12px 13px; border:0; border-bottom:1px solid rgba(174,197,166,.14); background:#17221a; color:#cbd8c7; text-align:left; white-space:nowrap; }
+.tableWrap td { padding:11px 13px; border:0; border-bottom:1px solid rgba(174,197,166,.08); color:#9eaaa0; vertical-align:middle; line-height:1.45; }
+.tableWrap tbody tr:last-child td { border-bottom:0; }
+.tableWrap tbody tr:hover td { background:rgba(102,143,89,.07); }
+.farm { color:#e0e8dd !important; font-weight:800; white-space:nowrap; }
+.tags { display:flex; flex-wrap:wrap; gap:5px; }
+.tags span { padding:3px 7px; border:1px solid rgba(147,181,135,.15); border-radius:999px; background:rgba(105,150,90,.08); color:#aebfa9; font-size:.64rem; white-space:nowrap; }
+.risk { display:inline-flex; min-width:54px; justify-content:center; padding:4px 8px; border:1px solid; border-radius:999px; font-size:.64rem; font-weight:900; }
+.riskLåg { color:#91bd91; border-color:rgba(105,169,105,.25); background:rgba(73,133,73,.1); }
+.riskMedel { color:#d0bd7c; border-color:rgba(183,153,74,.25); background:rgba(159,125,42,.1); }
+.riskHög { color:#d49a76; border-color:rgba(191,112,67,.27); background:rgba(166,85,42,.1); }
+.riskExtrem { color:#dc827d; border-color:rgba(199,82,76,.3); background:rgba(173,58,52,.11); }
+.empty { margin:12px 0 0; color:#8b978d; font-size:.8rem; }
+@media (max-width:800px) { .toolbar { grid-template-columns:1fr 1fr; } .search { grid-column:1/-1; } }
+@media (max-width:520px) { .toolbar { grid-template-columns:1fr; } .search { grid-column:auto; } }

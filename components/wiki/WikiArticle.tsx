@@ -13,6 +13,7 @@ import remarkWikiDefinitions from "@/lib/wiki/remark-wiki-definitions";
 import SettlementBuildingsPanel from "./SettlementBuildingsPanel";
 import BuildingRequirementsTable from "./BuildingRequirementsTable";
 import ActiveBountiesPanel from "./ActiveBountiesPanel";
+import FarmGuideTable from "./FarmGuideTable";
 import SettlementInfoBox from "./SettlementInfoBox";
 import SettlementUpgradePanel from "./SettlementUpgradePanel";
 import {
@@ -76,10 +77,13 @@ type ArticleContentPart =
 }
     | {
     type: "active-bounties";
+}
+    | {
+    type: "farm-guide";
 };
 
 const componentPattern =
-    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable|ActiveBountiesPanel)\s+(?:upgradeKey|group|settlement|building|panel)=["']([a-z0-9-]+)["']\s*\/>/gi;
+    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable|ActiveBountiesPanel|FarmGuideTable)\s+(?:upgradeKey|group|settlement|building|panel)=["']([a-z0-9-]+)["']\s*\/>/gi;
 
 export default function WikiArticle({
                                         article,
@@ -241,6 +245,10 @@ export default function WikiArticle({
                                     key={`active-bounties-${index}`}
                                 />
                             );
+                        }
+
+                        if (part.type === "farm-guide") {
+                            return <FarmGuideTable key={`farm-guide-${index}`} />;
                         }
 
                         if (part.type === "settlement-info") {
@@ -594,6 +602,13 @@ function splitArticleContent(
         ) {
             parts.push({
                 type: "active-bounties",
+            });
+        } else if (
+            componentName === "FarmGuideTable" &&
+            componentValue === "farms"
+        ) {
+            parts.push({
+                type: "farm-guide",
             });
         } else {
             parts.push({
