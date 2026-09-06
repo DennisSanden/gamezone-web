@@ -3,21 +3,21 @@ title: "Twitch"
 description: "Länka ditt Twitchkonto, titta på GameZone-streamers och tjäna Coins."
 category: "Kommandon"
 order: 2
-version: "2.1"
-updatedAt: "2026-08-25"
+version: "2.2"
+updatedAt: "2026-09-06"
 infoboxTitle: "Twitch"
 infobox:
   koppla: "/twitch <Twitch-namn>"
-  tittarbelöning: "1 000 Coins / 10 min"
-  timtak: "6 000 Coins"
-  dygnstak: "30 000 Coins"
+  tittarbelöning: "2 000 Coins / 10 min"
+  timtak: "60 000 Coins"
+  dygnstak: "300 000 Coins"
 ---
 
 ## Twitch på GameZone
 
 På GameZone kan du tjäna **GZ Coins genom att titta på registrerade GameZone-streamers på Twitch**.
 
-För varje **10 minuter** du tittar får du **1 000 GZ Coins**. Du kan få maximalt **6 000 GZ Coins per timme** och **30 000 GZ Coins per dygn**.
+För varje **10 minuter** du tittar får du **2 000 GZ Coins**. Du kan få maximalt **60 000 GZ Coins per timme** och **300 000 GZ Coins per dygn**.
 
 ## För dig som tittar
 
@@ -41,9 +41,9 @@ Därefter behöver du bara titta på en registrerad GameZone-streamer med Twitch
 
 ### Belöningar
 
-- **10 minuters tittande:** 1 000 GZ Coins
-- **Max per timme:** 6 000 GZ Coins
-- **Max per dygn:** 30 000 GZ Coins
+- **10 minuters tittande:** 2 000 GZ Coins
+- **Max per timme:** 60 000 GZ Coins
+- **Max per dygn:** 300 000 GZ Coins
 
 Du behöver inte vara inne på Minecraftservern hela tiden medan du tittar. Belöningar kan sparas och delas ut när du kommer tillbaka.
 
@@ -72,7 +72,7 @@ När det är klart kan du gå live som vanligt. Tittare som har länkat sina Twi
 
 1. Skriv `/twitch <ditt Twitch-namn>` på Minecraftservern.
 2. Titta på en registrerad GameZone-streamer på Twitch.
-3. Få 1 000 GZ Coins per 10 minuters tittande.
+3. Få 2 000 GZ Coins per 10 minuters tittande.
 
 ### Jag vill streama GameZone
 

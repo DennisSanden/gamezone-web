@@ -3,9 +3,9 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.6"
+version: "1.7"
 engineVersion: "Company"
-updatedAt: "2026-08-21"
+updatedAt: "2026-09-06"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 4 och aktivt Handelscentrum"
@@ -27,7 +27,7 @@ Ett företag har tre roller: **Owner**, **Manager** och **Member**.
 
 ### Owner
 
-Owner är företagets ägare och har kontroll över företagets ägarbeslut, bland annat företagslicensen och funktioner som uttryckligen kräver ägarbehörighet. Shopping Plotens löpande dygnshyra belastar också Ownerns privata coin-konto.
+Owner är företagets ägare och har kontroll över företagets ägarbeslut, bland annat företagslicensen och funktioner som uttryckligen kräver ägarbehörighet. Företagets köp, hyror och handel använder företagets eget företagskonto, inte Ownerns privata saldo.
 
 ### Manager
 
@@ -42,7 +42,7 @@ En Manager får bland annat:
 - ta bort företagets Shopping Chests
 - sköta den praktiska driften av företagets butik
 
-En Manager får däremot **inte automatiskt företagets ägarbehörigheter**. Ägarbeslut som kräver Owner ligger fortfarande hos företagsägaren. Manager blir inte heller betalningsansvarig för Shopping Plotens dygnshyra.
+En Manager får däremot **inte automatiskt företagets ägarbehörigheter**. Ägarbeslut som kräver Owner ligger fortfarande hos företagsägaren. Shopping Plotens dygnshyra dras från företagskontot och är därför inte kopplad till Manager eller Owners privata saldo.
 
 Företagsägaren utser en Manager med:
 
@@ -56,7 +56,7 @@ Member är en vanlig företagsmedlem. Rollen ger inte samma bygg- och administra
 
 ## Företagslicens
 
-Företagets licens avgör hur många shopping chests företaget får registrera och hur mycket serverns försäljningsskatt sänks. Kostnaden betalas från företagsägarens personliga coin-saldo.
+Företagets licens avgör hur många shopping chests företaget får registrera och hur mycket serverns försäljningsskatt sänks. Kostnaden betalas från **företagskontot**.
 
 | Uppgradering | Kostnad | Shopping chests | Sänkt serverskatt |
 | --- | ---: | ---: | ---: |
@@ -105,18 +105,36 @@ Där visas:
 
 Det gör att settlementets ledning kan se vilka företag som faktiskt bidrar mest till stadskassan, utan att behöva sitta med ett Excel-ark som någon kommunal ekonomichef.
 
-## Medlemmar och intäkter
+## Företagskonto
 
-Företagsägaren kan fördela en procentandel av företagets nettointäkter till aktiva företagsmedlemmar.
+Varje företag har ett eget Coin-konto. Företagets ekonomi är separerad från företagets Owner och övriga medlemmars privata saldon.
 
-- Endast företagsägaren kan ändra andelarna.
-- Tillåtna värden är 0 till 100 procent.
-- Summan av alla individuella andelar får inte överstiga 100 procent.
-- Skatter dras innan företagets netto fördelas.
-- Det som återstår efter medlemsandelarna går till företagsägaren.
-- En andel tas bort automatiskt när medlemmen lämnar eller blir kickad.
+Alla aktiva företagsmedlemmar kan se saldot, sätta in Coins och ta ut Coins:
 
-> [!INFO] Använd `/company salary <spelare> <procent>` för att ändra en medlems andel. Sätt andelen till 0 procent för att ta bort den.
+```text
+/company balance
+/company deposit <belopp>
+/company withdraw <belopp>
+```
+
+`/company saldo` och `/company konto` fungerar också för att visa saldot.
+
+Företagskontot används automatiskt för bland annat:
+
+- intäkter från företagets Shopping Chests
+- inköp genom företagets inköpskistor
+- köp och försäljning av Shopping Plot
+- Shopping Plotens dygnshyra
+- uppgradering av företagslicensen
+
+### Uttagsavgift
+
+Ett normalt uttag från företagskontot har **5 % transaktionsavgift**. Om du tar ut 100 000 Coins får spelaren 100 000 Coins och företagskontot debiteras totalt 105 000 Coins.
+
+Om settlementet har policyn **Banking Management** aktiv är uttagsavgiften **0 %**.
+
+> [!IMPORTANT]
+> Ett företag kan inte upplösas medan det fortfarande finns Coins kvar på företagskontot. Töm kontot först.
 
 ## Byta företagsnamn
 

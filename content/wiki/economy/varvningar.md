@@ -3,15 +3,15 @@ title: "Värvningar"
 description: "Värva nya spelare till GameZone och få Coins när de blir aktiva på servern."
 category: "Ekonomi"
 order: 6
-version: "1.0"
+version: "1.1"
 engineVersion: "Referral System"
-updatedAt: "2026-08-26"
+updatedAt: "2026-09-06"
 infoboxTitle: "Värvningar"
 infobox:
   registrera: "/värvad <spelare>"
   statistik: "/värvningar [spelare]"
-  nySpelare: "5 000 + 5 000 Coins"
-  varvare: "10 000 Coins"
+  nySpelare: "10 000 + 40 000 Coins"
+  varvare: "50 000 Coins"
   kvalificering: "Level 10 + 3 timmars speltid"
 ---
 
@@ -23,7 +23,7 @@ En ny spelare kan registrera vem som värvade dem med:
 
 `/värvad <spelare>`
 
-När värvningen registreras får den nya spelaren direkt **5 000 Coins**. Värvningen får då statusen **väntande** tills spelaren har blivit tillräckligt aktiv på servern.
+När värvningen registreras får den nya spelaren direkt **10 000 Coins**. Värvningen får då statusen **väntande** tills spelaren har blivit tillräckligt aktiv på servern.
 
 > [!IMPORTANT]
 > `/värvad` måste användas inom spelarens första **24 timmar** på servern och innan spelaren har nått **2 timmars total speltid**.
@@ -37,13 +37,13 @@ En väntande värvning blir automatiskt kvalificerad när den nya spelaren har u
 
 Systemet kontrollerar väntande värvningar automatiskt.
 
-När värvningen kvalificeras får personen som värvade spelaren **10 000 Coins**. Den nya spelaren får samtidigt ytterligare **5 000 Coins**.
+När värvningen kvalificeras får personen som värvade spelaren **50 000 Coins**. Den nya spelaren får samtidigt ytterligare **40 000 Coins**.
 
 | Händelse | Ny spelare | Värvare |
 | --- | ---: | ---: |
-| Värvningen registreras | 5 000 Coins | - |
-| Level 10 + 3 timmars speltid | 5 000 Coins | 10 000 Coins |
-| **Totalt** | **10 000 Coins** | **10 000 Coins** |
+| Värvningen registreras | 10 000 Coins | - |
+| Level 10 + 3 timmars speltid | 40 000 Coins | 50 000 Coins |
+| **Totalt** | **50 000 Coins** | **50 000 Coins** |
 
 ## Regler
 

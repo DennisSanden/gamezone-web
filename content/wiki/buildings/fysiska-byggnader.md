@@ -65,7 +65,7 @@ Alla byggnader måste:
 | 22 | [Myntförvaring](/wiki/buildings/myntforvaring) | 2 000 000 | 7,5 % → 2,5 % stadskasseavgift |
 | 25 | [Rådhus](/wiki/buildings/radhus) | 2 500 000 | +2 Lord-platser |
 | 30 | [Slott](/wiki/buildings/slott) | 5 000 000 | King kostar 6 tickets |
-| 35 | [Museum](/wiki/buildings/museum) | 8 000 000 | 100 000 Coins turistbonus |
+| 35 | [Museum](/wiki/buildings/museum) | 8 000 000 | 1 000 000 Coins turistbonus |
 | 40 | [Rustkammare](/wiki/buildings/rustkammare) | 12 500 000 | 110 grundtickets |
 | 45 | [Myntverk](/wiki/buildings/myntverk) | 20 000 000 | 50 000 Coins per dag |
 

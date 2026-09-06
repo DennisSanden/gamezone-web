@@ -139,7 +139,7 @@ const LEVEL_BUILDINGS: Record<number, LevelBuilding> = {
         slug: "museum",
         requirementKey: "museum",
         license: "8 000 000 Coins",
-        bonus: "100 000 Coins turistbonus",
+        bonus: "1 000 000 Coins turistbonus",
     },
     40: {
         name: "Rustkammare",

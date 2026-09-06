@@ -3,9 +3,9 @@ title: "Museum"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Museum."
 category: "Byggnader"
 order: 35
-version: "4.0"
+version: "4.1"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-06"
 infoboxTitle: "Museum"
 infobox:
   typ: "Settlementbyggnad"
@@ -22,7 +22,8 @@ infobox:
 
 ## Bonus
 
-- Höjer settlementets belöning för ett nytt unikt turistbesök från 10 000 till 100 000 Coins.
+- Höjer settlementets belöning för ett nytt unikt turistbesök från **100 000 till 1 000 000 Coins**.
+- Med policyn **Open Borders** höjs Museum-belöningen till **1 050 000 Coins**.
 
 > [!NOTE]
 > Besökaren får fortfarande sin vanliga turistbonus. Museum förstärker settlementets del av belöningen.

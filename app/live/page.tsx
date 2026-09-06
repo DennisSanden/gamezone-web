@@ -18,8 +18,8 @@ export default async function LivePage() {
     return <MainLayout><div className={styles.page}>
         <section className={styles.hero}><PageContainer className={styles.heroInner}>
             <div><span className={styles.eyebrow}>GameZone Creators</span><h1>Titta på GameZone. Få Coins.</h1>
-                <p>Länka ditt Twitchkonto inne på Minecraftservern med <strong>/twitch &lt;ditt Twitch-namn&gt;</strong>. När du tittar på en registrerad GameZone-stream kan du få <strong>1 000 Coins var 10:e minut</strong>.</p>
-                <p>GameZoneEngine begränsar Twitch-belöningar till <strong>6 000 Coins per timme</strong> och <strong>30 000 Coins per 24 timmar</strong>.</p>
+                <p>Länka ditt Twitchkonto inne på Minecraftservern med <strong>/twitch &lt;ditt Twitch-namn&gt;</strong>. När du tittar på en registrerad GameZone-stream kan du få <strong>2 000 Coins var 10:e minut</strong>.</p>
+                <p>GameZoneEngine begränsar Twitch-belöningar till <strong>60 000 Coins per timme</strong> och <strong>300 000 Coins per 24 timmar</strong>.</p>
                 <p>Twitchkopplingen och tittartiden hanteras direkt på servern via StreamingModule. Du behöver inte länka Twitch via hemsidan.</p>
                 <div className={styles.heroActions}><a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli GameZone Creator →</a></div>
             </div>

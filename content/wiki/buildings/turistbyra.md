@@ -3,9 +3,9 @@ title: "Turistbyrå"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Turistbyrå."
 category: "Byggnader"
 order: 12
-version: "4.0"
+version: "4.1"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-06"
 infoboxTitle: "Turistbyrå"
 infobox:
   typ: "Settlementbyggnad"
@@ -22,9 +22,10 @@ infobox:
 
 ## Bonus
 
-- Första besöket i en ny stad med aktiv Turistbyrå ger besökaren 5 000 Coins.
-- Settlementet får 10 000 Coins när en spelare besöker staden för första gången.
+- Första besöket i en ny stad med aktiv Turistbyrå ger besökaren **50 000 Coins**.
+- Settlementet får **100 000 Coins** när en spelare besöker staden för första gången.
 - Låser upp statistik över unika besökare.
+- Med policyn **Open Borders** höjs settlementets belöning till **105 000 Coins**.
 
 > [!NOTE]
 > Belöningarna bygger på unika förstabesök. Samma besökare kan inte generera samma förstabesöksbelöning om och om igen.

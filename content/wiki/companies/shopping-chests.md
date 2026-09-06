@@ -3,9 +3,9 @@ title: "Shopping Chests"
 description: "Registrera kistor där företaget säljer till eller köper från andra spelare."
 category: "Företag"
 order: 2
-version: "1.2"
+version: "1.3"
 engineVersion: "Trade"
-updatedAt: "2026-08-18"
+updatedAt: "2026-09-06"
 infoboxTitle: "Shopping Chest"
 infobox:
   typer: "Försäljning och inköp"
@@ -26,7 +26,7 @@ Den här sidan beskriver försäljningskistor. Läs den fullständiga guiden om 
 
 En Shopping Chest fungerar som en automatisk butik. Företaget lägger items i kistan och andra spelare köper genom att plocka ut dem.
 
-När ett item tas ur kistan flyttas Coins automatiskt från köparen till företagets ledare. En spelare kan aldrig ta ut fler items än vad saldot räcker till.
+När ett item tas ur kistan flyttas Coins automatiskt från köparen till **företagets företagskonto**. En spelare kan aldrig ta ut fler items än vad saldot räcker till.
 
 ## Registrera en försäljningskista
 
@@ -46,7 +46,7 @@ Håll itemet företaget vill köpa i handen, titta på kistan och skriv:
 /company chest buy <pris>
 ```
 
-Andra spelare kan därefter sälja matchande items direkt till kistan. Coins dras från företagsledarens personliga saldo och itemsen lagras i den fysiska kistan.
+Andra spelare kan därefter sälja matchande items direkt till kistan. Coins dras från **företagskontot** och itemsen lagras i den fysiska kistan.
 
 Läs alla regler och detaljer på sidan [Inköpskistor](/wiki/companies/inkopskistor).
 

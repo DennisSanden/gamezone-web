@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "2.0"
+version: "2.1"
 engineVersion: "Commands"
-updatedAt: "2026-08-26"
+updatedAt: "2026-09-06"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -53,7 +53,7 @@ Whitelist görs separat på Discord med `/whitelist <Minecraftnamn>` innan du an
 /twitch <Twitch-namn>
 ```
 
-Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **1 000 GZ Coins per 10 minuter**, upp till **6 000 per timme** och **30 000 per dygn**. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
+Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **2 000 GZ Coins per 10 minuter**, upp till **60 000 per timme** och **300 000 per dygn**. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
 
 ## Teleport
 
@@ -128,9 +128,20 @@ Alla settlements börjar som diktatur. King kan ändra till demokrati, där akti
 
 Policies hanteras normalt från settlementets **Government-meny**. Alla invånare kan se aktiva policies och upplåsta slots, medan endast King kan ändra dem. Commands ovan finns kvar som fallback. Fler policyplatser låses upp vid settlement level 5 och 15.
 
-Connected Realm och Open Borders är framtida policies och kan inte aktiveras ännu.
+Open Borders, Supplier och Banking Management är aktiva policies. Connected Realm finns inte längre.
 
 Läs mer på [Government](/wiki/settlements/government) och [Policies](/wiki/settlements/policies).
+
+
+### Rikskontrakt
+
+```text
+/contracts
+```
+
+Öppnar settlementets tre Rikskontrakt för den aktuella veckan. Ett kontrakt kan vara aktivt åt gången. Leveranser görs i de globala **Rikskistorna i The Capitol**.
+
+Läs hela guiden på sidan [Rikskontrakt](/wiki/settlements/rikskontrakt).
 
 ### Settlement spawn
 

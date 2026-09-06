@@ -1,11 +1,11 @@
 ---
 title: "Policies"
-description: "Settlementets valbara bonusar för produktion, ekonomi, krig och infrastruktur."
+description: "Settlementets valbara bonusar för produktion, ekonomi, krig, turism och infrastruktur."
 category: "Settlements"
 order: 5
-version: "1.1"
+version: "1.2"
 engineVersion: "Settlement Policies"
-updatedAt: "2026-08-14"
+updatedAt: "2026-09-06"
 infoboxTitle: "Policies"
 infobox:
   styrsAv: "King"
@@ -18,23 +18,23 @@ relatedArticles:
     article: "government"
     title: "Government"
     description: "Diktatur, demokrati och King-val."
-  - category: "war"
-    article: "krigssystemet"
-    title: "Krigssystemet"
-    description: "Tickets, allianser och krigsskadestånd."
+  - category: "settlements"
+    article: "rikskontrakt"
+    title: "Rikskontrakt"
+    description: "Veckokontrakt och Rikskistor i The Capitol."
 ---
 
 ## Vad är Policies?
 
-Policies låter King välja vilken riktning settlementet ska specialisera sig mot. Bonusarna kan påverka produktion, ekonomi, krig eller resor.
+Policies låter King välja vilken riktning settlementet ska specialisera sig mot. Bonusarna kan påverka produktion, ekonomi, krig, resor, turism, progression och tävlingar.
 
 Antalet aktiva policies låses upp när settlementet växer:
 
 | Settlement level | Aktiva policyplatser |
 |---:|---:|
-| 1–4 | 1 |
-| 5–14 | 2 |
-| 15 | 3 |
+| 1-4 | 1 |
+| 5-14 | 2 |
+| 15+ | 3 |
 
 Policies hanteras normalt direkt från settlementets **Government-meny**. Där kan alla invånare se vilka policies som är aktiva, vilka slots som är upplåsta och hur lång cooldown som återstår.
 
@@ -42,9 +42,7 @@ Endast **King** kan ändra policies. Vanliga medlemmar kan öppna menyn och läs
 
 ## Aktivera och byta policy
 
-King väljer policy direkt i GUI-menyn. Aktiva policies markeras tydligt och låsta policyplatser visar vilken settlement level som krävs.
-
-Commands finns kvar som fallback och för felsökning:
+King väljer policy direkt i GUI-menyn. Commands finns kvar som fallback:
 
 ```text
 /settlement policy list
@@ -53,23 +51,21 @@ Commands finns kvar som fallback och för felsökning:
 /settlement policy deactivate <policy>
 ```
 
-När en policy aktiveras får dess policyplats **48 timmars cooldown**. Policyn kan inte tas bort innan cooldownen har gått ut.
-
-När en ny King tar över nollställs befintliga policy-cooldowns.
+När en policy aktiveras får dess policyplats **48 timmars cooldown**. Policyn kan inte tas bort innan cooldownen har gått ut. När en ny King tar över nollställs befintliga policy-cooldowns.
 
 ## Produktion
 
 ### Hard Worker
-
 Ger **+10 % generell produktion**.
 
 ### United People
-
 Ger **+1 % produktion per settlementmedlem som är online**, upp till maximalt +10 %.
 
 ### Small but Mighty
-
 Ger **+10 % produktion** så länge settlementet har högst 5 medlemmar.
+
+### Big and Mighty
+Ger **+10 % produktion** när settlementet har minst 10 invånare.
 
 > [!IMPORTANT]
 > United People och Small but Mighty kan inte vara aktiva samtidigt.
@@ -77,27 +73,26 @@ Ger **+10 % produktion** så länge settlementet har högst 5 medlemmar.
 ## Ekonomi
 
 ### Merchant Republic
-
-Minskar settlementets **Server TAX med 5 procentenheter**.
-
-Reduktionen räknas efter settlementets nivåbaserade grund-TAX och kan kombineras med företagets licensavdrag. Server TAX kan aldrig bli lägre än 0 procent.
-
-Läs hela skattetrappan på sidan [Server TAX](/wiki/economy/server-tax).
+Minskar settlementets **Server TAX med 5 procentenheter**. Reduktionen kan kombineras med företagets licensavdrag och Server TAX kan aldrig bli lägre än 0 procent.
 
 ### Entrepreneurship
-
 Ger **15 % lägre kostnad för företagslicenser** i settlementet.
+
+### Commercial District
+Ger **2 extra Shopping Chests per företag** i settlementet.
+
+### Supplier
+Ger settlementet **2 % extra Coins när ett Rikskontrakt slutförs**.
+
+### Banking Management
+Tar bort den normala **5 % transaktionsavgiften vid uttag från företagskontot** för företag som tillhör settlementet.
 
 ## Krig
 
 ### War Monger
-
 Sidan startar Settlement War med **110 tickets istället för 100**.
 
-Bonusen kan inte staplas genom flera allierade settlements.
-
 ### Fortified Realm
-
 Gör settlementets ledare billigare i tickets när de dör under krig:
 
 - King kostar 5 tickets istället för 10.
@@ -105,21 +100,36 @@ Gör settlementets ledare billigare i tickets när de dör under krig:
 - Vanliga medlemmar kostar fortfarande 1 ticket.
 
 ### Last Stand
-
 När krigssidan når **10 tickets eller färre** får sidan +5 tickets en gång under kriget.
 
-Last Stand kan inte staplas mellan allierade settlements.
+### Peace Treaty
+Minskar settlementets krigsskadestånd med **20 % vid förlust**.
 
 ## Infrastruktur
 
 ### Traveler
+Ger settlementets medlemmar **25 % extra hastighetsbonus på Riksvägar** utöver Riksvägens vanliga bonus.
 
-Ger settlementets medlemmar **25 % extra hastighetsbonus på Riksvägar**.
+### Horse Lords
+Ger settlementets medlemmar **10 % extra hästhastighet**.
 
-Detta läggs ovanpå Riksvägens vanliga hastighetsbonus.
+## Turism
 
-## Policies som kommer senare
+### Open Borders
+Ger **5 % extra turistbelöning till settlementet** vid ett unikt turistbesök.
 
-**Connected Realm** och **Open Borders** är förberedda för framtida byggnader och funktioner men är **inte valbara ännu**. De kan inte aktiveras via GUI eller commands.
+Med Turistbyrå blir settlementets belöning 105 000 Coins istället för 100 000. Med Museum blir den 1 050 000 Coins istället för 1 000 000.
 
-Connected Realm är tänkt att kopplas till settlementets anslutning till Riksvägsnätet. Open Borders är tänkt att kopplas till turism och Landmark-systemet.
+## Progression
+
+### Educated Society
+Ger settlementets medlemmar **5 % extra Character XP**.
+
+## Tävling
+
+### Competitive Spirit
+Ger **10 % extra Coins från turneringsvinster**.
+
+## Borttagen policy
+
+**Connected Realm** är borttagen och kan inte längre väljas eller ligga aktiv i ett settlement.

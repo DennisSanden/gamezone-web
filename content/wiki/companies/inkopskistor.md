@@ -3,14 +3,14 @@ title: "Inköpskistor"
 description: "Låt andra spelare sälja items direkt till ditt företag genom en automatisk köpchest."
 category: "Företag"
 order: 3
-version: "1.0"
+version: "1.1"
 engineVersion: "Trade"
-updatedAt: "2026-08-05"
+updatedAt: "2026-09-06"
 infoboxTitle: "Inköpskista"
 infobox:
   kommando: "/company chest buy <pris>"
   pris: "Per item"
-  betalning: "Företagsledarens Coins"
+  betalning: "Företagskontot"
   lagring: "Den fysiska kistan"
 ---
 
@@ -48,21 +48,21 @@ Ovanför kistan visas blå information med item och pris, så besökare direkt s
 
 ## Vem betalar?
 
-Företag har ingen separat företagskassa. Företagsledarens personliga coin-saldo fungerar som företagets kassa.
+Företaget betalar från sitt separata **företagskonto**.
 
 När någon säljer till en inköpskista:
 
-- Coins dras från den aktuella företagsledarens personliga saldo.
+- Coins dras från företagets företagskonto.
 - Coins betalas direkt till spelaren som säljer.
 - Itemsen placeras i den fysiska kistan.
 
-Om företaget byter ledare används den nya företagsledarens saldo vid framtida köp.
+Ett ägarbyte påverkar därför inte kistans finansiering.
 
 ## Inköpskistor för hyresgäster
 
 Både Shopping Plot-ägaren och registrerade hyresgäster kan skapa inköpskistor.
 
-En hyresgästs inköpskista tillhör hyresgästens eget företag. Betalningen dras därför från ledaren för hyresgästens företag, aldrig från Shopping Plot-ägarens konto.
+En hyresgästs inköpskista tillhör hyresgästens eget företag. Betalningen dras därför från hyresgästens **företagskonto**, aldrig från Shopping Plot-ägarens företag.
 
 Ingen provision betalas till Shopping Plot-ägaren när en hyresgäst köper in items. Provision gäller endast när hyresgästen säljer items till andra spelare.
 
@@ -75,9 +75,9 @@ Systemet kontrollerar automatiskt:
 - Att itemet är rätt sort.
 - Att itemets metadata matchar.
 - Att kistan har ledigt utrymme.
-- Att företagsledaren har tillräckligt med Coins.
+- Att företagskontot har tillräckligt med Coins.
 
-Du säljer bara det antal som både får plats i kistan och kan betalas av företagsledaren.
+Du säljer bara det antal som både får plats i kistan och kan betalas av företagskontot.
 
 När affären går igenom får du Coins direkt och hör samma pling som vid andra intäkter.
 
@@ -91,9 +91,9 @@ Customnamn, lore, enchantments och annan itemdata måste matcha. Ett vanligt sv�
 
 När kistan inte längre har plats slutar den automatiskt köpa items.
 
-Företagsledaren eller behöriga företagsmedlemmar måste då gå till butiken och tömma kistan. Så snart det finns ledigt utrymme kan spelare sälja till den igen.
+Behöriga företagsmedlemmar måste då gå till butiken och tömma kistan. Så snart det finns ledigt utrymme kan spelare sälja till den igen.
 
-Kistan slutar också köpa om företagsledaren saknar Coins. Den börjar fungera igen när saldot räcker till minst ett item.
+Kistan slutar också köpa om företagskontot saknar Coins. Den börjar fungera igen när saldot räcker till minst ett item.
 
 ## Regler och begränsningar
 
