@@ -113,3 +113,19 @@ Om settlementet dessutom har en aktiv **Marknadsplats** blir skatten 5 procent. 
 
 > [!INFO]
 > Server TAX är inte samma sak som [stadsskatt](/wiki/economy/stadskassan). Stadsskatt tas från invånarnas produktionsintäkter och går till settlementets stadskassa.
+
+
+## Rabatt mellan handelspartners
+
+När två företag är aktiva handelspartners reduceras den **Server TAX som gäller för företagsaffären med 15 %**.
+
+Rabatten är relativ. Den drar alltså inte bort 15 procentenheter.
+
+Exempel:
+
+```text
+30 % Server TAX × 0,85 = 25,5 % Server TAX
+```
+
+Settlementpolicyn **Trading Empire** påverkar inte rabattens storlek, men höjer hur många aktiva handelspartners ett företag kan ha från 2 till 4.
+

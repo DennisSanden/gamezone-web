@@ -5,7 +5,7 @@ category: "Kommandon"
 order: 1
 version: "2.1"
 engineVersion: "Commands"
-updatedAt: "2026-09-06"
+updatedAt: "2026-09-07"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -133,13 +133,44 @@ Open Borders, Supplier och Banking Management är aktiva policies. Connected Rea
 Läs mer på [Government](/wiki/settlements/government) och [Policies](/wiki/settlements/policies).
 
 
+
+
+### Handelspartners
+
+```text
+/company trade list
+/company trade request <företag>
+/company trade accept <företag>
+/company trade remove <företag>
+```
+
+Owner och Manager kan hantera företagets handelsavtal. Funktionen finns också i `/gz menu` under **Company → Handelspartners**.
+
+
+### Market och prisjakt
+
+```text
+/market
+/market <item>
+```
+
+`/market` öppnar MarketWatch. `/market <item>` visar upp till tre billigaste aktiva butiker som har itemet i lager.
+
+Exempel:
+
+```text
+/market beef
+/market oak_log
+```
+
+
 ### Rikskontrakt
 
 ```text
 /contracts
 ```
 
-Öppnar settlementets tre Rikskontrakt för den aktuella veckan. Ett kontrakt kan vara aktivt åt gången. Leveranser görs i de globala **Rikskistorna i The Capitol**.
+Öppnar settlementets fem Rikskontrakt för den aktuella veckan. Ett kontrakt kan vara aktivt åt gången. Leveranser görs i de globala **Rikskistorna i The Capitol**.
 
 Läs hela guiden på sidan [Rikskontrakt](/wiki/settlements/rikskontrakt).
 

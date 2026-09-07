@@ -5,7 +5,7 @@ category: "Settlements"
 order: 5
 version: "1.2"
 engineVersion: "Settlement Policies"
-updatedAt: "2026-09-06"
+updatedAt: "2026-09-07"
 infoboxTitle: "Policies"
 infobox:
   styrsAv: "King"
@@ -86,6 +86,11 @@ Ger settlementet **2 % extra Coins när ett Rikskontrakt slutförs**.
 
 ### Banking Management
 Tar bort den normala **5 % transaktionsavgiften vid uttag från företagskontot** för företag som tillhör settlementet.
+
+### Trading Empire
+Ger **+2 handelspartnerplatser per företag** i settlementet. Grundtaket är 2, så företag i settlementet kan ha upp till **4 aktiva handelspartners**.
+
+Policyn kan inte avaktiveras medan något företag fortfarande använder fler än 2 aktiva partnerplatser.
 
 ## Krig
 

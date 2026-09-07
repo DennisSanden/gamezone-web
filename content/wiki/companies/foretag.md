@@ -5,7 +5,7 @@ category: "Företag"
 order: 1
 version: "1.7"
 engineVersion: "Company"
-updatedAt: "2026-09-06"
+updatedAt: "2026-09-07"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 4 och aktivt Handelscentrum"
@@ -104,6 +104,45 @@ Där visas:
 - statistik för 7 dagar, 30 dagar eller totalt
 
 Det gör att settlementets ledning kan se vilka företag som faktiskt bidrar mest till stadskassan, utan att behöva sitta med ett Excel-ark som någon kommunal ekonomichef.
+
+
+## Handelspartners
+
+Företag kan ingå officiella handelsavtal med andra företag. Ett företag kan normalt ha **2 aktiva handelspartners** samtidigt.
+
+Handelsavtal är ömsesidiga. Ett företag skickar en förfrågan och det andra företaget accepterar den innan relationen blir aktiv.
+
+```text
+/company trade list
+/company trade request <företag>
+/company trade accept <företag>
+/company trade remove <företag>
+```
+
+**Owner och Manager** kan hantera handelsavtal. Övriga företagsmedlemmar kan inte skapa eller avsluta relationer.
+
+Handelspartner kan även hanteras via:
+
+```text
+/gz menu → Company → Handelspartners
+```
+
+### Lägre Server TAX mellan partners
+
+När ett företag handlar med ett aktivt partnerföretag får affären **15 % rabatt på den Server TAX som annars hade tagits ut**.
+
+Det är en relativ rabatt, inte 15 procentenheter. Om den normala Server TAX för affären är 30 % blir den:
+
+```text
+30 % × 0,85 = 25,5 %
+```
+
+### Trading Empire
+
+Settlementpolicyn **Trading Empire** ger **+2 handelspartnerplatser per företag** i settlementet. Ett företag går därför från normalt 2 till maximalt **4 aktiva handelspartners**.
+
+Trading Empire kan inte avaktiveras medan något företag i settlementet fortfarande har fler än 2 aktiva handelspartners. Överskjutande handelsavtal måste först tas bort.
+
 
 ## Företagskonto
 

@@ -5,7 +5,7 @@ category: "Företag"
 order: 2
 version: "1.3"
 engineVersion: "Trade"
-updatedAt: "2026-09-06"
+updatedAt: "2026-09-07"
 infoboxTitle: "Shopping Chest"
 infobox:
   typer: "Försäljning och inköp"
@@ -49,6 +49,24 @@ Håll itemet företaget vill köpa i handen, titta på kistan och skriv:
 Andra spelare kan därefter sälja matchande items direkt till kistan. Coins dras från **företagskontot** och itemsen lagras i den fysiska kistan.
 
 Läs alla regler och detaljer på sidan [Inköpskistor](/wiki/companies/inkopskistor).
+
+
+## Hitta varor med /market
+
+Spelare behöver inte springa mellan alla butiker för att jämföra pris. Använd:
+
+```text
+/market <item>
+```
+
+Exempel:
+
+```text
+/market beef
+```
+
+Kommandot visar upp till tre billigaste aktiva Shopping Chests som har varan i lager. Eftersom försäljningskistor är prissatta **per item** jämförs samma styckpris som används när spelaren handlar ur kistan.
+
 
 ## Ändra pris
 

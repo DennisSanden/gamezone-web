@@ -5,7 +5,7 @@ category: "Företag"
 order: 3
 version: "1.1"
 engineVersion: "Trade"
-updatedAt: "2026-09-06"
+updatedAt: "2026-09-07"
 infoboxTitle: "Inköpskista"
 infobox:
   kommando: "/company chest buy <pris>"

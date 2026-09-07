@@ -39,3 +39,15 @@ Det påverkar inte vilka items du får och stoppar inte vanliga farms. Systemet 
 
 > [!NOTE]
 > Begränsningen räknas separat per spelare och resurs. Att en viss resurs produceras mycket påverkar alltså inte Coin-belöningen från andra resurser.
+
+
+## Bonus baserad på kategorifördelning
+
+Produktionen påverkas också av **hur många aktiva settlements som har valt samma produktionskategori**.
+
+En ovanlig kategori får en större produktionsbonus. Ju fler settlements som väljer samma kategori, desto mindre blir bonusen. Systemet räknar på det totala antalet aktiva spelarsettlements och skalar därför automatiskt när servern växer.
+
+En mycket ovanlig kategori kan få upp till ungefär **+50 % produktion**. Bonusen räknas in i settlementets vanliga produktionsbonus tillsammans med exempelvis policies, kultur, byggnader, titlar och andra produktionsbuffar.
+
+Syftet är att göra underrepresenterade kategorier mer attraktiva och skapa större variation i vad olika settlements producerar. Det ger i sin tur fler anledningar att handla resurser mellan settlements i stället för att alla väljer samma inriktning.
+

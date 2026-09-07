@@ -1,7 +1,7 @@
 ---
 title: "Rikskontrakt"
 description: "Fem veckokontrakt per settlement, Rikskistor i The Capitol och stora Coinsbelöningar för gemensamma leveranser."
-category: "Settlements"
+category: "Ekonomi"
 order: 7
 version: "1.0"
 engineVersion: "Rikskontrakt"
