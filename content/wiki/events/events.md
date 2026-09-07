@@ -3,9 +3,9 @@ title: "Events"
 description: "Så fungerar GameZones events, eventområden, deltagande och de särskilda regler som gäller under ett event."
 category: "Events"
 order: 1
-version: "1.0"
+version: "1.1"
 engineVersion: "Event System"
-updatedAt: "2026-08-28"
+updatedAt: "2026-09-07"
 infoboxTitle: "Events"
 infobox:
   typ: "Serveraktiviteter"
@@ -52,9 +52,23 @@ PvP är inte automatiskt aktivt i alla events. Serverteamet kan slå på eller a
 
 Det betyder att två event kan använda samma område men ha helt olika regler.
 
-## Vinnare
+## Eventtyper och vinnare
 
-Eventsystemet kan registrera en vinnare så att resultatet kan användas av andra GameZone-system och visas på webben när ett event använder den funktionen.
+Events kan köras som **Solo**, **Settlement** eller **Random Teams**. Vinnaren utses automatiskt när inget motstånd återstår.
+
+- **Solo**, sista kvarvarande spelaren vinner.
+- **Settlement**, sista kvarvarande settlementet vinner.
+- **Random Teams**, sista kvarvarande laget vinner. Laget visas tydligt vid spelarnas namn under eventet.
+
+När en spelare elimineras hörs ett svagt kanonljud.
+
+## Prispengar
+
+Ett event kan ha en prispott.
+
+- I **Solo** går prispotten till vinnaren.
+- I **Settlement** går prispotten till vinnande settlements stadskassa.
+- I **Random Teams** delas prispotten mellan **alla spelare i vinnarlaget**, även lagmedlemmar som eliminerats tidigare under eventet. En spelare som frivilligt lämnar eventet räknas inte längre till lagets prispott.
 
 ## När körs events?
 

@@ -504,7 +504,7 @@
     {
         "key": "gondoria",
         "title": "Gondoria",
-        "definition": "En av GameZones fyra kulturer. Gondoria skyddar dina Coins från den vanliga coin-förlusten vid död och visas med ett guldfärgat ⚜-sigill.",
+        "definition": "En av GameZones fyra kulturer. Gondoria ger +10 % produktionstak och visas med ett guldfärgat ⚜-sigill.",
         "category": "Kulturer",
         "href": "/wiki/cultures/kulturer",
         "aliases": []

@@ -128,7 +128,7 @@ Alla settlements börjar som diktatur. King kan ändra till demokrati, där akti
 
 Policies hanteras normalt från settlementets **Government-meny**. Alla invånare kan se aktiva policies och upplåsta slots, medan endast King kan ändra dem. Commands ovan finns kvar som fallback. Fler policyplatser låses upp vid settlement level 5 och 15.
 
-Open Borders, Supplier och Banking Management är aktiva policies. Connected Realm finns inte längre.
+Bland policies finns bland annat Open Borders, Supplier, Banking Management och **Item Maniac**. Connected Realm finns inte längre.
 
 Läs mer på [Government](/wiki/settlements/government) och [Policies](/wiki/settlements/policies).
 
@@ -144,7 +144,7 @@ Läs mer på [Government](/wiki/settlements/government) och [Policies](/wiki/set
 /company trade remove <företag>
 ```
 
-Owner och Manager kan hantera företagets handelsavtal. Funktionen finns också i `/gz menu` under **Company → Handelspartners**.
+Owner och Manager kan hantera företagets handelsavtal. Funktionen finns också i `/gz menu` under **Company → Handelspartners**. När ett aktivt partnerskap avslutas gäller **24 timmars cooldown** innan en ny partner kan väljas.
 
 
 ### Market och prisjakt
@@ -170,7 +170,7 @@ Exempel:
 /contracts
 ```
 
-Öppnar settlementets fem Rikskontrakt för den aktuella veckan. Ett kontrakt kan vara aktivt åt gången. Leveranser görs i de globala **Rikskistorna i The Capitol**.
+Öppnar settlementets fem Rikskontrakt för den aktuella veckan. Settlementet måste vara minst **Level 3**. Ett kontrakt kan vara aktivt åt gången. Leveranser görs i de globala **Rikskistorna i The Capitol**.
 
 Läs hela guiden på sidan [Rikskontrakt](/wiki/settlements/rikskontrakt).
 
@@ -295,7 +295,7 @@ King och Lord använder byggkommandona för att placera, kontrollera, färdigst�
 /shoppingplot tenants
 ```
 
-Shopping Plots kan ha en separat dygnshyra som dras från företagets Owners privata coin-konto varje dag klockan 18:00. Om betalningen misslyckas försöker systemet dra dubbel hyra nästa dag. Misslyckas även den betalningen sägs plotten upp.
+Shopping Plots kan ha en separat dygnshyra som dras från **företagskontot** varje dag klockan 18:00. Om betalningen misslyckas försöker systemet dra dubbel hyra nästa dag. Misslyckas även den betalningen sägs plotten upp.
 
 ## Territorium
 

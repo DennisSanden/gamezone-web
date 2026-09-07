@@ -3,9 +3,9 @@ title: "Ändra namn och kategori"
 description: "Byt settlementets namn eller produktionskategori och se kostnad, behörighet och cooldown."
 category: "Settlements"
 order: 5
-version: "1.0"
+version: "1.1"
 engineVersion: "Settlement Settings"
-updatedAt: "2026-08-04"
+updatedAt: "2026-09-07"
 infoboxTitle: "Ändra settlement"
 infobox:
   namnbyte: "50 000 Coins"
@@ -24,7 +24,7 @@ Exempel: `/settlement rename Röstånga`.
 Namnbytet kostar **50 000 Coins** och betalas från [stadskassan](/wiki/economy/stadskassan).
 
 > [!IMPORTANT]
-> Det nya namnet måste vara ledigt och följa serverns namnregler.
+> Det nya namnet måste vara ledigt och följa serverns namnregler. Namn från settlements som har upplösts eller arkiverats blir lediga igen och kan återanvändas.
 
 ## Byta produktionskategori
 
@@ -32,7 +32,7 @@ En **King eller Lord** kan byta settlementets produktionskategori genom att öpp
 
 Kategoribytet kostar **50 000 Coins** och betalas från [stadskassan](/wiki/economy/stadskassan).
 
-Efter ett genomfört byte gäller en cooldown på **24 timmar** innan kategorin kan ändras igen.
+Efter ett genomfört byte gäller en cooldown på **24 timmar** innan kategorin kan ändras igen. Menyn visar också den **aktuella produktionsbonusen** för varje kategori innan du väljer.
 
 
 > [!CAUTION]

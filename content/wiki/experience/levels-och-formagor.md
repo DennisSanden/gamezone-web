@@ -3,9 +3,9 @@ title: "Levels & förmågor"
 description: "Hela levelkurvan, alla milstolpar och exakt hur förmågorna påverkar din karaktär."
 category: "Level & XP"
 order: 3
-version: "1.0"
+version: "1.1"
 engineVersion: "Character Progression"
-updatedAt: "2026-08-13"
+updatedAt: "2026-09-07"
 infoboxTitle: "Levels"
 infobox:
   level_10: "3 000 XP"
@@ -41,7 +41,7 @@ Viktiga trösklar:
 | 30 | 30 000 | Överlevare |
 | 40 | 60 000 | Krigare |
 | 50 | 100 000 | Livskraft |
-| 60 | 175 000 | Prestige |
+| 60 | 175 000 | Produktionstak |
 | 75 | 400 000 | Mästare |
 | 80 | 550 000 | Prestige |
 | 90 | 800 000 | Prestige |
@@ -79,6 +79,12 @@ Bonusen gäller när du är den attackerande spelaren. Den fungerar även när s
 På Level 50 får du **+1 hjärta**, alltså 2 extra health points.
 
 Det extra hjärtat är kopplat till din Character Level. Om livet återställs försvinner bonusen igen.
+
+## Level 60, Produktionstak
+
+På Level 60 får du **+50 % produktionstak**.
+
+Det betyder att du personligen kan producera mer av samma resurs innan överproduktionsskyddet börjar sänka Coin-belöningen. Bonusen påverkar inte Coins per item och kan kombineras med settlementets övriga bonusar till produktionstaket.
 
 ## Level 75, Mästare
 

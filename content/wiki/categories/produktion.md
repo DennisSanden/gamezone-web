@@ -3,9 +3,9 @@ title: "Produktion"
 description: "Översikt över GameZones sju kategorier."
 category: "Produktionskategorier"
 order: 0
-version: "1.3"
+version: "1.4"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-07"
 infoboxTitle: "Produktion"
 infobox:
   coinregel: "Endast vald kategori"
@@ -38,8 +38,20 @@ GameZone är byggt för att belöna aktiv produktion, inte obegränsad massprodu
 Det påverkar inte vilka items du får och stoppar inte vanliga farms. Systemet begränsar bara hur mycket Coins extrem produktion av samma resurs kan generera. Normal produktion är tänkt att kunna fortsätta utan märkbar påverkan.
 
 > [!NOTE]
-> Begränsningen räknas separat per spelare och resurs. Att en viss resurs produceras mycket påverkar alltså inte Coin-belöningen från andra resurser.
+> Skyddet räknas per resurs. Att en viss resurs produceras mycket påverkar alltså inte Coin-belöningen från andra resurser.
 
+### Högre produktionstak genom progression
+
+Grundgränserna är samma för alla nya settlements, men produktionstaket kan växa med progression:
+
+- **+10 % produktionstak för varje settlement level efter Level 1**
+- **Gondoria, +10 % produktionstak**
+- **Character Level 60, +50 % produktionstak för spelaren**
+- **Item Maniac, +30 % produktionstak**
+
+Bonusarna kan kombineras. Ett Level 50-settlement med Item Maniac och en Level 60-spelare från Gondoria kan nå **+580 % produktionstak**, alltså **6,8 gånger grundtaket**.
+
+Produktionstak ökar mängden du kan producera innan Coin-belöningen börjar trappas ned. Det är inte samma sak som en vanlig produktionsbonus som höjer Coins per item.
 
 ## Bonus baserad på kategorifördelning
 
@@ -50,4 +62,6 @@ En ovanlig kategori får en större produktionsbonus. Ju fler settlements som v�
 En mycket ovanlig kategori kan få upp till ungefär **+50 % produktion**. Bonusen räknas in i settlementets vanliga produktionsbonus tillsammans med exempelvis policies, kultur, byggnader, titlar och andra produktionsbuffar.
 
 Syftet är att göra underrepresenterade kategorier mer attraktiva och skapa större variation i vad olika settlements producerar. Det ger i sin tur fler anledningar att handla resurser mellan settlements i stället för att alla väljer samma inriktning.
+
+I `/settlements` visas både antal och procent för varje produktionskategori. När ett settlement skapas eller byter kategori visas också den **aktuella produktionsbonusen** för alternativen direkt i menyn.
 

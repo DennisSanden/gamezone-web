@@ -82,7 +82,7 @@ Exempel:
 /company chest price 500
 ```
 
-Priset ändras direkt och kistans innehåll samt registrering påverkas inte. Bara spelaren som registrerade kistan kan ändra priset.
+Priset ändras direkt och kistans innehåll samt registrering påverkas inte. Spelaren som registrerade kistan, företagets Owner och företagets Managers kan ändra priset.
 
 ## Hantera kistor
 

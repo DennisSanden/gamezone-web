@@ -3,9 +3,9 @@ title: "Shopping Plots"
 description: "Företagstomter vid spawn där företag kan bygga butik."
 category: "Företag"
 order: 4
-version: "1.3"
+version: "1.4"
 engineVersion: "Shopping Plot"
-updatedAt: "2026-09-06"
+updatedAt: "2026-09-07"
 infoboxTitle: "Shopping Plot"
 infobox:
   maxantal: "En per företag"
@@ -46,6 +46,10 @@ Företagsägaren kan utse en **Manager** med:
 Manager fungerar som företagets butikschef. Rollen får bygga och riva på företagets Shopping Plot samt administrera företagets Shopping Chests, men får inte automatiskt de ägarbehörigheter som är reserverade för Owner. Dygnshyran är kopplad till företagskontot och inte till någon enskild medlems privata saldo.
 
 Läs mer om rollfördelningen på sidan [Företag](/wiki/companies/foretag#företagsroller).
+
+## Item Frames
+
+Item Frames på en Shopping Plot skyddas på samma sätt som resten av butiken. Utomstående spelare kan varken lägga in items i eller ta items från Item Frames på någon annans plot.
 
 ## Hyresgäster
 

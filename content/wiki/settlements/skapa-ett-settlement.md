@@ -3,9 +3,9 @@ title: "Skapa ett settlement"
 description: "Grunda ett nytt samhälle, välj kategori och börja utveckla en egen plats i GameZone-världen."
 category: "Settlements"
 order: 1
-version: "1.4"
+version: "1.5"
 engineVersion: "Settlement Foundation"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-07"
 infoboxTitle: "Skapa settlement"
 infobox:
   kommando: "/settlement create <namn>"
@@ -23,7 +23,7 @@ Skapa ett settlement genom att skriva:
 
 Exempel: `/settlement create Röstånga`
 
-När kommandot har godkänts öppnas en meny där du väljer settlementets produktionskategori. Stadens centrum placeras där du står när settlementet skapas, så välj platsen noggrant.
+När kommandot har godkänts öppnas en meny där du väljer settlementets produktionskategori. Där visas också den **aktuella produktionsbonusen** för varje kategori. Stadens centrum placeras där du står när settlementet skapas, så välj platsen noggrant.
 
 > [!IMPORTANT]
 > Endast resurser inom settlementets valda kategori ger Coins från produktion. Läs mer under [Produktionskategorier](/wiki/categories/produktion).
@@ -33,11 +33,11 @@ När kommandot har godkänts öppnas en meny där du väljer settlementets produ
 Kontrollera att:
 
 - du inte redan tillhör ett settlement
-- namnet är unikt och följer serverns regler
+- namnet inte används av ett aktivt settlement och följer serverns regler
 - platsen ligger tillräckligt långt från andra settlements
 - platsen passar även när settlementet växer
 
-Det kostar för närvarande inga Coins att skapa ett settlement.
+Det kostar för närvarande inga Coins att skapa ett settlement. Namn från settlements som inte längre finns aktivt blir lediga och kan användas igen.
 
 ## Efter att settlementet skapats
 

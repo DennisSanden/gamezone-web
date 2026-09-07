@@ -3,9 +3,9 @@ title: "Kulturer"
 description: "Så fungerar kulturvalet, rikenas bonusar och kultursigillen som visas vid ditt namn."
 category: "Kulturer"
 order: 1
-version: "1.0"
+version: "1.1"
 engineVersion: "Culture System"
-updatedAt: "2026-08-15"
+updatedAt: "2026-09-07"
 infoboxTitle: "Kulturer"
 infobox:
   antal_kulturer: "4"
@@ -64,13 +64,9 @@ Varkesh ger en mindre offensiv bonus och passar en mer stridsinriktad karaktär.
 ### Gondoria
 
 **Sigill:** ⚜, guld  
-**Bonus:** skyddar dina Coins vid död
+**Bonus:** +10% produktionstak
 
-Om Gondorias bonus aktiveras förlorar du inga Coins från den vanliga coin-förlusten vid död.
-
-Servern visar då:
-
-> Gondoria skyddade ditt arv. Du förlorade inga Coins när du dog.
+Gondoria låter dig producera mer innan överproduktionsskyddet börjar sänka Coin-belöningen. Bonusen kan kombineras med andra bonusar till produktionstaket.
 
 Gondoria använder **⚜** som sigill. Kronan används inte som kultursymbol eftersom kronan redan representerar rollen King.
 

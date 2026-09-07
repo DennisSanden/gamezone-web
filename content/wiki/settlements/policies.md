@@ -3,7 +3,7 @@ title: "Policies"
 description: "Settlementets valbara bonusar för produktion, ekonomi, krig, turism och infrastruktur."
 category: "Settlements"
 order: 5
-version: "1.2"
+version: "1.3"
 engineVersion: "Settlement Policies"
 updatedAt: "2026-09-07"
 infoboxTitle: "Policies"
@@ -67,6 +67,9 @@ Ger **+10 % produktion** så länge settlementet har högst 5 medlemmar.
 ### Big and Mighty
 Ger **+10 % produktion** när settlementet har minst 10 invånare.
 
+### Item Maniac
+Ger **+30 % produktionstak**. Det gör att settlementets spelare kan producera större mängder innan överproduktionsskyddet börjar sänka Coin-belöningen.
+
 > [!IMPORTANT]
 > United People och Small but Mighty kan inte vara aktiva samtidigt.
 
@@ -76,7 +79,7 @@ Ger **+10 % produktion** när settlementet har minst 10 invånare.
 Minskar settlementets **Server TAX med 5 procentenheter**. Reduktionen kan kombineras med företagets licensavdrag och Server TAX kan aldrig bli lägre än 0 procent.
 
 ### Entrepreneurship
-Ger **15 % lägre kostnad för företagslicenser** i settlementet.
+Ger **15 % lägre kostnad för företagslicenser** i settlementet. Det rabatterade priset visas direkt när licensen ska köpas.
 
 ### Commercial District
 Ger **2 extra Shopping Chests per företag** i settlementet.

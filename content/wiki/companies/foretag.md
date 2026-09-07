@@ -110,7 +110,7 @@ Det gör att settlementets ledning kan se vilka företag som faktiskt bidrar mes
 
 Företag kan ingå officiella handelsavtal med andra företag. Ett företag kan normalt ha **2 aktiva handelspartners** samtidigt.
 
-Handelsavtal är ömsesidiga. Ett företag skickar en förfrågan och det andra företaget accepterar den innan relationen blir aktiv.
+Handelsavtal är ömsesidiga. Ett företag skickar en förfrågan och det andra företaget accepterar den innan relationen blir aktiv. När ett aktivt handelsavtal avslutas får företagen **24 timmars cooldown** innan de kan skaffa en ny handelspartner.
 
 ```text
 /company trade list

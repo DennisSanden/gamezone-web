@@ -38,6 +38,9 @@ Kontrakten innehåller stora leveranser av resurser från flera produktionskateg
 
 Alias som `/contract` och `/kontrakt` fungerar också.
 
+> [!IMPORTANT]
+> Settlementet måste vara minst **Level 3** för att använda Rikskontrakt.
+
 ## Fem kontrakt, ett aktivt åt gången
 
 Alla fem kontrakt kan slutföras under samma vecka, men settlementet kan bara ha **ett ACTIVE-kontrakt åt gången**.
@@ -84,23 +87,23 @@ Rikskontrakten byts **varje fredag klockan 06:00 svensk tid**.
 Vid veckobytet:
 
 - alla ofärdiga OFFERED och ACTIVE-kontrakt löper ut
-- tre nya kontrakt skapas för settlementet
+- fem nya kontrakt skapas för settlementet
 - färdiga kontrakt ligger kvar som historik för den avslutade veckan
 
 Ett settlement behöver alltså inte vänta till nästa fredag när systemet tas i bruk. Om den aktuella veckan saknar kontrakt skapas de för den pågående kontraktsveckan.
 
 ## Belöningar
 
-Grundbelöningen ligger normalt runt **3 000 000 till 5 000 000 Coins** och varierar med kontraktets svårighet.
+Grundbelöningen ligger normalt runt **7 000 000 till 10 000 000 Coins** och varierar med kontraktets svårighet.
 
 Har settlementet policyn **Supplier** aktiv får slutbelöningen **+2 %**.
 
 Exempel:
 
 ```text
-Grundbelöning: 4 000 000 Coins
-Supplier:      +80 000 Coins
-Totalt:        4 080 000 Coins
+Grundbelöning: 8 000 000 Coins
+Supplier:      +160 000 Coins
+Totalt:        8 160 000 Coins
 ```
 
 Belöningen betalas när hela kontraktet är slutfört.
