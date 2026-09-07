@@ -80,6 +80,10 @@ function percentFromBasisPoints(basisPoints: number) {
   return `+${new Intl.NumberFormat("sv-SE", { maximumFractionDigits: 1 }).format(percent)}%`;
 }
 
+function effectPercent(effect?: string | null) {
+  return effect?.match(/[+-]\d+(?:[.,]\d+)?%/)?.[0] ?? "+0%";
+}
+
 const bonusCategoryLabels: Record<string, string> = {
   PRODUCTION: "Produktion",
   MOVEMENT: "Rörelse",
@@ -172,6 +176,11 @@ export function PlayerProfile({ username }: { username: string }) {
   const { player, character } = profile;
   const title = player.productionTitle;
   const culture = character.culture;
+  const categoryProductionBonus = character.bonuses.find(
+    (bonus) => bonus.category === "PRODUCTION" && bonus.source === "Global harmoni",
+  );
+  const categoryProductionBonusPercent = effectPercent(categoryProductionBonus?.effect);
+  const categoryProductionBonusName = categoryProductionBonus?.scope ?? player.settlement?.name ?? "Ingen kategori";
   const patreon = getPatreonSupporter(player.username);
   const levelSpan = Math.max(1, character.nextLevelExperience - character.levelExperience);
   const levelProgress = Math.max(0, Math.min(100, ((character.experience - character.levelExperience) / levelSpan) * 100));
@@ -210,7 +219,7 @@ export function PlayerProfile({ username }: { username: string }) {
         <article><span>Level</span><strong>{character.level}</strong><small>{number.format(character.experience)} XP totalt</small></article>
         <article><span>Personligt rekord</span><strong>Level {character.highestLevelEver}</strong><small>högsta level någonsin</small></article>
         <article><span>Kultur</span><strong>{culture ? `${culture.symbol} ${culture.displayName}` : "Ej vald"}</strong><small>{culture?.bonus ?? "ingen kulturbonus"}</small></article>
-        <article className={styles.productionOverview}><span>Produktionsbonus</span><strong>{percentFromBasisPoints(character.productionBonusBasisPoints)}</strong><small>nuvarande totala bonus</small></article>
+        <article className={styles.productionOverview}><span>Produktionsbonus</span><strong>{percentFromBasisPoints(character.productionBonusBasisPoints)}</strong><small>Kategoribonus {categoryProductionBonusPercent} från {categoryProductionBonusName}</small></article>
         <article><span>Total speltid</span><strong>{duration(profile.totalPlayTimeSeconds)}</strong><small>sedan första besöket</small></article>
       </section>
 
@@ -304,6 +313,7 @@ export function PlayerProfile({ username }: { username: string }) {
               <div><dt>Aktiv titel</dt><dd>{title?.title ?? "Ingen"}</dd></div>
               <div><dt>Titelnivå</dt><dd>{title ? `Nivå ${title.level}` : "Ingen"}</dd></div>
               <div><dt>Produktionsbonus</dt><dd>{percentFromBasisPoints(character.productionBonusBasisPoints)}</dd></div>
+              <div><dt>Kategoribonus</dt><dd>{categoryProductionBonusPercent}</dd></div>
               <div><dt>Settlement</dt><dd>{player.settlement?.name ?? "Fristående"}</dd></div>
               <div><dt>Roll</dt><dd>{roleLabel(player.settlement?.role)}</dd></div>
               <div><dt>Företag</dt><dd>{player.company?.name ?? "Inget"}</dd></div>
