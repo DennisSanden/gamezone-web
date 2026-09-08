@@ -3,7 +3,7 @@ title: "Köping"
 description: "Settlementnivå 8 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 108
-version: "2.0"
+version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
 relatedArticles:
@@ -16,7 +16,7 @@ relatedArticles:
     title: "Nivå 7, Samhälle"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-9-handelskoping"
+    article: "handelskoping"
     title: "Nivå 9, Handelsköping"
     description: "Nästa settlementnivå i progressionen."
 ---
@@ -28,7 +28,7 @@ relatedArticles:
 För att låsa upp Köping uppgraderar settlementet från **Samhälle**.
 
 > [!IMPORTANT]
-> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
+> Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
@@ -36,7 +36,7 @@ För att låsa upp Köping uppgraderar settlementet från **Samhälle**.
 
 ## Nästa nivå
 
-Nästa nivå är [Handelsköping](/wiki/settlements/niva-9-handelskoping).
+Nästa nivå är [Handelsköping](/wiki/settlements/handelskoping).
 
 ## Alla nivåer
 

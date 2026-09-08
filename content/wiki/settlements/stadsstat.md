@@ -1,8 +1,8 @@
 ---
-title: "Samhälle"
-description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
+title: "Stadsstat"
+description: "Settlementnivå 17 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 107
+order: 117
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "storby"
-    title: "Nivå 6, Storby"
+    article: "huvudstad"
+    title: "Nivå 16, Huvudstad"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "koping"
-    title: "Nivå 8, Köping"
+    article: "fristat"
+    title: "Nivå 18, Fristat"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Samhälle
+# Stadsstat
 
-**Samhälle** är settlementnivå **7 av 50**.
+**Stadsstat** är settlementnivå **17 av 50**.
 
-För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
+För att låsa upp Stadsstat uppgraderar settlementet från **Huvudstad**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-6-till-7" />
+<SettlementUpgradePanel upgradeKey="level-16-till-17" />
 
 ## Nästa nivå
 
-Nästa nivå är [Köping](/wiki/settlements/koping).
+Nästa nivå är [Fristat](/wiki/settlements/fristat).
 
 ## Alla nivåer
 

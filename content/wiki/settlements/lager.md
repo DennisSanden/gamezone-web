@@ -3,7 +3,7 @@ title: "Läger"
 description: "Settlementnivå 2 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 102
-version: "2.0"
+version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
 relatedArticles:
@@ -16,7 +16,7 @@ relatedArticles:
     title: "Nivå 1, Enstöring"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-3-boplats"
+    article: "boplats"
     title: "Nivå 3, Boplats"
     description: "Nästa settlementnivå i progressionen."
 ---
@@ -28,7 +28,7 @@ relatedArticles:
 För att låsa upp Läger uppgraderar settlementet från **Enstöring**.
 
 > [!IMPORTANT]
-> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
+> Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
@@ -36,7 +36,7 @@ För att låsa upp Läger uppgraderar settlementet från **Enstöring**.
 
 ## Nästa nivå
 
-Nästa nivå är [Boplats](/wiki/settlements/niva-3-boplats).
+Nästa nivå är [Boplats](/wiki/settlements/boplats).
 
 ## Alla nivåer
 

@@ -1,8 +1,8 @@
 ---
-title: "Samhälle"
-description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
+title: "Rike"
+description: "Settlementnivå 30 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 107
+order: 130
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "storby"
-    title: "Nivå 6, Storby"
+    article: "samvalde"
+    title: "Nivå 29, Samvälde"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "koping"
-    title: "Nivå 8, Köping"
+    article: "konungarike"
+    title: "Nivå 31, Konungarike"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Samhälle
+# Rike
 
-**Samhälle** är settlementnivå **7 av 50**.
+**Rike** är settlementnivå **30 av 50**.
 
-För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
+För att låsa upp Rike uppgraderar settlementet från **Samvälde**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-6-till-7" />
+<SettlementUpgradePanel upgradeKey="level-29-till-30" />
 
 ## Nästa nivå
 
-Nästa nivå är [Köping](/wiki/settlements/koping).
+Nästa nivå är [Konungarike](/wiki/settlements/konungarike).
 
 ## Alla nivåer
 

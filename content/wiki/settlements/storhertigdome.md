@@ -1,8 +1,8 @@
 ---
-title: "Samhälle"
-description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
+title: "Storhertigdöme"
+description: "Settlementnivå 24 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 107
+order: 124
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "storby"
-    title: "Nivå 6, Storby"
+    article: "hertigdome"
+    title: "Nivå 23, Hertigdöme"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "koping"
-    title: "Nivå 8, Köping"
+    article: "fursterike"
+    title: "Nivå 25, Fursterike"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Samhälle
+# Storhertigdöme
 
-**Samhälle** är settlementnivå **7 av 50**.
+**Storhertigdöme** är settlementnivå **24 av 50**.
 
-För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
+För att låsa upp Storhertigdöme uppgraderar settlementet från **Hertigdöme**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-6-till-7" />
+<SettlementUpgradePanel upgradeKey="level-23-till-24" />
 
 ## Nästa nivå
 
-Nästa nivå är [Köping](/wiki/settlements/koping).
+Nästa nivå är [Fursterike](/wiki/settlements/fursterike).
 
 ## Alla nivåer
 

@@ -3,7 +3,7 @@ title: "Stad"
 description: "Settlementnivå 11 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 111
-version: "2.0"
+version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
 relatedArticles:
@@ -12,7 +12,7 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "niva-10-smastad"
+    article: "smastad"
     title: "Nivå 10, Småstad"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
@@ -28,7 +28,7 @@ relatedArticles:
 För att låsa upp Stad uppgraderar settlementet från **Småstad**.
 
 > [!IMPORTANT]
-> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
+> Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 

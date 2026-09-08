@@ -3,7 +3,7 @@ title: "Kungadöme"
 description: "Settlementnivå 32 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 132
-version: "2.0"
+version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
 relatedArticles:
@@ -12,11 +12,11 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "niva-31-konungarike"
+    article: "konungarike"
     title: "Nivå 31, Konungarike"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-33-storkungadome"
+    article: "storkungadome"
     title: "Nivå 33, Storkungadöme"
     description: "Nästa settlementnivå i progressionen."
 ---
@@ -28,7 +28,7 @@ relatedArticles:
 För att låsa upp Kungadöme uppgraderar settlementet från **Konungarike**.
 
 > [!IMPORTANT]
-> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
+> Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
@@ -36,7 +36,7 @@ För att låsa upp Kungadöme uppgraderar settlementet från **Konungarike**.
 
 ## Nästa nivå
 
-Nästa nivå är [Storkungadöme](/wiki/settlements/niva-33-storkungadome).
+Nästa nivå är [Storkungadöme](/wiki/settlements/storkungadome).
 
 ## Alla nivåer
 

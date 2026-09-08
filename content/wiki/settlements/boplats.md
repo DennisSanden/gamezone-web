@@ -1,8 +1,8 @@
 ---
-title: "Samhälle"
-description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
+title: "Boplats"
+description: "Settlementnivå 3 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 107
+order: 103
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "storby"
-    title: "Nivå 6, Storby"
+    article: "lager"
+    title: "Nivå 2, Läger"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "koping"
-    title: "Nivå 8, Köping"
+    article: "nybygge"
+    title: "Nivå 4, Nybygge"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Samhälle
+# Boplats
 
-**Samhälle** är settlementnivå **7 av 50**.
+**Boplats** är settlementnivå **3 av 50**.
 
-För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
+För att låsa upp Boplats uppgraderar settlementet från **Läger**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-6-till-7" />
+<SettlementUpgradePanel upgradeKey="level-2-till-3" />
 
 ## Nästa nivå
 
-Nästa nivå är [Köping](/wiki/settlements/koping).
+Nästa nivå är [Nybygge](/wiki/settlements/nybygge).
 
 ## Alla nivåer
 

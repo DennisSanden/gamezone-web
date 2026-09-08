@@ -1,8 +1,8 @@
 ---
-title: "Samhälle"
-description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
+title: "Storrike"
+description: "Settlementnivå 38 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 107
+order: 138
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "storby"
-    title: "Nivå 6, Storby"
+    article: "unionsrike"
+    title: "Nivå 37, Unionsrike"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "koping"
-    title: "Nivå 8, Köping"
+    article: "stormaktsrike"
+    title: "Nivå 39, Stormaktsrike"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Samhälle
+# Storrike
 
-**Samhälle** är settlementnivå **7 av 50**.
+**Storrike** är settlementnivå **38 av 50**.
 
-För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
+För att låsa upp Storrike uppgraderar settlementet från **Unionsrike**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-6-till-7" />
+<SettlementUpgradePanel upgradeKey="level-37-till-38" />
 
 ## Nästa nivå
 
-Nästa nivå är [Köping](/wiki/settlements/koping).
+Nästa nivå är [Stormaktsrike](/wiki/settlements/stormaktsrike).
 
 ## Alla nivåer
 

@@ -1,8 +1,8 @@
 ---
-title: "Samhälle"
-description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
+title: "Storkejsardöme"
+description: "Settlementnivå 42 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 107
+order: 142
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "storby"
-    title: "Nivå 6, Storby"
+    article: "kejsarrike"
+    title: "Nivå 41, Kejsarrike"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "koping"
-    title: "Nivå 8, Köping"
+    article: "hogkejsardome"
+    title: "Nivå 43, Högkejsardöme"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Samhälle
+# Storkejsardöme
 
-**Samhälle** är settlementnivå **7 av 50**.
+**Storkejsardöme** är settlementnivå **42 av 50**.
 
-För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
+För att låsa upp Storkejsardöme uppgraderar settlementet från **Kejsarrike**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-6-till-7" />
+<SettlementUpgradePanel upgradeKey="level-41-till-42" />
 
 ## Nästa nivå
 
-Nästa nivå är [Köping](/wiki/settlements/koping).
+Nästa nivå är [Högkejsardöme](/wiki/settlements/hogkejsardome).
 
 ## Alla nivåer
 
