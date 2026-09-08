@@ -3,6 +3,7 @@
 import gravekeeperImage from "../wiki/relics/assets/gravekeeper.png";
 import whisperImage from "../wiki/relics/assets/whisper.png";
 import ruinsplitterImage from "../wiki/relics/assets/ruinsplitter.png";
+import bloodletterImage from "../wiki/relics/assets/bloodletter.png";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -73,6 +74,7 @@ const relicArtwork: Record<string, RelicArtwork> = {
     "GZR-0020": { src: "/images/relics/archive/mountainbreaker.webp", caption: "DIAMOND AXE" },
     "GZR-0021": { src: "/images/relics/archive/prospectors-helm.webp", caption: "DIAMOND HELMET" },
     "GZR-0022": { src: "/images/relics/archive/heart-of-the-mountain.webp", caption: "HEART OF THE SEA" },
+    "GZR-0023": { src: bloodletterImage.src, caption: "DIAMOND SWORD" },
     "GZR-0025": { src: "/images/relics/archive/warbringers-plate.webp", caption: "DIAMOND CHESTPLATE" },
     "GZR-0028": { src: "/images/relics/archive/oathkeeper.webp", caption: "DIAMOND SWORD" },
     "GZR-0029": { src: gravekeeperImage.src, caption: "DIAMOND SHOVEL" },
@@ -92,6 +94,7 @@ const publicBeforeDiscovery = new Set([
     "GZR-0012",
     "GZR-0014",
     "GZR-0015", "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
+    "GZR-0023",
     "GZR-0025", "GZR-0028", "GZR-0029", "GZR-0030", "GZR-0033", "GZR-0034",
     "GZR-0035", "GZR-0039", "GZR-0042",
 ]);
@@ -155,6 +158,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0020") return "/wiki/relics/mountainbreaker";
     if (relic.serial === "GZR-0021") return "/wiki/relics/prospectors-helm";
     if (relic.serial === "GZR-0022") return "/wiki/relics/heart-of-the-mountain";
+    if (relic.serial === "GZR-0023") return "/wiki/relics/bloodletter";
     if (relic.serial === "GZR-0025") return "/wiki/relics/warbringers-plate";
     if (relic.serial === "GZR-0028") return "/wiki/relics/oathkeeper";
     if (relic.serial === "GZR-0029") return "/wiki/relics/gravekeeper";
