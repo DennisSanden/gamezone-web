@@ -54,7 +54,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Boplats",
             level: 3,
-            href: "/wiki/settlements/niva-3-boplats",
+            href: "/wiki/settlements/boplats",
         },
         changes: [],
         upgradeCost: {
@@ -75,7 +75,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Nybygge",
             level: 4,
-            href: "/wiki/settlements/niva-4-nybygge",
+            href: "/wiki/settlements/nybygge",
         },
         changes: [],
         upgradeCost: {
@@ -117,7 +117,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storby",
             level: 6,
-            href: "/wiki/settlements/niva-6-storby",
+            href: "/wiki/settlements/storby",
         },
         changes: [],
         upgradeCost: {
@@ -183,7 +183,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Handelsköping",
             level: 9,
-            href: "/wiki/settlements/niva-9-handelskoping",
+            href: "/wiki/settlements/handelskoping",
         },
         changes: [],
         upgradeCost: {
@@ -205,7 +205,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Småstad",
             level: 10,
-            href: "/wiki/settlements/niva-10-smastad",
+            href: "/wiki/settlements/smastad",
         },
         changes: [],
         upgradeCost: {
@@ -274,7 +274,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Fästningsstad",
             level: 13,
-            href: "/wiki/settlements/niva-13-fastningsstad",
+            href: "/wiki/settlements/fastningsstad",
         },
         changes: [],
         upgradeCost: {
@@ -297,7 +297,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Residensstad",
             level: 14,
-            href: "/wiki/settlements/niva-14-residensstad",
+            href: "/wiki/settlements/residensstad",
         },
         changes: [],
         upgradeCost: {
@@ -320,7 +320,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storstad",
             level: 15,
-            href: "/wiki/settlements/niva-15-storstad",
+            href: "/wiki/settlements/storstad",
         },
         changes: [],
         upgradeCost: {
@@ -366,7 +366,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Stadsstat",
             level: 17,
-            href: "/wiki/settlements/niva-17-stadsstat",
+            href: "/wiki/settlements/stadsstat",
         },
         changes: [],
         upgradeCost: {
@@ -389,7 +389,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Fristat",
             level: 18,
-            href: "/wiki/settlements/niva-18-fristat",
+            href: "/wiki/settlements/fristat",
         },
         changes: [],
         upgradeCost: {
@@ -412,7 +412,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Län",
             level: 19,
-            href: "/wiki/settlements/niva-19-lan",
+            href: "/wiki/settlements/lan",
         },
         changes: [],
         upgradeCost: {
@@ -459,7 +459,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Markgrevskap",
             level: 21,
-            href: "/wiki/settlements/niva-21-markgrevskap",
+            href: "/wiki/settlements/markgrevskap",
         },
         changes: [],
         upgradeCost: {
@@ -482,7 +482,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Furstendöme",
             level: 22,
-            href: "/wiki/settlements/niva-22-furstendome",
+            href: "/wiki/settlements/furstendome",
         },
         changes: [],
         upgradeCost: {
@@ -528,7 +528,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storhertigdöme",
             level: 24,
-            href: "/wiki/settlements/niva-24-storhertigdome",
+            href: "/wiki/settlements/storhertigdome",
         },
         changes: [],
         upgradeCost: {
@@ -551,7 +551,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Fursterike",
             level: 25,
-            href: "/wiki/settlements/niva-25-fursterike",
+            href: "/wiki/settlements/fursterike",
         },
         changes: [],
         upgradeCost: {
@@ -574,7 +574,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kronland",
             level: 26,
-            href: "/wiki/settlements/niva-26-kronland",
+            href: "/wiki/settlements/kronland",
         },
         changes: [],
         upgradeCost: {
@@ -597,7 +597,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Riksland",
             level: 27,
-            href: "/wiki/settlements/niva-27-riksland",
+            href: "/wiki/settlements/riksland",
         },
         changes: [],
         upgradeCost: {
@@ -620,7 +620,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Förbundsstat",
             level: 28,
-            href: "/wiki/settlements/niva-28-forbundsstat",
+            href: "/wiki/settlements/forbundsstat",
         },
         changes: [],
         upgradeCost: {
@@ -643,7 +643,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Samvälde",
             level: 29,
-            href: "/wiki/settlements/niva-29-samvalde",
+            href: "/wiki/settlements/samvalde",
         },
         changes: [],
         upgradeCost: {
@@ -666,7 +666,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Rike",
             level: 30,
-            href: "/wiki/settlements/niva-30-rike",
+            href: "/wiki/settlements/rike",
         },
         changes: [],
         upgradeCost: {
@@ -690,7 +690,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Konungarike",
             level: 31,
-            href: "/wiki/settlements/niva-31-konungarike",
+            href: "/wiki/settlements/konungarike",
         },
         changes: [],
         upgradeCost: {
@@ -737,7 +737,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storkungadöme",
             level: 33,
-            href: "/wiki/settlements/niva-33-storkungadome",
+            href: "/wiki/settlements/storkungadome",
         },
         changes: [],
         upgradeCost: {
@@ -760,7 +760,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kronrike",
             level: 34,
-            href: "/wiki/settlements/niva-34-kronrike",
+            href: "/wiki/settlements/kronrike",
         },
         changes: [],
         upgradeCost: {
@@ -783,7 +783,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Högkungadöme",
             level: 35,
-            href: "/wiki/settlements/niva-35-hogkungadome",
+            href: "/wiki/settlements/hogkungadome",
         },
         changes: [],
         upgradeCost: {
@@ -807,7 +807,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Förbundsrike",
             level: 36,
-            href: "/wiki/settlements/niva-36-forbundsrike",
+            href: "/wiki/settlements/forbundsrike",
         },
         changes: [],
         upgradeCost: {
@@ -831,7 +831,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Unionsrike",
             level: 37,
-            href: "/wiki/settlements/niva-37-unionsrike",
+            href: "/wiki/settlements/unionsrike",
         },
         changes: [],
         upgradeCost: {
@@ -854,7 +854,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storrike",
             level: 38,
-            href: "/wiki/settlements/niva-38-storrike",
+            href: "/wiki/settlements/storrike",
         },
         changes: [],
         upgradeCost: {
@@ -878,7 +878,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Stormaktsrike",
             level: 39,
-            href: "/wiki/settlements/niva-39-stormaktsrike",
+            href: "/wiki/settlements/stormaktsrike",
         },
         changes: [],
         upgradeCost: {
@@ -902,7 +902,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kejsardöme",
             level: 40,
-            href: "/wiki/settlements/niva-40-kejsardome",
+            href: "/wiki/settlements/kejsardome",
         },
         changes: [],
         upgradeCost: {
@@ -927,7 +927,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kejsarrike",
             level: 41,
-            href: "/wiki/settlements/niva-41-kejsarrike",
+            href: "/wiki/settlements/kejsarrike",
         },
         changes: [],
         upgradeCost: {
@@ -951,7 +951,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storkejsardöme",
             level: 42,
-            href: "/wiki/settlements/niva-42-storkejsardome",
+            href: "/wiki/settlements/storkejsardome",
         },
         changes: [],
         upgradeCost: {
@@ -975,7 +975,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Högkejsardöme",
             level: 43,
-            href: "/wiki/settlements/niva-43-hogkejsardome",
+            href: "/wiki/settlements/hogkejsardome",
         },
         changes: [],
         upgradeCost: {
@@ -999,7 +999,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kronimperium",
             level: 44,
-            href: "/wiki/settlements/niva-44-kronimperium",
+            href: "/wiki/settlements/kronimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1023,7 +1023,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Imperialrike",
             level: 45,
-            href: "/wiki/settlements/niva-45-imperialrike",
+            href: "/wiki/settlements/imperialrike",
         },
         changes: [],
         upgradeCost: {
@@ -1047,7 +1047,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storimperium",
             level: 46,
-            href: "/wiki/settlements/niva-46-storimperium",
+            href: "/wiki/settlements/storimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1071,7 +1071,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Högimperium",
             level: 47,
-            href: "/wiki/settlements/niva-47-hogimperium",
+            href: "/wiki/settlements/hogimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1095,7 +1095,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Världsimperium",
             level: 48,
-            href: "/wiki/settlements/niva-48-varldsimperium",
+            href: "/wiki/settlements/varldsimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1120,7 +1120,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kejsarimperium",
             level: 49,
-            href: "/wiki/settlements/niva-49-kejsarimperium",
+            href: "/wiki/settlements/kejsarimperium",
         },
         changes: [],
         upgradeCost: {

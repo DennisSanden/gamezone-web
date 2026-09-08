@@ -93,6 +93,57 @@ export default async function PatreonPage({ searchParams }: { searchParams: Prom
           </div>
         </section>
 
+        <section className={styles.connectGuide}>
+          <div className={styles.connectGuideHeader}>
+            <div>
+              <span className={styles.eyebrow}>KOPPLA DIN PATREON TILL GAMEZONE</span>
+              <h2>Aktivera dina supporterförmåner.</h2>
+            </div>
+            <p>För att få dina Supporter- eller Guldsupporter-förmåner behöver Minecraft, Discord och Patreon vara sammankopplade. Du behöver bara göra detta en gång.</p>
+          </div>
+
+          <div className={styles.connectSteps}>
+            <article className={styles.connectStep}>
+              <span className={styles.stepNumber}>1</span>
+              <div>
+                <strong>Koppla Minecraft till Discord</strong>
+                <p>Gå in på <b>play.gamezonemc.se</b> och skriv <code>/discord</code>. Följ instruktionerna för att koppla ditt Minecraft-konto till ditt Discord-konto.</p>
+              </div>
+            </article>
+            <article className={styles.connectStep}>
+              <span className={styles.stepNumber}>2</span>
+              <div>
+                <strong>Gå till Patreon-kanalen i Discord</strong>
+                <p>När Minecraft och Discord är kopplade går du till <b>🛜│koppla-patreon</b> på vår Discord.</p>
+              </div>
+            </article>
+            <article className={styles.connectStep}>
+              <span className={styles.stepNumber}>3</span>
+              <div>
+                <strong>Klicka på Koppla Patreon</strong>
+                <p>Du skickas vidare till Patreon. Logga in och godkänn kopplingen.</p>
+              </div>
+            </article>
+            <article className={styles.connectStep}>
+              <span className={styles.stepNumber}>4</span>
+              <div>
+                <strong>Klart</strong>
+                <p>Din Supporter- eller Guldsupporter-roll och dina förmåner på GameZoneMC aktiveras automatiskt.</p>
+              </div>
+            </article>
+          </div>
+
+          <div className={styles.connectResult}>
+            <strong>Minecraft ↔ Discord ↔ Patreon</strong>
+            <span>När kopplingen är klar sköts allt automatiskt. Om du byter nivå eller avslutar medlemskapet uppdateras dina roller och förmåner automatiskt.</span>
+          </div>
+
+          <div className={styles.existingSupporter}>
+            <strong>Redan Supporter sedan tidigare?</strong>
+            <span>Även du som redan är Supporter eller Guldsupporter behöver göra kopplingen en gång för att flyttas över till vårt nya automatiska system. Därefter behöver du inte kontakta en admin för att aktivera, uppgradera eller avsluta dina Supporter-förmåner.</span>
+          </div>
+        </section>
+
         <section className={styles.visualSection}>
           <div className={styles.visualHeading}>
             <div>
