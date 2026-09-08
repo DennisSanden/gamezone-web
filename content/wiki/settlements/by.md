@@ -1,74 +1,43 @@
 ---
 title: "By"
-description: "Den tredje settlementnivån där handel och företag blir en naturlig del av settlementets utveckling."
+description: "Settlementnivå 5 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 12
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-infoboxTitle: "By"
-infobox:
-  nivå: "3"
-  territorieradie: "30 block"
-  nästaNivå: "Bosättning"
+order: 105
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 relatedArticles:
   - category: "settlements"
-    article: "lager"
-    title: "Läger"
-    description: "Den andra settlementnivån och föregående steg i settlementets utveckling."
+    article: "settlement-upgrades"
+    title: "Settlement Upgrade"
+    description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "bosattning"
-    title: "Bosättning"
-    description: "Den fjärde settlementnivån och nästa steg i settlementets utveckling."
+    article: "niva-4-nybygge"
+    title: "Nivå 4, Nybygge"
+    description: "Föregående settlementnivå i progressionen."
+  - category: "settlements"
+    article: "niva-6-storby"
+    title: "Nivå 6, Storby"
+    description: "Nästa settlementnivå i progressionen."
 ---
 
-<SettlementInfoBox settlement="by" />
+# By
 
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
+**By** är settlementnivå **5 av 50**.
 
-## Översikt
+För att låsa upp By uppgraderar settlementet från **Nybygge**.
 
-**By** är den tredje av GameZones femton settlementnivåer.
+> [!IMPORTANT]
+> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
-På denna nivå blir settlementet ett etablerat samhälle med organiserad handel. Server TAX följer den nivåbaserade skattetrappan och den första samhällsbyggnaden blir tillgänglig genom Handelscentrum, vilket också låser upp möjligheten att registrera företag.
+## Krav för att låsa upp nivån
 
-> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka byggnader och funktioner som är tillgängliga.
-
-## Territorium
-
-Ett settlement på nivån By kontrollerar ett cirkulärt territorium med en radie på **30 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 3.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Invånare får endast Coins från resurser som tillhör settlementets valda kategori.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
-
-> [!IMPORTANT] Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
-
-
-
-## Byggnader
-
-<SettlementBuildingsPanel group="by" />
+<SettlementUpgradePanel upgradeKey="level-4-till-5" />
 
 ## Nästa nivå
 
-<SettlementUpgradePanel upgradeKey="by-till-bosattning" />
+Nästa nivå är [Storby](/wiki/settlements/niva-6-storby).
+
+## Alla nivåer
+
+[Se hela settlementprogressionen](/wiki/settlements/settlement-upgrades).

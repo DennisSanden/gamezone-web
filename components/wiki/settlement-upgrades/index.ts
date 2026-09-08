@@ -37,7 +37,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Läger",
             level: 2,
-            href: "/wiki/settlements/settlement-upgrades#niva-2-lager",
+            href: "/wiki/settlements/lager",
         },
         changes: [],
         upgradeCost: {
@@ -54,7 +54,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Boplats",
             level: 3,
-            href: "/wiki/settlements/settlement-upgrades#niva-3-boplats",
+            href: "/wiki/settlements/niva-3-boplats",
         },
         changes: [],
         upgradeCost: {
@@ -75,7 +75,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Nybygge",
             level: 4,
-            href: "/wiki/settlements/settlement-upgrades#niva-4-nybygge",
+            href: "/wiki/settlements/niva-4-nybygge",
         },
         changes: [],
         upgradeCost: {
@@ -96,7 +96,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "By",
             level: 5,
-            href: "/wiki/settlements/settlement-upgrades#niva-5-by",
+            href: "/wiki/settlements/by",
         },
         changes: [],
         upgradeCost: {
@@ -117,7 +117,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storby",
             level: 6,
-            href: "/wiki/settlements/settlement-upgrades#niva-6-storby",
+            href: "/wiki/settlements/niva-6-storby",
         },
         changes: [],
         upgradeCost: {
@@ -139,7 +139,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Samhälle",
             level: 7,
-            href: "/wiki/settlements/settlement-upgrades#niva-7-samhalle",
+            href: "/wiki/settlements/samhalle",
         },
         changes: [],
         upgradeCost: {
@@ -161,7 +161,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Köping",
             level: 8,
-            href: "/wiki/settlements/settlement-upgrades#niva-8-koping",
+            href: "/wiki/settlements/koping",
         },
         changes: [],
         upgradeCost: {
@@ -183,7 +183,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Handelsköping",
             level: 9,
-            href: "/wiki/settlements/settlement-upgrades#niva-9-handelskoping",
+            href: "/wiki/settlements/niva-9-handelskoping",
         },
         changes: [],
         upgradeCost: {
@@ -205,7 +205,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Småstad",
             level: 10,
-            href: "/wiki/settlements/settlement-upgrades#niva-10-smastad",
+            href: "/wiki/settlements/niva-10-smastad",
         },
         changes: [],
         upgradeCost: {
@@ -228,7 +228,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Stad",
             level: 11,
-            href: "/wiki/settlements/settlement-upgrades#niva-11-stad",
+            href: "/wiki/settlements/stad",
         },
         changes: [],
         upgradeCost: {
@@ -251,7 +251,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Handelsstad",
             level: 12,
-            href: "/wiki/settlements/settlement-upgrades#niva-12-handelsstad",
+            href: "/wiki/settlements/handelsstad",
         },
         changes: [],
         upgradeCost: {
@@ -274,7 +274,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Fästningsstad",
             level: 13,
-            href: "/wiki/settlements/settlement-upgrades#niva-13-fastningsstad",
+            href: "/wiki/settlements/niva-13-fastningsstad",
         },
         changes: [],
         upgradeCost: {
@@ -297,7 +297,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Residensstad",
             level: 14,
-            href: "/wiki/settlements/settlement-upgrades#niva-14-residensstad",
+            href: "/wiki/settlements/niva-14-residensstad",
         },
         changes: [],
         upgradeCost: {
@@ -320,7 +320,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storstad",
             level: 15,
-            href: "/wiki/settlements/settlement-upgrades#niva-15-storstad",
+            href: "/wiki/settlements/niva-15-storstad",
         },
         changes: [],
         upgradeCost: {
@@ -343,7 +343,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Huvudstad",
             level: 16,
-            href: "/wiki/settlements/settlement-upgrades#niva-16-huvudstad",
+            href: "/wiki/settlements/huvudstad",
         },
         changes: [],
         upgradeCost: {
@@ -366,7 +366,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Stadsstat",
             level: 17,
-            href: "/wiki/settlements/settlement-upgrades#niva-17-stadsstat",
+            href: "/wiki/settlements/niva-17-stadsstat",
         },
         changes: [],
         upgradeCost: {
@@ -389,7 +389,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Fristat",
             level: 18,
-            href: "/wiki/settlements/settlement-upgrades#niva-18-fristat",
+            href: "/wiki/settlements/niva-18-fristat",
         },
         changes: [],
         upgradeCost: {
@@ -412,7 +412,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Län",
             level: 19,
-            href: "/wiki/settlements/settlement-upgrades#niva-19-lan",
+            href: "/wiki/settlements/niva-19-lan",
         },
         changes: [],
         upgradeCost: {
@@ -435,7 +435,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Grevskap",
             level: 20,
-            href: "/wiki/settlements/settlement-upgrades#niva-20-grevskap",
+            href: "/wiki/settlements/grevskap",
         },
         changes: [],
         upgradeCost: {
@@ -459,7 +459,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Markgrevskap",
             level: 21,
-            href: "/wiki/settlements/settlement-upgrades#niva-21-markgrevskap",
+            href: "/wiki/settlements/niva-21-markgrevskap",
         },
         changes: [],
         upgradeCost: {
@@ -482,7 +482,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Furstendöme",
             level: 22,
-            href: "/wiki/settlements/settlement-upgrades#niva-22-furstendome",
+            href: "/wiki/settlements/niva-22-furstendome",
         },
         changes: [],
         upgradeCost: {
@@ -495,6 +495,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "pufferfish-5", name: "Pufferfish", amount: 96, icon: "🐡", texture: "/minecraft/items/pufferfish.png" },
             { id: "copper-grate-6", name: "Copper Grate", amount: 384, icon: "◆", texture: "/minecraft/blocks/copper_grate.png" },
             { id: "blaze-rod-7", name: "Blaze Rod", amount: 48, icon: "◆", texture: "/minecraft/items/blaze_rod.png" },
+            { id: "sniffer-egg-8", name: "Sniffer Egg", amount: 1, icon: "🥚", texture: "/minecraft/blocks/sniffer_egg.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -504,7 +505,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Hertigdöme",
             level: 23,
-            href: "/wiki/settlements/settlement-upgrades#niva-23-hertigdome",
+            href: "/wiki/settlements/hertigdome",
         },
         changes: [],
         upgradeCost: {
@@ -527,7 +528,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storhertigdöme",
             level: 24,
-            href: "/wiki/settlements/settlement-upgrades#niva-24-storhertigdome",
+            href: "/wiki/settlements/niva-24-storhertigdome",
         },
         changes: [],
         upgradeCost: {
@@ -550,7 +551,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Fursterike",
             level: 25,
-            href: "/wiki/settlements/settlement-upgrades#niva-25-fursterike",
+            href: "/wiki/settlements/niva-25-fursterike",
         },
         changes: [],
         upgradeCost: {
@@ -563,6 +564,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 16, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
             { id: "prismarine-bricks-6", name: "Prismarine Bricks", amount: 1024, icon: "◆", texture: "/minecraft/blocks/prismarine_bricks.png" },
             { id: "phantom-membrane-7", name: "Phantom Membrane", amount: 24, icon: "◆", texture: "/minecraft/items/phantom_membrane.png" },
+            { id: "heavy-core-8", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -572,7 +574,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kronland",
             level: 26,
-            href: "/wiki/settlements/settlement-upgrades#niva-26-kronland",
+            href: "/wiki/settlements/niva-26-kronland",
         },
         changes: [],
         upgradeCost: {
@@ -595,7 +597,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Riksland",
             level: 27,
-            href: "/wiki/settlements/settlement-upgrades#niva-27-riksland",
+            href: "/wiki/settlements/niva-27-riksland",
         },
         changes: [],
         upgradeCost: {
@@ -608,6 +610,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "cod-5", name: "Cod", amount: 512, icon: "🐟", texture: "/minecraft/items/cod.png" },
             { id: "chiseled-tuff-6", name: "Chiseled Tuff", amount: 1536, icon: "◆", texture: "/minecraft/blocks/chiseled_tuff.png" },
             { id: "potion-of-invisibility-7", name: "Potion of Invisibility", amount: 24, icon: "◆", texture: "/minecraft/items/potion.png" },
+            { id: "trident-8", name: "Trident", amount: 1, icon: "🔱", texture: "/minecraft/items/trident.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -617,7 +620,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Förbundsstat",
             level: 28,
-            href: "/wiki/settlements/settlement-upgrades#niva-28-forbundsstat",
+            href: "/wiki/settlements/niva-28-forbundsstat",
         },
         changes: [],
         upgradeCost: {
@@ -640,7 +643,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Samvälde",
             level: 29,
-            href: "/wiki/settlements/settlement-upgrades#niva-29-samvalde",
+            href: "/wiki/settlements/niva-29-samvalde",
         },
         changes: [],
         upgradeCost: {
@@ -653,6 +656,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "tropical-fish-5", name: "Tropical Fish", amount: 128, icon: "🐠", texture: "/minecraft/items/tropical_fish.png" },
             { id: "black-concrete-6", name: "Black Concrete", amount: 2048, icon: "◆", texture: "/minecraft/blocks/black_concrete.png" },
             { id: "lingering-potion-of-strength-7", name: "Lingering Potion of Strength", amount: 12, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
+            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -662,7 +666,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Rike",
             level: 30,
-            href: "/wiki/settlements/settlement-upgrades#niva-30-rike",
+            href: "/wiki/settlements/niva-30-rike",
         },
         changes: [],
         upgradeCost: {
@@ -686,7 +690,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Konungarike",
             level: 31,
-            href: "/wiki/settlements/settlement-upgrades#niva-31-konungarike",
+            href: "/wiki/settlements/niva-31-konungarike",
         },
         changes: [],
         upgradeCost: {
@@ -710,7 +714,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kungadöme",
             level: 32,
-            href: "/wiki/settlements/settlement-upgrades#niva-32-kungadome",
+            href: "/wiki/settlements/kungadome",
         },
         changes: [],
         upgradeCost: {
@@ -733,7 +737,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storkungadöme",
             level: 33,
-            href: "/wiki/settlements/settlement-upgrades#niva-33-storkungadome",
+            href: "/wiki/settlements/niva-33-storkungadome",
         },
         changes: [],
         upgradeCost: {
@@ -756,7 +760,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kronrike",
             level: 34,
-            href: "/wiki/settlements/settlement-upgrades#niva-34-kronrike",
+            href: "/wiki/settlements/niva-34-kronrike",
         },
         changes: [],
         upgradeCost: {
@@ -779,7 +783,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Högkungadöme",
             level: 35,
-            href: "/wiki/settlements/settlement-upgrades#niva-35-hogkungadome",
+            href: "/wiki/settlements/niva-35-hogkungadome",
         },
         changes: [],
         upgradeCost: {
@@ -792,6 +796,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "cod-5", name: "Cod", amount: 768, icon: "🐟", texture: "/minecraft/items/cod.png" },
             { id: "end-stone-bricks-6", name: "End Stone Bricks", amount: 2048, icon: "◆", texture: "/minecraft/blocks/end_stone_bricks.png" },
             { id: "lingering-potion-of-healing-7", name: "Lingering Potion of Healing", amount: 16, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
+            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
             { id: "nether-star-9", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" }
             ],
         },
@@ -802,7 +807,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Förbundsrike",
             level: 36,
-            href: "/wiki/settlements/settlement-upgrades#niva-36-forbundsrike",
+            href: "/wiki/settlements/niva-36-forbundsrike",
         },
         changes: [],
         upgradeCost: {
@@ -826,7 +831,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Unionsrike",
             level: 37,
-            href: "/wiki/settlements/settlement-upgrades#niva-37-unionsrike",
+            href: "/wiki/settlements/niva-37-unionsrike",
         },
         changes: [],
         upgradeCost: {
@@ -849,7 +854,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storrike",
             level: 38,
-            href: "/wiki/settlements/settlement-upgrades#niva-38-storrike",
+            href: "/wiki/settlements/niva-38-storrike",
         },
         changes: [],
         upgradeCost: {
@@ -863,6 +868,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "prismarine-bricks-6", name: "Prismarine Bricks", amount: 2048, icon: "◆", texture: "/minecraft/blocks/prismarine_bricks.png" },
             { id: "lingering-potion-of-regeneration-7", name: "Lingering Potion of Regeneration", amount: 16, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
             { id: "recovery-compass-8", name: "Recovery Compass", amount: 1, icon: "🧭", texture: "/minecraft/items/recovery_compass_00.png" },
+            { id: "elytra-9", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -872,7 +878,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Stormaktsrike",
             level: 39,
-            href: "/wiki/settlements/settlement-upgrades#niva-39-stormaktsrike",
+            href: "/wiki/settlements/niva-39-stormaktsrike",
         },
         changes: [],
         upgradeCost: {
@@ -896,7 +902,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kejsardöme",
             level: 40,
-            href: "/wiki/settlements/settlement-upgrades#niva-40-kejsardome",
+            href: "/wiki/settlements/niva-40-kejsardome",
         },
         changes: [],
         upgradeCost: {
@@ -911,6 +917,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 48, icon: "🐉" },
             { id: "end-crystal-8", name: "End Crystal", amount: 4, icon: "🔮", texture: "/minecraft/items/end_crystal.png" },
             { id: "enchanted-golden-apple-9", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
+            { id: "elytra-10", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -920,7 +927,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kejsarrike",
             level: 41,
-            href: "/wiki/settlements/settlement-upgrades#niva-41-kejsarrike",
+            href: "/wiki/settlements/niva-41-kejsarrike",
         },
         changes: [],
         upgradeCost: {
@@ -944,7 +951,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storkejsardöme",
             level: 42,
-            href: "/wiki/settlements/settlement-upgrades#niva-42-storkejsardome",
+            href: "/wiki/settlements/niva-42-storkejsardome",
         },
         changes: [],
         upgradeCost: {
@@ -957,6 +964,8 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "salmon-5", name: "Salmon", amount: 768, icon: "🐟", texture: "/minecraft/items/salmon.png" },
             { id: "copper-bulb-6", name: "Copper Bulb", amount: 768, icon: "◆", texture: "/minecraft/blocks/copper_bulb.png" },
             { id: "potion-of-regeneration-7", name: "Potion of Regeneration", amount: 48, icon: "◆", texture: "/minecraft/items/potion.png" },
+            { id: "sniffer-egg-8", name: "Sniffer Egg", amount: 1, icon: "🥚", texture: "/minecraft/blocks/sniffer_egg.png" },
+            { id: "heavy-core-9", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -966,7 +975,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Högkejsardöme",
             level: 43,
-            href: "/wiki/settlements/settlement-upgrades#niva-43-hogkejsardome",
+            href: "/wiki/settlements/niva-43-hogkejsardome",
         },
         changes: [],
         upgradeCost: {
@@ -980,6 +989,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "quartz-bricks-6", name: "Quartz Bricks", amount: 2560, icon: "◆", texture: "/minecraft/blocks/quartz_bricks.png" },
             { id: "potion-of-strength-7", name: "Potion of Strength", amount: 48, icon: "◆", texture: "/minecraft/items/potion.png" },
             { id: "goat-horn-8", name: "Goat Horn", amount: "2 olika", icon: "📯", texture: "/minecraft/items/goat_horn.png" },
+            { id: "trident-9", name: "Trident", amount: 1, icon: "🔱", texture: "/minecraft/items/trident.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -989,7 +999,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kronimperium",
             level: 44,
-            href: "/wiki/settlements/settlement-upgrades#niva-44-kronimperium",
+            href: "/wiki/settlements/niva-44-kronimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1003,7 +1013,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "end-stone-bricks-6", name: "End Stone Bricks", amount: 2560, icon: "◆", texture: "/minecraft/blocks/end_stone_bricks.png" },
             { id: "lingering-potion-of-healing-7", name: "Lingering Potion of Healing", amount: 24, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
             { id: "music-disc-8", name: "Music Disc", amount: "2 olika", icon: "💿", texture: "/minecraft/items/music_disc_13.png" },
-            { id: "enchanted-golden-apple-9", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" }
+            { id: "enchanted-golden-apple-9", name: "Enchanted Golden Apple", amount: 2, icon: "🍎" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -1013,7 +1023,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Imperialrike",
             level: 45,
-            href: "/wiki/settlements/settlement-upgrades#niva-45-imperialrike",
+            href: "/wiki/settlements/niva-45-imperialrike",
         },
         changes: [],
         upgradeCost: {
@@ -1027,6 +1037,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "purpur-block-6", name: "Purpur Block", amount: 2560, icon: "◆", texture: "/minecraft/blocks/purpur_block.png" },
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 64, icon: "🐉" },
             { id: "armor-trim-template-8", name: "Armor Trim Template", amount: "3 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
+            { id: "elytra-9", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -1036,7 +1047,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Storimperium",
             level: 46,
-            href: "/wiki/settlements/settlement-upgrades#niva-46-storimperium",
+            href: "/wiki/settlements/niva-46-storimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1060,7 +1071,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Högimperium",
             level: 47,
-            href: "/wiki/settlements/settlement-upgrades#niva-47-hogimperium",
+            href: "/wiki/settlements/niva-47-hogimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1074,7 +1085,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "sea-lantern-6", name: "Sea Lantern", amount: 1024, icon: "◆", texture: "/minecraft/blocks/sea_lantern.png" },
             { id: "lingering-potion-of-strength-7", name: "Lingering Potion of Strength", amount: 24, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
             { id: "echo-shard-8", name: "Echo Shard", amount: 8, icon: "◆", texture: "/minecraft/items/echo_shard.png" },
-            { id: "nether-star-9", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" }
+            { id: "nether-star-9", name: "Nether Star", amount: 2, icon: "⭐", texture: "/minecraft/items/nether_star.png" }
             ],
         },
         requiredCurrentBuildings: [],
@@ -1084,7 +1095,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Världsimperium",
             level: 48,
-            href: "/wiki/settlements/settlement-upgrades#niva-48-varldsimperium",
+            href: "/wiki/settlements/niva-48-varldsimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1097,8 +1108,9 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "prismarine-crystals-5", name: "Prismarine Crystals", amount: 512, icon: "◆", texture: "/minecraft/items/prismarine_crystals.png" },
             { id: "black-concrete-6", name: "Black Concrete", amount: 3072, icon: "◆", texture: "/minecraft/blocks/black_concrete.png" },
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 64, icon: "🐉" },
-            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
-            { id: "heavy-core-9", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
+            { id: "enchanted-golden-apple-8", name: "Enchanted Golden Apple", amount: 2, icon: "🍎" },
+            { id: "heavy-core-9", name: "Heavy Core", amount: 2, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
+            { id: "elytra-10", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" },
             ],
         },
         requiredCurrentBuildings: [],
@@ -1108,7 +1120,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Kejsarimperium",
             level: 49,
-            href: "/wiki/settlements/settlement-upgrades#niva-49-kejsarimperium",
+            href: "/wiki/settlements/niva-49-kejsarimperium",
         },
         changes: [],
         upgradeCost: {
@@ -1121,9 +1133,9 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 48, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
             { id: "copper-bulb-6", name: "Copper Bulb", amount: 1024, icon: "◆", texture: "/minecraft/blocks/copper_bulb.png" },
             { id: "lingering-potion-of-regeneration-7", name: "Lingering Potion of Regeneration", amount: 32, icon: "◆", texture: "/minecraft/items/lingering_potion.png" },
-            { id: "armor-trim-template-8", name: "Armor Trim Template", amount: "2 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
-            { id: "totem-9", name: "Totem", amount: 2, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" },
-            { id: "nether-star-10", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
+            { id: "armor-trim-template-8", name: "Armor Trim Template", amount: "4 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
+            { id: "totem-9", name: "Totem", amount: 4, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" },
+            { id: "nether-star-10", name: "Nether Star", amount: 2, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
             { id: "elytra-11", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" }
             ],
         },
@@ -1134,7 +1146,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
         nextLevel: {
             name: "Imperium",
             level: 50,
-            href: "/wiki/settlements/settlement-upgrades#niva-50-imperium",
+            href: "/wiki/settlements/imperium",
         },
         changes: [],
         upgradeCost: {
@@ -1147,16 +1159,18 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
             { id: "nautilus-shell-5", name: "Nautilus Shell", amount: 48, icon: "🐚", texture: "/minecraft/items/nautilus_shell.png" },
             { id: "sea-lantern-6", name: "Sea Lantern", amount: 1536, icon: "◆", texture: "/minecraft/blocks/sea_lantern.png" },
             { id: "dragons-breath-7", name: "Dragon's Breath", amount: 64, icon: "🐉" },
-            { id: "music-disc-8", name: "Music Disc", amount: "2 olika", icon: "💿", texture: "/minecraft/items/music_disc_13.png" },
-            { id: "goat-horn-9", name: "Goat Horn", amount: "1 olika", icon: "📯", texture: "/minecraft/items/goat_horn.png" },
-            { id: "armor-trim-template-10", name: "Armor Trim Template", amount: "2 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
-            { id: "recovery-compass-12", name: "Recovery Compass", amount: 1, icon: "🧭", texture: "/minecraft/items/recovery_compass_00.png" },
-            { id: "enchanted-golden-apple-13", name: "Enchanted Golden Apple", amount: 1, icon: "🍎" },
-            { id: "elytra-14", name: "Elytra", amount: 1, icon: "🪽", texture: "/minecraft/items/elytra.png" },
-            { id: "nether-star-15", name: "Nether Star", amount: 1, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
-            { id: "heavy-core-17", name: "Heavy Core", amount: 1, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
-            { id: "trident-18", name: "Trident", amount: 1, icon: "🔱", texture: "/minecraft/items/trident.png" },
-            { id: "totem-of-undying-19", name: "Totem of Undying", amount: 2, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" }
+            { id: "music-disc-8", name: "Music Disc", amount: "4 olika", icon: "💿", texture: "/minecraft/items/music_disc_13.png" },
+            { id: "goat-horn-9", name: "Goat Horn", amount: "2 olika", icon: "📯", texture: "/minecraft/items/goat_horn.png" },
+            { id: "armor-trim-template-10", name: "Armor Trim Template", amount: "4 olika", icon: "◆", texture: "/minecraft/items/rib_armor_trim_smithing_template.png" },
+            { id: "sniffer-egg-11", name: "Sniffer Egg", amount: 1, icon: "🥚", texture: "/minecraft/blocks/sniffer_egg.png" },
+            { id: "recovery-compass-12", name: "Recovery Compass", amount: 2, icon: "🧭", texture: "/minecraft/items/recovery_compass_00.png" },
+            { id: "enchanted-golden-apple-13", name: "Enchanted Golden Apple", amount: 2, icon: "🍎" },
+            { id: "elytra-14", name: "Elytra", amount: 2, icon: "🪽", texture: "/minecraft/items/elytra.png" },
+            { id: "nether-star-15", name: "Nether Star", amount: 3, icon: "⭐", texture: "/minecraft/items/nether_star.png" },
+            { id: "beacon-16", name: "Beacon", amount: 2, icon: "◆", texture: "/minecraft/blocks/beacon.png" },
+            { id: "heavy-core-17", name: "Heavy Core", amount: 2, icon: "⚙️", texture: "/minecraft/blocks/heavy_core.png" },
+            { id: "trident-18", name: "Trident", amount: 2, icon: "🔱", texture: "/minecraft/items/trident.png" },
+            { id: "totem-of-undying-19", name: "Totem of Undying", amount: 5, icon: "🗿", texture: "/minecraft/items/totem_of_undying.png" }
             ],
         },
         requiredCurrentBuildings: [],

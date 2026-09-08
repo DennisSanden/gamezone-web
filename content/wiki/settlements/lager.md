@@ -1,74 +1,43 @@
 ---
 title: "Läger"
-description: "Den andra settlementnivån där flera spelare börjar utveckla ett gemensamt samhälle."
+description: "Settlementnivå 2 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 11
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-infoboxTitle: "Läger"
-infobox:
-  nivå: "2"
-  territorieradie: "20 block"
-  nästaNivå: "By"
+order: 102
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 relatedArticles:
   - category: "settlements"
-    article: "enstoring"
-    title: "Enstöring"
-    description: "Den första settlementnivån och starten på ett nytt samhälle."
+    article: "settlement-upgrades"
+    title: "Settlement Upgrade"
+    description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "by"
-    title: "By"
-    description: "Den tredje settlementnivån och nästa steg i settlementets utveckling."
+    article: "enstoring"
+    title: "Nivå 1, Enstöring"
+    description: "Föregående settlementnivå i progressionen."
+  - category: "settlements"
+    article: "niva-3-boplats"
+    title: "Nivå 3, Boplats"
+    description: "Nästa settlementnivå i progressionen."
 ---
 
-<SettlementInfoBox settlement="lager" />
+# Läger
 
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
+**Läger** är settlementnivå **2 av 50**.
 
-## Översikt
+För att låsa upp Läger uppgraderar settlementet från **Enstöring**.
 
-**Läger** är den andra av GameZones femton settlementnivåer.
+> [!IMPORTANT]
+> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
-På denna nivå har settlementet börjat utvecklas från en ensam etablering till ett gemensamt samhälle. Territoriet blir större, Server TAX följer den nivåbaserade skattetrappan och settlementets första produktionsbyggnader blir tillgängliga.
+## Krav för att låsa upp nivån
 
-> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka byggnader och funktioner som är tillgängliga.
-
-## Territorium
-
-Ett settlement på nivån Läger kontrollerar ett cirkulärt territorium med en radie på **20 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 2.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Invånare får endast Coins från resurser som tillhör settlementets valda kategori.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
-
-> [!IMPORTANT] Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
-
-
-
-## Byggnader
-
-<SettlementBuildingsPanel group="lager" />
+<SettlementUpgradePanel upgradeKey="level-1-till-2" />
 
 ## Nästa nivå
 
-<SettlementUpgradePanel upgradeKey="lager-till-by" />
+Nästa nivå är [Boplats](/wiki/settlements/niva-3-boplats).
+
+## Alla nivåer
+
+[Se hela settlementprogressionen](/wiki/settlements/settlement-upgrades).

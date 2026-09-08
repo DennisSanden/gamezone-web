@@ -21,7 +21,16 @@ export async function GET(request: Request) {
     const body = await response.json().catch(() => null);
     if (!response.ok) {
       console.error("Patreon complete failed", body);
-      return NextResponse.redirect(new URL(`/patreon?linked=failed`, request.url));
+
+      const message = typeof body?.error === "string" ? body.error.toLowerCase() : "";
+      if (message.includes("inget aktivt supporter") || message.includes("guldsupporter-medlemskap")) {
+        return NextResponse.redirect(new URL("/patreon?linked=no_membership", request.url));
+      }
+      if (message.includes("ogiltig") || message.includes("utgång") || message.includes("expired") || message.includes("invalid")) {
+        return NextResponse.redirect(new URL("/patreon?linked=invalid_link", request.url));
+      }
+
+      return NextResponse.redirect(new URL("/patreon?linked=failed", request.url));
     }
     const tier = body?.tier === "GOLD" ? "gold" : "supporter";
     return NextResponse.redirect(new URL(`/patreon?linked=success&tier=${tier}`, request.url));

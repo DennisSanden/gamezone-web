@@ -1,8 +1,8 @@
 ---
-title: "Grevskap"
-description: "Settlementnivå 20 i den aktuella 50-nivåprogressionen."
+title: "Storstad"
+description: "Settlementnivå 15 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 120
+order: 115
 version: "2.0"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "niva-19-lan"
-    title: "Nivå 19, Län"
+    article: "niva-14-residensstad"
+    title: "Nivå 14, Residensstad"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-21-markgrevskap"
-    title: "Nivå 21, Markgrevskap"
+    article: "huvudstad"
+    title: "Nivå 16, Huvudstad"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Grevskap
+# Storstad
 
-**Grevskap** är settlementnivå **20 av 50**.
+**Storstad** är settlementnivå **15 av 50**.
 
-För att låsa upp Grevskap uppgraderar settlementet från **Län**.
+För att låsa upp Storstad uppgraderar settlementet från **Residensstad**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-19-till-20" />
+<SettlementUpgradePanel upgradeKey="level-14-till-15" />
 
 ## Nästa nivå
 
-Nästa nivå är [Markgrevskap](/wiki/settlements/niva-21-markgrevskap).
+Nästa nivå är [Huvudstad](/wiki/settlements/huvudstad).
 
 ## Alla nivåer
 

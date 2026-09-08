@@ -1,72 +1,43 @@
 ---
 title: "Samhälle"
-description: "Den femte settlementnivån där alkemi blir en del av settlementets produktion."
+description: "Settlementnivå 7 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 14
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-
-
+order: 107
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 relatedArticles:
   - category: "settlements"
-    article: "bosattning"
-    title: "Bosättning"
-    description: "Den fjärde settlementnivån och föregående steg i settlementets utveckling."
+    article: "settlement-upgrades"
+    title: "Settlement Upgrade"
+    description: "Översikt över alla 50 settlementnivåer och deras krav."
+  - category: "settlements"
+    article: "niva-6-storby"
+    title: "Nivå 6, Storby"
+    description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
     article: "koping"
-    title: "Köping"
-    description: "Den sjätte settlementnivån och nästa steg i settlementets utveckling."
+    title: "Nivå 8, Köping"
+    description: "Nästa settlementnivå i progressionen."
 ---
-
-<SettlementInfoBox settlement="samhalle" />
 
 # Samhälle
 
-Ett **Samhälle** är den femte settlementnivån i GameZone.
+**Samhälle** är settlementnivå **7 av 50**.
 
-På denna nivå utökas settlementets territorium och Server TAX enligt den nivåbaserade skattetrappan. För settlements med kategorin **Alkemi** blir även **Laboratorium** tillgängligt.
-
-Laboratorium gäller bara Alkemi och är inte ett generellt krav för fortsatt settlementprogression. Alkemiprodukter ger vanliga Coins direkt när settlementet har Alkemi som aktiv kategori. Ett färdigställt Laboratorium ger dessutom +5 % Coins från Alkemi.
-
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
-
-## Territorium
-
-Samhälle ger ett territorium med en radie på **50 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 5.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Samhälle behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
+För att låsa upp Samhälle uppgraderar settlementet från **Storby**.
 
 > [!IMPORTANT]
-> Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
+> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
+## Krav för att låsa upp nivån
 
-
-## Byggnader
-
-<SettlementBuildingsPanel group="samhalle" />
+<SettlementUpgradePanel upgradeKey="level-6-till-7" />
 
 ## Nästa nivå
 
-<SettlementUpgradePanel upgradeKey="samhalle-till-koping" />
+Nästa nivå är [Köping](/wiki/settlements/koping).
+
+## Alla nivåer
+
+[Se hela settlementprogressionen](/wiki/settlements/settlement-upgrades).

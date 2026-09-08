@@ -1,8 +1,8 @@
 ---
-title: "Grevskap"
-description: "Settlementnivå 20 i den aktuella 50-nivåprogressionen."
+title: "Småstad"
+description: "Settlementnivå 10 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 120
+order: 110
 version: "2.0"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "niva-19-lan"
-    title: "Nivå 19, Län"
+    article: "niva-9-handelskoping"
+    title: "Nivå 9, Handelsköping"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-21-markgrevskap"
-    title: "Nivå 21, Markgrevskap"
+    article: "stad"
+    title: "Nivå 11, Stad"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Grevskap
+# Småstad
 
-**Grevskap** är settlementnivå **20 av 50**.
+**Småstad** är settlementnivå **10 av 50**.
 
-För att låsa upp Grevskap uppgraderar settlementet från **Län**.
+För att låsa upp Småstad uppgraderar settlementet från **Handelsköping**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-19-till-20" />
+<SettlementUpgradePanel upgradeKey="level-9-till-10" />
 
 ## Nästa nivå
 
-Nästa nivå är [Markgrevskap](/wiki/settlements/niva-21-markgrevskap).
+Nästa nivå är [Stad](/wiki/settlements/stad).
 
 ## Alla nivåer
 

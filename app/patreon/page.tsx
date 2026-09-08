@@ -63,8 +63,17 @@ export default async function PatreonPage({ searchParams }: { searchParams: Prom
         {params.linked === "success" && (
           <section className={styles.linkStatus}><strong>Patreon kopplad.</strong><span>Dina GameZone-förmåner har aktiverats automatiskt.</span></section>
         )}
+        {params.linked === "no_membership" && (
+          <section className={styles.linkStatusError}><strong>Inget aktivt medlemskap.</strong><span>Patreon-kontot har inget aktivt Supporter- eller Guldsupporter-medlemskap hos GameZone. Bli supporter på Patreon och försök sedan igen.</span></section>
+        )}
+        {params.linked === "invalid_link" && (
+          <section className={styles.linkStatusError}><strong>Länken är ogiltig eller har gått ut.</strong><span>Gå tillbaka till #koppla-patreon i Discord och skapa en ny länk.</span></section>
+        )}
+        {params.linked === "cancelled" && (
+          <section className={styles.linkStatusError}><strong>Kopplingen avbröts.</strong><span>Inga ändringar gjordes. Du kan försöka igen via #koppla-patreon i Discord.</span></section>
+        )}
         {params.linked === "failed" && (
-          <section className={styles.linkStatusError}><strong>Kopplingen misslyckades.</strong><span>Gå tillbaka till #koppla-patreon i Discord och skapa en ny länk.</span></section>
+          <section className={styles.linkStatusError}><strong>Kopplingen misslyckades.</strong><span>Ett tekniskt fel uppstod. Gå tillbaka till #koppla-patreon i Discord och försök igen.</span></section>
         )}
         <section className={styles.introStrip}>
           <div>

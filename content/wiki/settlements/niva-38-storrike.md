@@ -1,8 +1,8 @@
 ---
-title: "Grevskap"
-description: "Settlementnivå 20 i den aktuella 50-nivåprogressionen."
+title: "Storrike"
+description: "Settlementnivå 38 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 120
+order: 138
 version: "2.0"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "niva-19-lan"
-    title: "Nivå 19, Län"
+    article: "niva-37-unionsrike"
+    title: "Nivå 37, Unionsrike"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-21-markgrevskap"
-    title: "Nivå 21, Markgrevskap"
+    article: "niva-39-stormaktsrike"
+    title: "Nivå 39, Stormaktsrike"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Grevskap
+# Storrike
 
-**Grevskap** är settlementnivå **20 av 50**.
+**Storrike** är settlementnivå **38 av 50**.
 
-För att låsa upp Grevskap uppgraderar settlementet från **Län**.
+För att låsa upp Storrike uppgraderar settlementet från **Unionsrike**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-19-till-20" />
+<SettlementUpgradePanel upgradeKey="level-37-till-38" />
 
 ## Nästa nivå
 
-Nästa nivå är [Markgrevskap](/wiki/settlements/niva-21-markgrevskap).
+Nästa nivå är [Stormaktsrike](/wiki/settlements/niva-39-stormaktsrike).
 
 ## Alla nivåer
 

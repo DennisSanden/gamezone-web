@@ -1,91 +1,43 @@
 ---
 title: "Hertigdöme"
-description: "Den tolfte settlementnivån där Slott låses upp och settlementet fortsätter sin utveckling mot Nation."
+description: "Settlementnivå 23 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 21
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-
+order: 123
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 relatedArticles:
   - category: "settlements"
-    article: "grevskap"
-    title: "Grevskap"
-    description: "Den elfte settlementnivån och föregående steg i settlementets utveckling."
+    article: "settlement-upgrades"
+    title: "Settlement Upgrade"
+    description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "nation"
-    title: "Nation"
-    description: "Den trettonde settlementnivån och nästa steg i settlementets utveckling."
+    article: "niva-22-furstendome"
+    title: "Nivå 22, Furstendöme"
+    description: "Föregående settlementnivå i progressionen."
+  - category: "settlements"
+    article: "niva-24-storhertigdome"
+    title: "Nivå 24, Storhertigdöme"
+    description: "Nästa settlementnivå i progressionen."
 ---
-
-<SettlementInfoBox settlement="hertigdome" />
 
 # Hertigdöme
 
-Ett **Hertigdöme** är den tolfte settlementnivån i GameZone.
+**Hertigdöme** är settlementnivå **23 av 50**.
 
-På denna nivå har settlementet utvecklats till ett mycket stort politiskt och territoriellt centrum med ett territorium på 270 block och en nivåbaserad Server TAX.
-
-Hertigdöme låser även upp bygglicensen för **Slott**, ett stort fysiskt byggprojekt som representerar settlementets politiska och territoriella utveckling.
-
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
-
-## Territorium
-
-Hertigdöme ger ett territorium med en radie på **135 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 12.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Hertigdöme behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
-
-Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
-
-Slott ger ingen direkt produktionsbonus.
+För att låsa upp Hertigdöme uppgraderar settlementet från **Furstendöme**.
 
 > [!IMPORTANT]
-> Grundbonusen och Monumentets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
+> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
+## Krav för att låsa upp nivån
 
-
-## Byggnader
-
-<SettlementBuildingsPanel group="hertigdome" />
-
-## Vägen mot Nation
-
-Nästa nivå är **Nation**.
-
-Nation utökar territoriet till 285 block och följer den aktuella nivåbaserade Server TAX-trappan.
-
-Det ordinarie återkommande avgift höjs samtidigt till 125 000 Coins.
-
-Nation låser inte upp någon ny unik specialbyggnad. För att avancera från Hertigdöme måste settlementet däremot ha färdigställt Slott.
-
-För att avancera måste settlementet bland annat:
-
-- ha färdigställt Slott
-- betala 6 000 000 Coins
-- uppfylla samtliga materialkrav för nivå 13
+<SettlementUpgradePanel upgradeKey="level-22-till-23" />
 
 ## Nästa nivå
 
-<SettlementUpgradePanel upgradeKey="hertigdome-till-nation" />
+Nästa nivå är [Storhertigdöme](/wiki/settlements/niva-24-storhertigdome).
+
+## Alla nivåer
+
+[Se hela settlementprogressionen](/wiki/settlements/settlement-upgrades).

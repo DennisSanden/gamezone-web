@@ -1,92 +1,43 @@
 ---
 title: "Kungadöme"
-description: "Den fjortonde settlementnivån med ett enormt territorium, nivåbaserad Server TAX och det sista utvecklingssteget före Imperium."
+description: "Settlementnivå 32 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 23
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-
+order: 132
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 relatedArticles:
   - category: "settlements"
-    article: "nation"
-    title: "Nation"
-    description: "Den trettonde settlementnivån och föregående steg i settlementets utveckling."
+    article: "settlement-upgrades"
+    title: "Settlement Upgrade"
+    description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "imperium"
-    title: "Imperium"
-    description: "Den femtonde och högsta settlementnivån i GameZone."
+    article: "niva-31-konungarike"
+    title: "Nivå 31, Konungarike"
+    description: "Föregående settlementnivå i progressionen."
+  - category: "settlements"
+    article: "niva-33-storkungadome"
+    title: "Nivå 33, Storkungadöme"
+    description: "Nästa settlementnivå i progressionen."
 ---
-
-<SettlementInfoBox settlement="kungadome" />
 
 # Kungadöme
 
-Ett **Kungadöme** är den fjortonde settlementnivån i GameZone.
+**Kungadöme** är settlementnivå **32 av 50**.
 
-På denna nivå har settlementet vuxit till ett enormt politiskt, ekonomiskt och territoriellt centrum med ett territorium på 295 block och en nivåbaserad Server TAX.
-
-Kungadöme låser inte upp någon ny unik specialbyggnad. Nivån fungerar i stället som det sista expansionssteget före Imperium.
-
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
-
-## Territorium
-
-Kungadöme ger ett territorium med en radie på **148 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 14.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Kungadöme behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
-
-Om Monument är färdigställt och aktivt får settlementets aktiva medlemmar ytterligare **+20 % Coins** från all registrerad manuell produktion.
-
-Slott ger ingen direkt produktionsbonus.
+För att låsa upp Kungadöme uppgraderar settlementet från **Konungarike**.
 
 > [!IMPORTANT]
-> Grundbonusen och Monumentets bonus gäller endast settlementets aktiva medlemmar och endast manuell produktion som är reward-eligible.
+> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
+## Krav för att låsa upp nivån
 
-
-## Byggnader
-
-<SettlementBuildingsPanel group="kungadome" />
-
-## Vägen mot Imperium
-
-Nästa nivå är **Imperium**.
-
-Imperium utökar territoriet till 300 block och följer den aktuella nivåbaserade Server TAX-trappan.
-
-Det ordinarie återkommande avgift höjs samtidigt till 250 000 Coins.
-
-Imperium låser upp bygglicensen för **Underverk**, det största fysiska byggprojektet i nuvarande settlementprogression.
-
-För att avancera måste settlementet bland annat:
-
-- betala 10 000 000 Coins
-- uppfylla samtliga materialkrav för nivå 15
-
-Kungadöme låser inte upp någon egen byggnad som måste färdigställas före uppgraderingen.
+<SettlementUpgradePanel upgradeKey="level-31-till-32" />
 
 ## Nästa nivå
 
-<SettlementUpgradePanel upgradeKey="kungadome-till-imperium" />
+Nästa nivå är [Storkungadöme](/wiki/settlements/niva-33-storkungadome).
+
+## Alla nivåer
+
+[Se hela settlementprogressionen](/wiki/settlements/settlement-upgrades).

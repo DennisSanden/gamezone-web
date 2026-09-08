@@ -1,88 +1,43 @@
 ---
 title: "Handelsstad"
-description: "Den åttonde settlementnivån där handel och ekonomisk infrastruktur får en större roll."
+description: "Settlementnivå 12 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 17
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-
-
+order: 112
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 relatedArticles:
   - category: "settlements"
-    article: "stad"
-    title: "Stad"
-    description: "Den sjunde settlementnivån och föregående steg i settlementets utveckling."
+    article: "settlement-upgrades"
+    title: "Settlement Upgrade"
+    description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "fastning"
-    title: "Fästning"
-    description: "Den nionde settlementnivån och nästa steg i settlementets utveckling."
+    article: "stad"
+    title: "Nivå 11, Stad"
+    description: "Föregående settlementnivå i progressionen."
+  - category: "settlements"
+    article: "niva-13-fastningsstad"
+    title: "Nivå 13, Fästningsstad"
+    description: "Nästa settlementnivå i progressionen."
 ---
-
-<SettlementInfoBox settlement="handelsstad" />
 
 # Handelsstad
 
-En **Handelsstad** är den åttonde settlementnivån i GameZone.
+**Handelsstad** är settlementnivå **12 av 50**.
 
-På denna nivå har settlementet utvecklats till ett större ekonomiskt centrum med ett territorium på 175 block och en nivåbaserad Server TAX.
-
-Handelsstad låser även upp bygglicensen för **Marknadsplats**. Marknadsplats har ingen egen direkt bonus i nuvarande system, men den måste byggas fysiskt och färdigställas för fortsatt progression mot Fästning.
-
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
-
-## Territorium
-
-Handelsstad ger ett territorium med en radie på **88 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 8.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Handelsstad behåller settlementets permanenta grundbonus på **Coins endast från vald kategori** från all reward-eligible produktion.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
+För att låsa upp Handelsstad uppgraderar settlementet från **Stad**.
 
 > [!IMPORTANT]
-> Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
+> Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
+## Krav för att låsa upp nivån
 
-
-## Byggnader
-
-<SettlementBuildingsPanel group="handelsstad" />
-
-## Vägen mot Fästning
-
-Nästa nivå är **Fästning**.
-
-Fästning utökar territoriet till 200 block och följer den aktuella nivåbaserade Server TAX-trappan.
-
-Det ordinarie återkommande avgift höjs samtidigt till 30 000 Coins.
-
-Fästning låser inte upp någon ny unik specialbyggnad, men fungerar som nästa stora expansionssteg på vägen mot Huvudstad.
-
-För att avancera måste settlementet bland annat:
-
-- ha färdigställt Marknadsplats
-- betala 500 000 Coins
-- uppfylla samtliga materialkrav för nivå 9
+<SettlementUpgradePanel upgradeKey="level-11-till-12" />
 
 ## Nästa nivå
 
-<SettlementUpgradePanel upgradeKey="handelsstad-till-fastning" />
+Nästa nivå är [Fästningsstad](/wiki/settlements/niva-13-fastningsstad).
+
+## Alla nivåer
+
+[Se hela settlementprogressionen](/wiki/settlements/settlement-upgrades).

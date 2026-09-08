@@ -1,8 +1,8 @@
 ---
-title: "Grevskap"
-description: "Settlementnivå 20 i den aktuella 50-nivåprogressionen."
+title: "Fursterike"
+description: "Settlementnivå 25 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 120
+order: 125
 version: "2.0"
 engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-09-08"
@@ -12,31 +12,31 @@ relatedArticles:
     title: "Settlement Upgrade"
     description: "Översikt över alla 50 settlementnivåer och deras krav."
   - category: "settlements"
-    article: "niva-19-lan"
-    title: "Nivå 19, Län"
+    article: "niva-24-storhertigdome"
+    title: "Nivå 24, Storhertigdöme"
     description: "Föregående settlementnivå i progressionen."
   - category: "settlements"
-    article: "niva-21-markgrevskap"
-    title: "Nivå 21, Markgrevskap"
+    article: "niva-26-kronland"
+    title: "Nivå 26, Kronland"
     description: "Nästa settlementnivå i progressionen."
 ---
 
-# Grevskap
+# Fursterike
 
-**Grevskap** är settlementnivå **20 av 50**.
+**Fursterike** är settlementnivå **25 av 50**.
 
-För att låsa upp Grevskap uppgraderar settlementet från **Län**.
+För att låsa upp Fursterike uppgraderar settlementet från **Storhertigdöme**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder exakt samma centrala data som huvudsidan för Settlement Upgrade. Coins, items och specialkrav kan därför inte skilja sig mellan sidorna.
 
 ## Krav för att låsa upp nivån
 
-<SettlementUpgradePanel upgradeKey="level-19-till-20" />
+<SettlementUpgradePanel upgradeKey="level-24-till-25" />
 
 ## Nästa nivå
 
-Nästa nivå är [Markgrevskap](/wiki/settlements/niva-21-markgrevskap).
+Nästa nivå är [Kronland](/wiki/settlements/niva-26-kronland).
 
 ## Alla nivåer
 

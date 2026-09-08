@@ -1,74 +1,16 @@
 ---
 title: "Bosättning"
-description: "Den fjärde settlementnivån där settlementets ekonomi och administration blir mer avancerad."
+description: "Äldre settlementbenämning som inte längre ingår i den aktuella 50-nivåprogressionen."
 category: "Settlements"
-order: 13
-version: "1.0"
-engineVersion: "Settlement Registry"
-updatedAt: "2026-08-11"
-infoboxTitle: "Bosättning"
-infobox:
-  nivå: "4"
-  territorieradie: "40 block"
-  nästaNivå: "Samhälle"
-relatedArticles:
-  - category: "settlements"
-    article: "by"
-    title: "By"
-    description: "Den tredje settlementnivån och föregående steg i settlementets utveckling."
-  - category: "settlements"
-    article: "samhalle"
-    title: "Samhälle"
-    description: "Den femte settlementnivån och nästa steg i settlementets utveckling."
+order: 998
+version: "2.0"
+engineVersion: "Settlement Levels 1.0"
+updatedAt: "2026-09-08"
 ---
 
-<SettlementInfoBox settlement="bosattning" />
+# Bosättning
 
-> [!INFO]
-> Server TAX börjar på 45 procent vid settlementnivå 3, sjunker med 1 procentenhet per nivå till 25 procent på nivå 23 och ligger därefter kvar på 25 procent. Se [Server TAX](/wiki/economy/server-tax) för hela modellen.
+> [!IMPORTANT]
+> **Bosättning är en äldre settlementbenämning och används inte längre som egen nivå i GameZoneEngine.** Den aktuella progressionen består av 50 nivåer.
 
-## Översikt
-
-**Bosättning** är den fjärde av GameZones femton settlementnivåer.
-
-På denna nivå fortsätter settlementet att utvecklas genom ett större territorium, en nivåbaserad Server TAX och tillgång till Bank. Banken låser upp utökad ekonomisk statistik och ger settlementets ledning en mer detaljerad överblick över ekonomins utveckling.
-
-> [!INFO] Settlementnivån avgör territoriets storlek, Server TAX och vilka byggnader och funktioner som är tillgängliga.
-
-## Territorium
-
-Ett settlement på nivån Bosättning kontrollerar ett cirkulärt territorium med en radie på **40 block** från settlementets registrerade centrum.
-
-Territoriet utökas automatiskt när settlementet når nivå 4.
-
-Settlementets registrerade centrum är permanent och kan inte flyttas.
-
-Det finns ingen fysisk Town Hall som kan förstöras, flyttas eller användas som ett vanligt Minecraft-block.
-
-## Produktion
-
-Invånare får endast Coins från resurser som tillhör settlementets valda kategori.
-
-Grundbonusen gäller:
-
-- Gruvdrift
-- Jordbruk
-- Skogsbruk
-- Boskap
-- Fiske
-- Byggmaterial
-- Alkemi
-
-
-
-> [!IMPORTANT] Produktion utanför den valda kategorin kan fortfarande användas, men ger inga Coins.
-
-
-
-## Byggnader
-
-<SettlementBuildingsPanel group="bosattning" />
-
-## Nästa nivå
-
-<SettlementUpgradePanel upgradeKey="bosattning-till-samhalle" />
+[Se alla aktuella settlementnivåer och uppgraderingskrav](/wiki/settlements/settlement-upgrades).
