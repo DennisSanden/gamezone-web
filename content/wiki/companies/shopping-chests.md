@@ -68,6 +68,19 @@ Exempel:
 Kommandot visar upp till tre billigaste aktiva Shopping Chests som har varan i lager. Eftersom försäljningskistor är prissatta **per item** jämförs samma styckpris som används när spelaren handlar ur kistan.
 
 
+## Företag som söker varor
+
+Utöver att söka efter varor kan företag annonsera vad de själva vill köpa.
+
+```text
+/market köp <antal> <item> <maxpris per styck>
+/market annonser
+```
+
+Köpannonsen ligger ute i **6 timmar** och går även ut i serverchatten. Ett företag kan skapa högst en ny annons var sjätte timme. När företaget köper den annonserade varan räknas mängden av automatiskt och annonsen stängs när hela behovet är uppfyllt.
+
+Läs mer på [MarketWatch](/wiki/economy/marketwatch#kopannonser).
+
 ## Ändra pris
 
 Du behöver inte längre slå sönder och registrera om en Shopping Chest för att byta pris. Titta på din registrerade försäljningskista och skriv:

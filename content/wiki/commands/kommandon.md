@@ -152,9 +152,11 @@ Owner och Manager kan hantera företagets handelsavtal. Funktionen finns också 
 ```text
 /market
 /market <item>
+/market köp <antal> <item> <maxpris per styck>
+/market annonser
 ```
 
-`/market` öppnar MarketWatch. `/market <item>` visar upp till tre billigaste aktiva butiker som har itemet i lager.
+`/market` öppnar MarketWatch. `/market <item>` visar upp till tre billigaste aktiva butiker som har itemet i lager. Företag kan dessutom skapa köpannonser med `/market köp` och alla spelare kan se aktiva annonser med `/market annonser`. En köpannons gäller i 6 timmar och ett företag kan skapa högst en ny annons var sjätte timme.
 
 Exempel:
 

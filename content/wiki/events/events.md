@@ -5,7 +5,7 @@ category: "Events"
 order: 1
 version: "1.1"
 engineVersion: "Event System"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-09"
 infoboxTitle: "Events"
 infobox:
   typ: "Serveraktiviteter"
@@ -73,3 +73,15 @@ Ett event kan ha en prispott.
 ## När körs events?
 
 Aktuella event annonseras av serverteamet. Håll koll på servermeddelanden, Discord och GameZones övriga informationskanaler för tid och regler inför nästa event.
+
+## Patreon-events
+
+Serverteamet kan skapa events som är avsedda för Patreons. `patreon` finns som valbar eventtyp och visas i commandets tab completion. Det kan kombineras med Solo, Settlement och Random Teams.
+
+```text
+/event on solo patreon <namn>
+/event on settlement patreon <namn>
+/event on random patreon <namn>
+```
+
+Detta är administrationskommandon och används av serverteamet när ett Patreon-event ska startas.

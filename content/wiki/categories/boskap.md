@@ -3,15 +3,17 @@ title: "Boskap"
 description: "Djurhållning, kött, ull, läder och ägg."
 category: "Produktionskategorier"
 order: 3
-version: "1.3"
+version: "1.4"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-09"
 infoboxTitle: "Boskap"
 infobox:
   coinregel: "Endast vald kategori"
   automation: "Ger inga Coins"
   djurdrops: "+100% vid spelardöd"
   hastbonus: "+15% på hästar"
+  uppvaxt: "4× snabbare"
+  breeding: "500 Coins i grundvärde"
 ---
 
 ## Vad är Boskap?
@@ -20,6 +22,15 @@ Boskap handlar om att föda upp och ta hand om djur. Exempel på resurser är be
 
 > [!IMPORTANT]
 > Resurser från djur ger bara Coins om settlementet valde Boskap när det skapades med `/settlement create <namn>`. Automatiserad insamling ger inga Coins.
+
+## Breeding och uppväxt
+
+Djur som föds genom breeding växer upp **4× snabbare än normalt**. En unge som normalt behöver omkring 20 minuter blir därför vuxen efter ungefär **5 minuter**.
+
+Breeding har ett grundvärde på **500 Coins**. Produktionsbonusar och serverns överproduktionsskydd räknas därefter ovanpå grundvärdet.
+
+> [!IMPORTANT]
+> Boskapens Coin-värden är sänkta med **15 %** jämfört med tidigare balans. Den snabbare uppväxten gör att djur kan omsättas betydligt snabbare, medan den lägre Coin-nivån håller produktionen balanserad.
 
 ## Dubbel drop från djur
 

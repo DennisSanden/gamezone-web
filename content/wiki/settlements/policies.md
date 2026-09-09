@@ -3,9 +3,9 @@ title: "Policies"
 description: "Settlementets valbara bonusar för produktion, ekonomi, krig, turism och infrastruktur."
 category: "Settlements"
 order: 5
-version: "1.3"
+version: "1.4"
 engineVersion: "Settlement Policies"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-09"
 infoboxTitle: "Policies"
 infobox:
   styrsAv: "King"
@@ -50,6 +50,8 @@ King väljer policy direkt i GUI-menyn. Commands finns kvar som fallback:
 /settlement policy activate <policy>
 /settlement policy deactivate <policy>
 ```
+
+Policykommandona accepterar både policyns visningsnamn och vanliga skrivsätt. Du behöver alltså inte memorera ett exakt internt policy-id. Använd `/settlement policy list` eller tab completion om du är osäker på namnet.
 
 När en policy aktiveras får dess policyplats **48 timmars cooldown**. Policyn kan inte tas bort innan cooldownen har gått ut. När en ny King tar över nollställs befintliga policy-cooldowns.
 
