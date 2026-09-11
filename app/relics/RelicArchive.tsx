@@ -4,6 +4,7 @@ import gravekeeperImage from "../wiki/relics/assets/gravekeeper.png";
 import whisperImage from "../wiki/relics/assets/whisper.png";
 import ruinsplitterImage from "../wiki/relics/assets/ruinsplitter.png";
 import bloodletterImage from "../wiki/relics/assets/bloodletter.png";
+import sunpiercerImage from "../wiki/relics/assets/sunpiercer.png";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -70,12 +71,13 @@ const relicArtwork: Record<string, RelicArtwork> = {
     "GZR-0012": { src: ruinsplitterImage.src, caption: "IRON PICKAXE" },
     "GZR-0014": { src: whisperImage.src, caption: "BOW" },
     "GZR-0015": { src: "/images/relics/archive/witchfinder.webp", caption: "CROSSBOW" },
+    "GZR-0018": { src: "/images/relics/archive/wayfinder.webp", caption: "COMPASS" },
     "GZR-0019": { src: "/images/relics/archive/frostbrytaren.webp", caption: "DIAMOND PICKAXE" },
     "GZR-0020": { src: "/images/relics/archive/mountainbreaker.webp", caption: "DIAMOND AXE" },
     "GZR-0021": { src: "/images/relics/archive/prospectors-helm.webp", caption: "DIAMOND HELMET" },
     "GZR-0022": { src: "/images/relics/archive/heart-of-the-mountain.webp", caption: "HEART OF THE SEA" },
     "GZR-0023": { src: bloodletterImage.src, caption: "DIAMOND SWORD" },
-    "GZR-0024": { src: "/images/relics/archive/sunpiercer.webp", caption: "TRIDENT" },
+    "GZR-0024": { src: sunpiercerImage.src, caption: "TRIDENT" },
     "GZR-0025": { src: "/images/relics/archive/warbringers-plate.webp", caption: "DIAMOND CHESTPLATE" },
     "GZR-0028": { src: "/images/relics/archive/oathkeeper.webp", caption: "DIAMOND SWORD" },
     "GZR-0029": { src: gravekeeperImage.src, caption: "DIAMOND SHOVEL" },
@@ -94,7 +96,7 @@ const publicBeforeDiscovery = new Set([
     "GZR-0006", "GZR-0007", "GZR-0008", "GZR-0009", "GZR-0010",
     "GZR-0012",
     "GZR-0014",
-    "GZR-0015", "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
+    "GZR-0015", "GZR-0018", "GZR-0019", "GZR-0020", "GZR-0021", "GZR-0022",
     "GZR-0023", "GZR-0024",
     "GZR-0025", "GZR-0028", "GZR-0029", "GZR-0030", "GZR-0033", "GZR-0034",
     "GZR-0035", "GZR-0039", "GZR-0042",
@@ -155,6 +157,7 @@ function relicWikiHref(relic: Relic) {
     if (relic.serial === "GZR-0012") return "/wiki/relics/ruinsplitter";
     if (relic.serial === "GZR-0014") return "/wiki/relics/whisper";
     if (relic.serial === "GZR-0015") return "/wiki/relics/witchfinder";
+    if (relic.serial === "GZR-0018") return "/wiki/relics/wayfinder";
     if (relic.serial === "GZR-0019") return "/wiki/relics/frostbrytaren";
     if (relic.serial === "GZR-0020") return "/wiki/relics/mountainbreaker";
     if (relic.serial === "GZR-0021") return "/wiki/relics/prospectors-helm";
