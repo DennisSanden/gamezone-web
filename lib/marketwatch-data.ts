@@ -65,6 +65,7 @@ const SWEDISH_NAMES: Record<string, string> = {
     WHEAT: "Vete",
     CARROT: "Morot",
     POTATO: "Potatis",
+    BONE_BLOCK: "Benblock",
     OAK_LOG: "Ekstock",
     SPRUCE_LOG: "Granstock",
     BIRCH_LOG: "Björkstock",
