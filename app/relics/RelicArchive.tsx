@@ -4,7 +4,6 @@ import gravekeeperImage from "../wiki/relics/assets/gravekeeper.png";
 import whisperImage from "../wiki/relics/assets/whisper.png";
 import ruinsplitterImage from "../wiki/relics/assets/ruinsplitter.png";
 import bloodletterImage from "../wiki/relics/assets/bloodletter.png";
-import sunpiercerImage from "../wiki/relics/assets/sunpiercer.png";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -76,7 +75,7 @@ const relicArtwork: Record<string, RelicArtwork> = {
     "GZR-0021": { src: "/images/relics/archive/prospectors-helm.webp", caption: "DIAMOND HELMET" },
     "GZR-0022": { src: "/images/relics/archive/heart-of-the-mountain.webp", caption: "HEART OF THE SEA" },
     "GZR-0023": { src: bloodletterImage.src, caption: "DIAMOND SWORD" },
-    "GZR-0024": { src: sunpiercerImage.src, caption: "TRIDENT" },
+    "GZR-0024": { src: "/images/relics/archive/sunpiercer.webp", caption: "TRIDENT" },
     "GZR-0025": { src: "/images/relics/archive/warbringers-plate.webp", caption: "DIAMOND CHESTPLATE" },
     "GZR-0028": { src: "/images/relics/archive/oathkeeper.webp", caption: "DIAMOND SWORD" },
     "GZR-0029": { src: gravekeeperImage.src, caption: "DIAMOND SHOVEL" },
