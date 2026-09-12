@@ -364,9 +364,9 @@ export default function RulesPage() {
                     <PageContainer>
                         <div className={styles.sectionHeading}>
                             <span className={styles.kicker}>14. Villagers</span>
-                            <h2>Max 8 villagers per settlement</h2>
+                            <h2>Max 10 villagers per settlement</h2>
                             <p>
-                                Ett settlement får ha maximalt 8 villagers totalt inom sitt
+                                Ett settlement får ha maximalt 10 villagers totalt inom sitt
                                 område. Begränsningen gäller settlementet som helhet, inte per
                                 spelare eller byggnad.
                             </p>

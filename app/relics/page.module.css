@@ -688,6 +688,11 @@
     opacity: 0.96;
 }
 
+/* Sunpiercer har ett tajtare originalmotiv än övriga reliker. */
+.compactArtwork img {
+    transform: scale(0.84);
+}
+
 /* Håll artworken borta från kortets kanter även när originalasseten är tajt komponerad. */
 .relicImagePreview .artCaption {
     bottom: 7px;

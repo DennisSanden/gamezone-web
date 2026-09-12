@@ -5,6 +5,7 @@ import whisperImage from "../wiki/relics/assets/whisper.png";
 import ruinsplitterImage from "../wiki/relics/assets/ruinsplitter.png";
 import bloodletterImage from "../wiki/relics/assets/bloodletter.png";
 import sunpiercerImage from "../wiki/relics/assets/sunpiercer.png";
+import wayfinderImage from "../wiki/relics/assets/wayfinder.png";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -71,7 +72,7 @@ const relicArtwork: Record<string, RelicArtwork> = {
     "GZR-0012": { src: ruinsplitterImage.src, caption: "IRON PICKAXE" },
     "GZR-0014": { src: whisperImage.src, caption: "BOW" },
     "GZR-0015": { src: "/images/relics/archive/witchfinder.webp", caption: "CROSSBOW" },
-    "GZR-0018": { src: "/images/relics/archive/wayfinder.webp", caption: "COMPASS" },
+    "GZR-0018": { src: wayfinderImage.src, caption: "COMPASS" },
     "GZR-0019": { src: "/images/relics/archive/frostbrytaren.webp", caption: "DIAMOND PICKAXE" },
     "GZR-0020": { src: "/images/relics/archive/mountainbreaker.webp", caption: "DIAMOND AXE" },
     "GZR-0021": { src: "/images/relics/archive/prospectors-helm.webp", caption: "DIAMOND HELMET" },
@@ -300,7 +301,7 @@ export default function RelicArchive() {
                                     <span className={styles.secretGlyph}>?</span>
                                 </div>
                             ) : artwork ? (
-                                <div className={`${styles.relicArt} ${styles.relicImagePreview}`} aria-hidden="true">
+                                <div className={`${styles.relicArt} ${styles.relicImagePreview} ${relic.serial === "GZR-0024" ? styles.compactArtwork : ""}`} aria-hidden="true">
                                     <Image
                                         src={artwork.src}
                                         alt=""

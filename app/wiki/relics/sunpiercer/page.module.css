@@ -142,10 +142,12 @@
 .art img {
     position: relative;
     z-index: 1;
-    width: 100%;
+    display: block;
+    width: 86%;
     height: 510px;
+    margin: 0 auto;
     object-fit: contain;
-    padding: 18px;
+    padding: 28px;
 }
 
 .artLabel {
