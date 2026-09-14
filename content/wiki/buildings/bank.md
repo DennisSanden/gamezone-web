@@ -3,15 +3,15 @@ title: "Bank"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Bank."
 category: "Byggnader"
 order: 6
-version: "4.0"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Bank"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 6"
   kostnad: "50 000 Coins"
-  storlek: "17×17"
+  referensyta: "17×17"
 ---
 
 ## Vad är Bank?
@@ -28,7 +28,7 @@ infobox:
 
 - Settlementnivå: **6 eller högre**
 - Licens: **50 000 Coins**
-- Fysisk storlek: **17×17**
+- Referensyta: **17×17**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
@@ -50,6 +50,16 @@ Efter att licensen köpts placeras byggytan i världen:
 ```text
 /building place bank
 ```
+
+Markera därefter byggnaden med två hörn. **Vänsterklicka** på golvblocket i första hörnet och **högerklicka** på golvblocket i motsatta hörnet. Partiklar visar den yta som kommer att registreras.
+
+Bekräfta området med:
+
+```text
+/building confirm
+```
+
+Den gamla referensytan är bara utgångspunkt för storleksgränserna. Den markerade ytan måste vara minst **60 % av referensytan**, högst **4 gånger referensytan** och minst **7 block bred och 7 block djup**. Kravblock och entities får placeras var som helst inom den registrerade ytan. Hela ytan måste ligga inom settlementet och får inte överlappa en annan registrerad byggnad.
 
 Kontrollera bygget när det börjar bli färdigt:
 

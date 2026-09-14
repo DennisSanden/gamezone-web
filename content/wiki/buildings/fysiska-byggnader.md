@@ -3,12 +3,12 @@ title: "Fysiska byggnader"
 description: "Hela Building System 1.0, från Stadskärna till Myntverk."
 category: "Byggnader"
 order: 0
-version: "2.0"
+version: "3.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Building System 1.0"
 infobox:
-  process: "Licens → bygg → godkänn"
+  process: "Licens → markera yta → bygg → godkänn"
   förstaByggnad: "Stadskärna, nivå 1"
   senasteAktivaByggnad: "Myntverk, nivå 45"
   territorium: "Hela byggnaden måste ligga inom settlementet"
@@ -23,27 +23,64 @@ Settlementbyggnader är riktiga konstruktioner i världen. Licensen är bara sta
 
 1. Settlementet når byggnadens nivåkrav.
 2. Licensen köps i `/gz menu` → **Settlements** → **Byggnader**.
-3. Byggytan placeras med `/building place <byggnad>`.
-4. Settlementet bygger inom den markerade ytan.
-5. `/building status` visar vad som saknas.
-6. `/building complete` gör slutkontrollen.
-7. Bonusen aktiveras när kontrollen godkänns.
+3. Starta placeringen med `/building place <byggnad>`.
+4. Vänsterklicka första hörnet och högerklicka motsatta hörnet.
+5. Kontrollera partikelramen och kör `/building confirm`.
+6. Settlementet bygger inom den registrerade ytan.
+7. `/building status` visar vad som saknas.
+8. `/building complete` gör slutkontrollen.
+9. Bonusen aktiveras när kontrollen godkänns.
 
-Byggnader får byggas i **valfri stil och valfria material**. Pluginet kontrollerar funktion, yta, väggar, tak, höjd och specialkrav, inte estetik.
+Byggnader får byggas i **valfri stil och valfria material**. Spelaren bestämmer numera själv den rektangulära byggnadsytan. De gamla måtten på respektive byggnad är **referensytor**, inte en låst form som bygget måste följa. Pluginet kontrollerar funktion, registrerad yta, väggar, tak, höjd och specialkrav, inte estetik.
 
 > [!IMPORTANT]
 > Specialkraven i byggnadstabellerna nedan följer **Engine-validatorn**. Bara block och entiteter som faktiskt kontrolleras av pluginet listas som krav.
+
+## Markera byggnadsytan själv
+
+När en byggnad placeras väljer spelaren själv dess footprint. Kör först:
+
+```text
+/building place <byggnad>
+```
+
+Markera sedan **två motsatta hörn på golvnivå**. Vänsterklick sätter hörn 1 och högerklick sätter hörn 2. Partiklar visar den valda ytan. När den ser rätt ut:
+
+```text
+/building confirm
+```
+
+Du kan avbryta en pågående markering med `/building cancel` och visa eller dölja den registrerade partikelgränsen med `/building outline`.
+
+> [!IMPORTANT]
+> De mått som visas på varje byggnadssida är **referensmått**, inte ett krav på exakt bredd och djup. Ett bygge får vara både mindre och större så länge storleksgränserna och övriga krav uppfylls.
+
+### Storleksgränser
+
+För alla byggnadstyper gäller samma grundmodell:
+
+- minsta area är **60 % av byggnadens referensyta**, avrundat uppåt
+- största area är **4 gånger referensytan**
+- båda sidorna måste vara minst **7 block**
+- formen ska vara en rektangel
+- större byggnader kräver **inte fler specialblock** bara för att ytan är större
+
+Exempel: en referensyta på 19×19 är 361 block. Minsta tillåtna area blir då 217 block. Ett bygge på 15×15, 19×27 eller 31×21 kan därför fungera, förutsatt att övriga krav klaras och maxytan inte överskrids.
 
 ## Grundregler
 
 Alla byggnader måste:
 
 - ligga helt innanför settlementets territorium
-- uppfylla sin minsta storlek
+- hålla sig inom byggnadstypens tillåtna area
+- vara minst 7 block breda och 7 block djupa
+- inte överlappa en annan registrerad byggnad
 - ha minst **40 % väggtäckning**
 - ha minst **75 % taktäckning**
 - uppfylla eventuellt höjdkrav
-- innehålla byggnadens specialblock och entiteter
+- innehålla byggnadens specialblock och entiteter inom den registrerade ytan
+
+Kravblock och entities räknas över **hela den registrerade footprinten**. Ett större bygge straffas alltså inte genom att antalet tunnor, sängar, arbetsblock eller andra specialkrav automatiskt skalas upp.
 
 ## Byggnadsprogression
 
@@ -91,7 +128,7 @@ Licensen finns kvar och behöver inte köpas igen.
 /building relocate <byggnad> confirm
 ```
 
-Bonusen pausas under flytten. Placera sedan byggnaden på nytt och färdigställ den igen.
+Bonusen pausas under flytten. Placera sedan byggnaden på nytt, markera dess nya footprint med två hörn och färdigställ den igen.
 
 Flytten kan avbrytas med:
 

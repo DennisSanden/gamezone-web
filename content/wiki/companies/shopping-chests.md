@@ -3,9 +3,9 @@ title: "Shopping Chests"
 description: "Registrera kistor där företaget säljer till eller köper från andra spelare."
 category: "Företag"
 order: 2
-version: "1.3"
+version: "1.4"
 engineVersion: "Trade"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-14"
 infoboxTitle: "Shopping Chest"
 infobox:
   typer: "Försäljning och inköp"
@@ -27,6 +27,13 @@ Den här sidan beskriver försäljningskistor. Läs den fullständiga guiden om 
 En Shopping Chest fungerar som en automatisk butik. Företaget lägger items i kistan och andra spelare köper genom att plocka ut dem.
 
 När ett item tas ur kistan flyttas Coins automatiskt från köparen till **företagets företagskonto**. En spelare kan aldrig ta ut fler items än vad saldot räcker till.
+
+
+## Hur många Shopping Chests får ett företag ha?
+
+Ett nystartat företag börjar med **2 Shopping Chests** på licensnivå 1. Varje licensnivå höjer grundgränsen med ytterligare en plats, upp till **11 Shopping Chests på licensnivå 10**.
+
+Detta är företagets grundkapacitet. Bonusar från exempelvis settlementbyggnaden **Kontor**, policies och reliker läggs ovanpå gränsen.
 
 ## Registrera en försäljningskista
 

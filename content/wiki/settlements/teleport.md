@@ -3,12 +3,13 @@ title: "Teleport"
 description: "Så tar du dig mellan ditt settlement och serverns spawn."
 category: "Settlements"
 order: 5
-version: "1.1"
-updatedAt: "2026-08-10"
+version: "1.2"
+updatedAt: "2026-09-14"
 infoboxTitle: "Teleport"
 infobox:
   till_spawn: "/spawn"
   hem: "Klockan på fontänen vid spawn"
+  vildmark: "Random Teleporter i spawn"
 ---
 
 ## Teleport mellan settlement och spawn
@@ -36,10 +37,28 @@ Klockan teleporterar dig tillbaka till ditt settlement.
 
 Om ditt settlement har satt en egen spawnpunkt med `/settlement setspawn` kommer du dit. Om ingen egen spawnpunkt har satts används settlementets vanliga centrum.
 
+
+## Random Teleporter i spawn
+
+I spawn finns nu en **Random Teleporter** för spelare som vill ut i vildmarken. Kliv in i vattnet i teleportern så söker servern efter en säker slumpmässig plats.
+
+Teleportern väljer inte bara ett slumpmässigt block. Platsen måste:
+
+- ligga inom world border
+- vara torr och säker att stå på
+- vara giltig enligt samma placeringsregler som används när ett nytt settlement skapas
+- ligga inom serverns konfigurerade avstånd för vildmarksteleporten
+
+När en plats hittats teleporteras spelaren dit. Random Teleporter **skapar inte ett settlement åt dig**, den tar dig bara till en lämplig plats i vildmarken.
+
+> [!IMPORTANT]
+> Har du inget settlement kan du inte använda `/spawn` ute i vildmarken, eftersom `/spawn` bara fungerar när du står inne i ditt eget settlement. För en helt ny spelare är Random Teleporter därför i praktiken en enkelresa tills ett settlement har skapats eller spelaren tar sig tillbaka på vanligt sätt.
+
 ## Kort sagt
 
 - **Settlement → Spawn:** använd `/spawn` medan du är i ditt eget settlement.
 - **Spawn → Settlement:** ring i klockan på fontänen vid spawn.
+- **Spawn → Vildmark:** använd Random Teleporter i spawn.
 
 Det här gör spawn till serverns naturliga knutpunkt samtidigt som resor ute i världen fortfarande behöver ske på vanligt sätt.
 

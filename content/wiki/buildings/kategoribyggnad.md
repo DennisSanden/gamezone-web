@@ -3,14 +3,14 @@ title: "Kategoribyggnad"
 description: "Settlementets första produktionsbyggnad och +5 % bonus inom vald kategori."
 category: "Byggnader"
 order: 3
-version: "1.0"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-26"
+updatedAt: "2026-09-14"
 infoboxTitle: "Kategoribyggnad"
 infobox:
   nivåkrav: "Settlementnivå 2"
   kostnad: "10 000 Coins"
-  storlek: "11×11"
+  referensyta: "11×11"
   bonus: "+5 % i vald kategori"
 ---
 
@@ -33,7 +33,7 @@ Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategorib
 
 - Settlementnivå: **2 eller högre**
 - Licens: **10 000 Coins**
-- Storlek: **11×11**
+- Referensyta: **11×11**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 %**
 - Tak: **minst 75 %**
 - Hela byggnaden måste ligga inom settlementets territorium

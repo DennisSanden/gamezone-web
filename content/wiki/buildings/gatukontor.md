@@ -3,15 +3,15 @@ title: "Gatukontor"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Gatukontor."
 category: "Byggnader"
 order: 10
-version: "4.0"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Gatukontor"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 10"
   kostnad: "200 000 Coins"
-  storlek: "15×15"
+  referensyta: "15×15"
 ---
 
 ## Vad är Gatukontor?
@@ -32,7 +32,7 @@ infobox:
 
 - Settlementnivå: **10 eller högre**
 - Licens: **200 000 Coins**
-- Fysisk storlek: **15×15**
+- Referensyta: **15×15**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
@@ -54,6 +54,16 @@ Efter att licensen köpts placeras byggytan i världen:
 ```text
 /building place gatukontor
 ```
+
+Markera därefter byggnaden med två hörn. **Vänsterklicka** på golvblocket i första hörnet och **högerklicka** på golvblocket i motsatta hörnet. Partiklar visar den yta som kommer att registreras.
+
+Bekräfta området med:
+
+```text
+/building confirm
+```
+
+Den gamla referensytan är bara utgångspunkt för storleksgränserna. Den markerade ytan måste vara minst **60 % av referensytan**, högst **4 gånger referensytan** och minst **7 block bred och 7 block djup**. Kravblock och entities får placeras var som helst inom den registrerade ytan. Hela ytan måste ligga inom settlementet och får inte överlappa en annan registrerad byggnad.
 
 Kontrollera bygget när det börjar bli färdigt:
 

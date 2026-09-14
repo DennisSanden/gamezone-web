@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "2.1"
+version: "2.2"
 engineVersion: "Commands"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-14"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -53,7 +53,7 @@ Whitelist görs separat på Discord med `/whitelist <Minecraftnamn>` innan du an
 /twitch <Twitch-namn>
 ```
 
-Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **2 000 GZ Coins per 10 minuter**, upp till **60 000 per timme** och **300 000 per dygn**. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
+Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **5 000 GZ Coins per 20 minuter**. Läs Twitch-guiden för aktuella villkor och gränser. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
 
 ## Teleport
 
@@ -64,6 +64,16 @@ Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrer
 `/spawn` teleporterar dig till serverns spawn när du befinner dig i ditt eget settlement.
 
 När du är vid spawn kan du ringa i **klockan på fontänen** för att teleporteras hem till ditt settlement igen. Om settlementet har satt en egen hemteleport med `/settlement setspawn` används den platsen. Annars används settlementets registrerade centrum.
+
+Spawn har också en **Random Teleporter**. Kliv in i vattnet för att skickas till en säker slumpmässig plats i vildmarken som är giltig för settlementplacering. Har du inget settlement kan du inte använda `/spawn` för att komma tillbaka därifrån.
+
+## VoteDay
+
+```text
+/voteday
+```
+
+Kan användas på natten för att rösta om att hoppa fram till dag. Det krävs **51 % av alla spelare som är online**, avrundat uppåt. Varje spelare kan rösta en gång per natt och röster från spelare som lämnar servern tas bort. När gränsen nås hoppas natten över direkt.
 
 ## Settlement
 
@@ -126,7 +136,7 @@ Läs hela guiden på sidan [Invånarplots](/wiki/settlements/invanarplots).
 
 Alla settlements börjar som diktatur. King kan ändra till demokrati, där aktiva invånare kan starta King-val. Ett val pågår i 24 timmar och följs av 7 dagars cooldown.
 
-Policies hanteras normalt från settlementets **Government-meny**. Alla invånare kan se aktiva policies och upplåsta slots, medan endast King kan ändra dem. Commands ovan finns kvar som fallback. Fler policyplatser låses upp vid settlement level 5 och 15.
+Policies hanteras normalt från settlementets menyer. King kan ändra dem och kan delegera policybehörighet till en Lord via **Government-menyn**. Commands ovan finns kvar som fallback. Fler policyplatser låses upp vid settlement level 5 och 15.
 
 Bland policies finns bland annat Open Borders, Supplier, Banking Management och **Item Maniac**. Connected Realm finns inte längre.
 

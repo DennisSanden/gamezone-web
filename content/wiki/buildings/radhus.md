@@ -3,15 +3,15 @@ title: "Rådhus"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Rådhus."
 category: "Byggnader"
 order: 25
-version: "4.0"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Rådhus"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 25"
   kostnad: "2 500 000 Coins"
-  storlek: "27×27"
+  referensyta: "27×27"
 ---
 
 ## Vad är Rådhus?
@@ -28,7 +28,7 @@ infobox:
 
 - Settlementnivå: **25 eller högre**
 - Licens: **2 500 000 Coins**
-- Fysisk storlek: **27×27**
+- Referensyta: **27×27**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Minsta höjd: **16 block**
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
@@ -51,6 +51,16 @@ Efter att licensen köpts placeras byggytan i världen:
 ```text
 /building place radhus
 ```
+
+Markera därefter byggnaden med två hörn. **Vänsterklicka** på golvblocket i första hörnet och **högerklicka** på golvblocket i motsatta hörnet. Partiklar visar den yta som kommer att registreras.
+
+Bekräfta området med:
+
+```text
+/building confirm
+```
+
+Den gamla referensytan är bara utgångspunkt för storleksgränserna. Den markerade ytan måste vara minst **60 % av referensytan**, högst **4 gånger referensytan** och minst **7 block bred och 7 block djup**. Kravblock och entities får placeras var som helst inom den registrerade ytan. Hela ytan måste ligga inom settlementet och får inte överlappa en annan registrerad byggnad.
 
 Kontrollera bygget när det börjar bli färdigt:
 

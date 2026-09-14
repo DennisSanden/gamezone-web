@@ -3,15 +3,15 @@ title: "Reliktempel"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Reliktempel."
 category: "Byggnader"
 order: 7
-version: "4.1"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-23"
+updatedAt: "2026-09-14"
 infoboxTitle: "Reliktempel"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 7"
   kostnad: "50 000 Coins"
-  storlek: "9×9"
+  referensyta: "9×9"
 ---
 
 ## Vad är Reliktempel?
@@ -31,7 +31,7 @@ infobox:
 
 - Settlementnivå: **7 eller högre**
 - Licens: **50 000 Coins**
-- Fysisk storlek: **9×9**
+- Referensyta: **9×9**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
@@ -53,6 +53,16 @@ Efter att licensen köpts placeras byggytan i världen:
 ```text
 /building place reliktempel
 ```
+
+Markera därefter byggnaden med två hörn. **Vänsterklicka** på golvblocket i första hörnet och **högerklicka** på golvblocket i motsatta hörnet. Partiklar visar den yta som kommer att registreras.
+
+Bekräfta området med:
+
+```text
+/building confirm
+```
+
+Den gamla referensytan är bara utgångspunkt för storleksgränserna. Den markerade ytan måste vara minst **60 % av referensytan**, högst **4 gånger referensytan** och minst **7 block bred och 7 block djup**. Kravblock och entities får placeras var som helst inom den registrerade ytan. Hela ytan måste ligga inom settlementet och får inte överlappa en annan registrerad byggnad.
 
 Kontrollera bygget när det börjar bli färdigt:
 

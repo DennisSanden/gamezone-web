@@ -3,9 +3,9 @@ title: "Government"
 description: "Diktatur, demokrati, King-val och omröstningar om settlementets statsskick."
 category: "Settlements"
 order: 4
-version: "1.0"
+version: "1.1"
 engineVersion: "Settlement Government"
-updatedAt: "2026-08-14"
+updatedAt: "2026-09-14"
 infoboxTitle: "Government"
 infobox:
   standard: "Diktatur"
@@ -95,8 +95,22 @@ Efter en avslutad omröstning finns **24 timmars cooldown** innan en ny omröstn
 
 Visar settlementets nuvarande statsskick, aktiva policies, antal tillgängliga policyplatser och eventuell pågående omröstning.
 
+
+## Government-menyn för King och Lords
+
+King och Lords har nu en särskild **Government**-vy i `/gz menu` → **Settlements**. Menyn visar settlementets King, aktuella Lords och den egna rollen.
+
+För **King** fungerar menyn dessutom som kontrollpanel för Lord-behörigheter. Klicka på en Lord för att slå enskilda rättigheter på eller av. Behörigheterna omfattar bland annat medlemsansökningar, kick och befordran, produktionstitlar, plots och territorium, stadskassan, skatt, settlementuppgradering, kategori, byggnader, policies, allianser, krig, kistor och rikskontrakt.
+
+Det betyder att en Lord inte längre behöver behandlas som en generell "nästan-King". King kan delegera exakt de delar av settlementet som den Lorden ska få sköta.
+
+Government-menyn visar också King-transfer. En ny King måste vara Lord, och när kronan överförs blir den tidigare King själv Lord. I GUI:t visas även administrationsavgiften på **100 000 Coins**.
+
+> [!IMPORTANT]
+> Vissa beslut är fortfarande reserverade för King, bland annat att dela ut Lord-behörigheter och andra funktioner som uttryckligen kräver King i Engine.
+
 ## Policies påverkas inte av statsskicket
 
 Både diktaturer och demokratier kan använda [Policies](/wiki/settlements/policies).
 
-Det är alltid settlementets nuvarande **King** som aktiverar och byter policies.
+King kan alltid hantera policies och kan även delegera den behörigheten till en Lord genom Government-menyn.

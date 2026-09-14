@@ -3,9 +3,9 @@ title: "Titlar och ledarskap"
 description: "King, Lords, titelbonusar och hur invånare befordras inom ett settlement."
 category: "Settlements"
 order: 3
-version: "1.2"
+version: "1.3"
 engineVersion: "Settlement Titles"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Titlar"
 relatedArticles:
   - category: "settlements"
@@ -32,7 +32,7 @@ King kan utse upp till **två andra spelare till Lord** med:
 
 Ett settlement har normalt **1 King och maximalt 2 Lords samtidigt**. När [Rådhus](/wiki/buildings/radhus) färdigställs låses **två extra Lord-platser** upp, vilket höjer maxgränsen till **4 Lords**.
 
-King och Lords kan hantera settlementets finanser, medlemmar och invånarnas titlar. De kan också använda settlementets gemensamma funktioner genom `/gz menu` eller `/settlement menu`.
+King och Lords använder settlementets gemensamma funktioner genom `/gz menu` eller `/settlement menu`. Exakt vad en Lord får göra styrs numera av **individuella Lord-behörigheter**. King kan öppna Government-menyn, klicka på en Lord och slå rättigheter på eller av för exempelvis medlemmar, stadskassa, byggnader, territorium, policies, krig och kontrakt.
 
 > [!IMPORTANT]
 > King och Lords får en produktionsbonus som baseras på settlementets nivå. Bonusen gäller bara produktion som redan är berättigad till Coins, alltså resurser inom settlementets valda kategori.

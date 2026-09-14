@@ -3,15 +3,15 @@ title: "Stall"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Stall."
 category: "Byggnader"
 order: 14
-version: "4.0"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Stall"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 14"
   kostnad: "500 000 Coins"
-  storlek: "19×19"
+  referensyta: "19×19"
 ---
 
 ## Vad är Stall?
@@ -31,7 +31,7 @@ infobox:
 
 - Settlementnivå: **14 eller högre**
 - Licens: **500 000 Coins**
-- Fysisk storlek: **19×19**
+- Referensyta: **19×19**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
@@ -53,6 +53,16 @@ Efter att licensen köpts placeras byggytan i världen:
 ```text
 /building place stall
 ```
+
+Markera därefter byggnaden med två hörn. **Vänsterklicka** på golvblocket i första hörnet och **högerklicka** på golvblocket i motsatta hörnet. Partiklar visar den yta som kommer att registreras.
+
+Bekräfta området med:
+
+```text
+/building confirm
+```
+
+Den gamla referensytan är bara utgångspunkt för storleksgränserna. Den markerade ytan måste vara minst **60 % av referensytan**, högst **4 gånger referensytan** och minst **7 block bred och 7 block djup**. Kravblock och entities får placeras var som helst inom den registrerade ytan. Hela ytan måste ligga inom settlementet och får inte överlappa en annan registrerad byggnad.
 
 Kontrollera bygget när det börjar bli färdigt:
 

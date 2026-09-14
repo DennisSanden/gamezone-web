@@ -3,15 +3,15 @@ title: "Kyrka"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Kyrka."
 category: "Byggnader"
 order: 18
-version: "4.0"
+version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-14"
 infoboxTitle: "Kyrka"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 18"
   kostnad: "1 000 000 Coins"
-  storlek: "21×15"
+  referensyta: "21×15"
 ---
 
 ## Vad är Kyrka?
@@ -28,7 +28,7 @@ infobox:
 
 - Settlementnivå: **18 eller högre**
 - Licens: **1 000 000 Coins**
-- Fysisk storlek: **21×15**
+- Referensyta: **21×15**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Minsta höjd: **15 block**
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 75 % täckning**
@@ -51,6 +51,16 @@ Efter att licensen köpts placeras byggytan i världen:
 ```text
 /building place kyrka
 ```
+
+Markera därefter byggnaden med två hörn. **Vänsterklicka** på golvblocket i första hörnet och **högerklicka** på golvblocket i motsatta hörnet. Partiklar visar den yta som kommer att registreras.
+
+Bekräfta området med:
+
+```text
+/building confirm
+```
+
+Den gamla referensytan är bara utgångspunkt för storleksgränserna. Den markerade ytan måste vara minst **60 % av referensytan**, högst **4 gånger referensytan** och minst **7 block bred och 7 block djup**. Kravblock och entities får placeras var som helst inom den registrerade ytan. Hela ytan måste ligga inom settlementet och får inte överlappa en annan registrerad byggnad.
 
 Kontrollera bygget när det börjar bli färdigt:
 

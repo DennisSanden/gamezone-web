@@ -3,9 +3,9 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.7"
+version: "1.8"
 engineVersion: "Company"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-14"
 infoboxTitle: "Företag"
 infobox:
   krav: "Settlement nivå 4 och aktivt Handelscentrum"
@@ -58,18 +58,20 @@ Member är en vanlig företagsmedlem. Rollen ger inte samma bygg- och administra
 
 Företagets licens avgör hur många shopping chests företaget får registrera och hur mycket serverns försäljningsskatt sänks. Kostnaden betalas från **företagskontot**.
 
+Alla företag har nu **en extra Shopping Chest i grundkapacitet**. Det betyder att ett helt nytt företag med licensnivå 1 startar med **2 registrerbara Shopping Chests istället för 1**. Den extra platsen följer med genom hela licenstrappan, så licensnivå 10 ger 11 platser före byggnads-, policy- och relikbonusar.
+
 | Uppgradering | Kostnad | Shopping chests | Sänkt serverskatt |
 | --- | ---: | ---: | ---: |
-| Startnivå, licens 1 | Gratis | 1 | 0 procentenheter |
-| Nivå 1 till 2 | 1 000 000 Coins | 2 | 2 procentenheter |
-| Nivå 2 till 3 | 1 500 000 Coins | 3 | 3 procentenheter |
-| Nivå 3 till 4 | 2 000 000 Coins | 4 | 4 procentenheter |
-| Nivå 4 till 5 | 2 500 000 Coins | 5 | 5 procentenheter |
-| Nivå 5 till 6 | 5 000 000 Coins | 6 | 6 procentenheter |
-| Nivå 6 till 7 | 7 500 000 Coins | 7 | 7 procentenheter |
-| Nivå 7 till 8 | 10 000 000 Coins | 8 | 8 procentenheter |
-| Nivå 8 till 9 | 12 500 000 Coins | 9 | 9 procentenheter |
-| Nivå 9 till 10 | 15 000 000 Coins | 10 | 10 procentenheter |
+| Startnivå, licens 1 | Gratis | 2 | 0 procentenheter |
+| Nivå 1 till 2 | 1 000 000 Coins | 3 | 2 procentenheter |
+| Nivå 2 till 3 | 1 500 000 Coins | 4 | 3 procentenheter |
+| Nivå 3 till 4 | 2 000 000 Coins | 5 | 4 procentenheter |
+| Nivå 4 till 5 | 2 500 000 Coins | 6 | 5 procentenheter |
+| Nivå 5 till 6 | 5 000 000 Coins | 7 | 6 procentenheter |
+| Nivå 6 till 7 | 7 500 000 Coins | 8 | 7 procentenheter |
+| Nivå 7 till 8 | 10 000 000 Coins | 9 | 8 procentenheter |
+| Nivå 8 till 9 | 12 500 000 Coins | 10 | 9 procentenheter |
+| Nivå 9 till 10 | 15 000 000 Coins | 11 | 10 procentenheter |
 
 > [!INFO] Endast företagsägaren kan uppgradera licensen. Använd `/company license upgrade`.
 
