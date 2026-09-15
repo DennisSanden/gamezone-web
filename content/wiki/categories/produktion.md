@@ -3,9 +3,9 @@ title: "Produktion"
 description: "Översikt över GameZones sju kategorier."
 category: "Produktionskategorier"
 order: 0
-version: "1.4"
+version: "1.5"
 engineVersion: "Production Registry"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-15"
 infoboxTitle: "Produktion"
 infobox:
   coinregel: "Endast vald kategori"
@@ -39,6 +39,10 @@ Det påverkar inte vilka items du får och stoppar inte vanliga farms. Systemet 
 
 > [!NOTE]
 > Skyddet räknas per resurs. Att en viss resurs produceras mycket påverkar alltså inte Coin-belöningen från andra resurser.
+
+### Högre grundgränser
+
+Överproduktionsskyddets grundgränser är **dubblerade för samtliga produktionskategorier**. Standardkategorier använder nu 6× grundtaket, Gruvdrift 18× och Jordbruk 30× jämfört med den ursprungliga basnivån. Rare mining ores behåller sina särskilda undantag. Själva nedtrappningen av Coin-belöningen är oförändrad, det krävs bara betydligt större produktion innan den börjar slå in.
 
 ### Högre produktionstak genom progression
 

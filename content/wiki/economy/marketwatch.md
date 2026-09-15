@@ -3,9 +3,9 @@ title: "MarketWatch"
 description: "Se vilka resurser som efterfrågas av serverns settlements."
 category: "Ekonomi"
 order: 5
-version: "1.1"
+version: "1.2"
 engineVersion: "MarketWatch"
-updatedAt: "2026-09-09"
+updatedAt: "2026-09-15"
 infoboxTitle: "MarketWatch"
 infobox:
   kommando: "/marketwatch"
@@ -40,7 +40,7 @@ Sökningen visar upp till **tre billigaste aktiva butiker** som faktiskt har ite
 
 MarketWatch hjälper spelare och företag att se vilka resurser som behövs för kommande settlementuppgraderingar.
 
-Systemet jämför settlementens sammanlagda behov med material som redan finns i registrerade settlement inventories.
+MarketWatch räknar settlementens **återstående uppgraderingsbehov**. Material som redan har lämnats in via Settlement Inventory räknas automatiskt bort från efterfrågan. Systemet utgår alltså från sparad uppgraderingsprogress och behöver inte läsa innehållet i fysiska kistor.
 
 ## Användning
 

@@ -3,9 +3,9 @@ title: "Skapa ett settlement"
 description: "Grunda ett nytt samhälle, välj kategori och börja utveckla en egen plats i GameZone-världen."
 category: "Settlements"
 order: 1
-version: "1.5"
+version: "1.6"
 engineVersion: "Settlement Foundation"
-updatedAt: "2026-09-07"
+updatedAt: "2026-09-15"
 infoboxTitle: "Skapa settlement"
 infobox:
   kommando: "/settlement create <namn>"
@@ -51,7 +51,9 @@ Titta på en kista och skriv:
 
 `/settlement inventory register`
 
-Material som krävs för nivåuppgraderingar dras från registrerade kistor. Du kan se registrerade kistor med `/settlement inventory list` och ta bort en registrering med `/settlement inventory remove` medan du tittar på kistan.
+Den registrerade kistan fungerar som settlementets **inlämningskista för uppgraderingar**. Alla settlementmedlemmar kan mata in resurser som behövs för nästa nivå. Godkända items förbrukas direkt och sparas som permanent uppgraderingsprogress. Items som inte behövs för den aktuella uppgraderingen accepteras inte.
+
+Du kan se registrerade kistor med `/settlement inventory list` och ta bort en registrering med `/settlement inventory remove` medan du tittar på kistan. Kistan är inte tänkt som vanlig förvaring och reliker ska inte förvaras där.
 
 ### Välj settlementets hemteleport
 
@@ -63,7 +65,7 @@ Platsen måste ligga inom settlementets territorium. Om ingen egen spawn har sat
 
 ### Uppgradera settlementet
 
-Öppna `/gz menu`, välj **Settlement** och sedan **Uppgradering**. En uppgradering kan genomföras när settlementet har rätt Coins, material och eventuella övriga krav.
+Öppna `/gz menu`, välj **Settlement** och sedan **Uppgradering**, eller använd `/settlement upgrade`. Alla settlementmedlemmar kan se kraven och aktuell materialprogress. När ett materialkrav blir helt färdigt får online-medlemmarna i settlementet ett meddelande och ett kort pling. Själva uppgraderingen kan genomföras när settlementet har rätt Coins, alla material och eventuella övriga krav.
 
 ### Köpa bygglicenser
 

@@ -3,9 +3,9 @@ title: "Settlement Upgrade"
 description: "Alla 50 settlementnivåer med Coins och material som krävs för varje uppgradering."
 category: "Settlements"
 order: 2
-version: "2.4"
+version: "2.5"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-09-15"
 infoboxTitle: "Settlement Upgrade"
 infobox:
   nivåer: "50"
@@ -26,7 +26,24 @@ Settlementprogressionen består av **50 nivåer**. Varje uppgradering kräver Co
 > Fysiska byggnader har egna nivåkrav och licenser, men är inte materialkrav för själva levelup-kommandot. **Bygglicenser köps i `/gz menu` → Settlements → Byggnader.** Se [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
 
 > [!NOTE]
-> Alla krav måste finnas när uppgraderingen genomförs. Materialen förbrukas vid levelup. Där ett krav säger flera olika varianter, exempelvis Music Discs eller Armor Trim Templates, måste varianterna faktiskt vara olika.
+> Material till nästa uppgradering lämnas in löpande via settlementets registrerade **Settlement Inventory**. Resurserna förbrukas direkt när de lämnas in och sparas permanent som uppgraderingsprogress. Där ett krav säger flera olika varianter, exempelvis Music Discs eller Armor Trim Templates, måste varianterna faktiskt vara olika.
+
+## Lämna in resurser
+
+Titta på en kista och registrera den med `/settlement inventory register`. Därefter fungerar kistan som en **inlämningskista**, inte som vanlig förvaring.
+
+- Alla medlemmar i settlementet kan lämna in resurser.
+- Endast items som behövs för den aktuella uppgraderingen accepteras.
+- Godkända resurser förbrukas direkt och räknas av från kravet.
+- Om bara en del av en stack behövs tas endast den mängden.
+- Reliker accepteras inte som vanliga uppgraderingsresurser.
+- När en resurs är helt färdig försvinner den från listan över återstående material.
+- När ett materialkrav blir färdigt får settlementets online-medlemmar ett meddelande och ett kort pling.
+
+Alla settlementmedlemmar kan öppna `/settlement upgrade` och se vilka krav som återstår och hur långt inlämningen har kommit. Rätten att faktiskt genomföra uppgraderingen är fortfarande begränsad till behöriga roller.
+
+> [!INFO]
+> Settlement Inventory behöver inte fyllas med lådor av material. Kistan används bara för inlämning, medan den verkliga progressen sparas av servern.
 
 
 ## Nivå 2, Läger
