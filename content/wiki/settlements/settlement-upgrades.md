@@ -5,7 +5,7 @@ category: "Settlements"
 order: 2
 version: "2.5"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-15"
+updatedAt: "2026-09-16"
 infoboxTitle: "Settlement Upgrade"
 infobox:
   nivåer: "50"
