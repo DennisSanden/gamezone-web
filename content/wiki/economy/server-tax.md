@@ -5,7 +5,7 @@ category: "Ekonomi"
 order: 4
 version: "2.1"
 engineVersion: "Economy Engine"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-16"
 infoboxTitle: "Server TAX"
 infobox:
   startnivå: "45 %"
@@ -24,7 +24,7 @@ Registrera en shopping chest genom att titta på kistan och skriva:
 
 Priset gäller per item i kistan.
 
-När företag blir tillgängliga genom **Handelscentrum på settlementnivå 4** börjar grundskatten på **45 procent**. Därefter sjunker grundskatten med **1 procentenhet per settlementnivå** fram till nivå 23.
+När företag blir tillgängliga genom **Handelscentrum på settlementnivå 3** börjar grundskatten på **45 procent**. Därefter sjunker grundskatten med **1 procentenhet per settlementnivå** fram till nivå 23.
 
 Från **nivå 23 till nivå 50 är grundskatten 25 procent**.
 

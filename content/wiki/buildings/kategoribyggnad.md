@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 3
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Kategoribyggnad"
 infobox:
   nivåkrav: "Settlementnivå 2"
@@ -35,7 +35,7 @@ Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategorib
 - Licens: **10 000 Coins**
 - Referensyta: **11×11**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 %**
-- Tak: **minst 75 %**
+- Tak: **minst 40 %**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

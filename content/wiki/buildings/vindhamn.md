@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 8
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Vindhamn"
 infobox:
   typ: "Settlementbyggnad"
@@ -31,7 +31,7 @@ infobox:
 - Referensyta: **21×21**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Minsta höjd: **18 block**
 - Väggar: **minst 40 % täckning**
-- Tak: **minst 75 % täckning**
+- Tak: **minst 40 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

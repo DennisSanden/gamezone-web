@@ -5,7 +5,7 @@ category: "Settlements"
 order: 5
 version: "1.4"
 engineVersion: "Settlement Policies"
-updatedAt: "2026-09-09"
+updatedAt: "2026-09-16"
 infoboxTitle: "Policies"
 infobox:
   styrsAv: "King"
@@ -73,7 +73,7 @@ Ger **+10 % produktion** när settlementet har minst 10 invånare.
 Ger **+30 % produktionstak**. Det gör att settlementets spelare kan producera större mängder innan överproduktionsskyddet börjar sänka Coin-belöningen.
 
 > [!IMPORTANT]
-> United People och Small but Mighty kan inte vara aktiva samtidigt.
+> United People och Small but Mighty kan inte vara aktiva samtidigt. **Big and Mighty och Small but Mighty kan inte heller vara aktiva samtidigt.**
 
 ## Ekonomi
 

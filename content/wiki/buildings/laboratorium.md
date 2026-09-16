@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 5
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Laboratorium"
 infobox:
   typ: "Settlementbyggnad"
@@ -35,7 +35,7 @@ infobox:
 - Licens: **35 000 Coins**
 - Referensyta: **17×17**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
-- Tak: **minst 75 % täckning**
+- Tak: **minst 40 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

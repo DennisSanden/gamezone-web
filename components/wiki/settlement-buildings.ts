@@ -15,7 +15,6 @@ export type SettlementBuildingGroup =
     | "kungadome"
     | "imperium";
 
-
 export type SettlementBuilding = {
     id: string;
     name: string;
@@ -27,234 +26,65 @@ export type SettlementBuilding = {
     href?: string;
 };
 
-const settlementBuildings: Record<
-    SettlementBuildingGroup,
-    SettlementBuilding[]
-> = {
+const categoryBuildings: SettlementBuilding[] = [
+    { id: "gruva", name: "Gruva", category: "Gruvdrift", description: "Kategoribyggnad för Gruvdrift.", effect: "+5 % Coins från Gruvdrift", cost: "10 000 Coins", unlockLevel: 2, href: "/wiki/buildings/gruva" },
+    { id: "lada", name: "Lada", category: "Jordbruk", description: "Kategoribyggnad för Jordbruk.", effect: "+5 % Coins från Jordbruk", cost: "10 000 Coins", unlockLevel: 2, href: "/wiki/buildings/lada" },
+    { id: "ladugard", name: "Ladugård", category: "Boskap", description: "Kategoribyggnad för Boskap.", effect: "+5 % Coins från Boskap", cost: "10 000 Coins", unlockLevel: 2, href: "/wiki/buildings/ladugard" },
+    { id: "fiskebrygga", name: "Fiskebrygga", category: "Fiske", description: "Kategoribyggnad för Fiske.", effect: "+5 % Coins från Fiske", cost: "10 000 Coins", unlockLevel: 2, href: "/wiki/buildings/fiskebrygga" },
+    { id: "sagverk", name: "Sågverk", category: "Skogsbruk", description: "Kategoribyggnad för Skogsbruk.", effect: "+5 % Coins från Skogsbruk", cost: "10 000 Coins", unlockLevel: 2, href: "/wiki/buildings/sagverk" },
+    { id: "stenhuggeri", name: "Stenhuggeri", category: "Byggmaterial", description: "Kategoribyggnad för Byggmaterial.", effect: "+5 % Coins från Byggmaterial", cost: "10 000 Coins", unlockLevel: 2, href: "/wiki/buildings/stenhuggeri" },
+];
+
+const settlementBuildings: Record<SettlementBuildingGroup, SettlementBuilding[]> = {
     enstoring: [],
-
-    lager: [
-        {
-            id: "gruva",
-            name: "Gruva",
-            category: "Gruvdrift",
-            description:
-                "Förstärker settlementets produktion från gruvdrift och resurser som registreras i Mining Registry.",
-            effect: "+5 % Coins från Gruvdrift",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/gruva",
-        },
-        {
-            id: "lada",
-            name: "Lada",
-            category: "Jordbruk",
-            description:
-                "Förstärker settlementets produktion från jordbruk och resurser som registreras i Farming Registry.",
-            effect: "+5 % Coins från Jordbruk",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/lada",
-        },
-        {
-            id: "ladugard",
-            name: "Ladugård",
-            category: "Boskap",
-            description:
-                "Förstärker settlementets produktion från boskap och resurser som registreras i Livestock Registry.",
-            effect: "+5 % Coins från Boskap",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/ladugard",
-        },
-        {
-            id: "fiskebrygga",
-            name: "Fiskebrygga",
-            category: "Fiske",
-            description:
-                "Förstärker settlementets produktion från fiske och resurser som registreras i Fishing Registry.",
-            effect: "+5 % Coins från Fiske",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/fiskebrygga",
-        },
-        {
-            id: "sagverk",
-            name: "Sågverk",
-            category: "Skogsbruk",
-            description:
-                "Förstärker settlementets produktion från skogsbruk och resurser som registreras i Forestry Registry.",
-            effect: "+5 % Coins från Skogsbruk",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/sagverk",
-        },
-        {
-            id: "stenhuggeri",
-            name: "Stenhuggeri",
-            category: "Byggmaterial",
-            description:
-                "Förstärker settlementets produktion från resurser som registreras i Building Materials Registry.",
-            effect: "+5 % Coins från Byggmaterial",
-            cost: "10 000 Coins",
-            unlockLevel: 2,
-            href: "/wiki/buildings/stenhuggeri",
-        },
-    ],
-
+    lager: categoryBuildings,
     by: [
-        {
-            id: "handelscentrum",
-            name: "Handelscentrum",
-            category: "Administration",
-            description:
-                "Låser upp möjligheten för settlementets invånare att registrera företag inom settlementet.",
-            effect: "Låser upp företagsregistrering",
-            cost: "20 000 Coins",
-            unlockLevel: 3,
-            href: "/wiki/buildings/handelscentrum",
-        },
+        { id: "handelscentrum", name: "Handelscentrum", category: "Administration", description: "Låser upp företagssystemet.", effect: "Företag, företagslicenser och handel", cost: "20 000 Coins", unlockLevel: 3, href: "/wiki/buildings/handelscentrum" },
     ],
-
-    bosattning: [
-        {
-            id: "bank",
-            name: "Bank",
-            category: "Ekonomi",
-            description:
-                "Låser upp utökad ekonomisk statistik och ger settlementets ledning en mer detaljerad överblick över ekonomins utveckling.",
-            effect: "Låser upp utökad ekonomisk statistik",
-            cost: "25 000 Coins",
-            unlockLevel: 4,
-            href: "/wiki/buildings/bank",
-        },
-    ],
-
+    bosattning: [],
     samhalle: [
-        {
-            id: "laboratorium",
-            name: "Laboratorium",
-            category: "Alkemi",
-            description:
-                "Gäller endast Alkemi och ger +5 % extra Coins från Alkemi när byggnaden är färdigställd.",
-            effect: "Aktiverar Coins från Alkemi och ger +5 % Alkemi",
-            cost: "35 000 Coins",
-            unlockLevel: 5,
-            href: "/wiki/buildings/laboratorium",
-        },
+        { id: "laboratorium", name: "Laboratorium", category: "Alkemi", description: "Alkemins kategoribyggnad.", effect: "+5 % Coins från Alkemi", cost: "35 000 Coins", unlockLevel: 5, href: "/wiki/buildings/laboratorium" },
     ],
-
     koping: [
-        {
-            id: "kyrka",
-            name: "Kyrka",
-            category: "Specialbyggnad",
-            description:
-                "Ger settlementets aktiva medlemmar en permanent bonus från all registrerad manuell produktion.",
-            effect:
-                "+20 % Coins från all registrerad manuell produktion",
-            cost: "75 000 Coins",
-            unlockLevel: 6,
-            href: "/wiki/buildings/kyrka",
-        },
+        { id: "bank", name: "Bank", category: "Ekonomi", description: "Låser upp detaljerad settlementstatistik.", effect: "Detaljerad settlementstatistik", cost: "50 000 Coins", unlockLevel: 6, href: "/wiki/buildings/bank" },
     ],
-
-    stad: [],
-
+    stad: [
+        { id: "reliktempel", name: "Reliktempel", category: "Reliker", description: "Aktiverar settlementets relikbonusar.", effect: "Relikbonusar", cost: "50 000 Coins", unlockLevel: 7, href: "/wiki/buildings/reliktempel" },
+    ],
     handelsstad: [
-        {
-            id: "marknadsplats",
-            name: "Marknadsplats",
-            category: "Ekonomi och handel",
-            description:
-                "En fysisk handelsbyggnad som ingår i settlementets fortsatta byggnadsprogression. Marknadsplats har ingen egen direkt bonus i nuvarande system.",
-            effect: "Ingen direkt bonus i nuläget",
-            cost: "150 000 Coins",
-            unlockLevel: 8,
-            href: "/wiki/buildings/marknadsplats",
-        },
+        { id: "vindhamn", name: "Vindhamn", category: "Infrastruktur", description: "Krävs för att settlementets medlemmar ska kunna använda Elytra.", effect: "Elytra", cost: "100 000 Coins", unlockLevel: 8, href: "/wiki/buildings/vindhamn" },
     ],
-
     fastning: [],
-
     huvudstad: [
-        {
-            id: "monument",
-            name: "Monument",
-            category: "Specialbyggnad",
-            description:
-                "Ett monumentalt byggprojekt som ger settlementets aktiva medlemmar en permanent bonus från all registrerad manuell produktion.",
-            effect:
-                "+20 % Coins från all registrerad manuell produktion",
-            cost: "400 000 Coins",
-            unlockLevel: 10,
-            href: "/wiki/buildings/monument",
-        },
+        { id: "gatukontor", name: "Gatukontor", category: "Infrastruktur", description: "Låser upp Riksvägsanslutningar.", effect: "Riksvägsanslutningar", cost: "200 000 Coins", unlockLevel: 10, href: "/wiki/buildings/gatukontor" },
     ],
-
     grevskap: [],
-
     hertigdome: [
-        {
-            id: "slott",
-            name: "Slott",
-            category: "Prestigebyggnad",
-            description:
-                "Ett stort permanent byggprojekt som representerar settlementets politiska och territoriella utveckling.",
-            effect: "Ingen direkt spelbonus",
-            cost: "1 000 000 Coins",
-            unlockLevel: 12,
-            href: "/wiki/buildings/slott",
-        },
+        { id: "turistbyra", name: "Turistbyrå", category: "Turism", description: "Aktiverar settlementets turistsystem.", effect: "Turism och unika besök", cost: "350 000 Coins", unlockLevel: 12, href: "/wiki/buildings/turistbyra" },
     ],
-
     nation: [],
-
-    kungadome: [],
-
-    imperium: [
-        {
-            id: "underverk",
-            name: "Underverk",
-            category: "Prestigebyggnad",
-            description:
-                "Det största permanenta byggprojektet i GameZone och slutpunkten för settlementets byggnadsprogression.",
-            effect: "+10 % ränta på stadskassan",
-            cost: "5 000 000 Coins",
-            unlockLevel: 15,
-            href: "/wiki/buildings/underverk",
-        },
+    kungadome: [
+        { id: "stall", name: "Stall", category: "Infrastruktur", description: "Ökar hästhastigheten för settlementets medlemmar.", effect: "+25 % hästhastighet", cost: "500 000 Coins", unlockLevel: 14, href: "/wiki/buildings/stall" },
     ],
+    imperium: [],
 };
 
-
-export function getSettlementBuildingHrefByRequirement(
-    requirement: string,
-): string | undefined {
+export function getSettlementBuildingHrefByRequirement(requirement: string): string | undefined {
     const normalized = requirement.trim().toLocaleLowerCase("sv-SE");
-
     for (const buildings of Object.values(settlementBuildings)) {
         const building = buildings.find((candidate) => {
             const name = candidate.name.toLocaleLowerCase("sv-SE");
             return normalized === name || normalized.startsWith(`${name},`);
         });
-
-        if (building?.href) {
-            return building.href;
-        }
+        if (building?.href) return building.href;
     }
-
     return undefined;
 }
 
-export function getSettlementBuildings(
-    group: SettlementBuildingGroup,
-): SettlementBuilding[] {
+export function getSettlementBuildings(group: SettlementBuildingGroup): SettlementBuilding[] {
     return settlementBuildings[group] ?? [];
 }
 
-export function isSettlementBuildingGroup(
-    value: string,
-): value is SettlementBuildingGroup {
+export function isSettlementBuildingGroup(value: string): value is SettlementBuildingGroup {
     return value in settlementBuildings;
 }

@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 0
 version: "3.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Building System 1.0"
 infobox:
   process: "Licens → markera yta → bygg → godkänn"
@@ -17,6 +17,8 @@ infobox:
 ## Så fungerar byggsystemet
 
 Settlementbyggnader är riktiga konstruktioner i världen. Licensen är bara startpunkten, bonusen aktiveras först när byggnaden har byggts och godkänts.
+
+**Byggnader är inte krav för att avancera settlementnivå.** Settlementets level-up styrs av Coins och resurser. Settlementnivån styr däremot vilka byggnadslicenser som blir tillgängliga.
 
 > [!IMPORTANT]
 > **Var köper man bygglicenser?** Öppna `/gz menu` och välj **Settlements** → **Byggnader**. Där ser du vilka byggnader settlementet har låst upp och kan köpa tillgängliga licenser.
@@ -76,7 +78,7 @@ Alla byggnader måste:
 - vara minst 7 block breda och 7 block djupa
 - inte överlappa en annan registrerad byggnad
 - ha minst **40 % väggtäckning**
-- ha minst **75 % taktäckning**
+- ha minst **40 % taktäckning**
 - uppfylla eventuellt höjdkrav
 - innehålla byggnadens specialblock och entiteter inom den registrerade ytan
 
@@ -86,9 +88,9 @@ Kravblock och entities räknas över **hela den registrerade footprinten**. Ett 
 
 | Nivå | Byggnad | Licens | Huvudbonus |
 |---:|---|---:|---|
-| 1 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Krävs för nivå 2 |
+| 1 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Grundbyggnad för byggsystemet |
 | 2 | [Kategoribyggnad](/wiki/buildings/kategoribyggnad) | 10 000 | +5 % i aktiv kategori, gäller inte Alkemi |
-| 3 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Företag, krävs för nivå 4 |
+| 3 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Låser upp företagssystemet |
 | 5 | [Laboratorium](/wiki/buildings/laboratorium) | 35 000 | Endast Alkemi, aktiverar Coins och +5 % Alkemi |
 | 6 | [Bank](/wiki/buildings/bank) | 50 000 | Detaljerad statistik |
 | 7 | [Reliktempel](/wiki/buildings/reliktempel) | 50 000 | Relikbonusar |

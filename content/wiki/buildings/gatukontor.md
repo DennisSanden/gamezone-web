@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 10
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Gatukontor"
 infobox:
   typ: "Settlementbyggnad"
@@ -34,7 +34,7 @@ infobox:
 - Licens: **200 000 Coins**
 - Referensyta: **15×15**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
-- Tak: **minst 75 % täckning**
+- Tak: **minst 40 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

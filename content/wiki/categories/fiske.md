@@ -5,12 +5,12 @@ category: "Produktionskategorier"
 order: 6
 version: "1.3"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-20"
+updatedAt: "2026-09-16"
 infoboxTitle: "Fiske"
 infobox:
   coinregel: "Endast vald kategori"
   automation: "Ger inga Coins"
-  vattenbonus: "+15% hastighet och +15% andetag"
+  vattenbonus: "+25% hastighet och +25% andetag"
 ---
 
 ## Vad är Fiske?
@@ -23,7 +23,7 @@ Fiske handlar om att fånga fisk och andra godkända resurser genom fiske. Exemp
 
 ## Bonus i vatten
 
-Alla spelare som tillhör ett settlement med kategorin **Fiske** får **+15% rörelsehastighet i vatten** och **+15% längre andetag under vatten**.
+Alla spelare som tillhör ett settlement med kategorin **Fiske** får **+25% rörelsehastighet i vatten** och **+25% längre andetag under vatten**.
 
 Bonusarna gäller för settlementets medlemmar överallt och kräver inte att spelaren befinner sig inom settlementets territorium.
 

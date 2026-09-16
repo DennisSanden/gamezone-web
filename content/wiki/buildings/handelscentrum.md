@@ -5,11 +5,11 @@ category: "Byggnader"
 order: 4
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Handelscentrum"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 4"
+  nivåkrav: "Settlementnivå 3"
   kostnad: "20 000 Coins"
   referensyta: "15×15"
 ---
@@ -26,11 +26,11 @@ infobox:
 
 ## Krav
 
-- Settlementnivå: **4 eller högre**
+- Settlementnivå: **3 eller högre**
 - Licens: **20 000 Coins**
 - Referensyta: **15×15**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
-- Tak: **minst 75 % täckning**
+- Tak: **minst 40 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

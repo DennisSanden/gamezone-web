@@ -5,11 +5,11 @@ category: "Byggnader"
 order: 2
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Stadskärna"
 infobox:
   typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 2"
+  nivåkrav: "Settlementnivå 1"
   kostnad: "5 000 Coins"
   referensyta: "11×11"
 ---
@@ -26,11 +26,11 @@ infobox:
 
 ## Krav
 
-- Settlementnivå: **2 eller högre**
+- Settlementnivå: **1 eller högre**
 - Licens: **5 000 Coins**
 - Referensyta: **11×11**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
-- Tak: **minst 75 % täckning**
+- Tak: **minst 40 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

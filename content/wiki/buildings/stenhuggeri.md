@@ -5,7 +5,7 @@ category: "Byggnader"
 order: 3
 version: "5.0"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-16"
 infoboxTitle: "Stenhuggeri"
 infobox:
   typ: "Settlementbyggnad"
@@ -33,7 +33,7 @@ infobox:
 - Licens: **10 000 Coins**
 - Referensyta: **11×11**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
-- Tak: **minst 75 % täckning**
+- Tak: **minst 40 % täckning**
 - Hela byggnaden måste ligga inom settlementets territorium
 
 ### Specialkrav

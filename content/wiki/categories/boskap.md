@@ -5,13 +5,13 @@ category: "Produktionskategorier"
 order: 3
 version: "1.4"
 engineVersion: "Production Registry"
-updatedAt: "2026-09-09"
+updatedAt: "2026-09-16"
 infoboxTitle: "Boskap"
 infobox:
   coinregel: "Endast vald kategori"
   automation: "Ger inga Coins"
   djurdrops: "+100% vid spelardöd"
-  hastbonus: "+15% på hästar"
+  hastbonus: "+7,5% på hästar"
   uppvaxt: "4× snabbare"
   breeding: "500 Coins i grundvärde"
 ---
@@ -47,9 +47,9 @@ Bonusen gäller **kyckling, ko, mooshroom, gris, får och kanin**. Den applicera
 
 ## Bonus på hästar
 
-Alla spelare som tillhör ett settlement med kategorin **Boskap** får **+15% hastighet när de rider häst**.
+Alla spelare som tillhör ett settlement med kategorin **Boskap** får **+7,5% hastighet när de rider häst**.
 
-Bonusen ökar hästens egen rörelsehastighet med 15%, vilket betyder att hästar fortfarande behåller sina individuella skillnader. En snabb häst blir alltså fortfarande snabbare än en långsam häst.
+Bonusen ökar hästens egen rörelsehastighet med 7,5%, vilket betyder att hästar fortfarande behåller sina individuella skillnader. En snabb häst blir alltså fortfarande snabbare än en långsam häst.
 
 Bonusen gäller överallt och kräver inte att spelaren rider inom settlementets territorium.
 
@@ -77,25 +77,25 @@ Bonusen gäller överallt och kräver inte att spelaren rider inom settlementets
 - Honey Bottle
 - Honeycomb
 
-## Max antal per chunk
+## Max antal djur
 
-För att skydda serverns prestanda finns ett tak för hur många djur och vissa andra entiteter som får finnas i samma chunk. Sprid ut större gårdar över flera chunks.
+För att skydda serverns prestanda finns ett tak för hur många djur och vissa andra entiteter som får finnas samtidigt. **Inom ett settlement gäller gränsen för hela settlementet**, inte per chunk. I wilderness används samma gräns per chunk.
 
 | Typ | Max per chunk |
 |---|---:|
-| Chicken | 20 |
-| Cow | 20 |
-| Sheep | 20 |
-| Pig | 20 |
-| Villager | 20 |
+| Chicken | 40 |
+| Cow | 40 |
+| Sheep | 40 |
+| Pig | 40 |
+| Villager | 10 |
 | Horse | 10 |
 | Donkey | 10 |
 | Mule | 10 |
 | Llama | 10 |
 | Camel | 10 |
-| Bee | 15 |
-| Rabbit | 20 |
-| Goat | 20 |
+| Bee | 40 |
+| Rabbit | 40 |
+| Goat | 40 |
 
 > [!TIP]
-> Kontrollera chunkgränser innan du bygger ladugårdar och hagar. En gård som ser ut som ett enda område kan ligga i flera chunks.
+> Gränserna för breeding och äggkläckning räknas settlementbrett inom claimat territorium. RoseStackers logiska stackstorlek räknas också in.
