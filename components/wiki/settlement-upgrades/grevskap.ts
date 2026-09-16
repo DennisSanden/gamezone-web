@@ -104,6 +104,5 @@ export const grevskapTillHertigdome: SettlementUpgrade = {
 
     requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Hertigdöme. Grevskap har inget byggnadskrav för progression. Slott låses upp på nivå 12 som ett separat byggprojekt med en kostnad på 1 000 000 Coins.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

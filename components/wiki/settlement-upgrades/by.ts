@@ -66,8 +66,7 @@ export const byTillBosattning: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("bosattning"),
 
-    requiredCurrentBuildings: ["Handelscentrum"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Bosättning. Bank låses upp i samband med den första uppgraderingen till Bosättning och har egna byggnadskrav.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

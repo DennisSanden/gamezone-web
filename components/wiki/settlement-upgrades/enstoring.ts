@@ -42,8 +42,7 @@ export const enstoringTillLager: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("lager"),
 
-    requiredCurrentBuildings: ["Stadskärna"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Alla Coins och material för settlementuppgraderingen måste finnas tillgängliga samtidigt. Om något krav saknas genomförs ingen del av uppgraderingen.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

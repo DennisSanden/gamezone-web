@@ -72,8 +72,7 @@ export const kopingTillStad: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("stad"),
 
-    requiredCurrentBuildings: ["Kyrka"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Stad låser inte upp någon ny unik byggnad. Kyrka måste redan vara färdigställd innan settlementet kan uppgraderas från Köping till Stad.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

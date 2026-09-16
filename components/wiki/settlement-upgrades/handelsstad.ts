@@ -72,8 +72,7 @@ export const handelsstadTillFastning: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("fastning"),
 
-    requiredCurrentBuildings: ["Marknadsplats"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Fästning låser inte upp någon ny unik byggnad. Marknadsplats måste redan vara permanent upplåst innan settlementet kan uppgraderas från Handelsstad till Fästning.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

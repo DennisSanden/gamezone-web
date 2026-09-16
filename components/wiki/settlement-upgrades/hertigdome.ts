@@ -102,8 +102,7 @@ export const hertigdomeTillNation: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("nation"),
 
-    requiredCurrentBuildings: ["Slott"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Nation låser inte upp någon ny unik byggnad. Slott måste redan vara permanent upplåst innan settlementet kan uppgraderas från Hertigdöme till Nation.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

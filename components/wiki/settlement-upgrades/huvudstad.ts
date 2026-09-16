@@ -102,8 +102,7 @@ export const huvudstadTillGrevskap: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("grevskap"),
 
-    requiredCurrentBuildings: ["Monument"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Grevskap låser inte upp någon ny unik byggnad. Monument måste redan vara permanent upplåst innan settlementet kan uppgraderas från Huvudstad till Grevskap.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

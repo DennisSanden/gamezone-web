@@ -104,6 +104,5 @@ export const fastningTillHuvudstad: SettlementUpgrade = {
 
     requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Huvudstad. Monument låses upp på nivå 10 som ett separat byggprojekt med en kostnad på 400 000 Coins.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

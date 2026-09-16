@@ -74,6 +74,5 @@ export const samhalleTillKoping: SettlementUpgrade = {
 
     requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Köping. Kyrka låses upp i samband med den första uppgraderingen till Köping och har egna byggnadskrav.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

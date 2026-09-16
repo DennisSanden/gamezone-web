@@ -66,8 +66,7 @@ export const bosattningTillSamhalle: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("samhalle"),
 
-    requiredCurrentBuildings: ["Bank"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Laboratorium blir tillgängligt från settlementnivå 5 endast för settlements med kategorin Alkemi. Det är inte ett generellt levelkrav.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

@@ -72,8 +72,7 @@ export const stadTillHandelsstad: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("handelsstad"),
 
-    requiredCurrentBuildings: ["Kyrka"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Handelsstad. Marknadsplats låses upp på nivå 8 som ett separat byggprojekt med en kostnad på 150 000 Coins.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

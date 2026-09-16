@@ -102,8 +102,7 @@ export const nationTillKungadome: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("kungadome"),
 
-    requiredCurrentBuildings: ["Slott"],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Kungadöme låser inte upp någon ny unik byggnad. Slott måste redan vara permanent upplåst innan settlementet kan uppgraderas från Nation till Kungadöme.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

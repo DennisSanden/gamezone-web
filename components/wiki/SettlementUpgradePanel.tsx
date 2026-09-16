@@ -27,7 +27,7 @@ const LEVEL_BUILDINGS: Record<number, LevelBuilding> = {
         slug: "stadskarna",
         requirementKey: "stadskarna",
         license: "5 000 Coins",
-        bonus: "Grundbyggnad, krävs för nivå 2",
+        bonus: "Grundbyggnad för settlementet",
     },
     2: {
         name: "Kategoribyggnad",
@@ -41,7 +41,7 @@ const LEVEL_BUILDINGS: Record<number, LevelBuilding> = {
         slug: "handelscentrum",
         requirementKey: "handelscentrum",
         license: "20 000 Coins",
-        bonus: "Låser upp företag och krävs för nivå 4",
+        bonus: "Låser upp företag",
     },
     5: {
         name: "Laboratorium",
@@ -157,28 +157,6 @@ const LEVEL_BUILDINGS: Record<number, LevelBuilding> = {
     },
 };
 
-// Physical buildings that gate the upgrade FROM the keyed current level.
-// This mirrors SettlementUpgradeBuildingRequirementRegistry in GameZoneEngine.
-const UPGRADE_GATE_BUILDINGS: Record<number, LevelBuilding> = {
-    1: LEVEL_BUILDINGS[1],
-    2: LEVEL_BUILDINGS[2],
-    3: LEVEL_BUILDINGS[3],
-    6: LEVEL_BUILDINGS[6],
-    7: LEVEL_BUILDINGS[7],
-    8: LEVEL_BUILDINGS[8],
-    10: LEVEL_BUILDINGS[10],
-    12: LEVEL_BUILDINGS[12],
-    14: LEVEL_BUILDINGS[14],
-    16: LEVEL_BUILDINGS[16],
-    18: LEVEL_BUILDINGS[18],
-    20: LEVEL_BUILDINGS[20],
-    22: LEVEL_BUILDINGS[22],
-    25: LEVEL_BUILDINGS[25],
-    30: LEVEL_BUILDINGS[30],
-    35: LEVEL_BUILDINGS[35],
-    40: LEVEL_BUILDINGS[40],
-    45: LEVEL_BUILDINGS[45],
-};
 
 export default function SettlementUpgradePanel({
     upgradeKey,
@@ -190,7 +168,6 @@ export default function SettlementUpgradePanel({
     }
 
     const hasMaterials = upgrade.upgradeCost.materials.length > 0;
-    const requiredBuilding = UPGRADE_GATE_BUILDINGS[upgrade.currentLevel.level];
     const levelBuilding = LEVEL_BUILDINGS[upgrade.nextLevel.level];
 
     return (
@@ -286,50 +263,7 @@ export default function SettlementUpgradePanel({
                     </div>
                 </section>
 
-                {requiredBuilding && (
-                    <section className={`${styles.section} ${styles.buildingSection}`}>
-                        <div className={styles.buildingHeading}>
-                            <div>
-                                <span className={styles.sectionLabel}>
-                                    Krävs för nivå {upgrade.nextLevel.level}
-                                </span>
-                                <h3>
-                                    <Link href={`/wiki/buildings/${requiredBuilding.slug}`}>
-                                        {requiredBuilding.name}
-                                    </Link>
-                                </h3>
-                                <p>
-                                    Den här byggnaden måste vara fysiskt färdigställd och aktiv innan
-                                    settlementet kan genomföra uppgraderingen.
-                                    {requiredBuilding.requirementKey === "kategoribyggnad" &&
-                                        " Det är alltid byggnaden för settlementets nuvarande produktionskategori som räknas."}
-                                </p>
-                            </div>
-
-                            <Link
-                                className={styles.buildingLink}
-                                href={`/wiki/buildings/${requiredBuilding.slug}`}
-                            >
-                                Öppna byggnadsguiden →
-                            </Link>
-                        </div>
-
-                        <div className={styles.buildingFacts}>
-                            <div>
-                                <span>Licens</span>
-                                <strong>{requiredBuilding.license}</strong>
-                            </div>
-                            <div>
-                                <span>Funktion</span>
-                                <strong>{requiredBuilding.bonus}</strong>
-                            </div>
-                        </div>
-
-                        <BuildingRequirementsTable building={requiredBuilding.requirementKey} />
-                    </section>
-                )}
-
-                {levelBuilding && levelBuilding !== requiredBuilding && (
+                {levelBuilding && levelBuilding && (
                     <section className={`${styles.section} ${styles.buildingSection}`}>
                         <div className={styles.buildingHeading}>
                             <div>
@@ -343,8 +277,8 @@ export default function SettlementUpgradePanel({
                                 </h3>
                                 <p>
                                     När settlementet når nivå {upgrade.nextLevel.level} kan byggnaden
-                                    licensieras och uppföras. Byggnaden har egna fysiska byggnadskrav
-                                    utöver själva settlementuppgraderingen.
+                                    licensieras och uppföras. Byggnaden har egna fysiska byggnadskrav, men byggnader krävs aldrig
+                                    för att avancera settlementnivå.
                                     {levelBuilding.requirementKey === "laboratorium" &&
                                         " Laboratorium gäller endast Alkemi och är inte ett generellt levelkrav."}
                                 </p>

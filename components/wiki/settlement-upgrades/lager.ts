@@ -66,10 +66,7 @@ export const lagerTillBy: SettlementUpgrade = {
 
     buildings: getSettlementBuildings("by"),
 
-    requiredCurrentBuildings: [
-        "Kategoribyggnaden för settlementets aktiva kategori, Alkemi är undantaget",
-    ],
+    requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen. Endast kategoribyggnaden för settlementets aktiva kategori räknas som krav. Byter settlementet kategori måste den nya kategorins byggnad färdigställas.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

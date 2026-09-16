@@ -110,6 +110,5 @@ export const kungadomeTillImperium: SettlementUpgrade = {
 
     requiredCurrentBuildings: [],
 
-    footerText:
-        "Kostnaden ovan gäller settlementuppgraderingen till Imperium. Underverk låses upp på nivå 15 som ett separat byggprojekt med en kostnad på 5 000 000 Coins.",
+    footerText: "Byggnader är separata upplåsningar och bonusprojekt. De krävs inte för att avancera settlementnivå.",
 };

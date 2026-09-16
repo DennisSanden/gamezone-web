@@ -135,7 +135,7 @@ export default function WikiPage() {
                                 <span className={styles.featuredLabel}>Mest använda guiden</span>
                                 <h2>Settlement Upgrade</h2>
                                 <p>
-                                    Alla nivåer, kostnader, material, byggnadskrav och
+                                    Alla nivåer, kostnader, material, byggnadsupplåsningar och
                                     fördelar samlade på en enda lång sida.
                                 </p>
                             </div>
