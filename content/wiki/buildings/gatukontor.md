@@ -10,7 +10,7 @@ infoboxTitle: "Gatukontor"
 infobox:
   typ: "Settlementbyggnad"
   nivåkrav: "Settlementnivå 10"
-  kostnad: "200 000 Coins"
+  kostnad: "5 000 000 Coins"
   referensyta: "15×15"
 ---
 
@@ -31,7 +31,7 @@ infobox:
 ## Krav
 
 - Settlementnivå: **10 eller högre**
-- Licens: **200 000 Coins**
+- Licens: **5 000 000 Coins**
 - Referensyta: **15×15**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
 - Väggar: **minst 40 % täckning**
 - Tak: **minst 40 % täckning**

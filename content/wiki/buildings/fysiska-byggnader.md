@@ -95,7 +95,7 @@ Kravblock och entities räknas över **hela den registrerade footprinten**. Ett 
 | 6 | [Bank](/wiki/buildings/bank) | 50 000 | Detaljerad statistik |
 | 7 | [Reliktempel](/wiki/buildings/reliktempel) | 50 000 | Relikbonusar |
 | 8 | [Vindhamn](/wiki/buildings/vindhamn) | 100 000 | Elytra |
-| 10 | [Gatukontor](/wiki/buildings/gatukontor) | 200 000 | Riksvägsanslutning |
+| 10 | [Gatukontor](/wiki/buildings/gatukontor) | 5 000 000 | Riksvägsanslutning |
 | 12 | [Turistbyrå](/wiki/buildings/turistbyra) | 350 000 | Turism och unika besök |
 | 14 | [Stall](/wiki/buildings/stall) | 500 000 | +25 % hästhastighet |
 | 16 | [Kontor](/wiki/buildings/kontor) | 750 000 | +3 Shopping Chests |

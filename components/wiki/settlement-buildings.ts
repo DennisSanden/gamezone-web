@@ -56,7 +56,7 @@ const settlementBuildings: Record<SettlementBuildingGroup, SettlementBuilding[]>
     ],
     fastning: [],
     huvudstad: [
-        { id: "gatukontor", name: "Gatukontor", category: "Infrastruktur", description: "Låser upp Riksvägsanslutningar.", effect: "Riksvägsanslutningar", cost: "200 000 Coins", unlockLevel: 10, href: "/wiki/buildings/gatukontor" },
+        { id: "gatukontor", name: "Gatukontor", category: "Infrastruktur", description: "Låser upp Riksvägsanslutningar.", effect: "Riksvägsanslutningar", cost: "5 000 000 Coins", unlockLevel: 10, href: "/wiki/buildings/gatukontor" },
     ],
     grevskap: [],
     hertigdome: [
