@@ -23,7 +23,7 @@ infobox:
 ## Bonus
 
 - Låser upp settlementets riksvägsanslutning.
-- Ger settlementet 1 000 000 Coins när det för första gången ansluts till det officiella riksvägsnätet.
+- Ger settlementet 5 000 000 Coins när det för första gången ansluts till det officiella riksvägsnätet.
 
 > [!NOTE]
 > Anslutningsbelöningen betalas bara ut en gång per settlement.
