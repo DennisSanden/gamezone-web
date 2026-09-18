@@ -180,7 +180,7 @@
     {
         "key": "by",
         "title": "By",
-        "definition": "Den tredje settlementnivån. By fortsätter settlementets utveckling och låser upp Handelscentrum.",
+        "definition": "Den tredje settlementnivån. Settlementets utveckling fortsätter och Handelscentrum blir tillgängligt som frivillig byggnadslicens.",
         "category": "Settlementnivå",
         "href": "/wiki/settlements/by",
         "aliases": [
@@ -383,7 +383,7 @@
     {
         "key": "handelscentrum",
         "title": "Handelscentrum",
-        "definition": "En permanent settlementbyggnad som låser upp möjligheten att registrera företag inom settlementet.",
+        "definition": "En fysisk settlementbyggnad som är frivillig. Den krävs inte för att skapa eller driva företag.",
         "category": "Settlementbyggnad",
         "href": "/wiki/settlements/by#byggnader",
         "aliases": [

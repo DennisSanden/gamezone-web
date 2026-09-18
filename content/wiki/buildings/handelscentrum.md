@@ -3,9 +3,9 @@ title: "Handelscentrum"
 description: "Nivåkrav, licenskostnad, byggkrav och funktion för Handelscentrum."
 category: "Byggnader"
 order: 4
-version: "5.0"
+version: "5.1"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
+updatedAt: "2026-09-18"
 infoboxTitle: "Handelscentrum"
 infobox:
   typ: "Settlementbyggnad"
@@ -20,9 +20,9 @@ infobox:
 
 ![Handelscentrum](/wiki/buildings/handelscentrum.png)
 
-## Bonus
+## Funktion
 
-- Låser upp företag, företagslicenser och företagshandel för settlementets invånare.
+Handelscentrum är **inte ett krav för att skapa företag, använda företagslicenser eller bedriva företagshandel**. Företagssystemet är tillgängligt oberoende av om settlementet har byggt ett Handelscentrum.
 
 ## Krav
 

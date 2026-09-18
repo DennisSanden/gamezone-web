@@ -3,9 +3,9 @@ title: "Server TAX"
 description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
 order: 4
-version: "2.1"
+version: "2.2"
 engineVersion: "Economy Engine"
-updatedAt: "2026-09-16"
+updatedAt: "2026-09-18"
 infoboxTitle: "Server TAX"
 infobox:
   startnivå: "45 %"
@@ -24,7 +24,7 @@ Registrera en shopping chest genom att titta på kistan och skriva:
 
 Priset gäller per item i kistan.
 
-När företag blir tillgängliga genom **Handelscentrum på settlementnivå 3** börjar grundskatten på **45 procent**. Därefter sjunker grundskatten med **1 procentenhet per settlementnivå** fram till nivå 23.
+Företag kan skapas utan Handelscentrum och utan krav på settlementnivå. **Server TAX-trappan börjar på settlementnivå 3 med 45 procent** och sjunker därefter med **1 procentenhet per settlementnivå** fram till nivå 23.
 
 Från **nivå 23 till nivå 50 är grundskatten 25 procent**.
 
@@ -38,7 +38,7 @@ Server TAX kan aldrig bli lägre än **0 procent**.
 
 | Settlementnivå | Grund-TAX |
 |---|---:|
-| 1 till 2 | Företag ej möjligt |
+| 1 till 2 | Företag möjligt, TAX-trappan börjar på nivå 3 |
 | 3 | 45 % |
 | 4 | 44 % |
 | 5 | 43 % |

@@ -3,12 +3,12 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.8"
+version: "1.9"
 engineVersion: "Company"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-18"
 infoboxTitle: "Företag"
 infobox:
-  krav: "Settlement nivå 4 och aktivt Handelscentrum"
+  krav: "Inget krav på settlementnivå eller Handelscentrum"
   startkostnad: "Gratis"
   medlemskap: "Ett företag per spelare"
   maxlicens: "Nivå 10"
@@ -16,7 +16,7 @@ infobox:
 
 ## Översikt
 
-När ett settlement har nått **nivå 4** och färdigställt **Handelscentrum** kan invånarna skapa företag.
+Invånare kan skapa företag **utan krav på settlementnivå eller Handelscentrum**. Handelscentrum behöver alltså inte byggas för att starta eller driva ett företag.
 
 Det är gratis att starta ett företag. Varje spelare kan vara medlem i högst ett företag åt gången.
 

@@ -3,9 +3,9 @@ title: "Settlement Upgrade"
 description: "Alla 50 settlementnivåer med Coins och material som krävs för varje uppgradering."
 category: "Settlements"
 order: 2
-version: "2.4"
+version: "2.5"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-16"
+updatedAt: "2026-09-18"
 infoboxTitle: "Settlement Upgrade"
 infobox:
   nivåer: "50"
@@ -23,7 +23,7 @@ relatedArticles:
 Settlementprogressionen består av **50 nivåer**. Varje uppgradering kräver Coins och de items som visas i kortet för nästa nivå.
 
 > [!IMPORTANT]
-> Fysiska byggnader har egna nivåkrav och licenser, men är inte materialkrav för själva levelup-kommandot. Se [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
+> **Inga byggnader behöver byggas för att avancera till nästa settlementnivå.** Level-up styrs av Coins och resurser. Fysiska byggnader är separata, frivilliga upplåsningar med egna nivåkrav och licenser. Se [Fysiska byggnader](/wiki/buildings/fysiska-byggnader).
 
 > [!NOTE]
 > Alla krav måste finnas när uppgraderingen genomförs. Materialen förbrukas vid levelup. Där ett krav säger flera olika varianter, exempelvis Music Discs eller Armor Trim Templates, måste varianterna faktiskt vara olika.

@@ -3,9 +3,9 @@ title: "Fysiska byggnader"
 description: "Hela Building System 1.0, från Stadskärna till Myntverk."
 category: "Byggnader"
 order: 0
-version: "3.0"
+version: "3.1"
 engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
+updatedAt: "2026-09-18"
 infoboxTitle: "Building System 1.0"
 infobox:
   process: "Licens → markera yta → bygg → godkänn"
@@ -90,7 +90,7 @@ Kravblock och entities räknas över **hela den registrerade footprinten**. Ett 
 |---:|---|---:|---|
 | 1 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Grundbyggnad för byggsystemet |
 | 2 | [Kategoribyggnad](/wiki/buildings/kategoribyggnad) | 10 000 | +5 % i aktiv kategori, gäller inte Alkemi |
-| 3 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Låser upp företagssystemet |
+| 3 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Frivillig settlementbyggnad, krävs inte för företag |
 | 5 | [Laboratorium](/wiki/buildings/laboratorium) | 35 000 | Endast Alkemi, aktiverar Coins och +5 % Alkemi |
 | 6 | [Bank](/wiki/buildings/bank) | 50 000 | Detaljerad statistik |
 | 7 | [Reliktempel](/wiki/buildings/reliktempel) | 50 000 | Relikbonusar |
