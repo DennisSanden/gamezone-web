@@ -516,5 +516,17 @@
         "category": "Kulturer",
         "href": "/wiki/cultures/kulturer",
         "aliases": []
+    },
+    {
+        "key": "player_trade",
+        "title": "Spelarhandel",
+        "definition": "Säker direkt handel mellan två spelare inom 5 block. /trade kan byta både items och Coins och kräver dubbel bekräftelse.",
+        "category": "Economy",
+        "href": "/wiki/economy/trade",
+        "aliases": [
+            "Trade",
+            "/trade",
+            "Direkthandel"
+        ]
     }
 ]

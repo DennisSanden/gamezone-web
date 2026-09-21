@@ -3,9 +3,9 @@ title: "Coins"
 description: "GameZones valuta, hur du tjänar Coins och vad de används till."
 category: "Ekonomi"
 order: 1
-version: "1.2"
+version: "1.3"
 engineVersion: "Economy Engine"
-updatedAt: "2026-08-04"
+updatedAt: "2026-09-21"
 infoboxTitle: "Coins"
 infobox:
   typ: "Servervaluta"
@@ -26,6 +26,7 @@ Du tjänar Coins genom att samla in eller skapa resurser som tillhör kategorin 
 
 Coins kan bland annat användas för att:
 
+- handla items och Coins direkt med andra spelare genom `/trade`
 - köpa items från andra spelare genom företagens shopping chests
 - köpa items och tjänster från servern
 - uppgradera företagets shopping license
@@ -40,7 +41,17 @@ Coins kan bland annat användas för att:
 
 Läs mer om namnbyte och kategoribyte på sidan [Ändra namn och kategori](/wiki/settlements/andra-namn-och-kategori).
 
-## Köpa från andra spelare
+## Handla direkt med andra spelare
+
+Står du nära en annan spelare kan du starta en säker direkt handel med:
+
+`/trade <spelare>`
+
+Ni kan byta **items och Coins** i samma handel. Båda spelarna måste vara inom 5 block och handeln använder dubbel bekräftelse innan något flyttas. Coins beskattas enligt mottagarens Server TAX. Saknar mottagaren företag används 50 procent Server TAX.
+
+Läs hela guiden på sidan [Spelarhandel](/wiki/economy/trade).
+
+## Köpa från andra spelare genom företag
 
 Företag kan registrera en shopping chest genom att titta på kistan och skriva:
 

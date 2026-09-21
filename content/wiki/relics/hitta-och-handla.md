@@ -3,13 +3,13 @@ title: "Hitta, bära och handla reliker"
 description: "Så kommer reliker in i världen och vad som händer när de hittas, tappas, säljs eller byter ägare."
 category: "Reliker"
 order: 3
-version: "2.0"
+version: "2.1"
 engineVersion: "Relic System v2"
-updatedAt: "2026-08-23"
+updatedAt: "2026-09-21"
 infoboxTitle: "Relikens resa"
 infobox:
   discovery: "Första riktiga fyndet registreras"
-  handel: "Vanliga Minecraftöverföringar används"
+  handel: "Minecraftöverföringar och /trade"
   deathDrop: "Reliker kan tappas vid död"
   display: "Kan placeras i item frame"
   auction: "Kan delas ut manuellt genom event"
@@ -90,9 +90,11 @@ Det finns inget vanligt `/relic transfer` som spelare måste använda för att b
 > [!IMPORTANT]
 > Engine dokumenterar relikens resa, men reliken ska fortfarande kännas som ett riktigt Minecraftföremål.
 
-## Shopping Chests och företag
+## Spelarhandel och Shopping Chests
 
-En relik kan i princip hamna i ett företag eller flyttas genom handel. När Engine kan identifiera överföringen kan den offentliga innehavaren uppdateras.
+Reliker kan byta ägare genom serverns handelssystem. För direkt handel mellan två spelare kan `/trade <spelare>` användas när spelarna står inom 5 block från varandra. Systemet använder dubbel bekräftelse och registrerar de items som faktiskt byter ägare. Läs mer på sidan [Spelarhandel](/wiki/economy/trade).
+
+En relik kan också hamna i ett företag eller flyttas genom annan tillåten handel. När Engine kan identifiera överföringen kan den offentliga innehavaren uppdateras.
 
 Priset behöver däremot inte bli en del av relikens offentliga historia. Relikhistoriken handlar främst om **vad reliken varit med om**, inte exakt vad någon betalade för den.
 

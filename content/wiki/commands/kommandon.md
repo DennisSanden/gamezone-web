@@ -3,9 +3,9 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "2.2"
+version: "2.3"
 engineVersion: "Commands"
-updatedAt: "2026-09-14"
+updatedAt: "2026-09-21"
 infoboxTitle: "Kommandon"
 infobox:
   huvudmeny: "/gz menu"
@@ -333,6 +333,18 @@ Riksvägar markeras och färdigställs av serverns admins. Vanliga spelare behö
 `/road setpoint` kan användas flera gånger för att låta vägen följa svängar. När vägen är färdig registreras sträckan med `/road complete`.
 
 Läs reglerna och hur hastighetsbonusen fungerar på sidan [Riksvägar](/wiki/settlements/riksvagar).
+
+## Spelarhandel
+
+```text
+/trade <spelare>
+/trade accept
+/trade deny
+```
+
+`/trade <spelare>` skickar en trade-förfrågan till en spelare inom 5 block. Mottagaren kan acceptera eller neka direkt genom de klickbara alternativen i chatten, eller använda `/trade accept` och `/trade deny`.
+
+Trade-fönstret låter båda spelarna erbjuda items och Coins. Handeln kräver dubbel bekräftelse innan något flyttas. Läs hela guiden på sidan [Spelarhandel](/wiki/economy/trade).
 
 ## Duell
 

@@ -3,15 +3,15 @@ title: "Server TAX"
 description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
 order: 4
-version: "2.2"
+version: "2.3"
 engineVersion: "Economy Engine"
-updatedAt: "2026-09-18"
+updatedAt: "2026-09-21"
 infoboxTitle: "Server TAX"
 infobox:
   startnivå: "45 %"
   grundnivåFrån23: "25 %"
   lägsta: "0 %"
-  gäller: "Företagsförsäljning"
+  gäller: "Företagsförsäljning och spelarhandel"
 ---
 
 ## Vad är Server TAX?
@@ -33,6 +33,16 @@ Företagslicensen och vissa settlementpolicies kan sedan sänka den faktiska Ser
 **Total TAX = settlementets grund-TAX minus företagslicensens avdrag minus andra aktiva TAX-reduktioner.**
 
 Server TAX kan aldrig bli lägre än **0 procent**.
+
+## Server TAX vid spelarhandel
+
+Direkt handel genom `/trade <spelare>` kan innehålla både items och Coins. När Coins överförs är det **Server TAX för spelaren som tar emot Coins** som används.
+
+Om mottagaren **inte har något företag** används automatiskt **50 % Server TAX** för Coin-överföringen.
+
+Exempel: 1 000 000 Coins skickas till en spelare med 42 % Server TAX. 420 000 Coins tas i skatt och mottagaren får 580 000 Coins. Skatten visas i den slutliga bekräftelsen innan båda spelarna godkänner handeln.
+
+Läs mer på sidan [Spelarhandel](/wiki/economy/trade).
 
 ## TAX efter settlementnivå
 
