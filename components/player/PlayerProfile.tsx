@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./PlayerProfile.module.css";
-import { getPatreonSupporter, patreonTierLabel } from "@/lib/patreon-supporters";
+import { patreonTierLabel, type PatreonSupporter } from "@/lib/patreon-supporters";
 
 type Title = { title: string; category: string; level: number; productionBonusPercent: number };
 type Settlement = { settlementId: string; name: string; level: number; levelName: string; role: string };
@@ -139,6 +139,7 @@ export function PlayerProfile({ username }: { username: string }) {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [patreon, setPatreon] = useState<PatreonSupporter | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -152,6 +153,19 @@ export function PlayerProfile({ username }: { username: string }) {
       })
       .catch((reason) => { if (!cancelled) setError(reason instanceof Error ? reason.message : "Spelaren kunde inte hittas."); })
       .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [username]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/patreon/supporters", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : [])
+      .then((supporters: PatreonSupporter[]) => {
+        if (cancelled || !Array.isArray(supporters)) return;
+        const normalized = username.trim().toLocaleLowerCase("sv-SE");
+        setPatreon(supporters.find((supporter) => supporter.minecraftUsername?.trim().toLocaleLowerCase("sv-SE") === normalized) ?? null);
+      })
+      .catch(() => { if (!cancelled) setPatreon(null); });
     return () => { cancelled = true; };
   }, [username]);
 
@@ -181,7 +195,6 @@ export function PlayerProfile({ username }: { username: string }) {
   );
   const categoryProductionBonusPercent = effectPercent(categoryProductionBonus?.effect);
   const categoryProductionBonusName = categoryProductionBonus?.scope ?? player.settlement?.name ?? "Ingen kategori";
-  const patreon = getPatreonSupporter(player.username);
   const levelSpan = Math.max(1, character.nextLevelExperience - character.levelExperience);
   const levelProgress = Math.max(0, Math.min(100, ((character.experience - character.levelExperience) / levelSpan) * 100));
 
