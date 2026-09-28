@@ -72,6 +72,7 @@ export function MainLayout({ children }: MainLayoutProps) {
                                         <Link href={item.href} className={`${styles.navigationLink} ${groupActive ? styles.navigationLinkActive : ""}`}>{item.label} <span className={styles.dropdownArrow}>⌄</span></Link>
                                         <div className={styles.dropdownMenu}>
                                             <Link href="/leaderboards?tab=players"><strong>Spelare</strong><span>Topplistor och progression</span></Link>
+                                            <Link href="/leaderboards?tab=events"><strong>Eventranking</strong><span>TDM, Archery Masters och HungerGames ELO</span></Link>
                                             <Link href="/settlements"><strong>Settlements</strong><span>Alla städer och samhällen</span></Link>
                                             <Link href="/companies"><strong>Företag</strong><span>Företagsmarknaden</span></Link>
                                             <Link href="/leaderboards"><strong>Alla leaderboards</strong><span>Hela statistikcentralen</span></Link>
@@ -127,7 +128,7 @@ export function MainLayout({ children }: MainLayoutProps) {
                             if (item.href === "/leaderboards") {
                                 return <div className={styles.mobileLeaderboardGroup} key={item.href}>
                                     <Link href="/leaderboards" className={`${styles.mobileNavigationLink} ${active ? styles.mobileNavigationLinkActive : ""}`} onClick={() => setMobileMenuOpen(false)}>Leaderboards</Link>
-                                    <div className={styles.mobileSubnav}><Link href="/leaderboards?tab=players" onClick={() => setMobileMenuOpen(false)}>Spelare</Link><Link href="/settlements" onClick={() => setMobileMenuOpen(false)}>Settlements</Link><Link href="/companies" onClick={() => setMobileMenuOpen(false)}>Företag</Link></div>
+                                    <div className={styles.mobileSubnav}><Link href="/leaderboards?tab=players" onClick={() => setMobileMenuOpen(false)}>Spelare</Link><Link href="/leaderboards?tab=events" onClick={() => setMobileMenuOpen(false)}>Eventranking</Link><Link href="/settlements" onClick={() => setMobileMenuOpen(false)}>Settlements</Link><Link href="/companies" onClick={() => setMobileMenuOpen(false)}>Företag</Link></div>
                                 </div>;
                             }
                             return <Link key={item.href} href={item.href} className={`${styles.mobileNavigationLink} ${active ? styles.mobileNavigationLinkActive : ""}`} aria-current={active ? "page" : undefined} onClick={() => setMobileMenuOpen(false)}>{item.label}</Link>;
