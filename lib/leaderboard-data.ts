@@ -57,8 +57,20 @@ export async function getLeaderboards(limit = 5): Promise<LeaderboardBoard[]> {
   return Array.isArray(result) ? result : [];
 }
 
+const eventLeaderboardAliases: Record<string, string> = {
+  player_event_rating_tdm: "PLAYER_EVENT_RATING_TDM",
+  player_event_rating_archery_masters: "PLAYER_EVENT_RATING_ARCHERY_MASTERS",
+  player_event_rating_hunger_games: "PLAYER_EVENT_RATING_HUNGER_GAMES",
+};
+
 export async function getLeaderboard(key: string, limit = 25, offset = 0): Promise<LeaderboardBoard | null> {
-  return engineFetch<LeaderboardBoard>(`/api/v1/leaderboards/${encodeURIComponent(key)}?limit=${limit}&offset=${offset}`);
+  const canonical = eventLeaderboardAliases[key.toLowerCase()] ?? key;
+  const candidates = [...new Set([canonical, canonical.toLowerCase()])];
+  for (const candidate of candidates) {
+    const board = await engineFetch<LeaderboardBoard>(`/api/v1/leaderboards/${encodeURIComponent(candidate)}?limit=${limit}&offset=${offset}`);
+    if (board) return board;
+  }
+  return null;
 }
 
 export const getAllLeaderboardEntries = cache(async function getAllLeaderboardEntries(key: string): Promise<LeaderboardBoard | null> {

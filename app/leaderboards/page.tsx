@@ -16,10 +16,23 @@ export const metadata: Metadata = {
 export default async function LeaderboardsPage({ searchParams }: { searchParams: Promise<{ tab?: string }> }) {
   const params = await searchParams;
   const initialCategory = (["players", "events", "settlements", "companies", "server"] as const).includes(params.tab as any) ? params.tab as "players" | "events" | "settlements" | "companies" | "server" : "players";
-  const [leaderboards, titleBoard] = await Promise.all([
+  const [leaderboards, titleBoard, tdmBoard, archeryBoard, hungerGamesBoard] = await Promise.all([
     getLeaderboards(5),
     getLeaderboard("player_titles", 100, 0),
+    getLeaderboard("PLAYER_EVENT_RATING_TDM", 5, 0),
+    getLeaderboard("PLAYER_EVENT_RATING_ARCHERY_MASTERS", 5, 0),
+    getLeaderboard("PLAYER_EVENT_RATING_HUNGER_GAMES", 5, 0),
   ]);
+
+  // Event-ELO boards are fetched explicitly. They are newer than some Engine
+  // leaderboard index responses and must not disappear just because the generic
+  // /leaderboards endpoint omitted them.
+  const mergedLeaderboards = [...leaderboards];
+  for (const board of [tdmBoard, archeryBoard, hungerGamesBoard]) {
+    if (board && !mergedLeaderboards.some((existing) => existing.key.toUpperCase() === board.key.toUpperCase())) {
+      mergedLeaderboards.push(board);
+    }
+  }
 
   return (
       <MainLayout>
@@ -38,7 +51,7 @@ export default async function LeaderboardsPage({ searchParams }: { searchParams:
               </div>
             </PageContainer>
           </section>
-          <PageContainer><LeaderboardDashboard leaderboards={leaderboards} titleBoard={titleBoard} initialCategory={initialCategory} /></PageContainer>
+          <PageContainer><LeaderboardDashboard leaderboards={mergedLeaderboards} titleBoard={titleBoard} initialCategory={initialCategory} /></PageContainer>
         </div>
       </MainLayout>
   );
