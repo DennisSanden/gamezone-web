@@ -127,7 +127,7 @@ function RankingCard({ board, definition, serverCard }: { board?: LeaderboardBoa
         })}
       </ol>
       {!serverCard && (entries.length > 0 || definition.key.startsWith("PLAYER_EVENT_RATING_")) && (
-        <Link className={styles.fullTableLink} href={`/leaderboards/${definition.key}`}>{definition.key.startsWith("PLAYER_EVENT_RATING_") ? "Se alla" : "Visa hela tabellen"} <span>→</span></Link>
+        <Link className={styles.fullTableLink} href={`/leaderboards/${definition.key}`}>Se alla <span>→</span></Link>
       )}
     </article>
   );
