@@ -12,7 +12,7 @@ type Definition = { key: string; title: string; description: string; label: stri
 
 const categories: Record<Category, { label: string; eyebrow: string; description: string; icon: string }> = {
   players: { label: "Spelare", eyebrow: "Individuella prestationer", description: "Ekonomi, produktion, aktivitet och stridsstatistik för spelarna som satt störst avtryck på servern.", icon: "♟" },
-  events: { label: "Eventranking", eyebrow: "Tävlingsrating", description: "GameZones gemensamma eventrating. Vinster, placeringar, kills och deaths påverkar din rating efter varje event.", icon: "★" },
+  events: { label: "Eventranking", eyebrow: "PvP-rating", description: "Separata ELO-rankningar för GameZones PvP-event. Din rating i ett event påverkar inte de andra.", icon: "★" },
   settlements: { label: "Settlements", eyebrow: "Städer och samhällen", description: "Jämför stadskassor, befolkning, utvecklingsnivå, skatt och resultaten från settlementkrigen.", icon: "♜" },
   companies: { label: "Företag", eyebrow: "Handel och tillväxt", description: "Följ företagen som leder ekonomin genom kapital, försäljning, transaktioner, licensnivå och medlemsantal.", icon: "◆" },
   server: { label: "Servern", eyebrow: "GameZone i siffror", description: "En samlad överblick över ekonomin, organisationerna och hur många unika spelare som varit aktiva.", icon: "◎" },
@@ -32,7 +32,9 @@ const definitions: Record<Category, Definition[]> = {
     { key: "PLAYER_KD", title: "Högst K/D", description: "Bäst förhållande mellan kills och deaths.", label: "K/D", icon: "✦" },
   ],
   events: [
-    { key: "PLAYER_EVENT_RATING", title: "Eventranking", description: "Serverns samlade tävlingsrating. Alla börjar på 1 000 ELO och varje event kan ge plus eller minus.", label: "ELO", icon: "★" },
+    { key: "PLAYER_EVENT_RATING_TDM", title: "Team Deathmatch", description: "Separat TDM-rating. Vinster, förluster, kills och deaths påverkar din ELO i Team Deathmatch.", label: "TDM ELO", icon: "⚔" },
+    { key: "PLAYER_EVENT_RATING_ARCHERY_MASTERS", title: "Archery Masters", description: "Separat bågskytterating. Resultat, kills och deaths påverkar bara din ELO i Archery Masters.", label: "Archery ELO", icon: "➶" },
+    { key: "PLAYER_EVENT_RATING_HUNGER_GAMES", title: "HungerGames", description: "Separat HungerGames-rating. Placering och kills påverkar din ELO i HungerGames.", label: "HG ELO", icon: "♛" },
   ],
   settlements: [
     { key: "SETTLEMENT_TREASURY", title: "Rikaste settlement", description: "Högst aktuellt saldo i stadskassan.", label: "Coins", icon: "◉" },
