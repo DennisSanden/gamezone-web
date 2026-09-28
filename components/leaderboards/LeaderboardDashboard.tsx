@@ -7,11 +7,12 @@ import { PlayerLink } from "@/components/player/PlayerLink";
 import type { LeaderboardBoard, LeaderboardEntry } from "@/lib/leaderboard-data";
 import styles from "@/app/leaderboards/page.module.css";
 
-type Category = "players" | "settlements" | "companies" | "server";
+type Category = "players" | "events" | "settlements" | "companies" | "server";
 type Definition = { key: string; title: string; description: string; label: string; icon: string };
 
 const categories: Record<Category, { label: string; eyebrow: string; description: string; icon: string }> = {
   players: { label: "Spelare", eyebrow: "Individuella prestationer", description: "Ekonomi, produktion, aktivitet och stridsstatistik för spelarna som satt störst avtryck på servern.", icon: "♟" },
+  events: { label: "Eventranking", eyebrow: "Tävlingsrating", description: "GameZones gemensamma eventrating. Vinster, placeringar, kills och deaths påverkar din rating efter varje event.", icon: "★" },
   settlements: { label: "Settlements", eyebrow: "Städer och samhällen", description: "Jämför stadskassor, befolkning, utvecklingsnivå, skatt och resultaten från settlementkrigen.", icon: "♜" },
   companies: { label: "Företag", eyebrow: "Handel och tillväxt", description: "Följ företagen som leder ekonomin genom kapital, försäljning, transaktioner, licensnivå och medlemsantal.", icon: "◆" },
   server: { label: "Servern", eyebrow: "GameZone i siffror", description: "En samlad överblick över ekonomin, organisationerna och hur många unika spelare som varit aktiva.", icon: "◎" },
@@ -29,6 +30,9 @@ const definitions: Record<Category, Definition[]> = {
     { key: "PLAYER_BOUNTY_HUNTER", title: "Monsterjägare", description: "Flest inkasserade bounties. Totalt intjänad bounty-belöning visas som extra statistik.", label: "Bounties", icon: "☠" },
     { key: "PLAYER_DEATHS", title: "Flest deaths", description: "Flest registrerade dödsfall.", label: "Deaths", icon: "☠" },
     { key: "PLAYER_KD", title: "Högst K/D", description: "Bäst förhållande mellan kills och deaths.", label: "K/D", icon: "✦" },
+  ],
+  events: [
+    { key: "PLAYER_EVENT_RATING", title: "Eventranking", description: "Serverns samlade tävlingsrating. Alla börjar på 1 000 ELO och varje event kan ge plus eller minus.", label: "ELO", icon: "★" },
   ],
   settlements: [
     { key: "SETTLEMENT_TREASURY", title: "Rikaste settlement", description: "Högst aktuellt saldo i stadskassan.", label: "Coins", icon: "◉" },

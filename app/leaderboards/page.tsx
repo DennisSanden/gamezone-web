@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default async function LeaderboardsPage({ searchParams }: { searchParams: Promise<{ tab?: string }> }) {
   const params = await searchParams;
-  const initialCategory = (["players", "settlements", "companies", "server"] as const).includes(params.tab as any) ? params.tab as "players" | "settlements" | "companies" | "server" : "players";
+  const initialCategory = (["players", "events", "settlements", "companies", "server"] as const).includes(params.tab as any) ? params.tab as "players" | "events" | "settlements" | "companies" | "server" : "players";
   const [leaderboards, titleBoard] = await Promise.all([
     getLeaderboards(5),
     getLeaderboard("player_titles", 100, 0),
