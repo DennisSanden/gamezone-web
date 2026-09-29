@@ -5,7 +5,7 @@ category: "Ekonomi"
 order: 4
 version: "2.3"
 engineVersion: "Economy Engine"
-updatedAt: "2026-09-21"
+updatedAt: "2026-09-29"
 infoboxTitle: "Server TAX"
 infobox:
   startnivå: "45 %"
@@ -124,6 +124,13 @@ Om settlementet dessutom har en aktiv **Marknadsplats** blir skatten 5 procent. 
 > [!INFO]
 > Server TAX är inte samma sak som [stadsskatt](/wiki/economy/stadskassan). Stadsskatt tas från invånarnas produktionsintäkter och går till settlementets stadskassa.
 
+
+
+## Dagens bristvaror
+
+Varje dag klockan **12:00** väljer MarketWatch de 10 items som servern har störst faktisk brist på. Dessa får **10 procentenheter lägre Server TAX** vid försäljning genom Shopping Chests fram till **00:00** samma dag. Bristen räknas efter att tillgängligt lager i aktiva Shopping Chests har dragits från settlementens återstående uppgraderingsbehov.
+
+Rabatten kombineras med övriga TAX-reduktioner och Server TAX har fortfarande ett golv på 0 procent.
 
 ## Rabatt mellan handelspartners
 

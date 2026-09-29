@@ -3,9 +3,9 @@ title: "MarketWatch"
 description: "Se vilka resurser som efterfrågas av serverns settlements."
 category: "Ekonomi"
 order: 5
-version: "1.2"
+version: "1.4"
 engineVersion: "MarketWatch"
-updatedAt: "2026-09-15"
+updatedAt: "2026-09-29"
 infoboxTitle: "MarketWatch"
 infobox:
   kommando: "/marketwatch"
@@ -40,7 +40,7 @@ Sökningen visar upp till **tre billigaste aktiva butiker** som faktiskt har ite
 
 MarketWatch hjälper spelare och företag att se vilka resurser som behövs för kommande settlementuppgraderingar.
 
-MarketWatch räknar settlementens **återstående uppgraderingsbehov**. Material som redan har lämnats in via Settlement Inventory räknas automatiskt bort från efterfrågan. Systemet utgår alltså från sparad uppgraderingsprogress och behöver inte läsa innehållet i fysiska kistor.
+MarketWatch räknar settlementens **återstående uppgraderingsbehov**. Material som redan har lämnats in via Settlement Inventory räknas automatiskt bort från efterfrågan. Därefter räknas även det lager som faktiskt finns till försäljning i aktiva Shopping Chests bort. **Faktisk brist = återstående settlementbehov minus tillgängligt marknadslager**, aldrig lägre än 0.
 
 ## Användning
 
@@ -76,3 +76,12 @@ En annons gäller i **6 timmar**. Företaget kan skapa högst **en annons var sj
 
 > [!INFO]
 > Annonsen reserverar inte Coins och genomför inte köpet automatiskt. Den visar vad företaget söker och vilket högsta styckpris företaget annonserar. Själva handeln sker fortfarande genom serverns vanliga handelssystem.
+
+
+## Dagens bristvaror
+
+Varje dag klockan **12:00 svensk tid** tar Engine en snapshot av MarketWatch och väljer de **10 items med störst faktisk brist**. Endast items med en brist större än 0 kan komma med. Listan ligger fast för den dagen även om marknadslagret förändras senare.
+
+De utvalda bristvarorna får **10 procentenheter lägre Server TAX** vid försäljning genom Shopping Chests från **12:00 till 00:00**. Rabatten är ett avdrag i procentenheter, inte en relativ rabatt. En skatt på 35 procent blir alltså 25 procent medan bristrabatten är aktiv. Skatten kan aldrig bli lägre än 0 procent.
+
+Vid midnatt upphör rabatten. Nästa dags nya topp 10 tas fram klockan 12:00.

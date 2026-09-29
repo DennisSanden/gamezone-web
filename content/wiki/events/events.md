@@ -3,9 +3,9 @@ title: "Events"
 description: "Så fungerar GameZones events, eventområden, deltagande och de särskilda regler som gäller under ett event."
 category: "Events"
 order: 1
-version: "1.1"
+version: "1.4"
 engineVersion: "Event System"
-updatedAt: "2026-09-09"
+updatedAt: "2026-09-29"
 infoboxTitle: "Events"
 infobox:
   typ: "Serveraktiviteter"
@@ -70,9 +70,17 @@ Ett event kan ha en prispott.
 - I **Settlement** går prispotten till vinnande settlements stadskassa.
 - I **Random Teams** delas prispotten mellan **alla spelare i vinnarlaget**, även lagmedlemmar som eliminerats tidigare under eventet. En spelare som frivilligt lämnar eventet räknas inte längre till lagets prispott.
 
-## När körs events?
+## Återkommande event
 
-Aktuella event annonseras av serverteamet. Håll koll på servermeddelanden, Discord och GameZones övriga informationskanaler för tid och regler inför nästa event.
+**Survival Waves** körs automatiskt varje dag klockan **20:00**. Eventet består av 20 PvE-waves. Belöningen staplas inte mellan waves, den ersätts av belöningen för den senaste klarade waven. I nuvarande Engine är wave 20 värd **1 000 000 Coins**.
+
+**Team Deathmatch** öppnar automatiskt anmälan **20:55** och startar **21:00** varje dag. Matchen använder **50 tickets per lag**.
+
+Engine har också särskilda lägen för **Hunger Games** och **Core Deathmatch**. Hunger Games använder en krympande dödscirkel. Core Deathmatch använder lagkärnor med **1 000 HP**, och när ett lags kärna förstörs förlorar laget sina respawns.
+
+TDM, Hunger Games och Archery Masters har separata ELO-ratingar. En ny rating börjar på **1 000 ELO** och lagras separat per eventtyp.
+
+Utöver de schemalagda eventen kan serverteamet starta andra event manuellt. Håll koll på servermeddelanden och Discord för aktuella event.
 
 ## Patreon-events
 

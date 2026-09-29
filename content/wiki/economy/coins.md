@@ -73,7 +73,7 @@ King kan skicka Coins till en annan aktiv invånare i samma settlement med:
 
 `/settlement send <spelare> <belopp>`
 
-Uttag och utbetalningar från stadskassan har en transaktionsavgift på 2 procent. Läs mer på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
+Uttag och utbetalningar från stadskassan har en transaktionsavgift på **7,5 procent** som standard. Med aktiv **Myntförvaring** sänks avgiften till **2,5 procent**. Läs mer på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
 
 ## Uppgradera settlementet
 

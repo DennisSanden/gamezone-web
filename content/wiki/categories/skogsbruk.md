@@ -3,9 +3,9 @@ title: "Skogsbruk"
 description: "Träd, stockar och träresurser."
 category: "Produktionskategorier"
 order: 4
-version: "1.2"
+version: "1.4"
 engineVersion: "Production Registry"
-updatedAt: "2026-08-10"
+updatedAt: "2026-09-29"
 infoboxTitle: "Skogsbruk"
 infobox:
   coinregel: "Endast vald kategori"
@@ -33,6 +33,12 @@ Skogsbruk handlar om att plantera, odla och hugga träd. Exempel är oak log, bi
 - Pale Oak Log
 - Crimson Stem
 - Warped Stem
+
+## Kategoribonusar
+
+När en behörig Skogsbruksspelare hugger en registrerad skogsresurs ger Engine **extra trädrop** utöver den vanliga blockdroppen. När spelaren fäller rotstocken skapas dessutom en återplanteringsmöjlighet. Planteras ett giltigt träd tillbaka på platsen inom **10 minuter** av samma spelare betalas **1 000 Coins** i återplanteringsbelöning.
+
+Medlemmar i ett Skogsbruk-settlement får också **Haste I** när de befinner sig i sitt eget settlementterritorium och håller en yxa. Effekten ersätter inte en starkare eller längre extern Haste-effekt.
 
 ## Att tänka på
 

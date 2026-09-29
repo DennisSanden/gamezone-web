@@ -53,7 +53,7 @@ Whitelist görs separat på Discord med `/whitelist <Minecraftnamn>` innan du an
 /twitch <Twitch-namn>
 ```
 
-Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **5 000 GZ Coins per 20 minuter**. Läs Twitch-guiden för aktuella villkor och gränser. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
+Länkar ditt Twitchkonto till din Minecraftspelare. Titta sedan på en registrerad GameZone-streamer för att få **5 000 GZ Coins per godkänd 20-minutersperiod**, plus ett slumpmässigt item från Daily Rewards dag 1 till 4. Timtaket är 45 000 Coins och dygnstaket 90 000 Coins. Läs Twitch-guiden för aktuella villkor och gränser. Läs hela guiden på sidan [Twitch](/wiki/commands/twitch).
 
 ## Teleport
 
@@ -208,9 +208,9 @@ Läs hela guiden på sidan [Settlement spawn](/wiki/settlements/settlement-spawn
 
 `/settlement deposit <belopp>` sätter in Coins från ditt eget saldo i stadskassan. Alla aktiva settlementmedlemmar kan använda kommandot.
 
-`/settlement withdraw <belopp>` tar ut Coins från stadskassan till Kings eget saldo. Endast King kan använda kommandot och en avgift på 2 procent tillkommer.
+`/settlement withdraw <belopp>` tar ut Coins från stadskassan till Kings eget saldo. Endast King eller en Lord med rätt treasury-behörighet kan använda kommandot. Standardavgiften är **7,5 procent**, eller **2,5 procent** om settlementet har aktiv Myntförvaring.
 
-`/settlement send <spelare> <belopp>` skickar Coins från stadskassan till en aktiv invånare i samma settlement. Endast King kan använda kommandot och en avgift på 2 procent tillkommer.
+`/settlement send <spelare> <belopp>` skickar Coins från stadskassan till en aktiv invånare i samma settlement. Endast King eller en Lord med rätt treasury-behörighet kan använda kommandot. Samma treasuryavgift används, **7,5 procent** som standard eller **2,5 procent** med aktiv Myntförvaring.
 
 Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
 
@@ -353,3 +353,7 @@ Trade-fönstret låter båda spelarna erbjuda items och Coins. Handeln kräver d
 /duel accept
 /duel deny
 ```
+
+En utmaning gäller i **30 sekunder**. När den accepteras teleporteras båda spelarna till duellarenan. Dödligt damage avslutar duellen som en eliminering i stället för en vanlig survivaldöd. Förloraren betalar **5 % av sitt aktuella Coin-saldo** direkt till vinnaren. Om förloraren lämnar arenan räknas det också som förlust och samma 5-procentsöverföring görs. Vinster och förluster sparas i duellstatistiken.
+
+Läs hela guiden på sidan [Dueller](/wiki/events/dueller).

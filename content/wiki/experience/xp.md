@@ -194,7 +194,7 @@ Tabellerna nedan visar de produktionsresurser som faktiskt ger Character XP i de
 | Salmon | 5 |
 | Tropical Fish | 8 |
 | Pufferfish | 10 |
-| Name Tag | 15 |
+| Name Tag | 1 |
 | Nautilus Shell | 20 |
 | Saddle | 20 |
 | Fishing Rod | 15 |

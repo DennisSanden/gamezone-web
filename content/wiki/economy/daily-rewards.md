@@ -33,13 +33,13 @@ Du kan även öppna systemet via `/gz daily` eller från GameZone-menyn.
 
 | Dag | Coins | Character XP | Möjliga item rewards |
 | --- | ---: | ---: | --- |
-| **1** | 10 000 | 100 | 16 Iron Ingots, 24 Coal, 16 Leather, 16 Cooked Beef eller 12 Logs |
-| **2** | 20 000 | 150 | 24 Iron Ingots, 12 Gold Ingots, 32 Redstone, 16 Lapis Lazuli eller 8 Emeralds |
-| **3** | 35 000 | 200 | 4 Diamonds, 16 Gold Ingots, 12 Emeralds, 24 XP Bottles eller 1 Name Tag |
-| **4** | 50 000 | 300 | 6 Diamonds, 24 Emeralds, 32 XP Bottles, 2 Golden Apples eller 1 Saddle |
-| **5** | 75 000 | 400 | 10 Diamonds, 1 Diamond Block, 48 XP Bottles, 4 Golden Apples eller en bra Enchanted Book |
-| **6** | 100 000 | 500 | 16 Diamonds, 2 Diamond Blocks, 64 XP Bottles, 6 Golden Apples eller en mycket bra Enchanted Book |
-| **7** | **250 000** | **1 000** | **32 Diamonds, 4 Diamond Blocks, 128 XP Bottles, 12 Golden Apples, 1 Netherite Ingot eller 2 mycket bra Enchanted Books** |
+| **1** | 10 000 | 100 | 16 Iron Ingots, 24 Coal, 16 Leather, 16 Cooked Beef, 12 Oak Logs, 6 Honey Bottles, 8 Glow Ink Sacs eller 12 Amethyst Shards |
+| **2** | 20 000 | 150 | 24 Iron Ingots, 12 Gold Ingots, 32 Redstone, 16 Lapis Lazuli, 8 Emeralds, Honey Bottles, Glow Ink Sacs, Amethyst Shards eller 2 Nautilus Shells |
+| **3** | 35 000 | 200 | 4 Diamonds, 16 Gold Ingots, 12 Emeralds, 24 XP Bottles, Honey Bottles, Glow Ink Sacs, Amethyst Shards eller 4 Nautilus Shells |
+| **4** | 50 000 | 300 | 6 Diamonds, 24 Emeralds, 32 XP Bottles, 2 Golden Apples, 1 Saddle, Honey Bottles, Glow Ink Sacs, Amethyst Shards eller 6 Nautilus Shells |
+| **5** | 75 000 | 400 | Diamonds, Diamond Block, XP Bottles, Golden Apples, kontrollerad Enchanted Book, Honey Bottles, Glow Ink Sacs, Amethyst Shards eller 8 Nautilus Shells |
+| **6** | 100 000 | 500 | Diamonds, Diamond Blocks, XP Bottles, Golden Apples, kontrollerad Enchanted Book, Honey Bottles, Glow Ink Sacs, Amethyst Shards eller 12 Nautilus Shells |
+| **7** | **250 000** | **1 000** | **Diamonds, Diamond Blocks, XP Bottles, Golden Apples, Netherite Ingot, kontrollerad Enchanted Book, Honey Bottles, Glow Ink Sacs, Amethyst Shards eller 16 Nautilus Shells** |
 
 En full serie på sju claims ger totalt **2 650 Character XP**. Daily XP påverkas inte av Variation Bonus.
 
