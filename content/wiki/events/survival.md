@@ -1,833 +1,498 @@
 ---
-category: events
-description: Komplett guide till Survival, 20 PvE-waves, klasser,
-  klassval, loot, välsignelser, Summoner, Healer, Commander, Coins,
-  statistik och leaderboards.
-engineVersion: GameZoneEngine Survival
-infobox:
-  klassval: 45 sekunder
-  mobkill: 5 000 Coins
-  slutbelöning: Upp till 1 000 000 Coins
-  typ: Kooperativt PvE-event
-  waves: 20
-infoboxTitle: Survival
+title: "Survival"
+description: "Överlev 20 allt svårare PvE-waves tillsammans. Välj klass, bygg laget, uppgradera din utrustning och jaga Survival-rekord."
+category: "Events"
 order: 2
+version: "3.0"
+engineVersion: "GameZoneEngine Survival"
+infoboxTitle: "Survival"
+infobox:
+  typ: "Kooperativt PvE-event"
+  waves: "20"
+  klassval: "5 prioriteringar, 45 sekunder"
+  mobkill: "5 000 Coins"
+  slutbelöning: "Upp till 1 000 000 Coins"
 relatedArticles:
-- article: events
-  category: events
-  description: Grundregler för GameZones events.
-  title: Events
-- article: kommandon
-  category: commands
-  description: Serverns kommandon.
-  title: Kommandon
-title: Survival
-version: 2.0
+  - category: "events"
+    article: "events"
+    title: "Events"
+    description: "Så fungerar GameZones events och deltagande."
 ---
 
 # Survival
 
-**Survival** är GameZones kooperativa PvE-event. Alla deltagare spelar i
-samma lag och försöker tillsammans överleva **20 waves** med allt
-starkare fiender.
+**Survival** är GameZones stora kooperativa PvE-event. Alla deltagare spelar på samma sida och försöker tillsammans ta sig igenom **20 waves** som blir hårdare ju längre laget överlever.
 
-Det finns ingen ensam vinnare. Survival handlar i stället om hur långt
-hela gruppen kommer, hur mycket varje spelare bidrar och vilka klasser
-laget lyckas kombinera.
+Här finns ingen ensam vinnare. Ett bra Survival-lag behöver damage, tålighet, healing, summons och rätt buffs vid rätt tillfälle. Under eventet väljer du klass, förbättrar din utrustning mellan waves och röstar tillsammans med laget om permanenta välsignelser.
 
-Eventet har ett eget klassystem, individuella lootval mellan waves,
-gemensamma välsignelser, statistik för damage, kills, healing och
-Summoner-skada samt permanenta rekord.
+> [!IMPORTANT]
+> Survival är ett lag-event. Målet är att få **hela gruppen** så långt som möjligt.
 
-> \[!IMPORTANT\] Survival använder inte den vanliga eventlogiken där
-> sista överlevande spelare automatiskt vinner prispotten. Survival är
-> ett lag-event.
+## Snabböversikt
 
-## När startar Survival?
+| | |
+| --- | --- |
+| **Format** | Kooperativ PvE |
+| **Längd** | 20 waves |
+| **Klassval** | 5 prioriteringar under 45 sekunder |
+| **Begränsade klasser** | Commander 1, Healer 2, Summoner 2 |
+| **Coins per kill** | 5 000 |
+| **Maximal wave-belöning** | 1 000 000 Coins |
+| **Lagbuffs** | Efter wave 5, 10 och 15 |
+| **Statistik** | Damage, kills, healing och Summon damage |
+| **Permanenta rekord** | Lagrekord och individuella mob-kills |
 
-Det schemalagda Survival-eventet öppnar anmälan **5 minuter före
-start**. Engine skickar dessutom påminnelser när det återstår 3, 2 och 1
-minut.
+## Så börjar eventet
 
-Gå med med:
+Anmälan öppnar före eventstart och servern påminner när starten närmar sig. Gå med med:
 
-``` text
+```text
 /event join
 ```
 
-När eventet startar teleporteras registrerade onlinespelare till
-Survival-arenan. Därefter öppnas klassvalet.
+När Survival börjar teleporteras deltagarna till arenan och **klassvalet öppnas i 45 sekunder**.
 
-Survival använder serverns roterande eventschema. Den exakta starttiden
-kan därför visas i eventschemat och i serverns automatiska
-announcements.
+Klassmenyn hålls öppen under hela valperioden. Om du försöker stänga den öppnas den igen, så att ingen råkar missa sitt klassval genom att trycka Escape.
 
-## Grundregler
+---
 
-Survival består av **20 waves**.
+# Välj din klass
 
-Alla eventmobs har glowing så att de är lätta att hitta. Survival-mobs
-och Summoner-mobs är dessutom skyddade mot att börja brinna genom
-`EntityCombustEvent`.
+Du väljer inte bara en klass och hoppas på det bästa. I stället får du rangordna **upp till fem klasser**:
 
-Spelare kan inte bygga eller slå sönder block under Survival.
+**Prio 1 → Prio 2 → Prio 3 → Prio 4 → Prio 5**
 
-Mobs droppar inga vanliga items och ingen vanlig XP. Utrustning som mobs
-får är definierad av eventet och har 0 procent drop chance.
+Dina klick läggs i den ordningen. Klickar du på en klass som redan finns i listan tas den bort och de lägre prioriteringarna flyttas upp.
 
-Spelare får däremot kasta items till varandra. Items som en deltagare
-själv droppar märks av Engine och kan plockas upp av andra deltagare.
-Vanliga externa items på marken blockeras.
-
-## Klassvalet
-
-När Survival börjar öppnas ett klass-GUI i **45 sekunder**.
-
-GUI:t stängs inte när du gör ditt val. Du kan ändra klassönskemål under
-hela perioden. Det sista önskemålet när tiden går ut används.
-
-Om du inte gör något val behandlas ditt önskemål som **Svärd**.
+När de 45 sekunderna är slut försöker Survival ge dig din högsta möjliga prioritet.
 
 ### Begränsade klasser
 
-Tre klasser har platsbegränsning:
+| Klass | Platser |
+| --- | ---: |
+| **Commander** | 1 |
+| **Healer** | 2 |
+| **Summoner** | 2 |
 
-  Klass         Max
-  ----------- -----
-  Commander       1
-  Healer          2
-  Summoner        2
+Alla får välja dessa klasser i sin prioriteringslista. Platserna delas inte ut förrän klassvalet är avslutat.
 
-Alla andra klasser är obegränsade.
+Om flera spelare konkurrerar om samma begränsade klass gäller:
 
-Alla får lov att önska en begränsad klass. Engine bestämmer först efter
-att hela 45-sekundersfönstret har gått ut vilka spelare som faktiskt får
-platserna.
+1. **Aktiv Patreon**
+2. **Flest Survival-mobs dödade genom tiderna**
+3. **Tidigast registrerade val**
 
-### Prioritet för begränsade klasser
+Patreon har alltså alltid förtur. Mellan spelare med samma Patreonstatus avgör den permanenta Survival kill-statistiken. Om även den är lika avgör vem som valde klassen först.
 
-Om fler spelare önskar samma begränsade klass än det finns platser
-används denna ordning:
+Om din Prio 1 är full försöker systemet med Prio 2, därefter Prio 3 och så vidare. Om ingen av dina valbara prioriteringar kan tilldelas finns **Soldier** som säker fallback.
 
-1.  **Aktiv Patreon**
-2.  **Flest historiska Survival mob-kills**
-3.  **Tidigast registrerade klassval**
-
-Patreon går alltså alltid före en icke-Patreon för en begränsad klass.
-Om flera spelare har samma Patreonstatus jämförs deras permanenta
-Survival-kills. Först därefter används tiden då klassönskemålet
-registrerades.
-
-Om du inte får den begränsade klass du önskat tilldelas du **Svärd**.
-
-> \[!NOTE\] Historiska Survival-kills är individuell statistik som
-> sparas permanent i databasen. Äldre lagrekord från tiden innan
-> individuell killstatistik infördes kan inte automatiskt delas upp på
-> enskilda spelare.
+---
 
 # Klasser
 
-## Svärd
+## Soldier
 
-Svärd är den balanserade närstridsklassen.
+**Soldier** är den balanserade närstridsklassen och ett stabilt val i alla delar av eventet.
 
-**Startutrustning:**
+**Startar med**
+- Iron Sword
+- Full Iron Armor
 
--   Iron Sword
--   Full Iron Armor
+Soldier har normal HP och normal damage. Klassen har ingen spelargräns.
 
-Klassen har normal max-HP och normal damage multiplier.
+Looten fokuserar på bättre swords, shields och tung armor. Diamond Sword kan dyka upp från wave 4 och senare versioner kan få Sharpness II.
 
-Lootpoolen fokuserar på svärd, shield och tung armor. Diamond Sword blir
-tillgängligt från wave 4. Från wave 12 kan Diamond Sword-belöningen få
-Sharpness II.
-
-Svärd är obegränsad.
+**Passar dig som:** vill stå i fronten utan att offra vare sig HP eller damage.
 
 ## Tank
 
-Tank är byggd för att absorbera betydligt mer skada än övriga klasser.
+**Tank** är byggd för att stå kvar när andra måste backa.
 
-**Startutrustning:**
+**Startar med**
+- Stone Axe
+- Shield
+- Full Iron Armor
 
--   Stone Axe
--   Shield
--   Full Iron Armor
+Tank får **+75 % max-HP**, men gör **30 % mindre damage**.
 
-Tank får **+75 procent max-HP** jämfört med spelarens normala
-grundvärde.
+Looten fokuserar på shields, axes, Golden Apples och tung armor. Diamond Axe låses upp senare och kan utvecklas med Sharpness II.
 
-Nackdelen är att Tank bara gör **70 procent av normal outgoing damage**,
-alltså 30 procent lägre grundskada.
+**Passar dig som:** vill hålla mobs upptagna och köpa tid åt resten av laget.
 
-Tankens loot fokuserar på shield, axe, Golden Apples och tung armor.
-Diamond Axe blir tillgänglig från wave 7 och kan få Sharpness II från
-wave 13.
+## Bowman
 
-Tank är obegränsad.
+**Bowman** är lagets renodlade distansklass.
 
-## Bågskytt
+**Startar med**
+- Unbreakable Bow med Power I
+- 32 Arrows
+- Stone Sword
+- Full Leather Armor
 
-Bågskytt är Survival-lagets rena distansklass.
+Bowman har en betydligt större ammo-progression under eventet. Rewardpoolen innehåller bland annat vanliga pilar, stora Ammo Bundles, Spectral Arrows, bättre bows, crossbows, shields och lätt armor.
 
-**Startutrustning:**
+Ammo rewards skalar upp under eventet. Större bundles kan ge **48 till 80 pilar**, och senare kan Bowman få **24 Spectral Arrows** som ett eget val.
 
--   Unbreakable Bow
--   Power I
--   32 Arrows
--   Stone Sword
--   Full Leather Armor
+Crossbows kan utvecklas med bland annat Quick Charge och Piercing.
 
-Bågskyttens reward pool kan bland annat innehålla fler pilar, bättre
-bows, crossbows, stora ammo bundles, Spectral Arrows, shield och lätt
-armor.
-
-Crossbow progressionen utvecklas under eventet. Från senare waves kan
-den få Quick Charge och Piercing.
-
-Bågskytt är obegränsad.
+**Passar dig som:** vill göra säker damage på avstånd och kontrollera farliga mål.
 
 ## Healer
 
-Healer är lagets supportklass och är begränsad till **max 2 spelare**.
+**Healer** håller laget vid liv och är begränsad till **max 2 spelare**.
 
-**Startutrustning:**
+**Startar med**
+- Stone Sword
+- Healing Totem
+- Full Leather Armor
 
--   Stone Sword
--   Healing Totem
--   Full Leather Armor
+Healers har en **grön outline** så att laget snabbt kan hitta dem.
 
-Healers visas med **grön glowing outline**.
+### Läkande aura
 
-### Passiv healing
+Healer har en passiv healing-aura inom **8 block**. Skadade lagkamrater i närheten läks kontinuerligt.
 
-Healer har en passiv aura inom **8 block**.
+När du får healing visas både **att du blir läkt och hur mycket** direkt i actionbaren.
 
-Skadade lagkamrater inom räckvidden läks kontinuerligt med små mängder.
-När en spelare faktiskt får healing visas mängden i spelarens actionbar.
-
-Healer får dessutom information om lagkamrater som ligger på **40
-procent HP eller lägre**.
+Healer får dessutom information om lagkamrater som faller till **40 % HP eller lägre**.
 
 ### Healing Totem
 
-Healing Totem är Healerns aktiva ability.
+Högerklicka med Healing Totem för att läka spelare inom **10 block**.
 
-Högerklick används för att aktivera den. Effekten gäller inom **10
-block**.
+- Allierade kan få upp till **4 hjärtan**
+- Healern själv kan få upp till **2 hjärtan**
+- Totemen förbrukas inte
+- Den kan användas **en gång per wave**
 
-Totemen läker:
+När nästa wave börjar blir Healing Totem tillgänglig igen.
 
--   allierade med upp till **4 hjärtan**
--   Healern själv med upp till **2 hjärtan**
-
-Spelaren som får healing ser exakt hur mycket HP som återställdes i
-actionbaren.
-
-Healing Totem kan bara användas **en gång per wave**. Den laddas
-automatiskt om när nästa wave börjar.
-
-Totemen förbrukas inte.
-
-> \[!NOTE\] Itemets äldre lore kan fortfarande nämna en 20-sekunders
-> cooldown, men den aktiva Engine-logiken begränsar användningen till en
-> gång per wave. Det är den regeln som gäller.
+**Passar dig som:** gillar support och vill kunna rädda en wave när laget börjar falla isär.
 
 ## Summoner
 
-Summoner är en support och pet-klass som får skapa friendly mobs under
-varje wave.
+**Summoner** slåss tillsammans med friendly summons och är begränsad till **max 2 spelare**.
 
-Max **2 Summoners** kan tilldelas per lag.
+**Startar med**
+- Stone Sword
+- Crossbow
+- 16 Arrows
+- Full Leather Armor
 
-**Startutrustning:**
+Summoners har en **lila outline**.
 
--   Stone Sword
--   Crossbow
--   16 Arrows
--   Full Leather Armor
+Varje wave får Summoner en ny summon-token:
 
-Summoner visas med **lila glowing outline**.
+| Waves | Summon |
+| --- | --- |
+| **1–3** | Bee |
+| **4–12** | Wolf |
+| **13–17** | Iron Golem |
+| **18–20** | Iron Golem + 2 Wolves |
 
-### Summon-token varje wave
+Summons söker själva efter Survival-mobs och är betydligt starkare än vanliga motsvarigheter. De får kraftigt förstärkt HP, extra attack och mer armor ju längre eventet går. HP-skalningen kan nå upp till **500 HP**.
 
-Varje Summoner får en ny summon-token när en wave startar.
+Summoner har också fått en större ammo-pool. Vanliga arrow rewards kan ge **32 till 64 pilar**, och från senare waves kan **64 Summoner Ammo** dyka upp som ett separat rewardval.
 
-Vilken summon tokenen skapar beror på waven:
+All damage som dina summons gör registreras på dig som **Summon damage**.
 
-  Waves        Summon
-  ------------ -----------------------
-  1 till 3     Bee
-  4 till 12    Wolf
-  13 till 17   Iron Golem
-  18 till 20   Iron Golem + 2 Wolves
-
-Summons är friendly och söker automatiskt efter Survival-mobs i
-närheten.
-
-Summoner-mobs är kraftigt förstärkta. Deras HP skalas med waven och
-multipliceras därefter med **2,0**. Maxgränsen är 500 HP. Deras attack
-skalas också upp, inklusive ytterligare **25 procent** ovanpå
-summon-tierns vanliga scaling, med maxgräns 55 attack damage.
-
-De får dessutom ökande armor ju senare waven är.
-
-Summons försvinner när Survival avslutas och räknas separat i
-eventstatistiken som **Summon damage** för ägaren.
+**Passar dig som:** vill bidra med extra bodies på slagfältet och bygga upp en stark pet-armé genom eventet.
 
 ## Commander
 
-Commander är lagets ledarklass och är begränsad till **max 1 spelare**.
+**Commander** är lagets ledarklass. Det finns bara **1 Commander** per lag.
 
-**Startutrustning:**
+**Startar med**
+- Iron Sword
+- Stridshorn
+- Full Iron Armor
 
--   Iron Sword
--   Stridshorn
--   Full Iron Armor
-
-Commander har **+20 procent max-HP**.
-
-Commander visas med **blå glowing outline**.
+Commander får **+20 % max-HP** och har en **blå outline**.
 
 ### Stridshorn
 
-Commander kan högerklicka med sitt Goat Horn för att aktivera
-**Stridshorn**.
+Högerklicka med Stridshornet för att ge hela laget:
 
-När hornet används:
+**+20 % damage under den aktuella waven**
 
--   hela laget får **+20 procent outgoing damage**
--   buffen gäller under den wave där hornet används
--   alla levande deltagare får information i actionbaren
--   hela laget får en titel
--   servern spelar ett Goat Horn-ljud
--   aktiveringen annonseras
+Alla levande deltagare får information om buffen i actionbaren när hornet används.
 
-Cooldownen räknas från den wave där hornet faktiskt används.
+Stridshornet har en cooldown på **tre waves räknat från användningen**. Om hornet används på wave 2 kan det alltså användas igen på wave 5. Används det på wave 7 är nästa möjlighet wave 10.
 
-Exempel: används hornet på wave 2 kan det användas igen på wave 5.
-Används det på wave 7 kan det användas igen på wave 10.
+Commander har dessutom en starkare lootpool än övriga klasser och behandlas alltid som minst högsta contribution tier när rewardalternativen skapas.
 
-Det är alltså **inte** låst till särskilda förutbestämda waves.
-
-Commander har dessutom en förbättrad lootpool och får alltid minst
-högsta contribution tier när reward-alternativen skapas.
+**Passar dig som:** vill tajma en kraftig lagbuff till de waves där gruppen behöver den som mest.
 
 ## Berserker
 
-Berserker är den aggressiva glass cannon-klassen.
+**Berserker** satsar allt på damage.
 
-**Startutrustning:**
+**Startar med**
+- Iron Axe
+- Full Leather Armor
 
--   Iron Axe
--   Full Leather Armor
+Berserker har **30 % mindre max-HP**, men gör **+35 % damage**.
 
-Berserker har bara **70 procent av normal max-HP**, men gör **+35
-procent outgoing damage**.
+Klassen är obegränsad och lootpoolen fokuserar på offensiv melee-utrustning, axes, Golden Apples och lätt armor. Senare Berserker Axes kan få Sharpness II.
 
-Lootpoolen fokuserar på aggressiv melee-utrustning, Diamond Axe, mat,
-Golden Apples och lätt armor. Från wave 10 kan Berserker Axe få
-Sharpness II.
+**Passar dig som:** hellre dödar hotet snabbt än står och tankar det.
 
-Berserker är obegränsad.
+---
 
-# Hur waves fungerar
+# Waves och svårighetskurva
 
-När en wave startar visas aktuell wave i bossbaren och deltagarna får en
-titel.
+Survival består av **20 waves**. När en wave börjar visas den i bossbaren och deltagarna får tydlig information om vilken wave som är aktiv.
 
-Var femte wave markeras som **BOSSWAVE**.
+Var femte wave fungerar som en tydligare milstolpe. Samtidigt växer både fiendernas styrka och lagets möjligheter genom loot och välsignelser.
 
-Healers får tillbaka sin Healing Totem-användning. Summoners får sin
-summon-token. Därefter spawnar fienderna.
+Healers får tillbaka sin Healing Totem-användning vid ny wave. Summoners får sin nya summon-token.
 
-## Antal mobs
+## Hur många mobs kommer?
 
-Grundformeln innan wave-multipliers är:
+Grundmängden påverkas både av aktuell wave och hur många spelare som deltar:
 
-``` text
+```text
 4 + wave × 2 + ceil(antal spelare × 1,35)
 ```
 
-Därefter används olika multipliers beroende på wave. Engine har en hård
-maxgräns på **50 mobs** i den normala wave-spawnen.
+Därefter justeras mängden beroende på vilken wave det är. Survival har en gräns på **50 mobs** i den normala wave-spawnen.
 
-Bosswaves minskar det rena antalet mobs ytterligare och flyttar i
-stället mer av svårigheten till starkare fiender.
+Svårigheten kommer alltså inte bara från fler mobs. Sena waves använder starkare kombinationer, mer HP, högre damage och farligare mobtyper.
 
-## Wave-timers
+## Om laget inte hinner rensa en wave
 
-Om laget inte hinner döda alla mobs kommer nästa wave ändå.
+| Waves | Tid |
+| --- | ---: |
+| **1–5** | 75 sekunder |
+| **6–10** | 90 sekunder |
+| **11–15** | 105 sekunder |
+| **16–19** | 135 sekunder |
+| **20** | Ingen vanlig tidsgräns |
 
-  Waves          Tid innan nästa wave kan tvingas fram
-  ------------ ---------------------------------------
-  1 till 5                                 75 sekunder
-  6 till 10                                90 sekunder
-  11 till 15                              105 sekunder
-  16 till 19                              135 sekunder
-  20                                 Ingen sådan timer
+Om tiden tar slut kan nästa wave börja **även om fiender från den gamla waven fortfarande lever**.
 
-Kvarvarande mobs försvinner inte när timern går ut. De ligger kvar
-samtidigt som nästa wave spawnar.
+De gamla mobsen försvinner inte. Ett lag som tappar tempo kan därför plötsligt behöva slåss mot flera waves samtidigt.
 
-Det betyder att ett lag som halkar efter kan få flera waves aktiva
-samtidigt.
+---
 
-# Fiender och svårighetskurva
+# Fienderna
 
-Alla eventmobs får explicit HP och attack scaling. Engine försöker
-alltså inte bara göra sena waves svåra genom att ösa in enorma mängder
-entities.
+Tidiga waves använder framför allt Zombies, Skeletons och Spiders. Därefter introduceras gradvis farligare fiender.
 
-Vanliga typer under tidigare waves är Zombie, Skeleton och Spider.
-Pillagers börjar dyka upp från wave 6 och Vindicators från wave 9.
+Pillagers börjar dyka upp från wave 6, Vindicators från wave 9 och senare blir Witches en större del av hotbilden.
 
-Från wave 10 blir sammansättningen hårdare med fler Pillagers,
-Vindicators och Witches.
+Mobsen använder definierad Survival-utrustning. De ska inte slumpmässigt dyka upp med vanilla-enchantad utrustning som eventet inte har bestämt.
 
-## Wave 18
+Skeletons använder bows, Pillagers crossbows och Vindicators Iron Axes. Sena waves kan ge vissa fiender förbättrad armor och definierade weapon enchants.
 
-Wave 18 introducerar en betydligt aggressivare late-game mix med bland
-annat:
+Survival-mobs brinner inte upp i solljus.
 
--   Zombies
--   Skeletons
--   Pillagers
--   Vindicators
--   Witches
+## Wave 18–20
 
-## Wave 19
+De sista tre wavesen är Survival-eventets riktiga endgame.
 
-Wave 19 innehåller dessutom en **Ravager** som första mob och fortsätter
-med den hårda late-game mixen.
+### Wave 18
+Här börjar den hårdaste mixen av Zombies, Skeletons, Pillagers, Vindicators och Witches.
 
-## Wave 20
+### Wave 19
+Svårigheten höjs ytterligare och en **Ravager** kommer in tillsammans med late-game mixen.
 
-Wave 20 är finalen.
+### Wave 20
+Finalen innehåller bland annat:
 
-Den innehåller bland annat:
+- **2 Wardens**
+- Ravager
+- Witches
+- Vindicators
+- Pillagers
+- Skeletons
+- Zombies
 
--   en Ravager
--   **2 Wardens**
--   Witches
--   Vindicators
--   Pillagers
--   Skeletons
--   Zombies
+Wardens har minst **500 HP** och särskild damage-skalning. Wave 20 är byggd för att vara betydligt brutalare än en vanlig wave.
 
-Första fienden fungerar samtidigt som finalens boss och får kraftigt
-förstärkt HP och damage.
+---
 
-Wardens får aldrig mindre än **500 HP** och har särskild damage-scaling.
+# Loot mellan waves
 
-Wave 18 till 20 är medvetet byggda för att vara eventets stora
-svårighetsvägg.
+Efter en klarad wave får varje överlevande spelare **tre konkreta rewardalternativ**.
 
-# Mob-utrustning
+Det finns inga hemliga "class rewards". Du ser vad du väljer innan du klickar.
 
-Survival rensar mobbens vanliga slumpmässiga utrustning och bygger
-därefter upp tillåten utrustning själv.
+Rewardpoolen anpassas efter din klass. En Bowman får exempelvis ranged weapons och ammo, Tank får tyngre defensiv utrustning och Summoner får utrustning som passar den klassens spelstil.
 
-Det innebär att en Skeleton inte slumpmässigt ska dyka upp med
-vanilla-enchantad superutrustning.
+Menyn hålls kvar tills du gjort ditt rewardval.
 
-Skeletons får Bow. Pillagers får Crossbow. Vindicators får Iron Axe.
+## Din insats påverkar loot
 
-Från wave 15 kan vissa Skeleton-bows få Power I. Från wave 18 kan de få
-Power II. Pillager-crossbows kan få Quick Charge I från wave 18.
+Survival mäter din contribution under waven:
 
-Viss deterministic armor börjar också dyka upp sent. Från wave 15 kan
-vissa Zombies och Skeletons få Chainmail Helmet. Från wave 18 kan vissa
-få Iron Helmet och Iron Chestplate.
+```text
+score = damage + kills × 20
+```
 
-Mobutrustningen har **0 procent drop chance**.
+Din score jämförs med lagets genomsnitt. Högre contribution öppnar en större del av klassens rewardpool.
 
-# Coins
+| Tier | Ungefärlig nivå |
+| --- | --- |
+| **0** | Ingen mätbar contribution |
+| **1** | Under 55 % av lagets fair share |
+| **2** | Minst 55 % |
+| **3** | Minst 100 % |
+| **4** | Minst 150 % |
 
-Survival har två separata sätt att tjäna Coins.
+Commander behandlas alltid som minst **tier 4**.
 
-## 5 000 Coins per mobkill
+Systemet försöker också undvika att erbjuda uppenbara utrustningsnedgraderingar.
+
+### Exempel på klassloot
+
+**Soldier:** swords, shields och tung armor.
+
+**Tank:** shields, axes, Golden Apples och tung armor.
+
+**Bowman:** bows, crossbows, stora mängder arrows, Spectral Arrows, shields och lätt armor.
+
+**Healer:** Golden Carrots, swords, Healer Shield, Golden Apples och lätt armor.
+
+**Summoner:** stora mängder arrows, crossbow, Golden Apples, sword, Summoner Shield och lätt armor.
+
+**Commander:** bättre Golden Apple rewards, Commander Shield, Diamond Sword, förbättrad Crossbow och tung armor.
+
+**Berserker:** offensiva axes, mat, Golden Apples och lätt armor.
+
+---
+
+# Lagets välsignelser
+
+Efter wave **5, 10 och 15** röstar laget om en gemensam permanent buff.
+
+Röstningen är öppen i upp till **45 sekunder**. Om alla levande deltagare röstar kan resultatet avgöras tidigare. Vid lika resultat väljs en av de delade vinnarna slumpmässigt.
+
+## Efter wave 5
+
+### Krigets välsignelse
+**+10 % damage** resten av eventet.
+
+### Livets välsignelse
+**+2 max hearts** resten av eventet.
+
+### Smedens välsignelse
+**50 % chans att förhindra durabilityförlust** på utrustning under eventet.
+
+## Efter wave 10
+
+### Stålsatt
+**Resistance I** resten av eventet.
+
+### Vapensmedens gåva
+Uppgraderar lagets befintliga swords och axes med Sharpness och bows med Power.
+
+### Fältproviant
+Ger extra hunger och saturation efter varje klarad wave.
+
+## Efter wave 15
+
+### Berserk
+**+20 % damage och +10 % attack speed** resten av eventet.
+
+### Andra andningen
+Efter varje klarad wave återställs **50 % av spelarens saknade HP**, plus full hunger och saturation.
+
+### Sista rustningen
+**+4 max hearts** resten av eventet.
+
+> [!TIP]
+> Buffar kan kombineras. Klassbonusar, välsignelser och Commanders Stridshorn kan därför göra mycket stor skillnad under de sista wavesen.
+
+---
+
+# Coins och belöningar
 
 Varje personlig kill på en Survival-mob ger direkt:
 
 **5 000 Coins**
 
-Detta är separat från wave-belöningen.
+Utöver detta finns en wave-belöning. Den fungerar som en **checkpoint**, inte som en summa av alla tidigare waves.
 
-## Wave-belöning
+Om du exempelvis klarar wave 10 är din checkpoint 375 000 Coins. Du får inte wave 1 + wave 2 + wave 3 och så vidare.
 
-Wave-belöningen är ett **checkpointvärde**, inte en staplande summa.
+| Klarad wave | Belöning |
+| ---: | ---: |
+| 1 | 50 000 |
+| 2 | 62 500 |
+| 3 | 75 000 |
+| 4 | 87 500 |
+| 5 | 125 000 |
+| 6 | 150 000 |
+| 7 | 175 000 |
+| 8 | 200 000 |
+| 9 | 225 000 |
+| 10 | 375 000 |
+| 11 | 400 000 |
+| 12 | 450 000 |
+| 13 | 500 000 |
+| 14 | 550 000 |
+| 15 | 625 000 |
+| 16 | 700 000 |
+| 17 | 775 000 |
+| 18 | 850 000 |
+| 19 | 925 000 |
+| **20** | **1 000 000** |
 
-Om du klarar wave 8 är din aktuella slutbelöning värdet för wave 8. Du
-får alltså inte wave 1 + wave 2 + wave 3 och så vidare.
+Om du elimineras betalas värdet från din senaste klarade checkpoint ut. Coins du redan fått från mob-kills är separata och behålls.
 
-    Klarad wave    Slutbelöning
-  ------------- ---------------
-              1          50 000
-              2          62 500
-              3          75 000
-              4          87 500
-              5         125 000
-              6         150 000
-              7         175 000
-              8         200 000
-              9         225 000
-             10         375 000
-             11         400 000
-             12         450 000
-             13         500 000
-             14         550 000
-             15         625 000
-             16         700 000
-             17         775 000
-             18         850 000
-             19         925 000
-             20   **1 000 000**
+---
 
-Om du blir utslagen betalas värdet från din **senaste klarade wave** ut.
+# Statistik och rekord
 
-Mobkill-Coins som du redan tjänat är separata från detta.
+Survival följer mer än bara vem som landar sista slaget.
 
-# Loot mellan waves
+Efter eventet visas statistik för:
 
-Efter en klarad wave får varje överlevande spelare ett personligt
-reward-GUI.
+- **Damage**
+- **Kills**
+- **Healing**
+- **Summon damage**
 
-Tre konkreta items visas. Det finns inga hemliga `class reward`-lådor.
-Det som visas är det du faktiskt väljer.
+Det betyder att Healers och Summoners också får sin faktiska contribution synlig.
 
-Reward-menyn kan inte bara stängas bort. Om du fortfarande väntar på ett
-val öppnas den igen.
+## Survival-rekord
 
-## Contribution tier
+Varje avslutat event kan registrera lagets:
 
-Vilken del av rewardpoolen du får tillgång till påverkas av din insats i
-den senaste waven.
+- högsta nådda wave
+- antal dödade mobs
+- datum
+- deltagare
 
-Engine räknar:
+Lagrekordet prioriterar först **högsta wave** och därefter **flest kills**.
 
-``` text
-score = damage + kills × 20
-```
+## Flest mob-kills genom tiderna
 
-Din score jämförs sedan med lagets genomsnittliga score.
+Varje spelares Survival-kills sparas även som en permanent all-time statistik.
 
-Contribution tiers:
+Den statistiken används till den individuella Survival-leaderboarden och har dessutom betydelse när flera spelare med samma Patreonstatus konkurrerar om Commander, Healer eller Summoner.
 
--   0, ingen mätbar contribution
--   1, under 55 procent av fair share
--   2, minst 55 procent av fair share
--   3, minst 100 procent av fair share
--   4, minst 150 procent av fair share
+Det finns alltså en extra anledning att fortsätta jaga kills även efter att du redan klarat Survival tidigare.
 
-Högre tier gör att fler möjliga rewards kan komma med i den pool som de
-tre alternativen slumpas från.
+---
 
-Commander behandlas alltid som minst **tier 4**.
+# När du elimineras
 
-Engine försöker också filtrera bort uppenbara utrustningsnedgraderingar
-och identiska permanenta equipment-items som spelaren redan har.
+Dödligt damage eliminerar dig från den aktiva gruppen.
 
-## Gemensamma rewards
+Din checkpoint-belöning baseras på den senaste wave som laget hann klara medan du fortfarande deltog. Survival fortsätter så länge minst en deltagare fortfarande är aktiv.
 
-Alla klasser kan få mat och Golden Apples. Från wave 11 kan
-`Survival Golden Apple` också finnas i poolen.
+Om hela laget elimineras är eventet över.
 
-Utöver detta har varje klass sin egen rewardprofil.
+Klarar gruppen **wave 20** har laget besegrat Survival.
 
-### Svärd loot
+---
 
-Svärd kan få Iron Sword, Diamond Sword, Shield och tung
-armorprogression.
+# Bygg laget, inte bara din egen klass
 
-Armorprogressionen går stegvis från Iron Boots på wave 2 till full
-Diamond progression för de sena wavesen.
+Survival är som starkast när klasserna kompletterar varandra.
 
-### Tank loot
+En Tank kan hålla fronten medan Bowman arbetar på avstånd. Healers kan hålla laget kvar i striden, Summoners fyller arenan med extra allierade och Commander kan spara Stridshornet till den wave där laget verkligen behöver 20 % extra damage. Berserkers kan samtidigt pressa upp lagets damage rejält, men behöver mer skydd eftersom deras HP är lägre.
 
-Tank kan få Shield, Iron Axe, Diamond Axe, Golden Apples och tung armor.
-
-Tankens Diamond Chestplate blir tillgänglig från wave 11.
-
-### Bågskytt loot
-
-Bågskytt kan få:
-
--   Arrows
--   Bow
--   Crossbow
--   stora Ammo Bundles
--   Spectral Arrows
--   Shield
--   Chainmail Armor
-
-Bättre enchantments låses upp senare i eventet.
-
-### Healer loot
-
-Healer kan få:
-
--   Golden Carrots
--   Iron Sword
--   Diamond Sword
--   Healer Shield
--   Golden Apples
--   Chainmail Armor
-
-### Summoner loot
-
-Summoner kan få:
-
--   Arrows
--   Golden Apple
--   Quick Charge Crossbow
--   Iron Sword
--   Summoner Shield
--   Chainmail Armor
-
-### Commander loot
-
-Commander har en medvetet bättre rewardpool:
-
--   2 till 3 Golden Apples beroende på wave
--   Commander Shield
--   Diamond Commander Sword
--   Commander Crossbow med Quick Charge II
--   tung armorprogression upp till Diamond
-
-Commander får dessutom minst contribution tier 4 när alternativen
-skapas.
-
-### Berserker loot
-
-Berserker kan få:
-
--   extra mat
--   Diamond Berserker Axe
--   Golden Apple
--   Chainmail Armor
-
-Från wave 10 kan Berserker Axe få Sharpness II.
-
-# Lagets välsignelser
-
-Efter wave **5, 10 och 15** får laget rösta om en gemensam buff.
-
-Röstningen är öppen i **45 sekunder**. Om alla levande spelare röstar
-kan den avslutas tidigare.
-
-Flest röster vinner. Vid exakt lika resultat väljer Engine slumpmässigt
-mellan de alternativ som delar förstaplatsen.
-
-Efter röstningen öppnas det vanliga reward-GUI:t.
-
-## Efter wave 5
-
-**Krigets välsignelse**
-
-+10 procent damage resten av eventet.
-
-**Livets välsignelse**
-
-+2 max hearts resten av eventet.
-
-**Smedens välsignelse**
-
-50 procent chans att förhindra durabilityförlust på utrustning under
-eventet.
-
-## Efter wave 10
-
-**Stålsatt**
-
-Resistance I resten av eventet.
-
-**Vapensmedens gåva**
-
-Uppgraderar lagets befintliga swords och axes med ytterligare Sharpness
-och bows med ytterligare Power.
-
-**Fältproviant**
-
-Ger extra hunger och saturation efter varje klarad wave.
-
-## Efter wave 15
-
-**Berserk**
-
-+20 procent damage och +10 procent attack speed resten av eventet.
-
-**Andra andningen**
-
-Efter varje klarad wave återställs 50 procent av spelarens saknade HP
-samt full hunger och saturation.
-
-**Sista rustningen**
-
-+4 max hearts resten av eventet.
-
-# Damage multipliers
-
-Flera buffs kan kombineras multiplicativt.
-
-Exempel på aktiva modifiers:
-
--   Krigets välsignelse, ×1,10
--   Berserk-välsignelsen, ×1,20
--   Berserker-klassen, ×1,35
--   Tank-klassen, ×0,70
--   aktivt Commander Stridshorn, ×1,20
-
-Det gör att lagets klasskombinationer och välsignelser får stor
-betydelse i sena waves.
-
-# Healing och support-feedback
-
-När en spelare får faktisk healing från en Healer visas mängden i
-actionbaren.
-
-Exempel:
-
-``` text
-❤ +4.0 hjärtan från Spelarnamn
-```
-
-Eventet mäter också Healerns totala faktiska healing. Overheal räknas
-inte som utförd healing.
-
-Summoners får på motsvarande sätt sin summons faktiska damage
-registrerad på ägaren.
-
-# Statistik efter eventet
-
-När Survival avslutas publicerar Engine eventstatistik.
-
-Topplistor visas för:
-
--   mest damage
--   flest kills
--   Summon damage, om någon sådan damage gjordes
--   mest healing, om healing registrerades
-
-Därefter visas varje deltagares individuella rad med damage, kills och
-eventuella supportvärden.
-
-Detta gör att även spelare som inte har flest kills kan se sin faktiska
-contribution.
-
-# Permanenta rekord och leaderboards
-
-Survival sparar både lagrekord och individuella kills i SQL.
-
-## Lagrekord
-
-Varje avslutat Survival sparar:
-
--   nådd wave
--   totalt antal kills
--   datum
--   deltagare
-
-Lagrekord sorteras först på högsta wave, därefter flest kills och
-därefter tidigaste datum vid lika resultat.
-
-Det finns en spawn-leaderboard med id:
-
-``` text
-survival-record
-```
-
-## Flest Survival-mobs någonsin
-
-Varje spelares kills läggs även till i en permanent all-time räknare.
-
-Den används både till leaderboarden och som andra prioriteringsnivå vid
-konkurrens om begränsade klasser.
-
-Leaderboard-id:
-
-``` text
-survival-kills
-```
-
-Serveradministratör kan placera den med:
-
-``` text
-/gzleaderboard addhere survival-kills
-```
-
-# Eliminering
-
-När en deltagare elimineras lämnar spelaren den aktiva gruppen.
-
-Spelaren får då sin checkpoint-belöning från senaste klarade wave och
-information om hur många mobs personen dödade.
-
-Survival fortsätter så länge minst en deltagare fortfarande är aktiv.
-
-Om inga deltagare återstår avslutas eventet som förlust.
-
-Om laget klarar wave 20 avslutas eventet som seger.
-
-# Väder och dagsljus
-
-Survival-mobs och Summoner-mobs har ett särskilt skydd mot
-`EntityCombustEvent` och ska därför inte brinna upp av solljus.
-
-Den nuvarande schemaläggaren sätter samtidigt Survival-världen till dag
-och **storm** medan det automatiska eventet körs och återställer
-världens tidigare tid och väder efteråt.
-
-Det betyder att solskyddet finns i moblogiken, men den schemalagda
-eventmiljön använder fortfarande storm i den aktuella Engine-versionen.
-
-# Admin
-
-Survival har följande administrationskommandon:
-
-``` text
-/survival addspawn
-/survival clearspawns
-/survival start
-/survival stop
-/survival status
-```
-
-`addspawn` sparar platsen där administratören står som mobspawn för den
-aktuella runtime-konfigurationen.
-
-Det automatiska Survival-eventet använder spelspawn:
-
-``` text
-648 78 774
-```
-
-och två mobspawns:
-
-``` text
-648 74 810
-648 74 794
-```
-
-Eventvärlden hämtas från `daily-survival.world`, med serverns vanliga
-spawn-world som fallback.
-
-# Kort sammanfattning
-
-Survival är ett 20-wave lag-event där gruppen först väljer klasser och
-därefter bygger sin styrka genom klasspecifik loot och gemensamma
-välsignelser.
-
-De begränsade klasserna fördelas först efter 45 sekunder enligt
-**Patreon, historiska Survival-kills, valtid**.
-
-Varje mobkill ger 5 000 Coins. Wave-belöningen är ett separat
-checkpointvärde och når 1 000 000 Coins på wave 20.
-
-Healer, Summoner och Commander har egna aktiva eller passiva
-lagfunktioner. Tank och Berserker förändrar grundläggande HP och damage
-kraftigt. Looten utvecklas under eventet och de sista wavesen är byggda
-som eventets endgame.
-
-Survival mäter dessutom damage, kills, healing och summon damage och
-sparar permanenta lagrekord och individuella all-time kills.
+Det är kombinationen av **klassval, loot, välsignelser och lagspel** som avgör hur långt gruppen kommer.
