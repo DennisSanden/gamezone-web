@@ -22,7 +22,6 @@ relatedArticles:
   description: Serverns kommandon.
   title: Kommandon
 title: Survival
-updatedAt: 2026-10-02
 version: 2.0
 ---
 
