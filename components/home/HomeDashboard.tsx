@@ -120,21 +120,23 @@ export async function HomeDashboard() {
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
       <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.quickCard}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
-              <Link href="/status" className={`${styles.quickCard} ${styles.serverQuickCard}`}>
-          <div className={styles.quickIcon} aria-hidden="true">●</div>
-          <div className={styles.serverQuickBody}>
-            <strong>SERVERINFO</strong>
-            <div className={styles.serverQuickMeta}>
-              <span>play.gamezonemc.se</span>
-              <span>Java 26.1.2</span>
-              <span>{serverStatus.playersOnline} / {serverStatus.playersMax}</span>
-              <span className={serverStatus.online ? styles.serverQuickOnline : styles.serverQuickOffline}>
-                {serverStatus.online ? "Online" : "Offline"}
-              </span>
-            </div>
+      <Link href="/status" className={`${styles.quickCard} ${styles.serverQuickCard}`}>
+        <span className={styles.serverQuickIcon}><Icon name="server"/></span>
+        <div className={styles.serverQuickBody}>
+          <div className={styles.serverQuickHeading}>
+            <strong>Serverinfo</strong>
+            <span className={serverStatus.online ? styles.serverQuickOnline : styles.serverQuickOffline}>
+              <i />{serverStatus.online ? "Online" : "Offline"}
+            </span>
           </div>
-        </Link>
-<Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
+          <div className={styles.serverEndpoints}>
+            <span><b>Java</b><code>play.gamezonemc.se</code><em>25565</em></span>
+            <span><b>Bedrock</b><code>play.gamezonemc.se</code><em>25566</em></span>
+          </div>
+          <small>{serverStatus.playersOnline} / {serverStatus.playersMax} spelare online</small>
+        </div>
+      </Link>
+      <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
 
