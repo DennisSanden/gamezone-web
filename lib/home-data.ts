@@ -32,7 +32,7 @@ export async function getServerStatus(): Promise<ServerStatus> {
     return {
       online: data.online === true,
       playersOnline: data.players?.online ?? 0,
-      playersMax: 40,
+      playersMax: 55,
       motd: data.motd?.clean?.join(" "),
     };
   } catch {
