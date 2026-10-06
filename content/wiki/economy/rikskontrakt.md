@@ -41,6 +41,9 @@ Alias som `/contract` och `/kontrakt` fungerar också.
 > [!IMPORTANT]
 > Settlementet måste vara minst **Level 3** för att använda Rikskontrakt.
 
+> [!NOTE]
+> **Företagskontrakt** är separata beställningar från företag men använder samma Rikskistor. Läs mer i [Företagskontrakt](/wiki/economy/foretagskontrakt).
+
 ## Fem kontrakt, ett aktivt åt gången
 
 Alla fem kontrakt kan slutföras under samma vecka, men settlementet kan bara ha **ett ACTIVE-kontrakt åt gången**.
