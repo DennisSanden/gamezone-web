@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { getStreamers } from "@/lib/streamers";
 import { getLeaderboard, getServerStatus, type LeaderboardEntry } from "@/lib/home-data";
+import { ServerAddressCopy } from "./ServerAddressCopy";
 import styles from "./HomeDashboard.module.css";
 
 type IconName = "compass" | "rules" | "discord" | "server" | "version" | "players" | "clock" | "crown" | "tools" | "coin" | "bank" | "chest" | "watch" | "sales";
@@ -87,55 +88,44 @@ export async function HomeDashboard() {
   ].slice(0, 4);
 
   return <div className={styles.page}>
-    <section className={styles.hero}>
-      <div className={styles.heroOverlay}/>
+    <section className={styles.hero} aria-label="Anslut till GameZone">
+      <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={styles.heroInner}>
         <div className={styles.heroCopy}>
-          <h1><span>GameZone</span></h1>
-          <p className={styles.intro}>Varje spelare har en plats. Varje stad har en historia.</p>
+          <p className={styles.heroEyebrow}>SVENSK MINECRAFT SMP • JAVA + BEDROCK</p>
+          <p className={styles.heroBrand}>GAMEZONE</p>
+          <p className={styles.heroTagline}>Varje spelare har en plats. Varje stad har en historia.</p>
+          <ServerAddressCopy />
+          <div className={styles.heroConnectionDetails}>
+            <span>JAVA <strong>25565</strong></span>
+            <span>BEDROCK <strong>25566</strong></span>
+            <span className={styles.heroServerStatus}>
+              <i className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline} />
+              {serverStatus.online
+                ? `${serverStatus.playersOnline} spelare online`
+                : "Serverstatus är inte tillgänglig"}
+            </span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section className={styles.playSection} aria-label="Spela och stötta GameZone">
+    <section className={styles.playSection} aria-label="Bli en del av GameZone">
       <div className={styles.heroActions}>
         <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.playButton}>
           <span className={styles.playButtonIcon}>↗</span>
-          <span>Spela nu</span>
+          <span>Gå med i Discord</span>
         </a>
-
         <Link href="/patreon" className={styles.patreonButton}>
           <span className={styles.patreonButtonIcon}>♥</span>
           <span>Stötta oss på Patreon</span>
         </Link>
-      </div>
-      <div className={styles.playMeta}>
-        <span className={serverStatus.online ? styles.playStatusOnline : styles.playStatusOffline}/>
-        <strong>{serverStatus.online ? "Servern är online" : "Servern är offline"}</strong>
-        <span>•</span>
-        <span>play.gamezonemc.se</span>
       </div>
     </section>
 
     <section className={styles.quickGrid}>
       <Link href="/kom-igang" className={styles.quickCard}><Icon name="compass"/><strong>Kom igång</strong><small>Från Discord till första settlement</small></Link>
       <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer" className={styles.quickCard}><Icon name="discord"/><strong>Bli whitelistad</strong><small>Gå med och ansök i Discord</small></a>
-      <Link href="/status" className={`${styles.quickCard} ${styles.serverQuickCard}`}>
-        <span className={styles.serverQuickIcon}><Icon name="server"/></span>
-        <div className={styles.serverQuickBody}>
-          <div className={styles.serverQuickHeading}>
-            <strong>Serverinfo</strong>
-            <span className={serverStatus.online ? styles.serverQuickOnline : styles.serverQuickOffline}>
-              <i />{serverStatus.online ? "Online" : "Offline"}
-            </span>
-          </div>
-          <div className={styles.serverEndpoints}>
-            <span><b>Java</b><code>play.gamezonemc.se</code><em>25565</em></span>
-            <span><b>Bedrock</b><code>play.gamezonemc.se</code><em>25566</em></span>
-          </div>
-          <small>{serverStatus.playersOnline} / {serverStatus.playersMax} spelare online</small>
-        </div>
-      </Link>
       <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
