@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { getStreamers } from "@/lib/streamers";
 import { getLeaderboard, getServerStatus, type LeaderboardEntry } from "@/lib/home-data";
 import { ServerAddressCopy } from "./ServerAddressCopy";
 import styles from "./HomeDashboard.module.css";
@@ -66,26 +65,12 @@ function MiniBoard({ title, eyebrow, icon, entries, suffix, tone, linkCompanies 
 }
 
 export async function HomeDashboard() {
-  const [serverStatus, richest, residents, sales, creators] = await Promise.all([
+  const [serverStatus, richest, residents, sales] = await Promise.all([
     getServerStatus(),
     getLeaderboard("player-coins"),
     getLeaderboard("settlement-members"),
     getLeaderboard("company-sales"),
-    getStreamers(),
   ]);
-
-  const minecraftLiveCreators = creators.filter(
-    (creator) => creator.live && creator.gameName?.trim().toLowerCase() === "minecraft"
-  );
-
-  const homepageFeaturedCreators = [
-    ...minecraftLiveCreators,
-    ...creators.filter(
-      (creator) => !minecraftLiveCreators.some(
-        (liveCreator) => liveCreator.twitchLogin === creator.twitchLogin
-      )
-    ),
-  ].slice(0, 4);
 
   return <div className={styles.page}>
     <section className={styles.hero} aria-label="Anslut till GameZone">
@@ -129,65 +114,6 @@ export async function HomeDashboard() {
       <Link href="/wiki" className={styles.quickCard}><Icon name="rules"/><strong>Wiki</strong><small>System, guider och serverinformation</small></Link>
       <Link href="/regler" className={styles.quickCard}><Icon name="rules"/><strong>Regler</strong><small>Läs innan du börjar spela</small></Link>
     </section>
-
-    {homepageFeaturedCreators.length > 0 ? <section className={styles.liveNowSection} aria-label="GameZone Creators">
-      <div className={styles.liveNowHeader}>
-        <div>
-          <span className={styles.liveStreamEyebrow}><i/> LIVE PÅ SERVERN JUST NU</span>
-          <h2>Följ GameZone live</h2>
-          <p>Live creators prioriteras. Övriga platser fylls med GameZone Creators.</p>
-        </div>
-        <div className={styles.liveNowActions}>
-          <Link href="/live">Visa alla live →</Link>
-          <a href="https://discord.gg/Uk9TzJh3DJ" target="_blank" rel="noreferrer">Bli Creator →</a>
-        </div>
-      </div>
-
-      <div className={styles.liveStreamGrid}>
-        {homepageFeaturedCreators.map((creator) => {
-          const showLivePlayer =
-            creator.live && creator.gameName?.trim().toLowerCase() === "minecraft";
-
-          return <div key={creator.twitchLogin} className={styles.liveStreamFeature} aria-label={`${creator.displayName} på Twitch`}>
-            <div className={styles.liveStreamPlayer}>
-              {showLivePlayer ? (
-                <iframe
-                  className={styles.liveStreamFrame}
-                  src={`https://player.twitch.tv/?channel=${encodeURIComponent(creator.twitchLogin)}&parent=gamezonemc.se&parent=www.gamezonemc.se&autoplay=true&muted=true`}
-                  title={`${creator.displayName} live på Twitch`}
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : (
-                <a
-                  href={creator.channelUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.offlineStreamPreview}
-                  style={(creator.offlineImageUrl || creator.profileImageUrl)
-                    ? { backgroundImage: `url(${creator.offlineImageUrl || creator.profileImageUrl})` }
-                    : undefined}
-                >
-                  <span className={styles.offlineStreamShade}/>
-                  <span className={styles.offlineStreamBadge}>OFFLINE</span>
-                </a>
-              )}
-            </div>
-
-            <div className={styles.liveStreamMeta}>
-              <div>
-                <h3>{creator.displayName}</h3>
-                <p>{showLivePlayer ? (creator.streamTitle || "Live från GameZone") : (creator.description || "GameZone Creator på Twitch")}</p>
-              </div>
-              <div className={styles.liveStreamFacts}>
-                {showLivePlayer ? <span>{formatValue(creator.viewers)} tittare</span> : <span>Offline</span>}
-                <a href={creator.channelUrl} target="_blank" rel="noreferrer">{showLivePlayer ? "Titta live →" : "Twitch →"}</a>
-              </div>
-            </div>
-          </div>;
-        })}
-      </div>
-    </section> : null}
 
     <section className={styles.leaderboardPanel}>
       <div className={styles.sectionHeader}><span><small>Serverns topp just nu</small><h2>Leaderboards</h2></span><Link href="/leaderboards">Se alla →</Link></div>
