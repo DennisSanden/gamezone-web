@@ -16,6 +16,7 @@ import ActiveBountiesPanel from "./ActiveBountiesPanel";
 import FarmGuideTable from "./FarmGuideTable";
 import SettlementInfoBox from "./SettlementInfoBox";
 import SettlementUpgradePanel from "./SettlementUpgradePanel";
+import SettlementBonusTabs from "./SettlementBonusTabs";
 import {
     isSettlementBuildingGroup,
     type SettlementBuildingGroup,
@@ -186,6 +187,15 @@ export default function WikiArticle({
                         </div>
                     )}
                 </section>
+
+                {article.categorySlug === "settlements" &&
+                    article.articleSlug === "settlement-upgrades" && (
+                        <SettlementBonusTabs active="levels" />
+                    )}
+                {article.categorySlug === "buildings" &&
+                    article.articleSlug === "fysiska-byggnader" && (
+                        <SettlementBonusTabs active="buildings" />
+                    )}
 
                 {hasInfobox && (
                     <div className={styles.mobileInfobox}>

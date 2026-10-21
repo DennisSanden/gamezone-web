@@ -1,6 +1,6 @@
 ---
-title: "Fysiska byggnader"
-description: "Frivilliga byggnader med specialbonusar. Ingen byggnad krävs för settlementlevel."
+title: "Byggnadsbonusar"
+description: "Alla 24 frivilliga byggnader, deras licenser, krav och egna bonusar."
 category: "Byggnader"
 order: 0
 version: "2026.10"
@@ -11,13 +11,13 @@ infobox:
   byggnadskrav: "Frivilliga"
 ---
 
-## Frivilliga byggnader, nya grundregeln
+## Frivilliga byggnadsbonusar
 
 Settlements kan gå från level 1 till 50 utan att registrera en enda byggnad. Alla viktiga upplåsningar kommer i stället från settlementnivåerna. **Byggnader är frivilliga specialiseringar**, och kan ge ytterligare nytta till staden.
 
 Byggnadens licens, nivågräns och fysiska krav gäller fortfarande om ni vill aktivera byggnadens bonus. Öppna `/gz menu` → Settlement → Byggnader för den aktuella statusen.
 
-## Alla byggnader och deras bonusar
+## Alla 24 byggnader och deras bonusar
 
 | Byggnad | Nivå för licens | Licens | Bonus |
 |---|---:|---:|---|

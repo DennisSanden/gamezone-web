@@ -1,0 +1,60 @@
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 22px 0 8px;
+    padding: 7px;
+    border: 1px solid rgba(164, 196, 152, 0.16);
+    border-radius: 15px;
+    background: rgba(12, 22, 15, 0.92);
+}
+
+.tab {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 18px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #95a690;
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.tab:hover {
+    background: rgba(102, 144, 92, 0.11);
+    color: #e3eee0;
+}
+
+.tab.active {
+    border-color: rgba(169, 209, 155, 0.3);
+    background: linear-gradient(135deg, rgba(77, 115, 69, 0.4), rgba(37, 67, 42, 0.5));
+    color: #eaf4e7;
+}
+
+.title {
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.description {
+    color: #8f9f8b;
+    font-size: 0.68rem;
+}
+
+.tab.active .description {
+    color: #b9d1b0;
+}
+
+.tab:focus-visible {
+    outline: 2px solid #bad3b1;
+    outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+    .tabs { gap: 5px; padding: 5px; }
+    .tab { padding: 11px 10px; }
+    .title { font-size: 0.78rem; }
+    .description { font-size: 0.62rem; }
+}

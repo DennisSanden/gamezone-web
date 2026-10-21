@@ -1,6 +1,6 @@
 ---
 title: "Settlementnivåer 1–50"
-description: "Samtliga 50 nivåer, vilka bonusar de ger och hur nästa uppgradering fungerar."
+description: "50 nivåer med nivåbonusar, materialkrav och kostnader. Byggnadsbonusar har en egen flik."
 category: "Settlements"
 order: 2
 version: "2026.10"
@@ -14,7 +14,7 @@ infobox:
 
 ## Hur settlementprogression fungerar
 
-Ett settlement grundas på nivå 1. Därefter lämnar invånarna in material via sin registrerade Settlement Inventory och betalar Coins för att uppgradera. **Inga fysiska byggnader krävs längre** för progressionen. Byggnaderna är helt frivilliga och ger separata bonusar.
+Ett settlement grundas på nivå 1. Därefter lämnar invånarna in material via sin registrerade Settlement Inventory och betalar Coins för att uppgradera. **Inga fysiska byggnader krävs** för progressionen. Här visas bara nivåbonusar och uppgraderingskrav. Byggnadernas egna bonusar hittar du under fliken **Byggnadsbonusar**.
 
 Registrera inlämningskistan genom att titta på en kista och använda `/settlement inventory register`. Kraven och nästa nivåbonus visas i settlementets GUI och i settlementkistan. Insamlade material bokförs som uppgraderingsprogress. King och andra behöriga roller slutför nivåuppgraderingen.
 
