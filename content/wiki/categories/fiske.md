@@ -3,8 +3,6 @@ title: "Fiske"
 description: "Fisk och resurser från fiske."
 category: "Produktionskategorier"
 order: 6
-version: "1.3"
-engineVersion: "Production Registry"
 updatedAt: "2026-09-16"
 infoboxTitle: "Fiske"
 infobox:

@@ -3,8 +3,6 @@ title: "Högkejsardöme"
 description: "Settlementnivå 43 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 143
-version: "2.1"
-engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
@@ -27,16 +25,12 @@ relatedArticles:
 
 För att låsa upp Högkejsardöme uppgraderar settlementet från **Storkejsardöme**.
 
-> [!IMPORTANT]
-> Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+> Här ser du kostnaden och bonusen för nästa nivå.
 
 
 ## Bonus på nivå 43
 
-**Villager trades kan bli upp till 1 emerald billigare inom settlementet. Priset kan aldrig understiga 1 emerald.**
-
-> [!WARNING]
-> Den spelarunika Villager-rabatten på nivå 43 saknar ännu verifierad implementation i den här Engine-versionen.
+**Nivå 43 ger för närvarande ingen extra rabatt hos Villagers.**
 
 ## Krav för att låsa upp nivån
 

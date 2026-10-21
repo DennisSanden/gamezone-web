@@ -3,7 +3,6 @@ title: "Wandering Trader"
 description: "Tillfällig handlare med slumpade varor och Coinspriser."
 category: "Ekonomi"
 order: 10
-version: "2026.10"
 updatedAt: "2026-10-21"
 ---
 

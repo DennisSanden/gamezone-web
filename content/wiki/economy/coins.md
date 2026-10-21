@@ -3,8 +3,6 @@ title: "Coins"
 description: "GameZones valuta, hur du tjänar Coins och vad de används till."
 category: "Ekonomi"
 order: 1
-version: "1.3"
-engineVersion: "Economy Engine"
 updatedAt: "2026-09-21"
 infoboxTitle: "Coins"
 infobox:

@@ -3,8 +3,6 @@ title: "MarketWatch"
 description: "Se vilka resurser som efterfrågas av serverns settlements."
 category: "Ekonomi"
 order: 5
-version: "1.4"
-engineVersion: "MarketWatch"
 updatedAt: "2026-09-29"
 infoboxTitle: "MarketWatch"
 infobox:
@@ -83,7 +81,7 @@ En annons gäller i **6 timmar**. Företaget kan skapa högst **en annons var sj
 
 ## Dagens bristvaror
 
-Varje dag klockan **12:00 svensk tid** tar Engine en snapshot av MarketWatch och väljer de **10 items med störst faktisk brist**. Endast items med en brist större än 0 kan komma med. Listan ligger fast för den dagen även om marknadslagret förändras senare.
+Varje dag klockan **12:00 svensk tid** uppdateras listan över de **10 varor som det råder störst brist på**. Endast items med en brist större än 0 kan komma med. Listan ligger fast för den dagen även om marknadslagret förändras senare.
 
 De utvalda bristvarorna får **10 procentenheter lägre Server TAX** vid försäljning genom Shopping Chests från **12:00 till 00:00**. Rabatten är ett avdrag i procentenheter, inte en relativ rabatt. En skatt på 35 procent blir alltså 25 procent medan bristrabatten är aktiv. Skatten kan aldrig bli lägre än 0 procent.
 

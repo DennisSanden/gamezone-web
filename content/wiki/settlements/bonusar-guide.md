@@ -3,8 +3,6 @@ title: "Bonusar och begränsningar"
 description: "Praktiska regler för alla 50 nivåbonusar, byggnader och deras giltighet."
 category: "Settlements"
 order: 3
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 ---
 
@@ -23,9 +21,9 @@ updatedAt: "2026-10-21"
 
 Se [alla 50 nivåer](/wiki/settlements/settlement-upgrades) och [de frivilliga byggnaderna](/wiki/buildings/fysiska-byggnader).
 
-## Funktioner som fortfarande behöver färdigställas
+## Nivå 43
 
-Nivå 43 har ett definierat mål, Villager-trades upp till en emerald billigare, men i den levererade Engine-källan saknas en färdig spelarunik handelsimplementation. Wikin redovisar därför nivån, men lovar inte en rabatt som redan fungerar i spelet.
+Nivå 43 ger för närvarande ingen extra rabatt hos Villagers. Övriga nivåbonusar påverkas inte.
 
 ## Vad gäller i events?
 

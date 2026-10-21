@@ -91,7 +91,7 @@ export default async function WikiCategoryPage({
                         <div className={styles.sectionHeader}>
                             <div>
                 <span className={styles.eyebrow}>
-                  Dokumentation
+                  Guider
                 </span>
                                 <h2>Artiklar</h2>
                             </div>

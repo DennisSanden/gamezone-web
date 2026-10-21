@@ -3,8 +3,6 @@ title: "Sågverk"
 description: "Frivillig byggnad och aktuell bonus: 10 % chans att få extra plankor när man tillverkar plankor av stockar."
 category: "Byggnader"
 order: 3
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **10 % chans att få extra plankor när man tillverkar plankor av stockar.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Sågverk börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Sågverk har färdigställts och godkänts.
 
 ## Krav
 

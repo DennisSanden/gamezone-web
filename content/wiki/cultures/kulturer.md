@@ -3,8 +3,6 @@ title: "Kulturer"
 description: "Så fungerar kulturvalet, rikenas bonusar och kultursigillen som visas vid ditt namn."
 category: "Kulturer"
 order: 1
-version: "1.1"
-engineVersion: "Culture System"
 updatedAt: "2026-09-07"
 infoboxTitle: "Kulturer"
 infobox:
@@ -30,9 +28,6 @@ Varje karaktär på GameZone tillhör en av fyra kulturer: **Andvari, Varkesh, G
 När du ska välja kultur öppnas en meny direkt i spelet. Du behöver alltså inte skriva något kommando.
 
 Kulturen är både en del av din karaktärs identitet och ett gameplayval. Varje kultur har sin egen bonus och sitt eget sigill som gör tillhörigheten synlig för andra spelare.
-
-> [!IMPORTANT]
-> Kulturerna kommer i framtiden att få egen lore och mer bakgrund. Den delen av världen är inte färdig ännu. Wikin beskriver därför bara de funktioner som finns i spelet idag.
 
 ## När väljer jag kultur?
 

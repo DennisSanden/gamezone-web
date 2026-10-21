@@ -3,8 +3,6 @@ title: "Daily Rewards"
 description: "Hämta Coins, Character XP och ett slumpmässigt item varje dag. Värdet ökar fram till den stora bonusen på dag 7."
 category: "Ekonomi"
 order: 2
-version: "1.2"
-engineVersion: "Daily Rewards"
 updatedAt: "2026-09-06"
 infoboxTitle: "Daily Rewards"
 infobox:

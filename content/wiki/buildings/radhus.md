@@ -3,8 +3,6 @@ title: "Rådhus"
 description: "Frivillig byggnad och aktuell bonus: Settlementet får använda en extra aktiv policy. De två extra Lords får man redan på level 12."
 category: "Byggnader"
 order: 25
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Settlementet får använda en extra aktiv policy. De två extra Lords får man redan på level 12.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Rådhus börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Rådhus har färdigställts och godkänts.
 
 > [!IMPORTANT]
 > De två extra Lord-platserna ges redan på **settlementnivå 12**. Rådhuset ger en extra aktiv policyplats.

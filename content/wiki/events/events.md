@@ -3,8 +3,6 @@ title: "Events och schema"
 description: "Dagliga events klockan 20 och 21, Survival och roterande tävlingar."
 category: "Events"
 order: 1
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   kvällsschema: "20:00 och 21:00"
@@ -16,7 +14,7 @@ infobox:
 
 GameZoneMC har normalt **två schemalagda events per kväll**, ett klockan **20:00** och ett klockan **21:00**. **Survival spelas varje kväll**, men växlar mellan tiderna. Den andra platsen roterar mellan Archery Masters, Team Deathmatch, Hunger Games Solo och Hunger Games Duo.
 
-Tiderna kommer från Engines schemaläggare. Om serverteamet ändrar något manuellt gäller informationen i spelet eller serverns aktuella eventinformation. Hunger Games Solo och Duo ligger inte samtidigt i det ordinarie två-eventschemat.
+Eventschemat kan variera. Kontrollera alltid den aktuella tiden i spelet. Hunger Games Solo och Duo ligger inte samtidigt i det ordinarie två-eventschemat.
 
 ## Gå med
 
@@ -41,4 +39,4 @@ Hunger Games, Team Deathmatch och Archery Masters har separata ELO-system. Se [S
 /event start <Archery/Survival/TDM/HG>
 ```
 
-I Engine finns stöd för spelardrivna event med minst åtta deltagare, en anmälningsperiod på fem minuter och begränsning till ett sådant event per timme. Spelarstart är inte tillåten tätt inpå ett schemalagt event. GUI och kommandots hjälptext visar vad som finns tillgängligt.
+Du kan starta ett spelardrivet event med minst åtta deltagare, en anmälningsperiod på fem minuter och begränsning till ett sådant event per timme. Spelarstart är inte tillåten tätt inpå ett schemalagt event. GUI och kommandots hjälptext visar vad som finns tillgängligt.

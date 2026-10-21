@@ -3,8 +3,6 @@ title: "Kategoribyggnad"
 description: "Äldre samlingsnamn för produktionsbyggnader, som numera ger valfria specialbonusar."
 category: "Byggnader"
 order: 1
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 ---
 

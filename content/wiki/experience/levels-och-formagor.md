@@ -3,8 +3,6 @@ title: "Levels & förmågor"
 description: "Hela levelkurvan, alla milstolpar och exakt hur förmågorna påverkar din karaktär."
 category: "Level & XP"
 order: 3
-version: "1.1"
-engineVersion: "Character Progression"
 updatedAt: "2026-09-07"
 infoboxTitle: "Levels"
 infobox:

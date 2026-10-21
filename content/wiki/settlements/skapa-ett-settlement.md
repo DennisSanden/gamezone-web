@@ -3,8 +3,6 @@ title: "Skapa ett settlement"
 description: "Grunda ett nytt samhälle, välj kategori och börja utveckla en egen plats i GameZone-världen."
 category: "Settlements"
 order: 1
-version: "1.6"
-engineVersion: "Settlement Foundation"
 updatedAt: "2026-09-15"
 infoboxTitle: "Skapa settlement"
 infobox:

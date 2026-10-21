@@ -163,16 +163,6 @@ export default function WikiArticle({
 
                 <section className={styles.articleInformation}>
                     <div className={styles.informationItem}>
-                        <span>Wiki-version</span>
-                        <strong>{article.version}</strong>
-                    </div>
-
-                    <div className={styles.informationItem}>
-                        <span>Engine-status</span>
-                        <strong>{article.engineVersion}</strong>
-                    </div>
-
-                    <div className={styles.informationItem}>
                         <span>Lästid</span>
                         <strong>{article.readingTime}</strong>
                     </div>
@@ -376,13 +366,6 @@ export default function WikiArticle({
                             ))}
                         </nav>
 
-                        <div className={styles.contentsFooter}>
-                            <WikiIcon name="info" size={16} />
-
-                            <span>
-                                Informationen följer GameZone Engine.
-                            </span>
-                        </div>
                     </aside>
                 )}
             </div>

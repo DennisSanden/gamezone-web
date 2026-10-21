@@ -3,8 +3,6 @@ title: "Fiskebrygga"
 description: "Frivillig byggnad och aktuell bonus: 15 % snabbare napp vid fiske inom settlementet."
 category: "Byggnader"
 order: 3
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **15 % snabbare napp vid fiske inom settlementet.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Fiskebrygga börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Fiskebrygga har färdigställts och godkänts.
 
 ## Krav
 

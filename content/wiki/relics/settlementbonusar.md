@@ -3,8 +3,6 @@ title: "Settlementbonusar från reliker"
 description: "Relikbonusar låses upp på settlementnivå 25, Reliktempel förstärker dem."
 category: "Reliker"
 order: 2
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   upplåsning: "Settlementnivå 25"
@@ -16,7 +14,7 @@ infobox:
 
 Settlementrelikers bonusar låses upp när settlementet når **nivå 25**. Reliktempel är **inte ett krav** för att relikerna ska aktiveras.
 
-För att en relik ska räknas som aktiv för settlementet ska den ligga i en **registrerad Settlement Inventory** och klara Engines kontroller för relik-ID, serienummer, generation och signatur. En kopia eller ogiltig relik ska inte ge bonus.
+För att en relik ska räknas som aktiv för settlementet ska den ligga i en **registrerad Settlement Inventory** och vara en giltig relik. En kopia eller ogiltig relik ska inte ge bonus.
 
 ```text
 /settlement inventory register

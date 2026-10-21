@@ -3,8 +3,6 @@ title: "Bank"
 description: "Frivillig byggnad och aktuell bonus: Tillgång till bankfunktionerna i GUI, ekonomisk historik och 10 % billigare företagslicenser."
 category: "Byggnader"
 order: 6
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Tillgång till bankfunktionerna i GUI, ekonomisk historik och 10 % billigare företagslicenser.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Bank börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Bank har färdigställts och godkänts.
 
 ## Krav
 

@@ -3,8 +3,6 @@ title: "Stadskassan och stadsskatt"
 description: "Så fungerar settlementets gemensamma Coins, stadsskatt, skatteöversikt, insättningar, uttag och utbetalningar."
 category: "Ekonomi"
 order: 3
-version: "1.6"
-engineVersion: "Economy Engine"
 updatedAt: "2026-08-20"
 infoboxTitle: "Stadskassan"
 infobox:

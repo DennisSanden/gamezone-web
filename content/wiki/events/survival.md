@@ -3,8 +3,6 @@ title: "Survival"
 description: "Överlev 20 allt svårare PvE-waves tillsammans. Välj klass, bygg laget, uppgradera din utrustning och jaga Survival-rekord."
 category: "Events"
 order: 2
-version: "3.0"
-engineVersion: "GameZoneEngine Survival"
 infoboxTitle: "Survival"
 infobox:
   typ: "Kooperativt PvE-event"
@@ -499,6 +497,4 @@ Det är kombinationen av **klassval, loot, välsignelser och lagspel** som avgö
 
 ## Senare waves och bossar
 
-Wave 15 och wave 20 har extra tunga fiender. För att undvika att en boss inte kan spawna är bossarnas HP begränsad i den aktuella Engine-koden. På **wave 19 och wave 20 finns en Warden vardera**, i stället för en Ravager i den särskilda bossplatsen. Waven kan fortfarande innehålla andra vanliga fiender.
-
-Survival har återhämtning om eventmobs försvinner oväntat, men en mob i en avlastad chunk ska inte automatiskt räknas som död.
+Wave 15 och 20 har extra tunga fiender. På **wave 19 och 20 möter laget en Warden per wave**. Även andra fiender kan dyka upp, så håll ihop laget och spara era starkaste förmågor till slutet.

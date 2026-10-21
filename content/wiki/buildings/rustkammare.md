@@ -3,8 +3,6 @@ title: "Rustkammare"
 description: "Frivillig byggnad och aktuell bonus: Rustningar förlorar 15 % mindre durability när invånare tar skada av vanliga mobs. Gäller inte events."
 category: "Byggnader"
 order: 40
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Rustningar förlorar 15 % mindre durability när invånare tar skada av vanliga mobs. Gäller inte events.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Rustkammare börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Rustkammare har färdigställts och godkänts.
 
 ## Krav
 

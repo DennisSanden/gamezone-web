@@ -3,8 +3,6 @@ title: "Dueller"
 description: "Utmana andra spelare i 1 mot 1-dueller och spela om Coins."
 category: "Events"
 order: 2
-version: "1.0"
-engineVersion: "Duel System"
 updatedAt: "2026-09-29"
 infoboxTitle: "Dueller"
 infobox:
@@ -23,7 +21,7 @@ När utmaningen accepteras teleporteras båda spelarna till den konfigurerade du
 
 Dödligt damage i arenan gör spelaren **eliminerad** i stället för att genomföra en vanlig Bukkit-död. Vinnaren registreras med en duellvinst och förloraren med en duellförlust.
 
-Förloraren betalar **5 % av sitt aktuella Coin-saldo** till vinnaren. Engine avrundar uppåt till närmaste hela Coin, med minst 1 Coin om spelaren har ett positivt saldo. Har förloraren 0 Coins sker ingen Coin-överföring.
+Förloraren betalar **5 % av sitt aktuella Coin-saldo** till vinnaren. Beloppet avrundas uppåt till närmaste hela Coin, med minst 1 Coin om spelaren har ett positivt saldo. Har förloraren 0 Coins sker ingen Coin-överföring.
 
 Exempel: har förloraren 1 000 000 Coins får vinnaren **50 000 Coins**.
 

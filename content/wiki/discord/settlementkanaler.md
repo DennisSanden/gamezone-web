@@ -3,8 +3,6 @@ title: "Settlementkanaler"
 description: "Så fungerar automatiska settlementroller och privata Discordkanaler."
 category: "Discord"
 order: 2
-version: "1.0"
-engineVersion: "GameZone Steve"
 updatedAt: "2026-08-26"
 infoboxTitle: "Settlement & Discord"
 infobox:

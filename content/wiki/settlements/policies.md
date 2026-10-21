@@ -1,10 +1,8 @@
 ---
 title: "Policies"
-description: "Aktuella policies från GameZoneEngine och hur många som kan vara aktiva."
+description: "Se vilka policies din stad kan välja och hur många som får vara aktiva."
 category: "Settlements"
 order: 5
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   platser: "1 på nivå 1, 2 på nivå 5, 3 på nivå 15"

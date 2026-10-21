@@ -3,8 +3,6 @@ title: "Laboratorium"
 description: "Frivillig byggnad och aktuell bonus: 15 % chans att bryggning inte förbrukar Blaze Powder."
 category: "Byggnader"
 order: 5
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **15 % chans att bryggning inte förbrukar Blaze Powder.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Laboratorium börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Laboratorium har färdigställts och godkänts.
 
 ## Krav
 

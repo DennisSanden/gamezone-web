@@ -3,8 +3,6 @@ title: "Spelarhandel"
 description: "Byt items och Coins säkert direkt med andra spelare genom /trade."
 category: "Ekonomi"
 order: 3
-version: "1.0"
-engineVersion: "Player Trade"
 updatedAt: "2026-09-21"
 infoboxTitle: "Spelarhandel"
 infobox:
@@ -79,9 +77,9 @@ Den slutliga bekräftelsen visar skatten innan handeln genomförs. Läs mer om h
 
 ## Statistik och historik
 
-Genomförda spelartrades registreras av GameZoneEngine. Systemet loggar bland annat vilka spelare som handlade, Coins, skatt och de items som bytte ägare.
+Du kan se genomförda affärer i din handelshistorik. Där framgår bland annat Coins, skatt och vilka föremål som bytte ägare.
 
-Items som handlas genom `/trade` räknas också in i serverns handelsstatistik och data. Spelarhandel är alltså en del av den riktiga serverekonomin, inte en separat väg vid sidan av statistiken.
+Byten genom `/trade` räknas också med i serverns handelsstatistik.
 
 ## Skillnaden mot företagshandel
 

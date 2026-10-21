@@ -3,8 +3,6 @@ title: "Underverk"
 description: "Underverk är reserverat för en senare del av settlementets endgame."
 category: "Byggnader"
 order: 50
-version: "4.0"
-engineVersion: "Building System 1.0"
 updatedAt: "2026-08-20"
 infoboxTitle: "Underverk"
 infobox:

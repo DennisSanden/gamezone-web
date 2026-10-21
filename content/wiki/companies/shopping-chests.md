@@ -3,8 +3,6 @@ title: "Shopping Chests"
 description: "Registrera kistor där företaget säljer till eller köper från andra spelare."
 category: "Företag"
 order: 2
-version: "1.4"
-engineVersion: "Trade"
 updatedAt: "2026-09-14"
 infoboxTitle: "Shopping Chest"
 infobox:

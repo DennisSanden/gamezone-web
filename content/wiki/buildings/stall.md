@@ -3,8 +3,6 @@ title: "Stall"
 description: "Frivillig byggnad och aktuell bonus: Ytterligare 10 % hastighet för hästar, åsnor och mulor, med gemensamt hastighetstak."
 category: "Byggnader"
 order: 14
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Ytterligare 10 % hastighet för hästar, åsnor och mulor, med gemensamt hastighetstak.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Stall börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Stall har färdigställts och godkänts.
 
 ## Krav
 

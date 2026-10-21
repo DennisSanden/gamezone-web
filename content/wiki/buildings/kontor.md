@@ -3,8 +3,6 @@ title: "Kontor"
 description: "Frivillig byggnad och aktuell bonus: Alla företag i settlementet får 3 extra Shopping Chests."
 category: "Byggnader"
 order: 16
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Alla företag i settlementet får 3 extra Shopping Chests.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Kontor börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Kontor har färdigställts och godkänts.
 
 ## Krav
 

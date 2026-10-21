@@ -3,8 +3,6 @@ title: "Värvningar"
 description: "Värva nya spelare till GameZone och få Coins när de blir aktiva på servern."
 category: "Ekonomi"
 order: 6
-version: "1.1"
-engineVersion: "Referral System"
 updatedAt: "2026-09-06"
 infoboxTitle: "Värvningar"
 infobox:

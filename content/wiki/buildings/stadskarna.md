@@ -3,8 +3,6 @@ title: "Stadskärna"
 description: "Frivillig byggnad och aktuell bonus: Alla framtida settlementuppgraderingar kostar 5 % mindre Coins."
 category: "Byggnader"
 order: 2
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Alla framtida settlementuppgraderingar kostar 5 % mindre Coins.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Stadskärna börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Stadskärna har färdigställts och godkänts.
 
 ## Krav
 

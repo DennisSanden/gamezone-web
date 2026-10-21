@@ -3,8 +3,6 @@ title: "Inköpskistor"
 description: "Låt andra spelare sälja items direkt till ditt företag genom en automatisk köpchest."
 category: "Företag"
 order: 3
-version: "1.1"
-engineVersion: "Trade"
 updatedAt: "2026-09-07"
 infoboxTitle: "Inköpskista"
 infobox:

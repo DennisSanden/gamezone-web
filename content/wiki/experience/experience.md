@@ -3,8 +3,6 @@ title: "Level & XP"
 description: "GameZones personliga progressionssystem. Tjäna Character XP genom aktivt spel, gå upp i level och lås upp permanenta förmågor för ditt nuvarande liv."
 category: "Level & XP"
 order: 1
-version: "1.0"
-engineVersion: "Character Progression"
 updatedAt: "2026-08-13"
 infoboxTitle: "Level & XP"
 infobox:

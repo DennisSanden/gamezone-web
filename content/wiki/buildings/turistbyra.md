@@ -3,8 +3,6 @@ title: "Turistbyrå"
 description: "Frivillig byggnad och aktuell bonus: Settlementet får Coins för unika förstagångsbesökare, med dagligt utbetalningstak."
 category: "Byggnader"
 order: 12
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Settlementet får Coins för unika förstagångsbesökare, med dagligt utbetalningstak.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Turistbyrå börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Turistbyrå har färdigställts och godkänts.
 
 ## Krav
 

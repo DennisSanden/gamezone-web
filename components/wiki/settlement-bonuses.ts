@@ -43,7 +43,7 @@ export const settlementLevelBonuses: WikiSettlementLevelBonus[] = [
   {"level": 40, "description": "Elytra förbrukar i genomsnitt 50 % färre fyrverkeriraketer.", "milestone": true},
   {"level": 41, "description": "5 % högre relativ chans att fiska upp föremål från vanillas skattpool.", "milestone": false},
   {"level": 42, "description": "Ugnar inom settlementet smälter glas, tegel, sten och terrakotta 15 % snabbare.", "milestone": false},
-  {"level": 43, "description": "Villager trades kan bli upp till 1 emerald billigare inom settlementet. Priset kan aldrig understiga 1 emerald.", "milestone": false},
+  {"level": 43, "description": "Ingen extra rabatt hos Villagers just nu.", "milestone": false},
   {"level": 44, "description": "Ytterligare 5 % högre hastighet på hästar, åsnor och mulor.", "milestone": false},
   {"level": 45, "description": "Automatisk Fire Resistance i 15 sekunder om spelaren hamnar i lava. Cooldown 30 minuter.", "milestone": true},
   {"level": 46, "description": "Mat ger 10 % mer saturation när den äts.", "milestone": false},

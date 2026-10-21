@@ -3,8 +3,6 @@ title: "Kyrka"
 description: "Frivillig byggnad och aktuell bonus: Alla invånare får 5 % mer Character XP från yrkesaktiviteter."
 category: "Byggnader"
 order: 18
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Alla invånare får 5 % mer Character XP från yrkesaktiviteter.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Kyrka börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Kyrka har färdigställts och godkänts.
 
 ## Krav
 

@@ -3,8 +3,6 @@ title: "Hitta, bära och handla reliker"
 description: "Så kommer reliker in i världen och vad som händer när de hittas, tappas, säljs eller byter ägare."
 category: "Reliker"
 order: 3
-version: "2.1"
-engineVersion: "Relic System v2"
 updatedAt: "2026-09-21"
 infoboxTitle: "Relikens resa"
 infobox:
@@ -17,7 +15,7 @@ relatedArticles:
   - category: "relics"
     article: "historik-och-agarskap"
     title: "Relikhistorik och ägarskap"
-    description: "Hur Engine dokumenterar vem som haft reliken och vad som hänt."
+    description: "Läs om relikens tidigare ägare och historia."
   - category: "relics"
     article: "relic-chests"
     title: "Relic Chests"
@@ -58,7 +56,7 @@ Administrationen kan bygga hela expeditioner runt en relik. Det kan exempelvis f
 
 ## Första upptäckaren
 
-När en HIDDEN-relik för första gången hamnar hos en riktig spelare kan Engine registrera vem som upptäckte den.
+När en gömd relik hittas av en spelare registreras den första upptäckaren.
 
 Den informationen är permanent historik.
 
@@ -88,13 +86,13 @@ Du kan:
 Det finns inget vanligt `/relic transfer` som spelare måste använda för att byta ägare.
 
 > [!IMPORTANT]
-> Engine dokumenterar relikens resa, men reliken ska fortfarande kännas som ett riktigt Minecraftföremål.
+> Reliker är riktiga Minecraftföremål som kan byta ägare och samla på sig en historia.
 
 ## Spelarhandel och Shopping Chests
 
 Reliker kan byta ägare genom serverns handelssystem. För direkt handel mellan två spelare kan `/trade <spelare>` användas när spelarna står inom 5 block från varandra. Systemet använder dubbel bekräftelse och registrerar de items som faktiskt byter ägare. Läs mer på sidan [Spelarhandel](/wiki/economy/trade).
 
-En relik kan också hamna i ett företag eller flyttas genom annan tillåten handel. När Engine kan identifiera överföringen kan den offentliga innehavaren uppdateras.
+En relik kan också hamna i ett företag eller flyttas genom annan tillåten handel. När ägarbytet registreras uppdateras informationen om innehavaren.
 
 Priset behöver däremot inte bli en del av relikens offentliga historia. Relikhistoriken handlar främst om **vad reliken varit med om**, inte exakt vad någon betalade för den.
 
@@ -104,13 +102,13 @@ Eftersom reliker inte är soulbound kan ett dödsfall få verkliga konsekvenser.
 
 En spelare som bär en värdefull relik riskerar att tappa den om vanliga death drop-regler gäller. En annan spelare kan därefter plocka upp den och bli nästa innehavare.
 
-Det är avsiktligt. En Legendary eller Mythic relik ska kunna skapa berättelser som inte hade kunnat hända om föremålet var låst i en databasmeny.
+En Legendary eller Mythic relik är ett fysiskt föremål som kan bli en del av stora äventyr.
 
 ## Item Frames
 
 Reliker kan ställas ut i item frames.
 
-När Engine identifierar en giltig relik i en item frame kan den registreras som utställd. Det gör det möjligt att bygga museer, troférum och kungliga salar där riktiga reliker faktiskt visas upp.
+När du placerar en giltig relik i en item frame kan den visas som utställd. Det gör det möjligt att bygga museer, troférum och kungliga salar där riktiga reliker faktiskt visas upp.
 
 Att ställa ut en relik är förstås också att visa hela servern var den finns. Väldigt stiligt. Väldigt smart. Förmodligen.
 

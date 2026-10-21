@@ -3,8 +3,6 @@ title: "Magikern"
 description: "Permanent endgame-progression där Coins investeras i egenskaper, yrkeskunskap, specialförmågor och skydd."
 category: "Experience"
 order: 5
-version: "1.1"
-engineVersion: "Magikern"
 updatedAt: "2026-10-07"
 infoboxTitle: "Magikern"
 infobox:

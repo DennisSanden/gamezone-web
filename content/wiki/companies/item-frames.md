@@ -3,7 +3,6 @@ title: "Item frames på butikskistor"
 description: "Sätt item frames på kistor utan att öppna köpmenyn."
 category: "Företag"
 order: 6
-version: "2026.10"
 updatedAt: "2026-10-21"
 ---
 

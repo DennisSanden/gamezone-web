@@ -3,8 +3,6 @@ title: "Reliktempel"
 description: "Frivillig byggnad och aktuell bonus: Aktiva settlementrelikers produktions- och XP-bonusar blir 10 % starkare."
 category: "Byggnader"
 order: 7
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Aktiva settlementrelikers produktions- och XP-bonusar blir 10 % starkare.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Reliktempel börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Reliktempel har färdigställts och godkänts.
 
 > [!IMPORTANT]
 > Settlementreliker låses upp på **nivå 25**. Reliktempel förstärker aktiva relikbonusar med 10 %, men är inget upplåsningskrav.

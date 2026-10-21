@@ -1,16 +1,14 @@
 ---
 title: "Tiers, statusar och säkerhet"
-description: "Rarity, relikstatusar, serienummer, generationer och hur Engine skiljer en äkta relik från en kopia."
+description: "Rarity, relikstatusar, serienummer, generationer och hur du känner igen en äkta relik."
 category: "Reliker"
 order: 5
-version: "2.0"
-engineVersion: "Relic System v2"
 updatedAt: "2026-08-26"
 infoboxTitle: "Relic Identity"
 infobox:
   tier: "Common till Mythic"
   serienummer: "GZR-0001 till GZR-0050"
-  generation: "Aktuell generation måste matcha Engine"
+  generation: "Senaste giltiga generationen"
   signatur: "Kryptografiskt verifierad"
   restore: "Ny generation gör äldre kopior ogiltiga"
 relatedArticles:
@@ -63,7 +61,7 @@ En relik har också en **generation**.
 
 Den normala första instansen börjar som Generation 1.
 
-Om en relik verkligen går förlorad och administrationen måste återställa den kan Engine skapa en ny generation.
+Om en relik går förlorad och återställs får den ett nytt generationsnummer.
 
 Exempel:
 
@@ -76,16 +74,7 @@ När Generation 2 blir den aktuella generationen ska Generation 1 inte längre r
 
 ## Signerad identitet
 
-Engine verifierar flera dolda värden på reliken:
-
-```text
-gamezone:relic_id
-gamezone:relic_serial
-gamezone:relic_generation
-gamezone:relic_signature
-```
-
-Signaturen skapas av Engine och används för att kontrollera att identiteten är äkta.
+En äkta relik har en unik identitet som inte går att återskapa genom att bara döpa om ett vanligt föremål.
 
 Det innebär att någon inte kan skapa **The Worldheart** genom att döpa om en Nether Star och skriva samma lore.
 
@@ -93,7 +82,7 @@ Det innebär att någon inte kan skapa **The Worldheart** genom att döpa om en 
 
 Om en gammal generation dyker upp efter att reliken har återställts är den inte längre en giltig relik.
 
-Engine kan behandla den som en ogiltig kvarleva istället för en aktiv relik.
+Den räknas inte längre som en aktiv relik.
 
 Den kan exempelvis visas som:
 
@@ -130,7 +119,7 @@ Reliken är registrerad som utställd, exempelvis i en item frame.
 
 ### LOCATION_UNKNOWN
 
-Engine vet att reliken har funnits men kan inte längre verifiera dess aktuella plats.
+Reliken har funnits, men dess nuvarande plats är okänd.
 
 ### LOST
 

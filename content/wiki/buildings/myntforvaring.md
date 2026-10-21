@@ -3,8 +3,6 @@ title: "Myntförvaring"
 description: "Frivillig byggnad och aktuell bonus: Stadskasseavgiften sänks från 7,5 % till 2,5 %."
 category: "Byggnader"
 order: 22
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Stadskasseavgiften sänks från 7,5 % till 2,5 %.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Myntförvaring börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Myntförvaring har färdigställts och godkänts.
 
 ## Krav
 

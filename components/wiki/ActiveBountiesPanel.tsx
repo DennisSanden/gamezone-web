@@ -101,7 +101,7 @@ export default function ActiveBountiesPanel() {
     if (loading) {
         return (
             <section className={styles.panel} aria-live="polite">
-                <div className={styles.state}>Hämtar aktiva bounties från GameZone Engine...</div>
+                <div className={styles.state}>Hämtar aktiva uppdrag...</div>
             </section>
         );
     }

@@ -3,8 +3,6 @@ title: "Död & Second Chance"
 description: "Så fungerar liv, death reset, serverannonsering och Second Chance på Level 100."
 category: "Level & XP"
 order: 4
-version: "1.0"
-engineVersion: "Character Progression"
 updatedAt: "2026-08-13"
 infoboxTitle: "Död"
 infobox:
@@ -35,7 +33,7 @@ Det gör hög level till mer än bara total speltid. För att nå de högsta niv
 
 Vid en vanlig spelardöd:
 
-1. Servern räknar din riktiga Character XP, även XP som precis har tjänats och ännu inte hunnit sparas i databasen.
+1. Din aktuella Character XP används även om du precis hunnit tjäna den.
 2. Din level vid dödsögonblicket bestäms.
 3. Servern annonserar att du dog och vilken level du nådde.
 4. Ditt nuvarande liv avslutas.

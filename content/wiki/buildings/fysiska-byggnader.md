@@ -3,8 +3,6 @@ title: "Byggnadsbonusar"
 description: "Alla 24 frivilliga byggnader, deras licenser, krav och egna bonusar."
 category: "Byggnader"
 order: 0
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   antal: "24 bonusbyggnader"

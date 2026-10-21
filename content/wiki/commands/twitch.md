@@ -3,7 +3,6 @@ title: "Twitch"
 description: "Länka ditt Twitchkonto, titta på GameZone-streamers och tjäna Coins."
 category: "Kommandon"
 order: 2
-version: "2.4"
 updatedAt: "2026-09-29"
 infoboxTitle: "Twitch"
 infobox:
@@ -45,7 +44,7 @@ Därefter behöver du bara titta på en registrerad GameZone-streamer med Twitch
 - **Max per timme:** 45 000 GZ Coins
 - **Max per dygn:** 90 000 GZ Coins
 
-Varje godkänd 20-minutersbelöning ger dessutom **ett slumpmässigt item från Daily Rewards dag 1 till 4**. Engine återanvänder Daily-systemets itempooler och viktning.
+Varje godkänd 20-minutersbelöning ger dessutom **ett slumpmässigt item från Daily Rewards dag 1 till 4**. Vilket föremål du får avgörs slumpmässigt.
 
 Du behöver inte vara inne på Minecraftservern hela tiden medan du tittar. Belöningar kan sparas och delas ut när du kommer tillbaka.
 

@@ -3,8 +3,6 @@ title: "Museum"
 description: "Frivillig byggnad och aktuell bonus: 25 % högre turistintäkter, inom ett gemensamt dagligt tak."
 category: "Byggnader"
 order: 35
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **25 % högre turistintäkter, inom ett gemensamt dagligt tak.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Museum börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Museum har färdigställts och godkänts.
 
 > [!NOTE]
 > Museets 25 % extra turistintäkt följer samma dagliga turisttak som Turistbyrån.

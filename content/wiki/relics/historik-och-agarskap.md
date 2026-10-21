@@ -1,10 +1,8 @@
 ---
 title: "Relikhistorik och ägarskap"
-description: "Så dokumenterar Engine upptäckare, innehavare, utställningar, förlust, restore och relikens fortsatta serverhistoria."
+description: "Så följer du en reliks upptäckare, ägare och historia."
 category: "Reliker"
 order: 6
-version: "2.0"
-engineVersion: "Relic System v2"
 updatedAt: "2026-08-23"
 infoboxTitle: "Relic History"
 infobox:
@@ -53,13 +51,13 @@ Reliken återfanns av Kalle.
 
 **Första upptäckare** är den spelare som hittade reliken första gången.
 
-**Nuvarande innehavare** är den person eller organisation som Engine senast har identifierat som innehavare.
+**Nuvarande innehavare** är den person eller organisation som senast registrerats som innehavare.
 
 Det betyder att första upptäckaren kan behålla sin historiska status även om reliken har bytt händer tio gånger.
 
 ## Möjliga innehavare
 
-Engine kan registrera olika typer av innehavare.
+En relik kan ha flera typer av innehavare.
 
 ### Spelare
 

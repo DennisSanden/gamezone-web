@@ -3,7 +3,6 @@ title: "Teleport"
 description: "Så tar du dig mellan ditt settlement och serverns spawn."
 category: "Settlements"
 order: 5
-version: "1.2"
 updatedAt: "2026-09-14"
 infoboxTitle: "Teleport"
 infobox:

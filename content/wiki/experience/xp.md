@@ -3,8 +3,6 @@ title: "Så tjänar du XP"
 description: "Alla sätt att tjäna Character XP, exakta XP-värden, Variation Bonus, combatbegränsning och Daily Rewards."
 category: "Level & XP"
 order: 2
-version: "1.0"
-engineVersion: "Character Progression"
 updatedAt: "2026-08-13"
 infoboxTitle: "Character XP"
 infobox:
@@ -33,8 +31,7 @@ Character XP tjänas genom godkända aktiviteter i GameZones egna system. XP:n l
 
 Du behöver inte tillhöra ett settlement med rätt produktionskategori för att Character XP ska räknas. Coinregler och Character XP är separata. En aktivitet kan därför ge Character XP även när den inte ger Coins, så länge aktiviteten är godkänd av produktionssystemet.
 
-> [!NOTE]
-> XP registreras i bakgrunden för att hålla servern snabb. `/level` räknar även med XP som ännu väntar på att sparas, så värdet du ser ska ändå vara aktuellt.
+> Använd `/level` för att se din aktuella Character XP och hur nära du är nästa nivå.
 
 ## XP-källor
 
@@ -47,9 +44,10 @@ Du kan tjäna XP genom:
 - Fiske
 - Alkemi
 - Combat mot hostile mobs
+- Byggmaterial
 - Daily Rewards
 
-**Byggmaterial ger för närvarande 0 Character XP**, även om byggmaterial finns i produktionssystemet. Crafting av byggmaterial höjer alltså inte Character Level i den nuvarande balansen.
+Olika resurser och hantverk ger olika mycket Character XP. För byggmaterial kan bonusen variera beroende på vad du samlar eller tillverkar.
 
 ## Variation Bonus
 
@@ -64,9 +62,9 @@ När du har varit aktiv inom flera olika XP-kategorier under de senaste **60 min
 | 3 | +10 % |
 | 4 eller fler | **+15 %** |
 
-Kategorierna som kan räknas är Gruvdrift, Jordbruk, Skogsbruk, Boskap, Fiske, Alkemi och Combat. Byggmaterial finns tekniskt som en kategori, men ger just nu 0 Character XP och kan därför inte normalt aktivera bonusen.
+Aktivitet inom Gruvdrift, Jordbruk, Skogsbruk, Boskap, Fiske, Alkemi, Byggmaterial och Combat kan bidra till att du varierar din XP-inkomst.
 
-Bonusen räknas på XP du tjänar efter att den nya kategorin har blivit aktiv. Små decimalbonusar sparas internt och förs vidare, så aktiviteter som bara ger 1 XP förlorar inte bonusen över tid.
+Bonusen räknas på XP du tjänar efter att den nya kategorin har blivit aktiv. Även små XP-belöningar kan räknas med när du får variationbonus.
 
 > [!IMPORTANT]
 > Variation Bonus gäller inte Daily Rewards. Daily XP är alltid det fasta värdet för dagen.
@@ -108,7 +106,7 @@ Daily XP påverkas inte av Variation Bonus.
 
 ## Exakta XP-värden för produktion
 
-Tabellerna nedan visar de produktionsresurser som faktiskt ger Character XP i den nuvarande balansen. Ett item som finns i produktionsregistret men inte i tabellerna nedan ger **0 Character XP**.
+Tabellerna nedan visar vanliga XP-belöningar från produktion. Fler resurser, framför allt byggmaterial, kan också ge mindre mängder XP.
 
 ### Gruvdrift
 

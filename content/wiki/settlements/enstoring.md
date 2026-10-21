@@ -3,8 +3,6 @@ title: "Enstöring"
 description: "Settlementnivå 1 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 101
-version: "2.1"
-engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"

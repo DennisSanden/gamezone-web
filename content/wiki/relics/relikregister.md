@@ -3,8 +3,6 @@ title: "Alla 50 reliker"
 description: "GameZones kompletta grundregister med 50 reliker, deras tier, kultur, Minecraftitem, enchants och specialeffekter."
 category: "Reliker"
 order: 7
-version: "2.0"
-engineVersion: "Relic System v2 Registry"
 updatedAt: "2026-08-26"
 infoboxTitle: "Relic Registry"
 infobox:

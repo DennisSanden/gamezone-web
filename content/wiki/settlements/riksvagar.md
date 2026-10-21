@@ -3,8 +3,6 @@ title: "Riksvägar"
 description: "Officiella vägar mellan settlements och Spawn som ger högre färdhastighet och visas på BlueMap."
 category: "Settlements"
 order: 9
-version: "1.2"
-engineVersion: "GameZoneEngine 1.0.0-RC1"
 updatedAt: "2026-09-06"
 infoboxTitle: "Riksvägar"
 infobox:
@@ -50,23 +48,9 @@ En officiell riksväg ska följa dessa regler:
 - Riksvägen ska vara framkomlig och får inte byggas med avsiktliga hinder som stoppar normal trafik.
 - Riksvägar är offentlig infrastruktur och får användas av alla spelare.
 
-> [!NOTE]
-> Reglerna ovan är ett bygg- och administrationsregelverk. Admin ansvarar för att bara godkända sträckor registreras som riksvägar.
+## Hur blir en väg officiell?
 
-## Hur registreras en riksväg?
-
-Riksvägar registreras av admins. Spelare behöver inte och kan inte själva markera en väg.
-
-Admin markerar vägen med flera punkter. Varje rak sträcka går från en punkt till nästa, så vägen kan följa kurvor, berg, broar och andra naturliga svängar.
-
-```text
-/road create <namn>
-/road setpoint
-/road setpoint
-/road complete
-```
-
-Fler `/road setpoint` kan användas om vägen behöver fler svängar.
+När serverns personal har godkänt och registrerat en väg får den riksvägens hastighetsbonus och visas på BlueMap. Du behöver inte skriva några kommandon för att använda vägen.
 
 ## Gatukontor och anslutningsbelöning
 

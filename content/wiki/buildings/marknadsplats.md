@@ -3,8 +3,6 @@ title: "Marknadsplats"
 description: "Frivillig byggnad och aktuell bonus: Behåller sin nuvarande skatterabatt på 10 procentenheter vid handel."
 category: "Byggnader"
 order: 20
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Behåller sin nuvarande skatterabatt på 10 procentenheter vid handel.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Marknadsplats börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Marknadsplats har färdigställts och godkänts.
 
 ## Krav
 

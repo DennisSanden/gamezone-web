@@ -3,8 +3,6 @@ title: "Bounties"
 description: "Jaga efterlysta monster i Skenien och inkassera Coin-belöningen när rätt varelse besegras."
 category: "Bounties"
 order: 1
-version: "1.0"
-engineVersion: "Bounty System 1.0"
 updatedAt: "2026-08-28"
 infoboxTitle: "Bounties"
 infobox:

@@ -3,8 +3,6 @@ title: "Settlementnivåer 1–50"
 description: "50 nivåer med nivåbonusar, materialkrav och kostnader. Byggnadsbonusar har en egen flik."
 category: "Settlements"
 order: 2
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   nivåer: "50"
@@ -18,7 +16,7 @@ Ett settlement grundas på nivå 1. Därefter lämnar invånarna in material via
 
 Registrera inlämningskistan genom att titta på en kista och använda `/settlement inventory register`. Kraven och nästa nivåbonus visas i settlementets GUI och i settlementkistan. Insamlade material bokförs som uppgraderingsprogress. King och andra behöriga roller slutför nivåuppgraderingen.
 
-Viktiga upplåsningar kommer på nivå 10 (Elytra), 12 (två extra Lords), 20 (XP-magnet), 25 (relikbonusar), 30 (XP-skydd), 35 (åkermark), 40 (raketsparande) och 50 (Haste I och Speed I). Nivå 43 är beskriven i bonusregistret men spelarunik Villager-rabatt är ännu inte färdigställd i den granskade Engine-koden.
+Viktiga upplåsningar kommer på nivå 10 (Elytra), 12 (två extra Lords), 20 (XP-magnet), 25 (relikbonusar), 30 (XP-skydd), 35 (åkermark), 40 (raketsparande) och 50 (Haste I och Speed I). På nivå 43 får du för närvarande ingen extra rabatt hos Villagers.
 
 ## Alla nivåbonusar
 
@@ -66,7 +64,7 @@ Viktiga upplåsningar kommer på nivå 10 (Elytra), 12 (två extra Lords), 20 (X
 | **40** | Elytra förbrukar i genomsnitt 50 % färre fyrverkeriraketer. |
 | 41 | 5 % högre relativ chans att fiska upp föremål från vanillas skattpool. |
 | 42 | Ugnar inom settlementet smälter glas, tegel, sten och terrakotta 15 % snabbare. |
-| 43 | Villager trades kan bli upp till 1 emerald billigare inom settlementet. Priset kan aldrig understiga 1 emerald. |
+| 43 | Ingen extra rabatt hos Villagers just nu. |
 | 44 | Ytterligare 5 % högre hastighet på hästar, åsnor och mulor. |
 | **45** | Automatisk Fire Resistance i 15 sekunder om spelaren hamnar i lava. Cooldown 30 minuter. |
 | 46 | Mat ger 10 % mer saturation när den äts. |

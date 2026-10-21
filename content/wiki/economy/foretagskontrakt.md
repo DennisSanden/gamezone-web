@@ -3,8 +3,6 @@ title: "Företagskontrakt"
 description: "Företag kan finansiera egna inköpskontrakt som spelare fyller via Rikskistorna och får betalt för efter sin andel."
 category: "Ekonomi"
 order: 8
-version: "1.0"
-engineVersion: "Företagskontrakt"
 updatedAt: "2026-10-06"
 infoboxTitle: "Företagskontrakt"
 infobox:
@@ -41,7 +39,7 @@ Exempel:
 Det betyder att företaget söker **1 000 mangrove logs** och reserverar **10 000 Coins** för hela kontraktet.
 
 > [!IMPORTANT]
-> Ett företag kan ha **max ett aktivt företagskontrakt åt gången**. Endast företagets ägare kan skapa och avbryta det.
+> Normalt kan ett företag ha **ett aktivt företagskontrakt åt gången**. Med Handelscentrum i settlementet kan företaget ha **två**. Ägare och behöriga managers kan hantera kontrakt enligt sina rättigheter.
 
 ## Pengarna reserveras direkt
 
@@ -117,4 +115,4 @@ De spelare som redan har bidragit får då betalt för den andel som faktiskt le
 
 visar serverns aktiva företagskontrakt.
 
-`/contact` finns som alias till samma kontraktkommando, men dokumentationen använder `/contract` som standard.
+Du kan också använda `/contact` som alternativ till `/contract`.

@@ -3,8 +3,6 @@ title: "Storkungadöme"
 description: "Settlementnivå 33 i den aktuella 50-nivåprogressionen."
 category: "Settlements"
 order: 133
-version: "2.1"
-engineVersion: "Settlement Levels 1.0"
 updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
@@ -27,8 +25,7 @@ relatedArticles:
 
 För att låsa upp Storkungadöme uppgraderar settlementet från **Kungadöme**.
 
-> [!IMPORTANT]
-> Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+> Här ser du kostnaden och bonusen för nästa nivå.
 
 
 ## Bonus på nivå 33

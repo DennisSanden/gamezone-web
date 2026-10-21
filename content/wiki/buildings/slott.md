@@ -3,8 +3,6 @@ title: "Slott"
 description: "Frivillig byggnad och aktuell bonus: Invånarna får genomföra 6 rikskontrakt per vecka i stället för 5."
 category: "Byggnader"
 order: 30
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Invånarna får genomföra 6 rikskontrakt per vecka i stället för 5.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Slott börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Slott har färdigställts och godkänts.
 
 ## Krav
 

@@ -3,8 +3,6 @@ title: "Invånarplots"
 description: "Så delar King och Lord ut privata byggområden till invånare inne i settlementets skyddade territorium."
 category: "Settlements"
 order: 8
-version: "1.0"
-engineVersion: "Settlement Resident Plots"
 updatedAt: "2026-08-14"
 infoboxTitle: "Invånarplots"
 infobox:

@@ -3,8 +3,6 @@ title: "Handelscentrum"
 description: "Frivillig byggnad och aktuell bonus: Företag i settlementet får ha 2 aktiva företagskontrakt samtidigt i stället för 1."
 category: "Byggnader"
 order: 4
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **Företag i settlementet får ha 2 aktiva företagskontrakt samtidigt i stället för 1.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Handelscentrum börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Handelscentrum har färdigställts och godkänts.
 
 > [!IMPORTANT]
 > Företag kräver inte Handelscentrum för att existera. Byggnaden ger plats för två aktiva företagskontrakt samtidigt.

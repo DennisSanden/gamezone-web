@@ -3,8 +3,6 @@ title: "Alkemi"
 description: "Bryggning och alkemiska resurser."
 category: "Produktionskategorier"
 order: 7
-version: "1.2"
-engineVersion: "Production Registry"
 updatedAt: "2026-08-10"
 infoboxTitle: "Alkemi"
 infobox:

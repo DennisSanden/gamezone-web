@@ -3,8 +3,6 @@ title: "Kommandon"
 description: "De viktigaste spelar-, settlement-, företags- och territoriekommandona."
 category: "Kommandon"
 order: 1
-version: "2.3"
-engineVersion: "Commands"
 updatedAt: "2026-09-21"
 infoboxTitle: "Kommandon"
 infobox:
@@ -12,13 +10,12 @@ infobox:
   marketwatch: "/marketwatch"
 ---
 
-## Uppdateringar i Engine
+## Bra kommandon att känna till
 
-- `/settlement upgrade` visar nästa nivå, materialkrav och den nya nivådeffekten.
-- `/settlement inventory register` registrerar inlämningskistan.
-- `/event join` används till anmälan för kvällseventen.
-- `/builder` är ett behörighetsstyrt byggläge, inte ett vanligt spelarkommando.
-- Äldre kommandon för settlementkrig är inte längre aktuella.
+- `/settlement upgrade` visar nästa nivå, materialkrav och nivåbonus.
+- `/settlement inventory register` registrerar settlementets inlämningskista.
+- `/event join` används för att anmäla dig till event.
+- `/gz menu` öppnar huvudmenyn.
 
 ## Huvudmeny
 
@@ -297,9 +294,9 @@ Shopping Plots kan ha en separat dygnshyra som dras från **företagskontot** va
 /territory clear
 ```
 
-## Riksvägar, admin
+## Riksvägar
 
-Riksvägar markeras och färdigställs av serverns admins. Vanliga spelare behöver inte använda dessa kommandon.
+Riksvägar öppnas för alla när de godkänts av servern.
 
 ```text
 /road create <namn>

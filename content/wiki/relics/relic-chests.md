@@ -3,8 +3,6 @@ title: "Relic Chests"
 description: "Särskilda dungeonkistor som kan öppnas av spelare även när vanliga settlementskydd annars hade blockerat åtkomst."
 category: "Reliker"
 order: 4
-version: "2.0"
-engineVersion: "Relic System v2"
 updatedAt: "2026-08-23"
 infoboxTitle: "Relic Chest"
 infobox:

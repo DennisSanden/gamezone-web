@@ -3,8 +3,6 @@ title: "Jordbruk"
 description: "Grödor, odling och skörd."
 category: "Produktionskategorier"
 order: 2
-version: "1.2"
-engineVersion: "Production Registry"
 updatedAt: "2026-08-10"
 infoboxTitle: "Jordbruk"
 infobox:

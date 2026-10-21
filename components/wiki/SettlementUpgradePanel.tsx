@@ -123,7 +123,6 @@ export default function SettlementUpgradePanel({
                             <h3>{unlockedBonus.milestone ? "Stor milstolpe" : "Ny nivåbonus"}, nivå {upgrade.nextLevel.level}</h3>
                         </div>
                         <p>{unlockedBonus.description}</p>
-                        {upgrade.nextLevel.level === 43 && <p>Den spelarunika Villager-rabatten är ännu inte verifierad som färdig Engine-funktion.</p>}
                     </section>
                 )}
             </div>

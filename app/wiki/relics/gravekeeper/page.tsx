@@ -72,7 +72,7 @@ export default function GravekeeperWikiPage() {
                     </section>
 
                     <section className={styles.relicSystemCta}>
-                        <div><p className={styles.sectionEyebrow}>Reliksystemet</p><h2>En relik är ett riktigt föremål.</h2><p>Den kan hittas, tappas, ges bort och byta ägare. Engine dokumenterar dess historia medan föremålet fortsätter leva i spelvärlden.</p></div>
+                        <div><p className={styles.sectionEyebrow}>Reliksystemet</p><h2>En relik är ett riktigt föremål.</h2><p>Den kan hittas, tappas, ges bort och byta ägare. Dess historia följer med när det byter ägare eller visas upp i spelvärlden.</p></div>
                         <Link href="/wiki/relics/reliker">Läs hela relikwikin <span aria-hidden="true">→</span></Link>
                     </section>
                 </div>

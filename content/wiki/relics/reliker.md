@@ -3,8 +3,6 @@ title: "Reliker"
 description: "Översikt över GameZones reliksystem, unika föremål som kan hittas, användas, handlas och ge settlements kraftfulla bonusar."
 category: "Reliker"
 order: 1
-version: "2.0"
-engineVersion: "Relic System v2"
 updatedAt: "2026-08-26"
 infoboxTitle: "Server Relics"
 infobox:
@@ -30,9 +28,9 @@ relatedArticles:
 
 ## Vad är en relik?
 
-Reliker är **unika fysiska Minecraftföremål** som finns registrerade i GameZone Engine. De kan vara verktyg, vapen, böcker, rustningsdelar eller andra ovanliga items.
+Reliker är **unika fysiska Minecraftföremål** med en egen identitet och historia. De kan vara verktyg, vapen, böcker, rustningsdelar eller andra ovanliga items.
 
-En relik är inte bara ett namn och lite färgad lore. Engine känner igen den genom en dold, signerad identitet. Det gör att en vanlig spelare inte kan skapa en äkta relik genom att döpa om ett item i ett städ eller kopiera dess synliga text.
+En relik är inte bara ett namn och lite färgad lore. En äkta relik har en unik identitet. Det gör att en vanlig spelare inte kan skapa en äkta relik genom att döpa om ett item i ett städ eller kopiera dess synliga text.
 
 GameZone har **50 definierade reliker** i det ursprungliga registret. Alla behöver inte vara släppta samtidigt. Vissa kan ligga gömda i världen, vissa kan introduceras genom events och andra kan fortfarande vara helt unreleased.
 
@@ -115,13 +113,13 @@ Det gör att varje relik kan få en egen expedition och sin egen historia.
 
 ## När en relik upptäcks
 
-När en gömd relik hittas första gången registrerar Engine upptäckaren. Första upptäckaren behåller äran även om reliken säljs eller byter ägare senare.
+Den som först hittar en gömd relik blir registrerad som dess upptäckare. Första upptäckaren behåller äran även om reliken säljs eller byter ägare senare.
 
 En riktig discovery kan också utlösa ett stort serverannouncement. Det är särskilt viktigt för Epic, Legendary och Mythic, där fyndet ska kännas som en serverhändelse.
 
 ## Reliken fortsätter leva efter fyndet
 
-Engine försöker följa relikens resa genom världen. Systemet skiljer mellan vem som senast identifierats som innehavare och var reliken senast verifierades.
+Relikens historia följer med när den byter ägare. Du kan också se information om dess senast kända innehavare och var den senast syntes.
 
 Offentligt ska exakta koordinater aldrig behöva visas. En relik kan istället beskrivas som exempelvis:
 

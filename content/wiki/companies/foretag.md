@@ -3,8 +3,6 @@ title: "Företag"
 description: "Så fungerar företag, medlemskap, företagslicenser och företagsskatt på GameZone."
 category: "Företag"
 order: 1
-version: "1.9"
-engineVersion: "Company"
 updatedAt: "2026-09-18"
 infoboxTitle: "Företag"
 infobox:

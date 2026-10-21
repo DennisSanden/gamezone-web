@@ -3,8 +3,6 @@ title: "Government"
 description: "Diktatur, demokrati, King-val och omröstningar om settlementets statsskick."
 category: "Settlements"
 order: 4
-version: "1.1"
-engineVersion: "Settlement Government"
 updatedAt: "2026-09-14"
 infoboxTitle: "Government"
 infobox:
@@ -107,7 +105,7 @@ Det betyder att en Lord inte längre behöver behandlas som en generell "nästan
 Government-menyn visar också King-transfer. En ny King måste vara Lord, och när kronan överförs blir den tidigare King själv Lord. I GUI:t visas även administrationsavgiften på **100 000 Coins**.
 
 > [!IMPORTANT]
-> Vissa beslut är fortfarande reserverade för King, bland annat att dela ut Lord-behörigheter och andra funktioner som uttryckligen kräver King i Engine.
+> Vissa beslut är fortfarande reserverade för King, bland annat att dela ut Lord-behörigheter och andra beslut som bara en King får fatta.
 
 ## Policies påverkas inte av statsskicket
 

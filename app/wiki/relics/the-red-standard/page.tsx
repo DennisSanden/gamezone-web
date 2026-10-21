@@ -131,8 +131,7 @@ export default function TheRedStandardWikiPage() {
                             <p className={styles.sectionEyebrow}>Reliksystemet</p>
                             <h2>En relik är ett riktigt föremål.</h2>
                             <p>
-                                Den kan hittas, tappas, ges bort och byta ägare. Engine dokumenterar
-                                dess historia medan föremålet fortsätter leva i spelvärlden.
+                                Den kan hittas, tappas, ges bort och byta ägare. Dess historia följer med när det byter ägare eller visas upp i spelvärlden.
                             </p>
                         </div>
                         <Link href="/wiki/relics/reliker">

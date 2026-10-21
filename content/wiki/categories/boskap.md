@@ -3,8 +3,6 @@ title: "Boskap"
 description: "Djurhållning, kött, ull, läder och ägg."
 category: "Produktionskategorier"
 order: 3
-version: "1.4"
-engineVersion: "Production Registry"
 updatedAt: "2026-09-16"
 infoboxTitle: "Boskap"
 infobox:

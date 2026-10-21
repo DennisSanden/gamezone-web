@@ -3,8 +3,6 @@ title: "Minecraft & Discord"
 description: "Så blir du whitelistad, kopplar ditt Minecraftkonto till Discord och får rätt settlementkanaler."
 category: "Discord"
 order: 1
-version: "1.0"
-engineVersion: "GameZone Steve"
 updatedAt: "2026-08-26"
 infoboxTitle: "Snabbguide"
 infobox:

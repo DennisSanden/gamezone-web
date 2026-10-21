@@ -3,8 +3,6 @@ title: "Vindhamn"
 description: "Frivillig byggnad och aktuell bonus: 20 % chans att en fyrverkeriraket inte förbrukas vid Elytraflygning inom settlementet. Kräver fortfarande level 10 för att använda Elytra."
 category: "Byggnader"
 order: 8
-version: "2026.10"
-engineVersion: "GameZoneEngine 2026-10-21"
 updatedAt: "2026-10-21"
 infobox:
   bonus: "Frivillig"
@@ -15,7 +13,7 @@ infobox:
 
 **20 % chans att en fyrverkeriraket inte förbrukas vid Elytraflygning inom settlementet. Kräver fortfarande level 10 för att använda Elytra.**
 
-Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Vindhamn börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Byggnadens bonus börjar gälla när Vindhamn har färdigställts och godkänts.
 
 > [!IMPORTANT]
 > Elytra låses upp på **settlementnivå 10**, även utan Vindhamn. Vindhamn ger en separat raketbesparing.

@@ -3,8 +3,6 @@ title: "Server TAX"
 description: "Så beräknas skatten när företag säljer varor till andra spelare."
 category: "Ekonomi"
 order: 4
-version: "2.3"
-engineVersion: "Economy Engine"
 updatedAt: "2026-09-29"
 infoboxTitle: "Server TAX"
 infobox:

@@ -3,8 +3,6 @@ title: "Settlement spawn"
 description: "Låt King välja var settlementets medlemmar hamnar när de använder klockan vid spawn."
 category: "Settlements"
 order: 4
-version: "1.0"
-engineVersion: "Settlement Custom Spawn"
 updatedAt: "2026-08-06"
 infoboxTitle: "Settlement spawn"
 infobox:

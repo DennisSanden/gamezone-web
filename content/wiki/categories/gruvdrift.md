@@ -3,8 +3,6 @@ title: "Gruvdrift"
 description: "Mineraler, malm och skatter."
 category: "Produktionskategorier"
 order: 1
-version: "1.3"
-engineVersion: "Production Registry"
 updatedAt: "2026-09-14"
 infoboxTitle: "Gruvdrift"
 infobox:

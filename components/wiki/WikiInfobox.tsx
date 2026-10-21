@@ -58,14 +58,6 @@ export default function WikiInfobox({
                 ))}
             </dl>
 
-            <footer className={styles.footer}>
-                <span
-                    className={styles.statusDot}
-                    aria-hidden="true"
-                />
-
-                <span>Verifierad GameZone-data</span>
-            </footer>
         </aside>
     );
 }

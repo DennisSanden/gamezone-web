@@ -3,8 +3,6 @@ title: "Monsterjägare"
 description: "Leaderboarden som rankar GameZones mest framgångsrika bounty hunters."
 category: "Bounties"
 order: 2
-version: "1.0"
-engineVersion: "Bounty Leaderboard 1.0"
 updatedAt: "2026-08-28"
 infoboxTitle: "Monsterjägare"
 infobox:
@@ -37,6 +35,6 @@ Spelare A placeras då före Spelare B.
 
 ## Var statistiken kommer från
 
-Leaderboarden räknas direkt från färdiga bounty-claims i GameZone Engine. Det finns ingen separat manuell räknare som behöver uppdateras.
+Topplistan uppdateras utifrån de bounties som spelarna klarar.
 
-Det innebär att bountyhistoriken och Monsterjägare använder samma data.
+Dina avklarade bounties bidrar till både historiken och Monsterjägare-topplistan.

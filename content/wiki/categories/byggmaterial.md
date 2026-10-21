@@ -3,8 +3,6 @@ title: "Byggmaterial"
 description: "Förädlade block och byggresurser."
 category: "Produktionskategorier"
 order: 5
-version: "1.2"
-engineVersion: "Production Registry"
 updatedAt: "2026-08-10"
 infoboxTitle: "Byggmaterial"
 infobox:

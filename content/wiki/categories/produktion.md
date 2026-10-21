@@ -3,8 +3,6 @@ title: "Produktion"
 description: "Översikt över GameZones sju kategorier."
 category: "Produktionskategorier"
 order: 0
-version: "1.5"
-engineVersion: "Production Registry"
 updatedAt: "2026-09-16"
 infoboxTitle: "Produktion"
 infobox:

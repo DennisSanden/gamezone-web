@@ -3,8 +3,6 @@ title: "Rikskontrakt"
 description: "Fem veckokontrakt per settlement, Rikskistor i The Capitol och stora Coinsbelöningar för gemensamma leveranser."
 category: "Settlements"
 order: 7
-version: "1.0"
-engineVersion: "Rikskontrakt"
 updatedAt: "2026-09-07"
 infoboxTitle: "Rikskontrakt"
 infobox:
@@ -26,7 +24,7 @@ relatedArticles:
 
 ## Uppdatering, veckogräns och Slott
 
-Normalt finns **fem rikskontrakt per vecka**, och veckan byts **fredag klockan 06:00 svensk tid**. Ett färdigställt **Slott** höjer spelarens veckogräns till **sex rikskontrakt**. Bara ett kontrakt är aktivt åt gången om inte det aktuella GUI:t säger annat.
+Normalt finns **fem rikskontrakt per vecka**, och veckan byts **fredag klockan 06:00 svensk tid**. Ett färdigställt **Slott** höjer spelarens veckogräns till **sex rikskontrakt**. Bara ett kontrakt är aktivt åt gången om inte annat anges i spelets meny.
 
 ## Vad är Rikskontrakt?
 
