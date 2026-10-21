@@ -24,6 +24,10 @@ relatedArticles:
     description: "Företagskontrakt räknas som handel i serverstatistiken."
 ---
 
+## Aktuella begränsningar
+
+Ett företagskontrakt kan ha högst **48 timmars löptid**. Normalt får ett företag ha ett aktivt kontrakt, men ett settlement med aktivt **Handelscentrum** ger företaget **två aktiva kontrakt** samtidigt. Företagsmanagers kan också avsluta kontrakt där deras behörighet tillåter det. Kommandot `/contract push` är begränsat till ett försök per timme.
+
 ## Vad är ett företagskontrakt?
 
 Ett företagskontrakt är en offentlig beställning som finansieras av ett företag. Företaget anger **vilket item som söks, hur många som behövs och hur mycket hela leveransen är värd**.

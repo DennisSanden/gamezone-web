@@ -12,6 +12,14 @@ infobox:
   marketwatch: "/marketwatch"
 ---
 
+## Uppdateringar i Engine
+
+- `/settlement upgrade` visar nästa nivå, materialkrav och den nya nivådeffekten.
+- `/settlement inventory register` registrerar inlämningskistan.
+- `/event join` används till anmälan för kvällseventen.
+- `/builder` är ett behörighetsstyrt byggläge, inte ett vanligt spelarkommando.
+- Äldre kommandon för settlementkrig är inte längre aktuella.
+
 ## Huvudmeny
 
 ```text
@@ -214,38 +222,9 @@ Läs hela guiden på sidan [Settlement spawn](/wiki/settlements/settlement-spawn
 
 Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
 
-### Krig & Diplomati
+### Krig och allianser
 
-Krig och allianser kan hanteras från settlementets **Krig & Diplomati-meny** eller med commands. Endast King kan skicka krigsförklaringar och hantera allianser.
-
-#### Settlement War
-
-```text
-/settlement war declare <settlement>
-/settlement war declare <settlement> confirm
-/settlement war accept
-/settlement war decline
-/settlement war cancel
-/settlement war status
-/settlement war peace
-/settlement war peace cancel
-/settlement war surrender
-```
-
-Om allianser påverkar en declaration visar systemet först vilka settlements som kommer att dras in. Läs hela guiden på sidan [Krigssystemet](/wiki/war/krigssystemet).
-
-#### Allianser
-
-```text
-/settlement alliance invite <settlement>
-/settlement alliance accept <settlement>
-/settlement alliance decline <settlement>
-/settlement alliance cancel <settlement>
-/settlement alliance leave <settlement>
-/settlement alliance status
-```
-
-Direkta allierade dras automatiskt in på samma sida när ett krig accepteras. Läs mer på sidan [Allianser](/wiki/war/allianser).
+Det äldre krigssystemet är avvecklat. Kommandon för krigsförklaringar och krigsallianser finns inte längre i det aktuella systemet.
 
 ### Settlement inventory
 

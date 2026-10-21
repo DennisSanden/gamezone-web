@@ -5,7 +5,7 @@ category: "Settlements"
 order: 138
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Storrike uppgraderar settlementet från **Unionsrike**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 38
+
+**Rustningar förlorar 10 % mindre durability vid skada från vanliga mobs.**
 
 ## Krav för att låsa upp nivån
 

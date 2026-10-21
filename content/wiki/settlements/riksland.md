@@ -5,7 +5,7 @@ category: "Settlements"
 order: 127
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Riksland uppgraderar settlementet från **Kronland**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 27
+
+**10 % chans att Bone Meal inte förbrukas när det används på grödor.**
 
 ## Krav för att låsa upp nivån
 

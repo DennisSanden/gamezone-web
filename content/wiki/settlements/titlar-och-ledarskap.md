@@ -17,7 +17,7 @@ relatedArticles:
     title: "Policies"
     description: "Settlementets valbara bonusar och specialiseringar."
 infobox:
-  ansvariga: "King och 2 Lords, upp till 4 med Rådhus"
+  ansvariga: "King och 2 Lords, upp till 4 från nivå 12"
   högstaTitelbonus: "+50 %"
   betalning: "Stadskassan"
 ---
@@ -30,9 +30,9 @@ King kan utse upp till **två andra spelare till Lord** med:
 
 `/settlement lord <spelare>`
 
-Ett settlement har normalt **1 King och maximalt 2 Lords samtidigt**. När [Rådhus](/wiki/buildings/radhus) färdigställs låses **två extra Lord-platser** upp, vilket höjer maxgränsen till **4 Lords**.
+Ett settlement har normalt **1 King och maximalt 2 Lords samtidigt**. På **settlementnivå 12** låses två extra Lord-platser upp, vilket höjer maxgränsen till **4 Lords**. Rådhus ger i stället en extra policyplats.
 
-King och Lords använder settlementets gemensamma funktioner genom `/gz menu` eller `/settlement menu`. Exakt vad en Lord får göra styrs numera av **individuella Lord-behörigheter**. King kan öppna Government-menyn, klicka på en Lord och slå rättigheter på eller av för exempelvis medlemmar, stadskassa, byggnader, territorium, policies, krig och kontrakt.
+King och Lords använder settlementets gemensamma funktioner genom `/gz menu` eller `/settlement menu`. Exakt vad en Lord får göra styrs numera av **individuella Lord-behörigheter**. King kan öppna Government-menyn, klicka på en Lord och slå rättigheter på eller av för exempelvis medlemmar, stadskassa, byggnader, territorium, policies och kontrakt.
 
 > [!IMPORTANT]
 > King och Lords får en produktionsbonus som baseras på settlementets nivå. Bonusen gäller bara produktion som redan är berättigad till Coins, alltså resurser inom settlementets valda kategori.

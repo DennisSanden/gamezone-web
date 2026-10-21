@@ -1,95 +1,44 @@
 ---
-title: "Events"
-description: "Så fungerar GameZones events, eventområden, deltagande och de särskilda regler som gäller under ett event."
+title: "Events och schema"
+description: "Dagliga events klockan 20 och 21, Survival och roterande tävlingar."
 category: "Events"
 order: 1
-version: "1.4"
-engineVersion: "Event System"
-updatedAt: "2026-09-29"
-infoboxTitle: "Events"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Serveraktiviteter"
-  anslutning: "/event join"
-  pvp: "Styrs per event"
-  progression: "Skyddad under event"
-relatedArticles:
-  - category: "experience"
-    article: "dod-och-second-chance"
-    title: "Död & Second Chance"
-    description: "Hur vanlig död och progression fungerar utanför events."
-  - category: "commands"
-    article: "kommandon"
-    title: "Kommandon"
-    description: "Översikt över vanliga kommandon på GameZone."
+  kvällsschema: "20:00 och 21:00"
+  survival: "Varje kväll"
+  andra event: "Roterar"
 ---
 
-## Vad är ett event?
+## Så fungerar eventkvällarna
 
-**Events** är tillfälliga aktiviteter som serverteamet kan starta för hela eller delar av servern. Det kan vara turneringar, tävlingar, PvP-event, specialmatcher eller andra aktiviteter med egna regler och ett eget eventområde.
+GameZoneMC har normalt **två schemalagda events per kväll**, ett klockan **20:00** och ett klockan **21:00**. **Survival spelas varje kväll**, men växlar mellan tiderna. Den andra platsen roterar mellan Archery Masters, Team Deathmatch, Hunger Games Solo och Hunger Games Duo.
 
-När ett event är aktivt kan spelare ansluta med:
+Tiderna kommer från Engines schemaläggare. Om serverteamet ändrar något manuellt gäller informationen i spelet eller serverns aktuella eventinformation. Hunger Games Solo och Duo ligger inte samtidigt i det ordinarie två-eventschemat.
+
+## Gå med
 
 ```text
 /event join
 ```
 
-## Eventområdet
+Anmälan öppnar före start. Vissa event kräver lag, andra är individuella. Din vanliga utrustning hanteras separat i eventet, och normal survivalprogression ska inte gå förlorad på grund av en eventdöd.
 
-När du går med i ett event flyttas du till det eventområde som serverteamet har förberett. Eventsystemet håller eventet separerat från vanligt survivalspel så att tävlingen inte ska påverka din normala progression på ett orimligt sätt.
+## Eventtyper
 
-> [!IMPORTANT]
-> Följ alltid informationen som visas när eventet startar. Regler, PvP och vinstvillkor kan skilja sig mellan olika event.
+- **Survival**, kooperativt PvE med upp till 20 waves, klasser och gemensamma förbättringar.
+- **Hunger Games**, Solo eller Duo där du överlever längre än motståndarna.
+- **Team Deathmatch**, två lag med gemensamma tickets.
+- **Archery Masters**, bågskyttebaserad tävling.
 
-## Inventarie och progression
+Hunger Games, Team Deathmatch och Archery Masters har separata ELO-system. Se [Survivalguiden](/wiki/events/survival) för klasser, bonusar och bossar.
 
-Event kan använda ett separat upplägg där ditt vanliga inventory inte ska ge dig en fördel i tävlingen. Eventsystemet kan därför rensa eller styra inventory när du ansluter till eventet.
-
-Död under ett aktivt event ska inte fungera som en vanlig survivaldöd. **Coin-loss och Character Level-loss ska inte appliceras på eventdödsfall.**
-
-## PvP
-
-PvP är inte automatiskt aktivt i alla events. Serverteamet kan slå på eller av PvP beroende på vilken typ av event som körs.
-
-Det betyder att två event kan använda samma område men ha helt olika regler.
-
-## Eventtyper och vinnare
-
-Events kan köras som **Solo**, **Settlement** eller **Random Teams**. Vinnaren utses automatiskt när inget motstånd återstår.
-
-- **Solo**, sista kvarvarande spelaren vinner.
-- **Settlement**, sista kvarvarande settlementet vinner.
-- **Random Teams**, sista kvarvarande laget vinner. Laget visas tydligt vid spelarnas namn under eventet.
-
-När en spelare elimineras hörs ett svagt kanonljud.
-
-## Prispengar
-
-Ett event kan ha en prispott.
-
-- I **Solo** går prispotten till vinnaren.
-- I **Settlement** går prispotten till vinnande settlements stadskassa.
-- I **Random Teams** delas prispotten mellan **alla spelare i vinnarlaget**, även lagmedlemmar som eliminerats tidigare under eventet. En spelare som frivilligt lämnar eventet räknas inte längre till lagets prispott.
-
-## Återkommande event
-
-**Survival Waves** körs automatiskt varje dag klockan **20:00**. Eventet består av 20 PvE-waves. Belöningen staplas inte mellan waves, den ersätts av belöningen för den senaste klarade waven. I nuvarande Engine är wave 20 värd **1 000 000 Coins**.
-
-**Team Deathmatch** öppnar automatiskt anmälan **20:55** och startar **21:00** varje dag. Matchen använder **50 tickets per lag**.
-
-Engine har också särskilda lägen för **Hunger Games** och **Core Deathmatch**. Hunger Games använder en krympande dödscirkel. Core Deathmatch använder lagkärnor med **1 000 HP**, och när ett lags kärna förstörs förlorar laget sina respawns.
-
-TDM, Hunger Games och Archery Masters har separata ELO-ratingar. En ny rating börjar på **1 000 ELO** och lagras separat per eventtyp.
-
-Utöver de schemalagda eventen kan serverteamet starta andra event manuellt. Håll koll på servermeddelanden och Discord för aktuella event.
-
-## Patreon-events
-
-Serverteamet kan skapa events som är avsedda för Patreons. `patreon` finns som valbar eventtyp och visas i commandets tab completion. Det kan kombineras med Solo, Settlement och Random Teams.
+## Spelarstartade events
 
 ```text
-/event on solo patreon <namn>
-/event on settlement patreon <namn>
-/event on random patreon <namn>
+/event start <Archery/Survival/TDM/HG>
 ```
 
-Detta är administrationskommandon och används av serverteamet när ett Patreon-event ska startas.
+I Engine finns stöd för spelardrivna event med minst åtta deltagare, en anmälningsperiod på fem minuter och begränsning till ett sådant event per timme. Spelarstart är inte tillåten tätt inpå ett schemalagt event. GUI och kommandots hjälptext visar vad som finns tillgängligt.

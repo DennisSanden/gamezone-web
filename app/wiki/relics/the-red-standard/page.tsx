@@ -7,7 +7,7 @@ import relicImage from "../assets/the-red-standard.png";
 
 export const metadata: Metadata = {
     title: "The Red Standard | GameZone Wiki",
-    description: "The Red Standard, en Common settlementrelik från Varkesh som ger +2 War Tickets.",
+    description: "The Red Standard, en Common settlementrelik från Varkesh med en historisk krigseffekt, inte längre aktiv.",
 };
 
 export default function TheRedStandardWikiPage() {
@@ -115,7 +115,7 @@ export default function TheRedStandardWikiPage() {
                                 <div><dt>Item</dt><dd>Red Banner</dd></div>
                                 <div><dt>Hållbarhet</dt><dd>Unbreakable</dd></div>
                                 <div><dt>Typ</dt><dd>Settlement Relic</dd></div>
-                                <div><dt>Settlementbonus</dt><dd>+2 War Tickets</dd></div>
+                                <div><dt>Settlementbonus</dt><dd>Historisk, inaktiv War Tickets-effekt</dd></div>
                                 <div><dt>Aktivering</dt><dd>Settlement Inventory</dd></div>
                             </dl>
 

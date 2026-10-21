@@ -1,6 +1,6 @@
 {
   "title": "Byggnader",
-  "description": "Building System 1.0, bygglicenser, fysiska krav, bonusar, skador och settlementets byggnadsprogression.",
+  "description": "24 frivilliga specialbyggnader. Settlementnivåer kräver inga byggnader.",
   "order": 4,
   "icon": "buildings"
 }

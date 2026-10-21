@@ -31,7 +31,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     "kungadome-till-imperium": kungadomeTillImperium,
     "level-1-till-2": {
         currentLevel: { name: "Enstöring", level: 1 },
-        nextLevel: { name: "Läger", level: 2, href: "/wiki/settlements/level-2" },
+        nextLevel: { name: "Läger", level: 2, href: "/wiki/settlements/lager" },
         changes: [],
         upgradeCost: { coins: "0 Coins", materials: [
             { id: "cobblestone-1", name: "Cobblestone", amount: 64, icon: "◆", texture: "/minecraft/blocks/cobblestone.png" },
@@ -41,7 +41,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-2-till-3": {
         currentLevel: { name: "Läger", level: 2 },
-        nextLevel: { name: "Boplats", level: 3, href: "/wiki/settlements/level-3" },
+        nextLevel: { name: "Boplats", level: 3, href: "/wiki/settlements/boplats" },
         changes: [],
         upgradeCost: { coins: "10 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 32, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -55,7 +55,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-3-till-4": {
         currentLevel: { name: "Boplats", level: 3 },
-        nextLevel: { name: "Nybygge", level: 4, href: "/wiki/settlements/level-4" },
+        nextLevel: { name: "Nybygge", level: 4, href: "/wiki/settlements/nybygge" },
         changes: [],
         upgradeCost: { coins: "25 000 Coins", materials: [
             { id: "beef-1", name: "Beef", amount: 32, icon: "🥩", texture: "/minecraft/items/beef.png" },
@@ -69,7 +69,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-4-till-5": {
         currentLevel: { name: "Nybygge", level: 4 },
-        nextLevel: { name: "By", level: 5, href: "/wiki/settlements/level-5" },
+        nextLevel: { name: "By", level: 5, href: "/wiki/settlements/by" },
         changes: [],
         upgradeCost: { coins: "50 000 Coins", materials: [
             { id: "deepslate-bricks-1", name: "Deepslate Bricks", amount: 256, icon: "◆", texture: "/minecraft/blocks/deepslate_bricks.png" },
@@ -83,7 +83,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-5-till-6": {
         currentLevel: { name: "By", level: 5 },
-        nextLevel: { name: "Storby", level: 6, href: "/wiki/settlements/level-6" },
+        nextLevel: { name: "Storby", level: 6, href: "/wiki/settlements/storby" },
         changes: [],
         upgradeCost: { coins: "100 000 Coins", materials: [
             { id: "raw-gold-1", name: "Raw Gold", amount: 128, icon: "🟨", texture: "/minecraft/items/raw_gold.png" },
@@ -98,7 +98,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-6-till-7": {
         currentLevel: { name: "Storby", level: 6 },
-        nextLevel: { name: "Samhälle", level: 7, href: "/wiki/settlements/level-7" },
+        nextLevel: { name: "Samhälle", level: 7, href: "/wiki/settlements/samhalle" },
         changes: [],
         upgradeCost: { coins: "175 000 Coins", materials: [
             { id: "redstone-1", name: "Redstone", amount: 384, icon: "🔴", texture: "/minecraft/items/redstone.png" },
@@ -113,7 +113,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-7-till-8": {
         currentLevel: { name: "Samhälle", level: 7 },
-        nextLevel: { name: "Köping", level: 8, href: "/wiki/settlements/level-8" },
+        nextLevel: { name: "Köping", level: 8, href: "/wiki/settlements/koping" },
         changes: [],
         upgradeCost: { coins: "300 000 Coins", materials: [
             { id: "lapis-lazuli-1", name: "Lapis Lazuli", amount: 768, icon: "🔵", texture: "/minecraft/items/lapis_lazuli.png" },
@@ -128,7 +128,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-8-till-9": {
         currentLevel: { name: "Köping", level: 8 },
-        nextLevel: { name: "Handelsköping", level: 9, href: "/wiki/settlements/level-9" },
+        nextLevel: { name: "Handelsköping", level: 9, href: "/wiki/settlements/handelskoping" },
         changes: [],
         upgradeCost: { coins: "500 000 Coins", materials: [
             { id: "emerald-1", name: "Emerald", amount: 228, icon: "💚", texture: "/minecraft/items/emerald.png" },
@@ -143,7 +143,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-9-till-10": {
         currentLevel: { name: "Handelsköping", level: 9 },
-        nextLevel: { name: "Småstad", level: 10, href: "/wiki/settlements/level-10" },
+        nextLevel: { name: "Småstad", level: 10, href: "/wiki/settlements/smastad" },
         changes: [],
         upgradeCost: { coins: "800 000 Coins", materials: [
             { id: "diamond-1", name: "Diamond", amount: 60, icon: "💎", texture: "/minecraft/items/diamond.png" },
@@ -159,7 +159,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-10-till-11": {
         currentLevel: { name: "Småstad", level: 10 },
-        nextLevel: { name: "Stad", level: 11, href: "/wiki/settlements/level-11" },
+        nextLevel: { name: "Stad", level: 11, href: "/wiki/settlements/stad" },
         changes: [],
         upgradeCost: { coins: "1 200 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 120, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -182,7 +182,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-11-till-12": {
         currentLevel: { name: "Stad", level: 11 },
-        nextLevel: { name: "Handelsstad", level: 12, href: "/wiki/settlements/level-12" },
+        nextLevel: { name: "Handelsstad", level: 12, href: "/wiki/settlements/handelsstad" },
         changes: [],
         upgradeCost: { coins: "1 750 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 1152, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -206,7 +206,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-12-till-13": {
         currentLevel: { name: "Handelsstad", level: 12 },
-        nextLevel: { name: "Fästningsstad", level: 13, href: "/wiki/settlements/level-13" },
+        nextLevel: { name: "Fästningsstad", level: 13, href: "/wiki/settlements/fastningsstad" },
         changes: [],
         upgradeCost: { coins: "2 500 000 Coins", materials: [
             { id: "iron-ingot-1", name: "Iron Ingot", amount: 1696, icon: "⬜", texture: "/minecraft/items/iron_ingot.png" },
@@ -231,7 +231,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-13-till-14": {
         currentLevel: { name: "Fästningsstad", level: 13 },
-        nextLevel: { name: "Residensstad", level: 14, href: "/wiki/settlements/level-14" },
+        nextLevel: { name: "Residensstad", level: 14, href: "/wiki/settlements/residensstad" },
         changes: [],
         upgradeCost: { coins: "3 500 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 1072, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -255,7 +255,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-14-till-15": {
         currentLevel: { name: "Residensstad", level: 14 },
-        nextLevel: { name: "Storstad", level: 15, href: "/wiki/settlements/level-15" },
+        nextLevel: { name: "Storstad", level: 15, href: "/wiki/settlements/storstad" },
         changes: [],
         upgradeCost: { coins: "5 000 000 Coins", materials: [
             { id: "copper-ingot-1", name: "Copper Ingot", amount: 2256, icon: "◆", texture: "/minecraft/items/copper_ingot.png" },
@@ -278,7 +278,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-15-till-16": {
         currentLevel: { name: "Storstad", level: 15 },
-        nextLevel: { name: "Huvudstad", level: 16, href: "/wiki/settlements/level-16" },
+        nextLevel: { name: "Huvudstad", level: 16, href: "/wiki/settlements/huvudstad" },
         changes: [],
         upgradeCost: { coins: "7 000 000 Coins", materials: [
             { id: "copper-ingot-1", name: "Copper Ingot", amount: 640, icon: "◆", texture: "/minecraft/items/copper_ingot.png" },
@@ -302,7 +302,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-16-till-17": {
         currentLevel: { name: "Huvudstad", level: 16 },
-        nextLevel: { name: "Stadsstat", level: 17, href: "/wiki/settlements/level-17" },
+        nextLevel: { name: "Stadsstat", level: 17, href: "/wiki/settlements/stadsstat" },
         changes: [],
         upgradeCost: { coins: "9 500 000 Coins", materials: [
             { id: "emerald-1", name: "Emerald", amount: 448, icon: "💚", texture: "/minecraft/items/emerald.png" },
@@ -325,7 +325,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-17-till-18": {
         currentLevel: { name: "Stadsstat", level: 17 },
-        nextLevel: { name: "Fristat", level: 18, href: "/wiki/settlements/level-18" },
+        nextLevel: { name: "Fristat", level: 18, href: "/wiki/settlements/fristat" },
         changes: [],
         upgradeCost: { coins: "12 500 000 Coins", materials: [
             { id: "diamond-1", name: "Diamond", amount: 64, icon: "💎", texture: "/minecraft/items/diamond.png" },
@@ -349,7 +349,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-18-till-19": {
         currentLevel: { name: "Fristat", level: 18 },
-        nextLevel: { name: "Län", level: 19, href: "/wiki/settlements/level-19" },
+        nextLevel: { name: "Län", level: 19, href: "/wiki/settlements/lan" },
         changes: [],
         upgradeCost: { coins: "16 000 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 1712, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -373,7 +373,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-19-till-20": {
         currentLevel: { name: "Län", level: 19 },
-        nextLevel: { name: "Grevskap", level: 20, href: "/wiki/settlements/level-20" },
+        nextLevel: { name: "Grevskap", level: 20, href: "/wiki/settlements/grevskap" },
         changes: [],
         upgradeCost: { coins: "20 000 000 Coins", materials: [
             { id: "ancient-debris-1", name: "Ancient Debris", amount: 72, icon: "◆", texture: "/minecraft/blocks/ancient_debris_top.png" },
@@ -398,7 +398,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-20-till-21": {
         currentLevel: { name: "Grevskap", level: 20 },
-        nextLevel: { name: "Markgrevskap", level: 21, href: "/wiki/settlements/level-21" },
+        nextLevel: { name: "Markgrevskap", level: 21, href: "/wiki/settlements/markgrevskap" },
         changes: [],
         upgradeCost: { coins: "25 000 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 180, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -424,7 +424,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-21-till-22": {
         currentLevel: { name: "Markgrevskap", level: 21 },
-        nextLevel: { name: "Furstendöme", level: 22, href: "/wiki/settlements/level-22" },
+        nextLevel: { name: "Furstendöme", level: 22, href: "/wiki/settlements/furstendome" },
         changes: [],
         upgradeCost: { coins: "30 000 000 Coins", materials: [
             { id: "iron-ingot-1", name: "Iron Ingot", amount: 6016, icon: "⬜", texture: "/minecraft/items/iron_ingot.png" },
@@ -450,7 +450,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-22-till-23": {
         currentLevel: { name: "Furstendöme", level: 22 },
-        nextLevel: { name: "Hertigdöme", level: 23, href: "/wiki/settlements/level-23" },
+        nextLevel: { name: "Hertigdöme", level: 23, href: "/wiki/settlements/hertigdome" },
         changes: [],
         upgradeCost: { coins: "36 000 000 Coins", materials: [
             { id: "copper-ingot-1", name: "Copper Ingot", amount: 4000, icon: "◆", texture: "/minecraft/items/copper_ingot.png" },
@@ -477,7 +477,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-23-till-24": {
         currentLevel: { name: "Hertigdöme", level: 23 },
-        nextLevel: { name: "Storhertigdöme", level: 24, href: "/wiki/settlements/level-24" },
+        nextLevel: { name: "Storhertigdöme", level: 24, href: "/wiki/settlements/storhertigdome" },
         changes: [],
         upgradeCost: { coins: "43 000 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 250, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -505,7 +505,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-24-till-25": {
         currentLevel: { name: "Storhertigdöme", level: 24 },
-        nextLevel: { name: "Fursterike", level: 25, href: "/wiki/settlements/level-25" },
+        nextLevel: { name: "Fursterike", level: 25, href: "/wiki/settlements/fursterike" },
         changes: [],
         upgradeCost: { coins: "52 000 000 Coins", materials: [
             { id: "diamond-1", name: "Diamond", amount: 128, icon: "💎", texture: "/minecraft/items/diamond.png" },
@@ -534,7 +534,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-25-till-26": {
         currentLevel: { name: "Fursterike", level: 25 },
-        nextLevel: { name: "Kronland", level: 26, href: "/wiki/settlements/level-26" },
+        nextLevel: { name: "Kronland", level: 26, href: "/wiki/settlements/kronland" },
         changes: [],
         upgradeCost: { coins: "62 000 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 4704, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -564,7 +564,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-26-till-27": {
         currentLevel: { name: "Kronland", level: 26 },
-        nextLevel: { name: "Riksland", level: 27, href: "/wiki/settlements/level-27" },
+        nextLevel: { name: "Riksland", level: 27, href: "/wiki/settlements/riksland" },
         changes: [],
         upgradeCost: { coins: "74 000 000 Coins", materials: [
             { id: "gold-block-1", name: "Gold Block", amount: 500, icon: "◆", texture: "/minecraft/blocks/gold_block.png" },
@@ -596,7 +596,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-27-till-28": {
         currentLevel: { name: "Riksland", level: 27 },
-        nextLevel: { name: "Förbundsstat", level: 28, href: "/wiki/settlements/level-28" },
+        nextLevel: { name: "Förbundsstat", level: 28, href: "/wiki/settlements/forbundsstat" },
         changes: [],
         upgradeCost: { coins: "88 000 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 390, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -628,7 +628,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-28-till-29": {
         currentLevel: { name: "Förbundsstat", level: 28 },
-        nextLevel: { name: "Samvälde", level: 29, href: "/wiki/settlements/level-29" },
+        nextLevel: { name: "Samvälde", level: 29, href: "/wiki/settlements/samvalde" },
         changes: [],
         upgradeCost: { coins: "105 000 000 Coins", materials: [
             { id: "iron-block-1", name: "Iron Block", amount: 900, icon: "◆", texture: "/minecraft/blocks/iron_block.png" },
@@ -661,7 +661,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-29-till-30": {
         currentLevel: { name: "Samvälde", level: 29 },
-        nextLevel: { name: "Rike", level: 30, href: "/wiki/settlements/level-30" },
+        nextLevel: { name: "Rike", level: 30, href: "/wiki/settlements/rike" },
         changes: [],
         upgradeCost: { coins: "125 000 000 Coins", materials: [
             { id: "ancient-debris-1", name: "Ancient Debris", amount: 72, icon: "◆", texture: "/minecraft/blocks/ancient_debris_top.png" },
@@ -692,7 +692,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-30-till-31": {
         currentLevel: { name: "Rike", level: 30 },
-        nextLevel: { name: "Konungarike", level: 31, href: "/wiki/settlements/level-31" },
+        nextLevel: { name: "Konungarike", level: 31, href: "/wiki/settlements/konungarike" },
         changes: [],
         upgradeCost: { coins: "150 000 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 2240, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -727,7 +727,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-31-till-32": {
         currentLevel: { name: "Konungarike", level: 31 },
-        nextLevel: { name: "Kungadöme", level: 32, href: "/wiki/settlements/level-32" },
+        nextLevel: { name: "Kungadöme", level: 32, href: "/wiki/settlements/kungadome" },
         changes: [],
         upgradeCost: { coins: "180 000 000 Coins", materials: [
             { id: "diamond-1", name: "Diamond", amount: 256, icon: "💎", texture: "/minecraft/items/diamond.png" },
@@ -761,7 +761,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-32-till-33": {
         currentLevel: { name: "Kungadöme", level: 32 },
-        nextLevel: { name: "Storkungadöme", level: 33, href: "/wiki/settlements/level-33" },
+        nextLevel: { name: "Storkungadöme", level: 33, href: "/wiki/settlements/storkungadome" },
         changes: [],
         upgradeCost: { coins: "215 000 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 5632, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -801,7 +801,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-33-till-34": {
         currentLevel: { name: "Storkungadöme", level: 33 },
-        nextLevel: { name: "Kronrike", level: 34, href: "/wiki/settlements/level-34" },
+        nextLevel: { name: "Kronrike", level: 34, href: "/wiki/settlements/kronrike" },
         changes: [],
         upgradeCost: { coins: "255 000 000 Coins", materials: [
             { id: "amethyst-block-1", name: "Amethyst Block", amount: 30, icon: "◆", texture: "/minecraft/blocks/amethyst_block.png" },
@@ -838,7 +838,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-34-till-35": {
         currentLevel: { name: "Kronrike", level: 34 },
-        nextLevel: { name: "Högkungadöme", level: 35, href: "/wiki/settlements/level-35" },
+        nextLevel: { name: "Högkungadöme", level: 35, href: "/wiki/settlements/hogkungadome" },
         changes: [],
         upgradeCost: { coins: "300 000 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 800, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -876,7 +876,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-35-till-36": {
         currentLevel: { name: "Högkungadöme", level: 35 },
-        nextLevel: { name: "Förbundsrike", level: 36, href: "/wiki/settlements/level-36" },
+        nextLevel: { name: "Förbundsrike", level: 36, href: "/wiki/settlements/forbundsrike" },
         changes: [],
         upgradeCost: { coins: "350 000 000 Coins", materials: [
             { id: "emerald-block-1", name: "Emerald Block", amount: 150, icon: "◆", texture: "/minecraft/blocks/emerald_block.png" },
@@ -919,7 +919,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-36-till-37": {
         currentLevel: { name: "Förbundsrike", level: 36 },
-        nextLevel: { name: "Unionsrike", level: 37, href: "/wiki/settlements/level-37" },
+        nextLevel: { name: "Unionsrike", level: 37, href: "/wiki/settlements/unionsrike" },
         changes: [],
         upgradeCost: { coins: "410 000 000 Coins", materials: [
             { id: "copper-ingot-1", name: "Copper Ingot", amount: 5376, icon: "◆", texture: "/minecraft/items/copper_ingot.png" },
@@ -967,7 +967,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-37-till-38": {
         currentLevel: { name: "Unionsrike", level: 37 },
-        nextLevel: { name: "Storrike", level: 38, href: "/wiki/settlements/level-38" },
+        nextLevel: { name: "Storrike", level: 38, href: "/wiki/settlements/storrike" },
         changes: [],
         upgradeCost: { coins: "475 000 000 Coins", materials: [
             { id: "ancient-debris-1", name: "Ancient Debris", amount: 72, icon: "◆", texture: "/minecraft/blocks/ancient_debris_top.png" },
@@ -1010,7 +1010,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-38-till-39": {
         currentLevel: { name: "Storrike", level: 38 },
-        nextLevel: { name: "Stormaktsrike", level: 39, href: "/wiki/settlements/level-39" },
+        nextLevel: { name: "Stormaktsrike", level: 39, href: "/wiki/settlements/stormaktsrike" },
         changes: [],
         upgradeCost: { coins: "550 000 000 Coins", materials: [
             { id: "diamond-1", name: "Diamond", amount: 256, icon: "💎", texture: "/minecraft/items/diamond.png" },
@@ -1057,7 +1057,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-39-till-40": {
         currentLevel: { name: "Stormaktsrike", level: 39 },
-        nextLevel: { name: "Kejsardöme", level: 40, href: "/wiki/settlements/level-40" },
+        nextLevel: { name: "Kejsardöme", level: 40, href: "/wiki/settlements/kejsardome" },
         changes: [],
         upgradeCost: { coins: "650 000 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 6059, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -1110,7 +1110,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-40-till-41": {
         currentLevel: { name: "Kejsardöme", level: 40 },
-        nextLevel: { name: "Kejsarrike", level: 41, href: "/wiki/settlements/level-41" },
+        nextLevel: { name: "Kejsarrike", level: 41, href: "/wiki/settlements/kejsarrike" },
         changes: [],
         upgradeCost: { coins: "750 000 000 Coins", materials: [
             { id: "copper-ingot-1", name: "Copper Ingot", amount: 6410, icon: "◆", texture: "/minecraft/items/copper_ingot.png" },
@@ -1171,7 +1171,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-41-till-42": {
         currentLevel: { name: "Kejsarrike", level: 41 },
-        nextLevel: { name: "Storkejsardöme", level: 42, href: "/wiki/settlements/level-42" },
+        nextLevel: { name: "Storkejsardöme", level: 42, href: "/wiki/settlements/storkejsardome" },
         changes: [],
         upgradeCost: { coins: "875 000 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 1400, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -1229,7 +1229,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-42-till-43": {
         currentLevel: { name: "Storkejsardöme", level: 42 },
-        nextLevel: { name: "Högkejsardöme", level: 43, href: "/wiki/settlements/level-43" },
+        nextLevel: { name: "Högkejsardöme", level: 43, href: "/wiki/settlements/hogkejsardome" },
         changes: [],
         upgradeCost: { coins: "1 000 000 000 Coins", materials: [
             { id: "emerald-1", name: "Emerald", amount: 5056, icon: "◆", texture: "/minecraft/items/emerald.png" },
@@ -1291,7 +1291,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-43-till-44": {
         currentLevel: { name: "Högkejsardöme", level: 43 },
-        nextLevel: { name: "Kronimperium", level: 44, href: "/wiki/settlements/level-44" },
+        nextLevel: { name: "Kronimperium", level: 44, href: "/wiki/settlements/kronimperium" },
         changes: [],
         upgradeCost: { coins: "1 150 000 000 Coins", materials: [
             { id: "ancient-debris-1", name: "Ancient Debris", amount: 72, icon: "◆", texture: "/minecraft/blocks/ancient_debris_top.png" },
@@ -1353,7 +1353,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-44-till-45": {
         currentLevel: { name: "Kronimperium", level: 44 },
-        nextLevel: { name: "Imperialrike", level: 45, href: "/wiki/settlements/level-45" },
+        nextLevel: { name: "Imperialrike", level: 45, href: "/wiki/settlements/imperialrike" },
         changes: [],
         upgradeCost: { coins: "1 300 000 000 Coins", materials: [
             { id: "diamond-block-1", name: "Diamond Block", amount: 24, icon: "◆", texture: "/minecraft/blocks/diamond_block.png" },
@@ -1418,7 +1418,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-45-till-46": {
         currentLevel: { name: "Imperialrike", level: 45 },
-        nextLevel: { name: "Storimperium", level: 46, href: "/wiki/settlements/level-46" },
+        nextLevel: { name: "Storimperium", level: 46, href: "/wiki/settlements/storimperium" },
         changes: [],
         upgradeCost: { coins: "1 475 000 000 Coins", materials: [
             { id: "diamond-1", name: "Diamond", amount: 560, icon: "💎", texture: "/minecraft/items/diamond.png" },
@@ -1472,7 +1472,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-46-till-47": {
         currentLevel: { name: "Storimperium", level: 46 },
-        nextLevel: { name: "Högimperium", level: 47, href: "/wiki/settlements/level-47" },
+        nextLevel: { name: "Högimperium", level: 47, href: "/wiki/settlements/hogimperium" },
         changes: [],
         upgradeCost: { coins: "1 675 000 000 Coins", materials: [
             { id: "coal-1", name: "Coal", amount: 1632, icon: "⬛", texture: "/minecraft/items/coal.png" },
@@ -1538,7 +1538,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-47-till-48": {
         currentLevel: { name: "Högimperium", level: 47 },
-        nextLevel: { name: "Världsimperium", level: 48, href: "/wiki/settlements/level-48" },
+        nextLevel: { name: "Världsimperium", level: 48, href: "/wiki/settlements/varldsimperium" },
         changes: [],
         upgradeCost: { coins: "1 900 000 000 Coins", materials: [
             { id: "ancient-debris-1", name: "Ancient Debris", amount: 72, icon: "◆", texture: "/minecraft/blocks/ancient_debris_top.png" },
@@ -1617,7 +1617,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-48-till-49": {
         currentLevel: { name: "Världsimperium", level: 48 },
-        nextLevel: { name: "Kejsarimperium", level: 49, href: "/wiki/settlements/level-49" },
+        nextLevel: { name: "Kejsarimperium", level: 49, href: "/wiki/settlements/kejsarimperium" },
         changes: [],
         upgradeCost: { coins: "2 150 000 000 Coins", materials: [
             { id: "amethyst-shard-1", name: "Amethyst Shard", amount: 1600, icon: "💜", texture: "/minecraft/items/amethyst_shard.png" },
@@ -1670,7 +1670,7 @@ const settlementUpgrades: Record<SettlementUpgradeKey, SettlementUpgrade> = {
     },
     "level-49-till-50": {
         currentLevel: { name: "Kejsarimperium", level: 49 },
-        nextLevel: { name: "Imperium", level: 50, href: "/wiki/settlements/level-50" },
+        nextLevel: { name: "Imperium", level: 50, href: "/wiki/settlements/imperium" },
         changes: [],
         upgradeCost: { coins: "2 500 000 000 Coins", materials: [
             { id: "diamond-block-1", name: "Diamond Block", amount: 128, icon: "◆", texture: "/minecraft/blocks/diamond_block.png" },

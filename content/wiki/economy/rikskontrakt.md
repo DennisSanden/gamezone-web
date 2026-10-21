@@ -24,6 +24,10 @@ relatedArticles:
     description: "Settlementets gemensamma Coins."
 ---
 
+## Uppdatering, veckogräns och Slott
+
+Normalt finns **fem rikskontrakt per vecka**, och veckan byts **fredag klockan 06:00 svensk tid**. Ett färdigställt **Slott** höjer spelarens veckogräns till **sex rikskontrakt**. Bara ett kontrakt är aktivt åt gången om inte det aktuella GUI:t säger annat.
+
 ## Vad är Rikskontrakt?
 
 Rikskontrakt är gemensamma veckouppdrag för settlements. Varje settlement får **fem kontrakt per kontraktsvecka**. The Capitol får också fem Rikskontrakt.

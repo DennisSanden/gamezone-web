@@ -1,51 +1,17 @@
 ---
 title: "Kategoribyggnad"
-description: "Settlementets första produktionsbyggnad och +5 % bonus inom vald kategori."
+description: "Äldre samlingsnamn för produktionsbyggnader, som numera ger valfria specialbonusar."
 category: "Byggnader"
-order: 3
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Kategoribyggnad"
-infobox:
-  nivåkrav: "Settlementnivå 2"
-  kostnad: "10 000 Coins"
-  referensyta: "11×11"
-  bonus: "+5 % i vald kategori"
+order: 1
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 ---
 
-## Vad är Kategoribyggnaden?
+## Vad betyder kategoribyggnad?
 
-På settlementnivå 2 kan settlementet bygga den **Kategoribyggnad** som hör till dess aktiva produktionskategori. Detta gäller alla produktionskategorier utom **Alkemi**.
+De olika produktionskategorierna har byggnader med egna effekter, till exempel Fiskebrygga, Gruva, Lada, Ladugård, Sågverk, Stenhuggeri och Laboratorium.
 
-Spelare börjar tjäna **Coins direkt när settlementet har skapats**. Kategoribyggnaden är alltså inte ett krav för att få Coins. När rätt byggnad är färdigställd ger den istället **+5 % produktionsbonus inom settlementets aktiva kategori**.
+**Ingen kategoribyggnad behövs längre för att få Coins från den valda produktionskategorin eller levla upp ett settlement.** Byggnader ger i stället frivilliga specialbonusar, som snabbare fiske eller bearbetning av material.
 
-| Kategori | Byggnad |
-|---|---|
-| Gruvdrift | [Gruva](/wiki/buildings/gruva) |
-| Jordbruk | [Lada](/wiki/buildings/lada) |
-| Boskap | [Ladugård](/wiki/buildings/ladugard) |
-| Fiske | [Fiskebrygga](/wiki/buildings/fiskebrygga) |
-| Skogsbruk | [Sågverk](/wiki/buildings/sagverk) |
-| Byggmaterial | [Stenhuggeri](/wiki/buildings/stenhuggeri) |
-
-## Krav
-
-- Settlementnivå: **2 eller högre**
-- Licens: **10 000 Coins**
-- Referensyta: **11×11**. Måttet är inte låst, spelaren markerar byggnadsytan själv.
-- Väggar: **minst 40 %**
-- Tak: **minst 40 %**
-- Hela byggnaden måste ligga inom settlementets territorium
-
-### Specialkrav
-
-<BuildingRequirementsTable building="kategoribyggnad" />
-
-Den extra **+5 % produktionsbonusen** aktiveras först när den fysiska byggnaden har godkänts med `/building complete`.
-
-> [!IMPORTANT]
-> Kategoribyggnader ger bara sin **+5 % bonus** när byggnaden hör till settlementets aktiva kategori. Byter settlementet kategori fortsätter den nya kategorin att ge vanliga Coins direkt, även om den nya kategoribyggnaden inte är byggd. Den gamla byggnaden ligger kvar och blir aktiv igen om settlementet senare byter tillbaka.
-
-> [!NOTE]
-> **Alkemi har ingen kategoribyggnad på nivå 2.** Alkemi kan uppgradera från nivå 2 till 3 utan en kategoribyggnad. Kategorins byggnad är istället [Laboratorium](/wiki/buildings/laboratorium), som låses upp senare och ger +5 % Alkemi-produktion.
+Se [alla byggnader och aktuella bonusar](/wiki/buildings/fysiska-byggnader).

@@ -100,7 +100,7 @@ Visar settlementets nuvarande statsskick, aktiva policies, antal tillgängliga p
 
 King och Lords har nu en särskild **Government**-vy i `/gz menu` → **Settlements**. Menyn visar settlementets King, aktuella Lords och den egna rollen.
 
-För **King** fungerar menyn dessutom som kontrollpanel för Lord-behörigheter. Klicka på en Lord för att slå enskilda rättigheter på eller av. Behörigheterna omfattar bland annat medlemsansökningar, kick och befordran, produktionstitlar, plots och territorium, stadskassan, skatt, settlementuppgradering, kategori, byggnader, policies, allianser, krig, kistor och rikskontrakt.
+För **King** fungerar menyn dessutom som kontrollpanel för Lord-behörigheter. Klicka på en Lord för att slå enskilda rättigheter på eller av. Behörigheterna omfattar bland annat medlemsansökningar, kick och befordran, produktionstitlar, plots och territorium, stadskassan, skatt, settlementuppgradering, kategori, byggnader, policies, kistor och rikskontrakt.
 
 Det betyder att en Lord inte längre behöver behandlas som en generell "nästan-King". King kan delegera exakt de delar av settlementet som den Lorden ska få sköta.
 

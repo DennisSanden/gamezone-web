@@ -1,28 +1,21 @@
 ---
 title: "Stadskärna"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Stadskärna."
+description: "Frivillig byggnad och aktuell bonus: Alla framtida settlementuppgraderingar kostar 5 % mindre Coins."
 category: "Byggnader"
 order: 2
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Stadskärna"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 1"
-  kostnad: "5 000 Coins"
-  referensyta: "11×11"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Stadskärna?
+## Stadskärna, bonus och funktion
 
-**Stadskärna** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Alla framtida settlementuppgraderingar kostar 5 % mindre Coins.**
 
-![Stadskärna](/wiki/buildings/stadskarna.png)
-
-## Bonus
-
-- Låser upp settlementets fortsatta byggsystem.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Stadskärna börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

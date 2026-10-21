@@ -5,7 +5,7 @@ category: "Settlements"
 order: 101
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -22,6 +22,11 @@ relatedArticles:
 **Enstöring** är settlementnivå **1 av 50**.
 
 Detta är startnivån för ett settlement.
+
+
+## Bonus på nivå 1
+
+**Settlement grundas. Stadskassa, territorium och grundfunktioner låses upp.**
 
 ## Nästa nivå
 

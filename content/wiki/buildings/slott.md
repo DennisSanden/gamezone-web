@@ -1,28 +1,21 @@
 ---
 title: "Slott"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Slott."
+description: "Frivillig byggnad och aktuell bonus: Invånarna får genomföra 6 rikskontrakt per vecka i stället för 5."
 category: "Byggnader"
 order: 30
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Slott"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 30"
-  kostnad: "5 000 000 Coins"
-  referensyta: "35×35"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Slott?
+## Slott, bonus och funktion
 
-**Slott** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Invånarna får genomföra 6 rikskontrakt per vecka i stället för 5.**
 
-![Slott](/wiki/buildings/slott.png)
-
-## Bonus
-
-- Sänker Kingens ticketvärde i krig med 4, från 10 till 6 tickets.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Slott börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

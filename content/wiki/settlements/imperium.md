@@ -5,7 +5,7 @@ category: "Settlements"
 order: 150
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -25,6 +25,11 @@ För att låsa upp Imperium uppgraderar settlementet från **Kejsarimperium**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 50
+
+**Alla invånare får permanent Haste I och Speed I inom sitt eget settlements territorium.**
 
 ## Krav för att låsa upp nivån
 

@@ -1,28 +1,21 @@
 ---
 title: "Rustkammare"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Rustkammare."
+description: "Frivillig byggnad och aktuell bonus: Rustningar förlorar 15 % mindre durability när invånare tar skada av vanliga mobs. Gäller inte events."
 category: "Byggnader"
 order: 40
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Rustkammare"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 40"
-  kostnad: "12 500 000 Coins"
-  referensyta: "35×35"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Rustkammare?
+## Rustkammare, bonus och funktion
 
-**Rustkammare** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Rustningar förlorar 15 % mindre durability när invånare tar skada av vanliga mobs. Gäller inte events.**
 
-![Rustkammare](/wiki/buildings/rustkammare.png)
-
-## Bonus
-
-- Höjer settlementets grundtickets i krig från 100 till 110.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Rustkammare börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

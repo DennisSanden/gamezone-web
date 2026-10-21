@@ -1,31 +1,21 @@
 ---
 title: "Marknadsplats"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Marknadsplats."
+description: "Frivillig byggnad och aktuell bonus: Behåller sin nuvarande skatterabatt på 10 procentenheter vid handel."
 category: "Byggnader"
 order: 20
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Marknadsplats"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 20"
-  kostnad: "1 500 000 Coins"
-  referensyta: "25×25"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Marknadsplats?
+## Marknadsplats, bonus och funktion
 
-**Marknadsplats** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Behåller sin nuvarande skatterabatt på 10 procentenheter vid handel.**
 
-![Marknadsplats](/wiki/buildings/marknadsplats.png)
-
-## Bonus
-
-- Sänker Server TAX med 10 procentenheter för företag i settlementet.
-
-> [!NOTE]
-> Reduktionen kombineras med företagslicensen och aktiva policies. Server TAX kan aldrig bli lägre än 0 %.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Marknadsplats börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

@@ -43,3 +43,7 @@ Efter ett genomfört byte gäller en cooldown på **24 timmar** innan kategorin 
 > Endast resurser inom settlementets valda kategori ger Coins från produktion. Kontrollera därför vilka resurser kategorin omfattar innan bytet genomförs.
 
 Läs mer om kategorierna på sidan [Produktionskategorier](/wiki/categories/produktion).
+
+## Färg på settlementförkortningen
+
+Förkortningen i TAB får automatiskt en färg efter kategorin. Fiske blå, Gruvdrift grå, Skogsbruk grön, Alkemi röd, Lantbruk gul, Boskap orange och Byggmaterial lila. Färgen uppdateras när kategorin byts.

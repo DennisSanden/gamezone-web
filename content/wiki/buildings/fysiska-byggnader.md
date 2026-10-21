@@ -1,139 +1,60 @@
 ---
 title: "Fysiska byggnader"
-description: "Hela Building System 1.0, från Stadskärna till Myntverk."
+description: "Frivilliga byggnader med specialbonusar. Ingen byggnad krävs för settlementlevel."
 category: "Byggnader"
 order: 0
-version: "3.1"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-18"
-infoboxTitle: "Building System 1.0"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  process: "Licens → markera yta → bygg → godkänn"
-  förstaByggnad: "Stadskärna, nivå 1"
-  senasteAktivaByggnad: "Myntverk, nivå 45"
-  territorium: "Hela byggnaden måste ligga inom settlementet"
+  antal: "24 bonusbyggnader"
+  byggnadskrav: "Frivilliga"
 ---
 
-## Så fungerar byggsystemet
+## Frivilliga byggnader, nya grundregeln
 
-Settlementbyggnader är riktiga konstruktioner i världen. Licensen är bara startpunkten, bonusen aktiveras först när byggnaden har byggts och godkänts.
+Settlements kan gå från level 1 till 50 utan att registrera en enda byggnad. Alla viktiga upplåsningar kommer i stället från settlementnivåerna. **Byggnader är frivilliga specialiseringar**, och kan ge ytterligare nytta till staden.
 
-**Byggnader är inte krav för att avancera settlementnivå.** Settlementets level-up styrs av Coins och resurser. Settlementnivån styr däremot vilka byggnadslicenser som blir tillgängliga.
+Byggnadens licens, nivågräns och fysiska krav gäller fortfarande om ni vill aktivera byggnadens bonus. Öppna `/gz menu` → Settlement → Byggnader för den aktuella statusen.
+
+## Alla byggnader och deras bonusar
+
+| Byggnad | Nivå för licens | Licens | Bonus |
+|---|---:|---:|---|
+| [Stadskärna](/wiki/buildings/stadskarna) | 1 | 5 000 Coins | Alla framtida settlementuppgraderingar kostar 5 % mindre Coins. |
+| [Gruva](/wiki/buildings/gruva) | 2 | 10 000 Coins | Blast Furnaces smälter malm 15 % snabbare inom settlementet. |
+| [Ladugård](/wiki/buildings/ladugard) | 2 | 10 000 Coins | Djur kan avlas igen 15 % snabbare efter föregående avel. |
+| [Lada](/wiki/buildings/lada) | 2 | 10 000 Coins | 15 % chans att en skördad gröda automatiskt återplanteras utan att förbruka ett frö. |
+| [Fiskebrygga](/wiki/buildings/fiskebrygga) | 2 | 10 000 Coins | 15 % snabbare napp vid fiske inom settlementet. |
+| [Sågverk](/wiki/buildings/sagverk) | 2 | 10 000 Coins | 10 % chans att få extra plankor när man tillverkar plankor av stockar. |
+| [Stenhuggeri](/wiki/buildings/stenhuggeri) | 2 | 10 000 Coins | 10 % chans att få ett extra trappblock eller en extra slab från en Stonecutter. |
+| [Handelscentrum](/wiki/buildings/handelscentrum) | 3 | 20 000 Coins | Företag i settlementet får ha 2 aktiva företagskontrakt samtidigt i stället för 1. |
+| [Laboratorium](/wiki/buildings/laboratorium) | 5 | 35 000 Coins | 15 % chans att bryggning inte förbrukar Blaze Powder. |
+| [Bank](/wiki/buildings/bank) | 6 | 50 000 Coins | Tillgång till bankfunktionerna i GUI, ekonomisk historik och 10 % billigare företagslicenser. |
+| [Reliktempel](/wiki/buildings/reliktempel) | 7 | 50 000 Coins | Aktiva settlementrelikers produktions- och XP-bonusar blir 10 % starkare. |
+| [Vindhamn](/wiki/buildings/vindhamn) | 8 | 100 000 Coins | 20 % chans att en fyrverkeriraket inte förbrukas vid Elytraflygning inom settlementet. Kräver fortfarande level 10 för att använda Elytra. |
+| [Gatukontor](/wiki/buildings/gatukontor) | 10 | 5 000 000 Coins | 10 % snabbare gånghastighet på vägar byggda av exempelvis Cobblestone, Stone Bricks och Packed Mud inom settlementet. |
+| [Turistbyrå](/wiki/buildings/turistbyra) | 12 | 350 000 Coins | Settlementet får Coins för unika förstagångsbesökare, med dagligt utbetalningstak. |
+| [Stall](/wiki/buildings/stall) | 14 | 500 000 Coins | Ytterligare 10 % hastighet för hästar, åsnor och mulor, med gemensamt hastighetstak. |
+| [Kontor](/wiki/buildings/kontor) | 16 | 750 000 Coins | Alla företag i settlementet får 3 extra Shopping Chests. |
+| [Kyrka](/wiki/buildings/kyrka) | 18 | 1 000 000 Coins | Alla invånare får 5 % mer Character XP från yrkesaktiviteter. |
+| [Marknadsplats](/wiki/buildings/marknadsplats) | 20 | 1 500 000 Coins | Behåller sin nuvarande skatterabatt på 10 procentenheter vid handel. |
+| [Myntförvaring](/wiki/buildings/myntforvaring) | 22 | 2 000 000 Coins | Stadskasseavgiften sänks från 7,5 % till 2,5 %. |
+| [Rådhus](/wiki/buildings/radhus) | 25 | 2 500 000 Coins | Settlementet får använda en extra aktiv policy. De två extra Lords får man redan på level 12. |
+| [Slott](/wiki/buildings/slott) | 30 | 5 000 000 Coins | Invånarna får genomföra 6 rikskontrakt per vecka i stället för 5. |
+| [Museum](/wiki/buildings/museum) | 35 | 8 000 000 Coins | 25 % högre turistintäkter, inom ett gemensamt dagligt tak. |
+| [Rustkammare](/wiki/buildings/rustkammare) | 40 | 12 500 000 Coins | Rustningar förlorar 15 % mindre durability när invånare tar skada av vanliga mobs. Gäller inte events. |
+| [Myntverk](/wiki/buildings/myntverk) | 45 | 20 000 000 Coins | Dagliga intäkter från byggnaden, med bonus utifrån faktiskt intjänad stadsskatt. Maximalt 150 000 Coins per dag. |
+
+## Bygga och aktivera
+
+1. Köp valfri tillgänglig byggnadslicens i menyn.
+2. Kör `/building place <byggnad>` och markera två motsatta hörn på golvnivå.
+3. Bekräfta med `/building confirm`.
+4. Bygg enligt statusen som visas med `/building status`.
+5. Slutför med `/building complete` för att aktivera bonusen.
+
+Vanliga konstruktionskrav gäller fortfarande för valfria bonusbyggnader, bland annat territorium, area, väggar, tak och specifika specialblock. Den registrerade byggytan måste ligga inom settlementet. Vid skador kan bonusen pausas till dess att byggnaden godkänns igen med `/building revalidate <byggnad>`.
 
 > [!IMPORTANT]
-> **Var köper man bygglicenser?** Öppna `/gz menu` och välj **Settlements** → **Byggnader**. Där ser du vilka byggnader settlementet har låst upp och kan köpa tillgängliga licenser.
-
-1. Settlementet når byggnadens nivåkrav.
-2. Licensen köps i `/gz menu` → **Settlements** → **Byggnader**.
-3. Starta placeringen med `/building place <byggnad>`.
-4. Vänsterklicka första hörnet och högerklicka motsatta hörnet.
-5. Kontrollera partikelramen och kör `/building confirm`.
-6. Settlementet bygger inom den registrerade ytan.
-7. `/building status` visar vad som saknas.
-8. `/building complete` gör slutkontrollen.
-9. Bonusen aktiveras när kontrollen godkänns.
-
-Byggnader får byggas i **valfri stil och valfria material**. Spelaren bestämmer numera själv den rektangulära byggnadsytan. De gamla måtten på respektive byggnad är **referensytor**, inte en låst form som bygget måste följa. Pluginet kontrollerar funktion, registrerad yta, väggar, tak, höjd och specialkrav, inte estetik.
-
-> [!IMPORTANT]
-> Specialkraven i byggnadstabellerna nedan följer **Engine-validatorn**. Bara block och entiteter som faktiskt kontrolleras av pluginet listas som krav.
-
-## Markera byggnadsytan själv
-
-När en byggnad placeras väljer spelaren själv dess footprint. Kör först:
-
-```text
-/building place <byggnad>
-```
-
-Markera sedan **två motsatta hörn på golvnivå**. Vänsterklick sätter hörn 1 och högerklick sätter hörn 2. Partiklar visar den valda ytan. När den ser rätt ut:
-
-```text
-/building confirm
-```
-
-Du kan avbryta en pågående markering med `/building cancel` och visa eller dölja den registrerade partikelgränsen med `/building outline`.
-
-> [!IMPORTANT]
-> De mått som visas på varje byggnadssida är **referensmått**, inte ett krav på exakt bredd och djup. Ett bygge får vara både mindre och större så länge storleksgränserna och övriga krav uppfylls.
-
-### Storleksgränser
-
-För alla byggnadstyper gäller samma grundmodell:
-
-- minsta area är **60 % av byggnadens referensyta**, avrundat uppåt
-- största area är **4 gånger referensytan**
-- båda sidorna måste vara minst **7 block**
-- formen ska vara en rektangel
-- större byggnader kräver **inte fler specialblock** bara för att ytan är större
-
-Exempel: en referensyta på 19×19 är 361 block. Minsta tillåtna area blir då 217 block. Ett bygge på 15×15, 19×27 eller 31×21 kan därför fungera, förutsatt att övriga krav klaras och maxytan inte överskrids.
-
-## Grundregler
-
-Alla byggnader måste:
-
-- ligga helt innanför settlementets territorium
-- hålla sig inom byggnadstypens tillåtna area
-- vara minst 7 block breda och 7 block djupa
-- inte överlappa en annan registrerad byggnad
-- ha minst **40 % väggtäckning**
-- ha minst **40 % taktäckning**
-- uppfylla eventuellt höjdkrav
-- innehålla byggnadens specialblock och entiteter inom den registrerade ytan
-
-Kravblock och entities räknas över **hela den registrerade footprinten**. Ett större bygge straffas alltså inte genom att antalet tunnor, sängar, arbetsblock eller andra specialkrav automatiskt skalas upp.
-
-## Byggnadsprogression
-
-| Nivå | Byggnad | Licens | Huvudbonus |
-|---:|---|---:|---|
-| 1 | [Stadskärna](/wiki/buildings/stadskarna) | 5 000 | Grundbyggnad för byggsystemet |
-| 2 | [Kategoribyggnad](/wiki/buildings/kategoribyggnad) | 10 000 | +5 % i aktiv kategori, gäller inte Alkemi |
-| 3 | [Handelscentrum](/wiki/buildings/handelscentrum) | 20 000 | Frivillig settlementbyggnad, krävs inte för företag |
-| 5 | [Laboratorium](/wiki/buildings/laboratorium) | 35 000 | Endast Alkemi, aktiverar Coins och +5 % Alkemi |
-| 6 | [Bank](/wiki/buildings/bank) | 50 000 | Detaljerad statistik |
-| 7 | [Reliktempel](/wiki/buildings/reliktempel) | 50 000 | Relikbonusar |
-| 8 | [Vindhamn](/wiki/buildings/vindhamn) | 100 000 | Elytra |
-| 10 | [Gatukontor](/wiki/buildings/gatukontor) | 5 000 000 | Riksvägsanslutning |
-| 12 | [Turistbyrå](/wiki/buildings/turistbyra) | 350 000 | Turism och unika besök |
-| 14 | [Stall](/wiki/buildings/stall) | 500 000 | +25 % hästhastighet |
-| 16 | [Kontor](/wiki/buildings/kontor) | 750 000 | +3 Shopping Chests |
-| 18 | [Kyrka](/wiki/buildings/kyrka) | 1 000 000 | +20 % produktion |
-| 20 | [Marknadsplats](/wiki/buildings/marknadsplats) | 1 500 000 | −10 procentenheter Server TAX |
-| 22 | [Myntförvaring](/wiki/buildings/myntforvaring) | 2 000 000 | 7,5 % → 2,5 % stadskasseavgift |
-| 25 | [Rådhus](/wiki/buildings/radhus) | 2 500 000 | +2 Lord-platser |
-| 30 | [Slott](/wiki/buildings/slott) | 5 000 000 | King kostar 6 tickets |
-| 35 | [Museum](/wiki/buildings/museum) | 8 000 000 | 1 000 000 Coins turistbonus |
-| 40 | [Rustkammare](/wiki/buildings/rustkammare) | 12 500 000 | 110 grundtickets |
-| 45 | [Myntverk](/wiki/buildings/myntverk) | 20 000 000 | 50 000 Coins per dag |
-
-> [!NOTE]
-> Underverk på nivå 50 görs om separat och ingår därför inte i den aktiva byggnadsprogressionen ännu.
-
-## Skadade byggnader
-
-Färdigställda byggnader kontrolleras när de förändras. Om en byggnad inte längre klarar kraven blir den **skadad** och bonusen pausas.
-
-Efter reparation:
-
-```text
-/building revalidate <byggnad>
-```
-
-Licensen finns kvar och behöver inte köpas igen.
-
-## Flytta en byggnad
-
-```text
-/building relocate <byggnad>
-/building relocate <byggnad> confirm
-```
-
-Bonusen pausas under flytten. Placera sedan byggnaden på nytt, markera dess nya footprint med två hörn och färdigställ den igen.
-
-Flytten kan avbrytas med:
-
-```text
-/building relocate cancel <byggnad>
-```
+> Stadskärna är inte längre en förutsättning för att höja settlementets nivå. Vindhamn krävs inte för Elytra, Rådhus krävs inte för extra Lords och Reliktempel krävs inte för relikupplåsningen.

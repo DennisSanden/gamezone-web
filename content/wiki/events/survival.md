@@ -9,7 +9,7 @@ infoboxTitle: "Survival"
 infobox:
   typ: "Kooperativt PvE-event"
   waves: "20"
-  klassval: "5 prioriteringar, 45 sekunder"
+  klassval: "Upp till 5 prioriteringar, 45 sekunder"
   mobkill: "5 000 Coins"
   slutbelöning: "Upp till 1 000 000 Coins"
 relatedArticles:
@@ -79,10 +79,10 @@ Alla får välja dessa klasser i sin prioriteringslista. Platserna delas inte ut
 Om flera spelare konkurrerar om samma begränsade klass gäller:
 
 1. **Aktiv Patreon**
-2. **Flest Survival-mobs dödade genom tiderna**
-3. **Tidigast registrerade val**
+2. **Slumpad ordning mellan spelare med samma Patreonstatus**
+3. **Dina återstående klassprioriteringar**
 
-Patreon har alltså alltid förtur. Mellan spelare med samma Patreonstatus avgör den permanenta Survival kill-statistiken. Om även den är lika avgör vem som valde klassen först.
+Patreon har förtur i tilldelningen. Mellan spelare med samma Patreonstatus används en slumpad ordning som bestäms vid klassvalet, inte deras gamla kill-statistik.
 
 Om din Prio 1 är full försöker systemet med Prio 2, därefter Prio 3 och så vidare. Om ingen av dina valbara prioriteringar kan tilldelas finns **Soldier** som säker fallback.
 
@@ -496,3 +496,9 @@ Survival är som starkast när klasserna kompletterar varandra.
 En Tank kan hålla fronten medan Bowman arbetar på avstånd. Healers kan hålla laget kvar i striden, Summoners fyller arenan med extra allierade och Commander kan spara Stridshornet till den wave där laget verkligen behöver 20 % extra damage. Berserkers kan samtidigt pressa upp lagets damage rejält, men behöver mer skydd eftersom deras HP är lägre.
 
 Det är kombinationen av **klassval, loot, välsignelser och lagspel** som avgör hur långt gruppen kommer.
+
+## Senare waves och bossar
+
+Wave 15 och wave 20 har extra tunga fiender. För att undvika att en boss inte kan spawna är bossarnas HP begränsad i den aktuella Engine-koden. På **wave 19 och wave 20 finns en Warden vardera**, i stället för en Ravager i den särskilda bossplatsen. Waven kan fortfarande innehålla andra vanliga fiender.
+
+Survival har återhämtning om eventmobs försvinner oväntat, men en mob i en avlastad chunk ska inte automatiskt räknas som död.

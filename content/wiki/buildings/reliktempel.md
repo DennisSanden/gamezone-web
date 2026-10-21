@@ -1,31 +1,24 @@
 ---
 title: "Reliktempel"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Reliktempel."
+description: "Frivillig byggnad och aktuell bonus: Aktiva settlementrelikers produktions- och XP-bonusar blir 10 % starkare."
 category: "Byggnader"
 order: 7
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Reliktempel"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 7"
-  kostnad: "50 000 Coins"
-  referensyta: "9×9"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Reliktempel?
+## Reliktempel, bonus och funktion
 
-**Reliktempel** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Aktiva settlementrelikers produktions- och XP-bonusar blir 10 % starkare.**
 
-![Reliktempel](/wiki/buildings/reliktempel.png)
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Reliktempel börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
-## Bonus
-
-- Låser upp settlementets relikbonusar för reliker som förvaras i settlementets inventory chests.
-
-> [!NOTE]
-> Reliktemplet är kopplat till settlementets relikbonusar. Själva bonusen bestäms av vilka giltiga reliker som förvaras i settlementets registrerade inventory. Läs hela systemet på sidan [Settlementbonusar från reliker](/wiki/relics/settlementbonusar).
+> [!IMPORTANT]
+> Settlementreliker låses upp på **nivå 25**. Reliktempel förstärker aktiva relikbonusar med 10 %, men är inget upplåsningskrav.
 
 ## Krav
 

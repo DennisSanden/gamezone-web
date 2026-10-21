@@ -13,6 +13,9 @@ infobox:
   betalning: "Automatisk"
 ---
 
+> [!NOTE]
+> Du kan nu placera vanliga eller glow item frames på en registrerad kista om du har behörighet. Håll **Shift** och högerklicka på kistan med ramen. Se [item frame-guiden](/wiki/companies/item-frames).
+
 ## Två typer av företagskistor
 
 Företag kan använda två typer av automatiska handelskistor:

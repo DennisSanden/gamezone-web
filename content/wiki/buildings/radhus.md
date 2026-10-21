@@ -1,28 +1,24 @@
 ---
 title: "Rådhus"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Rådhus."
+description: "Frivillig byggnad och aktuell bonus: Settlementet får använda en extra aktiv policy. De två extra Lords får man redan på level 12."
 category: "Byggnader"
 order: 25
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Rådhus"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 25"
-  kostnad: "2 500 000 Coins"
-  referensyta: "27×27"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Rådhus?
+## Rådhus, bonus och funktion
 
-**Rådhus** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Settlementet får använda en extra aktiv policy. De två extra Lords får man redan på level 12.**
 
-![Rådhus](/wiki/buildings/radhus.png)
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Rådhus börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
-## Bonus
-
-- Låser upp två extra Lord-platser, från 2 till totalt 4 Lords.
+> [!IMPORTANT]
+> De två extra Lord-platserna ges redan på **settlementnivå 12**. Rådhuset ger en extra aktiv policyplats.
 
 ## Krav
 

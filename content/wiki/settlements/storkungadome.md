@@ -5,7 +5,7 @@ category: "Settlements"
 order: 133
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Storkungadöme uppgraderar settlementet från **Kungadöme**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 33
+
+**Ytterligare 10 % kortare väntetid på napp vid fiske.**
 
 ## Krav för att låsa upp nivån
 

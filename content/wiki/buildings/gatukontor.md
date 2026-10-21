@@ -1,32 +1,21 @@
 ---
 title: "Gatukontor"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Gatukontor."
+description: "Frivillig byggnad och aktuell bonus: 10 % snabbare gånghastighet på vägar byggda av exempelvis Cobblestone, Stone Bricks och Packed Mud inom settlementet."
 category: "Byggnader"
 order: 10
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Gatukontor"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 10"
-  kostnad: "5 000 000 Coins"
-  referensyta: "15×15"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Gatukontor?
+## Gatukontor, bonus och funktion
 
-**Gatukontor** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**10 % snabbare gånghastighet på vägar byggda av exempelvis Cobblestone, Stone Bricks och Packed Mud inom settlementet.**
 
-![Gatukontor](/wiki/buildings/gatukontor.png)
-
-## Bonus
-
-- Låser upp settlementets riksvägsanslutning.
-- Ger settlementet 5 000 000 Coins när det för första gången ansluts till det officiella riksvägsnätet.
-
-> [!NOTE]
-> Anslutningsbelöningen betalas bara ut en gång per settlement.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Gatukontor börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

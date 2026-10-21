@@ -1,28 +1,21 @@
 ---
 title: "Kyrka"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Kyrka."
+description: "Frivillig byggnad och aktuell bonus: Alla invånare får 5 % mer Character XP från yrkesaktiviteter."
 category: "Byggnader"
 order: 18
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Kyrka"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 18"
-  kostnad: "1 000 000 Coins"
-  referensyta: "21×15"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Kyrka?
+## Kyrka, bonus och funktion
 
-**Kyrka** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Alla invånare får 5 % mer Character XP från yrkesaktiviteter.**
 
-![Kyrka](/wiki/buildings/kyrka.png)
-
-## Bonus
-
-- Ger +20 % produktionsbonus.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Kyrka börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

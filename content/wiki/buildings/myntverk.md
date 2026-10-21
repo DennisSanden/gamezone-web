@@ -1,31 +1,21 @@
 ---
 title: "Myntverk"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Myntverk."
+description: "Frivillig byggnad och aktuell bonus: Dagliga intäkter från byggnaden, med bonus utifrån faktiskt intjänad stadsskatt. Maximalt 150 000 Coins per dag."
 category: "Byggnader"
 order: 45
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Myntverk"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 45"
-  kostnad: "20 000 000 Coins"
-  referensyta: "39×39"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Myntverk?
+## Myntverk, bonus och funktion
 
-**Myntverk** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Dagliga intäkter från byggnaden, med bonus utifrån faktiskt intjänad stadsskatt. Maximalt 150 000 Coins per dag.**
 
-![Myntverk](/wiki/buildings/myntverk.png)
-
-## Bonus
-
-- Betalar 50 000 Coins per dag direkt till settlementets stadskassa.
-
-> [!NOTE]
-> Utbetalningen sparas per datum så att en serverrestart inte kan ge flera dagsutbetalningar.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Myntverk börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

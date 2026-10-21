@@ -19,7 +19,6 @@ relatedArticles:
   - category: "relics"
     article: "settlementbonusar"
     title: "Settlementbonusar"
-    description: "Förklaring av Production, XP, War Tickets och specialeffekter."
   - category: "relics"
     article: "tiers-statusar-och-sakerhet"
     title: "Tiers, statusar och säkerhet"
@@ -44,7 +43,6 @@ Alla är Unbreakable. Alla har ett fast Relic ID och serienummer. Registret besk
 | 003 | The Book of Fortune | Andvari | Written Book | Settlement, +2% Production |
 | 004 | Deepdelver | Andvari | Golden Pickaxe | Efficiency V, Fortune I |
 | 005 | Legionnaire's Blade | Varkesh | Iron Sword | Sharpness III, Looting I |
-| 006 | The Red Standard | Varkesh | Red Banner | Settlement, +2 War Tickets |
 | 007 | Desert Piercer | Varkesh | Crossbow | Quick Charge II, Piercing III |
 | 008 | Marcher's Boots | Varkesh | Iron Boots | Protection II, Feather Falling III |
 | 009 | The Mason's Journal | Gondoria | Written Book | Settlement, +3% Building Materials Production |
@@ -109,8 +107,6 @@ Bara tre reliker i grundregistret är Mythic.
 | # | Relik | Kultur | Item | Enchants och effekt |
 |---:|---|---|---|---|
 | 048 | The Hammer of Creation | Andvari | Netherite Pickaxe | Efficiency V, Fortune III, Silk Touch, Sharpness V. +10% personlig Production när den hålls i handen |
-| 049 | The Crown of Dominion | Gondoria | Netherite Helmet | Protection IV, Fire Protection IV, Projectile Protection IV, Blast Protection IV, Respiration III, Aqua Affinity. Settlement, +5% Production, +5% XP, +5 War Tickets |
-| 050 | The Worldheart | Unknown | Nether Star | Settlement, +5% Production, +5% XP, +10 War Tickets, +1 Shopping Chest per företag |
 
 ## Settlementreliker i snabböversikt
 
@@ -119,15 +115,12 @@ Följande reliker ger direkta settlementeffekter i grundregistret:
 | Relik | Effekt |
 |---|---|
 | The Book of Fortune | +2% Production |
-| The Red Standard | +2 War Tickets |
 | The Mason's Journal | +3% Building Materials Production |
 | Vaelthor Secrets | +5% XP |
 | Heart of the Mountain | +3% Building Materials Production |
 | The King's Ledger | +3% Production |
 | Book of the Ancients | +1% Production, +3% XP |
 | The Merchant's Scale | +1 Shopping Chest per företag |
-| The Crown of Dominion | +5% Production, +5% XP, +5 War Tickets |
-| The Worldheart | +5% Production, +5% XP, +10 War Tickets, +1 Shopping Chest per företag |
 
 ## Personliga specialreliker
 
@@ -143,7 +136,7 @@ Högerklick med spyglassen medan du tittar mot en annan spelare. Reliken kan vis
 
 ### The First Blade
 
-Har en krigseffekt kopplad till bäraren. Den första relevanta death ticketkostnaden i ett aktivt Settlement War kan neutraliseras enligt relikens specialregel.
+Historisk effekt kopplad till det avvecklade krigssystemet. Krigstickets används inte längre.
 
 ### The Hammer of Creation
 

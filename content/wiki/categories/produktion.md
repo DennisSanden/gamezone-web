@@ -12,6 +12,20 @@ infobox:
   automation: "Ger inga Coins"
 ---
 
+## Kategorifärger i TAB
+
+Settlementförkortningen i TAB färgas automatiskt efter settlementets produktionskategori. Spelarens vanliga namnfärg påverkas inte.
+
+| Kategori | Färg |
+|---|---|
+| Fiske | Blå |
+| Gruvdrift | Grå |
+| Skogsbruk | Grön |
+| Alkemi | Röd |
+| Lantbruk/Jordbruk | Gul |
+| Boskap | Orange |
+| Byggmaterial | Lila |
+
 ## Välj en kategori
 
 När ett settlement skapas med `/settlement create <namn>` öppnas en meny där ni väljer vilken typ av resurser settlementet ska specialisera sig på.

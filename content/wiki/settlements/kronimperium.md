@@ -5,7 +5,7 @@ category: "Settlements"
 order: 144
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Kronimperium uppgraderar settlementet från **Högkejsardöme
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 44
+
+**Ytterligare 5 % högre hastighet på hästar, åsnor och mulor.**
 
 ## Krav för att låsa upp nivån
 

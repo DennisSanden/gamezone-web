@@ -1,32 +1,24 @@
 ---
 title: "Museum"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Museum."
+description: "Frivillig byggnad och aktuell bonus: 25 % högre turistintäkter, inom ett gemensamt dagligt tak."
 category: "Byggnader"
 order: 35
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Museum"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 35"
-  kostnad: "8 000 000 Coins"
-  referensyta: "31×31"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Museum?
+## Museum, bonus och funktion
 
-**Museum** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**25 % högre turistintäkter, inom ett gemensamt dagligt tak.**
 
-![Museum](/wiki/buildings/museum.png)
-
-## Bonus
-
-- Höjer settlementets belöning för ett nytt unikt turistbesök från **100 000 till 1 000 000 Coins**.
-- Med policyn **Open Borders** höjs Museum-belöningen till **1 050 000 Coins**.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Museum börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 > [!NOTE]
-> Besökaren får fortfarande sin vanliga turistbonus. Museum förstärker settlementets del av belöningen.
+> Museets 25 % extra turistintäkt följer samma dagliga turisttak som Turistbyrån.
 
 ## Krav
 

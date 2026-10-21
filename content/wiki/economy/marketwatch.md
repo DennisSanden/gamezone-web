@@ -13,6 +13,9 @@ infobox:
 ---
 
 
+> [!NOTE]
+> MarketWatch använder ett serverindex för registrerade Shopping Chests och behöver därför inte begränsa sökningen till kistor i just nu inlästa chunks. Sökresultaten visar även företags- och ägarinformation där sådan finns.
+
 ## Prisjakt direkt i spelet
 
 Du kan söka efter ett item direkt från servern:

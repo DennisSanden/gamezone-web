@@ -1,31 +1,21 @@
 ---
 title: "Myntförvaring"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Myntförvaring."
+description: "Frivillig byggnad och aktuell bonus: Stadskasseavgiften sänks från 7,5 % till 2,5 %."
 category: "Byggnader"
 order: 22
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Myntförvaring"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 22"
-  kostnad: "2 000 000 Coins"
-  referensyta: "25×25"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Myntförvaring?
+## Myntförvaring, bonus och funktion
 
-**Myntförvaring** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Stadskasseavgiften sänks från 7,5 % till 2,5 %.**
 
-![Myntförvaring](/wiki/buildings/myntforvaring.png)
-
-## Bonus
-
-- Sänker stadskassans transaktionsavgift från 7,5 % till 2,5 %.
-
-> [!NOTE]
-> Den lägre avgiften gäller stadskassans insättningar och utbetalningar så länge byggnaden är aktiv.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Myntförvaring börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

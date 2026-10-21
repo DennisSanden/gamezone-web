@@ -1,31 +1,21 @@
 ---
 title: "Kontor"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Kontor."
+description: "Frivillig byggnad och aktuell bonus: Alla företag i settlementet får 3 extra Shopping Chests."
 category: "Byggnader"
 order: 16
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Kontor"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 16"
-  kostnad: "750 000 Coins"
-  referensyta: "19×19"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Kontor?
+## Kontor, bonus och funktion
 
-**Kontor** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Alla företag i settlementet får 3 extra Shopping Chests.**
 
-![Kontor](/wiki/buildings/kontor.png)
-
-## Bonus
-
-- Varje företag i settlementet får 3 extra Shopping Chests.
-
-> [!NOTE]
-> De tre extra kistorna läggs ovanpå företagets vanliga licensgräns och andra aktiva bonusar.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Kontor börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

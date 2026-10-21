@@ -1,31 +1,21 @@
 ---
 title: "Lada"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Lada."
+description: "Frivillig byggnad och aktuell bonus: 15 % chans att en skördad gröda automatiskt återplanteras utan att förbruka ett frö."
 category: "Byggnader"
 order: 3
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Lada"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 2"
-  kostnad: "10 000 Coins"
-  referensyta: "11×11"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Lada?
+## Lada, bonus och funktion
 
-**Lada** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**15 % chans att en skördad gröda automatiskt återplanteras utan att förbruka ett frö.**
 
-![Lada](/wiki/buildings/lada.png)
-
-## Bonus
-
-- Ger +5 % produktionsbonus inom settlementets valda kategori, **Jordbruk**.
-
-> [!IMPORTANT]
-> Den här byggnadens **+5 % bonus** gäller bara kategorin **Jordbruk**. Settlementet kan tjäna vanliga Coins i sin aktiva kategori även utan byggnaden. Vid kategoribyte ligger byggnaden kvar och bonusen blir aktiv igen om settlementet senare återgår till **Jordbruk**.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Lada börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

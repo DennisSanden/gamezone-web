@@ -5,7 +5,7 @@ category: "Settlements"
 order: 103
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Boplats uppgraderar settlementet från **Läger**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 3
+
+**5 % chans att hackan inte förlorar durability vid brytning av naturlig sten eller malm.**
 
 ## Krav för att låsa upp nivån
 

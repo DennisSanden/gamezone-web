@@ -5,7 +5,7 @@ category: "Settlements"
 order: 145
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Imperialrike uppgraderar settlementet från **Kronimperium**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 45
+
+**Automatisk Fire Resistance i 15 sekunder om spelaren hamnar i lava. Cooldown 30 minuter.**
 
 ## Krav för att låsa upp nivån
 

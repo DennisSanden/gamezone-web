@@ -5,7 +5,7 @@ category: "Settlements"
 order: 142
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp Storkejsardöme uppgraderar settlementet från **Kejsarrike**
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 42
+
+**Ugnar inom settlementet smälter glas, tegel, sten och terrakotta 15 % snabbare.**
 
 ## Krav för att låsa upp nivån
 

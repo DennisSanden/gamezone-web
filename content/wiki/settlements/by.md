@@ -5,7 +5,7 @@ category: "Settlements"
 order: 105
 version: "2.1"
 engineVersion: "Settlement Levels 1.0"
-updatedAt: "2026-09-08"
+updatedAt: "2026-10-21"
 relatedArticles:
   - category: "settlements"
     article: "settlement-upgrades"
@@ -29,6 +29,11 @@ För att låsa upp By uppgraderar settlementet från **Nybygge**.
 
 > [!IMPORTANT]
 > Uppgraderingskortet nedan använder samma centrala data som huvudöversikten. Coins, items och specialkrav visas därför identiskt på båda platserna.
+
+
+## Bonus på nivå 5
+
+**Lägereldsbonus. Vila 10 sekunder vid en lägereld och få 10 % lägre hungerförbrukning i 5 minuter. Cooldown 30 minuter.**
 
 ## Krav för att låsa upp nivån
 

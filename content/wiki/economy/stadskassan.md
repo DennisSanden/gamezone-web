@@ -107,15 +107,9 @@ Exempel:
 
 En låg stadsskatt låter invånarna behålla mer av sina produktionsintäkter och kan göra settlementet mer attraktivt för nya medlemmar. En hög stadsskatt fyller stadskassan snabbare när settlementet sparar till en större investering.
 
-## Krigsskuld
+## Tidigare krigsskuld
 
-Om settlementet förlorar ett Settlement War och inte kan betala hela krigsskadeståndet direkt uppstår en **krigsskuld**.
-
-Så länge skulden finns går **50 procent av framtida systemgenererade intäkter som annars skulle ha gått till stadskassan** till avbetalning. Det gäller bland annat produktionsskatt och settlementets intäkter från företagshandel. Den andra halvan går fortfarande till den egna stadskassan.
-
-Att sänka stadsskatten till 0 procent skriver inte av skulden. Skulden ligger kvar tills den faktiskt har betalats. Har settlementet flera skulder betalas den äldsta först.
-
-Läs nivåbelopp och hela modellen på sidan [Krigssystemet](/wiki/war/krigssystemet).
+Det gamla settlementkrigssystemet har avvecklats. Den äldre beskrivningen av nya krigsskadestånd gäller inte längre.
 
 ## Skillnaden mot Server TAX
 

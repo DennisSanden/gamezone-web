@@ -1,31 +1,21 @@
 ---
 title: "Stenhuggeri"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Stenhuggeri."
+description: "Frivillig byggnad och aktuell bonus: 10 % chans att få ett extra trappblock eller en extra slab från en Stonecutter."
 category: "Byggnader"
 order: 3
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Stenhuggeri"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 2"
-  kostnad: "10 000 Coins"
-  referensyta: "11×11"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Stenhuggeri?
+## Stenhuggeri, bonus och funktion
 
-**Stenhuggeri** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**10 % chans att få ett extra trappblock eller en extra slab från en Stonecutter.**
 
-![Stenhuggeri](/wiki/buildings/stenhuggeri.png)
-
-## Bonus
-
-- Ger +5 % produktionsbonus inom settlementets valda kategori, **Byggmaterial**.
-
-> [!IMPORTANT]
-> Den här byggnadens **+5 % bonus** gäller bara kategorin **Byggmaterial**. Settlementet kan tjäna vanliga Coins i sin aktiva kategori även utan byggnaden. Vid kategoribyte ligger byggnaden kvar och bonusen blir aktiv igen om settlementet senare återgår till **Byggmaterial**.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Stenhuggeri börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

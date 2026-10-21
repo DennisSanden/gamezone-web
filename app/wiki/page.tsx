@@ -13,7 +13,7 @@ import styles from "./wiki.module.css";
 
 export const metadata: Metadata = {
     title: "Wiki | GameZone",
-    description: "Guider till GameZones settlements, ekonomi, företag, allianser, krig och system.",
+    description: "Guider till GameZones settlements, ekonomi, företag, events och spelarsystem.",
 };
 
 function findArticleHref(
@@ -135,7 +135,7 @@ export default function WikiPage() {
                                 <span className={styles.featuredLabel}>Mest använda guiden</span>
                                 <h2>Settlement Upgrade</h2>
                                 <p>
-                                    Alla nivåer, kostnader, material, byggnadsupplåsningar och
+                                    Alla nivåer, kostnader, material, nivåbonusar och
                                     fördelar samlade på en enda lång sida.
                                 </p>
                             </div>

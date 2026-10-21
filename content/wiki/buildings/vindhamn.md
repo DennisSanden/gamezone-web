@@ -1,28 +1,24 @@
 ---
 title: "Vindhamn"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Vindhamn."
+description: "Frivillig byggnad och aktuell bonus: 20 % chans att en fyrverkeriraket inte förbrukas vid Elytraflygning inom settlementet. Kräver fortfarande level 10 för att använda Elytra."
 category: "Byggnader"
 order: 8
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Vindhamn"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 8"
-  kostnad: "100 000 Coins"
-  referensyta: "21×21"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Vindhamn?
+## Vindhamn, bonus och funktion
 
-**Vindhamn** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**20 % chans att en fyrverkeriraket inte förbrukas vid Elytraflygning inom settlementet. Kräver fortfarande level 10 för att använda Elytra.**
 
-![Vindhamn](/wiki/buildings/vindhamn.png)
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Vindhamn börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
-## Bonus
-
-- Låser upp Elytra för settlementets medlemmar.
+> [!IMPORTANT]
+> Elytra låses upp på **settlementnivå 10**, även utan Vindhamn. Vindhamn ger en separat raketbesparing.
 
 ## Krav
 

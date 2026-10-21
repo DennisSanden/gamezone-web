@@ -18,7 +18,6 @@ relatedArticles:
   - category: "relics"
     article: "settlementbonusar"
     title: "Settlementbonusar"
-    description: "Så aktiveras Production, XP, War Tickets och andra relikeffekter."
   - category: "relics"
     article: "relikregister"
     title: "Alla 50 reliker"

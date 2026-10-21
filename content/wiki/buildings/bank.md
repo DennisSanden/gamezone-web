@@ -1,28 +1,21 @@
 ---
 title: "Bank"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Bank."
+description: "Frivillig byggnad och aktuell bonus: Tillgång till bankfunktionerna i GUI, ekonomisk historik och 10 % billigare företagslicenser."
 category: "Byggnader"
 order: 6
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Bank"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 6"
-  kostnad: "50 000 Coins"
-  referensyta: "17×17"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Bank?
+## Bank, bonus och funktion
 
-**Bank** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Tillgång till bankfunktionerna i GUI, ekonomisk historik och 10 % billigare företagslicenser.**
 
-![Bank](/wiki/buildings/bank.png)
-
-## Bonus
-
-- Låser upp detaljerad settlementstatistik och den utökade ekonomiska översikten.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Bank börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

@@ -1,32 +1,21 @@
 ---
 title: "Laboratorium"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Laboratorium."
+description: "Frivillig byggnad och aktuell bonus: 15 % chans att bryggning inte förbrukar Blaze Powder."
 category: "Byggnader"
 order: 5
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Laboratorium"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 5"
-  kostnad: "35 000 Coins"
-  referensyta: "17×17"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Laboratorium?
+## Laboratorium, bonus och funktion
 
-**Laboratorium** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**15 % chans att bryggning inte förbrukar Blaze Powder.**
 
-![Laboratorium](/wiki/buildings/laboratorium.png)
-
-## Funktion
-
-- Gäller **endast settlements med kategorin Alkemi**.
-- Ett aktivt Laboratorium ger dessutom **+5 % produktionsbonus från Alkemi**.
-
-> [!IMPORTANT]
-> Alkemi har **ingen kategoribyggnad på nivå 2**. Laboratorium är istället Alkemins enda kategorispecifika byggnad och låses upp senare. Det är inte ett krav för att få Coins och blockerar inte settlementets progression. Byter settlementet bort från Alkemi ligger byggnaden kvar men bonusen är inaktiv. Byter settlementet tillbaka aktiveras bonusen igen.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Laboratorium börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

@@ -1,34 +1,21 @@
 ---
 title: "Turistbyrå"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Turistbyrå."
+description: "Frivillig byggnad och aktuell bonus: Settlementet får Coins för unika förstagångsbesökare, med dagligt utbetalningstak."
 category: "Byggnader"
 order: 12
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Turistbyrå"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 12"
-  kostnad: "350 000 Coins"
-  referensyta: "17×17"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Turistbyrå?
+## Turistbyrå, bonus och funktion
 
-**Turistbyrå** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Settlementet får Coins för unika förstagångsbesökare, med dagligt utbetalningstak.**
 
-![Turistbyrå](/wiki/buildings/turistbyra.png)
-
-## Bonus
-
-- Första besöket i en ny stad med aktiv Turistbyrå ger besökaren **50 000 Coins**.
-- Settlementet får **100 000 Coins** när en spelare besöker staden för första gången.
-- Låser upp statistik över unika besökare.
-- Med policyn **Open Borders** höjs settlementets belöning till **105 000 Coins**.
-
-> [!NOTE]
-> Belöningarna bygger på unika förstabesök. Samma besökare kan inte generera samma förstabesöksbelöning om och om igen.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Turistbyrå börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

@@ -1,31 +1,21 @@
 ---
 title: "Stall"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Stall."
+description: "Frivillig byggnad och aktuell bonus: Ytterligare 10 % hastighet för hästar, åsnor och mulor, med gemensamt hastighetstak."
 category: "Byggnader"
 order: 14
-version: "5.0"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-16"
-infoboxTitle: "Stall"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 14"
-  kostnad: "500 000 Coins"
-  referensyta: "19×19"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Stall?
+## Stall, bonus och funktion
 
-**Stall** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Ytterligare 10 % hastighet för hästar, åsnor och mulor, med gemensamt hastighetstak.**
 
-![Stall](/wiki/buildings/stall.png)
-
-## Bonus
-
-- Ger +25 % hastighet på hästar för settlementets medlemmar.
-
-> [!NOTE]
-> Bonusen kan kombineras med andra hästbonusar, exempelvis Horse Lords.
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Stall börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
 ## Krav
 

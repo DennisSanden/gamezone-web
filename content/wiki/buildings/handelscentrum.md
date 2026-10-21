@@ -1,28 +1,24 @@
 ---
 title: "Handelscentrum"
-description: "Nivåkrav, licenskostnad, byggkrav och funktion för Handelscentrum."
+description: "Frivillig byggnad och aktuell bonus: Företag i settlementet får ha 2 aktiva företagskontrakt samtidigt i stället för 1."
 category: "Byggnader"
 order: 4
-version: "5.1"
-engineVersion: "Building System 1.0"
-updatedAt: "2026-09-18"
-infoboxTitle: "Handelscentrum"
+version: "2026.10"
+engineVersion: "GameZoneEngine 2026-10-21"
+updatedAt: "2026-10-21"
 infobox:
-  typ: "Settlementbyggnad"
-  nivåkrav: "Settlementnivå 3"
-  kostnad: "20 000 Coins"
-  referensyta: "15×15"
+  bonus: "Frivillig"
+  aktivering: "Godkänd och aktiv byggnad"
 ---
 
-## Vad är Handelscentrum?
+## Handelscentrum, bonus och funktion
 
-**Handelscentrum** är en fysisk settlementbyggnad. Att köpa licensen aktiverar inte bonusen direkt. Settlementet måste först placera byggytan, bygga byggnaden och få den godkänd.
+**Företag i settlementet får ha 2 aktiva företagskontrakt samtidigt i stället för 1.**
 
-![Handelscentrum](/wiki/buildings/handelscentrum.png)
+Byggnaden är **frivillig**. Ingen fysisk byggnad behöver färdigställas för att settlementet ska kunna nå nästa nivå. Om staden väljer att bygga Handelscentrum börjar specialbonusen gälla först när byggnaden har registrerats och godkänts av byggsystemet.
 
-## Funktion
-
-Handelscentrum är **inte ett krav för att skapa företag, använda företagslicenser eller bedriva företagshandel**. Företagssystemet är tillgängligt oberoende av om settlementet har byggt ett Handelscentrum.
+> [!IMPORTANT]
+> Företag kräver inte Handelscentrum för att existera. Byggnaden ger plats för två aktiva företagskontrakt samtidigt.
 
 ## Krav
 
