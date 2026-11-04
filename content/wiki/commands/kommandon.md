@@ -33,6 +33,10 @@ Visar din nuvarande Character Level, total Character XP, progress mot nästa lev
 
 Läs hela guiden på sidan [Level & XP](/wiki/experience/experience).
 
+## Patreon
+
+`/patreon` öppnar en meny med samtliga supporterförmåner och exklusiva Survival Level 6-bonusar. Aktiva Patreons kan välja namnfärg med `/patreon färger` eller exempelvis `/patreon guld`. [Läs Patreon-guiden](/wiki/commands/patreon).
+
 ## Daily Rewards
 
 ```text

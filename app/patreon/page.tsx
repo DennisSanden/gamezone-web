@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getLivePatreonSupporters, patreonTierLabel } from "@/lib/patreon-supporters";
 import styles from "./page.module.css";
+import { patreonBenefits, patreonLevelSix } from "@/lib/patreon-benefits";
 
 const gamezoneImages = [
   { src: "/images/hero-background.jpg", alt: "GameZone-världen", label: "Världen växer" },
@@ -83,13 +84,63 @@ export default async function PatreonPage({ searchParams }: { searchParams: Prom
           </div>
           <div>
             <img src="/minecraft/items/diamond.png" alt="" />
-            <strong>Status, inte makt</strong>
-            <span>Supporterstatus syns, men gameplay förblir rättvist.</span>
+            <strong>Förmåner på riktigt</strong>
+            <span>Extra Daily, klassförtur och exklusiva Survival-bonusar.</span>
           </div>
           <div>
             <img src="/minecraft/items/golden_apple.png" alt="" />
             <strong>En del av historien</strong>
             <span>Ditt namn och din profil får en permanent plats här.</span>
+          </div>
+        </section>
+
+        <section className={styles.benefitsSection} id="formaner" aria-labelledby="patreon-benefits-heading">
+          <div className={styles.benefitsHeading}>
+            <div>
+              <span className={styles.goldEyebrow}>ALLA PATREON-FÖRMÅNER</span>
+              <h2 id="patreon-benefits-heading">Mer GameZone. Fler möjligheter.</h2>
+              <p>Alla förmåner här är hämtade från spelets aktuella system. Både Supporter och Guldsupporter får dem, om inte en särskild skillnad anges.</p>
+            </div>
+            <div className={styles.benefitsFact}><strong>14</strong><span>valbara namnfärger</span><small>Röd och mörkröd är för staff</small></div>
+          </div>
+          <div className={styles.benefitGrid}>
+            {patreonBenefits.map((benefit) => (
+              <article className={styles.benefitCard} key={benefit.title}>
+                <span className={styles.benefitIcon} aria-hidden="true">{benefit.icon}</span>
+                <div className={styles.benefitBody}>
+                  <span className={styles.benefitCategory}>{benefit.category}</span>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className={styles.tierDifference}>
+            <span className={styles.tierHighlight}>◆ GULDSUPPORTER</span>
+            <p>Alla förmåner ovan ingår även för vanliga Supporters. Guldsupporters får högre prioritet i serverkön och visas separat i Hall of Gold här på sidan.</p>
+          </div>
+        </section>
+
+        <section className={styles.levelSixSection} id="survival-level-6" aria-labelledby="level-6-heading">
+          <div className={styles.levelSixTop}>
+            <div>
+              <span className={styles.goldEyebrow}>EXKLUSIVT FÖR PATREONS</span>
+              <h2 id="level-6-heading">Survival Level <span>06</span></h2>
+              <p>Det sista steget för var och en av de tio klasserna. Alla spelare kan samla XP och låsa upp nivån, men <strong>level 6-bonusen fungerar endast med ett aktivt Patreon-medlemskap</strong>.</p>
+            </div>
+            <div className={styles.xpPill}><b>15 000 XP</b><small>Level 5 till Level 6</small><span>29 400 XP totalt</span></div>
+          </div>
+          <div className={styles.levelSixGrid}>
+            {patreonLevelSix.map((perk) => (
+              <article className={styles.levelSixCard} key={perk.className}>
+                <img src={`/minecraft/items/${perk.material}.png`} alt="" loading="lazy" />
+                <div><span>LEVEL 6 • PATREON ONLY</span><h3>{perk.className}</h3><strong>{perk.name}</strong><p>{perk.effect}</p></div>
+              </article>
+            ))}
+          </div>
+          <div className={styles.levelSixBottom}>
+            <p>Om medlemskapet upphör behåller du all XP, men level 6-bonusen avaktiveras. Den aktiveras igen om du blir Patreon på nytt. Level 1 till 5 påverkas inte.</p>
+            <Link href="/wiki/events/survival" className={styles.wikiButton}>Läs Survival-guiden</Link>
           </div>
         </section>
 

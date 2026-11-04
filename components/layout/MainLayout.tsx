@@ -22,6 +22,7 @@ const navigationItems = [
     { label: "Chronicles", href: "/chronicles" },
     { label: "Karta", href: "http://162.120.2.221:8100/#overworld:0:0:0:1500:0:0:0:0:perspective" },
     { label: "Live", href: "/live" },
+    { label: "Patreon", href: "/patreon" },
     { label: "Regler", href: "/regler" },
     { label: "Om GameZone", href: "/om-gamezone" },
 ];

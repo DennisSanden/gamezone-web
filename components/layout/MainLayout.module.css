@@ -184,7 +184,7 @@
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1360px) {
     .navigation {
         display: none;
     }
@@ -313,7 +313,7 @@
     display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1360px) {
     .mobileMenuButton {
         display: inline-flex;
     }

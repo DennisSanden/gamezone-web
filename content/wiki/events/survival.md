@@ -3,6 +3,7 @@ title: "Survival"
 description: "Överlev 30 allt svårare PvE-waves tillsammans. Välj klass, bygg laget, uppgradera din utrustning och jaga Survival-rekord."
 category: "Events"
 order: 2
+updatedAt: "2026-11-04"
 infoboxTitle: "Survival"
 infobox:
   typ: "Kooperativt PvE-event"
@@ -93,7 +94,7 @@ Om din Prio 1 är full försöker systemet med Prio 2, därefter Prio 3 och så 
 
 # Klassnivåer och XP
 
-Varje Survival-klass har en **egen permanent nivå från 1 till 5**. Du kan utveckla alla tio klasserna separat, och du behåller dina nivåer mellan event. Din vanliga Character Level och dina vanliga Coins påverkas inte.
+Varje Survival-klass har en **egen permanent nivå från 1 till 6**. Du kan utveckla alla tio klasserna separat, och du behåller dina nivåer mellan event. Din vanliga Character Level och dina vanliga Coins påverkas inte.
 
 Under Survival samlar du **klass-XP** på den klass du spelar. Progressionen sparas automatiskt. När du når en ny nivå blir dess bonus tillgänglig **nästa gång du spelar klassen**, så en pågående match ändrar inte balans mitt under en wave.
 
@@ -107,8 +108,14 @@ Skriv **`/survival levels`** för att öppna en översikt över alla klasser, de
 | Level 2 till 3 | 750 | 900 |
 | Level 3 till 4 | 3 500 | 4 400 |
 | Level 4 till 5 | **10 000** | **14 400** |
+| **Level 5 till 6, Patreon-bonus** | **15 000** | **29 400** |
 
 Alla nivåbonusar staplas på klassens ursprungliga egenskaper. Level 5 ger en exklusiv förmåga eller ett kraftfullt klassvapen.
+
+> [!IMPORTANT]
+> **LEVEL 6 ÄR ENDAST AKTIV FÖR PATREONS.** Alla spelare kan samla de 15 000 XP som krävs efter level 5 och behåller sin intjänade XP. Men bonusen på level 6 är bara aktiv med ett aktuellt Patreon-medlemskap. När medlemskapet upphör avaktiveras bonusen direkt, även under en match. Om medlemskapet aktiveras igen får spelaren tillbaka bonusen utan att behöva samla XP på nytt. Bonusarna på level 1 till 5 påverkas inte.
+>
+> Läs om alla supporterförmåner på [Patreon-sidan](/patreon) eller skriv **`/patreon`** i spelet.
 
 ## Bonusar per klass
 
@@ -124,6 +131,27 @@ Alla nivåbonusar staplas på klassens ursprungliga egenskaper. Level 5 ger en e
 | **Necromancer** | Summons +5 % skada | Summons +10 % max HP | Summon-kill läker 0,5 hjärta, max var 8:e sekund | **Soul Reaper**, summon-kill ger alla egna summons +20 % skada i 5 sekunder |
 | **Resurrector** | +5 % hastighet | Återupplivning tar 3,5 sekunder | +10 % max HP | **Master of Souls**, återupplivning tar 2,5 sekunder totalt |
 | **Juggernaut** | +5 % max HP | Rörelsestraff minskar till 10 % | 5 % mindre skada | **Iron Fortress**, allierade inom 6 block tar 15 % mindre skada under Stålsätt |
+
+## Level 6, ENDAST FÖR PATREONS
+
+Level 6 kostar **15 000 extra klass-XP** efter level 5, totalt **29 400 XP per klass**. Varje klass har sin egen unika Patreon-bonus. Nivån kan tjänas in av alla, men den **aktiveras bara för aktiva Patreons**.
+
+| Klass | Exklusiv Patreon-bonus på Level 6 |
+| --- | --- |
+| **Soldier, Veteran** | +20 % skada mot Survival-mobs |
+| **Tank, Fortress** | Ytterligare 15 % mindre inkommande skada |
+| **Bowman, Deadeye** | +30 % bågskada |
+| **Healer, Divine Health** | Global Health läker **4 hjärtan** i stället för 2 |
+| **Summoner, Alpha Pack** | +30 % skada från egna summons |
+| **Commander, Royal Guard** | Ytterligare 20 % skademinskning för laget när stridshornet används |
+| **Berserker, Last Stand** | +30 % skada när du har under 50 % HP |
+| **Necromancer, Dark Pact** | +30 % skada från egna summons |
+| **Resurrector, Soul Master** | Återupplivning tar **1,25 sekunder** |
+| **Juggernaut, Unbreakable** | Ytterligare 15 % mindre inkommande skada |
+
+**Observera:** Procentbonusarna är knutna till respektive klass. De kan inte användas utanför Survival eller av spelare utan aktiv Patreonstatus. Förmånen kontrolleras när den används, så den kan bli inaktiv även under ett pågående event.
+
+Se [samtliga Patreon-förmåner](/patreon), inklusive extra `/daily`, köprioritet, klubbhus och namnfärger.
 
 ## Level 5, så aktiverar du förmågorna
 
