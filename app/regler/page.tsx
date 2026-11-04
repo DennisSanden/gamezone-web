@@ -197,20 +197,19 @@ export default function RulesPage() {
                 <section className={styles.section}>
                     <PageContainer className={styles.splitSection}>
                         <div>
-                            <span className={styles.kicker}>PvP och krig</span>
-                            <h2>Konflikter sker genom spelets system</h2>
+                            <span className={styles.kicker}>PvP och dueller</span>
+                            <h2>PvP sker genom spelets särskilda aktiviteter</h2>
                             <p className={styles.bodyText}>
-                                PvP är normalt avstängt. Det aktiveras först när två
-                                settlements officiellt befinner sig i krig med varandra.
-                                Under fredstid ska spelare kunna bygga och utvecklas utan
-                                att riskera slumpmässiga attacker.
+                                PvP är normalt avstängt i världen. Det är tillåtet i
+                                ömsesidigt accepterade dueller och i event där PvP har
+                                aktiverats. Vanliga settlements har inga aktiva krigssystem.
                             </p>
                         </div>
 
                         <div className={styles.rulePanel}>
                             <article>
                                 <span>Tillåtet</span>
-                                <p>PvP mellan parter i ett aktivt, officiellt krig.</p>
+                                <p>PvP i accepterade dueller och event där PvP är aktiverat.</p>
                             </article>
                             <article>
                                 <span>Inte tillåtet</span>
@@ -345,6 +344,15 @@ export default function RulesPage() {
                                 ska följa stadens medeltida fantasytema. Företag har stor
                                 frihet att utforma sina byggnader, men de ska passa in i
                                 området.
+                            </p>
+                        </div>
+
+                        <div className={styles.reasonBox}>
+                            <strong>Aktivitetskrav för Shopping Plots</strong>
+                            <p>
+                                Om ingen medlem i företaget har varit online under 14 sammanhängande dagar
+                                kommer företagets Shopping Plot att tas bort och platsen frigöras
+                                för andra företag. Det räcker att minst en medlem är aktiv under perioden.
                             </p>
                         </div>
 
