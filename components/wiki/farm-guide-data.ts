@@ -44,7 +44,7 @@ export const farmGuideRows: FarmGuideRow[] = [
   {
     "farm": "Witch Farm",
     "items": "Redstone, Glowstone, Gunpowder, Spider Eyes, Sugar, Bottles, Sticks",
-    "categories": "Alkemi, Jordbruk, Byggmaterial"
+    "categories": "Alkemi, Jordbruk, Byggmaterial, Gruvdrift"
   },
   {
     "farm": "General Mob Farm",
@@ -354,7 +354,7 @@ export const farmGuideRows: FarmGuideRow[] = [
   {
     "farm": "Moss Bonemeal Farm",
     "items": "Moss, Bonemeal",
-    "categories": "Byggmaterial, Jordbruk"
+    "categories": "Byggmaterial, Jordbruk, Skogsbruk"
   },
   {
     "farm": "Tree Farm, Oak",
