@@ -3,7 +3,7 @@ title: "Events och schema"
 description: "Dagliga events klockan 20 och 21, Survival och roterande tävlingar."
 category: "Events"
 order: 1
-updatedAt: "2026-10-21"
+updatedAt: "2026-11-04"
 infobox:
   kvällsschema: "20:00 och 21:00"
   survival: "Varje kväll"
@@ -26,7 +26,7 @@ Anmälan öppnar före start. Vissa event kräver lag, andra är individuella. D
 
 ## Eventtyper
 
-- **Survival**, kooperativt PvE med upp till 20 waves, klasser och gemensamma förbättringar.
+- **Survival**, kooperativt PvE med 30 waves, mynt, två öppna butiker, klasser och lagbuffar.
 - **Hunger Games**, Solo eller Duo där du överlever längre än motståndarna.
 - **Team Deathmatch**, två lag med gemensamma tickets.
 - **Archery Masters**, bågskyttebaserad tävling.

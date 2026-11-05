@@ -1,6 +1,6 @@
 ---
 title: "Survival"
-description: "Överlev 30 allt svårare PvE-waves tillsammans. Välj klass, bygg laget, uppgradera din utrustning och jaga Survival-rekord."
+description: "30 PvE-waves, tio klasser, mynt, Blacksmith, Supplies, välsignelser och permanenta klassnivåer."
 category: "Events"
 order: 2
 updatedAt: "2026-11-04"
@@ -9,7 +9,7 @@ infobox:
   typ: "Kooperativt PvE-event"
   waves: "30"
   klassval: "Upp till 5 prioriteringar, 45 sekunder"
-  mobkill: "Mynt till Survival-shoppen"
+  mobkill: "Mynt för köp under matchen"
   slutbelöning: "Upp till 1 000 000 Coins"
 relatedArticles:
   - category: "events"
@@ -20,538 +20,286 @@ relatedArticles:
 
 # Survival
 
-**Survival** är GameZones stora kooperativa PvE-event. Alla deltagare spelar på samma sida och försöker tillsammans ta sig igenom **30 waves** som blir hårdare ju längre laget överlever.
-
-Här finns ingen ensam vinnare. Ett bra Survival-lag behöver damage, tålighet, healing, summons och rätt buffs vid rätt tillfälle. Under eventet väljer du klass, förbättrar din utrustning mellan waves och röstar tillsammans med laget om permanenta välsignelser.
+**Survival** är ett kooperativt PvE-event med **30 waves**. Laget försöker överleva allt farligare fiender. Alla spelar på samma sida, men har egna klasser, utrustning och egna **mynt** att handla för.
 
 > [!IMPORTANT]
-> Survival är ett lag-event. Målet är att få **hela gruppen** så långt som möjligt.
+> **Du får inte längre välja gratis föremål efter varje wave.** I stället tjänar du mynt genom strid och stödinsatser och köper utrustning från **Blacksmith** och **Supplies**. Båda butikerna är öppna även medan en wave pågår.
 
 ## Snabböversikt
 
-| | |
+| System | Så fungerar det |
 | --- | --- |
-| **Format** | Kooperativ PvE |
-| **Längd** | 30 waves |
-| **Klassval** | 5 prioriteringar under 45 sekunder |
-| **Begränsade klasser** | Commander, Summoner, Necromancer, Resurrector, Juggernaut 1, Healer 2, Bowman 1/6 |
-| **Mynt per kill** | Beror på mob och wave |
-| **Maximal wave-belöning** | 1 000 000 Coins |
-| **Lagbuffs** | Efter wave 5, 10 och 15 |
-| **Statistik** | Damage, kills, healing och Summon damage |
-| **Permanenta rekord** | Lagrekord och individuella mob-kills |
+| Waves | 30, med allt svårare fiender och bossar |
+| Deltagande | `/event join` innan eventstart |
+| Klassval | 45 sekunder, rangordna upp till fem klasser |
+| Butiker | Blacksmith och Supplies, öppna under hela matchen, även under strid |
+| Matchvaluta | **Mynt**, individuellt saldo som bara gäller aktuell match |
+| Vanlig ekonomi | **Coins**, separat checkpoint-belöning när du elimineras eller matchen avslutas |
+| Röstningar | Efter wave **5, 10, 15, 20 och 25** |
+| Klassnivåer | 1 till 6, permanenta och individuella för varje klass |
+| Level 6 | Endast aktiv med **Patreon** |
+| Statistik | Skada, kills, läkning, summon-skada, tankad skada och återupplivningar |
 
-## Så börjar eventet
+## Anmälan och klassval
 
-Anmälan öppnar före eventstart och servern påminner när starten närmar sig. Gå med med:
+Skriv `/event join` under anmälningen. Vid eventstart teleporteras du till arenan och klassvalet öppnas i **45 sekunder**. Du kan rangordna upp till fem alternativ från första till femte prioritet.
 
-```text
-/event join
-```
+Begränsade platser fördelas först efter **Patreon-förtur**, därefter genom lottning mellan spelare med samma status. Om din första klass är full prövar systemet nästa prioritet. **Soldier** är fallback om du inte får något av dina val.
 
-När Survival börjar teleporteras deltagarna till arenan och **klassvalet öppnas i 45 sekunder**.
-
-Klassmenyn hålls öppen under hela valperioden. Om du försöker stänga den öppnas den igen, så att ingen råkar missa sitt klassval genom att trycka Escape.
+| Klass | Platser i laget |
+| --- | ---: |
+| Soldier, Tank, Berserker | Obegränsat |
+| Healer | 2 |
+| Commander, Summoner, Necromancer, Resurrector, Juggernaut | 1 per klass |
+| Bowman | 1 per påbörjade 6 deltagare |
 
 ---
 
-# Välj din klass
+# Mynt och shopping
 
-Du väljer inte bara en klass och hoppas på det bästa. I stället får du rangordna **upp till fem klasser**:
+## Två helt olika valutor
 
-**Prio 1 → Prio 2 → Prio 3 → Prio 4 → Prio 5**
+- **Mynt** är din personliga valuta *under Survival*. Den visas som **Mynt: X** och används för att köpa föremål i arenan. Den sparas inte som ett vanligt banksaldo och växlas inte till vanliga Coins.
+- **Coins** är serverns vanliga valuta. Du får dem från den senast klarade **checkpoint-waven**, inte för varje mynt du tjänat i matchen.
 
-Dina klick läggs i den ordningen. Klickar du på en klass som redan finns i listan tas den bort och de lägre prioriteringarna flyttas upp.
+## Hur tjänar man mynt?
 
-När de 45 sekunderna är slut försöker Survival ge dig din högsta möjliga prioritet.
+Du kan tjäna mynt på flera sätt:
 
-### Begränsade klasser
+1. **Kills av Survival-mobs.** Fiendens typ och aktuell wave bestämmer grundbeloppet. Skada från Summoners och Necromancers egna summons kan ge deras ägare kill-belöningen.
+2. **Starka fiender ger ibland en liten bonus till lagkamrater.** Den delas mellan övriga levande deltagare när beloppet räcker.
+3. **Stödinsatser räknas.** Healer kan tjäna mynt för läkning av andra, och tankning samt blockerad skada kan ge mynt. Dessa stödutbetalningar har ett tak per person och wave.
+4. **Resurrector tjänar exakt 8 mynt per lyckad återupplivning.** Ingen gräns per wave.
+5. **Commander** kan få mynt när stridshornet används och en annan lagkamrat får hjälp av buffen.
+6. **Ranson efter en klarad wave.** Levande spelare får normalt **5 mynt**, efter den generella myntbonusen. Den delas inte ut efter wave 30.
 
-| Klass | Platser |
+De flesta vanliga myntutdelningar har en generell **+25 % bonus**. Systemet sparar avrundningsrester, så även små belöningar får rätt bonus över tid. Resurrectorns fasta 8 mynt är ett undantag och förstärks inte ytterligare.
+
+### Exempel på grundbelöningar från monster
+
+| Fiende | Basmynt tidigt i matchen |
 | --- | ---: |
-| **Commander** | 1 |
-| **Healer** | 2 |
-| **Summoner** | 1 |
-| **Necromancer** | 1 |
-| **Resurrector** | 1 |
-| **Juggernaut** | 1 |
-| **Bowman** | 1 per påbörjade 6 deltagare |
+| Zombie | 1 |
+| Skeleton, Spider, Husk | 2 |
+| Pillager, Bogged | 3 |
+| Witch, Vindicator, Wither Skeleton | 4 |
+| Ravager, Zoglin, Breeze | 6 |
+| Evoker | 9 |
+| Warden | 15 |
+| Special-Vex som jagar spelare | 2 |
+| Baby Zombies på wave 15 | 1 |
 
-Alla får välja dessa klasser i sin prioriteringslista. Platserna delas inte ut förrän klassvalet är avslutat.
+Vanliga mobs ger mer mynt längre fram i matchen. Bossar har särskilda belöningar. Tabellen visar grundvärden före bonusar och senare wave-skalning, inte ett garanterat slutbelopp.
 
-Om flera spelare konkurrerar om samma begränsade klass gäller:
+### Så handlar du
 
-1. **Aktiv Patreon**
-2. **Slumpad ordning mellan spelare med samma Patreonstatus**
-3. **Dina återstående klassprioriteringar**
+Gå fram till **Blacksmith**, vapensmeden, eller **Supplies**, handlaren för mat, ammunition och förbrukningsföremål. **Högerklicka på deras NPC** för att öppna shoppen. Du kan öppna den både *mellan waves och medan fiender attackerar*.
 
-Patreon har förtur i tilldelningen. Mellan spelare med samma Patreonstatus används en slumpad ordning som bestäms vid klassvalet.
+Varje vara visar **pris i mynt** och vilken wave den låses upp på. Vissa vapen kräver en viss klass och ibland klassnivå. När köpet lyckas dras mynten från ditt personliga saldo och föremålet läggs i inventoryt. Du behöver tillräckligt med plats.
 
-Om din Prio 1 är full försöker systemet med Prio 2, därefter Prio 3 och så vidare. Om ingen av dina valbara prioriteringar kan tilldelas finns **Soldier** som säker fallback.
+### Blacksmith, vapen och rustningar
 
+| Vara | Pris i mynt | Från wave |
+| --- | ---: | ---: |
+| Iron Sword | 38 | 1 |
+| Iron Axe | 42 | 1 |
+| Shield | 25 | 1 |
+| Bow | 42 | 1 |
+| Crossbow | 55 | 3 |
+| Iron Chestplate | 65 | 3 |
+| Diamond Sword | 125 | 8 |
+| Diamond Axe | 140 | 9 |
+| Bow, Power III | 150 | 9 |
+| Crossbow, Quick Charge II | 130 | 8 |
+| Diamond Chestplate | 160 | 11 |
+| Diamond Helmet | 90 | 11 |
+| Diamond Leggings | 130 | 11 |
+| Diamond Boots | 85 | 11 |
+| Diamond Sword, Sharpness III | 250 | 13 |
+| Diamond Sword, Sharpness V | 580 | 21 |
+
+**Klasspecifika varor:**
+
+| Klass | Vara | Mynt | Wave |
+| --- | --- | ---: | ---: |
+| Soldier | Soldier's Edge, Sharpness II | 85 | 5 |
+| Tank | Tank's Bulwark, Protection II | 90 | 5 |
+| Bowman | Bowman's Precision, Power III | 120 | 7 |
+| Summoner | Summoner's Bolt, Quick Charge II | 100 | 7 |
+| Commander | Commander's Blade, Sharpness III | 135 | 8 |
+| Berserker | Berserker's Axe, Sharpness III | 120 | 7 |
+| Necromancer | Necromancer's Crossbow, Piercing III | 130 | 9 |
+| Resurrector | Resurrector's Mantle, Protection II | 95 | 6 |
+| Juggernaut | Juggernaut's Plate, Protection III | 220 | 12 |
+| **Soldier level 5** | **Soldier's Wrath, Netherite Sword Sharpness V** | **750** | **17** |
+| **Bowman level 5** | **Hawkeye Bow, Power V och Punch I** | **650** | **16** |
+
+Bågar och armborst är begränsade till **Bowman, Summoner och Necromancer**, även om en generell ranged-vara annars syns i utbudet.
+
+### Supplies, mat och förbrukningsföremål
+
+| Vara | Pris i mynt | Från wave |
+| --- | ---: | ---: |
+| Cooked Beef x4 | 4 | 1 |
+| Bread x8 | 6 | 1 |
+| Golden Carrots x4 | 10 | 1 |
+| Arrows x16 | 7 | 1 |
+| Arrows x64 | 22 | 4 |
+| Golden Apple | 30 | 4 |
+| Golden Apples x3 | 82 | 10 |
+| Cooked Beef x16 | 14 | 5 |
+| Regeneration Potion | 65 | 10 |
+| Splash Potion of Healing | 75 | 10 |
+| Spectral Arrows x16 | 45 | 9 |
+| Healer's First Aid, två Healing Splash Potions | 65 | 6 |
+
+Ammunition följer klassernas begränsningar för distansvapen. Vissa varor är bara tillgängliga för rätt klass.
+
+---
+
+# Klasser och förmågor
+
+| Klass | Startutrustning och spelstil |
+| --- | --- |
+| **Soldier** | Iron Sword och Iron Armor, balanserad närstrid |
+| **Tank** | Stone Axe, Stone Sword, Shield och Diamond Armor. **+75 % max HP**, men **30 % lägre skada** |
+| **Bowman** | Unbreakable Bow med Power I, 32 Arrows, Stone Sword och Leather Armor |
+| **Healer** | Stone Sword, Healing Totem och Leather Armor. Passiv läkande aura och grön outline när spelaren inte har kritiskt låg HP |
+| **Summoner** | Stone Sword, Crossbow, 16 Arrows och Leather Armor. Kallar på allierade varelser |
+| **Commander** | Iron Sword, Stridshorn och Iron Armor. **+20 % max HP** och **mörkblå armor trim**, men **ingen blå outline** |
+| **Berserker** | Iron Axe och Leather Armor. **+35 % skada**, men **30 % lägre max HP** |
+| **Necromancer** | Stone Sword, Crossbow, 16 Arrows och Leather Armor. Kallar på mörka allierade |
+| **Resurrector** | Stone Sword, Soul Staff, Själasteg samt rustning av Chainmail och Iron. Räddar nedslagna spelare |
+| **Juggernaut** | Iron Axe, Heart of Iron och Iron Armor. **+40 % max HP**, men lägre rörelsehastighet |
+
+### Outlines och hjälp till skadade
+
+- **Healer** har normalt **grön outline** så att laget kan hitta läkaren.
+- **Alla spelare på högst 40 % HP** får **röd outline**, även Healers. Rött går före grönt.
+- **Commander har inte blå outline.** Den mörkblå färgen gäller i stället armor trim, inte en glödande spelarprofil.
+
+### Aktiva klassförmågor
+
+**Healer:** En passiv aura läker skadade lagkamrater i närheten, med grundradie 8 block. **Healing Totem** läker inom 10 block, upp till 4 hjärtan för allierade och 2 för Healern själv, en gång per wave. På level 4 ökar den läkningen med ett hjärta. På level 5 får Healer **Global Health**, en Nether Star som läker alla levande deltagare med 2 hjärtan, en gång var tredje wave. Level 6 ger 4 hjärtan.
+
+**Commander:** Högerklicka med **Stridshorn**. Alla levande lagkamrater gör **+100 % skada under den aktuella waven**. Hornet kan användas igen efter tre waves, exempelvis wave 2 och 5. Level 4 ger dessutom +10 % rörelsehastighet i 10 sekunder. Level 5 ger 15 % mindre inkommande skada i 10 sekunder.
+
+**Summoner:** Får ett nytt summonägg varje wave. Waves 1 till 3 ger Bee, 4 till 8 Wolf, 9 till 17 Iron Golem och 18 till 30 Iron Golem med två Wolves. Level 5 lägger till en extra Wolf där bonusen gäller. Egna summons kan ge ägaren både skadestatistik och mynt för kills.
+
+**Necromancer:** Kallar på allierade varelser och tjänar också mynt på deras kills. Level 4 ger läkning från summon-kills och level 5 ger en tillfällig skadebonus till egna summons.
+
+**Resurrector:** När en spelare faller och en aktiv Resurrector kan hjälpa blir spelaren **nedslagen i högst 20 sekunder**, i stället för direkt eliminerad. Markering, ljud och meddelande visar var personen ligger. Stå inom **4 block** och använd **Soul Staff**. Ritualen tar **4 sekunder** på grundnivå och avbryts om du rör dig eller skadas. Lyckad räddning ger **8 mynt utan tak**. **Själasteg** ger +20 % rörelsehastighet i 10 sekunder, en gång per wave.
+
+**Juggernaut:** **Stålsätt** med Heart of Iron minskar inkommande skada kraftigt under en begränsad tid. Den aktiva effekten ger **90 % skadereducering i 20 sekunder** och kan användas en gång var tredje wave.
+
+**Tank:** På level 5 kan Tank använda **Provokation**, en Bell som drar till sig närliggande fiender inom 10 block under 8 sekunder, en gång var tredje wave. Specialfiender med egna målregler kan vara undantagna.
+
+**Berserker:** Offensiv klass med hög skada och låg hälsa. Högre klassnivåer ger bland annat läkning efter kills och en tidsbegränsad Blood Rage vid låg HP.
 
 ---
 
 # Klassnivåer och XP
 
-Varje Survival-klass har en **egen permanent nivå från 1 till 6**. Du kan utveckla alla tio klasserna separat, och du behåller dina nivåer mellan event. Din vanliga Character Level och dina vanliga Coins påverkas inte.
+Alla tio klasser utvecklas var för sig från **level 1 till 6**. Progressionen sparas mellan matcherna. Skriv **`/survival levels`** för att se dina nivåer, framsteg och bonusar. Intjänade bonusar på level 2 till 5 gäller från nästa match.
 
-Under Survival samlar du **klass-XP** på den klass du spelar. Progressionen sparas automatiskt. När du når en ny nivå blir dess bonus tillgänglig **nästa gång du spelar klassen**, så en pågående match ändrar inte balans mitt under en wave.
-
-Skriv **`/survival levels`** för att öppna en översikt över alla klasser, deras nivåer, XP fram till nästa nivå och bonusar. Din aktuella nivå visas även i klassvalsmenyn.
-
-## XP-krav
-
-| Nivåövergång | XP som behövs | Totalt XP från level 1 |
+| Övergång | XP till nästa nivå | Totalt sedan level 1 |
 | --- | ---: | ---: |
-| Level 1 till 2 | 150 | 150 |
-| Level 2 till 3 | 750 | 900 |
-| Level 3 till 4 | 3 500 | 4 400 |
-| Level 4 till 5 | **10 000** | **14 400** |
-| **Level 5 till 6, Patreon-bonus** | **15 000** | **29 400** |
-
-Alla nivåbonusar staplas på klassens ursprungliga egenskaper. Level 5 ger en exklusiv förmåga eller ett kraftfullt klassvapen.
+| 1 till 2 | 150 | 150 |
+| 2 till 3 | 750 | 900 |
+| 3 till 4 | 3 500 | 4 400 |
+| 4 till 5 | 10 000 | 14 400 |
+| **5 till 6** | **15 000** | **29 400** |
 
 > [!IMPORTANT]
-> **LEVEL 6 ÄR ENDAST AKTIV FÖR PATREONS.** Alla spelare kan samla de 15 000 XP som krävs efter level 5 och behåller sin intjänade XP. Men bonusen på level 6 är bara aktiv med ett aktuellt Patreon-medlemskap. När medlemskapet upphör avaktiveras bonusen direkt, även under en match. Om medlemskapet aktiveras igen får spelaren tillbaka bonusen utan att behöva samla XP på nytt. Bonusarna på level 1 till 5 påverkas inte.
->
-> Läs om alla supporterförmåner på [Patreon-sidan](/patreon) eller skriv **`/patreon`** i spelet.
+> **LEVEL 6 ÄR ENDAST AKTIV FÖR PATREONS.** Alla kan samla XP till level 6, men utan ett aktivt Patreon-medlemskap används bonusarna från högst level 5. XP försvinner inte om Patreon upphör. Level 6-bonusen aktiveras igen när medlemskapet återkommer, också under pågående match. Läs om [Patreon](/patreon) eller skriv `/patreon` i spelet.
 
-## Bonusar per klass
+## Bonusar, level 2 till 5
 
 | Klass | Level 2 | Level 3 | Level 4 | Level 5 |
 | --- | --- | --- | --- | --- |
-| **Soldier** | +5 % skada | 5 % mindre inkommande skada | +5 % max HP | **Soldier's Wrath**, Netherite Sword Sharpness V i shoppen |
-| **Tank** | +5 % max HP | 5 % mindre skada | Sköldblockering läker 0,5 hjärta, max var 10:e sekund | **Provokation**, fiender inom 10 block fokuserar på dig i 8 sekunder |
-| **Bowman** | +5 % bågskada | +10 % pilhastighet | 15 % chans att spara en pil | **Hawkeye Bow**, Power V och Punch I i shoppen |
-| **Healer** | +10 % räckvidd för Healing Aura | +10 % läkande effekt från Healing Aura | Healing Totem läker 1 extra hjärta | **Global Health**, läker alla aktiva deltagare 2 hjärtan |
-| **Summoner** | Summons +5 % skada | Summons +10 % max HP | Summons +10 % hastighet | **Pack Leader**, en extra Wolf från wave 9 |
-| **Commander** | +5 % max HP | +5 % egen svärdskada | Stridshorn ger laget +10 % hastighet i 10 sekunder | **Rallying Cry**, stridshornet ger dessutom laget 15 % mindre skada i 10 sekunder |
-| **Berserker** | +5 % skada | +5 % hastighet | Kill läker 0,5 hjärta, max var 6:e sekund | **Blood Rage**, under 35 % HP: +20 % skada och +10 % hastighet i 8 sekunder |
-| **Necromancer** | Summons +5 % skada | Summons +10 % max HP | Summon-kill läker 0,5 hjärta, max var 8:e sekund | **Soul Reaper**, summon-kill ger alla egna summons +20 % skada i 5 sekunder |
-| **Resurrector** | +5 % hastighet | Återupplivning tar 3,5 sekunder | +10 % max HP | **Master of Souls**, återupplivning tar 2,5 sekunder totalt |
-| **Juggernaut** | +5 % max HP | Rörelsestraff minskar till 10 % | 5 % mindre skada | **Iron Fortress**, allierade inom 6 block tar 15 % mindre skada under Stålsätt |
+| **Soldier** | +5 % skada | 5 % mindre inkommande skada | +5 % max HP | Soldier's Wrath i Blacksmith |
+| **Tank** | +5 % max HP | 5 % mindre skada | Sköldblockering läker 0,5 hjärta, max var 10:e sekund | Provokation, 8 sekunder, var tredje wave |
+| **Bowman** | +5 % bågskada | +10 % pilhastighet | 15 % chans att spara pil | Hawkeye Bow i Blacksmith |
+| **Healer** | +10 % auraräckvidd | +10 % auraläkning | Healing Totem +1 hjärta | Global Health, 2 hjärtan, var tredje wave |
+| **Summoner** | +5 % summon-skada | +10 % summon-HP | +10 % summon-hastighet | Pack Leader, extra Wolf |
+| **Commander** | +5 % max HP | +5 % egen närstridsskada | Stridshorn +10 % laghastighet | Rallying Cry, 15 % mindre skada åt laget |
+| **Berserker** | +5 % skada | +5 % hastighet | Kill läker 0,5 hjärta, max var 6:e sekund | Blood Rage vid låg HP |
+| **Necromancer** | +5 % summon-skada | +10 % summon-HP | Summon-kill läker 0,5 hjärta | Soul Reaper, +20 % summon-skada kort tid |
+| **Resurrector** | +5 % hastighet | Revive tar 3,5 sekunder | +10 % max HP | Revive tar totalt 2,5 sekunder |
+| **Juggernaut** | +5 % max HP | Mindre rörelsestraff | 5 % mindre inkommande skada | Iron Fortress, skyddar lagkamrater under Stålsätt |
 
-## Level 6, ENDAST FÖR PATREONS
+## Level 6, ENDAST FÖR AKTIVA PATREONS
 
-Level 6 kostar **15 000 extra klass-XP** efter level 5, totalt **29 400 XP per klass**. Varje klass har sin egen unika Patreon-bonus. Nivån kan tjänas in av alla, men den **aktiveras bara för aktiva Patreons**.
-
-| Klass | Exklusiv Patreon-bonus på Level 6 |
+| Klass | Exklusiv bonus |
 | --- | --- |
-| **Soldier, Veteran** | +20 % skada mot Survival-mobs |
-| **Tank, Fortress** | Ytterligare 15 % mindre inkommande skada |
-| **Bowman, Deadeye** | +30 % bågskada |
-| **Healer, Divine Health** | Global Health läker **4 hjärtan** i stället för 2 |
-| **Summoner, Alpha Pack** | +30 % skada från egna summons |
-| **Commander, Royal Guard** | Ytterligare 20 % skademinskning för laget när stridshornet används |
-| **Berserker, Last Stand** | +30 % skada när du har under 50 % HP |
-| **Necromancer, Dark Pact** | +30 % skada från egna summons |
-| **Resurrector, Soul Master** | Återupplivning tar **1,25 sekunder** |
-| **Juggernaut, Unbreakable** | Ytterligare 15 % mindre inkommande skada |
-
-**Observera:** Procentbonusarna är knutna till respektive klass. De kan inte användas utanför Survival eller av spelare utan aktiv Patreonstatus. Förmånen kontrolleras när den används, så den kan bli inaktiv även under ett pågående event.
-
-Se [samtliga Patreon-förmåner](/patreon), inklusive extra `/daily`, köprioritet, klubbhus och namnfärger.
-
-## Level 5, så aktiverar du förmågorna
-
-**Healers Global Health** används med den särskilda Nether Star som du får vid klassvalet. Högerklicka för att läka alla levande deltagare med upp till **2 hjärtan**, oavsett var de befinner sig i eventet. Förmågan är redo från wave 1 och kan användas **en gång var tredje wave**, exempelvis wave 1, 4 och 7. Nedslagna spelare måste fortfarande återupplivas av Resurrector.
-
-**Tanks Provokation** aktiveras med en Bell som du får i startutrustningen. Högerklicka för att rikta fiendernas uppmärksamhet mot dig i **8 sekunder**. Även den kan användas en gång var tredje wave. Hunter Vexes behåller sitt särskilda målsystem.
-
-**Soldier's Wrath** låses upp i Blacksmith på **wave 17 för 750 mynt**. **Hawkeye Bow** låses upp på **wave 16 för 650 mynt**. Vapnen kräver level 5 i rätt klass och måste köpas med matchens mynt.
-
-**Commander** använder fortfarande sitt vanliga stridshorn. På level 4 och 5 förstärks dess lagbuffar automatiskt. **Berserker**, **Summoner**, **Necromancer** och **Juggernaut** får sina level 5-effekter automatiskt när villkoren uppfylls. Blood Rage kan utlösas högst en gång per wave. Necromancers Soul Reaper kan förnyas vid nya summon-kills, men skadan staplas inte.
-
-> [!TIP]
-> Resurrectors återupplivning på level 5 tar **2,5 sekunder totalt**, inte 3,5 minus ytterligare 1,5 sekunder.
+| Soldier, **Veteran** | +20 % skada mot Survival-mobs |
+| Tank, **Fortress** | Ytterligare 15 % mindre inkommande skada |
+| Bowman, **Deadeye** | +30 % bågskada |
+| Healer, **Divine Health** | Global Health läker **4 hjärtan** i stället för 2 |
+| Summoner, **Alpha Pack** | +30 % skada från summons |
+| Commander, **Royal Guard** | Ytterligare 20 % skadereducering för laget under stridshorn |
+| Berserker, **Last Stand** | +30 % skada när du har under 50 % HP |
+| Necromancer, **Dark Pact** | +30 % skada från summons |
+| Resurrector, **Soul Master** | Återupplivning tar **1,25 sekunder** |
+| Juggernaut, **Unbreakable** | Ytterligare 15 % mindre inkommande skada |
 
 ---
 
-# Klasser
+# Waves, fiender och välsignelser
 
-## Soldier
+## Tider och överlappande waves
 
-**Soldier** är den balanserade närstridsklassen och ett stabilt val i alla delar av eventet.
-
-**Startar med**
-- Iron Sword
-- Full Iron Armor
-
-Soldier har normal HP och normal damage. Klassen har ingen spelargräns.
-
-Looten fokuserar på bättre swords, shields och tung armor. Diamond Sword kan dyka upp från wave 4 och senare versioner kan få Sharpness II.
-
-**Passar dig som:** vill stå i fronten utan att offra vare sig HP eller damage.
-
-## Tank
-
-**Tank** är byggd för att stå kvar när andra måste backa.
-
-**Startar med**
-- Stone Axe
-- Shield
-- Full Diamond Armor
-
-Tank får **+75 % max-HP**, men gör **30 % mindre damage**.
-
-Looten fokuserar på shields, axes, Golden Apples och tung armor. Diamond Axe låses upp senare och kan utvecklas med Sharpness II.
-
-**Passar dig som:** vill hålla mobs upptagna och köpa tid åt resten av laget.
-
-## Bowman
-
-**Bowman** är lagets renodlade distansklass.
-
-**Startar med**
-- Unbreakable Bow med Power I
-- 32 Arrows
-- Stone Sword
-- Full Leather Armor
-
-Bowman har en betydligt större ammo-progression under eventet. Rewardpoolen innehåller bland annat vanliga pilar, stora Ammo Bundles, Spectral Arrows, bättre bows, crossbows, shields och lätt armor.
-
-Ammo rewards skalar upp under eventet. Större bundles kan ge **48 till 80 pilar**, och senare kan Bowman få **24 Spectral Arrows** som ett eget val.
-
-Crossbows kan utvecklas med bland annat Quick Charge och Piercing.
-
-**Passar dig som:** vill göra säker damage på avstånd och kontrollera farliga mål.
-
-## Healer
-
-**Healer** håller laget vid liv och är begränsad till **max 2 spelare**.
-
-**Startar med**
-- Stone Sword
-- Healing Totem
-- Full Leather Armor
-
-Healers har en **grön outline** så att laget snabbt kan hitta dem.
-
-### Läkande aura
-
-Healer har en passiv healing-aura inom **8 block**. Skadade lagkamrater i närheten läks kontinuerligt.
-
-När du får healing visas både **att du blir läkt och hur mycket** direkt i actionbaren.
-
-Healer får dessutom information om lagkamrater som faller till **40 % HP eller lägre**.
-
-### Healing Totem
-
-Högerklicka med Healing Totem för att läka spelare inom **10 block**.
-
-- Allierade kan få upp till **4 hjärtan**
-- Healern själv kan få upp till **2 hjärtan**
-- Totemen förbrukas inte
-- Den kan användas **en gång per wave**
-
-När nästa wave börjar blir Healing Totem tillgänglig igen.
-
-**Passar dig som:** gillar support och vill kunna rädda en wave när laget börjar falla isär.
-
-## Summoner
-
-**Summoner** slåss tillsammans med friendly summons och är begränsad till **max 1 spelare**.
-
-**Startar med**
-- Stone Sword
-- Crossbow
-- 16 Arrows
-- Full Leather Armor
-
-Summoners känns igen på sina allierade summons.
-
-Varje wave får Summoner en ny summon-token:
-
-| Waves | Summon |
-| --- | --- |
-| **1–3** | Bee |
-| **4–8** | Wolf |
-| **9–17** | Iron Golem |
-| **18–30** | Iron Golem + 2 Wolves |
-
-Summons söker själva efter Survival-mobs och är betydligt starkare än vanliga motsvarigheter. De får kraftigt förstärkt HP, extra attack och mer armor ju längre eventet går. HP-skalningen kan nå upp till **500 HP**.
-
-Summoner har också fått en större ammo-pool. Vanliga arrow rewards kan ge **32 till 64 pilar**, och från senare waves kan **64 Summoner Ammo** dyka upp som ett separat rewardval.
-
-All damage som dina summons gör registreras på dig som **Summon damage**.
-
-**Passar dig som:** vill bidra med extra bodies på slagfältet och bygga upp en stark pet-armé genom eventet.
-
-## Commander
-
-**Commander** är lagets ledarklass. Det finns bara **1 Commander** per lag.
-
-**Startar med**
-- Iron Sword
-- Stridshorn
-- Full Iron Armor
-
-Commander får **+20 % max-HP** och har en **blå outline**.
-
-### Stridshorn
-
-Högerklicka med Stridshornet för att ge hela laget:
-
-**+20 % damage under den aktuella waven**
-
-Alla levande deltagare får information om buffen i actionbaren när hornet används.
-
-Stridshornet har en cooldown på **tre waves räknat från användningen**. Om hornet används på wave 2 kan det alltså användas igen på wave 5. Används det på wave 7 är nästa möjlighet wave 10.
-
-Commander har dessutom en starkare lootpool än övriga klasser och behandlas alltid som minst högsta contribution tier när rewardalternativen skapas.
-
-**Passar dig som:** vill tajma en kraftig lagbuff till de waves där gruppen behöver den som mest.
-
-## Berserker
-
-**Berserker** satsar allt på damage.
-
-**Startar med**
-- Iron Axe
-- Full Leather Armor
-
-Berserker har **30 % mindre max-HP**, men gör **+35 % damage**.
-
-Klassen är obegränsad och lootpoolen fokuserar på offensiv melee-utrustning, axes, Golden Apples och lätt armor. Senare Berserker Axes kan få Sharpness II.
-
-**Passar dig som:** hellre dödar hotet snabbt än står och tankar det.
-
----
-
-# Waves och svårighetskurva
-
-Survival består av **30 waves**. När en wave börjar visas den i bossbaren och deltagarna får tydlig information om vilken wave som är aktiv.
-
-Var femte wave fungerar som en tydligare milstolpe. Samtidigt växer både fiendernas styrka och lagets möjligheter genom loot och välsignelser.
-
-Healers får tillbaka sin Healing Totem-användning vid ny wave. Summoners får sin nya summon-token.
-
-## Hur många mobs kommer?
-
-Grundmängden påverkas både av aktuell wave och hur många spelare som deltar:
-
-```text
-4 + wave × 2 + ceil(antal spelare × 1,35)
-```
-
-Därefter justeras mängden beroende på vilken wave det är. Survival har en gräns på **50 mobs** i den normala wave-spawnen.
-
-Svårigheten kommer alltså inte bara från fler mobs. Sena waves använder starkare kombinationer, mer HP, högre damage och farligare mobtyper.
-
-## Om laget inte hinner rensa en wave
-
-| Waves | Tid |
+| Waves | Tid innan nästa wave kan komma |
 | --- | ---: |
-| **1–5** | 75 sekunder |
-| **6–10** | 90 sekunder |
-| **11–15** | 105 sekunder |
-| **16–29** | 135 sekunder |
-| **30** | Ingen vanlig tidsgräns |
+| 1 till 5 | 75 sekunder |
+| 6 till 10 | 90 sekunder |
+| 11 till 15 | 105 sekunder |
+| 16 till 29 | 135 sekunder |
+| 30 | Ingen vanlig timer |
 
-Om tiden tar slut kan nästa wave börja **även om fiender från den gamla waven fortfarande lever**.
+Om laget inte hinner rensa en wave kan nästa wave börja fast fiender fortfarande lever. Om **över 50 fiender** återstår när tiden går ut kan eventet avslutas med förlust. Det är alltså viktigt att inte fastna bakom muren med gamla fiender kvar.
 
-De gamla mobsen försvinner inte. Ett lag som tappar tempo kan därför plötsligt behöva slåss mot flera waves samtidigt.
+Tidiga waves har bland annat Zombies, Skeletons och Spiders. Från wave 6 förekommer Pillagers och från wave 9 Vindicators. Efter wave 12 kommer mer varierade fiender och särskilda Vexes som jagar distansklasser. **Wave 15** innehåller bland annat **96 Baby Zombies med 24 HP** och en Ravager. På wave **18, 19 och 20** väntar **2, 4 respektive 6 Wardens**. Survival fortsätter därefter till wave 30.
 
----
+## Fem omröstningar för laget
 
-# Fienderna
+Efter wave **5, 10, 15, 20 och 25** får laget välja **en av fem** välsignelser. Röstningen varar upp till **45 sekunder** och kan avslutas tidigare om alla levande deltagare röstat. Vid lika resultat väljs slumpmässigt mellan de ledande alternativen.
 
-Tidiga waves använder framför allt Zombies, Skeletons och Spiders. Därefter introduceras gradvis farligare fiender.
-
-Pillagers börjar dyka upp från wave 6, Vindicators från wave 9 och senare blir Witches en större del av hotbilden.
-
-Mobsen använder definierad Survival-utrustning. De ska inte slumpmässigt dyka upp med vanilla-enchantad utrustning som eventet inte har bestämt.
-
-Skeletons använder bows, Pillagers crossbows och Vindicators Iron Axes. Sena waves kan ge vissa fiender förbättrad armor och definierade weapon enchants.
-
-Survival-mobs brinner inte upp i solljus.
-
-## Wave 18–20
-
-Wave 18–20 är ett tufft steg på vägen mot slutstriden på wave 30.
-
-### Wave 18
-Laget möter blandade, farliga mobtyper, inklusive två Wardens.
-
-### Wave 19
-Svårigheten höjs och laget möter fyra Wardens.
-
-### Wave 20
-En stor milstolpe med sex Wardens. Därefter fortsätter Survival till wave 30 med nya kombinationer av farliga fiender och bossar.
-
----
-
-# Loot mellan waves
-
-Efter en klarad wave får varje överlevande spelare **tre konkreta rewardalternativ**.
-
-Det finns inga hemliga "class rewards". Du ser vad du väljer innan du klickar.
-
-Rewardpoolen anpassas efter din klass. En Bowman får exempelvis ranged weapons och ammo, Tank får tyngre defensiv utrustning och Summoner får utrustning som passar den klassens spelstil.
-
-Menyn hålls kvar tills du gjort ditt rewardval.
-
-## Din insats påverkar loot
-
-Survival mäter din contribution under waven:
-
-```text
-score = damage + kills × 20
-```
-
-Din score jämförs med lagets genomsnitt. Högre contribution öppnar en större del av klassens rewardpool.
-
-| Tier | Ungefärlig nivå |
+| Efter wave | Valbara välsignelser |
 | --- | --- |
-| **0** | Ingen mätbar contribution |
-| **1** | Under 55 % av lagets fair share |
-| **2** | Minst 55 % |
-| **3** | Minst 100 % |
-| **4** | Minst 150 % |
+| **5** | +10 % skada, ett steg bättre rustning, 50 % mindre durabilityförlust, +1 hjärta, **Ransoner** för hunger och saturation |
+| **10** | Resistance I, förbättrade vapen, +1 Protection på rustningen, +10 % hastighet, 10 % mindre projektilskada |
+| **15** | +20 % skada och +10 % attack speed, återställ 50 % saknad HP och full hunger efter waves, ett steg bättre rustning, +2 hjärtan, +15 % mot bossar och Wardens |
+| **20** | Förbättrade vapen, +1 Protection, full HP och hunger nu, +10 % hastighet, +15 % mot bossar och Wardens |
+| **25** | Förbättrade vapen, +1 Protection, full HP och hunger nu, +2 hjärtan, 10 % mindre projektilskada |
 
-Commander behandlas alltid som minst **tier 4**.
-
-Systemet försöker också undvika att erbjuda uppenbara utrustningsnedgraderingar.
-
-### Exempel på klassloot
-
-**Soldier:** swords, shields och tung armor.
-
-**Tank:** shields, axes, Golden Apples och tung armor.
-
-**Bowman:** bows, crossbows, stora mängder arrows, Spectral Arrows, shields och lätt armor.
-
-**Healer:** Golden Carrots, swords, Healer Shield, Golden Apples och lätt armor.
-
-**Summoner:** stora mängder arrows, crossbow, Golden Apples, sword, Summoner Shield och lätt armor.
-
-**Commander:** bättre Golden Apple rewards, Commander Shield, Diamond Sword, förbättrad Crossbow och tung armor.
-
-**Berserker:** offensiva axes, mat, Golden Apples och lätt armor.
+Vissa effekter är permanenta resten av matchen. Alternativ som säger **nu** ger en engångseffekt när omröstningen avslutas.
 
 ---
 
-# Lagets välsignelser
+# Vanliga Coins och checkpoint-belöning
 
-Efter wave **5, 10 och 15** röstar laget om en gemensam permanent buff.
+Matchens mynt och serverns vanliga Coins är två skilda system. De vanliga Coins som betalas ut vid elimination eller matchslut baseras på **den senast klarade waven**, inte summan av alla waves.
 
-Röstningen är öppen i upp till **45 sekunder**. Om alla levande deltagare röstar kan resultatet avgöras tidigare. Vid lika resultat väljs en av de delade vinnarna slumpmässigt.
+| Senast klarad wave | Checkpoint i vanliga Coins |
+| --- | ---: |
+| 1 | 25 000 |
+| 5 | 62 500 |
+| 10 | 187 500 |
+| 15 | 312 500 |
+| 20 | 500 000 |
+| 25 | 750 000 |
+| 30 | 1 000 000 |
 
-## Efter wave 5
+Vissa Community-event och admin-testwaves ger ingen vanlig Coin-belöning. Mynt som du tjänat och spenderat under själva matchen läggs inte ovanpå checkpointen.
 
-### Krigets välsignelse
-**+10 % damage** resten av eventet.
+## När en spelare faller
 
-### Livets välsignelse
-**+2 max hearts** resten av eventet.
+Om en aktiv Resurrector kan hjälpa blir du först nedslagen under en kort period, annars kan du elimineras direkt. När du elimineras är din checkpoint den senaste klarade wave som du fortfarande deltog i. Laget kan fortsätta om andra fortfarande spelar.
 
-### Smedens välsignelse
-**50 % chans att förhindra durabilityförlust** på utrustning under eventet.
+## Efter matchen
 
-## Efter wave 10
-
-### Stålsatt
-**Resistance I** resten av eventet.
-
-### Vapensmedens gåva
-Uppgraderar lagets befintliga swords och axes med Sharpness och bows med Power.
-
-### Fältproviant
-Ger extra hunger och saturation efter varje klarad wave.
-
-## Efter wave 15
-
-### Berserk
-**+20 % damage och +10 % attack speed** resten av eventet.
-
-### Andra andningen
-Efter varje klarad wave återställs **50 % av spelarens saknade HP**, plus full hunger och saturation.
-
-### Sista rustningen
-**+4 max hearts** resten av eventet.
+Survival sparar lagets rekord, högsta wave och kills. Efter eventet visas statistik för skada, kills, läkning, summon-skada, tankad skada och återupplivningar. Klassnivåerna och den permanenta statistiken behålls, medan **matchens mynt nollställs**.
 
 > [!TIP]
-> Buffar kan kombineras. Klassbonusar, välsignelser och Commanders Stridshorn kan därför göra mycket stor skillnad under de sista wavesen.
-
----
-
-# Coins och belöningar
-
-När laget besegrar mobs tjänar spelare **mynt** som används hos Blacksmith och Supplies. Beloppet varierar beroende på fiende och wave. Mynten gäller bara den aktuella matchen, och stödklasser kan också tjäna mynt genom sina insatser.
-
-Separat från dessa mynt finns vanliga Coins som betalas ut via en wave-belöning. Den fungerar som en **checkpoint**, inte som en summa av alla tidigare waves.
-
-Om du exempelvis klarar wave 10 är din checkpoint 187 500 Coins. Du får inte wave 1 + wave 2 + wave 3 och så vidare.
-
-| Klarad wave | Checkpointbelöning |
-| ---: | ---: |
-| **1** | **25 000** |
-| **5** | **62 500** |
-| **10** | **187 500** |
-| **15** | **312 500** |
-| **20** | **500 000** |
-| **25** | **750 000** |
-| **30** | **1 000 000** |
-
-Om du elimineras betalas värdet från din senaste klarade checkpoint ut. Mynt som tjänats under matchen växlas inte till vanliga Coins.
-
----
-
-# Statistik och rekord
-
-Survival följer mer än bara vem som landar sista slaget.
-
-Efter eventet visas statistik för:
-
-- **Damage**
-- **Kills**
-- **Healing**
-- **Summon damage**
-
-Det betyder att Healers och Summoners också får sin faktiska contribution synlig.
-
-## Survival-rekord
-
-Varje avslutat event kan registrera lagets:
-
-- högsta nådda wave
-- antal dödade mobs
-- datum
-- deltagare
-
-Lagrekordet prioriterar först **högsta wave** och därefter **flest kills**.
-
-## Flest mob-kills genom tiderna
-
-Varje spelares Survival-kills sparas även som en permanent all-time statistik.
-
-Den statistiken används till den individuella Survival-leaderboarden. Klassvalet avgörs dock av Patreonförtur och lottning, inte av tidigare kills.
-
-Det finns alltså en extra anledning att fortsätta jaga kills även efter att du redan klarat Survival tidigare.
-
----
-
-# När du elimineras
-
-Dödligt damage eliminerar dig från den aktiva gruppen.
-
-Din checkpoint-belöning baseras på den senaste wave som laget hann klara medan du fortfarande deltog. Survival fortsätter så länge minst en deltagare fortfarande är aktiv.
-
-Om hela laget elimineras är eventet över.
-
-Klarar gruppen **wave 30** har laget besegrat Survival.
-
----
-
-# Bygg laget, inte bara din egen klass
-
-Survival är som starkast när klasserna kompletterar varandra.
-
-En Tank kan hålla fronten medan Bowman arbetar på avstånd. Healers kan hålla laget kvar i striden, Summoners fyller arenan med extra allierade och Commander kan spara Stridshornet till den wave där laget verkligen behöver 20 % extra damage. Berserkers kan samtidigt pressa upp lagets damage rejält, men behöver mer skydd eftersom deras HP är lägre.
-
-Det är kombinationen av **klassval, loot, välsignelser och lagspel** som avgör hur långt gruppen kommer.
-
-## Senare waves och bossar
-
-Wave 15, 20, 25 och 30 är viktiga milstolpar. På wave 18, 19 och 20 möter laget två, fyra respektive sex Wardens. Efter wave 20 fortsätter nya bossar och fiendekombinationer, så spara resurser till den sista tredjedelen av eventet.
+> Bygg laget efter rollerna, inte bara vem som gör mest skada. Healers, Tanks, Resurrectors och summon-klasser bidrar med läkning, skydd, återupplivningar och mynt som gör hela gruppen starkare.

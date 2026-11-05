@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./PlayerProfile.module.css";
 import { patreonTierLabel, type PatreonSupporter } from "@/lib/patreon-supporters";
+import { SurvivalPremiumStats } from "./SurvivalPremiumStats";
 
 type Title = { title: string; category: string; level: number; productionBonusPercent: number };
 type Settlement = { settlementId: string; name: string; level: number; levelName: string; role: string };
@@ -309,6 +310,8 @@ export function PlayerProfile({ username }: { username: string }) {
             <header className={styles.panelHeader}><div><span className={styles.eyebrow}>PRESTATION</span><h2>Spelarens statistik</h2></div><p>Registrerade framsteg och aktivitet från GameZone.</p></header>
             {stats.length ? <div className={styles.statGrid}>{stats.map((stat, index) => <article key={stat.key} className={styles.statCard}><span className={styles.statRank}>{String(index + 1).padStart(2, "0")}</span><div><small>{statLabel(stat.key)}</small><strong>{number.format(stat.value)}</strong></div></article>)}</div> : <p className={styles.empty}>Ingen detaljerad statistik har registrerats ännu.</p>}
           </section>
+
+          {patreon && <SurvivalPremiumStats username={player.username} />}
 
           <section className={styles.panel}>
             <header className={styles.panelHeader}><div><span className={styles.eyebrow}>RESAN</span><h2>Settlementhistorik</h2></div><p>Spelarens tidigare och nuvarande hem i världen.</p></header>

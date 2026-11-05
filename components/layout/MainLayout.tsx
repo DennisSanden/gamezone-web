@@ -19,6 +19,7 @@ const navigationItems = [
     { label: "Reliker", href: "/relics" },
     { label: "MarketWatch", href: "/marketwatch" },
     { label: "Leaderboards", href: "/leaderboards" },
+    { label: "Survival", href: "/survival" },
     { label: "Chronicles", href: "/chronicles" },
     { label: "Karta", href: "http://162.120.2.221:8100/#overworld:0:0:0:1500:0:0:0:0:perspective" },
     { label: "Live", href: "/live" },
