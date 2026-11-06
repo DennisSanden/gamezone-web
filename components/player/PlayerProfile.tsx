@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import styles from "./PlayerProfile.module.css";
 import { patreonTierLabel, type PatreonSupporter } from "@/lib/patreon-supporters";
-import { SurvivalPremiumStats } from "./SurvivalPremiumStats";
+import { SurvivalProfileStats } from "./SurvivalProfileStats";
 
 type Title = { title: string; category: string; level: number; productionBonusPercent: number };
 type Settlement = { settlementId: string; name: string; level: number; levelName: string; role: string };
@@ -239,6 +239,7 @@ export function PlayerProfile({ username }: { username: string }) {
 
       <div className={styles.content}>
         <div className={styles.mainColumn}>
+          <SurvivalProfileStats username={player.username} />
           <section className={`${styles.panel} ${styles.characterPanel}`}>
             <header className={styles.panelHeader}><div><span className={styles.eyebrow}>KARAKTÄREN</span><h2>Level {character.level}</h2></div><p>{culture ? `${culture.symbol} ${culture.displayName}, ${culture.subtitle}` : "Ingen kultur har valts ännu."}</p></header>
             <div className={styles.levelProgressHeader}><span>{number.format(character.experience - character.levelExperience)} / {number.format(character.nextLevelExperience - character.levelExperience)} XP</span><strong>{Math.floor(levelProgress)}%</strong></div>
@@ -310,8 +311,6 @@ export function PlayerProfile({ username }: { username: string }) {
             <header className={styles.panelHeader}><div><span className={styles.eyebrow}>PRESTATION</span><h2>Spelarens statistik</h2></div><p>Registrerade framsteg och aktivitet från GameZone.</p></header>
             {stats.length ? <div className={styles.statGrid}>{stats.map((stat, index) => <article key={stat.key} className={styles.statCard}><span className={styles.statRank}>{String(index + 1).padStart(2, "0")}</span><div><small>{statLabel(stat.key)}</small><strong>{number.format(stat.value)}</strong></div></article>)}</div> : <p className={styles.empty}>Ingen detaljerad statistik har registrerats ännu.</p>}
           </section>
-
-          {patreon && <SurvivalPremiumStats username={player.username} />}
 
           <section className={styles.panel}>
             <header className={styles.panelHeader}><div><span className={styles.eyebrow}>RESAN</span><h2>Settlementhistorik</h2></div><p>Spelarens tidigare och nuvarande hem i världen.</p></header>

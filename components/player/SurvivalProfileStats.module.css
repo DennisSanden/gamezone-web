@@ -1,0 +1,17 @@
+.panel{padding:25px;border:1px solid #2b4030;border-radius:12px;background:linear-gradient(155deg,#101f16,#0b160e);color:#edf4ed}
+.header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:20px}
+.header h2{margin:4px 0 0;font-size:28px;letter-spacing:-.035em}
+.header a{color:#9fe77d;text-decoration:underline;font-size:12px;font-weight:800}
+.eyebrow{font-size:10px;letter-spacing:.14em;color:#95d878;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.grid>div{padding:14px;background:#0c1810;border:1px solid #263a2b;border-radius:9px;min-width:0}
+.grid small,.grid strong{display:block}
+.grid small{color:#91a59a;font-size:11px}
+.grid strong{margin-top:5px;font-size:clamp(16px,2vw,23px)}
+.muted{margin:15px 0 0;color:#91a59a;font-size:12px;line-height:1.6}
+.premiumTitle{margin:27px 0 12px;color:#f29fae;font-size:12px;font-weight:900;letter-spacing:.06em}
+.history{margin-top:26px}
+.history h3{margin:0 0 10px;font-size:16px}
+.history p{display:flex;justify-content:space-between;gap:12px;margin:0;padding:9px 0;border-top:1px solid #2b4030;font-size:12px}
+.history span{color:#9daea2;text-align:right}
+@media(max-width:650px){.panel{padding:19px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.history p{flex-direction:column;gap:3px}.history span{text-align:left}}

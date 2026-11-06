@@ -1,0 +1,17 @@
+.section{background:linear-gradient(145deg,#101f16,#0b160f);border:1px solid #2b4231;border-radius:13px;padding:26px}
+.heading{display:flex;gap:25px;justify-content:space-between;align-items:end;margin-bottom:20px}
+.heading span{display:block;color:#96db72;font-size:10px;font-weight:900;letter-spacing:.17em}
+.heading h2{font-size:29px;margin:6px 0}.heading p{margin:0;color:#98ac9d;font-size:12px;line-height:1.5}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.controls input,.controls select{max-width:220px;min-height:42px;color:#f2f7ed;background:#0b180f;border:1px solid #36503a;border-radius:8px;padding:10px 12px;font-size:12px}
+.tableScroll{width:100%;overflow-x:auto}
+.table{width:100%;border-collapse:collapse;text-align:left;min-width:620px}
+.table th{padding:13px 14px;border-bottom:1px solid #416047;color:#8ca894;text-transform:uppercase;font-size:10px;letter-spacing:.09em}
+.table td{padding:15px 14px;border-bottom:1px solid #263b2c;font-size:13px;font-variant-numeric:tabular-nums}
+.table tr:hover td{background:rgba(116,187,91,.06)}
+.rank{color:#8ee079;font-weight:900}.playerLink{color:#eaf6e3;text-decoration:none;font-weight:900}.playerLink:hover{text-decoration:underline}
+.patreonBadge{display:inline-block!important;margin-left:10px!important;color:#f5a2b2!important;letter-spacing:0!important;font-size:10px!important;font-weight:800}
+.extra{margin-top:5px;color:#edb4be;font-size:10px}.last{color:#8da18f}
+.more{display:block;margin:23px auto 0;padding:12px 24px;border:1px solid #5b9953;background:#19371b;color:#b3eb9b;border-radius:8px;font-weight:900;cursor:pointer}
+.empty{color:#a0b8a5;padding:20px}
+@media(max-width:750px){.section{padding:14px}.heading{align-items:stretch;flex-direction:column}.controls input,.controls select{max-width:none;flex:1}}
