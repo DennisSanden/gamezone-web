@@ -137,3 +137,11 @@ export async function getSurvivalPlayer(username: string): Promise<SurvivalPlaye
   }
   return result;
 }
+
+/** Public class levels are intentionally separate from Patreon-only match analytics. */
+export type SurvivalClassLevel = { role: string; level: number; totalXp: number; progress: number; needed: number };
+export async function getSurvivalClasses(username: string): Promise<SurvivalClassLevel[]> {
+  if (!/^[.A-Za-z0-9_ ]{3,32}$/.test(username)) return [];
+  const result = await engineGet<{ classes: SurvivalClassLevel[] }>(`classes?username=${encodeURIComponent(username)}`);
+  return Array.isArray(result.classes) ? result.classes : [];
+}

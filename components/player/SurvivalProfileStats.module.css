@@ -15,3 +15,14 @@
 .history p{display:flex;justify-content:space-between;gap:12px;margin:0;padding:9px 0;border-top:1px solid #2b4030;font-size:12px}
 .history span{color:#9daea2;text-align:right}
 @media(max-width:650px){.panel{padding:19px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.history p{flex-direction:column;gap:3px}.history span{text-align:left}}
+
+.classLevels{margin-top:25px}
+.classLevels h3{font-size:16px;margin:0 0 12px}
+.classGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.classLevel{padding:13px;border:1px solid #2b4030;border-radius:9px;background:#0c1810}
+.classHeading{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-bottom:10px}
+.classHeading strong{color:#a8e98d}
+.xpTrack{height:9px;border-radius:999px;background:#25392b;overflow:hidden}
+.xpTrack>div{height:100%;border-radius:999px;background:linear-gradient(90deg,#5baf65,#b4eb7c)}
+.classLevel small{display:block;margin-top:8px;color:#91a59a;font-size:11px}
+@media(max-width:650px){.classGrid{grid-template-columns:1fr}}
