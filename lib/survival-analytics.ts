@@ -6,6 +6,7 @@ const TOKEN = process.env.GAMEZONE_SURVIVAL_STATS_TOKEN ?? "";
 export type SurvivalOverview = {
   matches: number; bestWave: number; totalKills: number;
   records: Array<{ wave: number; kills: number; at: string; participants: string }>;
+  recentMatches: Array<{ id: string; wave: number; kills: number; at: string; participants: string; players: Array<{username: string; role: string; wave: number; kills: number}> }>;
 };
 export type SurvivalPlayer = {
   playerUuid: string; username: string; matches: number; bestWave: number; averageWave: number;

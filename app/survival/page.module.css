@@ -14,3 +14,12 @@
 .recordGrid strong{font-size:21px;display:block}.recordGrid span{color:#93d976;font-size:12px;font-weight:800}
 .recordGrid p{color:#9caea0;font-size:12px;overflow-wrap:anywhere;line-height:1.5}
 @media(max-width:700px){.page{padding:32px 0 55px}.summary{grid-template-columns:1fr}.recordGrid{grid-template-columns:1fr}}
+
+/* Expandable public Survival match details */
+.matchDetail { border-bottom: 1px solid rgba(150,160,180,.2); padding: 14px 16px; }
+.matchDetail summary { cursor: pointer; font-weight: 500; list-style-position: inside; }
+.matchDetail summary:hover { opacity: .8; }
+.matchPlayers { margin-top: 14px; display: grid; gap: 8px; }
+.matchPlayer { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; padding: 8px; border-radius: 8px; background: rgba(150,160,180,.07); }
+.matchPlayer a { font-weight: 700; }
+.matchPlayer b { margin-left: auto; }

@@ -49,6 +49,22 @@ export function SurvivalDashboard() {
         <div className={styles.records}>{(overview?.records ?? []).length ? overview!.records.map((r,i)=><article key={`${r.at}-${i}`}><div className={styles.rank}>{String(i+1).padStart(2,"0")}</div><div><strong>Wave {r.wave}</strong><span>{r.participants || "Okänt lag"}</span></div><div className={styles.recordSide}><strong>{survivalFormat(r.kills)} kills</strong><small>{new Date(r.at).toLocaleDateString("sv-SE")}</small></div></article>) : <p>{loading ? "Hämtar rekord..." : "Inga registrerade lagrekord ännu."}</p>}</div>
       </section>
       <section className={styles.section}>
+        <div className={styles.sectionHead}><div><span className={styles.eyebrow}>SENASTE MATCHERNA</span><h2>Matchhistorik</h2></div><p>Klicka på en match för att se deltagare, roller och kills.</p></div>
+        <div className={styles.records}>
+          {(overview?.recentMatches ?? []).length ? overview!.recentMatches.map(match =>
+            <details key={match.id} className={styles.matchDetail}>
+              <summary><strong>Wave {match.wave}</strong> · {match.kills} kills · {new Date(match.at).toLocaleString("sv-SE")}</summary>
+              <div className={styles.matchPlayers}>
+                {match.players.length ? match.players.map(player =>
+                  <div key={player.username} className={styles.matchPlayer}>
+                    <Link href={`/spelare/${encodeURIComponent(player.username)}`}>{player.username}</Link>
+                    <span>{player.role || "Okänd roll"}</span><span>Wave {player.wave}</span><b>{player.kills} kills</b>
+                  </div>) : <p>Detaljerad statistik saknas för den här matchen.</p>}
+              </div>
+            </details>) : <p>{loading ? "Hämtar senaste matcherna..." : "Inga avslutade matcher med match-ID ännu."}</p>}
+        </div>
+      </section>
+      <section className={styles.section}>
         <div className={styles.sectionHead}><div><span className={styles.eyebrow}>♥ PATREON SURVIVAL ANALYTICS</span><h2>Statistikcentralen</h2></div><p>Alla kan läsa. Endast aktiva Patreon-spelare får avancerad profilerad statistik.</p></div>
         <div className={styles.controls}><label>Visa kategori<select value={metric} onChange={e=>setMetric(e.target.value as SurvivalMetric)}>{survivalMetrics.map(item=><option key={item.key} value={item.key}>{item.label}</option>)}</select></label><label>Sök spelare<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Minecraft-namn" /></label></div>
         <div className={styles.metricSpotlight}><span>AKTUELL TOPPLISTA</span><strong>{label.label}</strong><small>Sorterad på {label.label.toLowerCase()}</small></div>
