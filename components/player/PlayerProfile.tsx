@@ -19,7 +19,9 @@ type Character = {
   levelExperience: number;
   nextLevelExperience: number;
   highestLevelEver: number;
-  secondChanceAvailable: boolean;
+  rebirths: number;
+  rebirthPoints: number;
+  rebirthPointsEarned: number;
   culture?: Culture | null;
   unlockedAbilities: string[];
   productionBonusBasisPoints: number;
@@ -122,7 +124,9 @@ function normalizeProfile(input: Profile): Profile {
       levelExperience,
       nextLevelExperience,
       highestLevelEver: Math.max(level, Math.trunc(finiteNumber(input.character.highestLevelEver, level))),
-      secondChanceAvailable: Boolean(input.character.secondChanceAvailable),
+      rebirths: Math.max(0, Math.trunc(finiteNumber(input.character.rebirths))),
+      rebirthPoints: Math.max(0, Math.trunc(finiteNumber(input.character.rebirthPoints))),
+      rebirthPointsEarned: Math.max(0, Math.trunc(finiteNumber(input.character.rebirthPointsEarned))),
       culture: input.character.culture ?? null,
       unlockedAbilities: Array.isArray(input.character.unlockedAbilities) ? input.character.unlockedAbilities : [],
       productionBonusBasisPoints: Math.max(0, finiteNumber(input.character.productionBonusBasisPoints)),
@@ -220,6 +224,8 @@ export function PlayerProfile({ username }: { username: string }) {
               <p className={styles.subtitle}>{culture ? `${culture.symbol} ${culture.displayName}` : (title?.title ?? "Invånare i GameZone")}</p>
               <div className={styles.tags}>
                 <span><small>Karaktär</small>Level {character.level}</span>
+                <span><small>Rebirths</small>{number.format(character.rebirths)}</span>
+                <span><small>Attributpoäng</small>{number.format(character.rebirthPoints)} sparade</span>
                 {culture && <span><small>Kultur</small>{culture.displayName}</span>}
                 {player.settlement && <span><small>Settlement</small>{player.settlement.name}</span>}
                 {player.company && <span><small>Företag</small>{player.company.name}</span>}
@@ -231,6 +237,7 @@ export function PlayerProfile({ username }: { username: string }) {
 
       <section className={styles.overview} aria-label="Spelaröversikt">
         <article><span>Level</span><strong>{character.level}</strong><small>{number.format(character.experience)} XP totalt</small></article>
+        <article><span>Rebirths</span><strong>{number.format(character.rebirths)}</strong><small>{number.format(character.rebirthPoints)} lediga attributpoäng</small></article>
         <article><span>Personligt rekord</span><strong>Level {character.highestLevelEver}</strong><small>högsta level någonsin</small></article>
         <article><span>Kultur</span><strong>{culture ? `${culture.symbol} ${culture.displayName}` : "Ej vald"}</strong><small>{culture?.bonus ?? "ingen kulturbonus"}</small></article>
         <article className={styles.productionOverview}><span>Produktionsbonus</span><strong>{percentFromBasisPoints(character.productionBonusBasisPoints)}</strong><small>Kategoribonus {categoryProductionBonusPercent} från {categoryProductionBonusName}</small></article>

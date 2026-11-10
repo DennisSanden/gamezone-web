@@ -8,12 +8,12 @@ infoboxTitle: "Kulturer"
 infobox:
   antal_kulturer: "4"
   val: "Vid spawn och respawn"
-  byte: "Nytt val efter död"
+  byte: "Nytt val efter död eller Rebirth"
   synlighet: "Färgat sigill i TAB"
 relatedArticles:
   - category: "experience"
     article: "dod-och-second-chance"
-    title: "Död & Second Chance"
+    title: "Död & progression"
     description: "Vad som händer med din personliga progression när du dör."
   - category: "experience"
     article: "xp"
@@ -37,6 +37,7 @@ Kulturmenyn visas:
 
 - när du spawnar utan en vald kultur
 - när du respawnar efter en död
+- direkt efter att du genomfört `/rebirth`
 
 Efter en vanlig död får du alltså välja kultur på nytt. Du är inte permanent låst till samma rike mellan olika liv.
 
@@ -99,4 +100,4 @@ Vid en vanlig död avslutas ditt nuvarande liv och kulturvalet återställs. Nä
 
 Kulturvalet är alltså knutet till din nuvarande karaktär och kan förändras mellan liv.
 
-Död kan även påverka Character XP, Character Level och Coins beroende på vilka andra system och förmågor som är aktiva. Läs **Död & Second Chance** för hela dödsflödet.
+Död kan även påverka Engine-XP och Engine-level. Läs [Död & progression](/wiki/experience/dod-och-second-chance) eller [Rebirth & attributpoäng](/wiki/experience/rebirth) för skillnaden.

@@ -18,7 +18,7 @@ relatedArticles:
     description: "Alla XP-källor och Variation Bonus."
   - category: "experience"
     article: "dod-och-second-chance"
-    title: "Död & Second Chance"
+    title: "Död & progression"
     description: "Vad som händer med levels när du dör."
 ---
 
@@ -43,10 +43,10 @@ Viktiga trösklar:
 | 75 | 400 000 | Mästare |
 | 80 | 550 000 | Prestige |
 | 90 | 800 000 | Prestige |
-| 100 | **1 200 000** | Second Chance |
+| 100 | **1 200 000** | Rebirth, 1 attributpoäng |
 | 110 | 1 700 000 | Prestige |
 | 120 | 2 300 000 | Prestige |
-| 150 | **5 000 000** | Prestige |
+| 150 | **5 000 000** | Rebirth, 3 attributpoäng |
 
 ## Level 10, Arbetare
 
@@ -99,21 +99,17 @@ Mästare ersätter de tidigare 5 procenten med 7,5 procent för de procentbasera
 
 Livskraft från Level 50 ligger kvar, så du behåller även ditt extra hjärta.
 
-## Level 100, Second Chance
+## Level 100 och 150, Rebirth
 
-På Level 100 låser du upp **Second Chance**.
+På **level 100** kan du välja `/rebirth` och få **1 attributpoäng**. Om du fortsätter till **level 150** ger samma Rebirth i stället **3 attributpoäng totalt**. Rebirth återställer Engine-level och XP, samt låter dig välja en ny kultur.
 
-Second Chance kan användas en gång under det aktuella livet. När du dör förbrukas den och din Character XP och level räddas från reset.
-
-Du respawnar fortfarande som vanligt i Minecraft. Det är progressionen som räddas.
-
-Läs de fullständiga reglerna på [Död & Second Chance](/wiki/experience/dod-och-second-chance).
+Du kan spara poängen eller använda dem till Magikerns permanenta uppgraderingar. Läs [Rebirth & attributpoäng](/wiki/experience/rebirth).
 
 ## Efter Level 100
 
 Du fortsätter levla även efter Level 100. Det finns ingen fast maxlevel i systemet.
 
-Efter Level 150 fortsätter XP-kravet att växa snabbare. Det finns just nu inga nya förmågor efter Second Chance, så levels över 100 är prestige.
+Efter Level 150 fortsätter XP-kravet att växa snabbare. Rebirth ger 3 poäng vid level 150 eller högre. Du kan fortsätta levla, men får inte fler poäng för samma Rebirth.
 
 ## Komplett XP-tabell, Level 1 till 150
 

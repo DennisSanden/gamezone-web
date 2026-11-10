@@ -33,7 +33,7 @@ const fallbackArticle: WikiArticleData = {
         {
             category: "experience",
             article: "dod-och-second-chance",
-            title: "Död & Second Chance",
+            title: "Död & progression",
             description: "Hur vanlig död och progression fungerar utanför events.",
         },
         {

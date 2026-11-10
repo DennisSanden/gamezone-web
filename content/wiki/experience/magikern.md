@@ -1,12 +1,12 @@
 ---
 title: "Magikern"
-description: "Permanent endgame-progression där Coins investeras i egenskaper, yrkeskunskap, specialförmågor och skydd."
+description: "Permanenta uppgraderingar hos Magikern med coins eller sparade attributpoäng från Rebirth."
 category: "Experience"
 order: 5
 updatedAt: "2026-10-07"
 infoboxTitle: "Magikern"
 infobox:
-  valuta: "Coins"
+  valuta: "Coins eller Rebirth-poäng"
   varaktighet: "Permanent"
   max_halsa: "+6 HP / 3 hjärtan"
   survival: "Avstängt under Survival"
@@ -24,16 +24,24 @@ relatedArticles:
 
 ## Vad är Magikern?
 
-Magikern är GameZones permanenta endgame-progression. Du investerar **Coins** i permanenta egenskaper som förbättrar din karaktär, dina yrken eller ger särskilda förmågor.
+Magikern är GameZones permanenta endgame-progression. Du investerar **Coins eller attributpoäng från Rebirth** i permanenta egenskaper som förbättrar din karaktär, dina yrken eller ger särskilda förmågor.
 
 Köpmenyn öppnas genom att **högerklicka på NPC:n Magikern**. Menyn är uppdelad i fyra kategorier: **Grundegenskaper**, **Yrkeskunskap**, **Specialkunskap** samt **Skydd & strid**.
 
 > [!IMPORTANT]
 > Magikerns bonusar är aktiva i vanlig gameplay och andra events, men **stängs av under Survival**. Survival använder eventets egna villkor.
 
+## Köp med Rebirth-poäng
+
+När du har nått Engine-level 100 kan du genomföra `/rebirth` för **1 attributpoäng**. Om du väntar till level 150 får du **3 attributpoäng totalt**. Du kan använda poängen för att köpa en uppgradering hos Magikern, eller klicka på **SPARA POÄNG** och behålla dem till senare.
+
+I köpmenyn får du välja mellan att betala med **coins** eller **attributpoäng**. Poängpriset motsvarar en poäng per påbörjade 50 miljoner coins i aktuell uppgraderingskostnad. Det faktiska priset visas i spelet. Poängen är separata från **Magisk kraft** som styr auran.
+
+Läs [Rebirth & attributpoäng](/wiki/experience/rebirth) för reglerna.
+
 ## Magisk kraft och aura
 
-Varje köpt nivå ger attributpoäng. Poängen räknas ihop till spelarens **Magiska kraft**, som visar hur långt du utvecklat Magikern och styr färgen på din aura.
+Varje köpt nivå ger magisk progression. Nivåernas värde räknas ihop till spelarens **Magiska kraft**, som visar hur långt du utvecklat Magikern och styr färgen på din aura.
 
 | Magisk kraft | Aura |
 | ---: | --- |

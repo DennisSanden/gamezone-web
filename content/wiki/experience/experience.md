@@ -22,8 +22,8 @@ relatedArticles:
     description: "Levelkurvan och alla förmågor från Level 10 till 100."
   - category: "experience"
     article: "dod-och-second-chance"
-    title: "Död & Second Chance"
-    description: "Vad som händer när du dör och hur Level 100 skyddar ett liv."
+    title: "Död & progression"
+    description: "Vad som händer med din progression när du dör."
 ---
 
 ## Vad är Level & XP?
@@ -42,9 +42,9 @@ Din level är **personlig**. Den är inte samma sak som settlementets nivå och 
 - Alla börjar på **Level 1** med **0 Character XP**.
 - Character XP tjänas främst genom aktiv produktion, fiske, combat och Daily Rewards.
 - Din level räknas automatiskt från din totala Character XP.
-- Det finns ingen fast maxlevel. Level 100 är den sista nuvarande förmågan, men progressionen fortsätter efter Level 100.
+- Det finns ingen fast maxlevel. Rebirth blir tillgängligt vid level 100, men progressionen fortsätter efter Level 100.
 - När du dör avslutas normalt ditt nuvarande liv. Din Character XP återställs till 0 och du börjar om på Level 1.
-- Når du Level 100 låser du upp **Second Chance**, som kan rädda din progression från en död en gång under det livet.
+- Når du level 100 kan du använda **/rebirth** för 1 attributpoäng, eller fortsätta till level 150 för 3 poäng totalt.
 - Vanliga levels ger en diskret levelup-effekt. Stora förmågenivåer markeras tydligare.
 
 ## Se din level
@@ -69,7 +69,8 @@ De stora milstolparna är:
 | **40** | Krigare | +5 % skada |
 | **50** | Livskraft | +1 hjärta |
 | **75** | Mästare | Procentbonusarna höjs till 7,5 % och produktion får ytterligare +5 % |
-| **100** | Second Chance | Skyddar din Character XP och level från en död, en gång per liv |
+| **100** | Rebirth | 1 attributpoäng vid valfri Rebirth |
+| **150** | Rebirth | 3 attributpoäng totalt vid Rebirth |
 
 På Level 75 ersätter Mästare de tidigare procentbonusarna med **7,5 %**. Produktion får dessutom ytterligare **+5 %**, vilket ger totalt **+12,5 % produktion**. Movement speed, hungerbesparing och skada blir **7,5 %**. Det extra hjärtat från Level 50 ligger kvar.
 
@@ -79,13 +80,13 @@ Ett liv börjar på Level 1 och fortsätter tills progressionen återställs av 
 
 Det betyder att en hög level inte bara visar hur mycket du har grindat totalt. Den visar hur långt du har lyckats utveckla **just det här livet**.
 
-Servern annonserar när en spelare dör och vilken level spelaren nådde. Om Second Chance används annonseras i stället att spelaren undkom progressionens reset.
+Servern annonserar när en spelare dör och vilken level spelaren nådde. En genomförd Rebirth annonseras i chatten och registreras i Chronicles.
 
 ## Progression efter Level 100
 
-Level 100 är inte ett tak. Du kan fortsätta samla XP och gå upp i level efter att Second Chance har låsts upp.
+Level 100 är inte ett tak. Du kan fortsätta samla XP och gå upp i level, och välja en Rebirth först när du vill.
 
-Det finns däremot inga ytterligare förmågor efter Level 100 just nu. Levels över 100 fungerar därför främst som prestige och som ett mått på hur långt ett enskilt liv har gått.
+Vid level 150 förbättras Rebirth-belöningen från 1 till 3 attributpoäng. Du behåller övrig progression utom Engine-XP, Engine-level och kulturvalet när du genomför Rebirth.
 
 ## Läs vidare
 
@@ -93,4 +94,6 @@ För exakta XP-källor och bonusregler, läs [Så tjänar du XP](/wiki/experienc
 
 För hela levelkurvan och exakt hur varje förmåga fungerar, läs [Levels & förmågor](/wiki/experience/levels-och-formagor).
 
-För reglerna vid död, läs [Död & Second Chance](/wiki/experience/dod-och-second-chance).
+För reglerna vid död, läs [Död & progression](/wiki/experience/dod-och-second-chance).
+
+För Rebirth och Magikerns attributpoäng, läs [Rebirth & attributpoäng](/wiki/experience/rebirth).

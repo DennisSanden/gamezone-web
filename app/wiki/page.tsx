@@ -70,6 +70,12 @@ export default function WikiPage() {
             icon: "economy" as const,
         },
         {
+            title: "Rebirth",
+            description: "Återföds vid level 100 eller 150 och få attributpoäng.",
+            href: "/wiki/experience/rebirth",
+            icon: "experience" as const,
+        },
+        {
             title: "Reliker",
             description: "Upptäck, samla och använd reliker.",
             href: "/wiki/relics",
