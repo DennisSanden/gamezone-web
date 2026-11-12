@@ -75,7 +75,12 @@ export function SurvivalProfileStats({ username }: { username: string }) {
           </div>}
           {player.premium.classes?.length ? <div className={styles.history}><h3>Klasser</h3>{player.premium.classes.map((item) => <p key={item.role}><b>{item.role}</b><span>{item.games} matcher, wave {item.bestWave}, {item.kills} kills</span></p>)}</div> : null}
           {player.premium.history?.length ? <div className={styles.history}><h3>Senaste 20 matcher</h3>{player.premium.history.map((item, i) => <p key={`${item.endedAt}-${i}`}><b>{item.role}</b><span>Wave {item.wave}, {item.kills} kills, {number.format(item.damage)} skada</span></p>)}</div> : null}
-        </> : <p className={styles.muted}>{player.isPatreon ? "Avancerad statistik kräver anslutning till GameZones statistik-API." : "Grundstatistiken visas för alla. Aktiva Patreons får fler detaljer på sina profiler."}</p>}
+        </> : <p className={styles.muted}>{player.isPatreon ? (
+          player.premiumIssue === "missing-token" ? "Patreon-statistiken är inte konfigurerad på webbservern ännu. Administratören behöver ange statistiknyckeln." :
+          player.premiumIssue === "api-denied" ? "GameZoneEngine nekade åtkomst till Patreon-statistiken. Administratören behöver kontrollera att statistiknycklarna matchar." :
+          player.premiumIssue === "api-unavailable" ? "Patreon-statistiken kan inte hämtas just nu. Grundstatistiken fungerar fortfarande." :
+          "Det finns ännu ingen avancerad Survival-statistik registrerad för den här spelaren."
+        ) : "Grundstatistiken visas för alla. Aktiva Patreons får fler detaljer på sina profiler."}</p>}
       </>}
   </section>;
 }

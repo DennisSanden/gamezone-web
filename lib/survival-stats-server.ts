@@ -35,7 +35,7 @@ export type SurvivalPremium = {
   personalBests?: Record<string, number>;
 };
 
-export type SurvivalPlayerRow = SurvivalBasic & { isPatreon: boolean; premium?: SurvivalPremium };
+export type SurvivalPlayerRow = SurvivalBasic & { isPatreon: boolean; premium?: SurvivalPremium; premiumIssue?: "missing-token" | "api-denied" | "api-unavailable" | "missing-data" };
 export type SurvivalOverview = { matches: number; bestWave: number; totalKills: number; records: Array<{ wave: number; kills: number; at: string; participants: string }> };
 
 const numberField = (input: Record<string, unknown>, field: string) => {
@@ -127,12 +127,20 @@ export async function getSurvivalPlayer(username: string): Promise<SurvivalPlaye
   const supporters = await getLivePatreonSupporters();
   const isPatreon = supporters.some((person) => person.minecraftUsername.toLowerCase() === basic.username.toLowerCase());
   const result: SurvivalPlayerRow = { ...basic, isPatreon };
-  if (isPatreon && PRIVATE_TOKEN.length >= 32) {
-    try {
-      const premium = await engineGet<Record<string, unknown>>(`advanced?username=${encodeURIComponent(username)}`, true);
-      if (premium.playerUuid === basic.playerUuid) result.premium = premiumFrom(premium);
-    } catch (error) {
-      console.warn("Survival premium profile unavailable", error);
+  if (isPatreon) {
+    if (PRIVATE_TOKEN.trim().length < 32) {
+      result.premiumIssue = "missing-token";
+      console.warn("GAMEZONE_SURVIVAL_STATS_TOKEN is missing or too short in web environment.");
+    } else {
+      try {
+        const premium = await engineGet<Record<string, unknown>>(`advanced?username=${encodeURIComponent(username)}`, true);
+        if (premium.playerUuid === basic.playerUuid) result.premium = premiumFrom(premium);
+        else result.premiumIssue = "missing-data";
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        result.premiumIssue = message.includes("403") ? "api-denied" : "api-unavailable";
+        console.warn("Survival premium profile unavailable", error);
+      }
     }
   }
   return result;
