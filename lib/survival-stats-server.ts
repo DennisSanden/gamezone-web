@@ -36,7 +36,21 @@ export type SurvivalPremium = {
 };
 
 export type SurvivalPlayerRow = SurvivalBasic & { isPatreon: boolean; premium?: SurvivalPremium; premiumIssue?: "missing-token" | "api-denied" | "api-unavailable" | "missing-data" };
-export type SurvivalOverview = { matches: number; bestWave: number; totalKills: number; records: Array<{ wave: number; kills: number; at: string; participants: string }> };
+export type SurvivalRecentMatch = {
+  id: string;
+  wave: number;
+  kills: number;
+  at: string;
+  participants: string;
+  players: Array<{ username: string; role: string; wave: number; kills: number }>;
+};
+export type SurvivalOverview = {
+  matches: number;
+  bestWave: number;
+  totalKills: number;
+  records: Array<{ wave: number; kills: number; at: string; participants: string }>;
+  recentMatches?: SurvivalRecentMatch[];
+};
 
 const numberField = (input: Record<string, unknown>, field: string) => {
   const value = Number(input[field]);
