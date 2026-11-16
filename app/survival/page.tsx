@@ -27,6 +27,22 @@ export default async function SurvivalPage() {
           <div><span>Högsta wave</span><strong>{number.format(overview.value.bestWave)}</strong></div>
           <div><span>Totalt antal kills</span><strong>{number.format(overview.value.totalKills)}</strong></div>
         </div> : null}
+        {overview.status === "fulfilled" ? <section className={styles.recent}>
+          <h2>De 5 senaste omgångarna</h2>
+          {overview.value.recentMatches?.length ? <div className={styles.recentList}>
+            {overview.value.recentMatches.slice(0, 5).map((match) => <details className={styles.matchDetail} key={match.id}>
+              <summary><span>{new Date(match.at).toLocaleString("sv-SE", { timeZone: "Europe/Stockholm", dateStyle: "medium", timeStyle: "short" })}</span>
+                <strong>Wave {match.wave}</strong><span>{number.format(match.kills)} kills</span>
+                <span>{match.players?.length ?? 0} deltagare</span></summary>
+              <div className={styles.matchPlayers}>
+                {match.players?.length ? match.players.map((player, index) => <div className={styles.matchPlayer} key={`${player.username}-${index}`}>
+                  <strong>{player.username}</strong><span>{player.role || "Okänd klass"}</span>
+                  <span>Wave {player.wave}</span><b>{player.kills} kills</b>
+                </div>) : <p>Spelarstatistik saknas för den här äldre omgången.</p>}
+              </div>
+            </details>)}
+          </div> : <p>Inga avslutade omgångar finns registrerade ännu.</p>}
+        </section> : null}
         {ranking.status === "fulfilled" ? <SurvivalLeaderboard players={ranking.value} />
           : <p className={styles.error}>Vi kunde inte hämta deltagarlistan just nu. Försök igen senare.</p>}
         {overview.status === "fulfilled" && overview.value.records.length > 0 ? <section className={styles.records}>

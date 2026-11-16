@@ -23,3 +23,5 @@
 .matchPlayer { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; padding: 8px; border-radius: 8px; background: rgba(150,160,180,.07); }
 .matchPlayer a { font-weight: 700; }
 .matchPlayer b { margin-left: auto; }
+
+.recent{margin:35px 0 34px}.recent h2{font-size:29px;margin-bottom:17px}.recentList{display:grid;gap:10px}.recent .matchDetail{border:1px solid #2d4232;border-radius:12px;background:#0f1e13;padding:0;overflow:hidden}.recent .matchDetail summary{display:flex;align-items:center;flex-wrap:wrap;gap:10px 22px;padding:17px 20px;cursor:pointer;list-style:none}.recent .matchDetail summary::-webkit-details-marker{display:none}.recent .matchDetail summary strong{color:#8bd36a}.recent .matchDetail summary span{color:#a6b7a9;font-size:13px}.recent .matchDetail summary span:first-child{margin-right:auto}.recent .matchPlayers{margin:0;padding:12px 18px 18px;border-top:1px solid #2d4232}.recent .matchPlayer{background:#17291b;color:#dce8d8}.recent .matchPlayer strong{min-width:130px}.recent .matchPlayer span{color:#a9bea9;font-size:13px}.recent .matchPlayer b{color:#8bd36a}
