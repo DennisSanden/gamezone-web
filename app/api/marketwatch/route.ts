@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const revalidate = 10_800;
 
-const DEFAULT_ENGINE_API = "http://162.120.2.221:25569";
+const DEFAULT_ENGINE_API = "";
 
 export async function GET() {
     const engineApi = (process.env.GAMEZONE_ENGINE_API_URL ?? DEFAULT_ENGINE_API).replace(/\/$/, "");

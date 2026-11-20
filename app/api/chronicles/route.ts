@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const ENGINE_API_URL = process.env.GAMEZONE_ENGINE_API_URL ?? "http://162.120.2.221:25569";
+const ENGINE_API_URL = process.env.GAMEZONE_ENGINE_API_URL ?? "";
 export const revalidate = 10_800;
 
 export async function GET(request: Request) {

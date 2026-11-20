@@ -280,7 +280,7 @@ export default function GettingStartedPage() {
                                 <Link href="/wiki" className={styles.primaryButton}>
                                     Öppna wikin <span>→</span>
                                 </Link>
-                                <a href="http://162.120.2.221:8100/#overworld:0:0:0:1500:0:0:0:0:perspective" target="_blank" rel="noreferrer" className={styles.textLink}>
+                                <a href="https://bluemap.gamezonemc.se/#overworld:0:0:0:1500:0:0:0:0:perspective" target="_blank" rel="noreferrer" className={styles.textLink}>
                                     Se världskartan
                                 </a>
                             </div>

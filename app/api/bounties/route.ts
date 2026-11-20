@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export const revalidate = 10_800;
 
 const FALLBACK_ENGINE_URLS = [
-    "http://162.120.2.221:25569",
+    "",
 ];
 
 function engineCandidates() {
