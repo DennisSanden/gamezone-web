@@ -1,7 +1,7 @@
 /** Server-only Survival data gateway. No token or non-supporter premium statistics reach the browser. */
 import { getLivePatreonSupporters } from "@/lib/patreon-supporters";
 
-const ENGINE_API_URL = (process.env.GAMEZONE_ENGINE_API_URL ?? "http://162.120.2.221:25569").replace(/\/$/, "");
+const ENGINE_API_URL = (process.env.GAMEZONE_ENGINE_API_URL ?? "").replace(/\/$/, "");
 const PRIVATE_TOKEN = process.env.GAMEZONE_SURVIVAL_STATS_TOKEN ?? "";
 
 type EngineEnvelope<T> = { status?: string; data?: T };

@@ -1,6 +1,6 @@
 import { getLivePatreonSupporters } from "@/lib/patreon-supporters";
 
-const ENGINE = (process.env.GAMEZONE_ENGINE_API_URL ?? "http://162.120.2.221:25569").replace(/\/$/, "");
+const ENGINE = (process.env.GAMEZONE_ENGINE_API_URL ?? "").replace(/\/$/, "");
 const TOKEN = process.env.GAMEZONE_SURVIVAL_STATS_TOKEN ?? "";
 
 export type SurvivalOverview = {

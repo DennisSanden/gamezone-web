@@ -49,9 +49,9 @@ export async function getLeaderboard(type: string): Promise<LeaderboardEntry[]> 
   const apiBase = (
       process.env.GAMEZONE_ENGINE_API_URL ??
       process.env.ENGINE_API_URL ??
-      "http://162.120.2.221:25569"
+      ""
   ).replace(/\/$/, "");
-  console.log(`[home-data] using ${source}: ${apiBase}`);
+  console.log(`[home-data] using ${source}`);
 
   try {
     const response = await fetch(`${apiBase}/api/v1/leaderboards/${type}?limit=3`, {
