@@ -1,6 +1,7 @@
+import { getEngineApiUrl, missingEngineApiMessage } from "@/lib/engine-api-url";
 import { NextResponse } from "next/server";
 
-const ENGINE_API_URL = process.env.GAMEZONE_ENGINE_API_URL ?? "";
+
 
 export const revalidate = 60;
 
@@ -13,6 +14,8 @@ export async function GET(_request: Request, context: { params: Promise<{ userna
   }
 
   try {
+    const ENGINE_API_URL = getEngineApiUrl();
+    if (!ENGINE_API_URL) return NextResponse.json({ status: "FAILED", message: missingEngineApiMessage() }, { status: 503 });
     const response = await fetch(
       `${ENGINE_API_URL}/api/v1/players/profile/by-username?username=${encodeURIComponent(normalizedUsername)}`,
       { next: { revalidate: 60 }, signal: AbortSignal.timeout(8_000) },

@@ -1,6 +1,6 @@
+import { getEngineApiUrl, missingEngineApiMessage } from "@/lib/engine-api-url";
 import { getLivePatreonSupporters } from "@/lib/patreon-supporters";
 
-const ENGINE = (process.env.GAMEZONE_ENGINE_API_URL ?? "").replace(/\/$/, "");
 const TOKEN = process.env.GAMEZONE_SURVIVAL_STATS_TOKEN ?? "";
 
 export type SurvivalOverview = {
@@ -24,7 +24,9 @@ export type SurvivalPlayer = {
 
 async function engineGet(path: string, premium = false): Promise<unknown> {
   if (premium && TOKEN.length < 32) throw new Error("Survival stats-token saknas i webbmiljön.");
-  const response = await fetch(`${ENGINE}${path}`, {
+  const ENGINE_BASE = getEngineApiUrl();
+  if (!ENGINE_BASE) throw new Error(missingEngineApiMessage());
+  const response = await fetch(`${ENGINE_BASE}${path}`, {
     headers: premium ? { "X-GameZone-Analytics-Token": TOKEN } : {},
     next: { revalidate: premium ? 60 : 180 },
     signal: AbortSignal.timeout(8_000),

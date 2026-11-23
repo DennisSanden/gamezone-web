@@ -1,6 +1,7 @@
+import { getEngineApiUrl, missingEngineApiMessage } from "@/lib/engine-api-url";
 import { NextResponse } from "next/server";
 
-const ENGINE_API_URL = process.env.GAMEZONE_ENGINE_API_URL ?? "";
+
 
 export const revalidate = 10_800;
 
@@ -11,6 +12,8 @@ export async function GET(_request: Request, context: { params: Promise<{ compan
   if (!id) return NextResponse.json({ status: "VALIDATION_ERROR", message: "Företags-ID saknas." }, { status: 400 });
 
   try {
+    const ENGINE_API_URL = getEngineApiUrl();
+    if (!ENGINE_API_URL) return NextResponse.json({ status: "FAILED", message: missingEngineApiMessage() }, { status: 503 });
     const response = await fetch(`${ENGINE_API_URL}/api/v1/companies/${encodeURIComponent(id)}`, {
       next: { revalidate: 10_800 },
       signal: AbortSignal.timeout(8_000),

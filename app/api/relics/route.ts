@@ -1,23 +1,12 @@
+import { getEngineApiUrl } from "@/lib/engine-api-url";
 import { NextResponse } from "next/server";
 
 export const revalidate = 10_800;
 
-const FALLBACK_ENGINE_URLS = [
-    "",
-];
-
 function engineCandidates() {
-    const configured = [
-        process.env.GAMEZONE_ENGINE_RELIC_API_URL,
-        process.env.GAMEZONE_ENGINE_API_URL,
-        ...FALLBACK_ENGINE_URLS,
-    ];
-
-    return [...new Set(
-        configured
-            .filter((value): value is string => Boolean(value?.trim()))
-            .map((value) => value.trim().replace(/\/$/, "")),
-    )];
+    const override = process.env.GAMEZONE_ENGINE_RELIC_API_URL?.trim();
+    const overrideUrl = override && /^https?:\/\//i.test(override) ? override.replace(/\/$/, "") : null;
+    return [...new Set([overrideUrl, getEngineApiUrl()].filter((url): url is string => Boolean(url)))];
 }
 
 type EnginePayload = {
@@ -71,7 +60,7 @@ export async function GET() {
         }
     }
 
-    console.error("Relic archive could not reach GameZone Engine", failures);
+    if (failures.length) console.error("Relic archive could not reach GameZone Engine", failures);
 
     return NextResponse.json(
         {

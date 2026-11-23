@@ -1,3 +1,4 @@
+import { getEngineApiUrl } from "@/lib/engine-api-url";
 import { cache } from "react";
 export type LeaderboardEntry = {
   rank: number;
@@ -17,23 +18,8 @@ export type LeaderboardBoard = {
 
 type EngineEnvelope<T> = { status?: string; result?: T };
 
-function apiBase() {
-  const source = process.env.GAMEZONE_ENGINE_API_URL
-      ? "GAMEZONE_ENGINE_API_URL"
-      : process.env.ENGINE_API_URL
-          ? "ENGINE_API_URL"
-          : "fallback default";
-  const base = (
-      process.env.GAMEZONE_ENGINE_API_URL ??
-      process.env.ENGINE_API_URL ??
-      ""
-  ).replace(/\/$/, "");
-  console.log(`[engineFetch] using ${source}: ${base}`);
-  return base;
-}
-
 async function engineFetch<T>(path: string): Promise<T | null> {
-  const base = apiBase();
+  const base = getEngineApiUrl();
   if (!base) return null;
   try {
     const response = await fetch(`${base}${path}`, {

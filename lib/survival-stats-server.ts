@@ -1,7 +1,7 @@
+import { getEngineApiUrl, missingEngineApiMessage } from "@/lib/engine-api-url";
 /** Server-only Survival data gateway. No token or non-supporter premium statistics reach the browser. */
 import { getLivePatreonSupporters } from "@/lib/patreon-supporters";
 
-const ENGINE_API_URL = (process.env.GAMEZONE_ENGINE_API_URL ?? "").replace(/\/$/, "");
 const PRIVATE_TOKEN = process.env.GAMEZONE_SURVIVAL_STATS_TOKEN ?? "";
 
 type EngineEnvelope<T> = { status?: string; data?: T };
@@ -91,7 +91,9 @@ function premiumFrom(input: Record<string, unknown>): SurvivalPremium {
 
 async function engineGet<T>(path: string, privateEndpoint = false): Promise<T> {
   if (privateEndpoint && PRIVATE_TOKEN.length < 32) throw new Error("Premiumstatistikens server-token saknas.");
-  const response = await fetch(`${ENGINE_API_URL}/api/v1/survival/${path}`, {
+  const ENGINE_BASE = getEngineApiUrl();
+  if (!ENGINE_BASE) throw new Error(missingEngineApiMessage());
+  const response = await fetch(`${ENGINE_BASE}/api/v1/survival/${path}`, {
     // 60-second Next.js data caching keeps repeated page views off the Minecraft database.
     next: { revalidate: 60 },
     headers: privateEndpoint ? { "X-GameZone-Analytics-Token": PRIVATE_TOKEN } : {},

@@ -1,3 +1,4 @@
+import { getEngineApiUrl } from "@/lib/engine-api-url";
 export type ServerStatus = {
   online: boolean;
   playersOnline: number;
@@ -41,17 +42,8 @@ export async function getServerStatus(): Promise<ServerStatus> {
 }
 
 export async function getLeaderboard(type: string): Promise<LeaderboardEntry[]> {
-  const source = process.env.GAMEZONE_ENGINE_API_URL
-      ? "GAMEZONE_ENGINE_API_URL"
-      : process.env.ENGINE_API_URL
-          ? "ENGINE_API_URL"
-          : "fallback default";
-  const apiBase = (
-      process.env.GAMEZONE_ENGINE_API_URL ??
-      process.env.ENGINE_API_URL ??
-      ""
-  ).replace(/\/$/, "");
-  console.log(`[home-data] using ${source}`);
+  const apiBase = getEngineApiUrl();
+  if (!apiBase) return [];
 
   try {
     const response = await fetch(`${apiBase}/api/v1/leaderboards/${type}?limit=3`, {

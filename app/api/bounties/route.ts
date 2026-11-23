@@ -1,22 +1,11 @@
+import { getEngineApiUrl } from "@/lib/engine-api-url";
 import { NextResponse } from "next/server";
 
 export const revalidate = 10_800;
 
-const FALLBACK_ENGINE_URLS = [
-    "",
-];
-
 function engineCandidates() {
-    const configured = [
-        process.env.GAMEZONE_ENGINE_API_URL,
-        ...FALLBACK_ENGINE_URLS,
-    ];
-
-    return [...new Set(
-        configured
-            .filter((value): value is string => Boolean(value?.trim()))
-            .map((value) => value.trim().replace(/\/$/, "")),
-    )];
+    const url = getEngineApiUrl();
+    return url ? [url] : [];
 }
 
 type EnginePayload = {
@@ -73,7 +62,7 @@ export async function GET() {
         }
     }
 
-    console.error("Bounty wiki could not reach GameZone Engine", failures);
+    if (failures.length) console.error("Bounty wiki could not reach GameZone Engine", failures);
 
     return NextResponse.json(
         {

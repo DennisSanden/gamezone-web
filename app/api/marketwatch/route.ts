@@ -1,12 +1,14 @@
+import { getEngineApiUrl } from "@/lib/engine-api-url";
 import { NextResponse } from "next/server";
 
 export const revalidate = 10_800;
 
-const DEFAULT_ENGINE_API = "";
+
 
 export async function GET() {
-    const engineApi = (process.env.GAMEZONE_ENGINE_API_URL ?? DEFAULT_ENGINE_API).replace(/\/$/, "");
+    const engineApi = getEngineApiUrl();
 
+    if (!engineApi) return NextResponse.json({ status: "FAILED", result: null, errors: [{ message: "GAMEZONE_ENGINE_API_URL saknas eller är ogiltig." }] }, { status: 503 });
     try {
         const response = await fetch(`${engineApi}/api/v1/marketwatch?periodHours=24`, {
             next: { revalidate: 10_800 },

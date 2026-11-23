@@ -1,3 +1,4 @@
+import { getEngineApiUrl } from "@/lib/engine-api-url";
 export type Streamer = {
     twitchLogin: string;
     displayName: string;
@@ -14,16 +15,9 @@ export type Streamer = {
 
 type EngineEnvelope<T> = { status?: string; result?: T };
 
-function apiBase() {
-    return (
-        process.env.GAMEZONE_ENGINE_API_URL ??
-        process.env.ENGINE_API_URL ??
-        ""
-    ).replace(/\/$/, "");
-}
-
 export async function getStreamers(): Promise<Streamer[]> {
-    const base = apiBase();
+    const base = getEngineApiUrl();
+    if (!base) return [];
     try {
         const response = await fetch(`${base}/api/v1/creators`, {
             next: { revalidate: 10_800 },
