@@ -337,3 +337,21 @@ Trade-fönstret låter båda spelarna erbjuda items och Coins. Handeln kräver d
 En utmaning gäller i **30 sekunder**. När den accepteras teleporteras båda spelarna till duellarenan. Dödligt damage avslutar duellen som en eliminering i stället för en vanlig survivaldöd. Förloraren betalar **5 % av sitt aktuella Coin-saldo** direkt till vinnaren. Om förloraren lämnar arenan räknas det också som förlust och samma 5-procentsöverföring görs. Vinster och förluster sparas i duellstatistiken.
 
 Läs hela guiden på sidan [Dueller](/wiki/events/dueller).
+
+## Dungeons och GameZone-nycklar
+
+```text
+/gzdungeon menu
+/gzdungeon join <kod>
+/gzdungeon status
+/gzdungeon leaderboard
+/dg join <kod>
+```
+
+Dungeonlobbyn kräver en **Dungeon Credit** från ledaren. Deltagare kan ansluta gratis med lobbykoden. Läs [Dungeons och Dungeon Credits](/wiki/dungeons/kom-igang).
+
+Admin kan hantera särskilda lootkistor med `/nyckel lock`, `/nyckel unlock`, `/nyckel info` och `/nyckel give <spelare> [antal]`. Spelare använder signerade GameZone-nycklar genom att högerklicka på en låst kista. Läs [GameZone-nycklar och kistor](/wiki/dungeons/nyckelkistor).
+
+## BlueMap
+
+`/map` visar serverns karta: [map.gamezonemc.se](https://map.gamezonemc.se).

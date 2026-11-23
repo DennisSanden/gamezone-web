@@ -59,3 +59,13 @@ Belöningen räknas när en spelare **tar ut det färdigsmälta resultatet**. Au
 
 > [!NOTE]
 > Att crafta ingots från exempelvis nuggets eller storage blocks ger inte samma smelting-belöning. Funktionen är kopplad till faktisk furnace-extraction.
+
+## Ytterligare registrerade resurser i Engine (23 november 2026)
+
+Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Värdena nedan är **registervärden**, inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
+
+| Resurs | Engine-ID | Bas-Coins | Bas-XP |
+| --- | --- | ---: | ---: |
+| Nether Quartz Ore | `NETHER_QUARTZ_ORE` | 7 | 2 |
+| Nether Gold Ore | `NETHER_GOLD_ORE` | 8 | 2 |
+| Netherite Scrap | `NETHERITE_SCRAP` | 500 | 0 |

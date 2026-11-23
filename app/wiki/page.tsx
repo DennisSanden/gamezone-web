@@ -88,6 +88,12 @@ export default function WikiPage() {
             icon: "bounties" as const,
         },
         {
+            title: "Dungeons & nycklar",
+            description: "Utforska instanser, samla nycklar och öppna lootkistor.",
+            href: "/wiki/dungeons",
+            icon: "experience" as const,
+        },
+        {
             title: "Events",
             description: "Turneringar, event och speciella aktiviteter.",
             href: "/wiki/events",

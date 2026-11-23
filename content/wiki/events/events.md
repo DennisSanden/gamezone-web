@@ -1,42 +1,35 @@
 ---
-title: "Events och schema"
-description: "Dagliga events klockan 20 och 21, Survival och roterande tävlingar."
+title: "Events och spellägen"
+description: "Survival, Hunger Games, Deathmatch, Snöbollskrig och fler event."
 category: "Events"
 order: 1
-updatedAt: "2026-11-04"
-infobox:
-  kvällsschema: "20:00 och 21:00"
-  survival: "Varje kväll"
-  andra event: "Roterar"
+updatedAt: "2026-11-23"
 ---
 
-## Så fungerar eventkvällarna
+## Evenemang på GameZone
 
-GameZoneMC har normalt **två schemalagda events per kväll**, ett klockan **20:00** och ett klockan **21:00**. **Survival spelas varje kväll**, men växlar mellan tiderna. Den andra platsen roterar mellan Archery Masters, Team Deathmatch, Hunger Games Solo och Hunger Games Duo.
-
-Eventschemat kan variera. Kontrollera alltid den aktuella tiden i spelet. Hunger Games Solo och Duo ligger inte samtidigt i det ordinarie två-eventschemat.
+GameZoneEngine har flera eventtyper. Aktuella tider och rotation kan ändras av serveradministrationen. **Kontrollera spelschemat i servern**, och utgå inte från ett gammalt publicerat klockslag.
 
 ## Gå med
 
-```text
-/event join
-```
-
-Anmälan öppnar före start. Vissa event kräver lag, andra är individuella. Din vanliga utrustning hanteras separat i eventet, och normal survivalprogression ska inte gå förlorad på grund av en eventdöd.
+Använd `/event join` när ett event tar emot anmälningar. En match kan ha särskilda lagregler, arenor och egen utrustning. Vanlig survivalprogression hanteras separat.
 
 ## Eventtyper
 
-- **Survival**, kooperativt PvE med 30 waves, mynt, två öppna butiker, klasser och lagbuffar.
-- **Hunger Games**, Solo eller Duo där du överlever längre än motståndarna.
-- **Team Deathmatch**, två lag med gemensamma tickets.
-- **Archery Masters**, bågskyttebaserad tävling.
+| Event | Typ |
+| --- | --- |
+| [Survival](/wiki/events/survival) | Kooperativt PvE med waves, klasser och butiker |
+| Hunger Games Solo | Battle royale med en vinnare |
+| Hunger Games Duo | Battle royale för tvåmannalag |
+| Team Deathmatch | Lagbaserad PvP |
+| Archery Masters | Bågskyttetävling |
+| [Deathmatch](/wiki/events/deathmatch) | Individuell PvP, först till 20 kills |
+| [Snöbollskrig](/wiki/events/snobollskrig) | Snöbolls-FFA, först till 20 kills |
 
-Hunger Games, Team Deathmatch och Archery Masters har separata ELO-system. Se [Survivalguiden](/wiki/events/survival) för klasser, bonusar och bossar.
+Varje event använder sin egen spelmekanik. Alla speltyper behöver inte finnas i rotationen samtidigt.
 
-## Spelarstartade events
+## Spelarstart
 
-```text
-/event start <Archery/Survival/TDM/HG>
-```
+GameZone har stöd för spelarstartade event, med krav på deltagarantal, väntetid och frekvens. Tillgängliga event och exakt kommandosyntax kontrolleras i spelet. 
 
-Du kan starta ett spelardrivet event med minst åtta deltagare, en anmälningsperiod på fem minuter och begränsning till ett sådant event per timme. Spelarstart är inte tillåten tätt inpå ett schemalagt event. GUI och kommandots hjälptext visar vad som finns tillgängligt.
+Läs också [eventschema](/wiki/events/schema) och [Survival](/wiki/events/survival).

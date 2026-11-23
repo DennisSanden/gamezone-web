@@ -108,3 +108,11 @@ Alkemi blir tillgänglig senare än övriga kategorier och kräver att settlemen
 ## Att tänka på
 
 Kategorin kommer igång senare och kräver ofta farligare eller mer sällsynta resurser, men andra settlements kan bli starkt beroende av handeln med ett alkemisettlement.
+
+## Ytterligare registrerade resurser i Engine (23 november 2026)
+
+Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Värdena nedan är **registervärden**, inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
+
+| Resurs | Engine-ID | Bas-Coins | Bas-XP |
+| --- | --- | ---: | ---: |
+| Gunpowder | `GUNPOWDER` | 2 | 2 |

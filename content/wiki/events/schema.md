@@ -1,15 +1,15 @@
 ---
-title: "Kvällens eventschema"
-description: "Survival varje kväll och fyra roterande tävlingslägen."
+title: "Eventschema"
+description: "Kontrollera aktuella eventtider i servern."
 category: "Events"
 order: 0
-updatedAt: "2026-10-21"
+updatedAt: "2026-11-23"
 ---
 
-## Två events varje kväll
+## När börjar nästa event?
 
-Klockan **20:00** och **21:00** startar de ordinarie kvällseventen. Survival ligger på en av tiderna och det andra eventet roterar mellan Archery Masters, Team Deathmatch, Hunger Games Solo och Hunger Games Duo. Vilket event som spelas kan växla mellan dagarna.
+Eventschemat kan ändras när GameZone uppdaterar sin rotation. Använd **serverns aktuella eventinformation** för nästa start i stället för att lita på äldre publicerade klockslag.
 
-För aktuell starttid, läs schemat i spelet. Extra event kan startas utanför ordinarie tider av behöriga spelare när villkoren uppfylls.
+GameZoneEngine innehåller bland annat Survival, Hunger Games, Team Deathmatch, Archery Masters, [Deathmatch](/wiki/events/deathmatch) och [Snöbollskrig](/wiki/events/snobollskrig). Alla behöver inte vara schemalagda samma kväll.
 
-[Alla eventregler](/wiki/events/events) och [Survival](/wiki/events/survival).
+Du ansluter till en öppen anmälan med `/event join`.
