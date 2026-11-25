@@ -1,56 +1,56 @@
 ---
 title: "Dungeons och Dungeon Credits"
-description: "Starta eller anslut till en dungeon med en Dungeon Credit och lobbykod."
+description: "Samla ditt party, utforska dungeons och besegra bossar för att få belöningar."
 category: "Dungeons"
 order: 1
-updatedAt: "2026-11-23"
+updatedAt: "2026-11-25"
 ---
 
 ## Vad är en dungeon?
 
-Dungeons är separata instanser som hanteras av **InstancedDungeons** tillsammans med GameZoneEngine. Vilka mallar som faktiskt går att spela beror på de definitioner som finns inlästa på servern. GameZone visar de upptäckta mallarna i sin meny, men InstancedDungeons avgör om en mall är spelbar.
+Dungeons är äventyr där du och ditt party utforskar en karta, slåss mot fiender, hittar loot och möter en boss. Du spelar med din egen utrustning och tillsammans med de spelare som anslutit till din lobby.
 
-## Starta en dungeon
+## Dungeon Credits
 
-1. Skaffa en **Dungeon Credit**. En sådan kan bland annat förekomma i den viktade belöningspoolen för `/daily`.
-2. Öppna `/gzdungeon menu` eller prata med serverns Dungeon Master, om NPC:n är aktiverad.
-3. Välj en tillgänglig dungeon. En lobby kostar **1 Dungeon Credit** för den som leder. Krediten dras först när instansen faktiskt startar.
-4. Dela den **lobbykod** som InstancedDungeons visar med deltagarna.
-5. Andra spelare ansluter med `/dg join <kod>` eller `/gzdungeon join <kod>`. Det kostar ingen egen credit att ansluta.
-6. Lobbyledaren startar instansen med InstancedDungeons startkommando `/dg start`.
+För att starta en dungeon behöver du **1 Dungeon Credit**. Du har chans att få Dungeon Credits genom `/daily`.
 
-> [!IMPORTANT]
-> GameZoneEngine begränsar vanligtvis varje spelare till **en genomförd omgång per dungeonmall och kalenderdag**. Det gäller både ledaren och deltagarna. OP kan administrera och återställa begränsningar. En misslyckad lobbyöppning ska inte förbruka krediten.
+Endast lobbyledaren behöver en Dungeon Credit. Det är gratis för övriga spelare att gå med. Din credit förbrukas när äventyret startar.
 
-## Under äventyret
+## Så startar du en lobby
 
-Du går in med din vanliga utrustning. Om du dör kan du förlora de föremål du bär. Förbered därför din utrustning innan du går in.
+1. Prata med **Dungeon Master**.
+2. Välj den dungeon du vill spela.
+3. Dela lobbykoden med dina vänner.
+4. När alla har gått med, skriv `/dg start` för att starta äventyret.
 
-Det går inte för vanliga spelare att hoppa ut ur en pågående dungeon med `/dg exit`. **Endast OP kan avbryta en aktiv omgång**, så att spelare inte kan gå in, plundra och lämna före bossen.
+Du kan endast skapa en lobby genom att prata med Dungeon Master.
 
-Bossar kan ha förstärkt hälsa och en synlig hälsomätare. Det exakta innehållet och bossen beror på dungeonmallen och serverns konfiguration.
+## Så går du med i en lobby
+
+1. Be lobbyledaren om lobbykoden.
+2. Skriv `/gzdungeon join <kod>` i chatten. Ersätt `<kod>` med lobbykoden du fått.
+3. Vänta på att lobbyledaren startar äventyret.
+
+## Regler och utrustning
+
+- Du kan spela varje dungeon en gång per dag. Du kan däremot spela flera olika dungeons under samma dag.
+- Du tar med dig din egen utrustning, mat och övriga föremål.
+- Om du dör riskerar du att förlora dina föremål.
+- Du kan inte lämna en pågående dungeon med ett kommando.
+
+## Bossar och belöningar
+
+Utforska kartan, samla loot och samarbeta för att besegra bossen.
+
+När ni besegrar en boss får **alla spelare i partyt varsin GameZone-Nyckel**, inte bara spelaren som dödar bossen eller leder partyt.
+
+GameZone-Nycklar används för att öppna särskilda låsta lootkistor och tunnor. Läs mer på sidan [Låsbara kistor och GameZone-nycklar](/wiki/dungeons/nyckelkistor).
 
 ## Användbara kommandon
 
 | Kommando | Funktion |
 | --- | --- |
-| `/gzdungeon menu` | Öppnar dungeonmenyn |
-| `/gzdungeon join <kod>` | Gå med via lobbykod |
-| `/dg join <kod>` | Gå med genom InstancedDungeons |
-| `/gzdungeon status` | Visar vilka dungeons du spelat idag |
-| `/gzdungeon leaderboard` | Statistik för dungeonkartor |
-| `/gzdungeon clear` | Rensar gammalt GameZone-lobbyläge, inte aktiva omgångar |
-
-### För administratörer
-
-| Kommando | Funktion |
-| --- | --- |
-| `/gzdungeon reset` | Administrativ återställning, se hjälptext i spelet |
-| `/gzdungeon abort <ledare>` | Avbryter pågående omgång som OP |
-| `/gzdungeon spectate <ledare>` | Följ en aktiv omgång som OP |
-| `/gzdungeon diagnose` | Diagnostik av mallar och världar |
-| `/gzdungeon icon list` | Visa aktuella dungeonikoner |
-| `/gzdungeon icon <dungeon> <material>` | Ändra ikon i menyn |
-| `/gzdungeon icon <dungeon> reset` | Återställ ikon |
-
-Dungeon Credits och GameZone-nycklar är **olika föremål**, de är inte utbytbara. Se även [Låsbara kistor och GameZone-nycklar](/wiki/dungeons/nyckelkistor).
+| `/gzdungeon join <kod>` | Gå med i en lobby |
+| `/dg start` | Starta äventyret som lobbyledare |
+| `/gzdungeon status` | Se vilka dungeons du spelat idag |
+| `/gzdungeon leaderboard` | Visa dungeonstatistik |
