@@ -3,7 +3,7 @@ title: "Survival"
 description: "30 PvE-waves, tio klasser, mynt, Blacksmith, Supplies, välsignelser och permanenta klassnivåer."
 category: "Events"
 order: 2
-updatedAt: "2026-11-04"
+updatedAt: "2026-11-25"
 infoboxTitle: "Survival"
 infobox:
   typ: "Kooperativt PvE-event"
@@ -159,18 +159,9 @@ Ammunition följer klassernas begränsningar för distansvapen. Vissa varor är 
 
 # Klasser och förmågor
 
-| Klass | Startutrustning och spelstil |
-| --- | --- |
-| **Soldier** | **125 % HP, 135 % skada.** Cleave var fjärde träff (upp till tre extra fiender), 15 % mindre mobskada. |
-| **Tank** | **225 % HP, 90 % skada.** 25 % mindre mobskada, Guardian Aura ger 10 % skydd inom fem block, Thorn Shield reflekterar skada. |
-| **Bowman** | **100 % HP.** Distansklass med obrytbar båge, pilar och nivåbonusar för bågskada. |
-| **Healer** | **100 % HP.** Passiv läkeaura och Healing Totem, en gång per wave. |
-| **Summoner** | **100 % HP.** Bee, Wolf och Iron Golem via spawnägg, ett ägg per wave. |
-| **Commander** | **120 % HP.** Stridshorn ger laget +100 % skada under aktuell wave, var tredje wave. |
-| **Berserker** | **90 % HP, 175 % skada.** Bloodlust läker vid närstrid. Blood Rage ger +35 % skada och +15 % hastighet under 10 sekunder. |
-| **Necromancer** | **100 % HP.** Kallar på allierade Cave Spiders, Vex och Ravagers. |
-| **Resurrector** | **100 % HP.** Soul Staff återupplivar nedslagna lagkamrater. |
-| **Juggernaut** | **200 % HP.** Stålsätt ger 90 % skadereducering i 20 sekunder, var tredje wave. |
+Jämför alla tio klassers grundhälsa, skada och specialförmågor innan du väljer. Värdena gäller före klassnivåer, välsignelser och lagbuffar.
+
+<SurvivalClassGuide panel="classes" />
 
 ### Outlines och hjälp till skadade
 

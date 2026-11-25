@@ -14,6 +14,7 @@ import SettlementBuildingsPanel from "./SettlementBuildingsPanel";
 import BuildingRequirementsTable from "./BuildingRequirementsTable";
 import ActiveBountiesPanel from "./ActiveBountiesPanel";
 import FarmGuideTable from "./FarmGuideTable";
+import SurvivalClassGuide from "./SurvivalClassGuide";
 import SettlementInfoBox from "./SettlementInfoBox";
 import SettlementUpgradePanel from "./SettlementUpgradePanel";
 import SettlementBonusTabs from "./SettlementBonusTabs";
@@ -81,10 +82,13 @@ type ArticleContentPart =
 }
     | {
     type: "farm-guide";
+}
+    | {
+    type: "survival-class-guide";
 };
 
 const componentPattern =
-    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable|ActiveBountiesPanel|FarmGuideTable)\s+(?:upgradeKey|group|settlement|building|panel)=["']([a-z0-9-]+)["']\s*\/>/gi;
+    /<(SettlementUpgradePanel|SettlementBuildingsPanel|SettlementInfoBox|BuildingRequirementsTable|ActiveBountiesPanel|FarmGuideTable|SurvivalClassGuide)\s+(?:upgradeKey|group|settlement|building|panel)=["']([a-z0-9-]+)["']\s*\/>/gi;
 
 export default function WikiArticle({
                                         article,
@@ -245,6 +249,10 @@ export default function WikiArticle({
                                     key={`active-bounties-${index}`}
                                 />
                             );
+                        }
+
+                        if (part.type === "survival-class-guide") {
+                            return <SurvivalClassGuide key={`survival-classes-${index}`} />;
                         }
 
                         if (part.type === "farm-guide") {
@@ -596,6 +604,11 @@ function splitArticleContent(
             parts.push({
                 type: "active-bounties",
             });
+        } else if (
+            componentName === "SurvivalClassGuide" &&
+            componentValue === "classes"
+        ) {
+            parts.push({ type: "survival-class-guide" });
         } else if (
             componentName === "FarmGuideTable" &&
             componentValue === "farms"
