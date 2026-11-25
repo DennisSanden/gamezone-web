@@ -161,16 +161,16 @@ Ammunition följer klassernas begränsningar för distansvapen. Vissa varor är 
 
 | Klass | Startutrustning och spelstil |
 | --- | --- |
-| **Soldier** | Iron Sword och Iron Armor, balanserad närstrid |
-| **Tank** | Stone Axe, Stone Sword, Shield och Diamond Armor. **+75 % max HP**, men **30 % lägre skada** |
-| **Bowman** | Unbreakable Bow med Power I, 32 Arrows, Stone Sword och Leather Armor |
-| **Healer** | Stone Sword, Healing Totem och Leather Armor. Passiv läkande aura och grön outline när spelaren inte har kritiskt låg HP |
-| **Summoner** | Stone Sword, Crossbow, 16 Arrows och Leather Armor. Kallar på allierade varelser |
-| **Commander** | Iron Sword, Stridshorn och Iron Armor. **+20 % max HP** och **mörkblå armor trim**, men **ingen blå outline** |
-| **Berserker** | Iron Axe och Leather Armor. **+35 % skada**, men **30 % lägre max HP** |
-| **Necromancer** | Stone Sword, Crossbow, 16 Arrows och Leather Armor. Kallar på mörka allierade |
-| **Resurrector** | Stone Sword, Soul Staff, Själasteg samt rustning av Chainmail och Iron. Räddar nedslagna spelare |
-| **Juggernaut** | Iron Axe, Heart of Iron och Iron Armor. **+40 % max HP**, men lägre rörelsehastighet |
+| **Soldier** | **125 % HP, 135 % skada.** Cleave var fjärde träff (upp till tre extra fiender), 15 % mindre mobskada. |
+| **Tank** | **225 % HP, 90 % skada.** 25 % mindre mobskada, Guardian Aura ger 10 % skydd inom fem block, Thorn Shield reflekterar skada. |
+| **Bowman** | **100 % HP.** Distansklass med obrytbar båge, pilar och nivåbonusar för bågskada. |
+| **Healer** | **100 % HP.** Passiv läkeaura och Healing Totem, en gång per wave. |
+| **Summoner** | **100 % HP.** Bee, Wolf och Iron Golem via spawnägg, ett ägg per wave. |
+| **Commander** | **120 % HP.** Stridshorn ger laget +100 % skada under aktuell wave, var tredje wave. |
+| **Berserker** | **90 % HP, 175 % skada.** Bloodlust läker vid närstrid. Blood Rage ger +35 % skada och +15 % hastighet under 10 sekunder. |
+| **Necromancer** | **100 % HP.** Kallar på allierade Cave Spiders, Vex och Ravagers. |
+| **Resurrector** | **100 % HP.** Soul Staff återupplivar nedslagna lagkamrater. |
+| **Juggernaut** | **200 % HP.** Stålsätt ger 90 % skadereducering i 20 sekunder, var tredje wave. |
 
 ### Outlines och hjälp till skadade
 
@@ -192,9 +192,9 @@ Ammunition följer klassernas begränsningar för distansvapen. Vissa varor är 
 
 **Juggernaut:** **Stålsätt** med Heart of Iron minskar inkommande skada kraftigt under en begränsad tid. Den aktiva effekten ger **90 % skadereducering i 20 sekunder** och kan användas en gång var tredje wave.
 
-**Tank:** På level 5 kan Tank använda **Provokation**, en Bell som drar till sig närliggande fiender inom 10 block under 8 sekunder, en gång var tredje wave. Specialfiender med egna målregler kan vara undantagna.
+**Tank:** Har 225 % grundhälsa och 90 % grundskada, 25 % mindre mobskada, Guardian Aura som ger lagkamrater 10 % skydd inom fem block och Thorn Shield som reflekterar skada. På level 5 kan Tank använda **Provokation**, en Bell som drar till sig närliggande fiender inom 10 block under 8 sekunder, en gång var tredje wave. Specialfiender med egna målregler kan vara undantagna.
 
-**Berserker:** Offensiv klass med hög skada och låg hälsa. Högre klassnivåer ger bland annat läkning efter kills och en tidsbegränsad Blood Rage vid låg HP.
+**Berserker:** Offensiv klass med 175 % grundskada och 90 % HP. Bloodlust läker 0,5 hjärta var tredje lyckad närstridsträff (högst en gång var tredje sekund). Blood Rage ger +35 % skada och +15 % hastighet i 10 sekunder. Högre klassnivåer ger ytterligare bonusar.
 
 ---
 

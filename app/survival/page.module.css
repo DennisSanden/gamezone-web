@@ -25,3 +25,29 @@
 .matchPlayer b { margin-left: auto; }
 
 .recent{margin:35px 0 34px}.recent h2{font-size:29px;margin-bottom:17px}.recentList{display:grid;gap:10px}.recent .matchDetail{border:1px solid #2d4232;border-radius:12px;background:#0f1e13;padding:0;overflow:hidden}.recent .matchDetail summary{display:flex;align-items:center;flex-wrap:wrap;gap:10px 22px;padding:17px 20px;cursor:pointer;list-style:none}.recent .matchDetail summary::-webkit-details-marker{display:none}.recent .matchDetail summary strong{color:#8bd36a}.recent .matchDetail summary span{color:#a6b7a9;font-size:13px}.recent .matchDetail summary span:first-child{margin-right:auto}.recent .matchPlayers{margin:0;padding:12px 18px 18px;border-top:1px solid #2d4232}.recent .matchPlayer{background:#17291b;color:#dce8d8}.recent .matchPlayer strong{min-width:130px}.recent .matchPlayer span{color:#a9bea9;font-size:13px}.recent .matchPlayer b{color:#8bd36a}
+
+/* Survival class chooser, mirrors in-game base values */
+.classSection{margin:5px 0 42px}
+.classIntro{display:flex;gap:22px;align-items:end;justify-content:space-between;margin-bottom:19px}
+.classIntro h2{font-size:clamp(26px,3vw,36px);line-height:1.15;letter-spacing:-.03em;margin:7px 0 0}
+.classIntro>p{font-size:13px;line-height:1.65;color:#b1c4b2;max-width:430px;margin:0}
+.classGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.classCard{min-width:0;background:linear-gradient(150deg,#14291b 0%,#0e1b13 85%);border:1px solid #31533b;border-radius:15px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.classCardHead{display:flex;align-items:center;gap:13px}
+.classIcon{width:48px;height:48px;border-radius:11px;background:#213b28;border:1px solid #41654a;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.classRole{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#91c88d;margin:0 0 4px;font-weight:800}
+.classCard h3{font-size:23px;line-height:1.05;letter-spacing:-.025em;margin:0}
+.classStats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.classStats>div{border-radius:9px;background:#0a180f;border:1px solid #284231;padding:11px 12px;min-width:0}
+.classStats span,.classStats strong,.classStats small{display:block}
+.classStats span{font-size:11px;color:#9bad9f}
+.classStats strong{font-size:24px;line-height:1.3;color:#d9f5d5}
+.classStats div:nth-child(2) strong{color:#f4bd93}
+.classStats small{font-size:11px;color:#a4b2a4;line-height:1.4}
+.classAbility{display:grid;gap:4px}
+.classAbility span{font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:.07em;color:#98b69e}
+.classAbility strong{font-size:15px;color:#e4ead2}
+.classDescription{font-size:13px;line-height:1.65;color:#b5c7b5;margin:0;flex:1}
+.classLimit{font-size:11px;font-weight:700;color:#9edb89;border-top:1px solid #2b4634;padding-top:12px;margin:0}
+@media(max-width:850px){.classIntro{display:block}.classIntro>p{margin-top:10px}.classGrid{grid-template-columns:1fr}}
+@media(max-width:460px){.classCard{padding:16px}.classStats strong{font-size:21px}}

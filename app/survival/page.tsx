@@ -4,6 +4,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import { SurvivalLeaderboard } from "@/components/survival/SurvivalLeaderboard";
 import { getSurvivalOverview, getSurvivalRanking } from "@/lib/survival-stats-server";
 import styles from "./page.module.css";
+import { survivalClasses } from "./survival-classes";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -22,6 +23,27 @@ export default async function SurvivalPage() {
           <h1>Survival <span>statistik</span></h1>
           <p>Här syns alla deltagare som har spelat en registrerad Survival-match. Patreon ger extra djup i statistiken, inte en exklusiv plats på listan.</p>
         </header>
+        <section className={styles.classSection} aria-labelledby="survival-class-title">
+          <div className={styles.classIntro}>
+            <div><p className={styles.eyebrow}>VÄLJ DIN SPELSTIL</p><h2 id="survival-class-title">Hitta rätt Survival-klass</h2></div>
+            <p>Jämför grundhälsa, skada och förmågor innan matchen. Värdena gäller före klassnivåer, välsignelser och lagbuffar.</p>
+          </div>
+          <div className={styles.classGrid}>
+            {survivalClasses.map((character) => <article key={character.slug} className={styles.classCard}>
+              <div className={styles.classCardHead}>
+                <span className={styles.classIcon} aria-hidden="true">{character.icon}</span>
+                <div><p className={styles.classRole}>{character.role}</p><h3>{character.name}</h3></div>
+              </div>
+              <div className={styles.classStats}>
+                <div><span>Hälsa</span><strong>{character.health}</strong><small>{character.hearts}</small></div>
+                <div><span>Skada</span><strong>{character.damage}</strong><small>Mot mobs eller spelstil</small></div>
+              </div>
+              <div className={styles.classAbility}><span>Specialförmåga</span><strong>{character.ability}</strong></div>
+              <p className={styles.classDescription}>{character.description}</p>
+              <p className={styles.classLimit}>{character.limit}</p>
+            </article>)}
+          </div>
+        </section>
         {overview.status === "fulfilled" ? <div className={styles.summary}>
           <div><span>Avslutade matcher</span><strong>{number.format(overview.value.matches)}</strong></div>
           <div><span>Högsta wave</span><strong>{number.format(overview.value.bestWave)}</strong></div>
