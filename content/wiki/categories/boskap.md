@@ -11,7 +11,7 @@ infobox:
   djurdrops: "+100% vid spelardöd"
   hastbonus: "+7,5% på hästar"
   uppvaxt: "4× snabbare"
-  breeding: "500 Coins i grundvärde"
+  breeding: "Ger produktionsbelöning"
 ---
 
 ## Vad är Boskap?
@@ -25,7 +25,7 @@ Boskap handlar om att föda upp och ta hand om djur. Exempel på resurser är be
 
 Djur som föds genom breeding växer upp **4× snabbare än normalt**. En unge som normalt behöver omkring 20 minuter blir därför vuxen efter ungefär **5 minuter**.
 
-Breeding har ett grundvärde på **500 Coins**. Produktionsbonusar och serverns överproduktionsskydd räknas därefter ovanpå grundvärdet.
+Breeding ger en rörlig produktionsbelöning. Produktionsbonusar och serverns överproduktionsskydd räknas därefter ovanpå grundvärdet.
 
 > [!IMPORTANT]
 > Boskapens Coin-värden är sänkta med **15 %** jämfört med tidigare balans. Den snabbare uppväxten gör att djur kan omsättas betydligt snabbare, medan den lägre Coin-nivån håller produktionen balanserad.
@@ -97,3 +97,7 @@ För att skydda serverns prestanda finns ett tak för hur många djur och vissa 
 
 > [!TIP]
 > Gränserna för breeding och äggkläckning räknas settlementbrett inom claimat territorium. RoseStackers logiska stackstorlek räknas också in.
+
+## Getter
+
+Att döda getter kan ge produktionsbelöning för spelare i Boskap.

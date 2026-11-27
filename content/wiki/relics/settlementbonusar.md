@@ -40,8 +40,4 @@ Ett färdigt och aktivt [Reliktempel](/wiki/buildings/reliktempel) ökar relevan
 
 Vissa reliker ger också extra Shopping Chests. Andra har **personliga effekter** som bara aktiveras när spelaren använder själva föremålet, inte när det ligger i settlementets relikkista.
 
-## Krigseffekter används inte längre
-
-Krigssystemet för settlements har avvecklats. Äldre relikbeskrivningar som nämner War Tickets hör till den historiska modellen och ger inte ett aktivt settlementkrigssystem.
-
 Läs vidare i [relikregistret](/wiki/relics/relikregister) och [guiden till Settlement Inventory](/wiki/relics/relic-chests).

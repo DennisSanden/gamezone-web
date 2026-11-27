@@ -302,51 +302,51 @@ Kategorin kräver ofta råvaror från andra kategorier. Det gör handel med andr
 
 ## Ytterligare registrerade resurser i Engine (23 november 2026)
 
-Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Värdena nedan är **registervärden**, inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
+Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Registrerade resurser är inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
 
-| Resurs | Engine-ID | Bas-Coins | Bas-XP |
-| --- | --- | ---: | ---: |
-| Smooth Stone Slab | `SMOOTH_STONE_SLAB` | 2 | 1 |
-| Nether Bricks | `NETHER_BRICKS` | 1 | 1 |
-| End Stone Bricks | `END_STONE_BRICKS` | 1 | 1 |
-| Prismarine Bricks | `PRISMARINE_BRICKS` | 9 | 1 |
-| Quartz Block | `QUARTZ_BLOCK` | 3 | 1 |
-| Quartz Bricks | `QUARTZ_BRICKS` | 3 | 1 |
-| Quartz Pillar | `QUARTZ_PILLAR` | 3 | 1 |
-| Chiseled Quartz Block | `CHISELED_QUARTZ_BLOCK` | 3 | 1 |
-| Smooth Quartz | `SMOOTH_QUARTZ` | 3 | 1 |
-| Quartz Slab | `QUARTZ_SLAB` | 2 | 1 |
-| Quartz Stairs | `QUARTZ_STAIRS` | 2 | 1 |
-| Smooth Quartz Slab | `SMOOTH_QUARTZ_SLAB` | 2 | 1 |
-| Smooth Quartz Stairs | `SMOOTH_QUARTZ_STAIRS` | 2 | 1 |
-| Poplar Planks | `POPLAR_PLANKS` | 3 | 1 |
-| Poplar Slab | `POPLAR_SLAB` | 3 | 1 |
-| Poplar Stairs | `POPLAR_STAIRS` | 3 | 1 |
-| Poplar Fence | `POPLAR_FENCE` | 3 | 1 |
-| Poplar Fence Gate | `POPLAR_FENCE_GATE` | 3 | 1 |
-| Poplar Door | `POPLAR_DOOR` | 3 | 1 |
-| Poplar Trapdoor | `POPLAR_TRAPDOOR` | 3 | 1 |
-| Poplar Button | `POPLAR_BUTTON` | 3 | 1 |
-| Poplar Pressure Plate | `POPLAR_PRESSURE_PLATE` | 3 | 1 |
-| Poplar Sign | `POPLAR_SIGN` | 3 | 1 |
-| Poplar Hanging Sign | `POPLAR_HANGING_SIGN` | 3 | 1 |
-| Pale Oak Button | `PALE_OAK_BUTTON` | 3 | 1 |
-| Pale Oak Pressure Plate | `PALE_OAK_PRESSURE_PLATE` | 3 | 1 |
-| Pale Oak Sign | `PALE_OAK_SIGN` | 3 | 1 |
-| Pale Oak Hanging Sign | `PALE_OAK_HANGING_SIGN` | 3 | 1 |
-| Resin Brick | `RESIN_BRICK` | 3 | 1 |
-| Resin Bricks | `RESIN_BRICKS` | 3 | 1 |
-| Resin Brick Slab | `RESIN_BRICK_SLAB` | 3 | 1 |
-| Resin Brick Stairs | `RESIN_BRICK_STAIRS` | 3 | 1 |
-| Resin Brick Wall | `RESIN_BRICK_WALL` | 3 | 1 |
-| Chiseled Resin Bricks | `CHISELED_RESIN_BRICKS` | 3 | 1 |
-| Resin Clump | `RESIN_CLUMP` | 3 | 1 |
-| Creaking Heart | `CREAKING_HEART` | 3 | 1 |
-| Copper Chest | `COPPER_CHEST` | 3 | 1 |
-| Copper Chain | `COPPER_CHAIN` | 3 | 1 |
-| Copper Lantern | `COPPER_LANTERN` | 3 | 1 |
-| Copper Bars | `COPPER_BARS` | 3 | 1 |
-| Copper Golem Statue | `COPPER_GOLEM_STATUE` | 3 | 1 |
-| Shelf | `SHELF` | 3 | 1 |
-| Pale Oak Shelf | `PALE_OAK_SHELF` | 3 | 1 |
-| Poplar Shelf | `POPLAR_SHELF` | 3 | 1 |
+| Resurs | Engine-ID | Bas-XP |
+| --- | --- | ---: |
+| Smooth Stone Slab | `SMOOTH_STONE_SLAB` | 1 |
+| Nether Bricks | `NETHER_BRICKS` | 1 |
+| End Stone Bricks | `END_STONE_BRICKS` | 1 |
+| Prismarine Bricks | `PRISMARINE_BRICKS` | 1 |
+| Quartz Block | `QUARTZ_BLOCK` | 1 |
+| Quartz Bricks | `QUARTZ_BRICKS` | 1 |
+| Quartz Pillar | `QUARTZ_PILLAR` | 1 |
+| Chiseled Quartz Block | `CHISELED_QUARTZ_BLOCK` | 1 |
+| Smooth Quartz | `SMOOTH_QUARTZ` | 1 |
+| Quartz Slab | `QUARTZ_SLAB` | 1 |
+| Quartz Stairs | `QUARTZ_STAIRS` | 1 |
+| Smooth Quartz Slab | `SMOOTH_QUARTZ_SLAB` | 1 |
+| Smooth Quartz Stairs | `SMOOTH_QUARTZ_STAIRS` | 1 |
+| Poplar Planks | `POPLAR_PLANKS` | 1 |
+| Poplar Slab | `POPLAR_SLAB` | 1 |
+| Poplar Stairs | `POPLAR_STAIRS` | 1 |
+| Poplar Fence | `POPLAR_FENCE` | 1 |
+| Poplar Fence Gate | `POPLAR_FENCE_GATE` | 1 |
+| Poplar Door | `POPLAR_DOOR` | 1 |
+| Poplar Trapdoor | `POPLAR_TRAPDOOR` | 1 |
+| Poplar Button | `POPLAR_BUTTON` | 1 |
+| Poplar Pressure Plate | `POPLAR_PRESSURE_PLATE` | 1 |
+| Poplar Sign | `POPLAR_SIGN` | 1 |
+| Poplar Hanging Sign | `POPLAR_HANGING_SIGN` | 1 |
+| Pale Oak Button | `PALE_OAK_BUTTON` | 1 |
+| Pale Oak Pressure Plate | `PALE_OAK_PRESSURE_PLATE` | 1 |
+| Pale Oak Sign | `PALE_OAK_SIGN` | 1 |
+| Pale Oak Hanging Sign | `PALE_OAK_HANGING_SIGN` | 1 |
+| Resin Brick | `RESIN_BRICK` | 1 |
+| Resin Bricks | `RESIN_BRICKS` | 1 |
+| Resin Brick Slab | `RESIN_BRICK_SLAB` | 1 |
+| Resin Brick Stairs | `RESIN_BRICK_STAIRS` | 1 |
+| Resin Brick Wall | `RESIN_BRICK_WALL` | 1 |
+| Chiseled Resin Bricks | `CHISELED_RESIN_BRICKS` | 1 |
+| Resin Clump | `RESIN_CLUMP` | 1 |
+| Creaking Heart | `CREAKING_HEART` | 1 |
+| Copper Chest | `COPPER_CHEST` | 1 |
+| Copper Chain | `COPPER_CHAIN` | 1 |
+| Copper Lantern | `COPPER_LANTERN` | 1 |
+| Copper Bars | `COPPER_BARS` | 1 |
+| Copper Golem Statue | `COPPER_GOLEM_STATUE` | 1 |
+| Shelf | `SHELF` | 1 |
+| Pale Oak Shelf | `PALE_OAK_SHELF` | 1 |
+| Poplar Shelf | `POPLAR_SHELF` | 1 |

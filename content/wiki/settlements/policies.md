@@ -12,7 +12,8 @@ infobox:
 
 ## Aktiva policies
 
-Settlementets King hanterar policies via Government-menyn. En policyplats får cooldown när en policy aktiveras. **Rådhus ger en extra aktiv policyplats.** Krigssystemet är borttaget och det finns inga krigspolicies i den nuvarande listan.
+Settlementets King hanterar policies via Government-menyn. En policyplats får cooldown när en policy aktiveras. **Rådhus ger en extra aktiv policyplats.**
+
 
 | Settlementnivå | Policyplatser utan Rådhus | Med Rådhus |
 |---:|---:|---:|

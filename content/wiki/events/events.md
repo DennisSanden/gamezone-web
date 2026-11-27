@@ -21,9 +21,9 @@ Använd `/event join` när ett event tar emot anmälningar. En match kan ha sär
 | [Survival](/wiki/events/survival) | Kooperativt PvE med waves, klasser och butiker |
 | Hunger Games Solo | Battle royale med en vinnare |
 | Hunger Games Duo | Battle royale för tvåmannalag |
-| Team Deathmatch | Lagbaserad PvP |
+| Team Deathmatch | Lagbaserad tävling |
 | Archery Masters | Bågskyttetävling |
-| [Deathmatch](/wiki/events/deathmatch) | Individuell PvP, först till 20 kills |
+| [Deathmatch](/wiki/events/deathmatch) | Individuell tävling, först till 20 kills |
 | [Snöbollskrig](/wiki/events/snobollskrig) | Snöbolls-FFA, först till 20 kills |
 
 Varje event använder sin egen spelmekanik. Alla speltyper behöver inte finnas i rotationen samtidigt.

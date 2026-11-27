@@ -69,27 +69,15 @@ Du kan tjäna mynt på flera sätt:
 1. **Kills av Survival-mobs.** Fiendens typ och aktuell wave bestämmer grundbeloppet. Skada från Summoners och Necromancers egna summons kan ge deras ägare kill-belöningen.
 2. **Starka fiender ger ibland en liten bonus till lagkamrater.** Den delas mellan övriga levande deltagare när beloppet räcker.
 3. **Stödinsatser räknas.** Healer kan tjäna mynt för läkning av andra, och tankning samt blockerad skada kan ge mynt. Dessa stödutbetalningar har ett tak per person och wave.
-4. **Resurrector tjänar exakt 8 mynt per lyckad återupplivning.** Ingen gräns per wave.
+4. **Resurrector tjänar mynt per lyckad återupplivning.** Ingen gräns per wave.
 5. **Commander** kan få mynt när stridshornet används och en annan lagkamrat får hjälp av buffen.
-6. **Ranson efter en klarad wave.** Levande spelare får normalt **5 mynt**, efter den generella myntbonusen. Den delas inte ut efter wave 30.
+6. **Ranson efter en klarad wave.** Levande spelare får mynt efter den generella myntbonusen. Den delas inte ut efter wave 30.
 
-De flesta vanliga myntutdelningar har en generell **+25 % bonus**. Systemet sparar avrundningsrester, så även små belöningar får rätt bonus över tid. Resurrectorns fasta 8 mynt är ett undantag och förstärks inte ytterligare.
+De flesta vanliga myntutdelningar har en generell **+25 % bonus**. Systemet sparar avrundningsrester, så även små belöningar får rätt bonus över tid. Resurrectorns återupplivningsbelöning är ett undantag och förstärks inte ytterligare.
 
-### Exempel på grundbelöningar från monster
+### Belöningar från monster
 
-| Fiende | Basmynt tidigt i matchen |
-| --- | ---: |
-| Zombie | 1 |
-| Skeleton, Spider, Husk | 2 |
-| Pillager, Bogged | 3 |
-| Witch, Vindicator, Wither Skeleton | 4 |
-| Ravager, Zoglin, Breeze | 6 |
-| Evoker | 9 |
-| Warden | 15 |
-| Special-Vex som jagar spelare | 2 |
-| Baby Zombies på wave 15 | 1 |
-
-Vanliga mobs ger mer mynt längre fram i matchen. Bossar har särskilda belöningar. Tabellen visar grundvärden före bonusar och senare wave-skalning, inte ett garanterat slutbelopp.
+Myntbelöningar varierar mellan fiender och waves. Aktuella belöningar visas i spelet.
 
 ### Så handlar du
 

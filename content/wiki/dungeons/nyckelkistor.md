@@ -13,8 +13,11 @@ updatedAt: "2026-11-23"
 ## Hitta GameZone-nycklar
 
 - `/daily` har en **viktad chans** att ge en GameZone-nyckel som dagens slumpföremål. Den är inte garanterad.
-- Fiskare som lyckas fånga fisk kan ha **0,005 % chans per giltig fångst** att hitta en nyckel, om de tillhör ett settlement med kategorin **Fiske**.
-- Spelare som föder upp djur kan ha **0,005 % chans per giltig avelshändelse** om de tillhör ett settlement med kategorin **Boskap**.
+- Fiskare som lyckas fånga fisk kan ha chans per giltig fångst att hitta en nyckel, om de tillhör ett settlement med kategorin **Fiske**.
+- Spelare som föder upp djur kan ha chans per giltig avelshändelse om de tillhör ett settlement med kategorin **Boskap**.
+
+- Skogsbrukare kan hitta en nyckel vid giltig återplantering.
+- Hela partyt kan få varsin nyckel när en dungeon klaras.
 
 Nycklar är särskilda signerade föremål, inte vanliga omdöpta tripwire hooks. Du kan inte tillverka en giltig GameZone-nyckel med ett städ.
 

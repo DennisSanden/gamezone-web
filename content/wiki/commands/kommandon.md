@@ -223,9 +223,7 @@ Läs hela guiden på sidan [Settlement spawn](/wiki/settlements/settlement-spawn
 
 Läs hela guiden på sidan [Stadskassan och stadsskatt](/wiki/economy/stadskassan).
 
-### Krig och allianser
 
-Det äldre krigssystemet är avvecklat. Kommandon för krigsförklaringar och krigsallianser finns inte längre i det aktuella systemet.
 
 ### Settlement inventory
 

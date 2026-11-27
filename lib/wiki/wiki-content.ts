@@ -88,6 +88,7 @@ export function getWikiCategories(): WikiCategory[] {
 export function getWikiCategory(
     categorySlug: string,
 ): WikiCategory | null {
+    if (categorySlug === "war") return null;
     const categoryDirectory = path.join(
         wikiContentDirectory,
         categorySlug,

@@ -181,7 +181,6 @@ function settlementIdentity(policies: SettlementPolicy[]) {
     policies.forEach((policy) => scores.set(policy.category, (scores.get(policy.category) ?? 0) + 1));
     const category = [...scores.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? "";
     const identities: Record<string, { title: string; text: string }> = {
-        Krig: { title: "Militär inriktning", text: "Stadens politik prioriterar krig, försvar och uthållighet." },
         Ekonomi: { title: "Handelsstad", text: "Staden satsar på företag, handel och en starkare lokal ekonomi." },
         Produktion: { title: "Produktionscentrum", text: "Staden prioriterar produktion och effektivitet för sina invånare." },
         Infrastruktur: { title: "Rörligt rike", text: "Staden satsar på rörelse, transporter och snabbare resor." },
@@ -553,25 +552,6 @@ export function SettlementDirectory() {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-
-                            <div className={styles.modalSection}>
-                                <div className={styles.sectionHeading}><h3>Krig</h3><span>{selectedSettlement.warStatistics.wins + selectedSettlement.warStatistics.losses} avgjorda</span></div>
-                                <div className={styles.warGrid}>
-                                    <div><span>Vinster</span><strong>{selectedSettlement.warStatistics.wins}</strong></div>
-                                    <div><span>Förluster</span><strong>{selectedSettlement.warStatistics.losses}</strong></div>
-                                    <div><span>Winrate</span><strong>{selectedSettlement.warStatistics.wins + selectedSettlement.warStatistics.losses === 0 ? "-" : `${Math.round((selectedSettlement.warStatistics.wins / (selectedSettlement.warStatistics.wins + selectedSettlement.warStatistics.losses)) * 100)}%`}</strong></div>
-                                    <div className={selectedSettlement.outstandingWarDebt > 0 ? styles.debtMetric : ""}><span>Krigsskuld</span><strong>{formatCoins(selectedSettlement.outstandingWarDebt)}</strong></div>
-                                </div>
-                            </div>
-
-                            <div className={styles.modalSection}>
-                                <div className={styles.sectionHeading}><h3>Allianser</h3><span>{selectedSettlement.alliances.length}</span></div>
-                                {selectedSettlement.alliances.length > 0 ? (
-                                    <div className={styles.allianceList}>
-                                        {selectedSettlement.alliances.map((ally) => <span key={ally.settlementId}><strong>{ally.displayName}</strong><small>Nivå {ally.level}, {ally.levelName}</small></span>)}
-                                    </div>
-                                ) : <p className={styles.emptyText}>Settlementet har inga aktiva allianser.</p>}
                             </div>
 
                             <div className={styles.modalSection}>

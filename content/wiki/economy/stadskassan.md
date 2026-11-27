@@ -105,10 +105,6 @@ Exempel:
 
 En låg stadsskatt låter invånarna behålla mer av sina produktionsintäkter och kan göra settlementet mer attraktivt för nya medlemmar. En hög stadsskatt fyller stadskassan snabbare när settlementet sparar till en större investering.
 
-## Tidigare krigsskuld
-
-Det gamla settlementkrigssystemet har avvecklats. Den äldre beskrivningen av nya krigsskadestånd gäller inte längre.
-
 ## Skillnaden mot Server TAX
 
 Stadsskatt tas från invånarnas produktionsintäkter och går till stadskassan.

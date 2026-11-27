@@ -42,7 +42,7 @@ Du kan endast skapa en lobby genom att prata med Dungeon Master.
 
 Utforska kartan, samla loot och samarbeta för att besegra bossen.
 
-När ni besegrar en boss får **alla spelare i partyt varsin GameZone-Nyckel**, inte bara spelaren som dödar bossen eller leder partyt.
+När ni klarar en dungeon finns chans att hela partyt får varsin GameZone-nyckel. Antingen får hela laget en nyckel var, eller ingen. Chansen varierar mellan kartorna.
 
 GameZone-Nycklar används för att öppna särskilda låsta lootkistor och tunnor. Läs mer på sidan [Låsbara kistor och GameZone-nycklar](/wiki/dungeons/nyckelkistor).
 

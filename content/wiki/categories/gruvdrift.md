@@ -49,11 +49,9 @@ Gruvdrift kan ge värdefulla resurser men fynden beror på tur och områdets til
 
 Gruvdrift får nu produktion för tackor som spelaren själv tar ut ur en furnace eller blast furnace. Det gäller:
 
-| Resultat | Basvärde |
-|---|---:|
-| Iron Ingot | 11 Coins |
-| Copper Ingot | 5 Coins |
-| Gold Ingot | 17 Coins |
+- Iron Ingot
+- Copper Ingot
+- Gold Ingot
 
 Belöningen räknas när en spelare **tar ut det färdigsmälta resultatet**. Automatiska uttag med hopper ger därför inte produktionscoins. Vanliga regler för produktionskategori, bonusar, tak och skatt gäller fortfarande.
 
@@ -62,10 +60,10 @@ Belöningen räknas när en spelare **tar ut det färdigsmälta resultatet**. Au
 
 ## Ytterligare registrerade resurser i Engine (23 november 2026)
 
-Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Värdena nedan är **registervärden**, inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
+Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Registrerade resurser är inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
 
-| Resurs | Engine-ID | Bas-Coins | Bas-XP |
-| --- | --- | ---: | ---: |
-| Nether Quartz Ore | `NETHER_QUARTZ_ORE` | 7 | 2 |
-| Nether Gold Ore | `NETHER_GOLD_ORE` | 8 | 2 |
-| Netherite Scrap | `NETHERITE_SCRAP` | 500 | 0 |
+| Resurs | Engine-ID | Bas-XP |
+| --- | --- | ---: |
+| Nether Quartz Ore | `NETHER_QUARTZ_ORE` | 2 |
+| Nether Gold Ore | `NETHER_GOLD_ORE` | 2 |
+| Netherite Scrap | `NETHERITE_SCRAP` | 0 |

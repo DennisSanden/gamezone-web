@@ -93,7 +93,7 @@ Alla är Unbreakable. Alla har ett fast Relic ID och serienummer. Registret besk
 |---:|---|---|---|---|
 | 042 | Forgefather's Gauntlet | Andvari | Netherite Chestplate | Protection IV, Fire Protection IV, Thorns III |
 | 043 | Stormhoof | Andvari | Diamond Horse Armor | Protection IV |
-| 044 | The First Blade | Varkesh | Netherite Sword | Sharpness V, Looting III, Fire Aspect II, Sweeping Edge III. Första ticketförlusten från bärarens död i ett krig kan neutraliseras |
+| 044 | The First Blade | Varkesh | Netherite Sword | Sharpness V, Looting III, Fire Aspect II, Sweeping Edge III |
 | 045 | Ashen Cavalry | Varkesh | Diamond Horse Armor | Protection IV, Fire Protection IV |
 | 046 | The Lost Crown of Gondoria | Gondoria | Golden Helmet | Protection IV, Fire Protection IV, Projectile Protection IV, Blast Protection IV, Respiration III, Aqua Affinity |
 | 047 | Archmage's Mantle | Vaelthor | Netherite Chestplate | Protection IV, Projectile Protection IV, Thorns II |
@@ -131,10 +131,6 @@ Högerklick med kompassen. Den ställs in mot ditt settlements registrerade spaw
 ### The Raven's Eye
 
 Högerklick med spyglassen medan du tittar mot en annan spelare. Reliken kan visa spelarens kultur, level och settlement.
-
-### The First Blade
-
-Historisk effekt kopplad till det avvecklade krigssystemet. Krigstickets används inte längre.
 
 ### The Hammer of Creation
 

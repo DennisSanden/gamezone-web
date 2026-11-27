@@ -96,16 +96,8 @@ Ett settlement behöver alltså inte vänta till nästa fredag när systemet tas
 
 ## Belöningar
 
-Grundbelöningen ligger normalt runt **7 000 000 till 10 000 000 Coins** och varierar med kontraktets svårighet.
+Belöningen varierar med kontraktets svårighet och aktuella balansering.
 
 Har settlementet policyn **Supplier** aktiv får slutbelöningen **+2 %**.
-
-Exempel:
-
-```text
-Grundbelöning: 8 000 000 Coins
-Supplier:      +160 000 Coins
-Totalt:        8 160 000 Coins
-```
 
 Belöningen betalas när hela kontraktet är slutfört.

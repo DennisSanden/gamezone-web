@@ -57,13 +57,13 @@ Fiske är en förnybar aktivitet som kan utföras på många platser. Automatise
 
 ## Ytterligare registrerade resurser i Engine (23 november 2026)
 
-Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Värdena nedan är **registervärden**, inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
+Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Registrerade resurser är inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
 
-| Resurs | Engine-ID | Bas-Coins | Bas-XP |
-| --- | --- | ---: | ---: |
-| Cod school | `FISH_MOB_COD` | 10 | 4 |
-| Salmon school | `FISH_MOB_SALMON` | 10 | 5 |
-| Tropical fish school | `FISH_MOB_TROPICAL` | 20 | 8 |
-| Pufferfish school | `FISH_MOB_PUFFER` | 25 | 10 |
-| Guardian | `GUARDIAN_KILL` | 1 | 1 |
-| Elder Guardian | `ELDER_GUARDIAN_KILL` | 1 | 1 |
+| Resurs | Engine-ID | Bas-XP |
+| --- | --- | ---: |
+| Cod school | `FISH_MOB_COD` | 4 |
+| Salmon school | `FISH_MOB_SALMON` | 5 |
+| Tropical fish school | `FISH_MOB_TROPICAL` | 8 |
+| Pufferfish school | `FISH_MOB_PUFFER` | 10 |
+| Guardian | `GUARDIAN_KILL` | 1 |
+| Elder Guardian | `ELDER_GUARDIAN_KILL` | 1 |

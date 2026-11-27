@@ -111,8 +111,8 @@ Kategorin kommer igång senare och kräver ofta farligare eller mer sällsynta r
 
 ## Ytterligare registrerade resurser i Engine (23 november 2026)
 
-Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Värdena nedan är **registervärden**, inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
+Följande poster finns i GameZoneEngines produktionsregister men saknades i artikelns tidigare resurslista. Registrerade resurser är inte en garanti för att varje insamlingsmetod betalar ut mynt. Syntetiska händelser, recept och insamlingsregler styrs också av andra delar av Engine.
 
-| Resurs | Engine-ID | Bas-Coins | Bas-XP |
-| --- | --- | ---: | ---: |
-| Gunpowder | `GUNPOWDER` | 2 | 2 |
+| Resurs | Engine-ID | Bas-XP |
+| --- | --- | ---: |
+| Gunpowder | `GUNPOWDER` | 2 |

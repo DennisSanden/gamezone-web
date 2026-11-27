@@ -164,7 +164,7 @@ När en bryggning färdigställs finns chans att få **en extra färdig potion**
 
 ### Rovdjursinstinkt
 
-Ger **+2, +4, +6, +8 eller +10 % skada mot hostile mobs**. Bonusen påverkar inte PvP.
+Ger **+2, +4, +6, +8 eller +10 % skada mot hostile mobs**. 
 
 ### Motståndskraft
 

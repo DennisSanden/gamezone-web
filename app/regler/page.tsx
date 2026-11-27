@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
     title: "Regler | GameZone",
     description:
-        "Läs reglerna för GameZone, från settlements och vildmark till ekonomi, automation, PvP och fair play.",
+        "Läs reglerna för GameZone, från settlements och vildmark till ekonomi, automation och fair play.",
 };
 
 type Rule = {
@@ -197,19 +197,17 @@ export default function RulesPage() {
                 <section className={styles.section}>
                     <PageContainer className={styles.splitSection}>
                         <div>
-                            <span className={styles.kicker}>PvP och dueller</span>
-                            <h2>PvP sker genom spelets särskilda aktiviteter</h2>
+                            <span className={styles.kicker}>Spelarsäkerhet</span>
+                            <h2>Respektera andra spelare</h2>
                             <p className={styles.bodyText}>
-                                PvP är normalt avstängt i världen. Det är tillåtet i
-                                ömsesidigt accepterade dueller och i event där PvP har
-                                aktiverats. Vanliga settlements har inga aktiva krigssystem.
+                                Följ reglerna för respektive event och respektera andra spelare i världen.
                             </p>
                         </div>
 
                         <div className={styles.rulePanel}>
                             <article>
                                 <span>Tillåtet</span>
-                                <p>PvP i accepterade dueller och event där PvP är aktiverat.</p>
+                                <p>Delta i organiserade event enligt eventets regler.</p>
                             </article>
                             <article>
                                 <span>Inte tillåtet</span>

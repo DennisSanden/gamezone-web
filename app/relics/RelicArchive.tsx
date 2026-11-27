@@ -190,7 +190,6 @@ function bonusSummary(relic: Relic) {
     const bonuses: string[] = [];
     if (relic.productionBonusBasisPoints > 0) bonuses.push(`+${relic.productionBonusBasisPoints / 100}% Production`);
     if (relic.xpBonusBasisPoints > 0) bonuses.push(`+${relic.xpBonusBasisPoints / 100}% XP`);
-    if (relic.warTickets > 0) bonuses.push(`+${relic.warTickets} War Tickets`);
     return bonuses.join(" · ");
 }
 
