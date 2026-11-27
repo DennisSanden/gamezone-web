@@ -3,7 +3,7 @@ import WikiArticle from "@/components/wiki/WikiArticle";
 import WikiSidebar from "@/components/wiki/WikiSidebar";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { getWikiArticle, type WikiArticle as WikiArticleData } from "@/lib/wiki/wiki-content";
-import styles from "../../[category]/[article]/page.module.css";
+import styles from "../[category]/[article]/page.module.css";
 
 export const metadata: Metadata = {
     title: "Events | GameZone Wiki",
